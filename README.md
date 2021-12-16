@@ -111,8 +111,8 @@ cdr -> 阴
 
 
 
+https://zh.wikipedia.org/wiki/%E7%99%BD%E9%A9%AC%E9%9D%9E%E9%A9%AC
 以中国古代春秋战国时期，名家提出的辩题“白马非马”，代码可以演示为：
-
 ~~~lisp
 
 (名 马 "某马")
