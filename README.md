@@ -75,7 +75,7 @@ Match -> 像/似/倘
 Let -> 让/令/予
 define -> 名
 
-List -> 表
+List -> 链 表
 array -> 组/串
 Hash -> 集
 Dict ->  典

@@ -20,9 +20,6 @@
      (ming-read-syntax #f in)))
 
   (define (ming-read-syntax src in)
-        ;; #`(module anything racket/base
-        ;; #,(read-syntax src in))
-
     (with-syntax ([ori-codes (read in)])
       #`(module anything racket/base
           (define a "aaaa")
