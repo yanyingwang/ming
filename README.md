@@ -68,6 +68,7 @@ https://www.zhihu.com/question/19851670/answer/1250914563
 ## racket关键字翻译
 已改变，详见 dictionary.rkt
 - [ ] 一个翻译函数，指定参数名字，可以翻译定义racket已定义的函数。
+https://www.zdic.net/
 ~~~lisp
 If -> 若/如
 Match -> 像/似/倘
