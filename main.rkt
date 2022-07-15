@@ -22,7 +22,8 @@
   (define (ming-read-syntax src in)
     (with-syntax ([ori-codes (read in)])
       #`(module anything racket/base
-          (define a "aaaa")
+          ;; (define a "aaaa")
+          ;; (require "private/base.rkt")
           ori-codes
           ))
 
