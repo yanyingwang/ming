@@ -1,0 +1,43 @@
+name: main
+on:
+  push:
+    branches:
+      - "dev"
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        racket-version: ["stable"]
+        racket-variant: ["CS"]
+    name: main
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Bogdanp/setup-racket@v0.12
+        with:
+          architecture: x64
+          distribution: full
+          variant: ${{ matrix.racket-variant }}
+          version: ${{ matrix.racket-version }}
+      - name: Installing pkgs
+        run: raco pkg install --no-docs --auto --name http-client
+      - name: Compiling and building its docs
+        run: raco setup --check-pkg-deps --unused-pkg-deps http-client
+
+      - name: build docs
+        run: |
+          raco scribble \
+          --dest docs \
+          --dest-name index \
+          ++main-xref-in \
+          --redirect-main https://docs.racket-lang.org/ \
+          --redirect https://docs.racket-lang.org/local-redirect/index.html \
+          scribblings/ming.scrbl
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v1.2.5
+        with:
+          target_branch: gh-pages
+          build_dir: docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
