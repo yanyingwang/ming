@@ -20,9 +20,9 @@ jobs:
           variant: ${{ matrix.racket-variant }}
           version: ${{ matrix.racket-version }}
       - name: Installing pkgs
-        run: raco pkg install --no-docs --auto --name http-client
+        run: raco pkg install --no-docs --auto --name ming
       - name: Compiling and building its docs
-        run: raco setup --check-pkg-deps --unused-pkg-deps http-client
+        run: raco setup --check-pkg-deps --unused-pkg-deps ming
 
       - name: build docs
         run: |
