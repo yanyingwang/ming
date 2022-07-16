@@ -23,7 +23,7 @@
 @item{它首先由括号约定执行优先级；}
 @item{然后由每个括号中的第一个字词表示此括号内容的含义（称为@hyperlink["https://zh.wikipedia.org/wiki/%E6%B3%A2%E5%85%B0%E8%A1%A8%E7%A4%BA%E6%B3%95" "前缀表达式"]）。}
 ]
-例如：@litchar{1+1+1}用S表达式写作@racket[(+ 1 1 1)]，又如：@litchar{1+2-3}用S表达式写作@racket[(- (+ 1 2) 3)]。
+例如：@code{1+1+1}用S表达式写作@racket[(+ 1 1 1)]，又如：@code{1+2-3}用S表达式写作@racket[(- (+ 1 2) 3)]。
 
 @linebreak{}
 
