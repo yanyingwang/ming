@@ -20,21 +20,27 @@
   [eq? 相同?] ;; #f <= (eq? (make-string 3 #\z) (make-string 3 #\z)) (eq? (expt 2 100) (expt 2 100))
 
   [list 链]
+  [list* 链*]
+  [list* 链?]
+  [build-list 创链]
   [length 长]
+  [list-ref 链序] ;; 链之 链及 予 序
+  [list-tail 链舍]
 
-  (car 首)
-  (caar 首之首)
-  (caaar 首之首首)
-  (cadr 首之余)
-  (caddr 首之余余)
-  (cadar 首之余首)
-  (cdr 余)
-  (cadr 余之首)
-  (caadr 余之首首)
-  (cddr 余之余)
-  (caddr 余之余首)
+  [cons 接] ;; 接 合 连 构 结 创 造
+  [car 首]
+  [caar 首之首]
+  [caaar 首之首首]
+  [cadr 首之余]
+  [caddr 首之余余]
+  [cadar 首之余首]
+  [cdr 余]
+  [cadr 余之首]
+  [caadr 余之首首]
+  [cddr 余之余]
+  [caddr 余之余首]
 
-  (format 化)
+  [format 化]
   [write 写]
   [writeln  行写]
   [print 示]
