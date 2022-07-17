@@ -3,7 +3,10 @@
 
 ;; (provide (all-from-out racket/base))
 
-
+(require (file "base.rkt")
+         (file "list.rkt"))
+(provide (all-from-out (file "base.rkt")
+                       (file "list.rkt")))
 
 (module reader racket/base
 

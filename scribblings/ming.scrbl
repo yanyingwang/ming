@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(require (for-label racket/base)
+@(require (for-label racket/base ming)
            scribble/eval
            scribble-rainbow-delimiters
            )
@@ -49,8 +49,8 @@ It's very obvious to notice that comparing to English, Chinese can use less spac
 @subsection{释惑}
 @itemlist[
 @item{名语言的目的是为了探索以汉语的博大精深，兼容并包，是否可以让编程语言以另外一种方式变得更容易被人理解。}
-@item{为什么选择LISP/Racket语言实现：第一，我认为LISP的语法特性间接的做了很大程度的留白，这得以让中文发挥出它最大程度的优势。第二，是认为scheme语言的特殊性，其高级抽象形态的实现都可以回溯到最基本的函数定义上，这也得以让人可以循环渐进的完成其固有的内部英文定义。}
-@item{名会秉持实事求是的精神，不会采用通俗的计算机中文中已有的通用翻译作为编程语言关键字，而是在兼顾汉语的古今含义上做出折取选择。故此，其字词的选择不会求完全的文言文化，也不会求完全的白话文化，甚至不会求完全的汉化（西文字母、标点符号所独有的优点不容被忽视）。}
+@item{为什么选择LISP/Racket语言实现：第一，我认为LISP的语法特性间接的做了很大程度的留白，这得以让中文发挥出它最大程度的优势。第二，是认为scheme语言的特殊性，其高级抽象形态的实现都可以回溯到最基本的函数定义上，这也得以让人可以循环渐进的替换完其固有的内部英文定义。}
+@item{名会秉持实事求是的精神，不会采用通俗的计算机中文中已有的通用翻译作为编程语言关键字，而是在兼顾汉语的古今含义上做出折取选择。故此，其字词的选择不会一味的去追求完全的文言文化，也不会追求完全的白话文化，甚至不会追求完全汉化（西文字母、标点符号所独有的优点不容被忽视）。}
 @item{另外我认为，名的实现过程，除去代码上的东西外，会类似于一个汉语地方方言的实现。所谓方言，比如河南话更甚于说是吴语，即是选择了汉语中的部分字词，定义出了自己方言的特殊意义。而名的实现，我认为会类似于这样一个过程，只不过是在选择时，需要兼顾编程和相应的英文词汇而翻译。}
 @item{名的其中之重要一目的是为了给汉语编程探索和指明道路。}
 ]
@@ -65,8 +65,7 @@ It's very obvious to notice that comparing to English, Chinese can use less spac
 
 @section{语言示例一览}
 @examples[#:eval (the-eval)
-(require ming/base)
-
+(require ming)
 (名 三年一班点名册
     (链 "王小明" "李小花" "赵小红"))
 (若 (相等? "王小明" (阳 三年一班点名册))
@@ -78,7 +77,6 @@ It's very obvious to notice that comparing to English, Chinese can use less spac
     [("赵小红" "赵大红" "赵红") (行陈 "三年一班点名册上的第二个姓名是赵小红、赵大红或赵红。")]
     [否则 (行陈 "三年一班点名册上的第二个姓名是什么暂未可知。")])
 
-(require ming/list)
 (当 [(相等? "王小明" (甲 三年一班点名册))
      (陈 "三年一班点名册上的第一个姓名是王小明。")]
     [(相等? "赵小红" (甲 三年一班点名册))
@@ -87,6 +85,8 @@ It's very obvious to notice that comparing to English, Chinese can use less spac
      (陈 "三年一班点名册上的第二个姓名是赵小红。")]
     [否则 (行陈 "三年一班点名册上的第二个姓名是什么暂未可知。")])
 ]
+
+
 
 
 以中国古代春秋战国时期，名家提出的辩题@hyperlink["https://zh.wikipedia.org/wiki/%E7%99%BD%E9%A9%AC%E9%9D%9E%E9%A9%AC" "“白马非马”"]，代码可以演示为：

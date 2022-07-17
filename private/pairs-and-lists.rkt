@@ -22,21 +22,40 @@
   [reverse 倒] ;; 颠倒
 
   [map 映]
-
-
-
-
-
+  [andmap 映且]
+  [ormap 映或]
 
   [caar 阳之阳]
-  [caaar 阳之阳阳]
+  [cdar 阳之阴]
   [cadr 阴之阳]
-  [caddr 阴之阴阳]
-  [cadar 阳之阴阳]
-  [cadr 阴之阳]
-  [caadr 阴之阳阳]
   [cddr 阴之阴]
+  [caaar 阳之阳阳]
+  [cdaar 阳之阳阴]
+  [cadar 阳之阴阳]
+  [caadr 阳之阴阴]
+  [caddr 阴之阴阴]
   [caddr 阴之阴阳]
+  [cdadr 阴之阳阴]
+  [caadr 阴之阳阳]
+  [caaaar 阳之阳阳阳]
+  [caaadr 阴之阳阳阳]
+  [caadar 阳之阴阳阳]
+  [caaddr 阴之阴阳阳]
+  [cadaar 阳之阳阴阳]
+  [cadadr 阴之阳阴阳]
+  [caddar 阳之阴阴阳]
+  [cadddr 阴之阴阴阳]
+  [cdaaar 阳之阳阳阴]
+  [cdaadr 阴之阳阳阴]
+  [cdadar 阳之阴阳阴]
+  [cdaddr 阴之阴阳阴]
+  [cddaar 阳之阳阴阴]
+  [cddadr 阴之阳阴阴]
+  [cdddar 阳之阴阴阴]
+  [cddddr 阴之阴阴阴]
+
+
+
 
   [format 化]
   [write 写]
