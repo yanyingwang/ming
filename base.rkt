@@ -6,10 +6,12 @@
 
 (provide (all-from-out (file "private/pairs-and-lists.rkt")
                        (file "private/conditionals.rkt"))
-         (rename-out [lambda 入]
+         (rename-out [lambda 道] ;; 入
                      [define 名]
                      [let 令]
 
+                     [require 入] ;; 入 出 拿 给
+                     [provide 出] ;;
 
                      ;; 相当 (两方面差不多；配得上或能够相抵。)
                      ;; 等同 (看作相同；当做同样的事物看待)
