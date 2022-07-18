@@ -1,18 +1,12 @@
 #lang racket/base
 
 (require (file "private/pairs-and-lists.rkt")
-         (file "private/conditionals.rkt"))
+         (file "private/syntactic-forms.rkt"))
 
 
 (provide (all-from-out (file "private/pairs-and-lists.rkt")
-                       (file "private/conditionals.rkt"))
-         (rename-out [lambda 道] ;; 入
-                     [define 名]
-                     [let 令]
-
-                     [require 入] ;; 入 出 拿 给
-                     [provide 出] ;;
-
+                       (file "private/syntactic-forms.rkt"))
+         (rename-out
                      ;; 相当 (两方面差不多；配得上或能够相抵。)
                      ;; 等同 (看作相同；当做同样的事物看待)
                      ;; 相等 ([数目、数、量或尺寸的] 相同)
