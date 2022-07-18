@@ -32,9 +32,13 @@
   (define (ming-read-syntax src in)
     (with-syntax ([ori-codes (read in)])
       #`(module anything racket/base
-          ;; (define a "aaaa")
-          ;; (require "private/base.rkt")
-          ori-codes
+          (require "private/base.rkt")
+          (名 马 "马")
+          (名 白马 "白马")
+
+          (若 (相同? 马 白马)
+              (行陈 "白马是马")
+              (行陈 "白马非马"))
           ))
 
     #;(with-syntax ([ori-codes (port->string in)])
