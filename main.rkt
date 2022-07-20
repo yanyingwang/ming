@@ -30,15 +30,12 @@
      (ming-read-syntax #f in)))
 
   (define (ming-read-syntax src in)
+    ;; #`(displayln #,(read in))
     (with-syntax ([ori-codes (read in)])
       #`(module anything racket/base
-          (require "private/base.rkt")
-          (名 马 "马")
-          (名 白马 "白马")
-
-          (若 (相同? 马 白马)
-              (行陈 "白马是马")
-              (行陈 "白马非马"))
+          (require "ming/base.rkt")
+          ;; (displayln ori-codes)
+          ;; ori-codes
           ))
 
     #;(with-syntax ([ori-codes (port->string in)])

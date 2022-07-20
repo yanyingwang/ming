@@ -4,11 +4,11 @@
 (provide
  (rename-out
   [lambda 道] ;; 入
-  [define 名]
+  [define 名] ;; 旨 意 义
   [let 令]
 
-  [require 召] ;; 召见 , 引入      入 出 拿 给 引进 输出
-  [provide 供] ;; 把....供起来   奏 奉 贡 献
+  [require 召] ;; 召见 , 引入      入 出 拿 给 引进 输出 j举
+  [provide 奉] ;; 把....供起来   奏 奉 贡 献 供
 
 
   ;;;;;; conditaionals

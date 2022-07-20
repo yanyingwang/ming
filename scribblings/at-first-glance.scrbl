@@ -3,8 +3,6 @@
 @(require (for-label racket ming)
            scribble/eval
            scribble-rainbow-delimiters
-           (for-syntax racket/base
-                       syntax/parse)
            )
 
 @(define the-eval
