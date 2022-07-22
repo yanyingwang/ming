@@ -14,7 +14,7 @@
   (eighth 辛)
   (ninth 壬)
   (tenth 癸)
-  (last 尾)
+  (last 末)
 
 
   ))

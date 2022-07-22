@@ -1,11 +1,9 @@
-
 #lang racket/base
 
 ;; (provide (all-from-out racket/base))
 
 (require (file "base.rkt")
-         (file "list.rkt")
-         syntax/parse)
+         (file "list.rkt"))
 (provide (all-from-out (file "base.rkt")
                        (file "list.rkt"))
          )
@@ -16,8 +14,7 @@
 
 
 (module reader racket/base
-
-  (require racket/trace
+  (require racket/string
            syntax/strip-context
            racket/port)
 
@@ -30,19 +27,19 @@
      (ming-read-syntax #f in)))
 
   (define (ming-read-syntax src in)
-    ;; #`(displayln #,(read in))
-    (with-syntax ([ori-codes (read in)])
-      #`(module anything racket/base
-          (require "ming/base.rkt")
-          ;; (displayln ori-codes)
-          ;; ori-codes
-          ))
-
-    #;(with-syntax ([ori-codes (port->string in)])
-      #`(module anything racket/base
-          (provide data)
-          (define data 'str)
-          (displayln data)
+    (with-syntax ([ori-codes
+                   (let loop ([lst (read in)]
+                              [result '()])
+                     (if (eof-object? lst)
+                         result
+                         (loop (read in)
+                               (append lst result))
+                         )
+                     )])
+      #'(module anything racket
+          (require ming)
+          ;; (名 马 "阳光彩虹小白马")
+          ori-codes
           ))
     )
   )
