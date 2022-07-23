@@ -10,9 +10,6 @@
 
 
 
-
-
-
 (module reader racket/base
   (require racket/string
            syntax/strip-context
@@ -27,19 +24,15 @@
      (ming-read-syntax #f in)))
 
   (define (ming-read-syntax src in)
-    (with-syntax ([ori-codes
-                   (let loop ([lst (read in)]
-                              [result '()])
-                     (if (eof-object? lst)
-                         result
-                         (loop (read in)
-                               (append lst result))
-                         )
-                     )])
-      #'(module anything racket
-          (require ming)
-          ;; (名 马 "阳光彩虹小白马")
-          ori-codes
-          ))
+    (define codes (let loop ([lst (read in)]
+                             [result '()])
+                    (if (eof-object? lst)
+                        result
+                        (loop (read in)
+                              (append result (list lst))))))
+    #`(module anything racket
+        (require ming/base)
+        #,@codes
+        )
     )
   )
