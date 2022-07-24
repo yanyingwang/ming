@@ -5,16 +5,12 @@
 (require (file "base.rkt")
          (file "list.rkt"))
 (provide (all-from-out (file "base.rkt")
-                       (file "list.rkt"))
-         )
+                       (file "list.rkt")))
 
 
 
 (module reader racket/base
-  (require racket/string
-           syntax/strip-context
-           racket/port)
-
+  (require racket/list)
   (provide (rename-out [ming-read read]
                        [ming-read-syntax read-syntax]))
 
@@ -24,15 +20,17 @@
      (ming-read-syntax #f in)))
 
   (define (ming-read-syntax src in)
-    (define codes (let loop ([lst (read in)]
+    (define module-name (string->symbol (path->string (path-replace-extension (last (explode-path "/home/yanying/tmp.rkt")) ""))))
+    (define module-codes (let loop ([lst (read in)]
                              [result '()])
                     (if (eof-object? lst)
                         result
                         (loop (read in)
                               (append result (list lst))))))
-    #`(module anything racket
-        (require ming/base)
-        #,@codes
+    #`(module #,module-name racket
+        (require ming/base
+                 ming/list)
+        #,@module-codes
         )
     )
   )
