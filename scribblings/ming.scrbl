@@ -13,3 +13,5 @@
 @include-section["at-first-glance.scrbl"]
 @include-section["datatypes/main.scrbl"]
 @include-section["syntactic-forms.scrbl"]
+
+@index-section[]
