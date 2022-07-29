@@ -1,6 +1,14 @@
 #lang racket/base
 
-(define translation
+(provide table)
+(require (rename-in "racket/base.rkt" [table table1])
+         (rename-in "racket/list.rkt" [table table2])) ;; TODO: should be enh to racket/*.rkt
+
+(define table
+  (append table1 table2))
+
+
+#;(define translation
   (hash
    'if '若
    'case '例

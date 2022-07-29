@@ -13,7 +13,7 @@
        (syntax-case stx ()
          [(_ path)
           (expand-import
-           (datum->syntax stx `(rename-in ,#'path ,@table))) ;; TODO: table should be defined in define syntax block depending on the value of #'path
+           (datum->syntax stx `(rename-in ,#'path ,@table)))
           ]))))
 
 ;; usage

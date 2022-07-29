@@ -2,8 +2,9 @@
 
 ;; (provide (all-from-out racket/base))
 
-(require (file "base.rkt")
-         (file "list.rkt"))
+(require "mapping/racket.rkt")
+
+
 (provide (all-from-out (file "base.rkt")
                        (file "list.rkt")))
 
