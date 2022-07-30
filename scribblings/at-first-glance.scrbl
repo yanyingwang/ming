@@ -18,6 +18,7 @@
 
 以中国古代春秋战国时期，名家提出的辩题@hyperlink["https://zh.wikipedia.org/wiki/%E7%99%BD%E9%A9%AC%E9%9D%9E%E9%A9%AC" "《白马非马》"]，代码可以演示为：
 @interaction[#:eval (the-eval)
+(require (minglize racket))
 (名 马 (链 "白马" "黑马" "黄马"))
 (名 白马 "白马")
 (若 (相等? 马 白马)
@@ -27,6 +28,7 @@
 
 点名册：
 @interaction[#:eval (the-eval)
+(require (minglize racket))
 (名 三年一班点名册
     (链 "王小明" "李小花" "赵小红"))
 (若 (相等? "王小明" (阳 三年一班点名册))

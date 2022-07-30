@@ -19,6 +19,7 @@
 
 
 @examples[#:eval (the-eval)
+(require (minglize racket/base))
 (对 1 2)
 (对? '(1 . 2))
 (阳 '(1 . 2))
