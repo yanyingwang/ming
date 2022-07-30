@@ -1,7 +1,7 @@
 #lang racket/base
 
 (provide minglize
-         (for-syntax minglizing-mapping/racket
+         (for-syntax minglizing-mapping/racket ;; TODO match out
                      minglizing-mapping/racket/base
                      minglizing-mapping/racket/list))
 
@@ -9,13 +9,14 @@
                      racket/syntax
                      racket/require-transform))
 
+;; TODO: make bwlow as a sub-require, e.g. (require (mingmaplize "mapping/racket.rkt" "mapping/racket/base.rkt" ...))
 (require (for-syntax (rename-in "mapping/racket.rkt" [mapping minglizing-mapping/racket])
                      (rename-in "mapping/racket/base.rkt" [mapping minglizing-mapping/racket/base])
                      (rename-in "mapping/racket/list.rkt" [mapping minglizing-mapping/racket/list])))
 
 
 (define-for-syntax (ming-mapping path)
-  ((eval (format-id path "minglizing-mapping/~a" path))))
+  ((eval (format-id path "minglizing-mapping/~a" path)))) ;; TODO: try (eval (format-id path "(minglizing-mapping/~a) path"))
 
 (define-syntax minglize
   (make-require-transformer

@@ -1,13 +1,8 @@
 #lang racket/base
 
-;; (provide (all-from-out racket/base))
 
-(require "mapping/racket.rkt")
-
-
-(provide (all-from-out (file "base.rkt")
-                       (file "list.rkt")))
-
+(provide (all-from-out "core.rkt"))
+(require "core.rkt")
 
 
 (module reader racket/base
@@ -29,8 +24,7 @@
                         (loop (read in)
                               (append result (list lst))))))
     #`(module #,module-name racket
-        (require ming/base
-                 ming/list)
+        (require ming/core (minglize racket))
         #,@module-codes
         )
     )
