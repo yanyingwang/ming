@@ -1,8 +1,8 @@
 #lang racket/base
 
-(provide (all-defined-out))
+(provide mapping)
 
-(define table
+(define (mapping)
   '((lambda 道) ;; 入
     (define 名) ;; 旨 意 义
     (let 令)

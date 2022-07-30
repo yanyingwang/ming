@@ -1,11 +1,11 @@
 #lang racket/base
 
-(provide table)
-(require (rename-in "racket/base.rkt" [table table1])
-         (rename-in "racket/list.rkt" [table table2])) ;; TODO: should be enh to racket/*.rkt
+(provide mapping)
+(require (rename-in "racket/base.rkt" [mapping mapping1])
+         (rename-in "racket/list.rkt" [mapping mapping2])) ;; TODO: should be enh to racket/*.rkt
 
-(define table
-  (append table1 table2))
+(define (mapping)
+  (append (mapping1) (mapping2)))
 
 
 #;(define translation

@@ -1,8 +1,8 @@
 #lang racket/base
 
-(provide (all-defined-out))
+(provide mapping)
 
-(define table
+(define (mapping)
   '((cons 对) ;; 对:把两个东西双在一块,配对在一块.     接 合 连 构 结 创 造
     (pair? 对?)
 

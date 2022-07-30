@@ -1,8 +1,8 @@
 #lang racket/base
 
-(provide (all-defined-out))
+(provide mapping)
 
-(define table
+(define (mapping)
   '((first 甲)
     (second 乙)
     (third 丙)

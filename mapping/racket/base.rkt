@@ -1,11 +1,11 @@
 #lang racket/base
 
-(provide table)
-(require (rename-in "base/pairs-and-lists.rkt" [table table1])
-         (rename-in "base/syntactic-forms.rkt" [table table2]))
+(provide mapping)
+(require (rename-in "base/pairs-and-lists.rkt" [mapping mapping1])
+         (rename-in "base/syntactic-forms.rkt" [mapping mapping2]))
 
 
-(define table0
+(define (mapping0)
   '((equal? 等同?)
     (eqv? 相等?) ;; ???? ;; #f <= (eqv? (make-string 3 #\z) (make-string 3 #\z))
     (eq? 相同?) ;; #f <= (eq? (make-string 3 #\z) (make-string 3 #\z)) (eq? (expt 2 100) (expt 2 100))
@@ -23,6 +23,5 @@
     (displayln 行陈))
   )
 
-(define table
-  (append table0 table1 table2))
-
+(define (mapping)
+  (append (mapping0) (mapping1) (mapping2)))
