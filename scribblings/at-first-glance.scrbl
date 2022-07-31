@@ -1,6 +1,7 @@
 #lang scribble/manual
 
-@(require (for-label racket ming)
+@(require ming/core
+          (for-label racket ming/core (minglize racket))
            scribble/eval
            scribble-rainbow-delimiters
            )
@@ -30,7 +31,7 @@
     (陈 (化 "~v非~v" 白马 马)))
 ]
 
-三年一班的点名册：
+三年一班的点名册的简单查询：
 @interaction[#:eval (the-eval)
 (require (minglize racket))
 (名 三年一班点名册

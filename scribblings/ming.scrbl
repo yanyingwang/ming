@@ -1,7 +1,7 @@
 #lang scribble/manual
 
 
-@title{名语言/Ming-Lang}
+@title{名语言/Ming-Language}
 @author[(author+email "Yanying Wang" "yanyingwang1@gmail.com")]
 
 @defmodulelang["ming" #:module-path ming #:packages ("ming")]
@@ -12,7 +12,7 @@
 @include-section["preface.scrbl"]
 @include-section["at-first-glance.scrbl"]
 @include-section["core.scrbl"]
-@include-section["datatypes/main.scrbl"]
-@include-section["syntactic-forms.scrbl"]
+@include-section["racket.scrbl"]
+@include-section["todos.scrbl"]
 
 @index-section[]

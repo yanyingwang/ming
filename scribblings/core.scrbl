@@ -1,6 +1,7 @@
 #lang scribble/manual
 
-@(require (for-label racket ming)
+@(require ming/core
+          (for-label racket ming/core (minglize racket/list))
            scribble/eval
            scribble-rainbow-delimiters
            racket/sandbox
@@ -14,15 +15,14 @@
                                 [sandbox-memory-limit 50])
      (make-evaluator 'racket/base #:requires `(ming/core (for-syntax . (racket/base))))))
 
-
-
 @script/rainbow-delimiters*
 
 
-@title{Ming Core}
+@title[#:tag "ming-core"]{名语言核心库}
+@declare-exporting[ming]
 
 @defmodule[ming/core]
-名语言的核心汉化库。
+名语言的核心库，语言扩展程序和汉化程序应置于此。
 
 @defform[(minglize module-path)]{
 名化（汉化）一个Racket的库。仅只用于@racket[require]的子句，且仅当名语言内部已经定义了该库的翻译文件时才会成功。
@@ -39,7 +39,7 @@
 @defproc*[([(minglize-mapping/racket) dict?]
           [(minglize-mapping/racket/base) dict?]
           [(minglize-mapping/racket/list) dict?])]{
-@racket[minglize]一个Racket库时，所使用的翻译。
+@racket[minglize]一个Racket库时，所使用的翻译对照表。
 
 @itemlist[
 @item{
