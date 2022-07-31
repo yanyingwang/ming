@@ -3,7 +3,8 @@
 (provide minglize
          (for-syntax minglize-mapping/racket ;; TODO match out
                      minglize-mapping/racket/base
-                     minglize-mapping/racket/list))
+                     minglize-mapping/racket/list)
+         )
 
 (require (for-syntax racket/base
                      racket/syntax

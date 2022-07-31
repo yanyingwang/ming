@@ -11,6 +11,7 @@
 
 @include-section["preface.scrbl"]
 @include-section["at-first-glance.scrbl"]
+@include-section["core.scrbl"]
 @include-section["datatypes/main.scrbl"]
 @include-section["syntactic-forms.scrbl"]
 
