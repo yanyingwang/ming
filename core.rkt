@@ -1,22 +1,22 @@
 #lang racket/base
 
 (provide minglize
-         (for-syntax minglizing-mapping/racket ;; TODO match out
-                     minglizing-mapping/racket/base
-                     minglizing-mapping/racket/list))
+         (for-syntax minglize-mapping/racket ;; TODO match out
+                     minglize-mapping/racket/base
+                     minglize-mapping/racket/list))
 
 (require (for-syntax racket/base
                      racket/syntax
                      racket/require-transform))
 
 ;; TODO: make bwlow as a sub-require, e.g. (require (mingmaplize "mapping/racket.rkt" "mapping/racket/base.rkt" ...))
-(require (for-syntax (rename-in "mapping/racket.rkt" [mapping minglizing-mapping/racket])
-                     (rename-in "mapping/racket/base.rkt" [mapping minglizing-mapping/racket/base])
-                     (rename-in "mapping/racket/list.rkt" [mapping minglizing-mapping/racket/list])))
+(require (for-syntax (rename-in "mapping/racket.rkt" [mapping minglize-mapping/racket])
+                     (rename-in "mapping/racket/base.rkt" [mapping minglize-mapping/racket/base])
+                     (rename-in "mapping/racket/list.rkt" [mapping minglize-mapping/racket/list])))
 
 
 (define-for-syntax (ming-mapping path)
-  ((eval (format-id path "minglizing-mapping/~a" path)))) ;; TODO: try (eval (format-id path "(minglizing-mapping/~a) path"))
+  ((eval (format-id path "minglize-mapping/~a" path)))) ;; TODO: try (eval (format-id path "(minglize-mapping/~a) path"))
 
 (define-syntax minglize
   (make-require-transformer
@@ -24,7 +24,7 @@
      (syntax-case stx ()
        [(_ path)
         ;; (println (ming-mapping #'path))
-        ;; (println minglizing-mapping-racket/list)
+        ;; (println minglize-mapping-racket/list)
         (expand-import
          (datum->syntax stx `(rename-in ,#'path ,@(ming-mapping #'path))))
         ]))))
