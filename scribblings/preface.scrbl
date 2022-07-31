@@ -17,10 +17,9 @@
 
 我想或许，梵语之说显然是西方人局限于西方语言（德语、法语、西班牙语、意大利语都算是拉丁语的方言吧）的固有模式所做出的推演。而实际上，中文才是更值得尝试的宿主语言，特别是对LISP来说。
 
-2019年我写过文章@hyperlink["http://www.yanying.wang/2019/12/%E7%94%B1%E6%B1%89%E8%AF%AD%E7%BC%96%E7%A8%8B%E6%89%80%E6%83%B3%E5%88%B0%E7%9A%84.html" "《由汉语编程所想到的》"]。2020年写过文章@hyperlink["http://www.yanying.wang/2020/10/%E6%88%91%E7%9A%84%E4%B8%80%E7%A7%8D%E5%85%B3%E4%BA%8Elisp%E6%96%B9%E8%A8%80%E5%BC%8F%E7%9A%84%E6%B1%89%E8%AF%AD%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9A%84%E6%9E%84%E6%80%9D.html" "《我的一种关于lisp方言式的汉语编程语言的构思》"]。
-
 2021年夏，我的这个想法变得越发成熟。2022年夏，我着手了实现。
 
+@smaller{另可见我曾写过的文章：@hyperlink["http://www.yanying.wang/2019/12/%E7%94%B1%E6%B1%89%E8%AF%AD%E7%BC%96%E7%A8%8B%E6%89%80%E6%83%B3%E5%88%B0%E7%9A%84.html" "《由汉语编程所想到的》"]和@hyperlink["http://www.yanying.wang/2020/10/%E6%88%91%E7%9A%84%E4%B8%80%E7%A7%8D%E5%85%B3%E4%BA%8Elisp%E6%96%B9%E8%A8%80%E5%BC%8F%E7%9A%84%E6%B1%89%E8%AF%AD%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9A%84%E6%9E%84%E6%80%9D.html" "《我的一种关于lisp方言式的汉语编程语言的构思》"]}
 
 @section{LISP的基本语法规则}
 相较于现今主流的编程语言，LISP的语法是极其简单的（称为@hyperlink["https://en.wikipedia.org/wiki/S-expression" "S表达式"]）：
