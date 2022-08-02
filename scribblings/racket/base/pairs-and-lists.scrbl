@@ -1,14 +1,14 @@
 #lang scribble/manual
 
-@(require (for-label racket ming)
+@(require (for-label racket ming/racket/base ming/racket/list)
            scribble/eval
            scribble-rainbow-delimiters
            ming/scribble
            ming/mapping/racket/base/pairs-and-lists
            )
-
 @(define the-eval
          (make-eval-factory '(ming)))
+@(define-namespace-anchor nsa)
 
 @script/rainbow-delimiters*
 
@@ -42,6 +42,28 @@
 (阳之阳 '((1 1.1) 2 3 4))
 (阳之阴阳 '((1 1.1) 2 3 4))
 ]
+@(defmapping mapping nsa)
 
-@(define-namespace-anchor nsa)
-@(defmapping (mapping) nsa)
+
+@examples[#:eval (the-eval)
+(require (minglize racket/base))
+(对 1 2)
+(对? '(1 . 2))
+(阳 '(1 . 2))
+(阴 '(1 . 2))
+
+(对 1 (对 2 (对 3 (对 4 空))))
+(相等? (对 1 (对 2 (对 3 (对 4 空))))
+       (链 1 2 3 4))
+(链 1 2 3 4)
+(阳 '(1 2 3 4))
+(阴 '(1 2 3 4))
+(阴之阳 '(1 2 3 4))
+(阴之阴阳 '(1 2 3 4))
+(甲 '(1 2 3 4))
+(乙 '(1 2 3 4))
+(丙 '(1 2 3 4))
+(阳 '((1 1.1) 2 3 4))
+(阳之阳 '((1 1.1) 2 3 4))
+(阳之阴阳 '((1 1.1) 2 3 4))
+]
