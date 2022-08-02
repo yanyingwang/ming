@@ -3,8 +3,9 @@
 
 (provide defmapping)
 (require (for-syntax racket/base racket/syntax racket/dict
-                     (rename-in "mapping/racket/base/pairs-and-lists.rkt" [mapping mapping-pairs-and-lists])
-                     (rename-in "mapping/racket/base/syntactic-forms.rkt" [mapping mapping-syntactic-forms])
+                     (rename-in "mapping/racket/base/pairs-and-lists.rkt" [mapping mapping-racket/base/pairs-and-lists])
+                     (rename-in "mapping/racket/base/syntactic-forms.rkt" [mapping mapping-racket/base/syntactic-forms])
+                     (rename-in "mapping/racket/base/others.rkt" [mapping mapping-racket/base/others])
                      (rename-in "mapping/racket/list.rkt" [mapping mapping-racket/list])))
 
 (begin-for-syntax (define-namespace-anchor anchor)

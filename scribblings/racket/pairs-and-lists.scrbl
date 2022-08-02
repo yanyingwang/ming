@@ -15,12 +15,12 @@
 @declare-exporting[ming]
 
 “对”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构。@linebreak{}
-对于名语言来说，如果我们把两个数据对在一块，我们就得到一个“对”，而对在一块的这两个数据分别处于他们所构成的这个对的“阳”位和“阴”位。@linebreak{}
-另外，如果一个“对”的阴位不是存的一个具体数据而是存的另外一个“对”的索引，此时的这个“对”，也叫做“链”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
+对于名语言来说，如果我们把两个数据@racket[对]在一块，我们就得到一个“对”，而对在一块的这两个数据分别处于他们所构成的这个对的@racket[阳]位和@racket[阴]位。@linebreak{}
+另外，如果一个“对”的阴位不是存的一个具体数据而是存的另外一个“对”的索引，此时的这个“对”，也叫做@racket[链]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
 
 @section{ming/racket/base}
 @defmodule[ming/racket/base]
-@defmapping[pairs-and-lists]
+@defmapping[racket/base/pairs-and-lists]
 @examples[#:eval (the-eval)
 (对 1 2)
 (对? '(1 . 2))
@@ -51,4 +51,3 @@
 (丙 '(1 2 3 4))
 ]
 
-@defthing[#:kind "翻译"  甲 "第一的意思，是中国古代文字记序符号十天干之一。" #:value first]
