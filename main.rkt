@@ -24,7 +24,7 @@
                         (loop (read in)
                               (append result (list lst))))))
     #`(module #,module-name racket
-        (require ming/core (minglize racket))
+        (require ming/core (mingize racket))
         #,@module-codes
         )
     )

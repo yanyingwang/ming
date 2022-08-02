@@ -1,7 +1,7 @@
 #lang scribble/manual
 
 @(require ming/core
-          (for-label racket ming/core (minglize racket))
+          (for-label racket ming/core (mingize racket))
            scribble/eval
            scribble-rainbow-delimiters
            )
@@ -23,7 +23,7 @@
 @; ]
 
 @interaction[#:eval (the-eval)
-(require (minglize racket))
+(require (mingize racket))
 (名 马 (链 "白马" "黑马" "黄马"))
 (名 白马 "白马")
 (若 (相等? 马 白马)
@@ -33,7 +33,7 @@
 
 三年一班的点名册的简单查询：
 @interaction[#:eval (the-eval)
-(require (minglize racket))
+(require (mingize racket))
 (名 三年一班点名册
     (链 "王小明" "李小花" "赵小红"))
 (若 (相等? "王小明" (阳 三年一班点名册))

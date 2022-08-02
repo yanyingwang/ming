@@ -1,9 +1,9 @@
 #lang racket/base
 
-(provide minglize
-         (for-syntax minglize-mapping/racket ;; TODO match out
-                     minglize-mapping/racket/base
-                     minglize-mapping/racket/list)
+(provide mingize
+         (for-syntax mingize-mapping/racket ;; TODO match out
+                     mingize-mapping/racket/base
+                     mingize-mapping/racket/list)
          )
 
 (require (for-syntax racket/base
@@ -11,21 +11,21 @@
                      racket/require-transform))
 
 ;; TODO: make bwlow as a sub-require, e.g. (require (mingmaplize "mapping/racket.rkt" "mapping/racket/base.rkt" ...))
-(require (for-syntax (rename-in "mapping/racket.rkt" [mapping minglize-mapping/racket])
-                     (rename-in "mapping/racket/base.rkt" [mapping minglize-mapping/racket/base])
-                     (rename-in "mapping/racket/list.rkt" [mapping minglize-mapping/racket/list])))
+(require (for-syntax (rename-in "mapping/racket.rkt" [mapping mingize-mapping/racket])
+                     (rename-in "mapping/racket/base.rkt" [mapping mingize-mapping/racket/base])
+                     (rename-in "mapping/racket/list.rkt" [mapping mingize-mapping/racket/list])))
 
 
 (define-for-syntax (ming-mapping path)
-  ((eval (format-id path "minglize-mapping/~a" path)))) ;; TODO: try (eval (format-id path "(minglize-mapping/~a) path"))
+  ((eval (format-id path "mingize-mapping/~a" path)))) ;; TODO: try (eval (format-id path "(mingize-mapping/~a) path"))
 
-(define-syntax minglize
+(define-syntax mingize
   (make-require-transformer
    (lambda (stx)
      (syntax-case stx ()
        [(_ path)
         ;; (println (ming-mapping #'path))
-        ;; (println minglize-mapping-racket/list)
+        ;; (println mingize-mapping-racket/list)
         (expand-import
          (datum->syntax stx `(rename-in ,#'path ,@(ming-mapping #'path))))
         ]))))
@@ -35,10 +35,10 @@
 (require ming/core)
 (mapping-init)
 (begin-for-syntax (println table-racket))
-(require (minglize racket))
+(require (mingize racket))
 
 ;; usage
-;; (require (minglize racket/list))  ;; minglize 名化，汉化 chineselize
+;; (require (mingize racket/list))  ;; mingize 名化，汉化 chineselize
 ;; (甲 (链 1 2 3))
 ;; (乙 (list 1 2 3))
 
