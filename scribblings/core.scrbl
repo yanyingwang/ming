@@ -25,12 +25,21 @@
 名语言的核心库，语言扩展程序和汉化程序应置于此。
 
 @defform[(mingize module-path)]{
-名化（汉化）一个Racket的库。仅只用于@racket[require]的子句，且仅当名语言内部已经定义了该库的翻译文件时才会成功。
+名化（汉化）一个Racket的库。
+@itemlist[
+@item{仅只用于@racket[require]的子句，且仅当名语言内部已经定义了该库的翻译文件时才会成功。}
+@item{使用时效果和@racket[(require ming/module-path)]等同。}
+]
+
 
 @examples[#:eval (the-eval)
 (require racket/list)
 (first (list 1 2 3))
+
 (require (mingize racket/list))
+(甲 (list 1 2 3))
+
+(require ming/racket/list)
 (甲 (list 1 2 3))
 ]
 }
