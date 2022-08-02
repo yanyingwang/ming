@@ -1,5 +1,5 @@
 #lang racket/base
 
-(provide (minglize racket/base))
-(require (for-syntax "../mapping/racket/base.rkt")
-         ming/private/core)
+
+(require "../private/core.rkt")
+(provide-with-mingizily-require racket/base)

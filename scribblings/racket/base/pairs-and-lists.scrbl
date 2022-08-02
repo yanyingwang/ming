@@ -19,9 +19,8 @@
 对于名语言来说，如果我们把两个数据对在一块，我们就得到一个“对”，而对在一块的这两个数据分别处于他们所构成的这个对的“阳”位和“阴”位。@linebreak{}
 另外，如果一个“对”的阴位不是存的一个具体数据而是存的另外一个“对”的索引，此时的这个“对”，也叫做“链”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
 
-
 @examples[#:eval (the-eval)
-(require (minglize racket/base))
+(require ming/racket)
 (对 1 2)
 (对? '(1 . 2))
 (阳 '(1 . 2))
@@ -44,9 +43,8 @@
 ]
 @(defmapping mapping nsa)
 
-
 @examples[#:eval (the-eval)
-(require (minglize racket/base))
+(require ming/racket/base)
 (对 1 2)
 (对? '(1 . 2))
 (阳 '(1 . 2))

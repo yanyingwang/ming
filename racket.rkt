@@ -1,4 +1,5 @@
 #lang racket/base
 
-(provide (all-from-out racket/base racket/list))
-(require ming/core (minglize racket/base) (minglize racket/list))
+(require "private/core.rkt")
+(provide-with-mingizily-require racket/base)
+(provide-with-mingizily-require racket/list)
