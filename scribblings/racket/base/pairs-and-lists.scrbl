@@ -3,8 +3,7 @@
 @(require (for-label racket ming)
            scribble/eval
            scribble-rainbow-delimiters
-           @; ming/scribble
-           racket/dict
+           ming/scribble
            ming/mapping/racket/base/pairs-and-lists
            )
 
@@ -45,30 +44,4 @@
 ]
 
 @(define-namespace-anchor nsa)
-@(define ns (namespace-anchor->namespace nsa))
-
-@(for/list ([(k v) (in-dict (mapping))])
-  (eval `(defthing ,(car v) ,k) ns)
-)
-
-
-@; @defthing[对 cons]
-@; @defthing[对? pair?]
-
-@; @defthing[链 list]
-
-@; @defthing[阳 car]
-@; @defthing[阴 cdr]
-@; @defthing[阴之阳 cadr]
-@; @defthing[甲 first]
-@; @defthing[乙 second]
-@; @defthing[丙 third]
-@; @defthing[丁 fourth]
-@; @defthing[戊 fifth]
-@; @defthing[己 sixth]
-@; @defthing[庚 seventh]
-@; @defthing[辛 eighth]
-@; @defthing[壬 ninth]
-@; @defthing[癸 tenth]
-@; @defthing[余 rest]
-@; @defthing[尾 last]
+@(defmapping (mapping) nsa)
