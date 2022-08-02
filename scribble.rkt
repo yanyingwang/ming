@@ -20,5 +20,5 @@
                     `(begin
                        (deftogether
                            ,(for/list ([(k v) (in-dict (ming-mapping #'path))])
-                              `(defthing #:kind "翻译" ,(car v) "解释为什么" #:value ,k)
+                              `(defthing #:kind "翻译" ,(car v) "解释为什么选用这个汉字" #:value ,k)
                               ))))]))

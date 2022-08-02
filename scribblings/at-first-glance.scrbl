@@ -12,7 +12,7 @@
 @script/rainbow-delimiters*
 
 
-@title[#:tag "at-first-glance"]{一览}
+@title[#:tag "at-first-glance"]{语言一览}
 @declare-exporting[ming]
 
 @itemlist[
@@ -23,8 +23,8 @@
 (名 马 (链 "白马" "黑马" "黄马"))      (code:comment @#,elem{起一个名字@racketvarfont{马}代表一个链结构的数据集合，集合内容是@racketvalfont{白马}、@racketvalfont{黑马}和@racketvalfont{黄马}。})
 (名 白马 "白马")       (code:comment @#,elem{起名@racketvarfont{白马}是一个字符串数据，该字符串内容是@racketvalfont{白马}二字。})
 (若 (等同? 马 白马)       (code:comment @#,elem{如果@racketvarfont{马}和@racketvarfont{白马}所代表的内容是等同的：})
-(陈 (化 "~v是~v" 白马 马))      (code:comment @#,elem{那么就转化整合变量字符串并在屏幕上陈列出：@racketoutput{@racketvalfont{@racketvarfont{白马}所代表的内容}是@racketvalfont{@racketvarfont{马}所代表的内容}。}})
-(陈 (化 "~v非~v" 白马 马))      (code:comment @#,elem{否则就转化整合变量字符串并在屏幕上陈列出： @racketoutput{@racketvalfont{@racketvarfont{白马}所代表的内容}非@racketvalfont{@racketvarfont{马}所代表的内容}。}})
+(陈 (化 "~v是~v。" 白马 马))      (code:comment @#,elem{那么就转化整合变量名到字符串中并在屏幕上陈列出：@racketoutput{@racketvalfont{@racketvarfont{白马}所代表的内容}是@racketvalfont{@racketvarfont{马}所代表的内容}。}})
+(陈 (化 "~v非~v。" 白马 马))      (code:comment @#,elem{否则就转化整合变量名到字符串中并在屏幕上陈列出： @racketoutput{@racketvalfont{@racketvarfont{白马}所代表的内容}非@racketvalfont{@racketvarfont{马}所代表的内容}。}})
 )
 (code:comment @#,bold{因为@racketvarfont{白马}是字符串意义上的白马,而@racketvarfont{马}是一个包含了“白马”“黑马”“黄马”的集合，故此两者不同，结果是“白马非马”。})
 ]
