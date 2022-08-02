@@ -15,8 +15,4 @@
 @script/rainbow-delimiters*
 
 
-@include-section["base/pairs-and-lists.scrbl"]
-@include-section["base/syntactic-forms.scrbl"]
-
-
 @defthing[相等? equal?]
