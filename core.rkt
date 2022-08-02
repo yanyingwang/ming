@@ -31,7 +31,7 @@
         ]))))
 
 
-#|
+#| usage:
 (require ming/core)
 (mapping-init)
 (begin-for-syntax (println table-racket))

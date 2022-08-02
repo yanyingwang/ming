@@ -1,11 +1,6 @@
 #lang racket/base
 
 
-#;(require
-         scribble/manual)
-
-
-
 (provide defmapping)
 (require (for-syntax racket/base racket/syntax racket/dict
                      (rename-in "mapping/racket/base/pairs-and-lists.rkt" [mapping mapping-pairs-and-lists])
