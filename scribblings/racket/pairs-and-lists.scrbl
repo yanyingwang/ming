@@ -11,8 +11,6 @@
 @script/rainbow-delimiters*
 
 @title[#:tag "pairs-and-lists"]{对和链}
-@; @declare-exporting[ming/racket/base]
-
 “对”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构。@linebreak{}
 
 @section{base}

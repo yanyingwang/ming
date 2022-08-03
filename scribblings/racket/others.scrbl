@@ -10,5 +10,4 @@
 @script/rainbow-delimiters*
 
 @title[#:tag "racket/base/others"]{其它}
-@; @declare-exporting[ming/racket/base]
 @defmapping[racket/base/others]
