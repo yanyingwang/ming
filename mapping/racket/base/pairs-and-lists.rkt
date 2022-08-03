@@ -4,14 +4,14 @@
 
 (define (mapping)
   '((cons 对) ;; 对:把两个东西双在一块,配对在一块.     接 合 连 构 结 创 造
-    (pair? 对?)
+    (pair? 对?) ;; 对子?
 
     (car 阳)
     (cdr 阴)
     (null? 空?)
     (null 空)
 
-    (list 链)
+    (list 链) ;; 链子
     (list* 链*)
     (list* 链?)
     (build-list 造链) ;; 创链

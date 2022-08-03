@@ -12,6 +12,5 @@
 
 
 @title[#:tag "syntactic-forms"]{语法形式}
-@declare-exporting[ming]
-@defmodule[ming/racket/base]
+@; @declare-exporting[ming/racket/base]
 @defmapping[racket/base/syntactic-forms]
