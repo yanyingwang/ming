@@ -1,7 +1,7 @@
 #lang scribble/manual
 
 @(require ming/core
-          (for-label racket ming)
+          (for-label racket ming/racket)
            scribble/example
            scribble-rainbow-delimiters
            racket/sandbox
@@ -28,9 +28,8 @@
 名化（汉化）一个Racket的库。
 @itemlist[
 @item{仅只用于@racket[require]的子句，且仅当名语言内部已经定义了该库的翻译文件时才会成功。}
-@item{当嵌入到@racket[require]中作为子句一块使用时，其和@racket[(require ming/module-path)]等价，除了后者的翻译表是不能被随意修改的。}
+@item{当嵌入到@racket[require]中作为子句一块使用时，其和@racket[(require #,(elem "ming/" (racketvarfont "module-path")))]等同。除了后者所使用的翻译表的作用域是在原module中的，因此不能简单的被修改或重定义。}
 ]
-
 
 @examples[#:eval my-eval
 (require racket/list)

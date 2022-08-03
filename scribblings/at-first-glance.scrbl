@@ -1,7 +1,6 @@
 #lang scribble/manual
 
-@(require ming/core
-          (for-label racket ming)
+@(require (for-label racket ming/racket)
            scribble/eval
            scribble-rainbow-delimiters
            )
@@ -10,7 +9,6 @@
          (make-eval-factory '(ming)))
 
 @script/rainbow-delimiters*
-
 
 @title[#:tag "at-first-glance"]{语言一览}
 @declare-exporting[ming]

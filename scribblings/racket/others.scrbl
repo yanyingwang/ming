@@ -11,4 +11,5 @@
 
 @title[#:tag "racket/base/others"]{racket/base-其他}
 @declare-exporting[ming]
+@defmodule[ming/racket/base]
 @defmapping[racket/base/others]

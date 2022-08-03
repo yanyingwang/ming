@@ -1,5 +1,6 @@
 #lang racket/base
 
-(require "private/core.rkt")
-(provide-with-mingizily-require racket/base)
-(provide-with-mingizily-require racket/list)
+(provide (all-from-out "racket/base.rkt"
+                       "racket/list.rkt"))
+(require "racket/base.rkt"
+         "racket/list.rkt")
