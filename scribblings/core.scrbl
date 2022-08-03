@@ -1,7 +1,7 @@
 #lang scribble/manual
 
 @(require ming/core
-          (for-label racket ming/racket)
+          (for-label racket ming/racket ming/core)
            scribble/example
            scribble-rainbow-delimiters
            racket/sandbox

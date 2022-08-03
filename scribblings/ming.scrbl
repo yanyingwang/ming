@@ -4,7 +4,7 @@
 @title{名语言/Ming-Language}
 @author[(author+email "Yanying Wang" "yanyingwang1@gmail.com")]
 
-@defmodulelang["ming" #:module-path ming #:packages ("ming")]
+@defmodule[ming #:lang]
 名语言，LISP的中文化方言，Racket的中文化编程语言。
 
 @(table-of-contents)
@@ -16,3 +16,4 @@
 @include-section["todos.scrbl"]
 
 @index-section[]
+
