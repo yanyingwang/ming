@@ -51,7 +51,7 @@
 
 @itemlist[
 @item{
-默认加载在@tech[#:doc '(lib "scribblings/guide/guide.scrbl") #:key "phase level -1" "phase 1"]（即syntax层）：
+默认加载在@tech[#:doc '(lib "scribblings/guide/guide.scrbl") #:key "meta-compile phase level" "meta-compile时期"]：
 @examples[#:eval my-eval
 (begin-for-syntax
   (println (mingize-mapping/racket/list)))
