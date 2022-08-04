@@ -21,6 +21,7 @@
 @title[#:tag "ming-core"]{名语言核心库}
 @declare-exporting[ming]
 
+@section[ming/core]
 @defmodule[ming/core]
 名语言的核心库，语言扩展程序和汉化程序应置于此。
 
@@ -72,3 +73,6 @@
 }
 ]
 }
+
+@section[ming/scribble]
+@defmodule[ming/scribble]
