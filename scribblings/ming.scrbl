@@ -1,7 +1,7 @@
 #lang scribble/manual
 
 
-@title{名语言/Ming-Language}
+@title[#:style '(toc)]{名语言/Ming-Language}
 @author[(author+email "Yanying Wang" "yanyingwang1@gmail.com")]
 
 @defmodule[ming #:lang]
