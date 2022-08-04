@@ -3,7 +3,8 @@
 @(require (for-label racket ming)
            scribble/eval
            scribble-rainbow-delimiters
-           ming/scribble)
+           ming/scribble
+           )
 @(define the-eval
          (make-eval-factory '(ming/racket/base ming/racket/list)))
 
@@ -36,7 +37,14 @@
 (阳之阳 '((1 1.1) 2 3 4))
 (阳之阴阳 '((1 1.1) 2 3 4))
 ]
-@defmapping[racket/base/pairs-and-lists]
+@defmapping[racket/base/pairs-and-lists '(
+(对 . "将两个数据对在一块。")
+(阳 . "返回居于阳位的数据。")
+(阴 . "返回居于阴位的数据。")
+(阳之阳 . "取阳位数据，从已取数据中再取阳位数据。")
+(复链以 . "每个元素以...为步骤来构造@racket[复链]。")
+(链 . "将数据链起来。")
+)]
 
 
 @section{additional}
@@ -46,4 +54,18 @@
 (乙 '(1 2 3 4))
 (丙 '(1 2 3 4))
 ]
-@defmapping[racket/list]
+
+
+
+@defmapping[racket/list
+'((复链 . "类比昆虫的“复眼”一词而得名，因链内元素互相类同。" )  @;"创建一个包含N个元素且每个元素的值都是V的链。如果一个链的每一项的值都相同或相似，那么这个链叫复链。"
+(甲 . "第一个的意思，源自中国古代文字记序符号十天干。")
+)
+
+
+]
+
+@; @(define expl-mapping1 '((a . "bbbbbb") (c . @elem[sdfsdf@racket[first]])))
+@; @(defminger abjjjjj @#,(racketoutput (dict-ref expl-mapping1 'a " ")) k)
+@; @(defminger abjjjjj @#,( (elem (dict-ref expl-mapping1 'c " "))) k)
+@; @(defminger abjjjjj @(unsyntax (apply elem '(racketresult "sdfsfsfsdfsdfsdfsdfw ai"))) k)

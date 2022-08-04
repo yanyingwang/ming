@@ -63,7 +63,7 @@
 }
 
 @item{
-另外，你也可以在运行时修改。比如我们想把默认的翻译@racket[first] => @racket[甲]，改成@litchar{第一个}：
+另外，你也可以在运行时修改。比如我们想把默认的翻译@racket[first] => @racket[甲]，改成@racketidfont{第一个}：
 @examples[#:eval my-eval
 (define-for-syntax (mingize-mapping/racket/list) '((first 第一个)))
 (require (mingize racket/list))

@@ -3,7 +3,7 @@
 (provide mapping)
 
 (define (mapping)
-  '((lambda 道) ;; 入
+  '((lambda 入) ;; 入 道
     (define 名) ;; 代表 定义的意思  ;; 旨 意 义
     (let 令)
 

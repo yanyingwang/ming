@@ -13,8 +13,8 @@
 
     (list 链) ;; 链子
     (list* 链*)
-    (list* 链?)
-    (build-list 造链) ;; 创链
+    (list? 链?)
+    (build-list 复链以) ;; 以...为过程创造复链
     (length 长)
     (list-ref 序) ;; 链之 链及 予 序
     (list-tail 舍)

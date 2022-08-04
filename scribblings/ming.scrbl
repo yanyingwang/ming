@@ -15,5 +15,7 @@
 @include-section["racket.scrbl"]
 @include-section["todos.scrbl"]
 
+@; add new section: 翻译索引： procedure 步骤  list 链   pair 对
+
 @index-section[]
 
