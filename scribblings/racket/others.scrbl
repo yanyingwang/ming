@@ -10,8 +10,7 @@
 @script/rainbow-delimiters*
 
 @title[#:tag "racket/base/others"]{其它}
-@defmapping[racket/base/others '(
-(陈 . "在屏幕上输出...的内容。")
-(行陈 . "在屏幕上输出一行...的内容。")
-
+@defmapping[racket/base/others
+([陈 "在屏幕上输出...的内容。"]
+[行陈 "在屏幕上输出一行...的内容。"]
 )]

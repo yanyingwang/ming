@@ -1,15 +1,13 @@
 #lang racket/base
 
 
-(provide dict-ref defmapping defchinesize)
-(require racket/dict scribble/manual
+(provide defmapping defchinesize)
+(require scribble/manual
          (for-syntax (rename-in "mapping/racket/base/pairs-and-lists.rkt" [mapping mapping-racket/base/pairs-and-lists])
                      (rename-in "mapping/racket/base/syntactic-forms.rkt" [mapping mapping-racket/base/syntactic-forms])
                      (rename-in "mapping/racket/base/others.rkt" [mapping mapping-racket/base/others])
                      (rename-in "mapping/racket/list.rkt" [mapping mapping-racket/list]))
-         (for-syntax racket/base racket/syntax racket/dict))
-
-
+         (for-syntax racket/base racket/syntax))
 
 
 (begin-for-syntax
@@ -32,7 +30,6 @@
             ))
     ))
 
-
 (define-syntax (defmapping stx)
   (syntax-case stx()
     [(_ path mapping-data)
@@ -47,18 +44,5 @@
      (datum->syntax stx `(defthing #:kind "汉化" ,(syntax-e #'cn-id) ,(syntax-e #'reason) #:value ,(syntax-e #'en-id)))
      ]
     ))
-
-
-;; (define-namespace-anchor anchor)
-;; (define ns (namespace-anchor->namespace anchor))
-
-#;(define (defmapping path dict)
-  (for/list ([l (in-list (mapping #:scribble? #t))]
-             #:do ((define a (car l))
-                   (define b (cadr l))
-                   (define c (caddr l))))
-    (defchinesize b (dict-ref dict b c) a)
-    ))
-
 #;(define (defchinesize transed-id reason ori-id)
    `(defthing #:kind "汉化" ,transed-id ,reason #:value ,ori-id))
