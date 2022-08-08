@@ -1,8 +1,20 @@
 #lang scribble/manual
 
 
+@(require (for-label racket ming)
+           scribble/example
+           scribble-rainbow-delimiters)
+@(define the-eval
+         (make-eval-factory '(racket/base racket/list ming/racket/base ming/racket/list)))
+
+
+@script/rainbow-delimiters*
+
+
 @title[#:tag "preface"]{序}
 @declare-exporting[ming]
+
+@table-of-contents{}
 
 @section{灵感来源}
 纵观人类历史，很多有意义的成果往往都不是靠严谨的逻辑推理得来的，而是一时的灵感迸发，先有了结论，然后再去寻找现象去证明结论。
@@ -59,14 +71,70 @@ It's very obvious to notice that comparing to English, Chinese can use less spac
 
 上所述种种，更加使用人口之众，都让我认为，将LISP的语法寄宿在汉语下，将拥有强大表达力的中文融入在S表达式幽幽的括号中所产生的编程语言，会将人机交互带入另一层境界。
 
-@section{如何做}
+@section{中文化了的LISP世界一角}
+@italic{这部分是我在实现了一部分名语言的代码后又增加出的内容，一并放在此处是为了具体的解释一下上部分结尾处的我所设想的内容：中文化将如何改进LISP的难度性。}
+
+@subsection{make-list和build-list}
+我们以两个Racket标准库里面的Procedure：@racket[make-list]和@racket[build-list]为例来尝试阐述所说。
+
+@subsubsection{英文}
+从他们的英文名字上，我们很容易得出这两个Procedure都是用来创建“@racket[list]”的（名语言称之为“@racket[链]”）。
+
+@itemlist[
+@item{
+@examples[#:eval (the-eval) #:label @elem{对于@racket[make-list]有：}
+(make-list 3 'foo)
+(make-list 6 "foo")
+]
+很容易明白，它是用来创建一个包含n个相同值的链的。
+}
+@item{
+@examples[#:eval (the-eval) #:label @elem{对于@racket[build-list]有：}
+(build-list 5 values) (code:comment "生成一个包含0-4这个5个数的链。")
+(build-list 10 values) (code:comment "生成一个包含0-9这个10个数的链。")
+(build-list 10 add1) (code:comment "生成一个包含0-9这个10个数的链，并且每一个数都加上1。")
+(build-list 10 (lambda (e) (* 2 e))) (code:comment "生成一个包含0-9这个10个数的链，并且每一个数都乘上自身。")
+]
+@racket[build-list]的行为更加复杂些：它是用来生成一个链，这个链包含从0数起的n个数，并且生成的时候，这些数是可以被做一些附加处理的。
+}
+]
+
+对于@racket[make-list]和@racket[build-list]这两个Procedure的具体作用，从名字上我们仅仅能看出它是用来创建链的，并不能看出它的其它更具体的作用。
+
+@subsubsection{中文化后}
+中文化后，@racket[make-list]叫@racket[复链]，意为链内部的每个元素是重复的；@racket[build-list]叫@racket[序链]，意为链内部的元素是按照一定的顺序排列的。
+
+@itemlist[
+@item{第一，显然这两个Procedure的名字有着较原英文更加丰富的含义，这是我上文提到的我所说的中文化的意义；}
+@item{第二，古中文即文言文中，字词的词性很弱，或者说是常常有名词活用动词，动词活用名词的用法。故此，“链”这个字是可以被用作动词的，意为创建链、链起来一组数据、将一组数据存在链结构中。总之，字词的表意性因其所处的语境而可以有被活用的留白；}
+@item{第三，从整体性的角度讲，和其他Procedure名放在一块，名字显得有更加有规律可循，语言使用者更容易从整体的角度出发获取到更多意义上的理解。}
+]
+
+
+当然你可以说，这其中的“第一”是因为这两个Procedure原本的英文名字起的不好。
+
+但我们更加应该看到的是，这本质上反应的是一种文化上的差异：英文世界里是存在着一种把事情都简单化的趋向的，这是我认为这两个Procedure采用了@litchar{make-list}和@litchar{build-list}的根本原因，我们即使找出更加贴切的英文词汇来作为这两个Procedure的名字，但或许这些词汇在实际的实现上看起来都是不够直观的。
+
+但对中文来讲就不一样了，中文的造词能力更强：支撑中文造词能力强的技术层原因是它的单字表意特性；非技术层原因是它所造出的词是更加容易被接收者所理解的（这可能和它字的表象特性有关）。
+
+@examples[#:eval (the-eval) #:label "中文化后的示例："
+(链 'val 'val 'val)
+(复链 3 'val)
+
+(链 1 2 3 4 5)
+(序链 5 add1)
+(序链 5 (入 (n) (复链 n 'val)))
+]
+
+@section{设想}
+@subsection{如何做}
 @itemlist[
 @item{Racket语言，编程语言设计和实现的平台，可先用它设计一个方言，并逐步汉化翻译已实现了的内部库。}
 @item{在如上的过程中，逐步建立自动化代码翻译工具，以便让更多人更容易的投入到翻译中。}
 @item{循环往复，另可在翻译中引入切合汉语文化的有切实意义的新特性和语法糖。}
 ]
 
-@section{释惑}
+@subsection{释惑}
 @itemlist[
 @item{名语言的目的是为了探索以汉语的博大精深，兼容并包，是否可以让编程语言以另外一种方式变得更容易被人理解。}
 @item{为什么选择LISP/Racket语言实现：第一，我认为LISP的语法特性间接的做了很大程度的留白，这得以让中文可以最大程度的发挥出它的优势。第二，是认为scheme语言的特殊性，其高级抽象形态的实现都可以回溯到最基本的函数定义上，这也得以让人可以循环渐进的替换完其固有的内部英文定义。}
@@ -75,7 +143,7 @@ It's very obvious to notice that comparing to English, Chinese can use less spac
 @item{名的其中之重要一目的是为了给汉语编程探索和指明道路。}
 ]
 
-@section{汉语字典索引}
+@subsection{汉语字典索引}
 @itemlist[
 @item{@url{http://qiyuan.chaziwang.com/}}
 @item{@url{https://www.hwxnet.com/}}

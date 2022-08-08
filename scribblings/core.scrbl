@@ -1,14 +1,14 @@
 #lang scribble/manual
 
 @(require ming/core ming/scribble
-          (for-label racket ming/racket ming/core)
+          (for-label racket ming/racket ming/core scribble/decode)
            scribble/example
            scribble-rainbow-delimiters
            racket/sandbox
           )
 
-@; @(define the-eval
-@;          (make-eval-factory '(ming)))
+@(define the-eval
+         (make-eval-factory '(ming)))
 
 @(define my-eval (parameterize ([sandbox-output 'string]
                                 [sandbox-error-output 'string]
@@ -45,7 +45,6 @@
 ]
 }
 
-
 @; @defproc*[([(mingize-mapping/racket) dict?]
 @;           [(mingize-mapping/racket/base) dict?]
 @;           [(mingize-mapping/racket/list) dict?])]{
@@ -75,30 +74,35 @@
 @; ]
 @; }
 
-@; @section{ming/scribble}
-@; @defmodule[ming/scribble]
+@section{ming/scribble}
+@defmodule[ming/scribble]
 
-@; @margin-note{
-@; 使用示例可见@secref["racket library in chinese"]，其说明文档中的汉化是采用本库生成的p。
-@; }
+@margin-note{
+使用示例可见@secref["racket library in chinese"]，其说明文档中的汉化是采用本库生成的。
+}
 
+@defform[(defchinesize chinese-id reason english-id)]{
+生成从@racket[english-id]汉化而来的@racket[chinese-id]的文档，并给出@racket[reason]为什么选择这个汉字或者汉语词汇作为汉化名。
+}
 
-@; @defform[(defchinesize chinese-id reason english-id)]{
-@; 生成从@racket[english-id]汉化而来的@racket[chinese-id]的文档，并给出@racket[reason]为什么选择这个汉字或者汉语词汇作为汉化名。
-@; }
+@defform[(defmapping path-id mapping-expr)
+                     #:grammar [(mapping-expr ([chinese-id reason] ... ))]
+                     #:contracts ([reason (or pre-content? string?)])]{
+以名语言内部的翻译表为基准来生成一组翻译文档。@linebreak{}
+@racket[path-id]应为@racket[ming]库的内部路径@racket[maping/*]中*代表的文件路径。@racketcommentfont{@smaller{（TODO: after refactoring this requires in scribble/core, make this description in defform's contracts.）}}@linebreak{}
+@racket[mapping-expr]可以用来新增或覆盖@racket[path-id]所引进的翻译表中包含的@racket[chinese-id]的额外说明。@linebreak{}
 
-@; @defform[(defmapping path-expr extra-data)
-@;                      #:contracts ([extra-data dict?])]{
-@; 以名语言内部的翻译表为基准来生成一组翻译文档。@linebreak{}
-@; @racket[path-expr]应为路径@racket[maping/*]中*代表的文件路径。@linebreak{}
-@; @racket[extra-data]可以用来定义@racket[path-expr]中包含的@racket[chinese-id]的额外说明。@linebreak{}
+比如代码：
+@codeblock|{
+#lang scribble/manual
+@defmapping[racket/list]
+}|
+生成的文档可见@racket[甲]处。
 
-
-
-@; 比如代码：
-@; @examples[#:eval my-eval
-@; @defmapping[racket/list '(链 "我的新翻译在此。")]
-@; ]
-@; 生成的文档为：
-@; @defmapping[racket/list '(链 "我的新翻译在此。")]
+而代码：
+@codeblock|{
+#lang scribble/manual
+@defmapping[racket/list ([甲 "甲即是第一的意思。"])]
+}|
+生成的文档同样如@racket[甲]处，只不过@racket[甲]的说明被“甲即是第一的意思。”替换。
 }

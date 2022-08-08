@@ -2,8 +2,7 @@
 
 
 (provide defmapping defchinesize)
-(require scribble/manual
-         (for-syntax (rename-in "mapping/racket/base/pairs-and-lists.rkt" [mapping mapping-racket/base/pairs-and-lists])
+(require (for-syntax (rename-in "mapping/racket/base/pairs-and-lists.rkt" [mapping mapping-racket/base/pairs-and-lists])
                      (rename-in "mapping/racket/base/syntactic-forms.rkt" [mapping mapping-racket/base/syntactic-forms])
                      (rename-in "mapping/racket/base/others.rkt" [mapping mapping-racket/base/others])
                      (rename-in "mapping/racket/list.rkt" [mapping mapping-racket/list]))
@@ -13,9 +12,8 @@
 (begin-for-syntax
   (define-namespace-anchor anchor)
   (define ns (namespace-anchor->namespace anchor))
-  (define (gen-defthings path syntax-mapping-data)
+  (define (gen-defthings path mapping-data1)
     ;; (println (syntax-e path))
-    (define mapping-data1 (syntax->datum syntax-mapping-data))
     (define mapping-data (eval `(,(format-symbol "mapping-~a" path) #:scribble? #t) ns))
     `(deftogether
          ,(for/list ([l (in-list mapping-data)]
@@ -35,7 +33,12 @@
      ;; (println #'path)
      ;; (println (syntax->datum #'dict))
      ;; (println (gen-defthings #'path))
-     (datum->syntax stx (gen-defthings #'path #'mapping-data))]))
+     (datum->syntax stx (gen-defthings #'path (syntax->datum #'mapping-data)))]
+    [(_ path)
+     ;; (println #'path)
+     ;; (println (syntax->datum #'dict))
+     ;; (println (gen-defthings #'path))
+     (datum->syntax stx (gen-defthings #'path '()))]))
 
 (define-syntax (defchinesize stx)
   (syntax-case stx()
