@@ -72,7 +72,7 @@ It's very obvious to notice that comparing to English, Chinese can use less spac
 上所述种种，更加使用人口之众，都让我认为，将LISP的语法寄宿在汉语下，将拥有强大表达力的中文融入在S表达式幽幽的括号中所产生的编程语言，会将人机交互带入另一层境界。
 
 @section{中文化了的LISP世界一角}
-@italic{这部分是我在实现了一部分名语言的代码后又增加出的内容，一并放在此处是为了具体的解释一下上部分结尾处的我所设想的内容：中文化将如何改进LISP的难度性。}
+@italic{这部分是我在实现了一部分名语言的代码后又增加出的内容，一并放在此处是为了具体的解释一下上部分结尾处的我所设想的内容：中文化将如何改进LISP的难读性。}
 
 @subsection{make-list和build-list}
 我们以两个Racket标准库里面的Procedure：@racket[make-list]和@racket[build-list]为例来尝试阐述所说。
