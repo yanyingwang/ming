@@ -1,8 +1,11 @@
 #lang racket/base
 
 (provide mapping)
+(require  "../../../private/mapping.rkt")
 
-(define (mapping)
+(define (mapping #:scribble? [scribble? #f])
+  (gen-mapping-data data #:scribble? scribble?))
+(define data
   '((cons 对) ;; 对:把两个东西双在一块,配对在一块.     接 合 连 构 结 创 造
     (pair? 对?) ;; 对子?
 
@@ -14,16 +17,16 @@
     (list 链) ;; 链子
     (list* 链*)
     (list? 链?)
-    (build-list 复链以) ;; 以...为过程创造复链
+    (build-list 序链 "链内元素是按照一定次序排列的链即为序链。")
     (length 长)
-    (list-ref 序) ;; 链之 链及 予 序
+    (list-ref 序 "索引的意思。") ;; 链之 链及 予 序
     (list-tail 舍)
     (append 连) ;; 串 接
-    (reverse 倒) ;; 颠倒
+    (reverse 逆 "反向排序。") ;; 颠 倒
 
-    (map 映)
-    (andmap 映且)
-    (ormap 映或)
+    (map 应 "对链内的各个元素依次都做出一种反应。")
+    (andmap 应且)
+    (ormap 应或)
 
     (caar 阳之阳)
     (cdar 阳之阴)

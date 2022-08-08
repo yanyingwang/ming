@@ -12,7 +12,7 @@
 @script/rainbow-delimiters*
 
 @title[#:tag "pairs-and-lists"]{对和链}
-“对”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构。@linebreak{}
+“对”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是lisp语言最最基础的数据结构。@linebreak{}
 
 @section{base}
 对于名语言来说，如果我们把两个数据@racket[对]在一块，我们就得到一个“对”，而对在一块的这两个数据分别处于他们所构成的这个“对”的@racket[阳]位和@racket[阴]位。@linebreak{}
@@ -37,14 +37,15 @@
 (阳之阳 '((1 1.1) 2 3 4))
 (阳之阴阳 '((1 1.1) 2 3 4))
 ]
-@defmapping[racket/base/pairs-and-lists '(
-(对 . "将两个数据对在一块。")
-(阳 . "返回居于阳位的数据。")
-(阴 . "返回居于阴位的数据。")
-(阳之阳 . "取阳位数据，从已取数据中再取阳位数据。")
-(复链以 . "每个元素以...为步骤来构造@racket[复链]。")
-(链 . "将数据链起来。")
-)]
+
+@; @defmapping['racket/base/pairs-and-lists '(
+@; (对 . "将两个数据对在一块。")
+@; (阳 . "返回居于阳位的数据。")
+@; (阴 . "返回居于阴位的数据。")
+@; (阳之阳 . "取阳位数据，从已取数据中再取阳位数据。")
+@; (序链 . "以...为步骤来构建出有次序的链。")
+@; (链 . "将数据链起来。")
+@; )]
 
 
 @section{additional}
@@ -57,15 +58,22 @@
 
 
 
-@defmapping[racket/list
-'((复链 . "类比昆虫的“复眼”一词而得名，因链内元素互相类同。" )  @;"创建一个包含N个元素且每个元素的值都是V的链。如果一个链的每一项的值都相同或相似，那么这个链叫复链。"
-(甲 . "第一个的意思，源自中国古代文字记序符号十天干。")
-)
-
-
+@; @defmapping['racket/list
+@; '((复链 . "类比昆虫的“复眼”一词而得名，因链内元素互相类同。" )  @;"创建一个包含N个元素且每个元素的值都是V的链。如果一个链的每一项的值都相同或相似，那么这个链叫复链。"
+@; (甲 . "第一个的意思，源自中国古代文字记序符号十天干。")
+@; )
+@; ]
+@; @(define-namespace-anchor anchor)
+@; @(define ns (namespace-anchor->namespace anchor))
+@; @(defchinesize 甲 "采用天干" first)
+@defmapping[racket/base/pairs-and-lists
+([序 "许个毛线"]
+ )
 ]
 
+
 @; @(define expl-mapping1 '((a . "bbbbbb") (c . @elem[sdfsdf@racket[first]])))
-@; @(defminger abjjjjj @#,(racketoutput (dict-ref expl-mapping1 'a " ")) k)
+@; @(defchinesize "sdfsdf" (racketoutput (dict-ref expl-mapping1 'a " ")) "sdfsf")
+@; @(defchinesize abjjjjj @#,(racketoutput (dict-ref expl-mapping1 'a " ")) k)
 @; @(defminger abjjjjj @#,( (elem (dict-ref expl-mapping1 'c " "))) k)
 @; @(defminger abjjjjj @(unsyntax (apply elem '(racketresult "sdfsfsfsdfsdfsdfsdfw ai"))) k)

@@ -1,11 +1,18 @@
 #lang racket/base
 
 (provide mapping)
-(require (rename-in "racket/base.rkt" [mapping mapping1])
+
+(require "../private/mapping.rkt"
+         (rename-in "racket/base.rkt" [mapping mapping1])
          (rename-in "racket/list.rkt" [mapping mapping2])) ;; TODO: should be enh to racket/*.rkt
 
-(define (mapping)
-  (append (mapping1) (mapping2)))
+(define (mapping #:scribble? [scribble? #f])
+  (append (mapping1 #:scribble? scribble?)
+          (mapping2 #:scribble? scribble?)))
+
+
+
+
 
 
 #;(define translation

@@ -1,48 +1,43 @@
 #lang racket/base
 
-(provide mingize
-         (for-syntax mingize-mapping/racket ;; TODO match out
-                     mingize-mapping/racket/base
-                     mingize-mapping/racket/list)
-         )
+(provide mingize)
 
-(require (for-syntax racket/base
+
+(require (for-syntax (rename-in "mapping/racket/list.rkt" [mapping mapping/racket/list])
+                     (rename-in "mapping/racket.rkt" [mapping mapping/racket])
+                     (rename-in "mapping/racket/base.rkt" [mapping mapping/racket/base])
+                     (rename-in "mapping/racket/list.rkt" [mapping mapping/racket/list])
+                     racket/base
                      racket/syntax
                      racket/require-transform))
 
-;; TODO: make bwlow as a sub-require, e.g. (require (mingmaplize "mapping/racket.rkt" "mapping/racket/base.rkt" ...))
-(require (for-syntax (rename-in "mapping/racket.rkt" [mapping mingize-mapping/racket])
-                     (rename-in "mapping/racket/base.rkt" [mapping mingize-mapping/racket/base])
-                     (rename-in "mapping/racket/list.rkt" [mapping mingize-mapping/racket/list])))
-
-
-(define-for-syntax (ming-mapping path)
-  ((eval (format-id path "mingize-mapping/~a" path)))) ;; TODO: try (eval (format-id path "(mingize-mapping/~a) path"))
+(begin-for-syntax
+  (define-namespace-anchor anchor)
+  (define ns (namespace-anchor->namespace anchor))
+  (define (get-mapping-data path)
+    ;; (println path)
+    (eval `(,(format-symbol "mapping/~a" path)) ns)))
 
 (define-syntax mingize
   (make-require-transformer
    (lambda (stx)
      (syntax-case stx ()
        [(_ path)
-        ;; (println (ming-mapping #'path))
-        ;; (println mingize-mapping-racket/list)
+        ;; (println (syntax-e #'path))
+        ;; (println (get-mapping-data #'path))
+        ;; (println (datum->syntax stx `(rename-in ,(syntax-e #'path) ,(get-mapping-data #'path))))
         (expand-import
-         (datum->syntax stx `(rename-in ,#'path ,@(ming-mapping #'path))))
+         (datum->syntax stx `(rename-in ,(syntax-e #'path) ,@(get-mapping-data #'path))))
         ]))))
 
 
-#| usage:
+#|
+usage:
 (require ming/core)
-(mapping-init)
-(begin-for-syntax (println table-racket))
-(require (mingize racket))
+(require (mingize racket/list))
 
 ;; usage
 ;; (require (mingize racket/list))  ;; mingize 名化，汉化 chineselize
-;; (甲 (链 1 2 3))
 ;; (乙 (list 1 2 3))
-
-(require  (for-syntax (rename-in "mapping/racket.rkt" [table table-racket])
-                      (rename-in "mapping/racket/base.rkt" [table table-racket/base])
-                      (rename-in "mapping/racket/list.rkt" [table table-racket/list])))
+;; (甲 (链 1 2 3))
 |#

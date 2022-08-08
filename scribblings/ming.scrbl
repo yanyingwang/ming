@@ -2,7 +2,7 @@
 
 
 @title[#:style '(toc)]{名语言/Ming-Language}
-@author[(author+email "Yanying Wang" "yanyingwang1@gmail.com")]
+@author[(author+email (hyperlink "https://yanying.wang" "Yanying Wang") "yanyingwang1@gmail.com")]
 
 @defmodule[ming #:lang]
 名语言，LISP的中文化方言，Racket的中文化编程语言。

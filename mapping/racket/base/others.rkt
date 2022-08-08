@@ -1,7 +1,11 @@
 #lang racket/base
 
 (provide mapping)
-(define (mapping)
+(require  "../../../private/mapping.rkt")
+
+(define (mapping #:scribble? [scribble? #f])
+  (gen-mapping-data data #:scribble? scribble?))
+(define data
   '((equal? 等同?)
     (eqv? 相等?) ;; ???? ;; #f <= (eqv? (make-string 3 #\z) (make-string 3 #\z))
     (eq? 相同?) ;; #f <= (eq? (make-string 3 #\z) (make-string 3 #\z)) (eq? (expt 2 100) (expt 2 100))
