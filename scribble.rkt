@@ -17,7 +17,6 @@
     ;; (println (syntax-e path))
     (define mapping-data1 (syntax->datum syntax-mapping-data))
     (define mapping-data (eval `(,(format-symbol "mapping-~a" path) #:scribble? #t) ns))
-    ;; (println mapping-data1)
     `(deftogether
          ,(for/list ([l (in-list mapping-data)]
                      #:do ((define en (car l))
@@ -41,7 +40,8 @@
 (define-syntax (defchinesize stx)
   (syntax-case stx()
     [(_ cn-id reason en-id)
-     (datum->syntax stx `(defthing #:kind "汉化" ,(syntax-e #'cn-id) ,(syntax-e #'reason) #:value ,(syntax-e #'en-id)))
+     ;; (println #'reason)
+     (datum->syntax stx `(defthing #:kind "汉化" ,(syntax-e #'cn-id) (unsyntax (racketoutput ,(syntax-e #'reason))) #:value ,(syntax-e #'en-id)))
      ]
     ))
 #;(define (defchinesize transed-id reason ori-id)

@@ -64,9 +64,11 @@
 )
 ]
 
+@; @(defthing #:kind "汉化" cn-sab (unsyntax (elem "reason .... here")) #:value en-sab)
+
 @; @(define-namespace-anchor anchor)
 @; @(define ns (namespace-anchor->namespace anchor))
-@; @(defchinesize 甲 "采用天干" first)
+@; @(defchinesize 甲1 "采用天干" first)
 
 @; @(define expl-mapping1 '((a . "bbbbbb") (c . @elem[sdfsdf@racket[first]])))
 @; @(defchinesize "sdfsdf" (racketoutput (dict-ref expl-mapping1 'a " ")) "sdfsf")
