@@ -3,7 +3,7 @@
 (provide mapping)
 (require "../../private/mapping.rkt")
 
-(define (mapping #:scribble? [scribble? #f])
+(define (mapping #:scribble? [scribble? #f]) ;; TODO: should be (load file ...)
   (gen-mapping-data data #:scribble? scribble?))
 (define data
   '( ;;; (empty 空) not need as one defined same in base (null 空)

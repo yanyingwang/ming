@@ -17,7 +17,7 @@
 
 @script/rainbow-delimiters*
 
-@(table-of-contents)
+@; @(table-of-contents)
 
 @title[#:tag "ming-core"]{名语言标准库}
 @declare-exporting[ming]
@@ -90,7 +90,7 @@
                      #:grammar [(mapping-expr ([chinese-id reason] ... ))]
                      #:contracts ([reason (or/c pre-content? string?)])]{
 以名语言内部的翻译表为基准来生成一组翻译文档。@linebreak{}
-@racket[path-id]应为@racket[ming]库的内部路径@racket[maping/*]中*代表的文件路径。@racketcommentfont{@smaller{（TODO: after refactoring this requires in scribble/core, make this description in defform's contracts.）}}@linebreak{}
+@racket[path-id]应为@racket[ming]库的内部路径@racket[maping/*]中*代表的文件路径。@racketcommentfont{TODO: after refactoring this requires in scribble/core, make this description in defform's contracts.}@linebreak{}
 @racket[mapping-expr]可以用来新增或覆盖@racket[path-id]所引进的翻译表中包含的@racket[chinese-id]的额外说明。@linebreak{}
 
 比如代码：

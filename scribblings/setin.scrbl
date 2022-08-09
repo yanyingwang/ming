@@ -9,7 +9,7 @@
 
 @script/rainbow-delimiters*
 
-@title[#:tag "setup"]{起}
+@title[#:tag "setin"]{初见}
 @declare-exporting[ming]
 
 @section[#:tag "ming-s-retrofit"]{中文化一角}
@@ -17,7 +17,9 @@
 
 
 @subsection{pairs}
-@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pairs"]是LISP语言非常基础的一个数据结构，@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "lists"]、 @secref["dicts" #:doc '(lib "scribblings/reference/reference.scrbl")]等更为复杂的数据结构都是它的衍生。一个pair可以包含两个数据，构造一个pair的函数是@racket[cons]。
+@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pairs"]是LISP语言非常基础的一个数据结构，@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "lists"]、 @secref["dicts" #:doc '(lib "scribblings/reference/reference.scrbl")]等更为复杂的数据结构都是它的衍生。
+
+一个pair包含两个数据，构造一个pair的函数是@racket[cons]。
 
 pair在名语言中，被翻译为“@racket[对]”。“对”在中文中可以是动词（对酒当歌），也可以是名词（成双成对）。因此，可以用“对”这个单字来构造所有跟“pair”有关的数据结构。
 
@@ -27,15 +29,15 @@ pair在名语言中，被翻译为“@racket[对]”。“对”在中文中可�
 
 通常情况下，对于编程语言来说，一旦有了一个中心意义的实体，就会在编程中因为各种情况需要不断的围绕它定义名字。中文强大的造词能力所能定义出来一些相关词汇集合，从这些词汇的构成上天然的就能看出他们之间所隐含存在着的一些关联和衍生关系，这对于程序员记忆和理解代码是有极大帮助的。
 
-@examples[#:eval (the-eval)]{#:label "英文"
+@examples[#:eval (the-eval) #:label "英文"
 (cons 'a 'b)
-(pair? (a . b))
-}
+(pair? '(a . b))
+]
 
-@examples[#:eval (the-eval)]{#:label "中文"
+@examples[#:eval (the-eval) #:label "中文"
 (对 'a 'b)
-(对? (a . b))
-}
+(对? '(a . b))
+]
 
 
 

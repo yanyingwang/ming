@@ -9,7 +9,7 @@
 
 @script/rainbow-delimiters*
 
-@title[#:tag "prepare"]{备}
+@title[#:tag "prepare"]{准备}
 @declare-exporting[ming]
 
 @section[#:tag "install-ming"]{下载安装}
@@ -44,3 +44,46 @@
 }
 然后运行此文件即可：
 @commandline{./file.rkt}
+
+
+@section{贡献翻译}
+对Racket标准库的翻译，应根据库路径创建相应文件到@racket[mapping/racket/*]中。
+
+比如对@racket[racket/list]库的翻译，应创建如下文件：
+@filebox{mapping/racket/list.rkt
+@codeblock|{
+#lang racket/base
+(provide mapping)
+(require "../../private/mapping.rkt")
+
+(define (mapping #:scribble? [scribble? #f])
+  (gen-mapping-data data #:scribble? scribble?))
+(define data
+  '((first 甲 "第一个的意思，源自中国古代文字记序符号十天干。")
+    (second 乙 "第二个的意思，源自中国古代文字记序符号十天干。")))
+}|}
+
+@nested[#:style 'inset]{
+@racketcommentfont{TODO: Implement below fake code for others easily contributing to the translation:}
+@filebox{mapping/racket/list.rkt
+@codeblock|{
+#lang ming / mapping
+first 甲
+second 乙
+third 丙
+...
+}|}
+}
+
+
+然后再创建如下文件：
+@filebox{racket/list.rkt
+@codeblock|{
+#lang racket/base
+(require "../private/core.rkt")
+(provide-with-mingizily-require racket/list)
+}|}
+
+最后就可以通过@code{(require ming/racket/list)}使用了。
+
+
