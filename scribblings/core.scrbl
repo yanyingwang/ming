@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(require ming/core ming/scribble
+@(require ming/core ming/scribble 
           (for-label racket ming/racket ming/core scribble/decode)
            scribble/example
            scribble-rainbow-delimiters
@@ -81,13 +81,14 @@
 使用示例可见@secref["racket library in chinese"]，其说明文档中的汉化是采用本库生成的。
 }
 
-@defform[(defchinesize chinese-id reason english-id)]{
+@defform[(defchinesize chinese-id reason english-id)
+                       #:contracts ([reason (or/c pre-content? string?)])]{
 生成从@racket[english-id]汉化而来的@racket[chinese-id]的文档，并给出@racket[reason]为什么选择这个汉字或者汉语词汇作为汉化名。
 }
 
 @defform[(defmapping path-id mapping-expr)
                      #:grammar [(mapping-expr ([chinese-id reason] ... ))]
-                     #:contracts ([reason (or pre-content? string?)])]{
+                     #:contracts ([reason (or/c pre-content? string?)])]{
 以名语言内部的翻译表为基准来生成一组翻译文档。@linebreak{}
 @racket[path-id]应为@racket[ming]库的内部路径@racket[maping/*]中*代表的文件路径。@racketcommentfont{@smaller{（TODO: after refactoring this requires in scribble/core, make this description in defform's contracts.）}}@linebreak{}
 @racket[mapping-expr]可以用来新增或覆盖@racket[path-id]所引进的翻译表中包含的@racket[chinese-id]的额外说明。@linebreak{}
@@ -97,6 +98,7 @@
 #lang scribble/manual
 @defmapping[racket/list]
 }|
+
 生成的文档可见@racket[甲]处。
 
 而代码：
