@@ -10,7 +10,8 @@
 @(table-of-contents)
 
 @include-section["preface.scrbl"]
-@include-section["setup.scrbl"]
+@include-section["setin.scrbl"]
+@include-section["prepare.scrbl"]
 @include-section["core.scrbl"]
 @include-section["racket.scrbl"]
 @include-section["todos.scrbl"]
