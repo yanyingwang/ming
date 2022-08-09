@@ -23,7 +23,7 @@
 
 @section{运行代码}
 @subsection{通过终端}
-在终端中执行@racket[racket]命令来打开repl，然后可以有以下输入输出：
+在终端中执行@racket[racket]命令来打开repl。然后例如，可以有以下输入输出：
 @examples[#:eval (the-eval) #:label #f
 (require ming)
 (名 某物 (链 "苹果" "香蕉" "梨"))
