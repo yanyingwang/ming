@@ -14,7 +14,7 @@
 @include-section["prepare.scrbl"]
 @include-section["core.scrbl"]
 @include-section["racket.scrbl"]
-@include-section["todos.scrbl"]
+@include-section["appendix.scrbl"]
 
 @; add new section: 翻译索引： procedure 步骤  list 链   pair 对
 

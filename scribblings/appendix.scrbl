@@ -1,10 +1,21 @@
 #lang scribble/manual
 
 
-@title[#:tag "todos"]{待实现}
+@title[#:tag "appendix"]{附录}
 @declare-exporting[ming]
 
 
+@section{术语翻译表}
+@tabular[#:style 'boxed
+         #:column-properties '(left right)
+         #:row-properties '(bottom-border ())
+`((,(bold "英文") ,(bold "中文"))
+   ("procedure" "例程，过")
+   ("syntax" "程/术、句法")
+   ("associative list" "联链"))]
+
+
+@section{TODOS}
 @itemlist[
 @item{Implement below fake code(easily for others contributing to the translation):
 @racketmod[ming/mapping

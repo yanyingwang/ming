@@ -14,19 +14,47 @@
     (null? 空?)
     (null 空)
 
-    (list 链) ;; 链子
+    (list 链 "将数据依次排列组成链。") ;; 链子
     (list* 链*)
     (list? 链?)
     (build-list 序链 "链内元素是按照一定次序排列的链即为序链。")
     (length 长)
-    (list-ref 序 "索引的意思。") ;; 链之 链及 予 序
-    (list-tail 舍)
-    (append 连) ;; 串 接
+    (list-ref 引 "索引的意思。") ;; 链之 链及 予 序
+    (list-tail 舍 "原链舍弃掉前面n个后的链。") ;; 去
+    (append 连 "把很多链连成一个链") ;; 串 接
     (reverse 逆 "反向排序。") ;; 颠 倒
 
-    (map 应 "链内的各个元素依次都做出一种反应。")
-    (andmap 应且)
-    (ormap 应或)
+    (map 各应 "链内的各个元素作为参数应用到某一例程。") ;; 各
+    (andmap 各且应 "链内元素更替的作为参数应用某一个例程，直到有元素应用后返回的值是假。") ;; 各有应
+    (ormap 各或应 "链内元素更替的作为参数应用某一个例程，直到有元素应用后返回的值是真。") ;; 各无应
+    (for-each 每)
+    (foldl 左应合)
+    (foldr 右应合)
+    (filter 滤)
+
+    (remove 移除)
+    (remq 移除/等)
+    (remv 移除/齐)
+    ;; (remw 移除/总同)
+    (remove* 移除*)
+    (remq* 移除*/等)
+    (remv* 移除*/齐)
+    ;; (remw* 移除*/总同)
+
+    (sort 排序)
+
+    (member 后员)
+    ;; (memw 后员/总同)
+    (memv 后员/齐)
+    (memq 后员/等)
+    (memf 后员/函)
+    (findf 找/函)
+
+    (assoc 找联)
+    ;; (assw 找联/总同)
+    (assq 找联/等)
+    (assv 找联/齐)
+    (assf 找联/函)
 
     (caar 阳之阳)
     (cdar 阳之阴)
