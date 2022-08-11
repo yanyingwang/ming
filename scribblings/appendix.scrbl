@@ -10,8 +10,8 @@
          #:column-properties '(left right)
          #:row-properties '(bottom-border ())
 `((,(bold "英文") ,(bold "中文"))
-   ("procedure" "例程，过")
-   ("syntax" "程/术、句法")
+   ("procedure" "例程，过 关 要")
+   ("syntax" "术、句法")
    ("associative list" "联链"))]
 
 

@@ -25,6 +25,7 @@
     (values 值)
 
     (for 各)
+    (apply 用) ;; 应 使
     )
 
   )

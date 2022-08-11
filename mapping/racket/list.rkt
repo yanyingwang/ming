@@ -53,7 +53,27 @@
     (check-duplicates 查重)
     (check-duplicates 去重)
 
+    (count 计数)
 
-    )
+    (filter-map 映选)
+    (partition 选开 "把链中元素选出，并分开成两部分。")
+
+    (range 一段数)
+    (inclusive-range 一段数/间隔)
+
+    (append-map 连映)
+    (filter-not 不选)
+    (shuffle 洗乱)
+    (combinations 组合)
+    (in-combinations 序列组合)
+    (argmin 最小者/函)
+    (argmax 最大者/函)
+    (group-by 分组)
+    (cartesian-product 笛卡尔值)
+
+    (remf 移除/函)
+    (remf* 移除*/函)
+
+   )
 
   )
