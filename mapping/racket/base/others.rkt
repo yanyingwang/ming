@@ -15,7 +15,7 @@
     ;; 相等 ([数目、数、量或尺寸的] 相同)
     ;; 相同 (指彼此无差异)
 
-    (format 化)
+    (format 格) ; 化
     (write 写)
     (writeln  行写)
     (print 示)
@@ -24,9 +24,16 @@
     (displayln 行陈)
     (values 值)
 
-    (for 各)
-    (apply 用) ;; 应 使
-    )
 
+
+    (for 遍) ;; 每 为 历、遍历
+    (apply 用) ;; 应 使
+    (procedure? 程?)
+    (syntax 式)
+    (syntax? 式?)
+
+    )
   )
+
+
 

@@ -4,6 +4,8 @@
 (provide defmapping defchinesize)
 (require (for-syntax (rename-in "mapping/racket/base/pairs-and-lists.rkt" [mapping mapping-racket/base/pairs-and-lists])
                      (rename-in "mapping/racket/base/syntactic-forms.rkt" [mapping mapping-racket/base/syntactic-forms])
+                     (rename-in "mapping/racket/base/generic-numerics.rkt" [mapping mapping-racket/base/generic-numerics])
+                     (rename-in "mapping/racket/base/number-types.rkt" [mapping mapping-racket/base/number-types])
                      (rename-in "mapping/racket/base/others.rkt" [mapping mapping-racket/base/others])
                      (rename-in "mapping/racket/list.rkt" [mapping mapping-racket/list]))
          (for-syntax racket/base racket/syntax))

@@ -5,14 +5,17 @@
 @declare-exporting[ming]
 
 
-@section{术语翻译表}
+@section{关键术语翻译表}
 @tabular[#:style 'boxed
          #:column-properties '(left right)
          #:row-properties '(bottom-border ())
 `((,(bold "英文") ,(bold "中文"))
-   ("procedure" "例程，过 关 要")
-   ("syntax" "术、句法")
-   ("associative list" "联链"))]
+   ("procedure" "程，例程，过 关 要")
+   ("syntax" "式、术，句法")
+   ("associative list" "联链")
+   ("string" " ")
+   ("byte" "")
+   )]
 
 
 @section{TODOS}

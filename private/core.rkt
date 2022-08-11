@@ -5,7 +5,8 @@
 (require (for-syntax racket/base racket/syntax
                      (rename-in "../mapping/racket.rkt" [mapping mapping/racket])
                      (rename-in "../mapping/racket/base.rkt" [mapping mapping/racket/base])
-                     (rename-in "../mapping/racket/list.rkt" [mapping mapping/racket/list])))
+                     (rename-in "../mapping/racket/list.rkt" [mapping mapping/racket/list])
+                     (rename-in "../mapping/racket/math.rkt" [mapping mapping/racket/math])))
 
 (begin-for-syntax
   (define-namespace-anchor anchor)

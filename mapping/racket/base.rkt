@@ -4,12 +4,19 @@
 (require "../../private/mapping.rkt"
          (rename-in "base/others.rkt" [mapping mapping0])
          (rename-in "base/pairs-and-lists.rkt" [mapping mapping1])
-         (rename-in "base/syntactic-forms.rkt" [mapping mapping2]))
+         (rename-in "base/syntactic-forms.rkt" [mapping mapping2])
+         (rename-in "base/syntactic-forms.rkt" [mapping mapping2])
+         (rename-in "base/generic-numerics.rkt" [mapping mapping3])
+         (rename-in "base/number-types.rkt" [mapping mapping4])
+        )
+
 
 (define (mapping #:scribble? [scribble? #f])
   (append (mapping0 #:scribble? scribble?)
           (mapping1 #:scribble? scribble?)
-          (mapping2 #:scribble? scribble?)))
+          (mapping2 #:scribble? scribble?)
+          (mapping3 #:scribble? scribble?)
+          (mapping4 #:scribble? scribble?)))
 
 #| usage:
 (require "mapping/racket/base.rkt")

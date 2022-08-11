@@ -43,7 +43,7 @@
     (takef-right 右取/函)
     (dropf-right 右弃/函)
     (splitf-at-right 右断/函)
-    (list-prefix? 始以? "某链是否是以某链作为起始的。")
+    (list-prefix? 始链于链? "某链是否是某另一链的起始部分的。")
     ;; (take-common-prefix? 取同始)
     ;; (drop-common-prefix? 弃同始)
     (add-between 间插 "链的每两个元素之间插入另一元素。")
@@ -55,7 +55,7 @@
 
     (count 计数)
 
-    (filter-map 映选)
+    (filter-map 选而映)
     (partition 选开 "把链中元素选出，并分开成两部分。")
 
     (range 一段数)
