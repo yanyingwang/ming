@@ -6,14 +6,14 @@
            ming/scribble
            )
 
-@title[#:tag "racket library in chinese"]{Racket汉化库}
+@title[#:style '(toc) #:tag "racket library in chinese"]{Racket汉化库}
 
 
 @defmodule[ming/racket/base]
 Racket库的名语言汉化，汉化了的Racket内部库程序应都置于此。
 
 
-@; @(table-of-contents)
+@(table-of-contents)
 
 @include-section["racket/numbers.scrbl"]
 @include-section["racket/pairs-and-lists.scrbl"]
