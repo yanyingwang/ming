@@ -6,8 +6,8 @@
 (define (mapping #:scribble? [scribble? #f])
   (gen-mapping-data data #:scribble? scribble?))
 (define data
-  '((cons 对) ;; 组合， 对:把两个东西双在一块,配对在一块.     接 合 连 构 结 创 造
-    (pair? 对?) ;; 对子? 双
+  '((cons 双) ;; 组合， 对:把两个东西双在一块,配对在一块.     接 合 连 构 结 创 造
+    (pair? 双?) ;; 对子? 双
 
     (car 阳)
     (cdr 阴)

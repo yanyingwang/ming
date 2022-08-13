@@ -16,29 +16,28 @@
 我在序的《@secref["retrofit-chinese-to-lisp"]》一章节中，曾谈到说把LISP中文化是很有意义的，中文可以改进LISP的难读性并为其带来新的活力。本章节即是我结合之前所说，所实现的一部分名语言的代码。
 
 
-@subsection{pairs}
-@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pairs"]是LISP语言非常基础的一个数据结构，@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "lists"]、 @secref["dicts" #:doc '(lib "scribblings/reference/reference.scrbl")]等更为复杂的数据结构都是它的衍生。
+@; @subsection{pairs}
+@; @tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pairs"]是LISP语言非常基础的一个数据结构，@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "lists"]、 @secref["dicts" #:doc '(lib "scribblings/reference/reference.scrbl")]等更为复杂的数据结构都是它的衍生。
 
-一个pair包含两个数据，构造一个pair的函数是@racket[cons]。
+@; 一个pair包含两个数据，构造一个pair的函数是@racket[cons]。
 
-pair在名语言中，被翻译为“@racket[对]”。“对”在中文中可以是动词（对酒当歌），也可以是名词（成双成对）。因此，可以用“对”这个单字来构造所有跟“pair”有关的数据结构。
+@; pair在名语言中，被翻译为“@racket[对]”。“对”在中文中可以是动词（对酒当歌），也可以是名词（成双成对）。因此，可以用“对”这个单字来构造所有跟“pair”有关的数据结构。
 
-对于英文而言，“pair”其实也是可以作为动词使用的，但是英文单词和语法的基石是区分词性，区分词性也更利于意思的表达。
+@; 对于英文而言，“pair”其实也是可以作为动词使用的，但是英文单词和语法的基石是区分词性，区分词性也更利于意思的表达。
 
-然而对于中文来说，严格区分词性不是中文的惯例。如果需要，比如“对子”则肯定是一个名词了。虽然并非所有的词都是通过加“子”变成名词的，但中文具备这种能力，只是在实际使用中没有做完全发挥。
+@; 然而对于中文来说，严格区分词性不是中文的惯例。如果需要，比如“对子”则肯定是一个名词了。虽然并非所有的词都是通过加“子”变成名词的，但中文具备这种能力，只是在实际使用中没有做完全发挥。
 
-通常情况下，对于编程语言来说，一旦有了一个中心意义的实体，就会在编程中因为各种情况需要不断的围绕它定义名字。中文强大的造词能力所能定义出来一些相关词汇集合，从这些词汇的构成上天然的就能看出他们之间所隐含存在着的一些关联和衍生关系，这对于程序员记忆和理解代码是有极大帮助的。
+@; 通常情况下，对于编程语言来说，一旦有了一个中心意义的实体，就会在编程中因为各种情况需要不断的围绕它定义名字。中文强大的造词能力所能定义出来一些相关词汇集合，从这些词汇的构成上天然的就能看出他们之间所隐含存在着的一些关联和衍生关系，这对于程序员记忆和理解代码是有极大帮助的。
 
-@examples[#:eval (the-eval) #:label "英文"
-(cons 'a 'b)
-(pair? '(a . b))
-]
+@; @examples[#:eval (the-eval) #:label "英文"
+@; (cons 'a 'b)
+@; (pair? '(a . b))
+@; ]
 
-@examples[#:eval (the-eval) #:label "中文"
-(对 'a 'b)
-(对? '(a . b))
-]
-
+@; @examples[#:eval (the-eval) #:label "中文"
+@; (对 'a 'b)
+@; (对? '(a . b))
+@; ]
 
 
 @subsection{make-list和build-list}

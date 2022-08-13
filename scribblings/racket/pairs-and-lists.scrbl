@@ -14,21 +14,21 @@
 @title[#:tag "pairs-and-lists"]{对和链}
 @declare-exporting[ming]
 
-@section{对、阴阳、链}
-“对”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是lisp语言最最基础的数据结构。@linebreak{}
+@section{双、阴阳、链}
+“双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是lisp语言最最基础的数据结构。@linebreak{}
 
-对于名语言来说，如果我们把两个数据@racket[对]在一块，我们就得到一个“对”，而对在一块的这两个数据分别处于他们所构成的这个“对”的@racket[阳]位和@racket[阴]位。@linebreak{}
+对于名语言来说，如果我们把两个数据@racket[双]在一块，我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。@linebreak{}
 
-另外，如果一个“对”的阴位不是存的一个具体数据而是存的另外一个“对”的索引，此时的这个“对”，也叫做@racket[链]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
+另外，如果一个“双”的阴位不是存的一个具体数据而是存的另外一个“双”的索引，此时的这个“双”，也叫做@racket[链]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
 
 @examples[#:eval (the-eval)
-(对 1 2)
-(对? '(1 . 2))
+(双 1 2)
+(双? '(1 . 2))
 (阳 '(1 . 2))
 (阴 '(1 . 2))
 (code:comment "")
-(对 1 (对 2 (对 3 (对 4 空))))
-(同? (对 1 (对 2 (对 3 (对 4 空))))
+(双 1 (双 2 (双 3 (双 4 空))))
+(同? (双 1 (双 2 (双 3 (双 4 空))))
      (链 1 2 3 4))
 (链 1 2 3 4)
 (阳 '(1 2 3 4))
