@@ -15,7 +15,7 @@
 @declare-exporting[ming]
 
 @section{双、阴阳、链}
-“双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是lisp语言最最基础的数据结构。@linebreak{}
+“双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构。@linebreak{}
 
 对于名语言来说，如果我们把两个数据@racket[双]在一块，我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。@linebreak{}
 
