@@ -16,7 +16,7 @@
 @itemlist[#:style 'ordered
 @item{到Racket的@hyperlink["https://racket-lang.org/" "官方网站"]，@hyperlink["https://download.racket-lang.org/" "下载"]安装Racket。}
 @item{在终端中执行以下任意一条命令来安装名语言扩展包：
-@commandline{raco pkg install "https://github.com/yanyingwang/http-client.git"}
+@commandline{raco pkg install "https://github.com/yanyingwang/ming.git"}
 @commandline{raco pkg install ming}
 }
 ]
