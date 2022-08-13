@@ -59,7 +59,7 @@
 (build-list 5 values) (code:comment "生成一个包含0-4这个5个数的链。")
 (build-list 10 values) (code:comment "生成一个包含0-9这个10个数的链。")
 (build-list 10 add1) (code:comment "生成一个包含0-9这个10个数的链，并且每一个数都加上1。")
-(build-list 10 (lambda (e) (* 2 e))) (code:comment "生成一个包含0-9这个10个数的链，并且每一个数都乘上自身。")
+(build-list 10 (lambda (e) (* e e))) (code:comment "生成一个包含0-9这个10个数的链，并且每一个数都乘上自身。")
 ]
 @racket[build-list]的行为更加复杂些：它是用来生成一个链，这个链包含从0数起的n个数，并且生成的时候，这些数是可以被做一些附加处理的。
 }
