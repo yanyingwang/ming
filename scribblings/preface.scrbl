@@ -62,7 +62,7 @@ It's very obvious to notice that comparing to English, Chinese can use less spac
 
 上所述种种，更加使用人口之众，都让我认为，将LISP的语法寄宿在汉语下，将拥有强大表达力的中文融入在S表达式幽幽的括号中所产生的编程语言，会将人机交互带入另一层境界。
 
-@smaller{另可续读：《@secref["retrofit-chinese-to-lisp"]》。}
+@; @smaller{另可续读：《@secref["retrofit-chinese-to-lisp"]》。}
 
 
 @section{如何做}
