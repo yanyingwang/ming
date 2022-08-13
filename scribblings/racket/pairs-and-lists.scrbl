@@ -11,7 +11,7 @@
 
 @script/rainbow-delimiters*
 
-@title[#:tag "pairs-and-lists"]{对和链}
+@title[#:tag "pairs-and-lists"]{双和链}
 @declare-exporting[ming]
 
 @section{双、阴阳、链}
