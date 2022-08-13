@@ -7,6 +7,10 @@
   (gen-mapping-data data #:scribble? scribble?))
 (define data
   '( ;; + - * /
+    (+ + "加")
+    (- - "减")
+    (* * "乘")
+    (/ / "除")
     (quotient 商)
     (remainder 余数)
     (quotient/remainder 商和余数)
@@ -27,7 +31,11 @@
     (rationalize 有理化)
 
     ;; = > < >= <=
-
+    (= = "等于")
+    (> > "大于")
+    (< < "小于")
+    (>= >= "大于或等于")
+    (<= <= "小于或等于")
     (sqrt 平方根)
     (integer-sqrt 整数平方根)
     (integer-sqrt/remainder 整数平方根余数)

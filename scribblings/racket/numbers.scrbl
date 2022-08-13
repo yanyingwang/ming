@@ -1,7 +1,7 @@
 #lang scribble/manual
 
 @(require (for-label racket ming)
-           scribble/eval
+           scribble/examples
            scribble-rainbow-delimiters
            ming/scribble
            )
@@ -13,7 +13,8 @@
 
 @title[#:tag "numbers"]{数}
 
-@examples[#:eval (the-eval)
+@section{示例}
+@examples[#:eval (the-eval) #:label #f
 (偶数? 2)
 (浮点数? 1.1)
 (+ 2 3 5)
@@ -25,10 +26,9 @@
 
 ]
 
-
-@section[#:tag "number-types"]{数的类型}
+@section[#:tag "number-types"]{数的类型例程}
 @defmapping[racket/base/number-types]
 
 
-@section[#:tag "generic-numerics"]{数的运算}
+@section[#:tag "generic-numerics"]{数的运算例程}
 @defmapping[racket/base/generic-numerics]

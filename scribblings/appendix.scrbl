@@ -36,4 +36,6 @@ second 乙
 @item{make mappings able to autoload without explicitly requiring it in the ming/core ming/private/core and ming/scribble}
 
 @item{write a online ming code running page.}
+
+@item{remove println debuging code after adding test code.}
 ]

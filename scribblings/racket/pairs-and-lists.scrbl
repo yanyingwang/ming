@@ -12,10 +12,9 @@
 @script/rainbow-delimiters*
 
 @title[#:tag "pairs-and-lists"]{对和链}
+@declare-exporting[ming]
 
-
-@section{base}
-@subsection{对、阴阳、链}
+@section{对、阴阳、链}
 “对”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是lisp语言最最基础的数据结构。@linebreak{}
 
 对于名语言来说，如果我们把两个数据@racket[对]在一块，我们就得到一个“对”，而对在一块的这两个数据分别处于他们所构成的这个“对”的@racket[阳]位和@racket[阴]位。@linebreak{}
@@ -45,44 +44,7 @@
 (复链 5 'foo)
 ]
 
-@defmapping[racket/base/pairs-and-lists
-([对 "将两个数据对在一块。"]
-[阳 "返回居于阳位的数据。"]
-[阴 "返回居于阴位的数据。"]
-[阳之阳 "取阳位数据，从已取数据中再取阳位数据。"]
-)]
 
-
-
-@examples[#:eval (the-eval)
-(甲 '(1 2 3 4))
-(乙 '(1 2 3 4))
-(丙 '(1 2 3 4))
-(去甲 '(1 2 3 4))
-(code:comment "")
-(始链于链? '(a j) '(a j d k))
-(始链于链? '(a f j) '(a j d k))
-(code:comment "")
-(引改 '(10 15 20 25) 1 1555)
-(引改/入 '(10 15 20 25) 1 加一)
-(code:comment "")
-(取 '(a b c d e f g) 2)
-(去 '(a b c d e f g) 2)
-(断 '(a b c d e f g) 2)
-(code:comment "")
-(间插 '(a b c d) '和)
-(扁 '((a b) (c d) (e f)))
-(code:comment "")
-(查重 '(a b c d e c f))
-(去重 '(a b c d e c f))
-(计数 正数? '(1 2 -3 4))
-(一段数 10 20)
-]
-
-
-
-@section{additional}
-@defmodule[ming/racket/list]
 
 @section[#:tag "list-searching"]{引、索、寻、选、删，各、轮}
 跟链的查询相关的例程有：
@@ -132,6 +94,42 @@
 (轮 (入 (i) (行示 i)) (链 2 4 6 8))
 ]
 
+@section{甲癸、引、取去断、间扁重}
+@examples[#:eval (the-eval)
+(甲 '(1 2 3 4))
+(乙 '(1 2 3 4))
+(丙 '(1 2 3 4))
+(去甲 '(1 2 3 4))
+(code:comment "")
+(始链于链? '(a j) '(a j d k))
+(始链于链? '(a f j) '(a j d k))
+(code:comment "")
+(引改 '(10 15 20 25) 1 1555)
+(引改/入 '(10 15 20 25) 1 加一)
+(code:comment "")
+(取 '(a b c d e f g) 2)
+(去 '(a b c d e f g) 2)
+(断 '(a b c d e f g) 2)
+(code:comment "")
+(间插 '(a b c d) '和)
+(扁 '((a b) (c d) (e f)))
+(code:comment "")
+(查重 '(a b c d e c f))
+(去重 '(a b c d e c f))
+(计数 正数? '(1 2 -3 4))
+(一段数 10 20)
+]
+
+@section{基础例程}
+@defmapping[racket/base/pairs-and-lists
+([对 "将两个数据对在一块。"]
+[阳 "返回居于阳位的数据。"]
+[阴 "返回居于阴位的数据。"]
+[阳之阳 "取阳位数据，从已取数据中再取阳位数据。"]
+)]
+
+@section{额外例程}
+@defmodule[ming/racket/list]
 @defmapping[racket/list]
 
 @; @(defthing #:kind "汉化" cn-sab (unsyntax (elem "reason .... here")) #:value en-sab)
