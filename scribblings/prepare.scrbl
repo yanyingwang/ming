@@ -42,8 +42,8 @@
 (示 (甲 某物))
 }|
 }
-然后运行此文件即可：
-@commandline{./file.rkt}
+赋予文件执行权限后运行此文件即可：
+@commandline{./file1.rkt}
 
 
 @section{贡献翻译}
