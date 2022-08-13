@@ -27,6 +27,7 @@
 
 
     (for 遍) ;; 每 为 历、遍历
+    (for/list 遍/链)
     (apply 用) ;; 应 使
     (procedure? 程?)
     (syntax 式)

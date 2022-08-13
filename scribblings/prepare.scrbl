@@ -49,6 +49,10 @@
 @section{贡献翻译}
 对Racket标准库的翻译，应根据库路径创建相应文件到@racket[mapping/racket/*]中。
 
+@margin-note{
+目前名语言仅翻译了@racket[数?]和@racket[链]相关的例程，@racket[for]/@racket[match]/@racket[hash]/@racket[dict]/@racket[struct]/@racket[class]/@racket[syntax]等重要内容都还未做翻译。
+}
+
 比如对@racket[racket/list]库的翻译，应创建如下文件：
 @filebox{mapping/racket/list.rkt
 @codeblock|{

@@ -10,19 +10,73 @@
          #:column-properties '(left right)
          #:row-properties '(bottom-border ())
 `((,(bold "英文") ,(bold "中文"))
-   ("procedure" "程，例程，过 关 要")
-   ("syntax" "式、术，句法")
+   ("procedure" "例程，简称程。") @;; 过 关 要
+   ("syntax" "法式，简称式，是句法的意思。") @;; 术
    ("associative list" "联链")
-   ("string" " ")
-   ("byte" "")
+
+   @; ("character" "字")
+   @; ("symbol" "词") @; ，标，标记，标志
+   @; ("string" "句") @; 文
+   @; ("identifier" "标") @; 符号
+   @; ("syntax" "")
+   @; ("datum" "文")
+
+   @; ("byte" "字节")
+
    )]
+
+
+
+
+
+
+@; (define translation
+@;   (hash
+@;    'if '若
+@;    'case '例
+@;    'cond '倘
+@;    'for '于
+@;    'for* '于甚
+
+@;    'when '当
+@;    'unless '挡
+@;    'match '像  ;/似/
+
+@;    'define '名
+@;    'let '让 ;/令/予
+@;    'let* '让甚
+
+@;    'list '表
+@;    'array '组 ;排串
+@;    'hash '集
+@;    'dict '典
+@;    'class '类
+@;    'struct '构
+@;    'equal '同
+
+@;    ;; 'character '符
+@;    ;; 'symbol '字
+@;    ;; 'keyword '词
+@;    ;; 'byte '言
+@;    ;; 'string '文
+@;    ;; 'text '书
+@;    'display '显
+@;    'displayln '显行
+@;    'write '作
+@;    'format '释 ;/夫/凡 ( 句首语气词，夫六国与秦皆诸侯，其势弱于 秦; 夫战，勇气也)
+@;    'car '阳
+@;    'cdr '阴)
+@;   )
+
+@; ;;;;;;;;; to be done:
+@; ;;; procedure == ???? 步骤 过程 程序，应找一个文言文单字
 
 
 @section{TODOS}
 @itemlist[
 @item{Implement below fake code(easily for others contributing to the translation):
 @racketmod[ming/mapping
-FOR:racket/list
+<racket/list>
 first 甲
 second 乙
 ...
