@@ -2,13 +2,28 @@
 
 
 (provide defmapping defchinesize)
-(require (for-syntax (rename-in "mapping/racket/base/pairs-and-lists.rkt" [mapping mapping-racket/base/pairs-and-lists])
-                     (rename-in "mapping/racket/base/syntactic-forms.rkt" [mapping mapping-racket/base/syntactic-forms])
-                     (rename-in "mapping/racket/base/generic-numerics.rkt" [mapping mapping-racket/base/generic-numerics])
-                     (rename-in "mapping/racket/base/number-types.rkt" [mapping mapping-racket/base/number-types])
-                     (rename-in "mapping/racket/base/others.rkt" [mapping mapping-racket/base/others])
-                     (rename-in "mapping/racket/list.rkt" [mapping mapping-racket/list]))
-         (for-syntax racket/base racket/syntax))
+(require (for-syntax racket/base racket/syntax racket/runtime-path racket/string racket/path))
+
+
+(begin-for-syntax
+  (define-runtime-path the-path "mapping")
+  (define the-files
+    (for/list ([f (in-directory the-path)]
+               #:when (and (string-suffix? (path->string f) ".rkt")
+                           (not (string-suffix? (path->string f) "base.rkt"))
+                           (not (string-suffix? (path->string f) "racket.rkt")))
+               #:do [(define fstring (path->string f))])
+      (string-replace fstring #rx".*/mapping" "mapping"))))
+
+(define-syntax (require-mapping/* stx)
+  (let ([sub-requires (for/list ([f the-files]
+                                 #:do [(define new-mapping/path (path-replace-extension f #""))
+                                       (define new-mapping (string->symbol (path->string new-mapping/path)))])
+                        `(rename-in ,f [mapping ,new-mapping]))])
+    (println sub-requires)
+    (datum->syntax stx `(require (for-syntax ,@sub-requires)))))
+
+(require-mapping/*)
 
 
 (begin-for-syntax
@@ -16,7 +31,7 @@
   (define ns (namespace-anchor->namespace anchor))
   (define (gen-defthings path mapping-data1)
     ;; (println (syntax-e path))
-    (define mapping-data (eval `(,(format-symbol "mapping-~a" path) #:scribble? #t) ns))
+    (define mapping-data (eval `(,(format-symbol "mapping/~a" path) #:scribble? #t) ns))
     `(deftogether
          ,(for/list ([l (in-list mapping-data)]
                      #:do ((define en (car l))
@@ -30,7 +45,7 @@
     ))
 
 (define-syntax (defmapping stx)
-  (syntax-case stx()
+  (syntax-case stx ()
     [(_ path mapping-data)
      ;; (println #'path)
      ;; (println (syntax->datum #'dict))

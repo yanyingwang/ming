@@ -5,6 +5,7 @@
 
 (define (mapping #:scribble? [scribble? #f]) ;; TODO: should be (load file ...)
   (gen-mapping-data data #:scribble? scribble?))
+
 (define data
   '( ;;; (empty 空) not need as one defined same in base (null 空)
     (first 甲 "第一个的意思，源自中国古代文字记序符号十天干。")

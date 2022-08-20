@@ -1,27 +1,37 @@
 #lang racket/base
 
-(provide  mapping)
-(require "../../private/mapping.rkt"
-         (rename-in "base/others.rkt" [mapping mapping0])
-         (rename-in "base/pairs-and-lists.rkt" [mapping mapping1])
-         (rename-in "base/syntactic-forms.rkt" [mapping mapping2])
-         (rename-in "base/syntactic-forms.rkt" [mapping mapping2])
-         (rename-in "base/generic-numerics.rkt" [mapping mapping3])
-         (rename-in "base/number-types.rkt" [mapping mapping4])
-        )
+(provide mapping)
+(require (for-syntax racket/base racket/syntax racket/sequence racket/runtime-path))
+
+(begin-for-syntax
+  (define-runtime-path base "base")
+  (define base-files
+    (for/list ([f (directory-list base)])
+      (format "base/~a" f))))
+
+(define-syntax (require-base/* stx)
+  (let ([sub-requires (for/list ([f base-files]
+                                 [i (in-range (length base-files))])
+                        `(rename-in ,f [mapping ,(format-symbol "mapping~a" i)]))])
+    ;; (println (datum->syntax stx (list* 'require sub-requires)))
+    (datum->syntax stx (list* 'require sub-requires))))
+
+(define-syntax (define-mapping stx)
+  (let ([append-lists (for/list ([i (in-range (sequence-length base-files))])
+                        `(,(format-symbol "mapping~a" i) #:scribble? scribble?))])
+    (datum->syntax stx
+                   `(define (mapping #:scribble? [scribble? #f])
+                      ,(list* 'append append-lists)))))
 
 
-(define (mapping #:scribble? [scribble? #f])
-  (append (mapping0 #:scribble? scribble?)
-          (mapping1 #:scribble? scribble?)
-          (mapping2 #:scribble? scribble?)
-          (mapping3 #:scribble? scribble?)
-          (mapping4 #:scribble? scribble?)))
+(require-base/*)
+(define-mapping)
+
 
 #| usage:
 (require "mapping/racket/base.rkt")
-(define-syntax (checkit stx) #`(println #,(mapping #:scribble? #t)))
-(checkit)
+(mapping)
+(mapping #:scribble? #t)
 
 check below link for the phases and bindings.
 "A syntax object has a lexical context from the moment it first exists. A syntax object that is provided from a module retains its lexical context, and so it references bindings in the context of its source module, not the context of its use.
