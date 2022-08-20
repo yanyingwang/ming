@@ -30,8 +30,7 @@
     (for/list 遍/链)
     (apply 用) ;; 应 使
     (procedure? 程?)
-    (syntax 式)
-    (syntax? 式?)
+    (eval 求)
 
     )
   )

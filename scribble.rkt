@@ -20,7 +20,6 @@
                                  #:do [(define new-mapping/path (path-replace-extension f #""))
                                        (define new-mapping (string->symbol (path->string new-mapping/path)))])
                         `(rename-in ,f [mapping ,new-mapping]))])
-    (println sub-requires)
     (datum->syntax stx `(require (for-syntax ,@sub-requires)))))
 
 (require-mapping/*)
