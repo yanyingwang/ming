@@ -120,7 +120,7 @@
 (一段数 10 20)
 ]
 
-@section{基础例程}
+@section[#:tag "list-base"]{基础例程}
 @defmapping[racket/base/pairs-and-lists
 ([对 "将两个数据对在一块。"]
 [阳 "返回居于阳位的数据。"]
@@ -128,7 +128,7 @@
 [阳之阳 "取阳位数据，从已取数据中再取阳位数据。"]
 )]
 
-@section{额外例程}
+@section[#:tag "list-additional"]{额外例程}
 @defmodule[ming/racket/list]
 @defmapping[racket/list]
 

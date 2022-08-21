@@ -12,12 +12,12 @@
 
 @script/rainbow-delimiters*
 
-@title[#:tag "cssisd"]{字词参名料文}
+@title[#:tag "zi--wen"]{字、词、参、名、料、文}
 @declare-exporting[ming]
 
 @margin-note{请注意，这里说的“词”（另有“@secref["string"]”）是一种数据结构，和@racket[链]类似。}
 
-对名语言来说，语言构成的最基本单位称之为“字”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "Character"]）。多个字连在一块可以构成“词”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "Symbol"]）（或@secref["string"]）。
+对名语言来说，语言构成的最基本单位称之为“字”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "Character"]），多个字连在一块可以构成“词”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "Symbol"]）或“@secref["string"]”。
 
 @examples[#:eval (the-eval)
 (字? #\a)
@@ -69,4 +69,5 @@
 (料->文 #f '一个香梨)
 (料->文 #f '(1 2 3))
 ]
+
 @defmapping[racket/base/syntax]
