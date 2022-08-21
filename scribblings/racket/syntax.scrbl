@@ -12,12 +12,12 @@
 
 @script/rainbow-delimiters*
 
-@title[#:tag "cssisd"]{字词参诗名料文}
+@title[#:tag "cssisd"]{字词参名料文}
 @declare-exporting[ming]
 
-@margin-note{请注意，这里说的“词”或者“诗”都是一种数据结构，和@racket[链]类似。}
+@margin-note{请注意，这里说的“词”（另有“@secref["string"]”）是一种数据结构，和@racket[链]类似。}
 
-对名语言来说，语言构成的最基本单位称之为“字”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "Character"]）。多个字连在一块可以构成“词”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "Symbol"]）或“诗”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "String"]）。
+对名语言来说，语言构成的最基本单位称之为“字”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "Character"]）。多个字连在一块可以构成“词”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "Symbol"]）（或@secref["string"]）。
 
 @examples[#:eval (the-eval)
 (字? #\a)
@@ -70,55 +70,3 @@
 (料->文 #f '(1 2 3))
 ]
 @defmapping[racket/base/syntax]
-
-@section{诗}
-“诗”是一种数据结构，也就是通常所说的“字符串”，在名语言中用单字表示之称为“诗”。“诗”有“易诗”和“坚诗”之分：
-@itemlist[
-@item{“易诗”中的“易”是“可以改变的”的意思，所以“易诗”是一种创建之后内容依然可以被修改的字符串数据结构。其之创建可以通过@racket[易诗]和@racket[易复诗]等例程；}
-@item{而“坚诗”与之相反，是一种一旦创建了其内容就不可再修改的字符串数据结构。通过半格双引号@racket[""]创建出来的“诗”是“坚诗”。}
-]
-
-
-@examples[#:eval (the-eval)
-(易诗 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。)
-(易复诗 5 #\鹅)
-@; (名 鹅 "鹅鹅鹅，曲项向天歌。白毛浮绿水，绿掌拨清波。")
-(诗长 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。")
-(诗引 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 0)
-(令 ([某诗 (诗->易诗 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。")])
-    (行示 某诗)
-    (诗改! 某诗 0 #\白)
-    (行示 某诗))
-@; (诗改! (诗->易诗 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。") 0 #\白)
-(易取诗 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 4)
-(易取诗 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 0 10)
-
-(令 ([某A诗 (诗->易诗 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。")]
-     [某B诗 "大中小白黑蓝"])
-    (行示 某A诗)
-    (易引覆诗 某A诗 0 某B诗 2 4)
-    (行示 某A诗))
-
-(诗复! (诗->易诗 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。") #\鹅)
-(易连诗 "鹅鹅鹅" "曲项向天歌" "白毛浮绿水" "红掌拨清波")
-]
-
-@defmapping[racket/base/string]
-
-
-@section{诗/额外例程}
-@defmodule[ming/racket/string]
-
-@examples[#:eval (the-eval)
-(链拢易诗 (链 "鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌" "。" "白" "毛" "浮" "绿" "水" "，" "红" "掌" "拨" "清" "波" "。"))
-(易空简诗 "鹅  鹅  鹅   \n \n 曲项向天歌 \n\r  白毛浮绿水   \r\n 红掌拨清波     \n\n\n ")
-(易部替诗 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "鹅鹅鹅" "大白鹅")
-(断诗成链 "鹅  鹅  鹅   \n \n 曲项向天歌 \n\r  白毛浮绿水   \r\n 红掌拨清波     \n\n\n ")
-(诗含诗? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "白毛浮绿水")
-(于诗起诗? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "鹅鹅鹅")
-(于诗终诗? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "拨清波。")
-
-
-]
-
-@defmapping[racket/string]
