@@ -8,18 +8,14 @@
 (define data
   '((char? 字?)
     (symbol? 词?)
-    (keyword? 参词? "因与词类似，但是却主要是定义例程使用参数时才使用的。") ;; 牌?
-    (keyword<? 参词<?)
-    (string? 诗?)
-    (string 诗)
+    (keyword? 词参? "因与词类似，但是却主要是定义例程使用参数时才使用的。") ;; 牌?
+    (keyword<? 词参<?)
 
     (symbol->string 词->诗)
     (string->symbol 诗->词)
 
-    (string->keyword 诗->参词)
-    (keyword->string 参词->诗)
-
-    (string->list 诗->链)
+    (string->keyword 诗->词参)
+    (keyword->string 词参->诗)
 
     (syntax 文)
     (syntax? 文?)
