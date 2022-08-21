@@ -14,7 +14,7 @@
 @margin-note{另可参见：@secref["zi--wen"]。}
 
 @title[#:tag "string"]{诗}
-“诗”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "String"]）是一种数据结构，也就是通常所说的“字符串”。名语言中用单字表示之称为“诗”。
+“诗”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "String"]）是一种数据结构，也就是通常所说的“字符串”。名语言用单字表示之称为“诗”。
 
 诗有“易诗”和“坚诗”之分：
 @itemlist[
