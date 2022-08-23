@@ -2,7 +2,7 @@
 
 
 (provide defmapping defchinesize)
-(require (for-syntax racket/base racket/syntax racket/runtime-path racket/string racket/path))
+(require (for-syntax racket/base racket/syntax racket/runtime-path racket/string))
 
 
 (begin-for-syntax

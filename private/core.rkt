@@ -1,13 +1,31 @@
 #lang racket/base
 
 ;; TODO: enh below code to support usage like this: (provide-with-mingizily-require racket/list racket/base)
+(require (for-syntax racket/base racket/syntax racket/runtime-path racket/string))
 (provide provide-with-mingizily-require)
-(require (for-syntax racket/base racket/syntax
-                     (rename-in "../mapping/racket.rkt" [mapping mapping/racket])
-                     (rename-in "../mapping/racket/base.rkt" [mapping mapping/racket/base])
-                     (rename-in "../mapping/racket/list.rkt" [mapping mapping/racket/list])
-                     (rename-in "../mapping/racket/math.rkt" [mapping mapping/racket/math])
-                     (rename-in "../mapping/racket/string.rkt" [mapping mapping/racket/string]))) ;; TODO fix duplication codes with syntax
+
+(begin-for-syntax
+  (define-runtime-path the-path "../mapping")
+  (define the-files
+    (for/list ([f (in-directory the-path)]
+               #:when (and (string-suffix? (path->string f) ".rkt")
+                           (not (string-contains? (path->string f) "/base/"))
+                           )
+               #:do [(define fstring (path->string f))])
+      (string-replace fstring #rx".*/mapping" "mapping"))))
+
+(define-syntax (require-mapping/* stx)
+
+  (let ([sub-requires (for/list ([f the-files]
+                                 #:do [(define file-path (string-append "../" f))
+                                       (define new-mapping/path (path-replace-extension f #""))
+                                       (define new-mapping (string->symbol (path->string new-mapping/path)))])
+                        `(rename-in ,file-path [mapping ,new-mapping]))])
+    (datum->syntax stx `(require (for-syntax ,@sub-requires)))))
+
+(require-mapping/*)
+
+
 
 (begin-for-syntax
   (define-namespace-anchor anchor)
