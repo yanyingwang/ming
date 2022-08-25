@@ -2,27 +2,9 @@
 
 
 (provide defmapping defchinesize)
-(require (for-syntax racket/base racket/syntax racket/runtime-path racket/string))
-
-
-(begin-for-syntax
-  (define-runtime-path the-path "mapping")
-  (define the-files
-    (for/list ([f (in-directory the-path)]
-               #:when (and (string-suffix? (path->string f) ".rkt")
-                           (not (string-suffix? (path->string f) "base.rkt"))
-                           (not (string-suffix? (path->string f) "racket.rkt")))
-               #:do [(define fstring (path->string f))])
-      (string-replace fstring #rx".*/mapping" "mapping"))))
-
-(define-syntax (require-mapping/* stx)
-  (let ([sub-requires (for/list ([f the-files]
-                                 #:do [(define new-mapping/path (path-replace-extension f #""))
-                                       (define new-mapping (string->symbol (path->string new-mapping/path)))])
-                        `(rename-in ,f [mapping ,new-mapping]))])
-    (datum->syntax stx `(require (for-syntax ,@sub-requires)))))
-
-(require-mapping/*)
+(require (for-syntax racket/base racket/syntax)
+         "private/match-in-files.rkt"
+         (match-in-files mapping (#rx"^/racket/.*\\.rkt$")))
 
 
 (begin-for-syntax
