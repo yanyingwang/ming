@@ -14,7 +14,6 @@
   (define-namespace-anchor anchor)
   (define ns (namespace-anchor->namespace anchor))
   (define (get-mapping-data path)
-    ;; (println path)
     (eval `(,(format-symbol "mapping/~a" path)) ns)))
 
 (define-syntax mingize
@@ -22,9 +21,6 @@
    (lambda (stx)
      (syntax-case stx ()
        [(_ path)
-        ;; (println (syntax-e #'path))
-        ;; (println (get-mapping-data #'path))
-        ;; (println (datum->syntax stx `(rename-in ,(syntax-e #'path) ,(get-mapping-data #'path))))
         (expand-import
          (datum->syntax stx `(rename-in ,(syntax-e #'path) ,@(get-mapping-data #'path))))
         ]))))
