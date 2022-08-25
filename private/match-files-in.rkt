@@ -1,5 +1,5 @@
 #lang racket/base
-(provide match-in-files)
+(provide match-files-in)
 (require (for-syntax racket/base racket/syntax racket/require-transform
                      "mapping-files.rkt"))
 
@@ -9,7 +9,7 @@
                      (regexp-match m f))
                    matchings))
           mapping-files))
-(define-syntax match-in-files
+(define-syntax match-files-in
   (make-require-transformer
    (lambda (stx)
      (syntax-case stx ()

@@ -1,11 +1,11 @@
 #lang racket/base
 
 (provide mingize)
-(require "private/match-in-files.rkt"
+(require "private/match-files-in.rkt"
          (for-syntax racket/base
                      racket/syntax
                      racket/require-transform
-                     (match-in-files mapping (#rx"^/([a-z]+)\\.rkt$"
+                     (match-files-in mapping (#rx"^/([a-z]+)\\.rkt$"
                                               #rx"^/racket/([a-z]+)\\.rkt$"))))
 
 (begin-for-syntax

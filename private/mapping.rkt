@@ -1,7 +1,6 @@
 #lang racket/base
 
 (provide gen-mapping-data)
-(require racket/runtime-path racket/string)
 
 (define (gen-mapping-data data #:scribble? [scribble? #f])
   (for/list ([da data]

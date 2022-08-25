@@ -2,9 +2,9 @@
 
 
 (provide defmapping defchinesize)
-(require "private/match-in-files.rkt"
+(require "private/match-files-in.rkt"
          (for-syntax racket/base racket/syntax
-                     (match-in-files mapping (#rx"^/racket/.*\\.rkt$"))))
+                     (match-files-in mapping (#rx"^/racket/.*\\.rkt$"))))
 
 
 (begin-for-syntax
