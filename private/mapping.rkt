@@ -1,6 +1,7 @@
 #lang racket/base
 
-(provide gen-mapping-data)
+(provide gen-mapping-data mapping-files)
+(require racket/runtime-path racket/string)
 
 (define (gen-mapping-data data #:scribble? [scribble? #f])
   (for/list ([da data]
@@ -13,3 +14,10 @@
         (list a b c)
         (list a b)))
   )
+
+
+(define-runtime-path the-path "../mapping")
+(define mapping-files
+  (for/list ([f (in-directory the-path)]
+             #:when (string-suffix? (path->string f) ".rkt"))
+    (string-replace (path->string f) #rx".*/mapping" "")))
