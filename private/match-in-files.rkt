@@ -15,6 +15,6 @@
      (syntax-case stx ()
        [(_ path matchings)
         (expand-import
-         (datum->syntax stx `(for-syntax ,@(for/list ([f (matched-files (syntax->datum #'matchings))])
+         (datum->syntax stx `(combine-in ,@(for/list ([f (matched-files (syntax->datum #'matchings))])
                                              `(rename-in ,(format "~a~a" (syntax-e #'path) f) [mapping ,(format-symbol "mapping~a" (path->string (path-replace-extension f #"")))])))))
         ]))))

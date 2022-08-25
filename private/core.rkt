@@ -3,10 +3,10 @@
 
 ;; TODO: enh below code to support usage like this: (provide-with-mingizily-require racket/list racket/base)
 (provide provide-with-mingizily-require)
-(require (for-syntax racket/base racket/syntax racket/runtime-path racket/string racket/require-transform racket/syntax)
-         "match-in-files.rkt"
-         (match-in-files ../mapping (#rx"^/([a-z]+)\\.rkt$"
-                                     #rx"^/racket/([a-z]+)\\.rkt$")))
+(require "match-in-files.rkt"
+         (for-syntax racket/base racket/syntax racket/syntax
+                     (match-in-files ../mapping (#rx"^/([a-z]+)\\.rkt$"
+                                                 #rx"^/racket/([a-z]+)\\.rkt$"))))
 
 (begin-for-syntax
   (define-namespace-anchor anchor)
