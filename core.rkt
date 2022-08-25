@@ -3,13 +3,12 @@
 (provide mingize)
 
 
-(require (for-syntax (rename-in "mapping/racket/list.rkt" [mapping mapping/racket/list])
-                     (rename-in "mapping/racket.rkt" [mapping mapping/racket])
-                     (rename-in "mapping/racket/base.rkt" [mapping mapping/racket/base])
-                     (rename-in "mapping/racket/list.rkt" [mapping mapping/racket/list])
-                     racket/base
+(require (for-syntax racket/base
                      racket/syntax
-                     racket/require-transform))
+                     racket/require-transform)
+         "private/match-in-files.rkt"
+         (match-in-files mapping (#rx"^/([a-z]+)\\.rkt$"
+                                  #rx"^/racket/([a-z]+)\\.rkt$")))
 
 (begin-for-syntax
   (define-namespace-anchor anchor)
