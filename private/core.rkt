@@ -4,7 +4,7 @@
 ;; TODO: enh below code to support usage like this: (provide-with-mingizily-require racket/list racket/base)
 (provide provide-with-mingizily-require)
 (require "match-files-in.rkt"
-         (for-syntax racket/base racket/syntax racket/syntax
+         (for-syntax racket/base racket/syntax
                      (match-files-in ../mapping (#rx"^/([a-z]+)\\.rkt$"
                                                  #rx"^/racket/([a-z]+)\\.rkt$"))))
 

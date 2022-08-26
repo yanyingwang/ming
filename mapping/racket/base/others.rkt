@@ -31,6 +31,7 @@
     (apply 用) ;; 应 使
     (procedure? 程?)
     (eval 求)
+    (void? 无?)
 
     )
   )

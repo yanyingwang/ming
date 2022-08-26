@@ -1,6 +1,6 @@
 #lang racket/base
 
-(require (for-syntax racket/base racket/syntax racket/sequence racket/runtime-path))
+(require (for-syntax racket/base racket/runtime-path))
 
 (begin-for-syntax
   (define-runtime-path the-path "racket")
