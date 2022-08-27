@@ -1,44 +1,36 @@
-#lang racket/base
+#lang s-exp "../../../private/mapping-lang.rkt"
 
-(provide mapping)
-(require  "../../../private/mapping.rkt")
 
-(define (mapping #:scribble? [scribble? #f])
-  (gen-mapping-data data #:scribble? scribble?))
-(define data
-  '([string? 诗?]
-    [string 诗 "创建一个内容可变的字符串数据结构。"] ;; TODO: create all the procedures started with 易 to 坚
-    [make-string 复诗 "创建一个内容可变的字符串数据结构，其内容为N个重复相同的字。"]
-    [string->immutable-string 诗->坚诗 "把诗转变为坚诗。"]
-    [string-length 诗长]
-    [string-ref 诗引]
-    [string-set! 诗改!]
-    [substring 摘诗 "索引摘录诗的N（包含）到Q（不包含）之间的字，并生成一个易诗。"] ;; 摘
-    [string-copy 诗->易诗 "把诗转变为易诗。"]
-    [string-copy! 诗覆以摘! "从另一个诗中索引摘录出一段字，从本诗的某处索引所指位置开始用之依次覆盖。"]
-    [string-fill! 诗复! "把诗的内容全部变成某一个重复的一个字。"]
-    [string-append 连诗 "把很多诗连在一块，组成易诗。"]
-    [string-append-immutable 坚连诗 "把很多诗连在一块，组成坚诗。"]
+[string? 诗?]
+[string 诗 "创建一个内容可变的字符串数据结构。"] ;; TODO: create all the procedures started with 易 to 坚
+[make-string 复诗 "创建一个内容可变的字符串数据结构，其内容为N个重复相同的字。"]
+[string->immutable-string 诗->坚诗 "把诗转变为坚诗。"]
+[string-length 诗长]
+[string-ref 诗引]
+[string-set! 诗改!]
+[substring 摘诗 "索引摘录诗的N（包含）到Q（不包含）之间的字，并生成一个易诗。"] ;; 摘
+[string-copy 诗->易诗 "把诗转变为易诗。"]
+[string-copy! 诗覆以摘! "从另一个诗中索引摘录出一段字，从本诗的某处索引所指位置开始用之依次覆盖。"]
+[string-fill! 诗复! "把诗的内容全部变成某一个重复的一个字。"]
+[string-append 连诗 "把很多诗连在一块，组成易诗。"]
+[string-append-immutable 坚连诗 "把很多诗连在一块，组成坚诗。"]
 
-    [string->list 诗->链]
-    [list->string 链->诗]
-    [build-string 序诗 "生成一个诗，诗中的每个字都是按照一定的顺序排列的。"]
-    [string=? 诗=?]
-    [string<? 诗<?]
-    [string<=? 诗<=?]
-    [string>? 诗>?]
-    [string>=? 诗>=?]
+[string->list 诗->链]
+[list->string 链->诗]
+[build-string 序诗 "生成一个诗，诗中的每个字都是按照一定的顺序排列的。"]
+[string=? 诗=?]
+[string<? 诗<?]
+[string<=? 诗<=?]
+[string>? 诗>?]
+[string>=? 诗>=?]
 
-    [string-ci=? 诗ci=?]
-    [string-ci<? 诗ci<?]
-    [string-ci<=? 诗ci<=?]
-    [string-ci>? 诗ci>?]
-    [string-ci>=? 诗ci>=?]
+[string-ci=? 诗ci=?]
+[string-ci<? 诗ci<?]
+[string-ci<=? 诗ci<=?]
+[string-ci>? 诗ci>?]
+[string-ci>=? 诗ci>=?]
 
-    [string-upcase upcase诗]
-    [string-downcase downcase诗]
-    [string-titlecase titlecase诗]
-    [string-foldcase foldcase诗]
-
-    )
-  )
+[string-upcase upcase诗]
+[string-downcase downcase诗]
+[string-titlecase titlecase诗]
+[string-foldcase foldcase诗]

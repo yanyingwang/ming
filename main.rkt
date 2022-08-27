@@ -5,7 +5,7 @@
 (require "core.rkt" "racket.rkt")
 
 
-(module reader racket/base
+(module reader racket/base ;; TODO: refactor it with syntax/module-reader
   (require racket/list)
   (provide (rename-out [ming-read read]
                        [ming-read-syntax read-syntax]))
