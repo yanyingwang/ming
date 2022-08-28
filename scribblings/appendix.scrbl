@@ -29,9 +29,6 @@
 
 
 
-
-
-
 @; (define translation
 @;   (hash
 @;    'if '若
@@ -94,4 +91,57 @@ second 乙
 @item{write a online ming code running page.}
 
 @item{remove println debuging code after adding test code.}
+
+@item{implment <| like below:
+@codeblock|{
+;; before:
+(with-syntax ([(added ...)
+               (map make+1
+                    (syntax->list #'(numbers ...)))]
+              [(added1 ...)
+               (map make1+1
+                    (syntax->list #'(numbers ...)))])
+         #'(begin
+             (printf "got ~a\n" added)
+             ...))
+
+;; after implmented:
+(with-syntax <<|(added ...)
+                (map make+1
+                    (syntax->list #'(numbers ...)))
+              <|(added1 ...)
+                (map make1+1
+                    (syntax->list #'(numbers ...)))
+           #'(begin
+               (printf "got ~a\n" added)
+               ...))
+
+
+(cond
+  [(positive? -5)
+   (error "doesn't get here")]
+  [(zero? -5)
+   (error "doesn't get here, either")]
+  [(positive? 5)
+   'here])
+
+(cond
+  <1|(positive? -5)
+     (error "doesn't get here")|>
+  <1|(zero? -5)
+     (error "doesn't get here, either")|>
+  <1|(positive? 5)
+     'here|>
+  )
+
+(cond
+  <复|(positive? -5)
+      (error "doesn't get here")|>
+  <复|(zero? -5)
+      (error "doesn't get here, either")|>
+  <复|(positive? 5)
+      'here|>
+  )
+}|
+}
 ]

@@ -1,7 +1,7 @@
 #lang scribble/manual
 
 
-@(require (for-label racket ming)
+@(require (for-label racket ming scribble/base)
            scribble/example
            scribble-rainbow-delimiters)
 @(define the-eval
@@ -46,48 +46,36 @@
 @commandline{./file1.rkt}
 
 
-@section{贡献翻译}
-对Racket标准库的翻译，应根据库路径创建相应文件到@racket[mapping/racket/*]中。
+@section[#:tag "contributing-mapping"]{贡献翻译}
+@margin-note{
+目前名语言仅翻译了@secref["numbers"]、@secref["pairs-and-lists"]、@secref["string"]等相关的例程，大量如@racket[for]/@racket[match]/@racket[hash]/@racket[dict]/@racket[struct]/@racket[class]/@racket[syntax]等重要内容都还有待翻译。
+}
+
+对Racket标准库的翻译，应根据Racket库的路径来创建相应翻译文件到@racket[mapping/]目录中。
+
+
+以@racket[racket/list]库的翻译为例，代码文件的位置和内容应为：
+@margin-note{
+对Racket的@racket[base]库的翻译，应将翻译文件置于@racket[mapping/racket/base/*.rkt]处（文件名任意）。
+}
+@filebox{mapping/racket/list.rkt
+@codeblock|{
+#lang s-exp "../../private/mapping-lang.rkt"
+
+>>> first 甲 "第一个的意思，源自中国古代文字记序符号十天干。"
+>>> second 乙
+>>> third 丙 >>> fourth 丁 >>> fifth 戊   ;; 此行共三个翻译
+>>> index-of 索引 (elem "从链中查出某个值的" (racket 引))   ;; “原因”可以为一个链
+}|}
 
 @margin-note{
-目前名语言仅翻译了@racket[数?]和@racket[链]相关的例程，@racket[for]/@racket[match]/@racket[hash]/@racket[dict]/@racket[struct]/@racket[class]/@racket[syntax]等重要内容都还未做翻译。
+翻译文件代码规则请见@secref["mapping-lang"]。
 }
 
-比如对@racket[racket/list]库的翻译，应创建如下文件：
-@filebox{mapping/racket/list.rkt
-@codeblock|{
-#lang racket/base
-(provide mapping)
-(require "../../private/mapping.rkt")
-
-(define (mapping #:scribble? [scribble? #f])
-  (gen-mapping-data data #:scribble? scribble?))
-(define data
-  '((first 甲 "第一个的意思，源自中国古代文字记序符号十天干。")
-    (second 乙 "第二个的意思，源自中国古代文字记序符号十天干。")))
-}|}
-
-@nested[#:style 'inset]{
-@racketcommentfont{TODO: Implement below fake code for others easily contributing to the translation:}
-@filebox{mapping/racket/list.rkt
-@codeblock|{
-#lang ming / mapping
-first 甲
-second 乙
-third 丙
-...
-}|}
-}
-
-
-然后再创建如下文件：
+此时，我们已经可以使用@code{(require (mingize racket/list))}来使用我们上面的翻译了。但如欲使用@code{(require ming/racket/list)}，则还需创建如下文件：
 @filebox{racket/list.rkt
 @codeblock|{
 #lang racket/base
 (require "../private/core.rkt")
 (provide-with-mingizily-require racket/list)
 }|}
-
-最后就可以通过@code{(require ming/racket/list)}使用了。
-
-
