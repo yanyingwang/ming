@@ -11,7 +11,7 @@
                 [inner-lst '()]
                 [result-lst '()])
        (if (null? lst)
-           result-lst
+           (append result-lst (list inner-lst))
            (loop (cdr lst)
                  (if (equal? (car lst) '>>>)
                      '()
@@ -20,6 +20,7 @@
                           (not (null? inner-lst)))
                      (append result-lst (list inner-lst))
                      result-lst)))))
+
    (define (mapping #:scribble? [scribble? #f])
      (gen-mapping-data data #:scribble? scribble?))
    (define (gen-mapping-data data #:scribble? [scribble? #f])
