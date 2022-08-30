@@ -13,6 +13,7 @@
 @include-section["setin.scrbl"]
 @include-section["prepare.scrbl"]
 @include-section["core.scrbl"]
+@include-section["naming-rules.scrbl"]
 @include-section["racket.scrbl"]
 @include-section["appendix.scrbl"]
 

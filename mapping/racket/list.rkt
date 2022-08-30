@@ -13,21 +13,21 @@
 >>> ninth 壬
 >>> tenth 癸
 >>> last 末
->>> last-pair 末/双
+>>> last-pair 末* "取出最后一双元素。"
 >>> rest 去甲 "链除去甲以外剩下的链。" ;; 甲外 剩余 去甲 舍甲
+
 >>> make-list 复链 "链内各个元素相同的链即为复链，类比昆虫的“复眼”一词取名。"
->>> list-update 引改/入 "把某链的某索引处值作为一例程的参数更新之。" ;; 引以改
->>> list-set 引改 "把某链的某索引处值更改为一个新的值。"
+>>> list-set 修 (elem "修改链" (racket 第) "几处的值为一个新的值。") ;; 修 更 改 新 肖
+>>> list-update 修/入 (elem "修改链" (racket 第) "几处的值为一个例程输出的新值。") ;; 引以改
 
->>> index-of 索引 (elem "从链中查出某个值的" (racket 引)) ;; 引 导
->>> index-where 索引/入 (elem "从链中查出某个值（传入例程比对结果）的" (racket 引)) ;; 引 导  函 =》以例
->>> indexes-of 索引/链 (elem "从链中用查出某值的" (racket 引) "，返回一个存着查找到的索引的链。")
->>> indexes-where 索引/入/链 (elem "从链中用查出某值（传入例程比对结果）的" (racket 引) "，返回一个存着查找到的索引的链。")
+>>> index-of 提 (elem "从链中查出某个值的" (racket 第)) ;; 引 导
+>>> index-where 提/入 (elem "从链中查出某个值（传入例程比对结果）的" (racket 第)) ;; 引 导  函 =》以例
+>>> indexes-of 提* (elem "从链中查出某值的全部" (racket 第) "，返回一个存着查找到的所有索引的链。")
+>>> indexes-where 提*/入 (elem "从链中用查出某值（传入例程比对结果）的全部" (racket 第) "，返回一个存着查找到的所有索引的链。")
 
->>> take 取 "去除前n个元素组成链。"
->>> drop 去 (elem "去掉前n个元素之后的链。") ;; 去头 ; 舍 is taken by list-tail in the racket/base
->>> split-at 断 "从第n个元素之后断成两个链。"
-
+>>> take 取 "去除前N个元素组成链。"
+>>> drop 去 (elem "去掉前N个元素之后的链。") ;; 去头 ; 舍 is taken by list-tail in the racket/base
+>>> split-at 断 "从第N个元素之后断成两个链。"
 >>> takef 取/入
 >>> dropf 去/入
 >>> splitf-at 断/入
@@ -35,37 +35,37 @@
 >>> take-right 右取
 >>> drop-right 右去
 >>> split-at-right 右断
-
 >>> takef-right 右取/入
 >>> dropf-right 右去/入
 >>> splitf-at-right 右断/入
+
 >>> list-prefix? 始链于链? "某链是否是某另一链的起始部分的。"
 ;; (take-common-prefix? 取同始)
 ;; (drop-common-prefix? 弃同始)
->>> add-between 间插 "链的每两个元素之间插入另一元素。"
+>>> append* 连- "将很多链连成一个链，链结尾无空。"
 
->>> append* 连*
->>> flatten 扁
+>>> add-between 间插 "链的每两个元素之间插入另一元素。"
+>>> flatten 扁平
 >>> check-duplicates 查重
 >>> remove-duplicates 去重
-
 >>> count 计数
-
->>> filter-map 选则各
->>> partition 选开 "把链中元素选出，并分开成两部分。"
-
->>> range 一段数
->>> inclusive-range 一段数/间隔
-
->>> append-map 各而连 ;; the original procedure does not works.
->>> filter-not 选非
 >>> shuffle 洗乱
+
+>>> partition 筛分 (elem "把链中元素选出，并分开成两个值。另见：" (racket 筛选)) ;; 筛开 筛分 筛离
+>>> filter-not 筛除
+
+>>> filter-map 筛而各
+>>> append-map 各而连-
+
+>>> range 一段数 "A到B之间的一段数组成的链（包括A不包括B）"
+>>> inclusive-range 一段数/间隔 "A到B之间的一段数组成的链（包括A不包括B），每两个数间隔N"
+
 >>> combinations 互组相合
 >>> in-combinations 序列组合
->>> argmin 最小者/函
->>> argmax 最大者/函
+>>> argmin 最小者/入
+>>> argmax 最大者/入
 >>> group-by 分组
 >>> cartesian-product 笛卡尔值
 
->>> remf 删/入 "传入例程比对删除某一符合条件元素。"
->>> remf* 删*/入 "传入例程比对删除所有符合条件元素。"
+>>> remf 消/入 (elem "以例程做对比来消除某一符合条件元素。另见：" (racket 消))
+>>> remf* 消*/入 (elem "以例程做对比来消除所有符合条件元素。另见：" (racket 消))

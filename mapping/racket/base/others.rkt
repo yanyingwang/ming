@@ -1,7 +1,7 @@
 #lang s-exp "../../../private/mapping-lang.rkt"
 
 
->>> equal? 同? ;;; 同 同齐 同等
+>>> equal? 同? ;;; 同 同齐 同等 俤
 >>> eqv? 齐? ;; ???? ;; #f <= (eqv? (make-string 3 #\z) (make-string 3 #\z))
 >>> eq? 等? ;; #f <= (eq? (make-string 3 #\z) (make-string 3 #\z)) (eq? (expt 2 100) (expt 2 100))
 ;; (equal-always? 总同?)

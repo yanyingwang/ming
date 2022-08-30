@@ -92,6 +92,8 @@ second 乙
 
 @item{remove println debuging code after adding test code.}
 
+@item{build rules about how to name the procedures.}
+
 @item{implment <| like below:
 @codeblock|{
 ;; before:
