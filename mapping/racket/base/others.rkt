@@ -17,9 +17,9 @@
 >>> println 行示
 >>> display 陈 ;; 陈 显 现 呈 示
 >>> displayln 行陈
->>> values 值
 
-
+>>> values 复值 ;; TODO: find a single char to stand it.
+>>> call-with-values 复值参与 "用continuation生成复值，并作为参数给于P返回结果。"
 
 >>> for 遍 ;; 每 为 历、遍历 对于
 >>> for/list 遍/链

@@ -32,6 +32,6 @@
 (define-syntax (defchinesize stx)
   (syntax-case stx()
     [(_ cn-id reason en-id)
-     (datum->syntax stx `(defthing #:kind "汉化" ,(syntax-e #'cn-id) (unsyntax (racketoutput ,(syntax-e #'reason))) #:value ,(syntax-e #'en-id)))
+     (datum->syntax stx `(defthing #:kind "汉化" ,(syntax-e #'cn-id) (unsyntax (racketvalfont ,(syntax-e #'reason))) #:value ,(syntax-e #'en-id)))
      ]
     ))
