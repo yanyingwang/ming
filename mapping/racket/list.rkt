@@ -27,7 +27,7 @@
 
 >>> take 出 "从链中取出来的N个元素所组成的链。" ;; 取 数取
 ;; >>> drop 去 (elem "去掉前N个元素之后的链。") ;; 去 去头 ; 舍 is taken by list-tail in the racket/base
->>> split-at 出去* "生成两个链：出N个元素，去N个元素。" ;; 断
+>>> split-at 出去 "生成两个链：出N个元素，去N个元素。" ;; 断
 >>> takef 出/入
 >>> dropf 去/入
 >>> splitf-at 出去/入
@@ -59,20 +59,20 @@
 >>> list-prefix? 始链于链? "某链是否是某另一链的起始部分的。"
 ;; (take-common-prefix? 取同始)
 ;; (drop-common-prefix? 弃同始)
->>> append* 连^ "将很多链连成一个链，链结尾无空。"
+>>> append* 连~ "将很多链连成一个链，链结尾无空。"
 
->>> add-between 间插 "链的每两个元素之间插入另一元素。"
+>>> add-between 间插 "链的每两个元素之间插入另一元素。" ;; 隔
 >>> flatten 扁平
 >>> check-duplicates 查重
 >>> remove-duplicates 去重
 >>> count 计数
 >>> shuffle 洗乱
 
->>> partition 筛分* (elem "符合条件的元素选出为链，和剩下的链，共计返回两个值。另见：" (racket 筛选)) ;; 筛开 筛分 筛离
+>>> partition 筛分 (elem "符合条件的元素选出为链，和剩下的链，共计返回两个值。另见：" (racket 筛选)) ;; 筛开 筛分 筛离
 >>> filter-not 筛除
 
 >>> filter-map 筛而各
->>> append-map 各而连-
+>>> append-map 各而连~
 
 >>> range 一段数 "A到B之间的一段数组成的链（包括A不包括B）"
 >>> inclusive-range 一段数/间隔 "A到B之间的一段数组成的链（包括A不包括B），每两个数间隔N"

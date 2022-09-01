@@ -24,6 +24,9 @@
 >>> for 遍 ;; 每 为 历、遍历 对于
 >>> for/list 遍/链
 >>> apply 用 ;; 应 使
->>> procedure? 程?
+>>> procedure? 程? "例程简称程"
 >>> eval 求
 >>> void? 无?
+
+
+>>> raise-argument-error 报参错

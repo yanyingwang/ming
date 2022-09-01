@@ -12,7 +12,10 @@
 @include-section["preface.scrbl"]
 @include-section["setin.scrbl"]
 @include-section["prepare.scrbl"]
-@include-section["core.scrbl"]
+
+@include-section["ming/core.scrbl"]
+@include-section["ming/list.scrbl"]
+
 @include-section["naming-rules.scrbl"]
 @include-section["racket.scrbl"]
 @include-section["appendix.scrbl"]
