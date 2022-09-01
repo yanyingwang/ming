@@ -38,7 +38,7 @@
 
 @defproc[(段 [某链 链?] [数A 数?] [数B 数?])
           链?]{
-返回@racket[某链]的其中一段，从@racket[第]@racket[数A]处元素算起，到@racket[第]@racket[数B]止（不包括@racket[数B]）。
+@racket[某链]的其中一段，从@racket[第]@racket[数A]处元素算起，到@racket[第]@racket[数B]止（不包括@racket[数B]）。
 
 @examples[#:eval (the-eval)
 (段 '(a b c d e f) 0 0)
