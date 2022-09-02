@@ -18,23 +18,30 @@
 
 @defproc[(筛分* [程A 程?] [某链 链?])
           链?]{
-与@racket[筛分]类似，除了返回结果不同。
-
+与@racket[筛分]类似，除返回值不同外。
 @examples[#:eval (the-eval)
 (筛分* 数? '(a bb 22 jj 38 ic))
 ]
 }
 
-
+@deftogether[(
 @defproc[(出去* [某链 链?] [数A 数?])
-          链?]{
-与@racket[出去]类似，除了返回结果不同。
-
+          链?]
+@defproc[(右出去* [某链 链?] [数A 数?])
+          链?]
+@defproc[(出去*/入 [某链 链?] [数A 数?])
+          链?]
+@defproc[(右出去*/入 [某链 链?] [数A 数?])
+          链?]
+)]{
+依次与@racket[出去]、@racket[右出去]、@racket[出去/入]、@racket[右出去/入]类似，除返回值不同外。
 @examples[#:eval (the-eval)
 (出去* '(a b c d e f) 2)
+(右出去* '(a b c d e f) 2)
+(出去*/入 '(a b c d 1 f) 词?)
+(右出去*/入 '(a b c d 1 f) 词?)
 ]
 }
-
 
 @defproc[(段 [某链 链?] [数A 数?] [数B 数?])
           链?]{
