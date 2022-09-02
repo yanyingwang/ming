@@ -1,26 +1,14 @@
 #lang scribble/manual
 
+@(require (for-label racket ming)
+           scribble/eval
+           scribble-rainbow-delimiters
+           ming/scribble
+           )
 
-@title[#:style '(toc)]{名语言/Ming-Language}
-@author[(author+email (hyperlink "https://yanying.wang" "Yanying Wang") "yanyingwang1@gmail.com")]
-
-@defmodule[ming #:lang]
-名语言，LISP的中文化方言，Racket的中文化编程语言。
+@title[#:style '(toc) #:tag "ming libs"]{名语言标准库}
 
 @(table-of-contents)
 
-@include-section["preface.scrbl"]
-@include-section["setin.scrbl"]
-@include-section["prepare.scrbl"]
-
 @include-section["ming/core.scrbl"]
 @include-section["ming/list.scrbl"]
-
-@include-section["naming-rules.scrbl"]
-@include-section["racket.scrbl"]
-@include-section["appendix.scrbl"]
-
-@; add new section: 翻译索引： procedure 步骤  list 链   pair 对
-
-@index-section[]
-

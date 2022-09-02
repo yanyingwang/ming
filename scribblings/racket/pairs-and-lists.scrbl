@@ -12,7 +12,6 @@
 @script/rainbow-delimiters*
 
 @title[#:tag "pairs-and-lists"]{双和链}
-@declare-exporting[ming]
 
 @section{双、阴阳、链}
 “双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构。@linebreak{}

@@ -10,7 +10,6 @@
 @script/rainbow-delimiters*
 
 @title[#:tag "prepare"]{准备}
-@declare-exporting[ming]
 
 @section[#:tag "install-ming"]{下载安装}
 @itemlist[#:style 'ordered

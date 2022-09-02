@@ -19,10 +19,7 @@
 
 @script/rainbow-delimiters*
 
-@; @(table-of-contents)
-
-@title[#:tag "ming-core"]{名语言标准库}
-@declare-exporting[ming]
+@title[#:tag "ming-core"]{名语言核心库}
 
 @section{ming/core}
 @defmodule[ming/core]

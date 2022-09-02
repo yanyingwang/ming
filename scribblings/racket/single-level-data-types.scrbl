@@ -13,7 +13,6 @@
 @script/rainbow-delimiters*
 
 @title[#:tag "zi--wen"]{字、词、参、名、料、文}
-@declare-exporting[ming]
 
 @margin-note{请注意，这里说的“词”（另有“@secref["string"]”）是一种数据结构，和@racket[链]类似。}
 

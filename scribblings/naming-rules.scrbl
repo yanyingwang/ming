@@ -10,7 +10,6 @@
 @script/rainbow-delimiters*
 
 @title[#:tag "naming-rules"]{命名规则}
-@declare-exporting[ming]
 
 我曾在@secref["retrofit-chinese-to-lisp"]中提到，中文化有利于LISP代码更易被读懂，原因是中文的单字表意特性会更利于构造命名。所以，名语言的关键字命名必须依托在一套工整的规则之上，如此才能实现我所谓的更易读。
 

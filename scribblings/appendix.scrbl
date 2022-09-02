@@ -2,7 +2,6 @@
 
 
 @title[#:tag "appendix"]{附录}
-@declare-exporting[ming]
 
 
 @section{关键术语翻译表}
