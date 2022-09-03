@@ -15,9 +15,9 @@ Racket库的名语言汉化，汉化了的Racket内部库程序应都置于此�
 
 @(table-of-contents)
 
-@include-section["racket/numbers.scrbl"]
-@include-section["racket/pairs-and-lists.scrbl"]
-@include-section["racket/string.scrbl"]
-@include-section["racket/single-level-data-types.scrbl"]
-@include-section["racket/syntactic-forms.scrbl"]
-@include-section["racket/others.scrbl"]
+@include-section["racket-lib/numbers.scrbl"]
+@include-section["racket-lib/pairs-and-lists.scrbl"]
+@include-section["racket-lib/string.scrbl"]
+@include-section["racket-lib/single-level-data-types.scrbl"]
+@include-section["racket-lib/syntactic-forms.scrbl"]
+@include-section["racket-lib/others.scrbl"]

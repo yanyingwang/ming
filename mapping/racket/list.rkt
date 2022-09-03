@@ -17,8 +17,8 @@
 >>> rest 去甲 "链除去甲以外剩下的链。" ;; 甲外 剩余 去甲 舍甲
 
 >>> make-list 复链 "链内各个元素相同的链即为复链，类比昆虫的“复眼”一词取名。"
->>> list-set 修 (elem "修改链" (racket 第) "几处的值为一个新的值。") ;; 修 更 改 新 肖
->>> list-update 修/入 (elem "修改链" (racket 第) "几处的值为一个例程输出的新值。") ;; 引以改
+>>> list-set 修 (elem "修改链" (racket 第) "N处的值为一个新的值。") ;; 修 更 改 新 肖
+>>> list-update 修/入 (elem "修改链" (racket 第) "N处的值为一个例程输出的新值。") ;; 引以改
 
 >>> index-of 提 (elem "从链中查出某个值的" (racket 第)) ;; 引 导
 >>> index-where 提/入 (elem "从链中查出某个值（传入例程比对结果）的" (racket 第)) ;; 引 导  函 =》以例
@@ -27,39 +27,22 @@
 
 >>> take 出 "从链中取出来的N个元素所组成的链。" ;; 取 数取
 ;; >>> drop 去 (elem "去掉前N个元素之后的链。") ;; 去 去头 ; 舍 is taken by list-tail in the racket/base
->>> split-at 出去 "生成两个链：出N个元素，去N个元素。" ;; 断
->>> takef 出/入
->>> dropf 去/入
->>> splitf-at 出去/入
+>>> split-at 出去 (elem "生成两个链：" (racket 出) "N个元素，" (racket 去) "N个元素。") ;; 断
+>>> takef 出/入 (elem "同" (racket 出) "类似，除了参数是" (racket 入))
+>>> dropf 去/入 (elem "同" (racket 去) "类似，除了参数是" (racket 入))
+>>> splitf-at 出去/入 (elem "同" (racket 出去) "类似，除了参数是" (racket 入))
 
->>> take-right 右出
->>> drop-right 右去
->>> split-at-right 右出去
->>> takef-right 右出/入
->>> dropf-right 右去/入
->>> splitf-at-right 右出去/入
-
-;;; implement (段 '(a b c d) 2 4) => '(b c)
-;; # implement 段: (段 '(a b c d) 0 2) => '(a b c)
-;; >>> take 左段 "去除前N个元素组成链。" ;; 取 数取
-;; >>> drop 左余段 (elem "去掉前N个元素之后的链。") ;; 去 去头 ; 舍 is taken by list-tail in the racket/base
-;; >>> split-at 左两段 "从第N个元素之后断成两个链。" ;; 断
-;; >>> takef 左段/入
-;; >>> dropf 左余段/入
-;; >>> splitf-at 两段/入
-
-;; >>> take-right 右段
-;; >>> drop-right 右余段
-;; >>> split-at-right 右两段
-;; >>> takef-right 右段/入
-;; >>> dropf-right 右余段/入
-;; >>> splitf-at-right 右两段/入
-
+>>> take-right 右出 (elem "同" (racket 出) "类似，除了是从右边开始操作的。")
+>>> drop-right 右去 (elem "同" (racket 去) "类似，除了是从右边开始操作的。")
+>>> split-at-right 右出去 (elem "同" (racket 出去) "类似，除了是从右边开始操作的。")
+>>> takef-right 右出/入 (elem "同" (racket 出/入) "类似，除了是从右边开始操作的。")
+>>> dropf-right 右去/入 (elem "同" (racket 去/入) "类似，除了是从右边开始操作的。")
+>>> splitf-at-right 右出去/入 (elem "同" (racket 出去/入) "类似，除了是从右边开始操作的。")
 
 >>> list-prefix? 始链于链? "某链是否是某另一链的起始部分的。"
 ;; (take-common-prefix? 取同始)
 ;; (drop-common-prefix? 弃同始)
->>> append* 连~ "将很多链连成一个链，链结尾无空。"
+>>> append* 连~ (elem "与" (racket 链) "类似，除了结尾无空")
 
 >>> add-between 间插 "链的每两个元素之间插入另一元素。" ;; 隔
 >>> flatten 扁平

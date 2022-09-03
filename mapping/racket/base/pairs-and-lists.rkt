@@ -59,7 +59,7 @@
 >>> assv 探/齐
 >>> assf 探/入
 
->>> caar 阳之阳
+>>> caar 阳之阳 (elem "对取出的" (racket 阳) "位数据再次取" (racket 阳))
 >>> cdar 阳之阴
 >>> cadr 阴之阳
 >>> cddr 阴之阴
