@@ -31,7 +31,7 @@ jobs:
                         ++main-xref-in \
                         --redirect-main https://docs.racket-lang.org/ \
                         --redirect https://docs.racket-lang.org/local-redirect/index.html \
-                        scribblings/manual.scrbl
+                        scribblings/ming.scrbl
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v1.2.5
