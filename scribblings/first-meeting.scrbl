@@ -9,7 +9,7 @@
 
 @script/rainbow-delimiters*
 
-@title[#:tag "setin"]{初见}
+@title[#:tag "first-meeting"]{初见}
 
 @section[#:tag "ming-s-retrofit"]{中文化一角}
 我在序的《@secref["retrofit-chinese-to-lisp"]》一章节中，曾谈到说把LISP中文化是很有意义的，中文可以改进LISP的难读性并为其带来新的活力。本章节即是我结合之前所说，所实现的一部分名语言的代码。

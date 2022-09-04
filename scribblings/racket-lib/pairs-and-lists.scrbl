@@ -166,11 +166,13 @@
 ]
 
 @section[#:tag "list-base"]{基础例程}
-@defmapping[racket/base/pairs-and-lists
+@defmapping[
+racket/base/pairs-and-lists
 ([对 "将两个数据对在一块。"]
-[阳 "返回居于阳位的数据。"]
-[阴 "返回居于阴位的数据。"]
-)]
+ [阳 "返回居于阳位的数据。"]
+ [阴 "返回居于阴位的数据。"]
+)
+]
 
 @section[#:tag "list-additional"]{额外例程}
 @defmodule[ming/racket/list]

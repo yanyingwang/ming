@@ -2,7 +2,6 @@
 
 @(require (for-label racket ming)
            scribble/eval
-           scribble-rainbow-delimiters
            ming/scribble
            )
 
