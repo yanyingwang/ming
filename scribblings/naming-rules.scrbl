@@ -16,8 +16,11 @@
 
 
 @itemlist[
-@item{凡是例程名加入@racketfont{*}的，表示加强力度。如@racket[提*]较@racket[提]返回更多的结果；又入@racket[消*]较@racket[消]移除更多的元素。}
-@item{凡是例程名加入@racketfont{^}的，表示减轻力度。如@racket[链^]较@racket[链]返回的结果尾部无多余；又入@racket[append^]较@racket[append]返回的结果尾部也无多余。}
-@item{凡是例程名字中包含@racketfont{/入}的，均表示参数并非是常规的数据，而是匿名函数（@racket[入]）。}
-@item{凡是例程名字中包含@racketfont{/成}的，均表示例程的输出结果是某一类型。比如@racketfont{/成链}表示此例程返回的结果是一个@racket[链]；类似的还有@racketfont{/成诗}（@racket[诗]）、@racketfont{/成词}（@racket[词]）等等。}
+@item{凡是例程名以“*”结尾的，表示加强力度。如@racket[提*]较@racket[提]会返回更多的结果；又入@racket[消*/入]较@racket[消/入]会移除更多的元素。}
+@item{凡是例程名以“~”结尾的，表示减轻力度。如@racket[链~]较@racket[链]返回的结果尾部无多余空；又入@racket[连~]较@racket[连]返回的结果尾部也无多余空。}
+@item{凡是例程名字中包含“/入”的，均表示例程的参数并非是常规的数据，而是匿名函数（@racket[入]）。}
+@item{凡是例程名字中包含“/成”的，均表示例程的输出结果是某一类型。比如“/成链”表示此例程返回的结果是一个@racket[链?]；类似的还有“/成诗”（@racket[诗?]）、“/成词”（@racket[词?]）等等。}
+@item{......}
+@item{......}
+@item{......}
 ]
