@@ -16,19 +16,19 @@
 @section{双、阴阳、链}
 “双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构。@linebreak{}
 
-对于名语言来说，如果我们把两个数据@racket[双]在一块，我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。@linebreak{}
+对于名语言来说，如果我们把两个数据@racket[配]在一块，我们就得到一个“双”，而配在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。@linebreak{}
 
-另外，如果一个“双”的阴位不是存的一个具体数据而是存的另外一个“双”的索引，此时的这个“双”，也叫做@racket[链]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
+另外，如果一个“双”的阴位不是存的一个具体数据而是存的另外一个“双”的索引，此时的这个“双”，也是@racket[链]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
 
 @examples[#:eval (the-eval)
-(双 1 2)
+(配 1 2)
 (双? '(1 . 2))
 (阳 '(1 . 2))
 (阴 '(1 . 2))
 
-(双 1 (双 2 (双 3 4)))
-(双 1 (双 2 (双 3 (双 4 空))))
-(同? (双 1 (双 2 (双 3 (双 4 空))))
+(配 1 (配 2 (配 3 4)))
+(配 1 (配 2 (配 3 (配 4 空))))
+(同? (配 1 (配 2 (配 3 (配 4 空))))
      (链 1 2 3 4))
 (链 1 2 3 4)
 (链~ 1 2 3 4)
@@ -51,7 +51,7 @@
 @section{例程命名规则}
 除@secref["naming-rules"]中的总规外，另有：
 @itemlist[
-@item{凡是以@racketfont{链}字结尾的，均表示输出结果是链。此如：@racket[链]、@racket[链-]、@racket[序链]、@racket[复链]等。}
+@item{凡是以@racketfont{链}字结尾的，均表示输出结果是链。此如：@racket[链]、@racket[链~]、@racket[序链]、@racket[复链]等。}
 ]
 
 @; @section[#:tag "list-searching"]{第提、索探、筛消、理、各巡}
@@ -154,8 +154,8 @@
 
 (各都为 正数? '(1 2 -3 4))
 (各中有 负数? '(1 2 -3 4))
-(各左拢 双 '() '(1 2 -3 4))
-(各右拢 双 '() '(1 2 -3 4))
+(各左拢 配 '() '(1 2 -3 4)) ;; 各左参
+(各右拢 配 '() '(1 2 -3 4))
 
 (筛而各 (入 (x) (且 (正数? x) (加一 x))) '(1 3 -4 5))
 (各而连~ vector->list '(#(1) #(2 3) #(4)))
