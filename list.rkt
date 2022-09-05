@@ -1,7 +1,7 @@
 #lang racket/base
 
 (provide 筛分* 出去* 右出去* 出去*/入 右出去*/入 段)
-(require ming/racket/base ming/racket/list)
+(require "racket/base.rkt" "racket/list.rkt")
 
 (名 (筛分* 例程A 某链)
     (复值参与 (入 () (筛分 例程A 某链))
