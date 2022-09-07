@@ -10,7 +10,7 @@
 @(table-of-contents)
 
 @include-section["preface.scrbl"]
-@include-section["first-meeting.scrbl"]
+@include-section["first-contact.scrbl"]
 @include-section["prepare.scrbl"]
 @include-section["naming-rules.scrbl"]
 @include-section["ming-lib.scrbl"]
