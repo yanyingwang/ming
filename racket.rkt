@@ -1,18 +1,17 @@
 #lang racket/base
 
-(require (for-syntax racket/base racket/runtime-path))
+(require (for-syntax racket/base racket/string racket/runtime-path))
 
 (begin-for-syntax
   (define-runtime-path the-path "racket")
   (define the-files
-    (for/list ([f (directory-list the-path)])
+    (for/list ([f (directory-list the-path)]
+               #:when (string-suffix? (path->string f) ".rkt"))
       (format "racket/~a" f))))
 
-(define-syntax (require-dir-with-provide/all-from-out stx)
-  (syntax-case stx ()
-    [(_ path)
-     (datum->syntax stx `(begin
-                           (require ,@the-files)
-                           (provide (all-from-out ,@the-files))))]))
+(define-syntax (require-and-provide-racket/* stx)
+  (datum->syntax stx `(begin
+                        (require ,@the-files)
+                        (provide (all-from-out ,@the-files)))))
 
-(require-dir-with-provide/all-from-out "racket")
+(require-and-provide-racket/*)
