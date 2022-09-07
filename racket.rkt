@@ -8,11 +8,11 @@
     (for/list ([f (directory-list the-path)])
       (format "racket/~a" f))))
 
-(define-syntax (require-racket/* stx)
-  (datum->syntax stx `(require ,@the-files)))
+(define-syntax (require-dir-with-provide/all-from-out stx)
+  (syntax-case stx ()
+    [(_ path)
+     (datum->syntax stx `(begin
+                           (require ,@the-files)
+                           (provide (all-from-out ,@the-files))))]))
 
-(define-syntax (provide-racket/* stx)
-  (datum->syntax stx `(provide (all-from-out ,@the-files))))
-
-(provide-racket/*)
-(require-racket/*)
+(require-dir-with-provide/all-from-out "racket")
