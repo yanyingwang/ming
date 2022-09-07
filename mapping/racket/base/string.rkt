@@ -12,8 +12,8 @@
 >>> string-copy 诗->易诗 "把诗转变为易诗。"
 >>> string-copy! 诗修!/以它段 (elem "从本诗的第N处字（从0算起）开始做覆盖（以另一个诗中取出的" (racket 诗段) "为内容）")
 >>> string-fill! 诗复! "把诗的内容全部变成某一个重复的一个字。"
->>> string-append 接诗 "把很多诗连接在一块，组成易诗。"
->>> string-append-immutable 坚接诗 "把很多诗连接在一块，组成坚诗。"
+>>> string-append 连诗 "把很多诗连接在一块，组成易诗。"
+>>> string-append-immutable 坚连诗 "把很多诗连接在一块，组成坚诗。"
 
 >>> string->list 诗->链
 >>> list->string 链->诗

@@ -42,7 +42,7 @@
 >>> list-prefix? 始链于链? "某链是否是某另一链的起始部分的。"
 ;; (take-common-prefix? 取同始)
 ;; (drop-common-prefix? 弃同始)
->>> append* 接~ (elem "与" (racket 链) "类似，除了结尾无空")
+>>> append* 连~ (elem "与" (racket 链) "类似，除了结尾无空")
 
 >>> add-between 间插 "链的每两个元素之间插入另一元素。" ;; 隔
 >>> flatten 扁平
@@ -55,7 +55,7 @@
 >>> filter-not 筛除
 
 >>> filter-map 筛而各
->>> append-map 各而接~
+>>> append-map 各而连~
 
 >>> range 一段数 "A到B之间的一段数组成的链（包括A不包括B）"
 >>> inclusive-range 一段数/间隔 "A到B之间的一段数组成的链（包括A不包括B），每两个数间隔N"
