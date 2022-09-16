@@ -5,7 +5,7 @@
 >>> define 名 "代表，定义" ;;   ;; 旨 意 义
 >>> define-values 名复值
 
->>> let 令
+>>> let 令 ;; 凭
 >>> let-values 令复值
 
 >>> require 受 "接受，引入" ;; 召 召见 , 引入的意思       入 出 拿 给 引进 输出 j举,承 受
