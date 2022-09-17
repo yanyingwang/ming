@@ -5,7 +5,7 @@
 >>> string 诗 "创建一个内容可变的字符串数据结构。" ;; TODO: create all the procedures started with 易 to 坚
 >>> make-string 复诗 "创建一个内容可变的字符串数据结构，其内容为N个重复相同的字。"
 >>> string->immutable-string 诗->坚诗 "把诗转变为坚诗。"
->>> string-length 诗长
+>>> string-length 诗度
 >>> string-ref 诗提
 >>> string-set! 诗修! "将诗的第N处字（从0算起）修改为某字。"
 >>> substring 诗段 "索引摘录诗的N（包含）到Q（不包含）之间的字，并生成一个易诗。" ;; 摘
