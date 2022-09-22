@@ -69,11 +69,11 @@
          (list
          (list @bold{英语单词（English Word）}  @bold{中文字符（Chinese Character）}   @bold{数据结构示例/（Showing）} @bold{数据结构创建示例/（Constructor）})
          (list @racket[pair]   "双"          @racket['(a . b)]       @racket[(双 'a 'b)])
-         (list @racket[list]  "􏿽"           @racket['(a b c)]       @racket[(􏿽 a b c)])
+         (list @racket[list]  "􏿽"           @racket['(a b c)]       @racket[(􏿽 a b c)]) @; 辶又十 半包围左右结构
          (list @racket[circular-list]  "㘝"   @code|{'口(a b c)}|       @racket[(㘝 'a 'b 'c)])
          (list @racket[vector] "􏿻"           @code|{'矢(a b c)}| @racket[(􏿻 'a 'b 'c)]) ; 应新造一个半格字符"矢"
          (list "----------" "---" "----------------------------" "---------------------------------------")
-         (list @racket[association list] "𨑱"  @racket['((a . b) (c . d))] @racket[(􏿽 (双 'a 'b) (双 'c 'd))])
+         (list @racket[association list] "𨑱"  @racket['((a . b) (c . d))] @racket[(􏿽 (双 'a 'b) (双 'c 'd))]) @;辶双一半包围上下结构
          (list @racket[hash] "􏿼"            @code|{'走((a . b) (c . d))}|       @racket[(􏿼 'a 'b 'c 'd)]) ; 应新造一个半格字符"走"
          (list "----------" "---" "----------------------------" "---------------------------------------")
          (list @racket[dict] "𰙪" "" "")
