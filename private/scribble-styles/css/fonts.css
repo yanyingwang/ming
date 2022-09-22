@@ -25,5 +25,5 @@
     font-weight: bold;
     font-stretch: normal;
     /* src: url("/home/yanying/codes/favfonts/WenQuanWeiMiHeiExtend/WenQuanYiMicroHeiExtend.ttf") format("truetype"); */
-    src: url("https://github.com/yanyingwang/favfonts/blob/master/WenQuanWeiMiHeiExtend/WenQuanYiMicroHeiExtend.woff") format("truetype");
+    src: url("https://github.com/yanyingwang/favfonts/blob/master/WenQuanWeiMiHeiExtend/WenQuanYiMicroHeiExtend.woff2") format("woff2");
 }
