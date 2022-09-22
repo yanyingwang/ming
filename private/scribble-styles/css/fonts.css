@@ -1,0 +1,29 @@
+
+.wq-ext-font {
+    font-family:  "WenQuanYiMicroHeiExtend";
+}
+
+/* body { */
+/* font-family: WenQuanYiMicroHeiExtend !important; */
+/* } */
+
+.RktIn, .RktRdr, .RktPn, .RktMeta,
+.RktMod, .RktKw, .RktVar, .RktSym,
+.RktRes, .RktOut, .RktCmt, .RktVal,
+.RktBlk, .RktErr {
+  font-family: 'Fira-Mono', monospace, WenQuanYiMicroHeiExtend !important;
+}
+
+.main, .refcontent, .tocview, .tocsub, .sroman, i {
+    font-family: 'Charter-Racket', serif, WenQuanYiMicroHeiExtend !important;
+}
+
+
+@font-face {
+    font-family: WenQuanYiMicroHeiExtend;
+    font-style: normal;
+    font-weight: bold;
+    font-stretch: normal;
+    /* src: url("/home/yanying/codes/favfonts/WenQuanWeiMiHeiExtend/WenQuanYiMicroHeiExtend.ttf") format("truetype"); */
+    src: url("https://github.com/yanyingwang/favfonts/blob/master/WenQuanWeiMiHeiExtend/WenQuanYiMicroHeiExtend.woff") format("truetype");
+}
