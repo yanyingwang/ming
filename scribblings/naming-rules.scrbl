@@ -68,21 +68,21 @@
          #:row-properties '(bottom-border ())
          (list
          (list @bold{英语单词（English Word）}  @bold{中文字符（Chinese Character）}   @bold{数据结构示例/（Showing）} @bold{数据结构创建示例/（Constructor）})
-         (list @racket[pair]   "双"          @racket['(a . b)]       @racket[(双 'a 'b)])
-         (list @racket[list]  "􏿽"           @racket['(a b c)]       @racket[(􏿽 a b c)]) @; 辶又十 半包围左右结构
-         (list @racket[circular-list]  "㘝"   @code|{'口(a b c)}|       @racket[(㘝 'a 'b 'c)])
-         (list @racket[vector] "􏿻"           @code|{'矢(a b c)}| @racket[(􏿻 'a 'b 'c)]) ; 应新造一个半格字符"矢"
+         (list "pair"   "双"          @racket['(a . b)]       @racket[(双 'a 'b)])
+         (list "list"  "􏿽"           @racket['(a b c)]       @racket[(􏿽 a b c)]) @; 辶又十 半包围左右结构
+         (list "circular-list"  "㘝"   @code|{'口(a b c)}|       @racket[(㘝 'a 'b 'c)])
+         (list "vector" "􏿻"           @code|{'矢(a b c)}| @racket[(􏿻 'a 'b 'c)]) ; 应新造一个半格字符"矢"
          (list "----------" "---" "----------------------------" "---------------------------------------")
-         (list @racket[association list] "𨑱"  @racket['((a . b) (c . d))] @racket[(􏿽 (双 'a 'b) (双 'c 'd))]) @;辶双一半包围上下结构
-         (list @racket[hash] "􏿼"            @code|{'走((a . b) (c . d))}|       @racket[(􏿼 'a 'b 'c 'd)]) ; 应新造一个半格字符"走"
+         (list "association list" "𨑱"  @racket['((a . b) (c . d))] @racket[(􏿽 (双 'a 'b) (双 'c 'd))]) @;辶双一半包围上下结构
+         (list "hash" "􏿼"            @code|{'走((a . b) (c . d))}|       @racket[(􏿼 'a 'b 'c 'd)]) ; 应新造一个半格字符"走"
          (list "----------" "---" "----------------------------" "---------------------------------------")
-         (list @racket[dict] "𰙪" "" "")
-         (list @racket[struct] "缀" "" "")
-         (list @racket[class] "䄌" "" "")
+         (list "dict" "𰙪" "" "")
+         (list "struct" "缀" "" "")
+         (list "class" "䄌" "" "")
          (list "----------" "---" "----------------------------" "---------------------------------------")
-         (list @racket[length]  "度"       "使用示例："  @code|{(度 '(a b c d e)) ==> 5}|)
-         (list @racket[vector-length] "􏿺" "使用示例："  @code|{(􏿺 '矢(a b c d e)) ==> 5}|)
-         (list @racket[string-length] "𬤏" "使用示例："  @code|{(𬤏 "abcde") ==> 5}|)
+         (list "length"  "度"       "使用示例："  @code|{(度 '(a b c d e)) ==> 5}|)
+         (list "vector-length" "􏿺" "使用示例："  @code|{(􏿺 '矢(a b c d e)) ==> 5}|)
+         (list "string-length" "𬤏" "使用示例："  @code|{(𬤏 "abcde") ==> 5}|)
          )]
 
 
