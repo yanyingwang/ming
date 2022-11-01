@@ -28,6 +28,34 @@
 ]
 
 @section[#:tag "character creating rules"]{选造字规则}
+
+@subsection{关键数据结构}
+@tabular[#:style 'boxed
+         #:column-properties '(left left)
+         #:row-properties '(bottom-border ())
+         (list
+         (list @bold{英语单词（English Word）}  @bold{中文字符（Chinese Character）}   @bold{数据结构示例/（Showing）} @bold{数据结构创建示例/（Constructor）})
+         (list "pair"   "双"          @racket['(a . b)]       @racket[(双 'a 'b)])
+         (list "list"  "􏿴"           @racket['(a b c)]       @racket[(􏿴 a b c)])
+         (list "circular-list"  "􏿯"   @code|{'􏿸(a b c)}|       @racket[(􏿯 'a 'b 'c)])
+         (list "vector" "􏿲"           @code|{'􏿷(a b c)}| @racket[(􏿲 'a 'b 'c)])
+         (list "----------" "---" "----------------------------" "---------------------------------------")
+         (list "association list" "􏿳"  @racket['((a . b) (c . d))] @racket[(􏿳 'a 'b 'c 'd)])
+         (list "hash" "􏿱"            @code|{'􏿶((a . b) (c . d))}|       @racket[(􏿱 'a 'b 'c 'd)])
+         (list "dict" "􏿰" "" "")
+         (list "----------" "---" "----------------------------" "---------------------------------------")
+         (list "struct" "构" "" "")
+         (list "class" "类" "" "")
+         @; (list "----------" "---" "----------------------------" "---------------------------------------")
+         @; (list "length"  "度"       "使用示例："  @code|{(度 '(a b c d e)) ==> 5}|)
+         @; (list "vector-length" "􏿺" "使用示例："  @code|{(􏿺 '􏿷(a b c d e)) ==> 5}|)
+         @; (list "string-length" "𬤏" "使用示例："  @code|{(𬤏 "abcde") ==> 5}|)
+         )]
+
+
+
+@subsection{造字规则}
+
 汉字的构造法才是汉语的精髓所在：汉字的构造，在其本质上是关于如何把现实世界间存在的多维度实物（以及实物间的关联关系）全都抽象化的体现在一个二维世界上的超级实践。
 
 能熟练读或写中文的人，基本上都明白汉字的造字方法，我下面将举例说明如何在编程语言中引入这种造字法去表达编程中的固有概念：
@@ -62,28 +90,6 @@
 ]
 
 下面让我们把以上所讲内容汇总成表格，来观察一下编程语言的各个概念之间的关联关系是如何被用汉字造字法创造出来的字符所含蕴的：
-
-@tabular[#:style 'boxed
-         #:column-properties '(left left)
-         #:row-properties '(bottom-border ())
-         (list
-         (list @bold{英语单词（English Word）}  @bold{中文字符（Chinese Character）}   @bold{数据结构示例/（Showing）} @bold{数据结构创建示例/（Constructor）})
-         (list "pair"   "双"          @racket['(a . b)]       @racket[(双 'a 'b)])
-         (list "list"  "􏿽"           @racket['(a b c)]       @racket[(􏿽 a b c)]) @; 辶又十 半包围左右结构
-         (list "circular-list"  "㘝"   @code|{'口(a b c)}|       @racket[(㘝 'a 'b 'c)])
-         (list "vector" "􏿻"           @code|{'矢(a b c)}| @racket[(􏿻 'a 'b 'c)]) ; 应新造一个半格字符"矢"
-         (list "----------" "---" "----------------------------" "---------------------------------------")
-         (list "association list" "𨑱"  @racket['((a . b) (c . d))] @racket[(􏿽 (双 'a 'b) (双 'c 'd))]) @;辶双一半包围上下结构
-         (list "hash" "􏿼"            @code|{'走((a . b) (c . d))}|       @racket[(􏿼 'a 'b 'c 'd)]) ; 应新造一个半格字符"走"
-         (list "----------" "---" "----------------------------" "---------------------------------------")
-         (list "dict" "𰙪" "" "")
-         (list "struct" "缀" "" "")
-         (list "class" "䄌" "" "")
-         (list "----------" "---" "----------------------------" "---------------------------------------")
-         (list "length"  "度"       "使用示例："  @code|{(度 '(a b c d e)) ==> 5}|)
-         (list "vector-length" "􏿺" "使用示例："  @code|{(􏿺 '矢(a b c d e)) ==> 5}|)
-         (list "string-length" "𬤏" "使用示例："  @code|{(𬤏 "abcde") ==> 5}|)
-         )]
 
 
 如果我们把@litchar{又}看成是编程中数据的概念抽象的话，通过以上例子，我们就可以明白要如何用汉字的造字法来的表达LISP语言里面的固有概念。并且我们能看到，较之英文，汉字的表达是更能体现出概念之间的逻辑关系的。
