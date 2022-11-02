@@ -1,5 +1,7 @@
 #lang scribble/manual
 
+@(require (file "../private/scribble-styles/css/fonts.css.rkt"))
+@css/wenquan-extend-font
 
 @title[#:style '(toc)]{名语言/Ming-Language}
 @author[(author+email (hyperlink "https://yanying.wang" "Yanying Wang") "yanyingwang1@gmail.com")]

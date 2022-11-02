@@ -26,3 +26,8 @@
 .main, .refcontent, .tocview, .tocsub, .sroman, i {
     font-family: 'Charter-Racket', serif, WenQuanYiMicroHeiExtend !important;
 }
+
+
+h1, h2, h3, h4, h5, h6, h7, h8 {
+    font-family: 'Fira', sans-serif, WenQuanYiMicroHeiExtend !important;
+}

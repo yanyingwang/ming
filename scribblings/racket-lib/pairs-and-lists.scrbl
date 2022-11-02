@@ -3,22 +3,31 @@
 @(require (for-label racket ming)
            scribble/eval
            scribble-rainbow-delimiters
+           (file "../../private/scribble-styles/css/fonts.css.rkt")
            ming/scribble
            )
 @(define the-eval
          (make-eval-factory '(ming/racket/base ming/racket/list)))
 
-
+@css/wenquan-extend-font
 @script/rainbow-delimiters*
 
-@title[#:tag "pairs-and-lists"]{双和链}
+@title[#:tag "pairs-and-lists"]{双和􏿴}
 
-@section{双、阴阳、链}
+@section{双、阴阳、􏿴}
 “双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构。@linebreak{}
 
 对于名语言来说，如果我们把两个数据@racket[配]在一块，我们就得到一个“双”，而配在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。@linebreak{}
 
-另外，如果一个“双”的阴位不是存的一个具体数据而是存的另外一个“双”的索引，此时的这个“双”，也是@racket[链]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
+另外，如果一个“双”的阴位不是存的一个具体数据而是存的另外一个“双”的索引，此时的这个“双”，也是@racket[􏿴]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
+
+@margin-note{
+“􏿴”为新造字，因其所代表的数据结构（即@racket[list]）和“双”所代表的数据结构（@racket[pair]）的内在关联关系而得造：多个“双”相连接并且最后一个双的阴值为空即成“􏿴”。该字由“又”和“㐅”组成：
+@itemlist[
+@item{其中半包围结构的“又”表示其是一种类似链一样的前后元素依次相接、可以延绵不绝的数据结构；}
+@item{其中被包围的居于之后的“㐅”表示本数据结构的结尾元素总是一个空值。}
+]
+}
 
 @examples[#:eval (the-eval)
 (配 1 2)
@@ -42,8 +51,8 @@
 (阳之阳 '((1 1.1) 2 3 4))
 (阳之阴阳 '((1 1.1) 2 3 4))
 
-(序链 5 加一)
-(复链 5 'foo)
+(序􏿴 5 加一)
+(复􏿴 5 'foo)
 
 (连 '(1 2) '(3 4) '(5 6) '(7 8))
 ]

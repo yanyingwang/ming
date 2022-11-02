@@ -3,7 +3,8 @@
 @(require (for-label racket ming)
            scribble/example
            scribble-rainbow-delimiters
-           (file "../private/scribble-styles/css/fonts.css.rkt"))
+           (file "../private/scribble-styles/css/fonts.css.rkt")
+           )
 @(define the-eval
          (make-eval-factory '(racket/base racket/list ming/racket/base ming/racket/list)))
 
@@ -37,15 +38,15 @@
          (list @bold{英语单词（English Word）}  @bold{中文字符（Chinese Character）}   @bold{数据结构示例/（Showing）} @bold{数据结构创建示例/（Constructor）})
          (list "pair"   "双"          @racket['(a . b)]       @racket[(双 'a 'b)])
          (list "list"  "􏿴"           @racket['(a b c)]       @racket[(􏿴 a b c)])
-         (list "circular-list"  "􏿯"   @code|{'􏿸(a b c)}|       @racket[(􏿯 'a 'b 'c)])
+         (list "circular-list"  "􏿮"   @code|{'􏿸(a b c)}|       @racket[(􏿮 'a 'b 'c)])
          (list "vector" "􏿲"           @code|{'􏿷(a b c)}| @racket[(􏿲 'a 'b 'c)])
          (list "----------" "---" "----------------------------" "---------------------------------------")
          (list "association list" "􏿳"  @racket['((a . b) (c . d))] @racket[(􏿳 'a 'b 'c 'd)])
-         (list "hash" "􏿱"            @code|{'􏿶((a . b) (c . d))}|       @racket[(􏿱 'a 'b 'c 'd)])
+         (list "hash" "􏿱"            @code|{'T((a . b) (c . d))}|       @racket[(􏿱 'a 'b 'c 'd)])
          (list "dict" "􏿰" "" "")
          (list "----------" "---" "----------------------------" "---------------------------------------")
-         (list "struct" "构" "" "")
-         (list "class" "类" "" "")
+         (list "struct" "􏿭" "" "")
+         (list "class" "􏿬" "" "")
          @; (list "----------" "---" "----------------------------" "---------------------------------------")
          @; (list "length"  "度"       "使用示例："  @code|{(度 '(a b c d e)) ==> 5}|)
          @; (list "vector-length" "􏿺" "使用示例："  @code|{(􏿺 '􏿷(a b c d e)) ==> 5}|)
