@@ -20,14 +20,14 @@
 
 对于名语言来说，如果我们把两个数据配对（@racket[双]在一块），我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。@linebreak{}
 
-另外，如果一个“双”的阴位存的是另外一个“双”，数个双如此前后相接组成链状（末尾双的阴位留@racket[空]），这样的数据结构称之为@racket[􏿴]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
+另外，如果一个“双”的阴位存的是另外一个“双”，数个双如此前后相接组成链状（末尾双的阴位置@racket[空]），这样的数据结构称之为@racket[􏿴]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
 
 @margin-note{
 @bold{“􏿴”为新造字：}
 
 因其所代表的数据结构（list）和“双”所代表的数据结构（pair）互相之间的内生性变换转化关系而得造：
 @itemlist[
-@item{多个“双”首尾相衔接并且最后一个双的阴位留空值即成“􏿴”；}
+@item{多个“双”首尾相衔接并且最后一个双的阴位置空即成“􏿴”；}
 @item{每一个“􏿴”同时都是“双”。}
 ]
 
