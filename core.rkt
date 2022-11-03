@@ -32,5 +32,5 @@ usage:
 ;; usage
 ;; (require (mingize racket/list))  ;; mingize 名化，汉化 chineselize
 ;; (乙 (list 1 2 3))
-;; (甲 (链 1 2 3))
+;; (甲 (􏿴 1 2 3))
 |#

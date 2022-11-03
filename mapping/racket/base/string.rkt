@@ -15,8 +15,8 @@
 >>> string-append 连诗 "把很多诗连接在一块，组成易诗。"
 >>> string-append-immutable 坚连诗 "把很多诗连接在一块，组成坚诗。"
 
->>> string->list 诗->链
->>> list->string 链->诗
+>>> string->list 诗->􏿴
+>>> list->string 􏿴->诗
 >>> build-string 序诗 "生成一个诗，诗中的每个字都是按照一定的顺序排列的。"
 >>> string=? 诗=?
 >>> string<? 诗<?

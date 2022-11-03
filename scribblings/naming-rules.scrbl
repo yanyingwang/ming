@@ -20,10 +20,10 @@
 
 @itemlist[
 @item{凡是例程名以@litchar{*}结尾的，表示加强力度。如@racket[提*]较@racket[提]会返回更多的结果；又如@racket[消*/入]较@racket[消/入]会移除更多的元素。}
-@item{凡是例程名以@litchar{~}结尾的，表示减轻力度。如@racket[链~]较@racket[链]返回的结果尾部无多余空；又如@racket[连~]较@racket[连]返回的结果尾部也无多余空。}
+@item{凡是例程名以@litchar{~}结尾的，表示减轻力度。如@racket[􏿴~]较@racket[􏿴]返回的结果尾部无多余空；又如@racket[连~]较@racket[连]返回的结果尾部也无多余空。}
 @item{凡是例程名字中包含@litchar{/入}的，均表示例程的参数并非是常规的数据，而是匿名函数（@racket[入]）。}
-@item{凡是例程名字中包含@litchar{/成}的，均表示例程的输出结果是某一类型。比如@litchar{/成链}表示此例程返回的结果是一个@racket[链?]；类似的还有@litchar{/成诗}（@racket[诗?]）、@litchar{/成词}（@racket[词?]）等等。}
-@item{凡是例程名字中包含@litchar{/以}，均是在提示例程的参数构造方式。比如：@racket[消*/以链]表示其例程的参数是@racket[链?]；又如@racket[诗修!/以它段]较@racket[诗修!]而言，参数多出了三个（这三个分别为另外一个诗，和对另外一个诗取@racket[诗段]的参数）。}
+@item{凡是例程名字中包含@litchar{/成}的，均表示例程的输出结果是某一类型。比如@litchar{/成􏿴}表示此例程返回的结果是一个@racket[􏿴?]；类似的还有@litchar{/成诗}（@racket[诗?]）、@litchar{/成词}（@racket[词?]）等等。}
+@item{凡是例程名字中包含@litchar{/以}，均是在提示例程的参数构造方式。比如：@racket[消*/以􏿴]表示其例程的参数是@racket[􏿴?]；又如@racket[诗修!/以它段]较@racket[诗修!]而言，参数多出了三个（这三个分别为另外一个诗，和对另外一个诗取@racket[诗段]的参数）。}
 @item{......}
 @item{......}
 ]

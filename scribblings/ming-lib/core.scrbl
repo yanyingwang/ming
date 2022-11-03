@@ -122,7 +122,7 @@
 @item{@racket[>>>]也不必非在行首；也可以在行中，如此则会从行中开始另一个翻译。}
 @item{@racket[>>>]之后可以跟上二或三个数据，分别为“原名（english-id）”、“翻译名（chinese-id）”和“原因（reason）”，数据间以空格分割。}
 @item{三个数据中，“原因”可以被省略；如有则会在使用@racket[defchinesize]、@racket[defmapping]生成文档的时候被默认提取使用。}
-@item{“原因”可以是一个@racket[诗]或@racket[链]；使用链可以生成高级定制的HTML代码，请见@racket[elem]。}
+@item{“原因”可以是一个@racket[诗]或@racket[􏿴]；使用􏿴可以生成高级定制的HTML代码，请见@racket[elem]。}
 ]
 
 示例：
@@ -133,5 +133,5 @@
 >>> first 甲 "第一个的意思，源自中国古代文字记序符号十天干。"
 >>> second 乙
 >>> third 丙 >>> fourth 丁 >>> fifth 戊   ;; 此行共三个翻译
->>> index-of 索引 (elem "从链中查出某个值的" (racket 引))   ;; “原因”可以为一个链
+>>> index-of 索引 (elem "从􏿴中查出某个值的" (racket 引))   ;; “原因”可以为一个􏿴
 }|}

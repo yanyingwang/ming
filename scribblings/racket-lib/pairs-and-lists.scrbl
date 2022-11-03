@@ -2,15 +2,16 @@
 
 @(require (for-label racket ming)
            scribble/eval
-           scribble-rainbow-delimiters
-           (file "../../private/scribble-styles/css/fonts.css.rkt")
            ming/scribble
            )
 @(define the-eval
          (make-eval-factory '(ming/racket/base ming/racket/list)))
 
+@(require (file "../../private/scribble-styles/css/fonts.css.rkt"))
 @css/wenquan-extend-font
+@(require scribble-rainbow-delimiters)
 @script/rainbow-delimiters*
+
 
 @title[#:tag "pairs-and-lists"]{双和􏿴}
 
@@ -22,9 +23,18 @@
 另外，如果一个“双”的阴位不是存的一个具体数据而是存的另外一个“双”的索引，此时的这个“双”，也是@racket[􏿴]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
 
 @margin-note{
-“􏿴”为新造字，因其所代表的数据结构（即@racket[list]）和“双”所代表的数据结构（@racket[pair]）的内在关联关系而得造：多个“双”相连接并且最后一个双的阴值为空即成“􏿴”。该字由“又”和“㐅”组成：
+@bold{“􏿴”为新造字：}
+
+因其所代表的数据结构（list）和“双”所代表的数据结构（pair）互相之间的内生性变换转化关系而得造：
 @itemlist[
-@item{其中半包围结构的“又”表示其是一种类似链一样的前后元素依次相接、可以延绵不绝的数据结构；}
+@item{多个“双”首尾相衔接并且最后一个双的阴位是空值即成“􏿴”；}
+@item{每一个“􏿴”同时都是“双”。}
+]
+
+
+该字由“又”和“㐅”组成，含义：
+@itemlist[
+@item{其中半包围结构的“又”表示其是一种类似链一样的内部元素之间依次互相衔接、可以向后延绵不绝的数据结构；}
 @item{其中被包围的居于之后的“㐅”表示本数据结构的结尾元素总是一个空值。}
 ]
 }
@@ -38,9 +48,9 @@
 (配 1 (配 2 (配 3 4)))
 (配 1 (配 2 (配 3 (配 4 空))))
 (同? (配 1 (配 2 (配 3 (配 4 空))))
-     (链 1 2 3 4))
-(链 1 2 3 4)
-(链~ 1 2 3 4)
+     (􏿴 1 2 3 4))
+(􏿴 1 2 3 4)
+(􏿴~ 1 2 3 4)
 
 (阳 '(1 2 3 4))
 (阴 '(1 2 3 4))
@@ -60,19 +70,19 @@
 @section{例程命名规则}
 除@secref["naming-rules"]中的总规外，另有：
 @itemlist[
-@item{凡是以@racketfont{链}字结尾的，均表示输出结果是链。此如：@racket[链]、@racket[链~]、@racket[序链]、@racket[复链]等。}
+@item{凡是以@racketfont{􏿴}字结尾的，均表示输出结果是􏿴。此如：@racket[􏿴]、@racket[􏿴~]、@racket[序􏿴]、@racket[复􏿴]等。}
 ]
 
 @; @section[#:tag "list-searching"]{第提、索探、筛消、理、各巡}
-@; 跟链的查询相关的例程有：
+@; 跟􏿴的查询相关的例程有：
 @; @itemlist[
-@; @item{引：链中各个元素的序号（索引）称之为“引”。通过链中元素的序列号来查询具体的元素叫@racket[引]。用一个具体值来反向查询此值在链中的引，称之为@racket[索引]。}
-@; @item{索：查询链中某值，并返回此值之后的所有数据组成的链，称之为@racket[索]。}
-@; @item{寻：@racket[寻]是用来查询联链（association list，链中链）的，即以链中之链的阳位数据为查询对象来返回查询到的数据所在的链。}
-@; @item{选：@racket[选]是用例程来查询出所有符合条件的元素所组成的链。@racket[选一]则是只返回第一查到的元素。}
-@; @item{删：@racket[删]掉链中某一元素。@racket[删链*]从某一链删掉另一链中相同的所有元素。}
-@; @item{@racket[各]：链中的各个元素作为例程的参数传入例程并用返回结果替换原值。}
-@; @item{@racket[轮]：链中元素作为参数依次轮换进入执行例程。}
+@; @item{引：􏿴中各个元素的序号（索引）称之为“引”。通过􏿴中元素的序列号来查询具体的元素叫@racket[引]。用一个具体值来反向查询此值在􏿴中的引，称之为@racket[索引]。}
+@; @item{索：查询􏿴中某值，并返回此值之后的所有数据组成的􏿴，称之为@racket[索]。}
+@; @item{寻：@racket[寻]是用来查询联􏿴（association list，􏿴中􏿴）的，即以􏿴中之􏿴的阳位数据为查询对象来返回查询到的数据所在的􏿴。}
+@; @item{选：@racket[选]是用例程来查询出所有符合条件的元素所组成的􏿴。@racket[选一]则是只返回第一查到的元素。}
+@; @item{删：@racket[删]掉􏿴中某一元素。@racket[删􏿴*]从某一􏿴删掉另一􏿴中相同的所有元素。}
+@; @item{@racket[各]：􏿴中的各个元素作为例程的参数传入例程并用返回结果替换原值。}
+@; @item{@racket[轮]：􏿴中元素作为参数依次轮换进入执行例程。}
 @; ]
 
 
@@ -112,8 +122,8 @@
 
 @section{间、扁、洗、重}
 @examples[#:eval (the-eval)
-(始链于链? '(a j) '(a j d k))
-(始链于链? '(a f j) '(a j d k))
+(始􏿴于􏿴? '(a j) '(a j d k))
+(始􏿴于􏿴? '(a f j) '(a j d k))
 
 (间插 '(a b c d) '和)
 (扁平 '((a b) (c d) (e f)))
@@ -150,7 +160,7 @@
 (消 'c '(a b c d e c f))
 (消/入 偶数? '(1 2 3 4 5 6 7 8))
 @; (删* '(c) '(a b c d e c f))
-(消*/以链 '(c e) '(a b c d e c f))
+(消*/以􏿴 '(c e) '(a b c d e c f))
 (消*/入 偶数? '(1 2 3 4 5 6 7 8))
 
 (计数 正数? '(1 2 -3 4))
@@ -171,7 +181,7 @@
 
 (巡 (入 (i)
           (行示 i))
-      (链 2 4 6 8))
+      (􏿴 2 4 6 8))
 ]
 
 @section[#:tag "list-base"]{基础例程}

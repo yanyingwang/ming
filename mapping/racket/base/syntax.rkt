@@ -18,5 +18,5 @@
 >>> identifier? 名?
 
 >>> syntax->datum 文->料
->>> syntax->list 文->链
+>>> syntax->list 文->􏿴
 >>> datum->syntax 料->文

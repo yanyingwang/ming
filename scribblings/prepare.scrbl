@@ -25,7 +25,7 @@
 在终端中执行@racket[racket]命令来打开repl。然后例如，可以有以下输入输出：
 @examples[#:eval (the-eval) #:label #f
 (require ming)
-(名 某物 (链 "苹果" "香蕉" "梨"))
+(名 某物 (􏿴 "苹果" "香蕉" "梨"))
 (示 某物)
 (示 (甲 某物))
 ]
@@ -36,7 +36,7 @@
 @codeblock|{
 #!/usr/bin/env racket
 #lang ming
-(名 某物 (链 "苹果" "香蕉" "梨"))
+(名 某物 (􏿴 "苹果" "香蕉" "梨"))
 (示 某物)
 (示 (甲 某物))
 }|
@@ -64,7 +64,7 @@
 >>> first 甲 "第一个的意思，源自中国古代文字记序符号十天干。"
 >>> second 乙
 >>> third 丙 >>> fourth 丁 >>> fifth 戊   ;; 此行共三个翻译
->>> index-of 索引 (elem "从链中查出某个值的" (racket 引))   ;; “原因”可以为一个链
+>>> index-of 索引 (elem "从􏿴中查出某个值的" (racket 引))   ;; “原因”可以为一个􏿴
 }|}
 
 @margin-note{

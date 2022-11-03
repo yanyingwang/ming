@@ -3,12 +3,14 @@
 
 @(require (for-label racket ming)
            scribble/eval
-           scribble-rainbow-delimiters
            ming/scribble
            )
 @(define the-eval
          (make-eval-factory '(ming/racket/base ming/racket/string)))
 
+@(require (file "../../private/scribble-styles/css/fonts.css.rkt"))
+@css/wenquan-extend-font
+@(require scribble-rainbow-delimiters)
 @script/rainbow-delimiters*
 
 @margin-note{另可参见：@secref["zi--wen"]。}
@@ -49,8 +51,8 @@
     (行示 某诗))
 
 (连诗 "鹅鹅鹅" "曲项向天歌" "白毛浮绿水" "红掌拨清波")
-(诗->链 "鹅鹅鹅，曲项向天歌。")
-(链->诗 (链 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
+(诗->􏿴 "鹅鹅鹅，曲项向天歌。")
+(􏿴->诗 (􏿴 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
 ]
 
 @defmapping[racket/base/string]
@@ -60,12 +62,12 @@
 @defmodule[ming/racket/string]
 
 @examples[#:eval (the-eval)
-(链合成诗 (链 "鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌" "。"))
-(链合成诗 (链 "鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌" "。") "-")
-(链合成诗 (链 "鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌" "。") "")
+(􏿴合成诗 (􏿴 "鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌" "。"))
+(􏿴合成诗 (􏿴 "鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌" "。") "-")
+(􏿴合成诗 (􏿴 "鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌" "。") "")
 
-(诗碎成链 "鹅  鹅  鹅   \n \n 曲项向天歌 \n\r")
-(诗碎成链 "鹅-鹅-鹅-曲-项-向-天-歌" "-")
+(诗碎成􏿴 "鹅  鹅  鹅   \n \n 曲项向天歌 \n\r")
+(诗碎成􏿴 "鹅-鹅-鹅-曲-项-向-天-歌" "-")
 
 (诗简空 "鹅  鹅    鹅   \n \n 曲项向天歌 \n\r")
 
