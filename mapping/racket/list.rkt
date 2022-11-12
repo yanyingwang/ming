@@ -25,19 +25,19 @@
 >>> indexes-of 提* (elem "从􏿴中查出某值的全部" (racket 第) "，返回一个存着查找到的所有索引的􏿴。")
 >>> indexes-where 提*/入 (elem "从􏿴中用查出某值（传入例程比对结果）的全部" (racket 第) "，返回一个存着查找到的所有索引的􏿴。")
 
->>> take 出 "从􏿴中取出来的N个元素所组成的􏿴。" ;; 取 数取
+>>> take 留 "从􏿴中取出来的N个元素所组成的􏿴。" ;; 取 数取
 ;; >>> drop 去 (elem "去掉前N个元素之后的􏿴。") ;; 去 去头 ; 舍 is taken by list-tail in the racket/base
->>> split-at 出去 (elem "生成两个􏿴：" (racket 出) "N个元素，" (racket 去) "N个元素。") ;; 断
->>> takef 出/入 (elem "同" (racket 出) "类似，除了参数是" (racket 入))
+>>> split-at 留去 (elem "生成两个􏿴：" (racket 出) "N个元素，" (racket 去) "N个元素。") ;; 断
+>>> takef 留/入 (elem "同" (racket 出) "类似，除了参数是" (racket 入))
 >>> dropf 去/入 (elem "同" (racket 去) "类似，除了参数是" (racket 入))
->>> splitf-at 出去/入 (elem "同" (racket 出去) "类似，除了参数是" (racket 入))
+>>> splitf-at 留去/入 (elem "同" (racket 留去) "类似，除了参数是" (racket 入))
 
->>> take-right 右出 (elem "同" (racket 出) "类似，除了是从右边开始操作的。")
+>>> take-right 右留 (elem "同" (racket 出) "类似，除了是从右边开始操作的。")
 >>> drop-right 右去 (elem "同" (racket 去) "类似，除了是从右边开始操作的。")
->>> split-at-right 右出去 (elem "同" (racket 出去) "类似，除了是从右边开始操作的。")
->>> takef-right 右出/入 (elem "同" (racket 出/入) "类似，除了是从右边开始操作的。")
+>>> split-at-right 右留去 (elem "同" (racket 留去) "类似，除了是从右边开始操作的。")
+>>> takef-right 右留/入 (elem "同" (racket 留/入) "类似，除了是从右边开始操作的。")
 >>> dropf-right 右去/入 (elem "同" (racket 去/入) "类似，除了是从右边开始操作的。")
->>> splitf-at-right 右出去/入 (elem "同" (racket 出去/入) "类似，除了是从右边开始操作的。")
+>>> splitf-at-right 右留去/入 (elem "同" (racket 留去/入) "类似，除了是从右边开始操作的。")
 
 >>> list-prefix? 始􏿴于􏿴? "某􏿴是否是某另一􏿴的起始部分的。"
 ;; (take-common-prefix? 取同始)
