@@ -28,21 +28,21 @@
 }
 
 @deftogether[(
-@defproc[(留去* [某􏿴 􏿴?] [数A 数?])
+@defproc[(分* [某􏿴 􏿴?] [数A 数?])
           􏿴?]
-@defproc[(右留去* [某􏿴 􏿴?] [数A 数?])
+@defproc[(右分* [某􏿴 􏿴?] [数A 数?])
           􏿴?]
-@defproc[(留去*/入 [某􏿴 􏿴?] [数A 数?])
+@defproc[(分*/入 [某􏿴 􏿴?] [数A 数?])
           􏿴?]
-@defproc[(右留去*/入 [某􏿴 􏿴?] [数A 数?])
+@defproc[(右分*/入 [某􏿴 􏿴?] [数A 数?])
           􏿴?]
 )]{
-依次与@racket[留去]、@racket[右留去]、@racket[留去/入]、@racket[右留去/入]类似，除返回值不同外。
+依次与@racket[分]、@racket[右分]、@racket[分/入]、@racket[右分/入]类似，除返回值不同外。
 @examples[#:eval (the-eval)
-(留去* '(a b c d e f) 2)
-(右留去* '(a b c d e f) 2)
-(留去*/入 '(a b c d 1 f) 词?)
-(右留去*/入 '(a b c d 1 f) 词?)
+(分* '(a b c d e f) 2)
+(右分* '(a b c d e f) 2)
+(分*/入 '(a b c d 1 f) 词?)
+(右分*/入 '(a b c d 1 f) 词?)
 ]
 }
 

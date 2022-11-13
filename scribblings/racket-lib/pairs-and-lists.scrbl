@@ -20,18 +20,16 @@
 
 对于名语言来说，如果我们把两个数据配对（@racket[双]在一块），我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。@linebreak{}
 
-另外，如果一个“双”的阴位存的是另外一个“双”，数个双如此前后相接组成链状（末尾双的阴位置@racket[空]），这样的数据结构称之为@racket[􏿴]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
+另外，如果一个“双”的阴位存的是另外一个“双”，数个双如此前后相接组成链状（末尾双的阴位留@racket[空]），这样的数据结构称之为@racket[􏿴]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
 
 @margin-note{
 @bold{“􏿴”为新造字：}
 
 因其所代表的数据结构（list）和“双”所代表的数据结构（pair）互相之间的内生性变换转化关系而得造：
 @itemlist[
-@item{多个“双”首尾相衔接并且最后一个双的阴位置空即成“􏿴”；}
+@item{多个“双”互相衔接并且最后一个双的阴位留空即成“􏿴”；}
 @item{每一个“􏿴”同时都是“双”。}
 ]
-
-
 该字由“又”和“㐅”组成，含义：
 @itemlist[
 @item{其中半包围结构的“又”表示其是一种类似链一样的内部元素之间依次互相衔接、可以向后延绵不绝的数据结构；}
@@ -88,23 +86,25 @@
 
 @section{甲--癸、末}
 @examples[#:eval (the-eval)
+(阳 '(1 2 3 4))
 (甲 '(1 2 3 4))
 (乙 '(1 2 3 4))
 (末 '(1 2 3 4))
 (末* '(1 2 3 4))
-(去甲 '(1 2 3 4))
+(末** '(1 2 3 4))
+(阴 '(1 2 3 4))
 ]
 
-@section{第、提、修}
+@section{第、笈、修}
 @examples[#:eval (the-eval)
 (第 '(a b c d e c f) 2)
-(提 '(a b c d e c f) 'c)
-(提* '(a b c d e c f) 'c)
-(提/入 '(a b c d e c f)
+(笈 '(a b c d e c f) 'c) ;; 笈 扱
+(笈* '(a b c d e c f) 'c)
+(笈/入 '(a b c d e c f)
          (入 (x)
              (或 (同? x 'b)
                  (同? x 'c))))
-(提*/入 '(a b c d e c f)
+(笈*/入 '(a b c d e c f)
          (入 (x)
              (或 (同? x 'b)
                  (同? x 'c))))
@@ -113,11 +113,11 @@
 (修/入 '(10 15 20 25) 1 加一)
 ]
 
-@section{出、去}
+@section{留、去}
 @examples[#:eval (the-eval)
-(出 '(a b c d e f g) 2)
+(留 '(a b c d e f g) 2)
 (去 '(a b c d e f g) 2)
-(出去 '(a b c d e f g) 2)
+(分 '(a b c d e f g) 2)
 ]
 
 @section{间、扁、洗、重}
