@@ -4,7 +4,8 @@
      font-weight: bold; 
      font-stretch: normal; 
      /* src: url("https://raw.githubusercontent.com/yanyingwang/favfonts/master/WenQuanWeiMiHeiExtend/WenQuanYiMicroHeiExtend-Regular.ttf") format("truetype"); */
-     src: url("https://raw.githubusercontent.com/yanyingwang/favfonts/master/WenQuanWeiMiHeiExtend/WenQuanYiMicroHeiExtend-Regular.woff2") format("woff2");
+     /* src: url("https://raw.githubusercontent.com/yanyingwang/favfonts/master/WenQuanWeiMiHeiExtend/WenQuanYiMicroHeiExtend-Regular.woff2") format("woff2"); */
+     src: url("WenQuanYiMicroHeiExtend-Regular.woff2") format("woff2");
 }
 
 
