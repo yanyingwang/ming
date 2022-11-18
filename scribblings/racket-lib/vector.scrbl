@@ -16,21 +16,17 @@
 @title[#:tag "vector"]{􏿲}
 
 @section{􏿲}
-“􏿲”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "vector"]）
+“􏿲”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "vector"]），和“􏿴”所代表的数据结构类似，但显著的一个不同是访问和更新其元素值的时间复杂度是@hyperlink["https://zh.wikipedia.org/wiki/%E5%B8%B8%E6%95%B8%E6%99%82%E9%96%93" "常数时间"]。
 
 
 @margin-note{
 @bold{“􏿲”为新造字：}
-
-因其所代表的数据结构（vector）和“􏿴”所代表的数据结构类似，但显著的一个不同是访问和更新其元素值的时间复杂度是@hyperlink["https://zh.wikipedia.org/wiki/%E5%B8%B8%E6%95%B8%E6%99%82%E9%96%93" "常数时间"]。
-
-该字中的“矢”是“矢量”（vector）的意思。
+该字中的“矢”是“矢量”（vector）的意思，半包围结构表示其也是一个链状结构。
 }
 
 
 
 @examples[#:eval (the-eval)
-
 ]
 
 
