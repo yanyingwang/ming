@@ -15,25 +15,43 @@
 
 @title[#:tag "pairs-and-lists"]{双和􏿴}
 
+
+@section{例程命名规则}
+除@secref["naming-rules"]中的总规外，另有：
+@itemlist[
+@item{凡是以“􏿴”字结尾的，均表示输出结果是􏿴。此如：@racket[􏿴]、@racket[􏿴~]、@racket[序􏿴]、@racket[复􏿴]等。}
+@item{使用单字所命名的例程，第一位的参数通常是“􏿴”数据，修饰例程的参数在其后，此如@racket[第]、@racket[笈]、@racket[去]、@racket[留]、@racket[分]、@racket[间]、@racket[理]等。}
+@item{与单字的相反，使用多字所命名的例程，“􏿴”数据作为参数通常位居后位，此如：@racket[查找]、@racket[筛选]等。}
+]
+
+
 @section{双、阴阳、􏿴}
-“双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构。@linebreak{}
+“双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构。对于名语言来说，如果我们把两个数据配成对（@racket[双]在一块），我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。@linebreak{}
 
-对于名语言来说，如果我们把两个数据配对（@racket[双]在一块），我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。@linebreak{}
+另外，如果一个“双”的阴位存的是另外一个“双”，数个双如此前后相连成链状：
+@itemlist[
+@item{末尾双的阴位留@racket[空]，这样的数据结构称之为@racket[􏿴]（@racket[list]）；}
+@item{末尾双的阴位不留@racket[空]，这样的数据结构称之为@racket[􏿫]（@racket[list*]）。}
+]
 
-另外，如果一个“双”的阴位存的是另外一个“双”，数个双如此前后相接组成链状（末尾双的阴位留@racket[空]），这样的数据结构称之为@racket[􏿴]（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "list"]）。
 
 @margin-note{
-@bold{“􏿴”为新造字：}
-
+@bold{“@racket[􏿴]”为新造字：}
+@itemlist[
+@item{
 因其所代表的数据结构（list）和“双”所代表的数据结构（pair）互相之间的内生性变换转化关系而得造：
 @itemlist[
-@item{多个“双”互相衔接并且最后一个双的阴位留空即成“􏿴”；}
+@item{多个“双”互相衔接并且最后一个双的阴位留空即成“􏿴”（不留空是为@racket[􏿫]）；}
 @item{每一个“􏿴”同时都是“双”。}
 ]
+}
+@item{
 该字由“又”和“㐅”组成，含义：
 @itemlist[
 @item{其中半包围结构的“又”表示其是一种类似链一样的内部元素之间依次互相衔接、可以向后延绵不绝的数据结构；}
-@item{其中被包围的居于之后的“㐅”表示本数据结构的结尾元素总是一个空值。}
+@item{其中被包围的居于之后的“㐅”表示本数据结构的结尾元素总是一个空值（另有@racket[􏿫]所构造出来的数据结构结尾无空）。}
+]
+}
 ]
 }
 
@@ -45,10 +63,9 @@
 
 (双 1 (双 2 (双 3 4)))
 (双 1 (双 2 (双 3 (双 4 空))))
-(同? (双 1 (双 2 (双 3 (双 4 空))))
-     (􏿴 1 2 3 4))
 (􏿴 1 2 3 4)
-(􏿴~ 1 2 3 4)
+(双 1 (双 2 (双 3 (双 4 5))))
+(􏿫 1 2 3 4 5)
 
 (阳 '(1 2 3 4))
 (阴 '(1 2 3 4))
@@ -58,17 +75,6 @@
 (阳 '((1 1.1) 2 3 4))
 (阳之阳 '((1 1.1) 2 3 4))
 (阳之阴阳 '((1 1.1) 2 3 4))
-
-(序􏿴 5 加一)
-(复􏿴 5 'foo)
-
-(连 '(1 2) '(3 4) '(5 6) '(7 8))
-]
-
-@section{例程命名规则}
-除@secref["naming-rules"]中的总规外，另有：
-@itemlist[
-@item{凡是以@racketfont{􏿴}字结尾的，均表示输出结果是􏿴。此如：@racket[􏿴]、@racket[􏿴~]、@racket[序􏿴]、@racket[复􏿴]等。}
 ]
 
 @; @section[#:tag "list-searching"]{第提、索探、筛消、理、各巡}
@@ -84,21 +90,55 @@
 @; ]
 
 
-@section{甲--癸、末}
+@section{序、复}
 @examples[#:eval (the-eval)
-(阳 '(1 2 3 4))
+(序 5 复值)
+(序 5 加一)
+(复 5 'foo)
+(序 5 (入 (n) (复 n 'foo)))
+]
+
+@section{贯、贯又}
+@examples[#:eval (the-eval)
+(贯 '(1 2) '(3 4) '(5 6) '(7 8)) @; 贯又
+(贯又 '(1 2) '(3 4) '(5 6) '(7 8))
+(贯又 '(1 2) '(3 4) '(5 6) '((7) 8))
+(贯又 '(1 2) '(3 4) '(5 6) '((7) (8)))
+(贯又 '(1 2) '(3 4) '(5 6) '((7 8)))
+]
+
+@section{甲——癸，末、􏿦}
+使用中国古代文字记序符号“@hyperlink["https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%B9%B2" "十天干"]”对􏿴中相应位置的元素进行提取。
+
+@margin-note{
+@bold{“@racket[􏿦]”为新造字：}
+@itemlist[
+@item{因其入参和操作入参的处理行为与“@racket[末]”类似而得偏旁“末”；}
+@item{又因其返回结果的数据结构与“@racket[双]”类似而得偏旁“又”。}
+]
+}
+@examples[#:eval (the-eval)
 (甲 '(1 2 3 4))
 (乙 '(1 2 3 4))
+(丙 '(1 2 3 4))
 (末 '(1 2 3 4))
-(末* '(1 2 3 4))
-(末** '(1 2 3 4))
-(阴 '(1 2 3 4))
+(􏿦 '(1 2 3 4))
+@; (首 '(1 2 3 4))
+@; (身 '(1 2 3 4))
+@; (尾 '(1 2 3 4))
 ]
 
 @section{第、笈、修}
+@margin-note{
+@bold{“@racket[笈]”为古活字：}
+@itemlist[
+@item{原义不存，因其形和部首含义和“@racket[第]”对仗呼应，故此借之为“@racket[笈]”所使用。}
+]
+}
+
 @examples[#:eval (the-eval)
 (第 '(a b c d e c f) 2)
-(笈 '(a b c d e c f) 'c) ;; 笈 扱
+(笈 '(a b c d e c f) 'c)
 (笈* '(a b c d e c f) 'c)
 (笈/入 '(a b c d e c f)
          (入 (x)
@@ -113,21 +153,53 @@
 (修/入 '(10 15 20 25) 1 加一)
 ]
 
-@section{留、去}
+@section{佐、佑，􏿣、􏿢，􏿡、􏿠}
+@margin-note{
+@itemlist[
+@item{
+@bold{“@racket[佐]”、“@racket[佑]”为古活字：}
+@itemlist[
+@item{原义不存，字中的偏旁“亻”在此有“例程输出结果的数据类型和其入参的数据类型相同”之意。}
+]
+}
+
+@item{
+@bold{“@racket[􏿣]”、“@racket[􏿢]”为新造字：}
+@itemlist[
+@item{分别仿照“@racket[佐]”和“@racket[佑]”而造，通过对原字的偏旁“亻”加“丶”而形成“㐅”，表示“去除”之意。}
+]
+}
+
+@item{
+@bold{“@racket[􏿡]”、“@racket[􏿠]”为新造字：}
+@itemlist[
+@item{分别仿照“@racket[􏿣]”和“@racket[􏿢]”而造，通过在原字右下角处添加“八”以表示“分”的意思。}
+]
+}
+
+]
+}
+
 @examples[#:eval (the-eval)
-(留 '(a b c d e f g) 2)
-(去 '(a b c d e f g) 2)
-(分 '(a b c d e f g) 2)
+(佐 '(a b c d e f g) 2)
+(佑 '(a b c d e f g) 2)
+
+(􏿣 '(a b c d e f g) 2)
+(􏿢 '(a b c d e f g) 2)
+
+(􏿡 '(a b c d e f g) 2)
+(􏿠 '(a b c d e f g) 2)
 ]
 
-@section{间、扁、洗、重}
+
+@section{间、平、洗、重}
 @examples[#:eval (the-eval)
 (始􏿴于􏿴? '(a j) '(a j d k))
 (始􏿴于􏿴? '(a f j) '(a j d k))
 
-(间插 '(a b c d) '和)
-(扁平 '((a b) (c d) (e f)))
-(洗乱 '(a b c d e c f))
+(间 '(a b c d) '和)
+(平 '((a b) (c d) (e f)))
+(洗 '(a b c d e c f))
 
 (查重 '(a b c d e c f))
 (去重 '(a b c d e c f))
@@ -157,11 +229,11 @@
 (筛除 正数? '(1 2 -3 4))
 (筛分 正数? '(1 2 -3 4))
 
-(消 'c '(a b c d e c f))
-(消/入 偶数? '(1 2 3 4 5 6 7 8))
+(消减 'c '(a b c d e c f))
+(消减/入 偶数? '(1 2 3 4 5 6 7 8))
 @; (删* '(c) '(a b c d e c f))
-(消*/以􏿴 '(c e) '(a b c d e c f))
-(消*/入 偶数? '(1 2 3 4 5 6 7 8))
+(消尽/以􏿴 '(c e) '(a b c d e c f))
+(消尽/入 偶数? '(1 2 3 4 5 6 7 8))
 
 (计数 正数? '(1 2 -3 4))
 ]

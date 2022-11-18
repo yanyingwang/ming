@@ -21,6 +21,7 @@
 @itemlist[
 @item{凡是例程名以@litchar{*}结尾的，表示加强力度。如@racket[提*]较@racket[提]会返回更多的结果；又如@racket[消*/入]较@racket[消/入]会移除更多的元素。}
 @item{凡是例程名以@litchar{~}结尾的，表示减轻力度。如@racket[􏿴~]较@racket[􏿴]返回的结果尾部无多余空；又如@racket[连~]较@racket[连]返回的结果尾部也无多余空。}
+@item{比原先单字例程名，加入“亻”的，暗示输出结果的数据结构和输入的数据结构为同一类型。}
 @item{凡是例程名字中包含@litchar{/入}的，均表示例程的参数并非是常规的数据，而是匿名函数（@racket[入]）。}
 @item{凡是例程名字中包含@litchar{/成}的，均表示例程的输出结果是某一类型。比如@litchar{/成􏿴}表示此例程返回的结果是一个@racket[􏿴?]；类似的还有@litchar{/成诗}（@racket[诗?]）、@litchar{/成词}（@racket[词?]）等等。}
 @item{凡是例程名字中包含@litchar{/以}，均是在提示例程的参数构造方式。比如：@racket[消*/以􏿴]表示其例程的参数是@racket[􏿴?]；又如@racket[诗修!/以它段]较@racket[诗修!]而言，参数多出了三个（这三个分别为另外一个诗，和对另外一个诗取@racket[诗段]的参数）。}
@@ -38,6 +39,7 @@
          (list @bold{英语单词（English Word）}  @bold{中文字符（Chinese Character）}   @bold{数据结构示例/（Showing）} @bold{数据结构创建示例/（Constructor）})
          (list "pair"   "双"          @racket['(a . b)]       @racket[(双 'a 'b)])
          (list "list"  "􏿴"           @racket['(a b c)]       @racket[(􏿴 a b c)])
+         (list "list"  "􏿫"           @racket['(a b . c)]       @racket[(􏿫 a b c)])
          (list "circular-list"  "􏿮"   @code|{'􏿸(a b c)}|       @racket[(􏿮 'a 'b 'c)])
          (list "vector" "􏿲"           @code|{'􏿷(a b c)}| @racket[(􏿲 'a 'b 'c)])
          (list "----------" "---" "----------------------------" "---------------------------------------")
@@ -52,7 +54,6 @@
          @; (list "vector-length" "􏿺" "使用示例："  @code|{(􏿺 '􏿷(a b c d e)) ==> 5}|)
          @; (list "string-length" "𬤏" "使用示例："  @code|{(𬤏 "abcde") ==> 5}|)
          )]
-
 
 
 @subsection{造字规则}
