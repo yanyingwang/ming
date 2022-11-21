@@ -19,9 +19,9 @@
 @section{例程命名规则}
 除@secref["naming-rules"]中的总规外，另有：
 @itemlist[
-@item{凡是以“􏿴”字结尾的，均表示输出结果是􏿴。此如：@racket[􏿴]、@racket[􏿴~]、@racket[序􏿴]、@racket[复􏿴]等。}
-@item{使用单字所命名的例程，第一位的参数通常是“􏿴”数据，修饰例程的参数在其后，此如@racket[第]、@racket[笈]、@racket[去]、@racket[留]、@racket[分]、@racket[间]、@racket[理]等。}
-@item{与单字的相反，使用多字所命名的例程，“􏿴”数据作为参数通常位居后位，此如：@racket[查找]、@racket[筛选]等。}
+@; @item{凡是以“􏿴”字结尾的，均表示输出结果是􏿴。此如：@racket[􏿴]、@racket[􏿴~]、@racket[序􏿴]、@racket[复􏿴]等。}
+@item{例程名采用单个字的，“􏿴”类型的数据作为入参位于首位，此如@racket[第]、@racket[笈]、@racket[佐]、@racket[佑]、@racket[间]、@racket[理]等。}
+@item{例程名采用多个字，“􏿴”类型的数据作为入参通常位居末位，此如：@racket[查找]、@racket[筛选]等。}
 ]
 
 
@@ -57,7 +57,6 @@
 }
 ]
 }
-
 @examples[#:eval (the-eval)
 (双 1 2)
 
@@ -80,6 +79,65 @@
 (阳之阳 '((1 1.1) 2 3 4))
 (阳之阴阳 '((1 1.1) 2 3 4))
 ]
+@section{序、复}
+用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据：
+@examples[#:eval (the-eval)
+(序 5 𡖻)
+(序 5 加一)
+(复 5 'foo)
+(序 5 (入 (n) (复 n 'foo)))
+]
+
+
+@section{甲——癸，末、􏿦}
+中国古代文字记序符号“@hyperlink["https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%B9%B2" "十天干"]”，用于对@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据中特定位置之元素进行提取并返回：
+@margin-note{
+@bold{“@racket[􏿦]”为新造字}
+@itemlist[
+@item{因字所代表之例程的入参和操作入参的处理行为与“@racket[末]”类似而得偏旁“末”；}
+@item{又因其返回结果的数据之结构与“@racket[双]”的返回类似而得偏旁“又”。}
+]
+}
+@examples[#:eval (the-eval)
+(甲 '(1 2 3 4))
+(乙 '(1 2 3 4))
+(丙 '(1 2 3 4))
+(末 '(1 2 3 4))
+(􏿦 '(1 2 3 4))
+@; (首 '(1 2 3 4))
+@; (身 '(1 2 3 4))
+@; (尾 '(1 2 3 4))
+]
+
+
+
+@; @section{攸}
+@; @margin-note{
+@; @bold{“@racket[攸]”为活古字}
+@; @itemlist[
+@; @item{“亻”表示入参和出参的数据之内容相似且类型相同（均为@elemref["what-is-􏿴􏿫" "􏿴"]）； }
+@; @item{“攵”本意是“用手敲打敦促使其改变”，在此引申为“修改”之意；}
+@; @item{“亻“和“攵”中间的“丨”表示只修改了@elemref["what-is-􏿴􏿫" "􏿴"]中的一项元素；}
+@; @item{另外，也可以认为该字分别取“修”字左部的偏旁（亻丨）和“改”字右部偏旁（攵）组成，也即含有“修改”的意思。}
+@; ]
+@; }
+@; @examples[#:eval (the-eval)
+@; (攸 '(10 15 20 25) 1 1555)
+@; (攸/入 '(10 15 20 25) 1 加一)
+@; ]
+@section{􏿛}
+@margin-note{
+@bold{“@racket[􏿛]”为新造字}
+@itemlist[
+@item{右边的“􏿴”偏旁表示和“@racket[􏿴]”的出参数据类型是相同的（即@elemref["what-is-􏿴􏿫" "􏿴"]）；}
+@item{左边“亻”偏旁表示入参和出参的数据之内容相似且类型相同（均为@elemref["what-is-􏿴􏿫" "􏿴"]）； }
+@item{“亻”偏旁和“􏿴”偏旁之间的“丨”表示入参数据和出参数据之内容的不同之处只有一项。}
+]
+}
+@examples[#:eval (the-eval)
+(􏿛 '(10 15 20 25) 1 1555)
+(􏿛/入 '(10 15 20 25) 1 加一)
+]
 
 @section{􏿝、􏿜}
 用于对@elemref["what-is-􏿴􏿫" "􏿴"]类结构数据进行处理并输出相同于@racket[􏿴]、@racket[􏿫]例程输出数据之结构的数据：
@@ -90,7 +148,6 @@
 @item{左上起笔处的偏旁“毌”，表示“贯穿”之意（“毌”是“贯”的古字）：因此意思即为把数个@elemref["what-is-􏿴􏿫" "􏿴"]贯穿起来组成一个新的@elemref["what-is-􏿴􏿫" "􏿴"]并返回之。}
 ]
 }
-
 @examples[#:eval (the-eval)
 (􏿴 1 2 3 4)
 (􏿝 '(1) '(2) '(3) '(4))
@@ -113,52 +170,21 @@
 @; ]
 
 
-@section{序、复}
-用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据：
-@examples[#:eval (the-eval)
-(序 5 𡖻)
-(序 5 加一)
-(复 5 'foo)
-(序 5 (入 (n) (复 n 'foo)))
-]
-
-
-@section{甲——癸，末、􏿦}
-中国古代文字记序符号“@hyperlink["https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%B9%B2" "十天干"]”，用于对@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据中特定位置之元素进行提取并返回：
-
-@margin-note{
-@bold{“@racket[􏿦]”为新造字}
-@itemlist[
-@item{因字所代表之例程的入参和操作入参的处理行为与“@racket[末]”类似而得偏旁“末”；}
-@item{又因其返回结果的数据之结构与“@racket[双]”的返回类似而得偏旁“又”。}
-]
-}
-@examples[#:eval (the-eval)
-(甲 '(1 2 3 4))
-(乙 '(1 2 3 4))
-(丙 '(1 2 3 4))
-(末 '(1 2 3 4))
-(􏿦 '(1 2 3 4))
-@; (首 '(1 2 3 4))
-@; (身 '(1 2 3 4))
-@; (尾 '(1 2 3 4))
-]
-
 @section{第，笈、􏿚、􏿘、􏿙}
 @margin-note{
-@bold{“@racket[笈]”为古活字}
+@bold{“@racket[笈]”为活古字}
 @itemlist[
 @item{原义不存，因其形和“@racket[第]”能对仗呼应，故此借之为“@racket[笈]”例程所使用。}
 ]
 
 @bold{“@racket[􏿚]”为新造字}
 @itemlist[
-@item{由“@racket[笈]”字添加“多”构成，表示@racket[笈]取出@elemref["what-is-􏿴􏿫" "􏿴"]中满足条件的所有值（返回的结果是一个复值）。}
+@item{由“@racket[笈]”字添加“多”构成，表示@racket[笈]取出@elemref["what-is-􏿴􏿫" "􏿴"]中满足条件的所有值（返回的结果是一个@racket[𡖻]类型的数据）。}
 ]
 
 @bold{“@racket[􏿘]”、“@racket[􏿙]”为新造字}
 @itemlist[
-@item{在@racket[笈]、@racket{􏿚}的基础上仿照“􏿴”字的外形构造，表示其出参的数据结构是@elemref["what-is-􏿴􏿫" "􏿴"]类型。}
+@item{两字分别在“@racket[笈]”、“@racket[􏿚]”字的基础上另外仿照“􏿴”字的外形而构造，表示其出参的数据结构与@racket[􏿴]的出参相同。}
 ]
 }
 
@@ -177,11 +203,11 @@
                  (同? x 'c))))
 ]
 
-@section{佐、佑，􏿣、􏿢，􏿡、􏿠，攸}
+@section{佐、佑，􏿣、􏿢，􏿡、􏿠，佐?}
 @margin-note{
 @itemlist[
 @item{
-@bold{“@racket[佐]”、“@racket[佑]”为古活字}
+@bold{“@racket[佐]”、“@racket[佑]”为活古字}
 @itemlist[
 @item{原义不存，字中的偏旁“亻”在此有“例程输出结果的数据类型和其入参的数据类型相同”之意。}
 ]
@@ -203,16 +229,6 @@
 ]
 }
 
-@margin-note{
-@bold{“@racket[攸]”为古活字}
-@itemlist[
-@item{“亻”表示入参和出参的数据之内容相似且类型相同（均为@elemref["what-is-􏿴􏿫" "􏿴"]）； }
-@item{“攵”本意是“用手敲打敦促使其改变”，在此引申为“修改”之意；}
-@item{“亻“和“攵”中间的“丨”表示只修改了@elemref["what-is-􏿴􏿫" "􏿴"]中的一项元素；}
-@item{另外，也可以认为该字分别取“修”字左部的偏旁（亻丨）和“改”字右部偏旁（攵）组成，也即含有“修改”的意思。}
-]
-}
-
 @examples[#:eval (the-eval)
 (佐 '(a b c d e f g) 2)
 (佑 '(a b c d e f g) 2)
@@ -223,16 +239,41 @@
 (􏿡 '(a b c d e f g) 2)
 (􏿠 '(a b c d e f g) 2)
 
-(攸 '(10 15 20 25) 1 1555)
-(攸/入 '(10 15 20 25) 1 加一)
+(佐? '(a b) '(a b c d e f g))
+(佐? '(a b z) '(a b c d e f g))
 ]
 
+@section{􏿖、􏿕、􏿔}
+@margin-note{
+@bold{“@racket[􏿖]”为新造字}
+@itemlist[
+@item{上面的“佐”字表示其例程的行为以及入参出参的数据类型与@racket[佐]类似。}
+@item{下面的“同”字表示返回的是入参中两个数据中元素相同的那些数据。}
+]
+
+@bold{“@racket[􏿕]”为新造字}
+@itemlist[
+@item{
+在@racket[􏿖]字的中部添加了“八”（“分”的简写），表示输出结果是@racket[𡖻]。
+}
+]
+
+@bold{“@racket[􏿔]”为新造字}
+@itemlist[
+@item{
+与“@racket[􏿕]”类似，但不同之处在于“@racket[􏿣]”，因此是有“移除相同”之意。
+}
+]
+}
+
+@examples[#:eval (the-eval)
+(􏿖 '(a b x y z) '(a b c d e f g))
+(􏿕 '(a b x y z) '(a b c d e f g))
+(􏿔 '(a b x y z) '(a b c d e f g))
+]
 
 @section{间、平、洗、重}
 @examples[#:eval (the-eval)
-(始􏿴于􏿴? '(a j) '(a j d k))
-(始􏿴于􏿴? '(a f j) '(a j d k))
-
 (间 '(a b c d) '和)
 (平 '((a b) (c d) (e f)))
 (洗 '(a b c d e c f))

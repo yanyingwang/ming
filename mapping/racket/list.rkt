@@ -17,15 +17,15 @@
 ;; >>> rest 末** "􏿴除去甲以外剩下的􏿴。" ;; 甲外 剩余 去甲 舍甲
 
 >>> make-list 复 "构造复􏿴（􏿴内各个元素相同的􏿴即为复􏿴，类比昆虫的“复眼”一词取名）"
->>> list-set 攸 (elem "修改􏿴" (racket 第) "N处的值为一个新的值。") ;; 修 更 改 新 肖
->>> list-update 攸/入 (elem "修改􏿴" (racket 第) "N处的值为一个例程输出的新值。") ;; 引以改
+>>> list-set 􏿛 (elem "修改􏿴" (racket 第) "N处的值为一个新的值。") ;; 修 更 改 新 肖 攸
+>>> list-update 􏿛/入 (elem "修改􏿴" (racket 第) "N处的值为一个例程输出的新值。") ;; 攸
 
 >>> index-of 笈 (elem "从􏿴中查出某个值的" (racket 第)) ;; 引 导
 >>> index-where 笈/入 (elem "从􏿴中查出某个值（传入例程比对结果）的" (racket 第)) ;; 引 导  函 =》以例
 >>> indexes-of 􏿙 (elem "从􏿴中查出某值的全部" (racket 第) "，返回一个存着查找到的所有索引的􏿴。")
 >>> indexes-where 􏿙/入 (elem "从􏿴中用查出某值（传入例程比对结果）的全部" (racket 第) "，返回一个存着查找到的所有索引的􏿴。")
 
->>> take 佐 "从􏿴中的左边依次的取出来的N个元素并组成􏿴。"
+>>> take 佐 "从􏿴中左起依次取出来N个元素并组成新􏿴返回。"
 >>> takef 佐/入 (elem "同" (racket 佐) "类似，不过参数是" (racket 入))
 
 >>> drop 􏿣 "从􏿴中的左边依次的去掉N个元素，剩余元素组成􏿴。"
@@ -44,13 +44,10 @@
 >>> splitf-at-right 􏿠/入 (elem "同" (racket 􏿠) "类似，不过参数是" (racket 入))
 
 
->>> list-prefix? 始􏿴于􏿴? "某􏿴是否是某另一􏿴的起始部分的。"
-;; (take-common-prefix? 取同始)
-;; (drop-common-prefix? 弃同始)
-;; >>> list-prefix? 佐? "某􏿴是否是某另一􏿴的起始部分的。"
-;; >>> take-common-prefix 佐共
-;; >>> drop-common-prefix 􏿣共
-;; >>> split-common-prefix 􏿡共
+>>> list-prefix? 佐? (elem "某􏿴是否是某另一􏿴的" (racket 佐))
+>>> take-common-prefix 􏿖 "返回两个􏿴左起的相同元素组成的􏿴"
+>>> drop-common-prefix 􏿕 "返回𡖻：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴"
+>>> split-common-prefix 􏿔 "返回𡖻：移除两个􏿴左起的相同元素后剩余的两个􏿴"
 
 >>> append* 􏿜 (elem "把多􏿴贯穿相连组成一个" (racket 􏿫) "并返回之")
 
