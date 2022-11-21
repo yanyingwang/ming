@@ -43,9 +43,15 @@
 >>> split-at-right 􏿠 (elem "同" (racket 􏿡) "类似，除了是从右边开始操作的。")
 >>> splitf-at-right 􏿠/入 (elem "同" (racket 􏿠) "类似，不过参数是" (racket 入))
 
+
 >>> list-prefix? 始􏿴于􏿴? "某􏿴是否是某另一􏿴的起始部分的。"
 ;; (take-common-prefix? 取同始)
 ;; (drop-common-prefix? 弃同始)
+;; >>> list-prefix? 佐? "某􏿴是否是某另一􏿴的起始部分的。"
+;; >>> take-common-prefix 佐共
+;; >>> drop-common-prefix 􏿣共
+;; >>> split-common-prefix 􏿡共
+
 >>> append* 􏿜 (elem "把多􏿴贯穿相连组成一个" (racket 􏿫) "并返回之")
 
 >>> add-between 间 "􏿴的每两个元素之间插入另一元素。" ;; 隔

@@ -116,7 +116,7 @@
 @section{序、复}
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据：
 @examples[#:eval (the-eval)
-(序 5 徝)
+(序 5 𡖻)
 (序 5 加一)
 (复 5 'foo)
 (序 5 (入 (n) (复 n 'foo)))
