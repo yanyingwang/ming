@@ -19,7 +19,7 @@
 >>> displayln 行陈
 
 >>> values 徝 "复值的意思" ;;  値 徝 徝 𡖻
->>> call-with-values 徝 "用continuation生成复值，并作为参数给于P返回结果。"
+>>> call-with-values 徝予 "用continuation生成复值，并作为参数给予某例程"
 
 >>> for 遍 ;; 每 为 历、遍历 对于
 >>> for/list 遍/􏿴
