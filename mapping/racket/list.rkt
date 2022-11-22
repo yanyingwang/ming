@@ -27,27 +27,25 @@
 
 >>> take 佐 "从􏿴中左起依次取出来N个元素并组成新􏿴返回。"
 >>> takef 佐/入 (elem "同" (racket 佐) "类似，不过参数是" (racket 入))
-
->>> drop 􏿣 "从􏿴中的左边依次的去掉N个元素，剩余元素组成􏿴。"
->>> dropf 􏿣/入 (elem "同" (racket 􏿣) "类似，不过参数是" (racket 入))
-
->>> split-at 􏿡 (elem "与" (racket 佐) "类似，不过输出结果另包含余下的部分组成的􏿴（输出结果是一个复值）")
->>> splitf-at 􏿡/入 (elem "同" (racket 􏿡) "类似，不过参数是" (racket 入))
-
 >>> take-right 佑 (elem "同" (racket 佐) "类似，不过是从右边开始操作的。")
 >>> takef-right 佑/入 (elem "同" (racket 佑) "类似，不过参数是" (racket 入))
 
->>> drop-right 􏿢 (elem "同" (racket 􏿣) "类似，不过是从右边开始操作的。")
->>> dropf-right 􏿢/入 (elem "同" (racket 􏿢) "类似，不过参数是" (racket 入))
+>>> drop 􏿐 "从􏿴中的左边依次的去掉N个元素，剩余元素组成􏿴。"
+>>> dropf 􏿐/入 (elem "同" (racket 􏿐) "类似，不过参数是" (racket 入))
+>>> drop-right 􏿏 (elem "同" (racket 􏿐) "类似，不过是从右边开始操作的。")
+>>> dropf-right 􏿏/入 (elem "同" (racket 􏿏) "类似，不过参数是" (racket 入))
 
->>> split-at-right 􏿠 (elem "同" (racket 􏿡) "类似，除了是从右边开始操作的。")
->>> splitf-at-right 􏿠/入 (elem "同" (racket 􏿠) "类似，不过参数是" (racket 入))
+
+>>> split-at 􏿆 (elem "与" (racket 佐) "类似，不过输出结果另包含余下的部分组成的􏿴（输出结果是一个复值）")
+>>> splitf-at 􏿆/入 (elem "同" (racket 􏿆) "类似，不过参数是" (racket 入))
+>>> split-at-right 􏿅 (elem "同" (racket 􏿆) "类似，除了是从右边开始操作的。")
+>>> splitf-at-right 􏿅/入 (elem "同" (racket 􏿅) "类似，不过参数是" (racket 入))
 
 
 >>> list-prefix? 佐? (elem "某􏿴是否是某另一􏿴的" (racket 佐))
->>> take-common-prefix 􏿖 "返回两个􏿴左起的相同元素组成的􏿴"
->>> drop-common-prefix 􏿕 "返回徝：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴"
->>> split-common-prefix 􏿔 "返回徝：移除两个􏿴左起的相同元素后剩余的两个􏿴"
+>>> take-common-prefix 佐共同 "返回两个􏿴左起的相同元素组成的􏿴"
+>>> drop-common-prefix 􏿎共同 "返回徝：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴"
+>>> split-common-prefix 􏿆共同 "返回徝：移除两个􏿴左起的相同元素后剩余的两个􏿴"
 
 >>> append* 􏿜 (elem "把多􏿴贯穿相连组成一个" (racket 􏿫) "并返回之")
 

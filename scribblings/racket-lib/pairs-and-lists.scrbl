@@ -200,7 +200,7 @@
                  (同? x 'c))))
 ]
 
-@section{佐、佑，􏿣、􏿢，􏿡、􏿠，佐?}
+@section{佐、佑，􏿐、􏿏，􏿆、􏿅，佐?}
 @margin-note{
 @itemlist[
 @item{
@@ -211,16 +211,18 @@
 }
 
 @item{
-@bold{“@racket[􏿣]”、“@racket[􏿢]”为新造字}
+@bold{“@racket[􏿐]”、“@racket[􏿏]”为新造字}
 @itemlist[
-@item{分别仿照“@racket[佐]”和“@racket[佑]”而造，通过对原字的偏旁“亻”加“丶”而形成“㐅”，表示“去除”之意。}
+@item{分别仿照“@racket[佐]”和“@racket[佑]”而造，通过对原字加“㐅”，表示“去除”之意。}
 ]
 }
 
 @item{
-@bold{“@racket[􏿡]”、“@racket[􏿠]”为新造字}
+@bold{“@racket[􏿆]”、“@racket[􏿅]”为新造字}
+分别仿照“@racket[佐]”和“@racket[佑]”而造：
 @itemlist[
-@item{分别仿照“@racket[􏿣]”和“@racket[􏿢]”而造，通过在原字右下角处添加“八”以表示“分”的意思。}
+@item{在原字右下角处添加“分”表示“切分”之意思；}
+@item{“彳”表示例程的出参数据之结构是@racket[徝]类型。}
 ]
 }
 ]
@@ -230,43 +232,20 @@
 (佐 '(a b c d e f g) 2)
 (佑 '(a b c d e f g) 2)
 
-(􏿣 '(a b c d e f g) 2)
-(􏿢 '(a b c d e f g) 2)
+(􏿐 '(a b c d e f g) 2)
+(􏿏 '(a b c d e f g) 2)
 
-(􏿡 '(a b c d e f g) 2)
-(􏿠 '(a b c d e f g) 2)
+(佐/入 '(a b 1 c d 2 e f g) (入 (e) (同? e 'b)))
+(􏿐/入 '(a b c d e f g) (入 (e) (同? e 'b)))
+
+(􏿆 '(a b c d e f g) 2)
+(􏿅 '(a b c d e f g) 2)
 
 (佐? '(a b) '(a b c d e f g))
 (佐? '(a b z) '(a b c d e f g))
-]
-
-@section{􏿖、􏿕、􏿔}
-@margin-note{
-@bold{“@racket[􏿖]”为新造字}
-@itemlist[
-@item{上面的“佐”字表示其例程的行为以及入参出参的数据类型与@racket[佐]类似。}
-@item{下面的“同”字表示返回的是入参中两个数据中元素相同的那些数据。}
-]
-
-@bold{“@racket[􏿕]”为新造字}
-@itemlist[
-@item{
-在@racket[􏿖]字的中部添加了“八”（“分”的简写），表示输出结果是@racket[徝]。
-}
-]
-
-@bold{“@racket[􏿔]”为新造字}
-@itemlist[
-@item{
-与“@racket[􏿕]”类似，但不同之处在于“@racket[􏿣]”，因此是有“移除相同”之意。
-}
-]
-}
-
-@examples[#:eval (the-eval)
-(􏿖 '(a b x y z) '(a b c d e f g))
-(􏿕 '(a b x y z) '(a b c d e f g))
-(􏿔 '(a b x y z) '(a b c d e f g))
+(佐共同 '(a b x y z) '(a b c d e f g))
+(􏿎共同 '(a b x y z) '(a b c d e f g))
+(􏿆共同 '(a b x y z) '(a b c d e f g))
 ]
 
 @section{间、平、洗、重}
