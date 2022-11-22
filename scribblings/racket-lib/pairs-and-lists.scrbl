@@ -20,8 +20,11 @@
 除@secref["naming-rules"]中的总规外，另有：
 @itemlist[
 @; @item{凡是以“􏿴”字结尾的，均表示输出结果是􏿴。此如：@racket[􏿴]、@racket[􏿴~]、@racket[序􏿴]、@racket[复􏿴]等。}
-@item{例程名采用单个字的，“􏿴”类型的数据作为入参位于首位，此如@racket[第]、@racket[笈]、@racket[佐]、@racket[佑]、@racket[间]、@racket[理]等。}
-@item{例程名采用多个字，“􏿴”类型的数据作为入参通常位居末位，此如：@racket[查找]、@racket[筛选]等。}
+@item{含有“亻”偏旁的例程，表示其出参数据之结构是@elemref["what-is-􏿴􏿫" "􏿴"]类型。此如：@racket[􏿛]、@racket[􏿉]、@racket[佐]、@racket[佑]，@racket[􏿐]、@racket[􏿏]、@racket[􏿄]等。}
+@item{含有“彳”偏旁的例程，表示其出参数据之结构是@racket[徝]类型。此如：@racket[􏿆]、@racket[􏿅]等。}
+@item{例程名采用单字的，并且在构字外形上是类似“􏿴”字这样的半包围结构的，表示其出参数据之结构是@elemref["what-is-􏿴􏿫" "􏿴"]类型。此如：@racket[􏿫]、@racket[􏿛]、@racket[􏿝]、@racket[􏿜]等。}
+@item{例程名采用单个字的，@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据作为入参位于首位，此如@racket[第]、@racket[笈]、@racket[佐]、@racket[佑]、@racket[间]、@racket[理]等。}
+@item{例程名采用多个字的，@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据作为入参通常位居末位，此如：@racket[计数]、@racket[查找]、@racket[筛选]等。}
 ]
 
 
@@ -249,13 +252,21 @@
 ]
 
 @section{间、平、洗、重}
+@margin-note{
+@bold{“@racket[􏿄]”为新造字}
+@itemlist[
+@item{“亻”表示出参数据之结构和入参相同（均为􏿴）；}
+@item{“㐅”表示移除􏿴中“@racket[重]”复元素。}
+]
+}
+
 @examples[#:eval (the-eval)
 (间 '(a b c d) '和)
 (平 '((a b) (c d) (e f)))
-(洗 '(a b c d e c f))
+(洗 '(a b c d e d c b a))
 
-(查重 '(a b c d e c f))
-(去重 '(a b c d e c f))
+(重 '(a b c d e d c b a))
+(􏿄 '(a b c d e d c b a))
 ]
 
 @section{理、段}
@@ -264,8 +275,6 @@
 (理 '(21 3 888 666 55 77 1000) >)
 (理 '("cat" "dog" "chicken" "duck" "fox") 诗<?)
 (理 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
-
-
 
 (一段数 10 20)
 (一段数/间隔 10 20 2)

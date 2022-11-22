@@ -51,11 +51,11 @@
 
 >>> add-between 间 "􏿴的每两个元素之间插入另一元素。" ;; 隔
 >>> flatten 平
->>> check-duplicates 查重
->>> remove-duplicates 去重
->>> count 计数
+>>> check-duplicates 重 "从􏿴中查找出第一个重复的元素并返回之"
+>>> remove-duplicates 􏿄 "去除􏿴中重复的元素并返回去除后的􏿴"
 >>> shuffle 洗
 
+>>> count 计数
 >>> partition 筛分 (elem "符合条件的元素选出为􏿴，和剩下的􏿴，共计返回两个值。另见：" (racket 筛选)) ;; 筛开 筛分 筛离
 >>> filter-not 筛除
 
