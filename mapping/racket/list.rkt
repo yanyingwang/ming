@@ -22,8 +22,8 @@
 
 >>> index-of 笈 (elem "从􏿴中查出某个值的" (racket 第)) ;; 引 导
 >>> index-where 笈/入 (elem "从􏿴中查出某个值（传入例程比对结果）的" (racket 第)) ;; 引 导  函 =》以例
->>> indexes-of 􏿙 (elem "从􏿴中查出某值的全部" (racket 第) "，返回一个存着查找到的所有索引的􏿴。")
->>> indexes-where 􏿙/入 (elem "从􏿴中用查出某值（传入例程比对结果）的全部" (racket 第) "，返回一个存着查找到的所有索引的􏿴。")
+>>> indexes-of 􏿉 (elem "从􏿴中查出某值的全部" (racket 第) "，返回一个存着查找到的所有索引的􏿴。")
+>>> indexes-where 􏿉/入 (elem "从􏿴中用查出某值（传入例程比对结果）的全部" (racket 第) "，返回一个存着查找到的所有索引的􏿴。")
 
 >>> take 佐 "从􏿴中左起依次取出来N个元素并组成新􏿴返回。"
 >>> takef 佐/入 (elem "同" (racket 佐) "类似，不过参数是" (racket 入))

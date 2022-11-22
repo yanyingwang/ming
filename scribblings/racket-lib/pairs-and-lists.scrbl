@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(require (for-label racket ming)
+@(require (for-label racket ming ming/list)
            scribble/eval
            ming/scribble
            )
@@ -89,26 +89,6 @@
 ]
 
 
-@section{甲——癸，末、􏿦}
-中国古代文字记序符号“@hyperlink["https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%B9%B2" "十天干"]”，用于对@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据中特定位置之元素进行提取并返回：
-@margin-note{
-@bold{“@racket[􏿦]”为新造字}
-@itemlist[
-@item{因字所代表之例程的入参和操作入参的处理行为与“@racket[末]”类似而得偏旁“末”；}
-@item{又因其返回结果的数据之结构与“@racket[双]”的返回类似而得偏旁“又”。}
-]
-}
-@examples[#:eval (the-eval)
-(甲 '(1 2 3 4))
-(乙 '(1 2 3 4))
-(丙 '(1 2 3 4))
-(末 '(1 2 3 4))
-(􏿦 '(1 2 3 4))
-@; (首 '(1 2 3 4))
-@; (身 '(1 2 3 4))
-@; (尾 '(1 2 3 4))
-]
-
 
 
 @; @section{攸}
@@ -169,23 +149,40 @@
 @; @item{@racket[轮]：􏿴中元素作为参数依次轮换进入执行例程。}
 @; ]
 
+@section{甲——癸，末、􏿦}
+中国古代文字记序符号“@hyperlink["https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%B9%B2" "十天干"]”，用于对@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据中特定位置之元素进行提取并返回：
+@margin-note{
+@bold{“@racket[􏿦]”为新造字}
+@itemlist[
+@item{因字所代表之例程的入参和操作入参的处理行为与“@racket[末]”类似而得偏旁“末”；}
+@item{又因其返回结果的数据之结构与“@racket[双]”的返回类似而得偏旁“又”。}
+]
+}
+@examples[#:eval (the-eval)
+(甲 '(1 2 3 4))
+(乙 '(1 2 3 4))
+(丙 '(1 2 3 4))
+(末 '(1 2 3 4))
+(􏿦 '(1 2 3 4))
+@; (首 '(1 2 3 4))
+@; (身 '(1 2 3 4))
+@; (尾 '(1 2 3 4))
+]
 
-@section{第，笈、􏿚、􏿘、􏿙}
+@section{第，笈、􏿉}
+用于索引􏿴中的元素和查找􏿴中某元素的索引（另见：@racket[􏿊]、@racket[􏿚]）。
+
 @margin-note{
 @bold{“@racket[笈]”为活古字}
 @itemlist[
-@item{原义不存，因其形和“@racket[第]”能对仗呼应，故此借之为“@racket[笈]”例程所使用。}
+@item{原义不存，因其形和“@racket[第]”字能对仗呼应，故此使用之。}
 ]
 
-@bold{“@racket[􏿚]”为新造字}
+@bold{“@racket[􏿉]”为新造字}
 @itemlist[
-@item{由“@racket[笈]”字添加“多”构成，表示@racket[笈]取出@elemref["what-is-􏿴􏿫" "􏿴"]中满足条件的所有值（返回的结果是一个@racket[徝]类型的数据）。}
+@item{在“@racket[􏿚]”字的基础上添加了左边的偏旁“亻”，表示例程的出参数据类型和入参的相同(即均为@elemref["what-is-􏿴􏿫" "􏿴"])；}
 ]
 
-@bold{“@racket[􏿘]”、“@racket[􏿙]”为新造字}
-@itemlist[
-@item{两字分别在“@racket[笈]”、“@racket[􏿚]”字的基础上另外仿照“􏿴”字的外形而构造，表示其出参的数据结构与@racket[􏿴]的出参相同。}
-]
 }
 
 @examples[#:eval (the-eval)
@@ -196,8 +193,8 @@
              (或 (同? x 'b)
                  (同? x 'c))))
 
-(􏿙 '(a b c d e c f) 'c)
-(􏿙/入 '(a b c d e c f)
+(􏿉 '(a b c d e c f) 'c)
+(􏿉/入 '(a b c d e c f)
          (入 (x)
              (或 (同? x 'b)
                  (同? x 'c))))
