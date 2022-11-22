@@ -82,7 +82,7 @@
 @section{序、复}
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据：
 @examples[#:eval (the-eval)
-(序 5 𡖻)
+(序 5 徝)
 (序 5 加一)
 (复 5 'foo)
 (序 5 (入 (n) (复 n 'foo)))
@@ -179,7 +179,7 @@
 
 @bold{“@racket[􏿚]”为新造字}
 @itemlist[
-@item{由“@racket[笈]”字添加“多”构成，表示@racket[笈]取出@elemref["what-is-􏿴􏿫" "􏿴"]中满足条件的所有值（返回的结果是一个@racket[𡖻]类型的数据）。}
+@item{由“@racket[笈]”字添加“多”构成，表示@racket[笈]取出@elemref["what-is-􏿴􏿫" "􏿴"]中满足条件的所有值（返回的结果是一个@racket[徝]类型的数据）。}
 ]
 
 @bold{“@racket[􏿘]”、“@racket[􏿙]”为新造字}
@@ -254,7 +254,7 @@
 @bold{“@racket[􏿕]”为新造字}
 @itemlist[
 @item{
-在@racket[􏿖]字的中部添加了“八”（“分”的简写），表示输出结果是@racket[𡖻]。
+在@racket[􏿖]字的中部添加了“八”（“分”的简写），表示输出结果是@racket[徝]。
 }
 ]
 

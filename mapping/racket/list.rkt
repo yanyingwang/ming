@@ -46,8 +46,8 @@
 
 >>> list-prefix? 佐? (elem "某􏿴是否是某另一􏿴的" (racket 佐))
 >>> take-common-prefix 􏿖 "返回两个􏿴左起的相同元素组成的􏿴"
->>> drop-common-prefix 􏿕 "返回𡖻：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴"
->>> split-common-prefix 􏿔 "返回𡖻：移除两个􏿴左起的相同元素后剩余的两个􏿴"
+>>> drop-common-prefix 􏿕 "返回徝：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴"
+>>> split-common-prefix 􏿔 "返回徝：移除两个􏿴左起的相同元素后剩余的两个􏿴"
 
 >>> append* 􏿜 (elem "把多􏿴贯穿相连组成一个" (racket 􏿫) "并返回之")
 
