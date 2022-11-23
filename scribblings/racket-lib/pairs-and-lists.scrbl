@@ -246,35 +246,68 @@
 
 (佐? '(a b) '(a b c d e f g))
 (佐? '(a b z) '(a b c d e f g))
-(佐共同 '(a b x y z) '(a b c d e f g))
-(􏿎共同 '(a b x y z) '(a b c d e f g))
-(􏿆共同 '(a b x y z) '(a b c d e f g))
+(佐/共同 '(a b x y z) '(a b c d e f g))
+(􏿎/共同 '(a b x y z) '(a b c d e f g))
+(􏿆/共同 '(a b x y z) '(a b c d e f g))
 ]
 
-@section{间、平、洗、重}
+@section{􏿃，伻，𠉗，重、􏿄}
+@margin-note{
+@bold{“@racket[􏿃]”为活用字}
+@itemlist[
+@item{“掺”表示把某一值掺入到􏿴中；}
+@item{“亻”表示出参数据之结构和入参相同（均为􏿴）。}
+]
+}
+
+@margin-note{
+@bold{“@racket[伻]”为新造字}
+@itemlist[
+@item{“平”字表意，意为“将􏿴中元素做扁平化处理”；}
+@item{“亻”偏旁表示出参数据之结构和入参相同（均为􏿴）；}
+]
+}
+
+@margin-note{
+@bold{“@racket[𠉗]”为活古字}
+@itemlist[
+@item{“乱”字表意，意为“将􏿴中元素做乱序处理”；}
+@item{“亻”偏旁表示出参数据之结构和入参相同（均为􏿴）；}
+]
+}
+
+@margin-note{
+@bold{“@racket[􏿄]”为新造字}
+@itemlist[
+@item{“㐅”表示移除􏿴中“@racket[重]”复的元素。}
+@item{“亻”表示出参数据之结构和入参相同（均为􏿴）；}
+]
+}
+
+
 @margin-note{
 @bold{“@racket[􏿄]”为新造字}
 @itemlist[
 @item{“亻”表示出参数据之结构和入参相同（均为􏿴）；}
-@item{“㐅”表示移除􏿴中“@racket[重]”复元素。}
+@item{“㐅”表示移除􏿴中“@racket[重]”复的元素。}
 ]
 }
 
 @examples[#:eval (the-eval)
-(间 '(a b c d) '和)
-(平 '((a b) (c d) (e f)))
-(洗 '(a b c d e d c b a))
+(􏿃 '(a b c d) '和)
+(伻 '((a b) (c d) (e f)))
+(𠉗 '(a b c d e d c b a))
 
 (重 '(a b c d e d c b a))
 (􏿄 '(a b c d e d c b a))
 ]
 
-@section{理、段}
+@section{倒、𠍣、段}
 @examples[#:eval (the-eval)
-(理 '(21 3 888 666 55 77 1000) <)
-(理 '(21 3 888 666 55 77 1000) >)
-(理 '("cat" "dog" "chicken" "duck" "fox") 诗<?)
-(理 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
+(𠍣 '(21 3 888 666 55 77 1000) <)
+(𠍣 '(21 3 888 666 55 77 1000) >)
+(𠍣 '("cat" "dog" "chicken" "duck" "fox") 诗<?)
+(𠍣 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
 
 (一段数 10 20)
 (一段数/间隔 10 20 2)

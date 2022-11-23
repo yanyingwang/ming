@@ -43,19 +43,19 @@
 
 
 >>> list-prefix? 佐? (elem "某􏿴是否是某另一􏿴的" (racket 佐))
->>> take-common-prefix 佐共同 "返回两个􏿴左起的相同元素组成的􏿴"
->>> drop-common-prefix 􏿎共同 "返回徝：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴"
->>> split-common-prefix 􏿆共同 "返回徝：移除两个􏿴左起的相同元素后剩余的两个􏿴"
+>>> take-common-prefix 佐/共同 "返回两个􏿴左起的相同元素组成的􏿴"
+>>> drop-common-prefix 􏿎/共同 "返回徝：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴"
+>>> split-common-prefix 􏿆/共同 "返回徝：移除两个􏿴左起的相同元素后剩余的两个􏿴"
 
 >>> append* 􏿜 (elem "把多􏿴贯穿相连组成一个" (racket 􏿫) "并返回之")
 
->>> add-between 间 "􏿴的每两个元素之间插入另一元素。" ;; 隔
->>> flatten 平
+>>> add-between 􏿃 "􏿴的每两个元素之间插入另一元素。" ;; 侠 夹 间 插 搀 掺
+>>> flatten 伻 ;; 平
 >>> check-duplicates 重 "从􏿴中查找出第一个重复的元素并返回之"
 >>> remove-duplicates 􏿄 "去除􏿴中重复的元素并返回去除后的􏿴"
->>> shuffle 洗
+>>> shuffle 𠉗 ;;洗
 
->>> count 计数
+>>> count 计度/入
 >>> partition 筛分 (elem "符合条件的元素选出为􏿴，和剩下的􏿴，共计返回两个值。另见：" (racket 筛选)) ;; 筛开 筛分 筛离
 >>> filter-not 筛除
 
