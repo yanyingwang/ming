@@ -1,15 +1,15 @@
 #lang racket/base
 
-(provide 􏿊 􏿚 段)
+(provide 段) ; 􏿊 􏿚
 ;; (provide 筛分* 分* 右分* 分*/入 右分*/入 段)
 (require "racket/base.rkt" "racket/list.rkt")
 
 
-(名 (􏿊 L0 V0)
-    (􏿴 (入徝参予 (入 () (徝 L0 V0)) 笈)))
+;; (名 (􏿊 L0 V0)
+;;     (􏿴 (入徝参予 (入 () (徝 L0 V0)) 笈)))
 
-(名 (􏿚 LST0 V0)
-    (apply 徝 (􏿉 LST0 V0)))
+;; (名 (􏿚 LST0 V0)
+;;     (apply 徝 (􏿉 LST0 V0)))
 
 ;; (名 (筛分* 例程A 某􏿴)
 ;;     (复值参与 (入 () (筛分 例程A 某􏿴))
