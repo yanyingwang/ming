@@ -19,12 +19,12 @@
 @section{例程命名规则}
 除@secref["naming-rules"]中的总规外，另有：
 @itemlist[
-@item{@bold{含有上偏旁@litchar{㐅}的}，是为“删除”之意。 此如：@racket[􏾹]、@racket[􏾸]、@racket[􏿄]、@racket[􏾼]等。}
-@item{@bold{含有左偏旁@litchar{亻}的}，表示出参之数据结构和进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]），并且出参之数据内容和进参类似。 此如：@racket[攸]、@racket[􏿊]、@racket[侠]、@racket[伻]、@racket[􏾷]、@racket[􏿄]、@racket[倒]、@racket[𠍣]等。}
-@item{@bold{含有右偏旁@litchar{阝}的}，表示出参之数据结构和进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]），并且出参之数据内容和是进参的一部分。 此如：@racket[􏾺]、@racket[𬩽]等。}
-@item{@bold{含有偏旁@litchar{辶}的}，表示“遍历”的意思，且其出参数据之结构与进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]）。 此如：@racket[􏾽]、@racket[𮞑]等。}
-@item{@bold{以@litchar{/分}字结尾的}，是为“切分”之意，且输出结果是复值。 此如：@racket[􏾺/分]、@racket[左䢼/分]、@racket[􏾽/分]等。}
-@item{@bold{以@litchar{*}结尾的}，表示加强力度。如@racket[消*]、@racket[删*]、@racket[􏿴/数段*]等。}
+@item{@bold{含有上偏旁@litchar{㐅}的}：是为“删除”之意。 此如@racket[􏾹]、@racket[􏾸]、@racket[􏿄]、@racket[􏾼]等。}
+@item{@bold{含有左偏旁@litchar{亻}的}：是为“相似者”之意；表示出参之数据结构和进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]），并且出参之数据内容和进参类似。 此如@racket[攸]、@racket[􏿊]、@racket[侠]、@racket[伻]、@racket[􏾷]、@racket[􏿄]、@racket[倒]、@racket[𠍣]等。}
+@item{@bold{含有右偏旁@litchar{阝}的}：是为“部分”之意；表示出参之数据结构和进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]），并且出参之数据内容是进参的一部分。 此如@racket[􏾺]、@racket[𬩽]等。}
+@item{@bold{含有偏旁@litchar{辶}的}：表示“遍历”的意思，且其出参数据之结构与进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]）。 此如@racket[􏾽]、@racket[𮞑]等。}
+@item{@bold{以@litchar{/分}字结尾的}：是为“切分”之意，且输出结果是复值。 此如@racket[􏾺/分]、@racket[左䢼/分]、@racket[􏾽/分]等。}
+@item{@bold{以@litchar{*}结尾的}：表示加强力度。此如@racket[消*]、@racket[删*]、@racket[􏿴/数段*]等。}
 
 @; @item{凡是以“􏿴”字结尾的，均表示输出结果是􏿴。此如：@racket[􏿴]、@racket[􏿴~]、@racket[序􏿴]、@racket[复􏿴]等。}
 @; @item{含有“彳”偏旁的例程，表示其出参数据之结构是@racket[徝]类型。此如：@racket[􏿆]、@racket[􏿅]等。}
@@ -35,17 +35,6 @@
 
 
 @section[#:tag "pair-car-cdr-list-list*"]{双，阴、阳，􏿴、􏿫}
-“双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构：
-
-对于名语言来说，如果我们把两个数据配成对（@racket[双]在一块），我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。
-
-进而，@elemtag["what-is-􏿴􏿫" "如果一个“双”的阴位存的是另外一个“双”，数个双如此前后相接成链状："]
-@itemlist[
-@item{末尾双的阴位留@racket[空]，这样的数据结构称之为@racket[􏿴]（@racket[list]）；}
-@item{末尾双的阴位不留@racket[空]，这样的数据结构称之为@racket[􏿫]（@racket[list*]）。}
-]
-
-
 @margin-note{
 @bold{“@racket[􏿴]”、“@racket[􏿫]”为@elemtag["the-char-creating-of-􏿴􏿫" "新造字"]}
 @itemlist[
@@ -66,6 +55,17 @@
 }
 ]
 }
+
+“双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构：
+
+对于名语言来说，如果我们把两个数据配成对（@racket[双]在一块），我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。
+
+进而，@elemtag["what-is-􏿴􏿫" "如果一个“双”的阴位存的是另外一个“双”，数个双如此前后相接成链状："]
+@itemlist[
+@item{末尾双的阴位留@racket[空]，这样的数据结构称之为@racket[􏿴]（@racket[list]）；}
+@item{末尾双的阴位不留@racket[空]，这样的数据结构称之为@racket[􏿫]（@racket[list*]）。}
+]
+
 @examples[#:eval (the-eval)
 (双 1 2)
 
@@ -184,7 +184,7 @@
 ]
 
 
-@section{第，笈、􏿊}
+@section{第，笈、􏿊、􏿊/入}
 @; 用于索引􏿴中的元素和查找􏿴中某元素的索引（另见：@racket[􏿊]、@racket[􏿚]）。
 
 @margin-note{
@@ -286,7 +286,7 @@
 @; }
 @bold{“@racket[侠]”为活用字}
 @itemlist[
-@item{@litchar{夹}表示把某一值夹杂到􏿴的元素中；}
+@item{@litchar{夹}表意，意为“把某一值夹杂到􏿴中”；}
 ]
 }
 
