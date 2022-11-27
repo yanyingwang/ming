@@ -29,11 +29,11 @@
 >>> take 􏾺 "从􏿴中左起依次取出来N个元素并组成新􏿴返回。"
 >>> take-right 𨚞 "与上类似，不过是从右边开始操作的。"
 
->>> takef 􏾺/入 (elem "同" (racket 􏾺) "类似，不过参数是" (racket 入))
->>> takef-right 𨚞/入 "与上类似，不过是从右边开始操作的。"
-
 >>> drop 􏾹 "从􏿴中的左边依次的去掉N个元素，剩余元素组成􏿴。"
 >>> drop-right 􏾸 "与上类似，不过是从右边开始操作的。"
+
+>>> takef 􏾺/入 (elem "同" (racket 􏾺) "类似，不过参数是" (racket 入))
+>>> takef-right 𨚞/入 "与上类似，不过是从右边开始操作的。"
 
 >>> dropf 􏾹/入 (elem "同" (racket 􏾹) "类似，不过参数是" (racket 入))
 >>> dropf-right 􏾸/入 "与上类似，不过是从右边开始操作的。"
@@ -44,10 +44,10 @@
 >>> splitf-at 􏾺/入/分 (elem "同" (racket 􏾺/分) "类似，不过参数是" (racket 入))
 >>> splitf-at-right 𨚞/入/分 "与上类似，不过是从右边开始操作的。"
 
->>> list-prefix? 􏾺于? (elem "某􏿴是否是某另一􏿴的" (racket 佐))
->>> take-common-prefix 􏾺共同 "返回两个􏿴左起的相同元素组成的􏿴" ;;􏾺共项 􏾺共相 共同/􏾺
->>> drop-common-prefix 􏾺共异 "返回徝：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴" ;; ;;􏾺异项 􏾺异相 共异/􏾺
->>> split-common-prefix 􏾺共同/分 "返回徝：移除两个􏿴左起的相同元素后剩余的两个􏿴"
+>>> list-prefix? 􏾺于? (elem "某􏿴是否是某另一􏿴的" (racket 􏾺))
+>>> take-common-prefix 左䢼 "返回两个􏿴左起的相同元素组成的􏿴" ;;􏾺共项 􏾺共相 共同/􏾺
+>>> split-common-prefix 左䢼/分 "返回徝：移除两个􏿴左起的相同元素后剩余的两个􏿴"
+>>> drop-common-prefix 左􏾶/分 "返回徝：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴" ;; ;;􏾺异项 􏾺异相 共异/􏾺
 
 
 >>> append* 􏿜 (elem "把多􏿴贯穿相连组成一个" (racket 􏿫) "并返回之")
@@ -57,8 +57,6 @@
 >>> shuffle 􏾷 ;;洗 混 淆 纷 紊
 >>> check-duplicates 重 "从􏿴中查找出第一个重复的元素并返回之"
 >>> remove-duplicates 􏿄 "去除􏿴中重复的元素并返回去除后的􏿴" ; 去偅
-
-
 
 >>> filter-not 􏾼 ;; 筛除 ; 淘 汰 剔 􏾽余
 >>> partition 􏾽/分 (elem "符合条件的元素选出为􏿴，和剩下的􏿴，共计返回两个值。另见：" (racket 筛选)) ;; 筛开 筛分 筛离 筛分
