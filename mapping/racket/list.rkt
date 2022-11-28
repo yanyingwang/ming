@@ -38,16 +38,16 @@
 >>> dropf 􏾹/入 (elem "同" (racket 􏾹) "类似，不过参数是" (racket 入))
 >>> dropf-right 􏾸/入 "与上类似，不过是从右边开始操作的。"
 
->>> split-at 􏾺/分 (elem "与" (racket 􏾺) "类似，不过输出结果另包含余下的部分组成的􏿴（输出结果是一个复值）")
->>> split-at-right 𨚞/分 "与上类似，不过是从右边开始操作的。"
+>>> split-at 􏾺分 (elem "与" (racket 􏾺) "类似，不过输出结果另包含余下的部分组成的􏿴（输出结果是一个复值）")
+>>> split-at-right 𨚞分 "与上类似，不过是从右边开始操作的。"
 
->>> splitf-at 􏾺/入/分 (elem "同" (racket 􏾺/分) "类似，不过参数是" (racket 入))
->>> splitf-at-right 𨚞/入/分 "与上类似，不过是从右边开始操作的。"
+>>> splitf-at 􏾺分/入 (elem "同" (racket 􏾺/分) "类似，不过参数是" (racket 入))
+>>> splitf-at-right 𨚞分/入 "与上类似，不过是从右边开始操作的。"
 
 >>> list-prefix? 􏾺于? (elem "某􏿴是否是某另一􏿴的" (racket 􏾺))
 >>> take-common-prefix 左䢼 "返回两个􏿴左起的相同元素组成的􏿴" ;;􏾺共项 􏾺共相 共同/􏾺
->>> split-common-prefix 左䢼/分 "返回徝：移除两个􏿴左起的相同元素后剩余的两个􏿴"
->>> drop-common-prefix 左􏾶/分 "返回徝：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴" ;; ;;􏾺异项 􏾺异相 共异/􏾺
+>>> split-common-prefix 左䢼分 "返回徝：移除两个􏿴左起的相同元素后剩余的两个􏿴"
+>>> drop-common-prefix 左􏾶分 "返回徝：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴" ;; ;;􏾺异项 􏾺异相 共异/􏾺
 
 
 >>> append* 􏿜 (elem "把多􏿴贯穿相连组成一个" (racket 􏿫) "并返回之")
@@ -59,21 +59,25 @@
 >>> remove-duplicates 􏿄 "去除􏿴中重复的元素并返回去除后的􏿴" ; 去偅
 
 >>> filter-not 􏾼 ;; 筛除 ; 淘 汰 剔 􏾽余
->>> partition 􏾽/分 (elem "符合条件的元素选出为􏿴，和剩下的􏿴，共计返回两个值。另见：" (racket 筛选)) ;; 筛开 筛分 筛离 筛分
+>>> partition 􏾽分 (elem "符合条件的元素选出为􏿴，和剩下的􏿴，共计返回两个值。另见：" (racket 筛选)) ;; 筛开 筛分 筛离 筛分
 >>> count 计 ;;度/入
 
->>> filter-map 􏾽则各
->>> append-map 𮞑而连~
+>>> filter-map 𮞑/而􏾼 "(􏾼 (入 (x) x) (𮞑 proc '(...)))"
+>>> append-map 𮞑/而􏿝 "(􏿝 (𮞑 proc '(...)))"
 
 >>> range 􏿴/数段 "A到B之间的一段数组成的􏿴（包括A不包括B）"
 >>> inclusive-range 􏿴/数段* "A到B之间的一段数组成的􏿴（包括A也包括B）"
 
->>> combinations 互组相合
->>> in-combinations 序列组合
->>> argmin 最小者/入
->>> argmax 最大者/入
+>>> combinations 􏿴/组合
+>>> permutations 􏿴/排列组合
+>>> in-combinations 􏿴序列/组合
+>>> in-permutations 􏿴序列/排列组合
+
+>>> argmax 𮞑/而最大数 "(最大数 (𮞑 proc '(...)))"
+>>> argmin 𮞑/而最小数 "(最小数 (𮞑 proc '(...)))"
+
 >>> group-by 分组
 >>> cartesian-product 笛卡尔值
 
->>> remf 消 (elem "以例程做对比来消除某一符合条件元素。" )
->>> remf* 消* (elem "以例程做对比来消除所有符合条件元素。" )
+>>> remf 删/入 (elem "以例程做对比来消除某一符合条件元素。" ) ;消 迭
+>>> remf* 删*/入 (elem "以例程做对比来消除所有符合条件元素。" ) ; 消* 迭

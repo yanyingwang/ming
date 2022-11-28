@@ -23,8 +23,19 @@
 @item{@bold{含有左偏旁@litchar{亻}的}：是为“相似者”之意；表示出参之数据结构和进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]），并且出参之数据内容和进参类似。 此如@racket[攸]、@racket[􏿊]、@racket[侠]、@racket[伻]、@racket[􏾷]、@racket[􏿄]、@racket[倒]、@racket[𠍣]等。}
 @item{@bold{含有右偏旁@litchar{阝}的}：是为“部分”之意；表示出参之数据结构和进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]），并且出参之数据内容是进参的一部分。 此如@racket[􏾺]、@racket[𬩽]等。}
 @item{@bold{含有偏旁@litchar{辶}的}：表示“遍历”的意思，且其出参数据之结构与进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]）。 此如@racket[􏾽]、@racket[𮞑]等。}
-@item{@bold{以@litchar{/分}字结尾的}：是为“切分”之意，且输出结果是复值。 此如@racket[􏾺/分]、@racket[左䢼/分]、@racket[􏾽/分]等。}
-@item{@bold{以@litchar{*}结尾的}：表示加强力度。此如@racket[消*]、@racket[删*]、@racket[􏿴/数段*]等。}
+@item{@bold{以@litchar{分}字结尾的}：是为“切分”之意，且输出结果是复值。 此如@racket[􏾺分]、@racket[左䢼分]、@racket[􏾽分]等。}
+@item{@bold{以@litchar{*}结尾的}：表示加强力度。此如@racket[删*]、@racket[􏿴/数段*]等。}
+@item{
+除以下子条目外，@bold{含@litchar{/...}的}：是为修饰进参，且并不影响出参数据结构，即是说：出参数据结构由@litchar{/...}前面的决定。此如@racket[􏿴/数段]的出参数据之结构和@racket[􏿴]一样；又如@racket[􏿴/组合]和出参数据之结构和@racket[􏿴]是一样的。
+@itemlist[
+@item{@bold{含@litchar{/入}的}：表示进参并非常规数据，而是函数。此如@racket[𬩽/入]、@racket[攸/入]、@racket[笈/入]、@racket[􏾺/入]等。}
+@item{@bold{含@litchar{/而...}的}：意为“进而”的意思，不影响进参，影响出参，出参数据由@litchar{而}之后的字决定。此如@racket[𮞑/而􏾼]、@racket[𮞑/而􏿝]、@racket[𮞑/而最小数]、@racket[𮞑/而最大数]等。}
+]
+}
+
+
+
+
 
 @; @item{凡是以“􏿴”字结尾的，均表示输出结果是􏿴。此如：@racket[􏿴]、@racket[􏿴~]、@racket[序􏿴]、@racket[复􏿴]等。}
 @; @item{含有“彳”偏旁的例程，表示其出参数据之结构是@racket[徝]类型。此如：@racket[􏿆]、@racket[􏿅]等。}
@@ -235,7 +246,7 @@
 @;; }
 @; ]
 @; }
-@section{􏾺、𨚞，􏾹、􏾸，􏾺/分、𨚞/分，􏾺/入、𨚞/入，􏾺于?}
+@section{􏾺、𨚞，􏾹、􏾸，􏾺分、𨚞分，􏾺/入、𨚞/入，􏾺于?}
 @margin-note{
 @bold{“@racket[􏾺]”、“@racket[𨚞]”为新造字}
 }
@@ -251,18 +262,18 @@
 (􏾹 '(a b c d e f g) 2)
 (􏾸 '(a b c d e f g) 2)
 
-(􏾺/分 '(a b c d e f g) 2)
-(𨚞/分 '(a b c d e f g) 2)
+(􏾺分 '(a b c d e f g) 2)
+(𨚞分 '(a b c d e f g) 2)
 
-(􏾺/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 整数?)
-(𨚞/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 整数?)
+(􏾺/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 数?)
+(𨚞/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 数?)
 
 (􏾺于? '(a b) '(a b c d e f g))
 (􏾺于? '(a b z) '(a b c d e f g))
 ]
 
 
-@section{左䢼，左䢼/分、左􏾶/分}
+@section{左䢼，左䢼分、左􏾶分}
 @margin-note{
 @bold{“@racket[䢼]”、“@racket[􏾶]”为新造字}
 @itemlist[
@@ -271,8 +282,8 @@
 }
 @examples[#:eval (the-eval)
 (左䢼 '(a b x y z) '(a b c d e f g))
-(左䢼/分 '(a b x y z) '(a b c d e f g))
-(左􏾶/分 '(a b x y z) '(a b c d e f g))
+(左䢼分 '(a b x y z) '(a b c d e f g))
+(左􏾶分 '(a b x y z) '(a b c d e f g))
 ]
 
 
@@ -338,52 +349,59 @@
 ]
 
 
-@section{𬩽、􏿁，查、􏾽、􏾼、􏾽/分}
+@section{𬩽、􏿁，𬩽/入、􏿁/入，删、删*、删/入、删*/入，计}
 @margin-note{
 @bold{“@racket[􏿁]”为新造字}
 @itemlist[
 @item{@litchar{日}偏旁表示“取@racket[阳]”之意。}
 ]
 }
-@margin-note{@bold{“@racket[􏾽] @racket[􏾼]为新造字}}
-
 @examples[#:eval (the-eval)
 (𬩽 'c '(a b c d e f))
-(􏿁 'c '((a b) (c d) (e f))) ;;
+(􏿁 'c '((a b) (c d) (e f)))
+(𬩽/入 数? '(a b 1 c d 3 e 9 f))
+(􏿁/入 数? '((a b) (1 d) (j k) (8 f))) ;;
 
-(查 正数? '(1 2 -3 4))
-(􏾽 正数? '(1 2 -3 4))
-(􏾼 正数? '(1 2 -3 4))
-(􏾽/分 正数? '(1 2 -3 4)) @; 􏾽离 would still be list
-]
-
-@section{删，消，计}
-@examples[#:eval (the-eval)
 (删 'c '(a b c d e c f))
 (删* '(c e) '(a b c d e c f))
-(消 正数? '(1 2 -3 4))
-(消* 正数? '(1 2 -3 4))
+(删/入 正数? '(1 2 -3 4))
+(删*/入 正数? '(1 2 -3 4))
+
 (计 正数? '(1 2 -3 4))
 ]
 
+@section{查、􏾽、􏾼、􏾽分}
+@margin-note{@bold{“@racket[􏾽]”、“@racket[􏾼]”为新造字}}
+@examples[#:eval (the-eval)
+(查 正数? '(1 2 -3 4))
+(􏾽 正数? '(1 2 -3 4))
+(􏾼 正数? '(1 2 -3 4))
+(􏾽分 正数? '(1 2 -3 4)) @; 􏾽离 would still be list
+]
 
-@section{𮞑、巡}
+@section{各，𮞑，𮞑全、𮞑有，𮞑/参予、𮞑/倒参予，𮞑/而􏾼、𮞑/而􏿝}
 @margin-note{@bold{“@racket[𮞑]”为新造字}}
 @examples[#:eval (the-eval)
+(各 (入 (i)
+        (行示 i))
+    (􏿴 2 4 6 8))
+
 (𮞑 加一 '(1 2 3 4))
 (𮞑 + '(1 2 3 4) '(100 200 300 400))
 
-(𮞑都为 正数? '(1 2 -3 4))
-(𮞑中有 负数? '(1 2 -3 4))
-(𮞑左参与 双 '() '(1 2 -3 4)) ;; 各左参
-(𮞑右参与 双 '() '(1 2 -3 4))
+(𮞑全 正数? '(1 2 -3 4))
+(𮞑有 负数? '(1 2 -3 4))
 
-(􏾽则𮞑 (入 (x) (且 (正数? x) (加一 x))) '(1 3 -4 5))
-(𮞑而连 vector->list '(#(1) #(2 3) #(4)))
+(𮞑/参予 双 '() '(1 2 -3 4))
+(𮞑/倒参予 双 '() '(1 2 -3 4))
 
-(巡 (入 (i)
-          (行示 i))
-      (􏿴 2 4 6 8))
+(𮞑/而􏾼 (入 (x) (且 (正数? x) (加一 x))) '(1 3 -4 5))
+(𮞑/而􏿝 vector->list '(#(1) #(2 3) #(4)))
+
+(𮞑/而最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(𮞑/而最小数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(𮞑/而最大数 阳 '((3 pears) (1 banana) (2 apples)))
+(𮞑/而最小数 阳 '((3 pears) (1 banana) (2 apples)))
 ]
 
 @section[#:tag "list-base"]{基础例程}
