@@ -73,8 +73,8 @@
 >>> in-combinations 􏿴序列/组合
 >>> in-permutations 􏿴序列/排列组合
 
->>> argmax 查/𮞑而最大数 "返回𮞑proc后是最大数的那个元素"
->>> argmin 查/𮞑而最小数 "返回𮞑proc后是最小数的那个元素"
+>>> argmax 𮞑而最大数 "返回𮞑proc后是最大数的那个元素"
+>>> argmin 𮞑而最小数 "返回𮞑proc后是最小数的那个元素"
 
 >>> group-by 􏿴/分组
 >>> cartesian-product 􏿴/笛卡尔积

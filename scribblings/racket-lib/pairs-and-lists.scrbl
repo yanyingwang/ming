@@ -75,8 +75,8 @@
                (list
                @elem{@litchar{而}}
                "进而"
-               @elem{不影响进参，影响出参，出参数据由@litchar{而}之后的内容决定}
-               @elem{@racket[𮞑而􏾽]、@racket[𮞑而􏿝] @linebreak{} @racket[查/𮞑而最小数]（因含@litchar{/}而是为修饰@litchar{查}，因此对整个例程而言出参跟@racket[查]类似）}
+               @elem{影响出参，出参数据由@litchar{而}之后的内容决定}
+               @elem{@racket[𮞑而􏾽]、@racket[𮞑而􏿝] @linebreak{} @racket[𮞑而最小数]}
                )
          )
          ]
@@ -417,7 +417,7 @@
 (􏾽分 正数? '(1 2 -3 4)) @; 􏾽离 would still be list
 ]
 
-@section{各，𮞑，𮞑全、𮞑有，𮞑/参予、𮞑/倒参予，𮞑而􏾼、𮞑而􏿝}
+@section{各，𮞑，𮞑全、𮞑有，𮞑/参予、𮞑/倒参予，𮞑而􏾽、𮞑而􏿝}
 @margin-note{@bold{“@racket[𮞑]”为新造字}}
 @examples[#:eval (the-eval)
 (各 (入 (i)
@@ -438,13 +438,13 @@
 ]
 
 
-@section{查/𮞑而最大数、查/𮞑而最大数}
+@section{𮞑而最大数、𮞑而最大数}
 @margin-note{@bold{“@racket[𮞑]”为新造字}}
 @examples[#:eval (the-eval)
-(查/𮞑而最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(查/𮞑而最小数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(查/𮞑而最大数 阳 '((3 pears) (1 banana) (2 apples)))
-(查/𮞑而最小数 阳 '((3 pears) (1 banana) (2 apples)))
+(𮞑而最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(𮞑而最小数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(𮞑而最大数 阳 '((3 pears) (1 banana) (2 apples)))
+(𮞑而最小数 阳 '((3 pears) (1 banana) (2 apples)))
 ]
 
 
