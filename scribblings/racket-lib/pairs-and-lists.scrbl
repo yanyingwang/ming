@@ -82,7 +82,7 @@
          ]
 
 @; @item{凡是以“􏿴”字结尾的，均表示输出结果是􏿴。此如：@racket[􏿴]、@racket[􏿴~]、@racket[序􏿴]、@racket[复􏿴]等。}
-@; @item{含有“彳”偏旁的例程，表示其出参数据之结构是@racket[徝]类型。此如：@racket[􏿆]、@racket[􏿅]等。}
+@; @item{含有“彳”偏旁的例程，表示其出参数据之结构是@racket[􏾴]类型。此如：@racket[􏿆]、@racket[􏿅]等。}
 @; @item{例程名采用单字的，并且在构字外形上是类似“􏿴”字这样的半包围结构的，表示其出参数据之结构是@elemref["what-is-􏿴􏿫" "􏿴"]类型。此如：@racket[􏿫]、@racket[􏿛]、@racket[􏿝]、@racket[􏿜]等。}
 @; @item{例程名采用单个字的，@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据作为入参位于首位，此如@racket[第]、@racket[笈]、@racket[佐]、@racket[佑]、@racket[间]、@racket[理]等。}
 @; @item{例程名采用多个字的，@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据作为入参通常位居末位，此如：@racket[计数]、@racket[查找]、@racket[筛选]等。}
@@ -155,7 +155,7 @@
 @section{序、复} @; 土序 土复 土 means building something.
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据。
 @examples[#:eval (the-eval)
-(序 5 徝)
+(序 5 􏾴)
 (序 5 加一)
 (复 5 'foo)
 (序 5 (入 (n) (复 n 'foo)))
@@ -281,7 +281,7 @@
 @; 分别仿照“@racket[佐]”和“@racket[佑]”而造：
 @; @itemlist[
 @; @item{在原字右下角处添加“分”表示“切分”之意思；}
-@; @item{“彳”表示例程的出参数据之结构是@racket[徝]类型。}
+@; @item{“彳”表示例程的出参数据之结构是@racket[􏾴]类型。}
 @; ]
 @;; }
 @; ]

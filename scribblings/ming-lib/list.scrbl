@@ -42,7 +42,7 @@
 @; ]
 @; }
 @; @defproc[(􏿚 [lst 􏿴?] [v any/c])
-@;           徝?]{
+@;           􏾴?]{
 @; 与@racket[笈]类似，但返回的是满足条件的所有元素。
 @; @examples[#:eval (the-eval)
 @; (笈 '(a b c d c f) 'c)
