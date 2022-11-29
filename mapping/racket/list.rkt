@@ -62,7 +62,7 @@
 >>> partition 􏾽分 (elem "符合条件的元素选出为􏿴，和剩下的􏿴，共计返回两个值。另见：" (racket 筛选)) ;; 筛开 筛分 筛离 筛分
 >>> count 计 ;;度/入
 
->>> filter-map 𮞑/而􏾼 "(􏾼 (入 (x) x) (𮞑 proc '(...)))"
+>>> filter-map 𮞑/而􏾽 "(􏾼 (入 (x) x) (𮞑 proc '(...)))"
 >>> append-map 𮞑/而􏿝 "(􏿝 (𮞑 proc '(...)))"
 
 >>> range 􏿴/数段 "A到B之间的一段数组成的􏿴（包括A不包括B）"
@@ -76,8 +76,8 @@
 >>> argmax 𮞑/而最大数 "(最大数 (𮞑 proc '(...)))"
 >>> argmin 𮞑/而最小数 "(最小数 (𮞑 proc '(...)))"
 
->>> group-by 分组
->>> cartesian-product 笛卡尔值
+>>> group-by 􏿴/分组
+>>> cartesian-product 􏿴/笛卡尔积
 
 >>> remf 删/入 (elem "以例程做对比来消除某一符合条件元素。" ) ;消 迭
 >>> remf* 删*/入 (elem "以例程做对比来消除所有符合条件元素。" ) ; 消* 迭

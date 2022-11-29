@@ -15,7 +15,6 @@
 
 @title[#:tag "pairs-and-lists"]{双和􏿴}
 
-
 @section{例程命名规则}
 除@secref["naming-rules"]中的总规外，另有：
 @itemlist[
@@ -34,16 +33,12 @@
 }
 
 
-
-
-
 @; @item{凡是以“􏿴”字结尾的，均表示输出结果是􏿴。此如：@racket[􏿴]、@racket[􏿴~]、@racket[序􏿴]、@racket[复􏿴]等。}
 @; @item{含有“彳”偏旁的例程，表示其出参数据之结构是@racket[徝]类型。此如：@racket[􏿆]、@racket[􏿅]等。}
 @; @item{例程名采用单字的，并且在构字外形上是类似“􏿴”字这样的半包围结构的，表示其出参数据之结构是@elemref["what-is-􏿴􏿫" "􏿴"]类型。此如：@racket[􏿫]、@racket[􏿛]、@racket[􏿝]、@racket[􏿜]等。}
 @; @item{例程名采用单个字的，@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据作为入参位于首位，此如@racket[第]、@racket[笈]、@racket[佐]、@racket[佑]、@racket[间]、@racket[理]等。}
 @; @item{例程名采用多个字的，@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据作为入参通常位居末位，此如：@racket[计数]、@racket[查找]、@racket[筛选]等。}
 ]
-
 
 @section[#:tag "pair-car-cdr-list-list*"]{双，阴、阳，􏿴、􏿫}
 @margin-note{
@@ -100,6 +95,7 @@
 (阳之阴阳 '((1 1.1) 2 3 4))
 ]
 
+
 @section{􏿴/数段、􏿴/数段*}
 用于构造一个元素是一段整数的􏿴。
 @examples[#:eval (the-eval)
@@ -117,7 +113,6 @@
 (复 5 'foo)
 (序 5 (入 (n) (复 n 'foo)))
 ]
-
 
 @section{攸}
 修改􏿴中的某个元素为新值并返回修改后的􏿴。
@@ -167,7 +162,6 @@
 (􏿜 '(1) '(2) '(3) '((4)))
 ]
 
-
 @section{甲、乙、丙、丁、戊、己、庚、辛、壬、癸}
 使用中国古代文字记序符号“@hyperlink["https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%B9%B2" "十天干"]”，对@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据中特定位置之元素进行提取。
 @examples[#:eval (the-eval)
@@ -193,7 +187,6 @@
 @; (身 '(1 2 3 4))
 @; (尾 '(1 2 3 4))
 ]
-
 
 @section{第，笈、􏿊、􏿊/入}
 @; 用于索引􏿴中的元素和查找􏿴中某元素的索引（另见：@racket[􏿊]、@racket[􏿚]）。
@@ -254,7 +247,6 @@
 @bold{“@racket[􏾹]”、“@racket[􏾸]”为新造字}
 }
 
-
 @examples[#:eval (the-eval)
 (􏾺 '(a b c d e f g) 2)
 (𨚞 '(a b c d e f g) 2)
@@ -271,7 +263,6 @@
 (􏾺于? '(a b) '(a b c d e f g))
 (􏾺于? '(a b z) '(a b c d e f g))
 ]
-
 
 @section{左䢼，左䢼分、左􏾶分}
 @margin-note{
@@ -395,7 +386,7 @@
 (𮞑/参予 双 '() '(1 2 -3 4))
 (𮞑/倒参予 双 '() '(1 2 -3 4))
 
-(𮞑/而􏾼 (入 (x) (且 (正数? x) (加一 x))) '(1 3 -4 5))
+(𮞑/而􏾽 (入 (x) (且 (正数? x) (加一 x))) '(1 3 -4 5))
 (𮞑/而􏿝 vector->list '(#(1) #(2 3) #(4)))
 
 (𮞑/而最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
@@ -403,6 +394,16 @@
 (𮞑/而最大数 阳 '((3 pears) (1 banana) (2 apples)))
 (𮞑/而最小数 阳 '((3 pears) (1 banana) (2 apples)))
 ]
+
+
+@section{􏿴/组合、􏿴/排列组合，􏿴/笛卡尔积，􏿴/分组}
+@examples[#:eval (the-eval)
+(􏿴/组合 '(a b c))
+(􏿴/排列组合 '(a b c))
+(􏿴/笛卡尔积 '(1 2 3) '(a b c))
+(􏿴/分组 数? '(1 a 2 b 3 c))
+]
+
 
 @section[#:tag "list-base"]{基础例程}
 @defmapping[
@@ -412,7 +413,7 @@ racket/base/pairs-and-lists
 )
 ]
 
-@section[#:tag "list-additional"]{额外例程}
+@section[#:tag "list-additional"]{扩展例程}
 @defmodule[ming/racket/list]
 @defmapping[racket/list]
 
