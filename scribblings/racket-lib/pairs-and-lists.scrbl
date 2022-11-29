@@ -16,29 +16,76 @@
 @title[#:tag "pairs-and-lists"]{双和􏿴}
 
 @section{例程命名规则}
-除@secref["naming-rules"]中的总规外，另有：
-@itemlist[
-@item{@bold{含有上偏旁@litchar{㐅}的}：是为“删除”之意。 此如@racket[􏾹]、@racket[􏾸]、@racket[􏿄]、@racket[􏾼]等。}
-@item{@bold{含有左偏旁@litchar{亻}的}：是为“相似者”之意；表示出参之数据结构和进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]），并且出参之数据内容和进参类似。 此如@racket[攸]、@racket[􏿊]、@racket[侠]、@racket[伻]、@racket[􏾷]、@racket[􏿄]、@racket[倒]、@racket[𠍣]等。}
-@item{@bold{含有右偏旁@litchar{阝}的}：是为“部分”之意；表示出参之数据结构和进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]），并且出参之数据内容是进参的一部分。 此如@racket[􏾺]、@racket[𬩽]等。}
-@item{@bold{含有偏旁@litchar{辶}的}：表示“遍历”的意思，且其出参数据之结构与进参相同（都是@elemref["what-is-􏿴􏿫" "􏿴"]）。 此如@racket[􏾽]、@racket[𮞑]等。}
-@item{@bold{以@litchar{分}字结尾的}：是为“切分”之意，且输出结果是复值。 此如@racket[􏾺分]、@racket[左䢼分]、@racket[􏾽分]等。}
-@item{@bold{以@litchar{*}结尾的}：表示加强力度。此如@racket[删*]、@racket[􏿴/数段*]等。}
-@item{
-除以下子条目外，@bold{含@litchar{/...}的}：是为修饰进参，且并不影响出参数据结构，即是说：出参数据结构由@litchar{/...}前面的决定。此如@racket[􏿴/数段]的出参数据之结构和@racket[􏿴]一样；又如@racket[􏿴/组合]和出参数据之结构和@racket[􏿴]是一样的。
-@itemlist[
-@item{@bold{含@litchar{/入}的}：表示进参并非常规数据，而是函数。此如@racket[𬩽/入]、@racket[攸/入]、@racket[笈/入]、@racket[􏾺/入]等。}
-@item{@bold{含@litchar{/而...}的}：意为“进而”的意思，不影响进参，影响出参，出参数据由@litchar{而}之后的字决定。此如@racket[𮞑/而􏾼]、@racket[𮞑/而􏿝]、@racket[𮞑/而最小数]、@racket[𮞑/而最大数]等。}
-]
-}
+除总@secref["naming-rules"]外，另有：
 
+@tabular[@;#:sep @hspace[1]
+         #:style 'boxed
+         #:column-properties '(left)
+         #:row-properties '(border)
+         (list (list @bold{规则} @bold{含义} @bold{对进出参的影响} @bold{举例})
+               (list
+               @elem{上偏旁@litchar{㐅}}
+               "删除、移走、去掉"
+               "仅对数据内容产生影响"
+               @elem{@racket[􏾹]、@racket[􏾸]、@racket[􏿄]、@racket[􏾼]}
+               )
+
+               (list
+               @elem{左偏旁@litchar{亻}}
+               "相似者（返回相似之数据）"
+               @elem{出参数据与进参数据相比，类型相同且内容类似}
+               @elem{@racket[攸]、@racket[􏿊]、@racket[侠]、@racket[伻]、@racket[􏾷]、@racket[􏿄]、@racket[倒]、@racket[𠍣]}
+               )
+
+               (list
+               @elem{右偏旁@litchar{阝}}
+               "部分一样者（返回部分相同之数据）"
+               @elem{出参数据与进参数据相比，类型相同且前者是后者的一部分}
+               @elem{@racket[􏾺]、@racket[􏾹]、@racket[左䢼]、@racket[𬩽]}
+               )
+
+               (list
+               @elem{@litchar{分}结尾或包含@litchar{分/}}
+               "切分(返回复值数据)"
+               @elem{出参数据为复值}
+               @elem{@racket[􏾺分]、@racket[􏾺分/入]、@racket[左䢼分]、@racket[􏾽分]}
+               )
+
+               (list
+               @elem{@litchar{*}结尾或包含@litchar{*/}}
+               "加强力度"
+               "仅对数据内容产生影响"
+               @elem{@racket[删*]、@racket[删*/入]、@racket[􏿴/数段*]}
+               )
+
+               (list
+               @elem{已定规则（比如@litchar{/入}）外且以@litchar{/}符号分割}
+               @elem{@litchar{/}之后的内容是为修饰@litchar{/}前的内容}
+               @elem{出参数据由@litchar{/}之前的内容决定}
+               @elem{@racket[􏿴/数段]、@racket[􏿴/组合]}
+               )
+
+               (list
+               @elem{@litchar{/入}}
+               "进参为函数"
+               @elem{进参并非常规数据，而是函数}
+               @elem{@racket[𬩽/入]、@racket[攸/入]、@racket[笈/入]、@racket[􏾺/入]}
+               )
+
+               (list
+               @elem{@litchar{而}}
+               "进而"
+               @elem{不影响进参，影响出参，出参数据由@litchar{而}之后的内容决定}
+               @elem{@racket[𮞑而􏾽]、@racket[𮞑而􏿝] @linebreak{} @racket[查/𮞑而最小数]（因含@litchar{/}而是为修饰@litchar{查}，因此对整个例程而言出参跟@racket[查]类似）}
+               )
+         )
+         ]
 
 @; @item{凡是以“􏿴”字结尾的，均表示输出结果是􏿴。此如：@racket[􏿴]、@racket[􏿴~]、@racket[序􏿴]、@racket[复􏿴]等。}
 @; @item{含有“彳”偏旁的例程，表示其出参数据之结构是@racket[徝]类型。此如：@racket[􏿆]、@racket[􏿅]等。}
 @; @item{例程名采用单字的，并且在构字外形上是类似“􏿴”字这样的半包围结构的，表示其出参数据之结构是@elemref["what-is-􏿴􏿫" "􏿴"]类型。此如：@racket[􏿫]、@racket[􏿛]、@racket[􏿝]、@racket[􏿜]等。}
 @; @item{例程名采用单个字的，@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据作为入参位于首位，此如@racket[第]、@racket[笈]、@racket[佐]、@racket[佑]、@racket[间]、@racket[理]等。}
 @; @item{例程名采用多个字的，@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据作为入参通常位居末位，此如：@racket[计数]、@racket[查找]、@racket[筛选]等。}
-]
 
 @section[#:tag "pair-car-cdr-list-list*"]{双，阴、阳，􏿴、􏿫}
 @margin-note{
@@ -370,7 +417,7 @@
 (􏾽分 正数? '(1 2 -3 4)) @; 􏾽离 would still be list
 ]
 
-@section{各，𮞑，𮞑全、𮞑有，𮞑/参予、𮞑/倒参予，𮞑/而􏾼、𮞑/而􏿝}
+@section{各，𮞑，𮞑全、𮞑有，𮞑/参予、𮞑/倒参予，𮞑而􏾼、𮞑而􏿝}
 @margin-note{@bold{“@racket[𮞑]”为新造字}}
 @examples[#:eval (the-eval)
 (各 (入 (i)
@@ -386,13 +433,18 @@
 (𮞑/参予 双 '() '(1 2 -3 4))
 (𮞑/倒参予 双 '() '(1 2 -3 4))
 
-(𮞑/而􏾽 (入 (x) (且 (正数? x) (加一 x))) '(1 3 -4 5))
-(𮞑/而􏿝 vector->list '(#(1) #(2 3) #(4)))
+(𮞑而􏾽 (入 (x) (且 (正数? x) (加一 x))) '(1 3 -4 5))
+(𮞑而􏿝 vector->list '(#(1) #(2 3) #(4)))
+]
 
-(𮞑/而最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(𮞑/而最小数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(𮞑/而最大数 阳 '((3 pears) (1 banana) (2 apples)))
-(𮞑/而最小数 阳 '((3 pears) (1 banana) (2 apples)))
+
+@section{查/𮞑而最大数、查/𮞑而最大数}
+@margin-note{@bold{“@racket[𮞑]”为新造字}}
+@examples[#:eval (the-eval)
+(查/𮞑而最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(查/𮞑而最小数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(查/𮞑而最大数 阳 '((3 pears) (1 banana) (2 apples)))
+(查/𮞑而最小数 阳 '((3 pears) (1 banana) (2 apples)))
 ]
 
 
