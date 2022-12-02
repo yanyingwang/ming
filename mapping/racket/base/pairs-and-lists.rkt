@@ -1,17 +1,17 @@
-#lang s-exp "../../../private/mapping-lang.rkt"
+#lang at-exp s-exp "../../../private/mapping-lang.rkt"
 
 
->>> cons 双 "把两个参数配成对，组合成一个双" ;; 组合， 对:把两个东西双在一块,配对在一块.     接 合 连 构 结 创 造
+>>> cons 双 "把两个数据配成对，即成一个双" ;; 组合， 对:把两个东西双在一块,配对在一块.     接 合 连 构 结 创 造
 >>> pair? 双? ;; 对子? 双
 
->>> car 阳
->>> cdr 阴
+>>> car 阳 @elem{返回@racket[双]中的第一个数据}
+>>> cdr 阴 @elem{返回@racket[双]中的第二个数据}
 
 >>> null? 空?
 >>> null 空
 
->>> list 􏿴 (elem "将一个" (racket 双) "的" (racket 阴) "位放置另一个双，数个双如此前后相接组成链状（末尾双的阴位留空）。") ;; 􏿴子
->>> list* 􏿫 "将数据依次排列组成类􏿴的结构，但不同的是结尾无空。"
+>>> list 􏿴  @elem{将一个@racket[双]的@racket[阴]位放置另一个双，数个双如此前后相接组成链状（末尾双的@racket[阴]位留@racket[空]）。} ;; 􏿴子
+>>> list* 􏿫 @elem{与@racket[􏿴]类似的数据结构，但不同的是结尾无空。}
 >>> list? 􏿴?
 >>> build-list 序 "构造序􏿴（􏿴内的各个个元素是按照一定次序排列的􏿴即为序􏿴）"
 
@@ -20,15 +20,15 @@
 
 ;; >>> list-tail 去 "从􏿴中去掉n个元素后余下的􏿴。" ;; 去 舍  ;; same as 佐 佑.....
 
->>> append 􏿝 (elem "把多􏿴贯穿相连组成一个" (racket 􏿴) "并返回之") ;; 串 接
+>>> append 􏿝 @elem{把多􏿴贯穿相连组成一个@racket[􏿴]并返回之} ;; 串 接
 >>> reverse 倒 "倒序排列" ;; 颠 倒
 
 ;; >>> for-each 巡 "酒席上给全座依次斟酒一遍称为巡杯（酒过三巡），这里意思是􏿴内元素依次执行某一个例程。" ; 轮着 每 轮 依次 遍自 遍执 行 循序
 >>> for-each 各 "􏿴内元素各自依次执行某一个例程。"
 >>> map 𮞑 "把某一例程依次映用到各个元素上，各个元素作为其参数。" ;; 各 依次应 映
 
->>> andmap 𮞑全 "(且 (𮞑 proc '(...)))" ;; 各有应 各都 映且
->>> ormap 𮞑有 "(或 (𮞑 proc '(...)))" ;; 各无应 各有 映或
+>>> andmap 𮞑全 @elem{等同于@code{(且 (𮞑 proc lst))}} ;; 各有应 各都 映且
+>>> ormap 𮞑有 @elem{等同于@code{(或 (𮞑 proc lst))}} ;; 各无应 各有 映或
 
 >>> foldl 𮞑/参予 "􏿴中各个元素依次作为参数，和初始参数一块作用到某例程上。"  ;; 各左参
 >>> foldr 𮞑/倒参予 "􏿴中各个元素倒序地依次作为参数，和初始参数一块作用到某例程上。"
@@ -55,20 +55,20 @@
 >>> assf 􏿁/入
 
 >>> findf 查 "查找出第一个符合条件的􏿴中元素并返回之。"  ;; 查 找  选  查 寻 找 查 索 筛甲 @; 寻 找 查 搜 探 觅 检 索 俭
->>> filter 􏾽 (elem "查找出所有符合条件的􏿴中元素并组成新􏿴返回。另见：" (racket 筛分) (racket 筛除))  ;; 滤 筛 选 挑 挑 选 择
+>>> filter 􏾽 @elem{查找出所有符合条件的􏿴中元素并组成新􏿴返回}  ;; 滤 筛 选 挑 挑 选 择
 
->>> caar 阳之阳 (elem "对取出的" (racket 阳) "位数据再次取" (racket 阳))
->>> cdar 阳之阴
->>> cadr 阴之阳
->>> cddr 阴之阴
->>> caaar 阳之阳阳
->>> cdaar 阳之阳阴
->>> cadar 阳之阴阳
->>> caadr 阳之阴阴
->>> caddr 阴之阴阴
->>> caddr 阴之阴阳
->>> cdadr 阴之阳阴
->>> caadr 阴之阳阳
+>>> caar 阳之阳 @elem{等同于@code{(阳 (阳 lst))}}
+>>> cdar 阳之阴 @elem{等同于@code{(阴 (阳 lst))}}
+>>> cadr 阴之阳 @elem{等同于@code{(阳 (阴 lst))}}
+>>> cddr 阴之阴 @elem{等同于@code{(阴 (阴 lst))}}
+>>> caaar 阳之阳阳 @elem{等同于@code{(阳 (阳 (阳 lst)))}}
+>>> cdaar 阳之阳阴 @elem{等同于@code{(阴 (阳 (阳 lst)))}}
+>>> cadar 阳之阴阳 @elem{等同于@code{(阳 (阴 (阳 lst)))}}
+>>> caadr 阳之阴阴 @elem{等同于@code{(阳 (阴 (阳 lst)))}}
+>>> caddr 阴之阴阴 @elem{等同于@code{(阴 (阴 (阴 lst)))}}
+>>> caddr 阴之阴阳 @elem{等同于@code{(阳 (阴 (阴 lst)))}}
+>>> cdadr 阴之阳阴 @elem{等同于@code{(阴 (阳 (阴 lst)))}}
+>>> caadr 阴之阳阳 @elem{等同于@code{(阳 (阳 (阴 lst)))}}
 >>> caaaar 阳之阳阳阳
 >>> caaadr 阴之阳阳阳
 >>> caadar 阳之阴阳阳

@@ -460,9 +460,8 @@
 @section[#:tag "list-base"]{基础例程}
 @defmapping[
 racket/base/pairs-and-lists
-([阳 "返回居于阳位的数据。"]
- [阴 "返回居于阴位的数据。"]
-)
+([空 "空"]
+ )
 ]
 
 @section[#:tag "list-additional"]{扩展例程}
