@@ -16,7 +16,9 @@
          ,(for/list ([l (in-list mapping-data)]
                      #:do ((define en (car l))
                            (define cn (cadr l))
-                           (define resn (caddr l))
+                           (define raw_resn (caddr l))
+                           (define resn (if (string? raw_resn) `(elem ,raw_resn) raw_resn))
+                           ;; (define resn+elemref (append resn `((elemref ,cn "〔另见示例〕"))))
                            (define elem-list (assoc cn mapping-data1))))
             `(defchinesize ,cn ,(if elem-list (cadr elem-list) resn) ,en)
             ))

@@ -72,12 +72,19 @@
                @elem{@racket[𬩽/入]、@racket[攸/入]、@racket[笈/入]、@racket[􏾺/入]}
                )
 
-               (list
-               @elem{@litchar{而}}
-               "进而"
-               @elem{影响出参，出参数据由@litchar{而}之后的内容决定}
-               @elem{@racket[𮞑而􏾽]、@racket[𮞑而􏿝] @linebreak{} @racket[𮞑而最小数]}
-               )
+               @; (list
+               @; @elem{@litchar{之}}
+               @; "的"
+               @; @elem{影响出参，出参数据由@litchar{之}之后的内容决定}
+               @; @elem{@racket[𮞑而􏾽]、@racket[𮞑而􏿝] @linebreak{} @racket[𮞑而最小数]}
+               @; )
+
+               @; (list
+               @; @elem{@litchar{而}}
+               @; "进而"
+               @; @elem{影响出参，出参数据由@litchar{而}之后的内容决定}
+               @; @elem{@racket[𮞑而􏾽]、@racket[𮞑而􏿝] @linebreak{} @racket[𮞑而最小数]}
+               @; )
          )
          ]
 
@@ -417,7 +424,7 @@
 (􏾽分 正数? '(1 2 -3 4)) @; 􏾽离 would still be list
 ]
 
-@section{各，𮞑，𮞑全、𮞑有，𮞑/参予、𮞑/倒参予，𮞑而􏾽、𮞑而􏿝}
+@section{各，𮞑，𮞑全、𮞑有，𮞑/参予、𮞑/倒参予，𮞑之􏾽、𮞑之􏿝}
 @margin-note{@bold{“@racket[𮞑]”为新造字}}
 @examples[#:eval (the-eval)
 (各 (入 (i)
@@ -433,18 +440,18 @@
 (𮞑/参予 双 '() '(1 2 -3 4))
 (𮞑/倒参予 双 '() '(1 2 -3 4))
 
-(𮞑而􏾽 (入 (x) (且 (正数? x) (加一 x))) '(1 3 -4 5))
-(𮞑而􏿝 vector->list '(#(1) #(2 3) #(4)))
+(𮞑之􏾽 (入 (x) (且 (正数? x) (加一 x))) '(1 3 -4 5))
+(𮞑之􏿝 vector->list '(#(1) #(2 3) #(4)))
 ]
 
 
-@section{𮞑而最大数、𮞑而最大数}
+@section{𮞑之最大数、𮞑之最大数}
 @margin-note{@bold{“@racket[𮞑]”为新造字}}
 @examples[#:eval (the-eval)
-(𮞑而最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(𮞑而最小数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(𮞑而最大数 阳 '((3 pears) (1 banana) (2 apples)))
-(𮞑而最小数 阳 '((3 pears) (1 banana) (2 apples)))
+(𮞑之最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(𮞑之最小数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(𮞑之最大数 阳 '((3 pears) (1 banana) (2 apples)))
+(𮞑之最小数 阳 '((3 pears) (1 banana) (2 apples)))
 ]
 
 
@@ -460,8 +467,9 @@
 @section[#:tag "list-base"]{基础例程}
 @defmapping[
 racket/base/pairs-and-lists
-([空 "空"]
- )
+(
+[空 "空"]
+)
 ]
 
 @section[#:tag "list-additional"]{扩展例程}
