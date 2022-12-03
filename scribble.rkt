@@ -1,9 +1,9 @@
 #lang racket/base
 
 
-(provide defmapping defchinesize)
+(provide defmapping defchinesize section+elemref)
 (require "private/match-files-in.rkt"
-         (for-syntax racket/base racket/syntax
+         (for-syntax racket/base racket/list racket/string racket/syntax
                      (match-files-in mapping (#rx"^/racket/.*\\.rkt$"))))
 
 
@@ -18,9 +18,9 @@
                            (define cn (cadr l))
                            (define raw_resn (caddr l))
                            (define resn (if (string? raw_resn) `(elem ,raw_resn) raw_resn))
-                           ;; (define resn+elemref (append resn `((elemref ,cn "〔另见示例〕"))))
-                           (define elem-list (assoc cn mapping-data1))))
-            `(defchinesize ,cn ,(if elem-list (cadr elem-list) resn) ,en)
+                           (define resn+elemref `(elem ,@(cdr resn) "。【" (elemref #:underline? #f ,(symbol->string cn) "示例") "】"))
+                           (define elem-lst (assoc cn mapping-data1))))
+            `(defchinesize ,cn ,(if elem-lst (cadr elem-lst) resn+elemref) ,en)
             ))
     ))
 
@@ -32,8 +32,18 @@
      (datum->syntax stx (gen-defthings #'path '()))]))
 
 (define-syntax (defchinesize stx)
-  (syntax-case stx()
+  (syntax-case stx ()
     [(_ cn-id reason en-id)
      (datum->syntax stx `(defthing #:kind "汉化" ,(syntax-e #'cn-id) (unsyntax (racketvalfont ,(syntax-e #'reason))) #:value ,(syntax-e #'en-id)))
      ]
     ))
+
+
+(define-syntax (section+elemref stx)
+  (syntax-case stx ()
+    [(_ pars ...)
+     (datum->syntax stx `(begin
+                           ,@(for/list ([e (string-split (syntax-e (last (syntax-e #'(pars ...)))) #rx"(、|，)")]) (list 'elemtag e))
+                           ,(cons 'section #'(pars ...))  ))]
+    )
+  )

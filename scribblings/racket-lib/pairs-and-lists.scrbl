@@ -94,7 +94,8 @@
 @; @item{例程名采用单个字的，@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据作为入参位于首位，此如@racket[第]、@racket[笈]、@racket[佐]、@racket[佑]、@racket[间]、@racket[理]等。}
 @; @item{例程名采用多个字的，@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据作为入参通常位居末位，此如：@racket[计数]、@racket[查找]、@racket[筛选]等。}
 
-@section[#:tag "pair-car-cdr-list-list*"]{双，阴、阳，􏿴、􏿫}
+
+@section+elemref[#:tag "pair-car-cdr-list-list*"]{双，阴、阳，􏿴、􏿫}
 @margin-note{
 @bold{“@racket[􏿴]”、“@racket[􏿫]”为@elemtag["the-char-creating-of-􏿴􏿫" "新造字"]}
 @itemlist[
@@ -159,7 +160,7 @@
 (􏿴/数段* 10 20 2)
 ]
 
-@section{序、复} @; 土序 土复 土 means building something.
+@section+elemref{序、复} @; 土序 土复 土 means building something.
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据。
 @examples[#:eval (the-eval)
 (序 5 􏾴)
@@ -198,7 +199,7 @@
 @; (􏿛/入 '(10 15 20 25) 1 加一)
 @; ]
 
-@section{􏿝、􏿜}
+@section+elemref{􏿝、􏿜}
 用于对@elemref["what-is-􏿴􏿫" "􏿴"]类结构数据进行处理并输出相同于@racket[􏿴]、@racket[􏿫]例程输出数据之结构的数据。
 @margin-note{
 @bold{“@racket[􏿝]”、“@racket[􏿜]”为新造字}
@@ -216,7 +217,7 @@
 (􏿜 '(1) '(2) '(3) '((4)))
 ]
 
-@section{甲、乙、丙、丁、戊、己、庚、辛、壬、癸}
+@section+elemref{甲、乙、丙、丁、戊、己、庚、辛、壬、癸}
 使用中国古代文字记序符号“@hyperlink["https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%B9%B2" "十天干"]”，对@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据中特定位置之元素进行提取。
 @examples[#:eval (the-eval)
 (甲 '(1 2 3 4 5 6 7 8 9 10))
@@ -225,7 +226,7 @@
 (癸 '(1 2 3 4 5 6 7 8 9 10))
 ]
 
-@section{末、􏿦}
+@section+elemref{末、􏿦}
 返回􏿴中末尾位置的元素。
 @margin-note{
 @bold{“@racket[􏿦]”为新造字}
@@ -242,7 +243,7 @@
 @; (尾 '(1 2 3 4))
 ]
 
-@section{第，笈、􏿊、􏿊/入}
+@section+elemref{第，笈、􏿊、􏿊/入}
 @; 用于索引􏿴中的元素和查找􏿴中某元素的索引（另见：@racket[􏿊]、@racket[􏿚]）。
 
 @margin-note{
@@ -293,7 +294,7 @@
 @;; }
 @; ]
 @; }
-@section{􏾺、𨚞，􏾹、􏾸，􏾺分、𨚞分，􏾺/入、𨚞/入，􏾺于?}
+@section+elemref{􏾺、𨚞，􏾹、􏾸，􏾺分、𨚞分，􏾺/入、𨚞/入，􏾺于?}
 @margin-note{
 @bold{“@racket[􏾺]”、“@racket[𨚞]”为新造字}
 }
@@ -318,7 +319,7 @@
 (􏾺于? '(a b z) '(a b c d e f g))
 ]
 
-@section{左䢼，左䢼分、左􏾶分}
+@section+elemref{左䢼，左䢼分、左􏾶分}
 @margin-note{
 @bold{“@racket[䢼]”、“@racket[􏾶]”为新造字}
 @itemlist[
@@ -332,7 +333,7 @@
 ]
 
 
-@section{侠，伻，􏾷，重、􏿄} @; 侠 􏿃 􏿄 去偅 𠉗
+@section+elemref{侠，伻，􏾷，重、􏿄} @; 侠 􏿃 􏿄 去偅 𠉗
 @margin-note{
 @; @bold{“@racket[􏿃]”为活用字}
 @; @itemlist[
@@ -378,7 +379,7 @@
 ]
 
 
-@section{倒、𠍣}
+@section+elemref{倒、𠍣}
 @margin-note{
 @bold{“@racket[𠍣]”为新造字}
 @itemlist[
@@ -394,7 +395,7 @@
 ]
 
 
-@section{𬩽、𬩽/入，􏿁、􏿁/入，删、删*、删/入、删*/入，计}
+@section+elemref{𬩽、𬩽/入，􏿁、􏿁/入，删、删*、删/入、删*/入，计}
 @margin-note{
 @bold{“@racket[􏿁]”为新造字}
 @itemlist[
@@ -415,7 +416,7 @@
 (计 正数? '(1 2 -3 4))
 ]
 
-@section{查、􏾽、􏾼、􏾽分}
+@section+elemref{查、􏾽、􏾼、􏾽分}
 @margin-note{@bold{“@racket[􏾽]”、“@racket[􏾼]”为新造字}}
 @examples[#:eval (the-eval)
 (查 正数? '(1 2 -3 4))
@@ -424,7 +425,7 @@
 (􏾽分 正数? '(1 2 -3 4)) @; 􏾽离 would still be list
 ]
 
-@section{各，𮞑，𮞑全、𮞑有，𮞑/参予、𮞑/倒参予，𮞑之􏾽、𮞑之􏿝}
+@section+elemref{各，𮞑，𮞑全、𮞑有，𮞑/参予、𮞑/倒参予，𮞑之􏾽、𮞑之􏿝}
 @margin-note{@bold{“@racket[𮞑]”为新造字}}
 @examples[#:eval (the-eval)
 (各 (入 (i)
@@ -445,7 +446,7 @@
 ]
 
 
-@section{𮞑之最大数、𮞑之最大数}
+@section+elemref{𮞑之最大数、𮞑之最小数}
 @margin-note{@bold{“@racket[𮞑]”为新造字}}
 @examples[#:eval (the-eval)
 (𮞑之最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
@@ -455,7 +456,7 @@
 ]
 
 
-@section{􏿴/组合、􏿴/排列组合，􏿴/笛卡尔积，􏿴/分组}
+@section+elemref{􏿴/组合、􏿴/排列组合，􏿴/笛卡尔积，􏿴/分组}
 @examples[#:eval (the-eval)
 (􏿴/组合 '(a b c))
 (􏿴/排列组合 '(a b c))
@@ -471,7 +472,6 @@ racket/base/pairs-and-lists
 [空 "空"]
 )
 ]
-
 @section[#:tag "list-additional"]{扩展例程}
 @defmodule[ming/racket/list]
 @defmapping[racket/list]
