@@ -95,7 +95,7 @@
 @; @item{例程名采用多个字的，@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据作为入参通常位居末位，此如：@racket[计数]、@racket[查找]、@racket[筛选]等。}
 
 
-@section+elemref[#:tag "pair-car-cdr-list-list*"]{双，阴、阳，􏿴、􏿫}
+@section+elemref[#:tag "pair-car-cdr-list-list*"]{双，􏿴、􏿫}
 @margin-note{
 @bold{“@racket[􏿴]”、“@racket[􏿫]”为@elemtag["the-char-creating-of-􏿴􏿫" "新造字"]}
 @itemlist[
@@ -118,7 +118,6 @@
 }
 
 “双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构：
-
 对于名语言来说，如果我们把两个数据配成对（@racket[双]在一块），我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。
 
 进而，@elemtag["what-is-􏿴􏿫" "如果一个“双”的阴位存的是另外一个“双”，数个双如此前后相接成链状："]
@@ -136,7 +135,10 @@
 (双 1 (双 2 (双 3 4)))
 (􏿫 1 2 3 4)
 (􏿫 1 2 3 '(4))
+]
 
+@section+elemref{阴、阳，阴之阳、阳之阳、阴之阴阳、阳之阴阳}
+@examples[#:eval (the-eval)
 (阳 '(1 . 2))
 (阴 '(1 . 2))
 
@@ -151,7 +153,7 @@
 ]
 
 
-@section{􏿴/数段、􏿴/数段*}
+@section+elemref{􏿴/数段、􏿴/数段*}
 用于构造一个元素是一段整数的􏿴。
 @examples[#:eval (the-eval)
 (􏿴/数段 10 20)
@@ -169,7 +171,7 @@
 (序 5 (入 (n) (复 n 'foo)))
 ]
 
-@section{攸}
+@section+elemref{攸}
 修改􏿴中的某个元素为新值并返回修改后的􏿴。
 @margin-note{
 @bold{“@racket[攸]”为活古字}
@@ -447,7 +449,6 @@
 
 
 @section+elemref{𮞑之最大数、𮞑之最小数}
-@margin-note{@bold{“@racket[𮞑]”为新造字}}
 @examples[#:eval (the-eval)
 (𮞑之最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
 (𮞑之最小数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))

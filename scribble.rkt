@@ -18,7 +18,7 @@
                            (define cn (cadr l))
                            (define raw_resn (caddr l))
                            (define resn (if (string? raw_resn) `(elem ,raw_resn) raw_resn))
-                           (define resn+elemref `(elem ,@(cdr resn) "。【" (elemref #:underline? #f ,(symbol->string cn) "示例") "】"))
+                           (define resn+elemref `(elem ,@(cdr resn) "。【" (elemref #:underline? #f ,(symbol->string cn) "更多") "】"))
                            (define elem-lst (assoc cn mapping-data1))))
             `(defchinesize ,cn ,(if elem-lst (cadr elem-lst) resn+elemref) ,en)
             ))

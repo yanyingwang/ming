@@ -2,8 +2,8 @@
 
 
 ;;; (empty 空) not need as one defined same in base (null 空)
->>> first 甲 "第一个的意思，源自中国古代文字记序符号十天干。"
->>> second 乙 "第二个的意思，源自中国古代文字记序符号十天干。"
+>>> first 甲 "第一个的意思，源自中国古代文字记序符号十天干"
+>>> second 乙 "第二个的意思，源自中国古代文字记序符号十天干"
 >>> third 丙
 >>> fourth 丁
 >>> fifth 戊
@@ -13,8 +13,8 @@
 >>> ninth 壬
 >>> tenth 癸
 >>> last 末
->>> last-pair 􏿦 "取出最后一双元素。" ;; 末链（链一定为双）
-;; >>> rest 末** "􏿴除去甲以外剩下的􏿴。" ;; 甲外 剩余 去甲 舍甲
+>>> last-pair 􏿦 "取出最后一双元素" ;; 末链（链一定为双）
+;; >>> rest 末** "􏿴除去甲以外剩下的􏿴" ;; 甲外 剩余 去甲 舍甲
 
 >>> make-list 复 "构造复􏿴（􏿴内各个元素相同的􏿴即为复􏿴，类比昆虫的“复眼”一词取名）"
 
@@ -26,23 +26,23 @@
 >>> index-where 笈/入 @elem{与@racket[笈]类似，不过进参是@racket[入]} ;; 引 导  函 =》以例
 >>> indexes-where 􏿊/入 @elem{与@racket[􏿊]类似，不过进参是@racket[入]}
 
->>> take 􏾺 "从􏿴中左起依次取出来N个元素并组成新􏿴返回。"
->>> take-right 𨚞 "与上类似，不过是从右边开始操作的。"
+>>> take 􏾺 "从􏿴中左起依次取出来N个元素并组成新􏿴返回"
+>>> take-right 𨚞 "与上类似，不过是从右边开始操作的"
 
->>> drop 􏾹 "从􏿴中的左边依次的去掉N个元素，剩余元素组成􏿴。"
->>> drop-right 􏾸 "与上类似，不过是从右边开始操作的。"
+>>> drop 􏾹 "从􏿴中的左边依次的去掉N个元素，剩余元素组成􏿴"
+>>> drop-right 􏾸 "与上类似，不过是从右边开始操作的"
 
 >>> takef 􏾺/入 @elem{与@racket[􏾺]类似，不过进参是@racket[入]}
->>> takef-right 𨚞/入 "与上类似，不过是从右边开始操作的。"
+>>> takef-right 𨚞/入 "与上类似，不过是从右边开始操作的"
 
 >>> dropf 􏾹/入 @elem{与@racket[􏾹]类似，不过进参是@racket[入]}
->>> dropf-right 􏾸/入 "与上类似，不过是从右边开始操作的。"
+>>> dropf-right 􏾸/入 "与上类似，不过是从右边开始操作的"
 
 >>> split-at 􏾺分 @elem{与@racket[􏾺]类似，不过输出结果另包含余下的部分组成的􏿴（输出结果是一个复值（@racket[􏾴]））}
->>> split-at-right 𨚞分 "与上类似，不过是从右边开始操作的。"
+>>> split-at-right 𨚞分 "与上类似，不过是从右边开始操作的"
 
 >>> splitf-at 􏾺分/入 @elem{同@racket[􏾺/分]类似，不过参数是@racket[入]}
->>> splitf-at-right 𨚞分/入 "与上类似，不过是从右边开始操作的。"
+>>> splitf-at-right 𨚞分/入 "与上类似，不过是从右边开始操作的"
 
 >>> list-prefix? 􏾺于? @elem{某@racket[􏿴]是否是某另一@racket[􏿴]的@racket[􏾺]}
 >>> take-common-prefix 左䢼 @elem{返回两个@racket[􏿴]左起的相同元素组成的􏿴} ;;􏾺共项 􏾺共相 共同/􏾺
@@ -78,5 +78,5 @@
 >>> group-by 􏿴/分组
 >>> cartesian-product 􏿴/笛卡尔积
 
->>> remf 删/入 (elem "以例程做对比来消除某一符合条件元素。" ) ;消 迭
->>> remf* 删*/入 (elem "以例程做对比来消除所有符合条件元素。" ) ; 消* 迭
+>>> remf 删/入 (elem "以例程做对比来消除某一符合条件元素" ) ;消 迭
+>>> remf* 删*/入 (elem "以例程做对比来消除所有符合条件元素" ) ; 消* 迭
