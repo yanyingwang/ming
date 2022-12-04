@@ -174,7 +174,7 @@
 @section+elemref{攸}
 修改􏿴中的某个元素为新值并返回修改后的􏿴。
 @margin-note{
-@bold{“@racket[攸]”为活古字}
+@bold{“@racket[攸]”为古活字}
 @itemlist[
 @item{@litchar{攵}本意是“用手敲打敦促使其改变”，在此引申为“修改”之意；}
 @item{@litchar{亻}和@litchar{攵}中间的@litchar{丨}表示只修改了@elemref["what-is-􏿴􏿫" "􏿴"]中的一项元素；}
@@ -249,7 +249,7 @@
 @; 用于索引􏿴中的元素和查找􏿴中某元素的索引（另见：@racket[􏿊]、@racket[􏿚]）。
 
 @margin-note{
-@bold{“@racket[笈]”为活古字}
+@bold{“@racket[笈]”为古活字}
 @itemlist[
 @item{原义不存，因其形和“@racket[第]”字能对仗呼应，故此使用之。}
 ]
@@ -428,7 +428,7 @@
 ]
 
 @section+elemref{各，𮞑，𮞑全、𮞑有，𮞑参予、𮞑倒参予，𮞑之􏾽、𮞑之􏿝}
-@margin-note{@bold{“@racket[𮞑]”为新造字}}
+@margin-note{@bold{“@racket[𮞑]”为古活字}}
 @examples[#:eval (the-eval)
 (各 (入 (i)
         (行示 i))
