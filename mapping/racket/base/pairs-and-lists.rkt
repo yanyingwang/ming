@@ -33,25 +33,28 @@
 >>> foldl 𮞑参予 "􏿴中各个元素依次作为参数，和初始参数一块作用到某例程上"  ;; 各左参
 >>> foldr 𮞑倒参予 "􏿴中各个元素倒序地依次作为参数，和初始参数一块作用到某例程上"
 
->>> remove 删 (elem "以" (racket 同) "作为比较来消去某值在􏿴中的第一个存在")
->>> remq 删/等 (elem "以" (racket 等) "作为比较来消去某值在􏿴中的第一个存在")
->>> remv 删/齐 (elem "以" (racket 齐) "作为比较来消去某值在􏿴中的第一个存在")
-;; remw 移除/总同
->>> remove* 删* (elem "以" (racket 同) "作为比较来消去某值在􏿴中的全部存在")
->>> remq* 删*/等 (elem "以" (racket 等) "作为比较来消去某值在􏿴中的全部存在")
->>> remv* 删*/齐 (elem "以" (racket 齐) "作为比较来消去某值在􏿴中的全部存在")
-;; (remw* 移除*/总同)
+>>> remove 删 @elem{以@racket[同]作为比较来消去某值在􏿴中的第一个存在}
+>>> remw 删/􏾱 @elem{与@racket[删]类似，不过比较例程是@racket[􏾱]}
+>>> remv 删/􏾰 @elem{与@racket[删]类似，不过比较例程是@racket[􏾰]}
+>>> remq 删/􏾯 @elem{与@racket[删]类似，不过比较例程是@racket[􏾯]}
+
+>>> remove 删* @elem{以@racket[同]作为比较来消去某值在􏿴中的全部存在}
+>>> remw 删*/􏾱 @elem{与@racket[删]类似，不过比较例程是@racket[􏾱]}
+>>> remv 删*/􏾰 @elem{与@racket[删]类似，不过比较例程是@racket[􏾰]}
+>>> remq 删*/􏾯 @elem{与@racket[删]类似，不过比较例程是@racket[􏾯]}
 
 >>> sort 𠍣 "整理、排序的意思" ; 亻理 𠍣
 
->>> member 𬩽 (elem "以" (racket 同) "作为比较来查询某值，返回􏿴中某值和其之后的数据组成的新􏿴")  ;; 后􏿴 索 ;; 索 寻 寻随
-;; (memw 后员/总同)
->>> memv 𬩽/齐 ;; 索
->>> memq 𬩽/等 ;;
->>> memf 𬩽/入 ;;
->>> assoc 􏿁 (elem "以" (racket 同) "作为比较来查找出联􏿴中阳位是某值的元素􏿴") ; 探
->>> assq 􏿁/等
->>> assv 􏿁/齐
+>>> member 𬩽 @elem{以@racket[同]作为比较来查询某值，返回􏿴中某值和其之后的数据组成的新􏿴}  ;; 后􏿴 索 ;; 索 寻 寻随
+>>> memw 𬩽/􏾱 @elem{与@racket[𬩽]类似，不过比较例程是@racket[􏾱]}
+>>> memv 𬩽/􏾰 @elem{与@racket[𬩽]类似，不过比较例程是@racket[􏾰]}
+>>> memq 𬩽/􏾯 @elem{与@racket[𬩽]类似，不过比较例程是@racket[􏾯]}
+>>> memf 𬩽/入
+
+>>> assoc 􏿁 @elem{以@racket[同]作为比较来查找出联􏿴中阳位是某值的元素􏿴}  ; 探
+>>> assw 􏿁/􏾱 @elem{与@racket[􏿁]类似，不过比较例程是@racket[􏾱]}
+>>> assv 􏿁/􏾰 @elem{与@racket[􏿁]类似，不过比较例程是@racket[􏾰]}
+>>> assq 􏿁/􏾯 @elem{与@racket[􏿁]类似，不过比较例程是@racket[􏾯]}
 >>> assf 􏿁/入
 
 >>> findf 查 "查找出第一个符合条件的􏿴中元素并返回之"  ;; 查 找  选  查 寻 找 查 索 筛甲 @; 寻 找 查 搜 探 觅 检 索 俭

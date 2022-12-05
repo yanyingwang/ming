@@ -27,7 +27,7 @@
 ]
 }
 
-@section{􏿲、坚􏿲，复􏿲、序􏿲，毌􏿲，空􏿲?、􏿲?}
+@section+elemref{􏿲、坚􏿲，复􏿲、序􏿲，毌􏿲，空􏿲?、􏿲?}
 @examples[#:eval (the-eval)
 (􏿲 1 2 3 4)
 (坚􏿲 1 2 3 4)
@@ -42,7 +42,7 @@
 ]
 
 
-@section{􏿲度、􏿲第、􏿲𠍣}
+@section+elemref{􏿲度、􏿲第、􏿲𠍣}
 @examples[#:eval (the-eval)
 (􏿲度 '#(1 2 3 4))
 (􏿲第 '#(a b c d) 2)
@@ -50,7 +50,7 @@
 ]
 
 
-@section{􏿲->􏿴、􏿴->􏿲，􏿲->坚􏿲，􏿲->􏾴}
+@section+elemref{􏿲->􏿴、􏿴->􏿲，􏿲->坚􏿲，􏿲->􏾴}
 @examples[#:eval (the-eval)
 (􏿲->􏿴 '#(a b c d))
 (􏿴->􏿲 '(a b c d))
@@ -61,7 +61,7 @@
 ]
 
 
-@section{􏿲攸!、􏿲覆!、􏿲覆!/以它段}
+@section+elemref{􏿲攸!、􏿲覆!、􏿲覆!/以它段}
 @examples[#:eval (the-eval)
 (令 ([某􏿲 (􏿲 'a 'b 'c 'd)])
   (􏿲攸! 某􏿲 2 'x)
@@ -77,7 +77,7 @@
 ]
 
 
-@section{􏿲􏾺、􏿲􏾹、􏿲􏾺分、􏿲部}
+@section+elemref{􏿲􏾺、􏿲􏾹、􏿲􏾺分、􏿲部}
 @examples[#:eval (the-eval)
 (􏿲􏾺 '#(a b c d e f) 2)
 (􏿲􏾹 '#(a b c d e f) 2)
@@ -85,7 +85,7 @@
 (􏿲部 '#(a b c d e f) 2 5)
 ]
 
-@section{􏿲𬩽，􏿲𮞑，􏿲􏾽，􏿲􏾼}
+@section+elemref{􏿲𬩽，􏿲𮞑，􏿲􏾽，􏿲􏾼}
 @examples[#:eval (the-eval)
 (􏿲𬩽 'c '#(a b 1 c 2 d 3 e))
 
