@@ -43,7 +43,8 @@
   (syntax-case stx ()
     [(_ pars ...)
      (datum->syntax stx `(begin
-                           ,@(for/list ([e (string-split (syntax-e (last (syntax-e #'(pars ...)))) #rx"(、|，)")]) (list 'elemtag e))
-                           ,(cons 'section #'(pars ...))  ))]
+                           ,(cons 'section #'(pars ...))
+                           ,@(for/list ([e (string-split (syntax-e (last (syntax-e #'(pars ...)))) #rx"(、|，)")]) (list 'elemtag (string-trim e))) ; fix last, when source code includes newlines
+                           (linebreak)))]
     )
   )

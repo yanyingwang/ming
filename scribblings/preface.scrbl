@@ -3,6 +3,9 @@
 
 @(require (for-label racket ming))
 
+@(require scribble-rainbow-delimiters)
+@script/rainbow-delimiters*
+
 @title[#:tag "preface"]{序}
 
 @section{灵感来源}

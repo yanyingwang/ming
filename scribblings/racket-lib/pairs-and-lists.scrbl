@@ -138,6 +138,9 @@
 ]
 
 @section+elemref{阴、阳，阴之阳、阳之阳、阴之阴阳、阳之阴阳}
+@margin-note{
+“阴”、“阳”是@hyperlink["https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%B9%B2"]{中国传统哲学的一种二元论观念}。
+}
 @examples[#:eval (the-eval)
 (阳 '(1 . 2))
 (阴 '(1 . 2))
@@ -220,7 +223,9 @@
 ]
 
 @section+elemref{甲、乙、丙、丁、戊、己、庚、辛、壬、癸}
-使用中国古代文字记序符号“@hyperlink["https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%B9%B2" "十天干"]”，对@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据中特定位置之元素进行提取。
+@margin-note{
+“甲”、“乙”、“丙”、“丁”、“戊”、“己”、“庚”、“辛”、“壬”、“癸”是@hyperlink["https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%B9%B2"]{中国古代的一种文字记序符号} 。
+}
 @examples[#:eval (the-eval)
 (甲 '(1 2 3 4 5 6 7 8 9 10))
 (乙 '(1 2 3 4 5 6 7 8 9 10))
@@ -245,7 +250,7 @@
 @; (尾 '(1 2 3 4))
 ]
 
-@section+elemref{第，笈、􏿊、􏿊/入}
+@section+elemref{第，笈、笈/入，􏿊、􏿊/入}
 @; 用于索引􏿴中的元素和查找􏿴中某元素的索引（另见：@racket[􏿊]、@racket[􏿚]）。
 
 @margin-note{

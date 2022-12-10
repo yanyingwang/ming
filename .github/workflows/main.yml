@@ -31,6 +31,7 @@ jobs:
                         --dest-name doc \
                         ++main-xref-in \
                         --redirect-main https://docs.racket-lang.org/ \
+                        # --redirect-main file:///home/yanying/racket/doc/index.html \  # for localhost doc
                         --redirect https://docs.racket-lang.org/local-redirect/index.html \
                         scribblings/ming.scrbl
       - name: Deploy to GitHub Pages
