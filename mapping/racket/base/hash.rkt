@@ -20,7 +20,7 @@
 >>> make-immutable-hasheqv 􏿳->􏿱/粡 @elem{与上同，不过键的比较采用的是@racket[粡?]}
 >>> make-immutable-hasheq 􏿳->􏿱/侗 @elem{与上同，不过键的比较采用的是@racket[侗?]}
 
->>> make-hash 􏿳->􏿱/易 @elem{与@racket[􏿳->􏿱]同，不过生成的是（@code{(非 坚?)}）数据}
+>>> make-hash 􏿳->􏿱/易 @elem{与@racket[􏿳->􏿱]同，不过生成的是“易”（可变的，即@code{(非 坚?)}）数据}
 >>> make-hashalw 􏿳->􏿱/􏾬/易 @elem{与上同，不过键的比较采用的是@racket[􏾬?]}
 >>> make-hasheqv 􏿳->􏿱/粡/易 @elem{与上同，不过键的比较采用的是@racket[粡?]}
 >>> make-hasheq 􏿳->􏿱/侗/易 @elem{与上同，不过键的比较采用的是@racket[侗?]}

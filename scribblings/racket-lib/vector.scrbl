@@ -15,22 +15,24 @@
 
 @title[#:tag "vector"]{􏿲}
 
-@section{􏿲}
-“􏿲”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "vector"]），和“􏿴”所代表的数据结构类似，但显著的一个不同是访问和更新其元素值的时间复杂度是@hyperlink["https://zh.wikipedia.org/wiki/%E5%B8%B8%E6%95%B8%E6%99%82%E9%96%93" "常数时间"]。
-
+@section+elemref{􏿲、􏿲/坚，复􏿲、序􏿲，毌􏿲，空􏿲?、􏿲?}
+“􏿲”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "vector"]）是和“@racket[􏿴]”类似的一种数据结构，但显著的一个不同是访问和更新其元素值的时间复杂度是@hyperlink["https://zh.wikipedia.org/wiki/%E5%B8%B8%E6%95%B8%E6%99%82%E9%96%93" "常数时间"]。
 
 @margin-note{
-@bold{“@racket[􏿲]”为新造字}
+@bold{@litchar{􏿲}为新造字}
 @itemlist[
 @item{该字中的偏旁@litchar{矢}是“矢量”（vector）的意思；}
-@item{偏旁@litchar{矢}呈现为半包围结构，表示其所代表的数据也是一种类似链状的结构。}
+@item{偏旁@litchar{矢}呈现为半包围结构，表示其所代表的数据也是一种类似@racket[􏿴]一样的链状结构。}
 ]
 }
 
-@section+elemref{􏿲、坚􏿲，复􏿲、序􏿲，毌􏿲，空􏿲?、􏿲?}
 @examples[#:eval (the-eval)
 (􏿲 1 2 3 4)
-(坚􏿲 1 2 3 4)
+(􏿲? (􏿲 1 2 3 4))
+(坚? (􏿲 1 2 3 4))
+(􏿲/坚 1 2 3 4)
+(􏿲? (􏿲/坚 1 2 3 4))
+(坚? (􏿲/坚 1 2 3 4))
 
 (复􏿲 5 'foo)
 (序􏿲 5 􏾴)
@@ -38,7 +40,6 @@
 (毌􏿲 '#(1) '#(2) '#(3) '#(4))
 
 (空􏿲? '#())
-(􏿲? '#(1 2 3 4))
 ]
 
 
@@ -50,12 +51,11 @@
 ]
 
 
-@section+elemref{􏿲->􏿴、􏿴->􏿲，􏿲->坚􏿲，􏿲->􏾴}
+@section+elemref{􏿴->􏿲，􏿲->􏿲/坚，􏿲->􏿴，􏿲->􏾴}
 @examples[#:eval (the-eval)
-(􏿲->􏿴 '#(a b c d))
 (􏿴->􏿲 '(a b c d))
-
-(􏿲->坚􏿲 '#(a b c d))
+(􏿲->􏿴 '#(a b c d))
+(􏿲->􏿲/坚 '#(a b c d))
 (􏿲->􏾴 '#(a b c d))
 (􏿲->􏾴 '#(a b c d) 0 2)
 ]

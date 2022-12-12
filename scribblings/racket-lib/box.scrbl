@@ -5,7 +5,7 @@
            ming/scribble
            )
 @(define the-eval
-         (make-eval-factory '(ming/racket/base ming/racket/box)))
+         (make-eval-factory '(ming/racket/base)))
 
 @(require (file "../../private/scribble-styles/css/fonts.css.rkt"))
 @css/wenquan-extend-font
@@ -14,3 +14,10 @@
 
 
 @title[#:tag "box"]{矢}
+“矢”是只有一个元素的@racket[􏿲]。
+
+
+@section[#:tag "vector-base"]{基础例程}
+@defmapping[
+racket/base/box
+]
