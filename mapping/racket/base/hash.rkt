@@ -1,35 +1,34 @@
 #lang at-exp s-exp "../../../private/mapping-lang.rkt"
 
 
->>> hash? 􏿱*?
-
->>> hash-equal? 􏿱?
->>> hash-equal-always? 􏿱/􏾱?
->>> hash-eqv? 􏿱/􏾰?
->>> hash-eq? 􏿱/􏾯?
->>> hash-strong? 􏿱/强?
->>> hash-weak? 􏿱/弱?
+>>> hash? 􏿱? @elem{是否是@racket[􏿱]数据结构}
+>>> hash-equal? 􏿱/同? @elem{是否是@racket[􏿱]数据结构（且键的比较采用的是@racket[同?]）}
+>>> hash-equal-always? 􏿱/􏾬? @elem{与上同，不过键的比较采用的是@racket[􏾬?]}
+>>> hash-eqv? 􏿱/粡? @elem{与上同，不过键的比较采用的是@racket[粡?]}
+>>> hash-eq? 􏿱/侗? @elem{与上同，不过键的比较采用的是@racket[侗?]}
+>>> hash-strong? 􏿱/刚? @elem{与上同，不过键是被刚性存储的} ; 刚 强
+>>> hash-weak? 􏿱/柔? @elem{与上同，不过键是被柔性存储的}; 柔
 ;; hash-ephemeron?
 
->>> hash 􏿱
->>> hashalw 􏿱/􏾱
->>> hasheqv 􏿱/􏾰
->>> hasheq 􏿱/􏾯
+>>> hash 􏿱 @elem{创建数据（且键的比较采用的是@racket[同?]）}
+>>> hashalw 􏿱/􏾬 @elem{与上同，不过键的比较采用的是@racket[􏾬?]} ; 􏾱􏿱
+>>> hasheqv 􏿱/粡 @elem{与上同，不过键的比较采用的是@racket[粡?]}; 􏾪􏿱 􏾰􏿱 􏾭 􏾫
+>>> hasheq 􏿱/侗 @elem{与上同，不过键的比较采用的是@racket[侗?]}; 􏾯􏿱
 
->>> make-immutable-hash 􏿳->􏿱
->>> make-immutable-hashalw 􏿳->􏿱/􏾱
->>> make-immutable-hasheqv 􏿳->􏿱/􏾰
->>> make-immutable-hasheq 􏿳->􏿱/􏾯
+>>> make-immutable-hash 􏿳->􏿱 @elem{转换生成@racket[􏿱]数据（且键的比较采用的是@racket[同?]）}
+>>> make-immutable-hashalw 􏿳->􏿱/􏾬 @elem{与上同，不过键的比较采用的是@racket[􏾬?]}
+>>> make-immutable-hasheqv 􏿳->􏿱/粡 @elem{与上同，不过键的比较采用的是@racket[粡?]}
+>>> make-immutable-hasheq 􏿳->􏿱/侗 @elem{与上同，不过键的比较采用的是@racket[侗?]}
 
->>> make-hash 􏿳->易􏿱
->>> make-hashalw 􏿳->易􏿱/􏾱
->>> make-hasheqv 􏿳->易􏿱/􏾰
->>> make-hasheq 􏿳->易􏿱/􏾯
+>>> make-hash 􏿳->􏿱/易 @elem{与@racket[􏿳->􏿱]同，不过生成的是（@code{(非 坚?)}）数据}
+>>> make-hashalw 􏿳->􏿱/􏾬/易 @elem{与上同，不过键的比较采用的是@racket[􏾬?]}
+>>> make-hasheqv 􏿳->􏿱/粡/易 @elem{与上同，不过键的比较采用的是@racket[粡?]}
+>>> make-hasheq 􏿳->􏿱/侗/易 @elem{与上同，不过键的比较采用的是@racket[侗?]}
 
->>> make-weak-hash 􏿳->弱􏿱
->>> make-weak-hashalw 􏿳->弱􏿱/􏾱
->>> make-weak-hasheqv 􏿳->弱􏿱/􏾰
->>> make-weak-hasheq 􏿳->弱􏿱/􏾯
+>>> make-weak-hash 􏿳->􏿱/柔 @elem{与@racket[􏿳->􏿱]同，不过另有特性@code{􏿱/柔?}}
+>>> make-weak-hashalw 􏿳->􏿱/􏾬/柔 @elem{与上同，不过键的比较采用的是@racket[􏾬?]}
+>>> make-weak-hasheqv 􏿳->􏿱/粡/柔 @elem{与上同，不过键的比较采用的是@racket[粡?]}
+>>> make-weak-hasheq 􏿳->􏿱/侗/柔 @elem{与上同，不过键的比较采用的是@racket[侗?]}
 
 >>> hash-set 􏿱攸
 >>> hash-set! 􏿱攸!

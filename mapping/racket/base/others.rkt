@@ -2,9 +2,9 @@
 
 
 >>> equal? 同? ;;; 同 同齐 同等 俤
->>> equal-always? 􏾱?
->>> eqv? 􏾰? ;; ???? ;; #f <= (eqv? (make-string 3 #\z) (make-string 3 #\z))
->>> eq? 􏾯? ;; #f <= (eq? (make-string 3 #\z) (make-string 3 #\z)) (eq? (expt 2 100) (expt 2 100))
+>>> equal-always? 􏾬? ;; 􏾱?
+>>> eqv? 粡? ;; 􏾰? ;; ???? ;; #f <= (eqv? (make-string 3 #\z) (make-string 3 #\z))
+>>> eq? 侗? ;; 􏾯? ;; 􏾯 #f <= (eq? (make-string 3 #\z) (make-string 3 #\z)) (eq? (expt 2 100) (expt 2 100))
 ;; 相当 (两方面差不多；配得上或能够相抵。)
 ;; 等同 (看作相同；当做同样的事物看待)
 ;; 相等 ([数目、数、量或尺寸的] 相同)
@@ -28,6 +28,5 @@
 >>> eval 求
 >>> void? 无?
 
->>> immutable? 坚?
-
+>>> immutable? 坚? @elem{“不可变的”的意思。另常用有“易”和其意思相对，意思是“可变的”，即@code{(非 坚?)}}
 >>> raise-argument-error 报参错
