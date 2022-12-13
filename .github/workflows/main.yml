@@ -31,9 +31,9 @@ jobs:
                         --dest-name doc \
                         ++main-xref-in \
                         --redirect-main https://docs.racket-lang.org/ \
-                        # --redirect-main file:///home/yanying/racket/doc/index.html \  # for localhost doc
                         --redirect https://docs.racket-lang.org/local-redirect/index.html \
                         scribblings/ming.scrbl
+                        # --redirect-main file:///home/yanying/racket/doc/index.html \  # for localhost doc
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v1.2.5
