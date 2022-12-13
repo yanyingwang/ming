@@ -30,18 +30,18 @@
 >>> make-weak-hasheqv 􏿳->􏿱/粡/柔 @elem{与上同，不过键的比较采用的是@racket[粡?]}
 >>> make-weak-hasheq 􏿳->􏿱/侗/柔 @elem{与上同，不过键的比较采用的是@racket[侗?]}
 
->>> hash-set 􏿱攸
->>> hash-set! 􏿱攸!
->>> hash-set*! 􏿱攸*!
+>>> hash-set 􏿱􏾩
+>>> hash-set! 􏿱􏾩!
+;; >>> hash-set*! 􏿱􏾩*!
 
->>> hash-ref 􏿱值
->>> hash-ref-key 􏿱键
+>>> hash-ref 􏿱抇 @elem{对于每一个@racket[􏿱]，以其“明”中“阳”位数据为基准，来索引查询“阴”位数据并返回；}
+>>> hash-ref-key 􏿱抈 @elem{对于每一个@racket[􏿱]，以其“明”中“阴”位数据为基准，来索引查询“阳”位数据并返回；}
 
->>> hash-ref! 􏿱值!
->>> hash-has-key? 􏿱键?
+>>> hash-ref! 􏿱抇/􏾩!
+>>> hash-has-key? 􏿱抇?
 
->>> hash-update 􏿱攸/入
->>> hash-update! 􏿱攸!/入
+>>> hash-update 􏿱􏾩/入
+>>> hash-update! 􏿱􏾩!/入
 
 >>> hash-remove! 􏿱删!
 >>> hash-remove 􏿱删
@@ -53,8 +53,8 @@
 >>> hash-map 􏿱𮞑
 >>> hash-map 􏿱𮞑/复
 
->>> hash-keys 􏿱键􏿴
->>> hash-values 􏿱值􏿴
+>>> hash-keys 􏿱->日􏿴
+>>> hash-values 􏿱->月􏿴
 
 >>> hash->list 􏿱->􏿳
 

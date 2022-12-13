@@ -51,7 +51,7 @@
 >>> memq 𬩽/侗 @elem{与@racket[𬩽]类似，不过比较例程是@racket[侗?]}
 >>> memf 𬩽/入
 
->>> assoc 􏿁 @elem{以@racket[同]作为比较来查找出联􏿴中阳位是某值的元素􏿴}  ; 探
+>>> assoc 􏿁 @elem{以@racket[同]作为比较来查找出联􏿴中阳位是某值的元素􏿴}  ; 探 挖 掘
 >>> assw 􏿁/􏾬 @elem{与@racket[􏿁]类似，不过比较例程是@racket[􏾬?]}
 >>> assv 􏿁/粡 @elem{与@racket[􏿁]类似，不过比较例程是@racket[粡?]}
 >>> assq 􏿁/侗 @elem{与@racket[􏿁]类似，不过比较例程是@racket[侗?]}

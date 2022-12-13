@@ -85,6 +85,33 @@
 ]
 
 
+@section+elemref{􏿱抇、􏿱抈}
+对于@racket[􏿱]中的“键值对”，因其是类似于一种@racket[双]的结构而存在的，所以也特别的在此被称之为“明”（@racket[阴]字和@racket[阳]字各取右边偏旁组成的字）。进而：
+@itemlist[
+@item{@racket[􏿱抇]：表示对于每一个􏿱，以其“明”中“阳”位数据为基准，来索引查询“阴”位数据并返回；}
+@item{@racket[􏿱抈]：表示对于每一个􏿱，以其“明”中“阴”位数据为基准，来索引查询“阳”位数据并返回。}
+]
+
+@margin-note{
+@bold{@litchar{抇}为新造字}
+@itemlist[
+@item{“@litchar{扌}”有“出参数据结构是进参数据结构中的某一个元素”的含义；}
+@item{“@litchar{日}”是@racket{阳}的意思。}
+]
+@bold{@litchar{抈}为新造字}
+@itemlist[
+@item{“@litchar{扌}”有“出参数据结构是进参数据结构中的某一个元素”的含义；}
+@item{“@litchar{月}”是@racket{阴}的意思。}
+]
+}
+
+
+@examples[#:eval (the-eval)
+(􏿱抇 (􏿱 'a "apple" 'b "banana" 'c "cat" 'd "dog") 'b)
+(􏿱抈 (􏿱 'a "apple" 'b "banana" 'c "cat" 'd "dog") "cat")
+]
+
+
 @section[#:tag "hash-base"]{基础例程}
 @defmapping[
 racket/base/hash
