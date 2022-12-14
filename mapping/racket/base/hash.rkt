@@ -8,7 +8,7 @@
 >>> hash-eq? 􏿱/侗? @elem{与上同，不过键的比较采用的是@racket[侗?]}
 >>> hash-strong? 􏿱/刚? @elem{与上同，不过键是被刚性存储的} ; 刚 强
 >>> hash-weak? 􏿱/柔? @elem{与上同，不过键是被柔性存储的}; 柔
-;; hash-ephemeron?
+>>> hash-ephemeron? 􏿱/􏾧? @elem{与上同，不过键的存储采用@racket[􏾧]}
 
 >>> hash 􏿱 @elem{创建数据（且键的比较采用的是@racket[同?]）}
 >>> hashalw 􏿱/􏾬 @elem{与上同，不过键的比较采用的是@racket[􏾬?]} ; 􏾱􏿱
