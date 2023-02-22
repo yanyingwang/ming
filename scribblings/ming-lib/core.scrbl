@@ -9,6 +9,11 @@
            racket/sandbox
           )
 
+@(require (file "../../private/scribble-styles/css/fonts.css.rkt"))
+@css/wenquan-extend-font
+@(require scribble-rainbow-delimiters)
+@script/rainbow-delimiters*
+
 @(define the-eval
          (make-eval-factory '(ming)))
 
@@ -23,7 +28,7 @@
 
 @section{ming/core}
 @defmodule[ming/core]
-名语言标准库，语言关键程序（汉化程序和扩展程序）应含于此。
+名语言核心库，语言关键程序（汉化程序和扩展程序）应含于此。
 
 @defform[(mingize module-path)]{
 名化（汉化）一个Racket的库。
@@ -115,7 +120,7 @@
 如何贡献翻译请见@secref["contributing-mapping"]。
 }
 
-名语言为了借用Racket的标准库，需要做大量的翻译。又因翻译文件重在数据，其代码逻辑比较简单，故此另外实现了一个简单的语言来编写翻译代码，@racket[mapping-lang]：
+名语言为了借用Racket的标准库，需要做大量的翻译。又因翻译文件重在数据，其代码逻辑比较简单，故此另外实现了一个简单的模板来编写翻译代码，@racket[mapping-lang]：
 
 @itemlist[
 @item{以@racket[>>>]开头表示开始一个翻译。}

@@ -73,21 +73,21 @@
 
 @item{@bold{list}是另外一个数据结构，它是@bold{pair}这种数据结构的衍生：用@racket[cons]像@racket[(cons 1 (cons 2 (cons 3 '())))]这样就会生成@racket['(1 2 3)]这样的@bold{list}数据结构。
 @linebreak{}
-我们用@litchar{􏿽}（由@litchar{辶}和@litchar{又}组成，半包围结构）来表达@bold{list}，这里的@litchar{辶}表示一个或多个的@litchar{又}（表示数据）组合在一块。
+我们用@litchar{􏿴}（由半包围结构的@litchar{又}和@litchar{㐅}组成，）来表达@bold{list}，这里半包围结构的@litchar{又}表示一个或多个的@litchar{又}（表示数据）组合在一块，@litchar{㐅}表示结尾为空。
 }
 
 @item{@bold{vector}也是一种数据结构，它和@bold{list}类似。如：@racket['#(1 2 3 4)]。
 @linebreak{}
-@bold{vector}可以用汉字@litchar{􏿻}（由@litchar{矢}、@litchar{辶}和@litchar{又}组成，左右半包围结构）来表示。}
+@bold{vector}可以用汉字@litchar{􏿲}（由半包围结构的@litchar{矢}和@litchar{㐅}组成，左右半包围结构）来表示。}
 
 @item{@bold{association list}是@bold{list}这种数据结构的衍生数据结构：每个元素都是@bold{pair}的@bold{list}。如：@racket['((1 . 2) (3 . 4) (5 . 6))]。
 @linebreak{}
-@bold{association list}用@litchar{𨑱}来表示（该字古已有之，由偏旁@litchar{辶}和@litchar{双}组成）。
+@bold{association list}用@litchar{􏿳}来表示。
 }
 
 @item{@bold{hash}也是一种数据结构，它和@bold{association list}类似。如：@racket[#hash((1 . 2) (3 . 4))]。
 @linebreak{}
-@bold{hash}可以用汉字@litchar{􏿼}（@litchar{走}和@litchar{双}组成，半包围结构）来表示。}
+@bold{hash}可以用汉字@litchar{􏿱}来表示。}
 
 @item{@bold{struct}是较以上各数据结构都更结构化的一种数据结构，我们用汉字@litchar{缀}表示之。}
 @item{@bold{class}是较@bold{struct}更为抽象的一种数据结构，我们用汉字@litchar{䄌}表示之。}

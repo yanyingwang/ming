@@ -7,6 +7,9 @@
 @(define the-eval
          (make-eval-factory '(racket/base racket/list ming/racket/base ming/racket/list)))
 
+@(require (file "../private/scribble-styles/css/fonts.css.rkt"))
+@css/wenquan-extend-font
+@(require scribble-rainbow-delimiters)
 @script/rainbow-delimiters*
 
 @title[#:tag "first-contact"]{初见}
