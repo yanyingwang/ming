@@ -91,3 +91,27 @@
 @; (段 '(a b c d e f) 0 2)
 @; ]
 @; }
+
+
+@defproc[(部 [某􏿴 􏿴?] [数A 数?] [数B 数?])
+          􏿴?]{
+@racket[某􏿴]的其中一部分，从@racket[第]@racket[数A]处元素算起，到@racket[第]@racket[数B]止（不包括@racket[数B]）。
+
+@examples[#:eval (the-eval)
+(部 '(a b c d e f) 0 0)
+(部 '(a b c d e f) 2 2)
+(部 '(a b c d e f) 0 2)
+]
+}
+
+
+@defproc[(部* [某􏿴 􏿴?] [数A 数?] [数B 数?])
+          􏿴?]{
+@racket[某􏿴]的其中一部分，从@racket[第]@racket[数A]处元素算起，到@racket[第]@racket[数B]止（包括@racket[数B]）。
+
+@examples[#:eval (the-eval)
+(部* '(a b c d e f) 0 0)
+(部* '(a b c d e f) 2 2)
+(部* '(a b c d e f) 0 2)
+]
+}
