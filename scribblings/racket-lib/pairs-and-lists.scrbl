@@ -34,7 +34,7 @@
                @elem{左偏旁@litchar{亻}}
                "相似者（返回相似之数据）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
-               @elem{@racket[攸]、@racket[􏿊]、@racket[侠]、@racket[伻]、@racket[􏾷]、@racket[􏿄]、@racket[倒]、@racket[𠍣]}
+               @elem{@racket[攸]、@racket[伋]、@racket[侠]、@racket[伻]、@racket[􏾷]、@racket[􏿄]、@racket[倒]、@racket[𠍣]}
                )
 
                (list
@@ -169,7 +169,7 @@
 @section+elemref{序、复} @; 土序 土复 土 means building something.
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据。
 @examples[#:eval (the-eval)
-(序 5 􏾴)
+(序 5 𡖻)
 (序 5 加一)
 (复 5 'foo)
 (序 5 (入 (n) (复 n 'foo)))
@@ -251,27 +251,59 @@
 @; (尾 '(1 2 3 4))
 ]
 
-@section+elemref{第，笈、笈/入，􏿊、􏿊/入}
-@; 用于索引􏿴中的元素和查找􏿴中某元素的索引（另见：@racket[􏿊]、@racket[􏿚]）。
+@; @section+elemref{第，笈、笈/入，􏿊、􏿊/入}
+@; @; 用于索引􏿴中的元素和查找􏿴中某元素的索引（另见：@racket[􏿊]、@racket[􏿚]）。
+@; @margin-note{
+@; @bold{“@racket[笈]”为古活字}
+@; @itemlist[
+@; @item{原义不存，因其形和“@racket[第]”字能对仗呼应，故此使用之。}
+@; ]
+@; @bold{“@racket[􏿊]”为新造字}
+@; }
 
+@; @examples[#:eval (the-eval)
+@; (第 '(a b c d e c f) 2)
+@; (笈 '(a b c d e c f) 'c)
+@; (笈/入 '(a b c d e c f)
+@;          (入 (x)
+@;              (或 (同? x 'b)
+@;                  (同? x 'c))))
+
+@; (􏿊 '(a b c d e c f) 'c)
+@; (􏿊/入 '(a b c d e c f)
+@;          (入 (x)
+@;              (或 (同? x 'b)
+@;                  (同? x 'c))))
+@; ]
+
+@section+elemref{挮，扱、扱/入，伋、伋/入}
+@; 用于索引􏿴中的元素和查找􏿴中某元素的索引（另见：@racket[􏿊]、@racket[􏿚]）。
 @margin-note{
-@bold{“@racket[笈]”为古活字}
+@bold{“@racket[挮]”为古活字}
 @itemlist[
-@item{原义不存，因其形和“@racket[第]”字能对仗呼应，故此使用之。}
+@item{原义不存，是在@litchar{弟}的基础上增加@litchar{扌}偏旁而得用；}
+@item{@litchar{弟}在古代通@litchar{第}，故在此借用其意。}
 ]
-@bold{“@racket[􏿊]”为新造字}
+@bold{“@racket[扱]”为古活字}
+@itemlist[
+@item{原义不存，因其形和“@racket[挮]”字能对仗呼应，故此使用之。}
+]
+@bold{“@racket[伋]”为古活字}
+@itemlist[
+@item{原义不存，修改@litchar{扱}的偏旁@litchar{扌}为@litchar{亻}以暗示出参类型。}
+]
 }
 
 @examples[#:eval (the-eval)
-(第 '(a b c d e c f) 2)
-(笈 '(a b c d e c f) 'c)
-(笈/入 '(a b c d e c f)
+(挮 '(a b c d e c f) 2)
+(扱 '(a b c d e c f) 'c)
+(扱/入 '(a b c d e c f)
          (入 (x)
              (或 (同? x 'b)
                  (同? x 'c))))
 
-(􏿊 '(a b c d e c f) 'c)
-(􏿊/入 '(a b c d e c f)
+(伋 '(a b c d e c f) 'c)
+(伋/入 '(a b c d e c f)
          (入 (x)
              (或 (同? x 'b)
                  (同? x 'c))))
