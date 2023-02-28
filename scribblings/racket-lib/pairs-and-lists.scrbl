@@ -69,7 +69,7 @@
                @elem{@litchar{/入}}
                "进参为函数"
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[𬩽/入]、@racket[攸/入]、@racket[笈/入]、@racket[􏾺/入]}
+               @elem{@racket[𬩽/入]、@racket[攸/入]、@racket[伋/入]、@racket[􏾺/入]}
                )
 
                @; (list
