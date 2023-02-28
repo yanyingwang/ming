@@ -18,7 +18,7 @@
 >>> display 陈 ;; 陈 显 现 呈 示
 >>> displayln 行陈
 
->>> values 𡖻 "复值的意思" ;;  値 􏾴 􏾴 𡖻 殖
+>>> values 殖 "复值的意思" ;;  値 􏾴 􏾴 𡖻 殖
 >>> call-with-values 入􏾴参予 "用continuation生成复值，并作为参数给予某例程"
 
 >>> for 遍 ;; 每 为 历、遍历 对于

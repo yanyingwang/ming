@@ -169,7 +169,7 @@
 @section+elemref{序、复} @; 土序 土复 土 means building something.
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据。
 @examples[#:eval (the-eval)
-(序 5 𡖻)
+(序 5 殖)
 (序 5 加一)
 (复 5 'foo)
 (序 5 (入 (n) (复 n 'foo)))
@@ -234,10 +234,10 @@
 (癸 '(1 2 3 4 5 6 7 8 9 10))
 ]
 
-@section+elemref{末、􏿦}
+@section+elemref{末、􏷽}
 返回􏿴中末尾位置的元素。
 @margin-note{
-@bold{“@racket[􏿦]”为新造字}
+@bold{“@racket[􏷽]”为新造字}
 @itemlist[
 @item{因字所代表之例程的入参和操作入参的处理行为与“@racket[末]”类似而得偏旁@litchar{末}；}
 @item{又因其返回结果的数据之结构与“@racket[双]”的返回类似而得偏旁@litchar{又}。}
@@ -245,7 +245,7 @@
 }
 @examples[#:eval (the-eval)
 (末 '(1 2 3 4))
-(􏿦 '(1 2 3 4))
+(􏷽 '(1 2 3 4))
 @; (首 '(1 2 3 4))
 @; (身 '(1 2 3 4))
 @; (尾 '(1 2 3 4))
