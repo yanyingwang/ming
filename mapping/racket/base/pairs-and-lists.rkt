@@ -43,7 +43,7 @@
 >>> remv 删*/粡 @elem{与@racket[删]类似，不过比较例程是@racket[粡?]}
 >>> remq 删*/侗 @elem{与@racket[删]类似，不过比较例程是@racket[侗?]}
 
->>> sort 𠍣 "整理、排序的意思" ; 亻理 𠍣
+>>> sort 􏷻 "整理、排序的意思" ; 亻理 𠍣
 
 >>> member 𬩽 @elem{以@racket[同]作为比较来查询某值，返回􏿴中某值和其之后的数据组成的新􏿴}  ;; 后􏿴 索 ;; 索 寻 寻随
 >>> memw 𬩽/􏾬 @elem{与@racket[𬩽]类似，不过比较例程是@racket[􏾬?]}

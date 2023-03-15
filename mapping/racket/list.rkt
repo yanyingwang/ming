@@ -51,8 +51,8 @@
 
 >>> append* 􏿜 @elem{把多个@racket[􏿴]贯穿相连组成一个 @racket[􏿫]并返回之}
 
->>> add-between 侠 @elem{@racket[􏿴]中每两个元素之间都插入另一元素} ;; 侠 夹 间 插 搀 掺 􏿃
->>> flatten 伻 @elem{把@racket[􏿴]中数据做扁平化处理} ;; 平
+>>> add-between 𰂋 @elem{@racket[􏿴]中每两个元素之间都插入另一元素} ;; 侠 夹 间 插 搀 掺 􏿃 侠
+>>> flatten 偏 @elem{把@racket[􏿴]中数据做扁平化处理} ;; 平 伻
 >>> shuffle 􏾷 @elem{打乱@racket[􏿴]中元素顺序};;洗 混 淆 纷 紊
 >>> check-duplicates 重 "从􏿴中查找出第一个重复的元素并返回之"
 >>> remove-duplicates 􏿄 "去除􏿴中所有重复的元素并返回去除后的􏿴" ; 去偅

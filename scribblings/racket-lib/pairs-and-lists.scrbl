@@ -34,7 +34,7 @@
                @elem{左偏旁@litchar{亻}}
                "相似者（返回相似之数据）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
-               @elem{@racket[攸]、@racket[伋]、@racket[侠]、@racket[伻]、@racket[􏾷]、@racket[􏿄]、@racket[倒]、@racket[𠍣]}
+               @elem{@racket[攸]、@racket[伋]、@racket[𰂋]、@racket[偏]、@racket[􏾷]、@racket[􏿄]、@racket[倒]、@racket[􏷻]}
                )
 
                (list
@@ -69,7 +69,7 @@
                @elem{@litchar{/入}}
                "进参为函数"
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[𬩽/入]、@racket[攸/入]、@racket[伋/入]、@racket[􏾺/入]}
+               @elem{@racket[𬩽/入]、@racket[攸/入]、@racket[/入]、@racket[􏾺/入]}
                )
 
                @; (list
@@ -373,45 +373,56 @@
 ]
 
 
-@section+elemref{侠，伻，􏾷，重、􏿄} @; 侠 􏿃 􏿄 去偅 𠉗
-@margin-note{
+@section+elemref{𰂋，偏，􏾷，重、􏿄} @; 侠 􏿃 􏿄 去偅 𠉗 伻
 @; @bold{“@racket[􏿃]”为活用字}
 @; @itemlist[
 @; @item{“掺”表示把某一值掺入到􏿴中；}
 @; @item{“亻”表示出参数据之结构和入参相同（均为􏿴）。}
 @; ]
-@; }
-@bold{“@racket[侠]”为活用字}
-@itemlist[
-@item{@litchar{夹}表意，意为“把某一值夹杂到􏿴中”；}
-]
-}
 
-@margin-note{
-@bold{“@racket[伻]”为新造字}
-@itemlist[
-@item{@litchar{平}表意，意为“将􏿴中元素做扁平化处理”；}
-]
-}
+@; @bold{“@racket[侠]”为活用字}
+@; @itemlist[
+@; @item{@litchar{夹}表意，意为“把某一值夹杂到􏿴中”；}
+@; ]
 
-@; @margin-note{
+@; @bold{“@racket[伻]”为新造字}
+@; @itemlist[
+@; @item{@litchar{平}表意，意为“将􏿴中元素做扁平化处理”；}
+@; ]
+
 @; @bold{“@racket[𠉗]”为活古字}
 @; @itemlist[
 @; @item{“乱”字表意，意为“将􏿴中元素做乱序处理”；}
 @; @item{“亻”偏旁表示出参数据之结构和入参相同（均为􏿴）；}
 @; ]
-@; }
+
+
+@margin-note{
+@bold{“@racket[𰂋]”为新造字}
+@itemlist[
+@item{@litchar{间}表意（“间以”的意思），意为“对􏿴数据中元素间以某值并返回处理后的新􏿴”；}
+]
+}
+
+@margin-note{
+@bold{“@racket[偏]”为活用字}
+@itemlist[
+@item{@litchar{扁}表意（“扁平”的意思），意为“对􏿴数据中的元素做扁平化处理并返回处理后新􏿴”；}
+]
+}
+
 @margin-note{
 @bold{“@racket[􏾷]”为新造字}
 @itemlist[
 @item{@litchar{紊}表意（紊本意是“乱”的意思（故有成语“有条不紊”）），意为“对􏿴中元素做乱序处理”；}
 ]
 }
+
 @margin-note{@bold{“@racket[􏿄]”为新造字}}
 
 @examples[#:eval (the-eval)
-(侠 '(a b c d) '和)
-(伻 '((a b) (c d) (e f)))
+(𰂋 '(a b c d) '和)
+(偏 '((a b) (c d) (e f)))
 (􏾷 '(a b c d e d c b a))
 
 (重 '(a b c d e d c b a))
@@ -419,19 +430,23 @@
 ]
 
 
-@section+elemref{倒、𠍣}
+@section+elemref{倒、􏷻} @; 𠍣
 @margin-note{
-@bold{“@racket[𠍣]”为新造字}
+@; @bold{“@racket[𠍣]”为新造字}
+@; @itemlist[
+@; @item{@litchar{排}表意，意为“对􏿴中元素进行排序”。}
+@; ]
+@bold{“@racket[􏷻]”为新造字}
 @itemlist[
-@item{@litchar{排}表意，意为“对􏿴中元素进行排序”。}
+@item{@litchar{理}表意，意为“整理，排列”，即为“对􏿴中元素按照一定规则进行整理排序”。}
 ]
 }
 @examples[#:eval (the-eval)
 (倒 '(21 3 888 666 55 77 1000))
-(𠍣 '(21 3 888 666 55 77 1000) <)
-(𠍣 '(21 3 888 666 55 77 1000) >)
-(𠍣 '("cat" "dog" "chicken" "duck" "fox") 诗<?)
-(𠍣 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
+(􏷻 '(21 3 888 666 55 77 1000) <)
+(􏷻 '(21 3 888 666 55 77 1000) >)
+(􏷻 '("cat" "dog" "chicken" "duck" "fox") 诗<?)
+(􏷻 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
 ]
 
 

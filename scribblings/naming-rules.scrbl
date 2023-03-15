@@ -18,6 +18,18 @@
 @section[#:tag "word creating rules"]{组词规则}
 由字组词的规则如下：
 
+@tabular[#:style 'boxed
+         #:column-properties '(left left)
+         #:row-properties '(bottom-border ())
+         (list (list @bold{规则} @bold{解释} @bold{示例})
+               (list "单字例程名且带有“亻”偏旁"  "表示例程入参和出参的数据类型相同（且数据内容也部分相同）" "佐、佑、攸")
+               (list "例程名字中包含“/入”"  "表示例程的入参并非常规数据，而是一个函数例程或是匿名函数"  "佐/入、攸/入、消/入")
+               (list "例程名字中包含“/以”" "用于提示例程的入参数据类型"  "诗修!/以它段")
+               (list "例程名字中包含“/成”的"  "用于提示例程的输出结果是某一类型" "/成诗、/成词")
+               )]
+
+
+
 @itemlist[
 @item{原则上带有“亻”偏旁的例程名，是为暗示例程入参和出参的数据类型相同（且数据内容也部分相同）。此如：@racket[佐]、@racket[佑]、@racket[攸]等。}
 @item{凡是例程名字中包含@litchar{/入}的，均表示例程的入参并非常规数据，而是一个函数例程或是匿名函数（@racket[入]）。此如：@racket[佐/入]、@racket[攸/入]、@racket[消/入]等。}
