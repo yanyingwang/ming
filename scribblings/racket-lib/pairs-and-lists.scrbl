@@ -430,23 +430,29 @@
 ]
 
 
-@section+elemref{倒、􏷻} @; 𠍣
-@margin-note{
-@; @bold{“@racket[𠍣]”为新造字}
+@section+elemref{仮、􏿀} @; 𠍣
+@; @bold{“@racket[排]”为新造字}
 @; @itemlist[
 @; @item{@litchar{排}表意，意为“对􏿴中元素进行排序”。}
 @; ]
+@margin-note{
+@bold{“@racket[仮]”为古活字}
+@itemlist[
+@item{@litchar{反}表意，意为“反向、倒序”，即为“把􏿴反过来，对􏿴中元素进行倒序排列”。}
+]
+}
+@margin-note{
 @bold{“@racket[􏷻]”为新造字}
 @itemlist[
 @item{@litchar{理}表意，意为“整理，排列”，即为“对􏿴中元素按照一定规则进行整理排序”。}
 ]
 }
 @examples[#:eval (the-eval)
-(倒 '(21 3 888 666 55 77 1000))
-(􏷻 '(21 3 888 666 55 77 1000) <)
-(􏷻 '(21 3 888 666 55 77 1000) >)
-(􏷻 '("cat" "dog" "chicken" "duck" "fox") 诗<?)
-(􏷻 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
+(仮 '(21 3 888 666 55 77 1000))
+(􏿀 '(21 3 888 666 55 77 1000) <)
+(􏿀 '(21 3 888 666 55 77 1000) >)
+(􏿀 '("cat" "dog" "chicken" "duck" "fox") 诗<?)
+(􏿀 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
 ]
 
 
