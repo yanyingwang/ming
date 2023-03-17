@@ -442,7 +442,7 @@
 ]
 }
 @margin-note{
-@bold{“@racket[􏷻]”为新造字}
+@bold{“@racket[􏿀]”为新造字}
 @itemlist[
 @item{@litchar{理}表意，意为“整理，排列”，即为“对􏿴中元素按照一定规则进行整理排序”。}
 ]
