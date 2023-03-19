@@ -15,7 +15,7 @@
 
 @title[#:tag "pairs-and-lists"]{双和􏿴}
 
-@section{例程命名规则}
+@section[#:tag "rules"]{例程命名规则}
 除总@secref["naming-rules"]外，另有：
 
 @tabular[@;#:sep @hspace[1]
@@ -137,6 +137,7 @@
 (􏿫 1 2 3 4)
 (􏿫 1 2 3 '(4))
 ]
+
 
 @section+elemref{阴、阳，阴之阳、阳之阳、阴之阴阳、阳之阴阳}
 @margin-note{
@@ -276,34 +277,43 @@
 @;                  (同? x 'c))))
 @; ]
 
-@section+elemref{挮，扱、扱/入，伋、伋/入}
-@; 用于索引􏿴中的元素和查找􏿴中某元素的索引（另见：@racket[􏿊]、@racket[􏿚]）。
+@; @section+elemref{挮，扱、扱/入，伋、伋/入}
+@; @margin-note{
+@; @bold{“@racket[挮]”为古活字}
+@; @itemlist[
+@; @item{原义不存，是在@litchar{弟}的基础上增加@litchar{扌}偏旁而得用；}
+@; @item{@litchar{弟}在古代通@litchar{第}，故在此借用其意。}
+@; ]
+@; @bold{“@racket[扱]”为古活字}
+@; @itemlist[
+@; @item{原义不存，因其形和“@racket[挮]”字能对仗呼应，故此使用之。}
+@; ]
+@; @bold{“@racket[伋]”为古活字}
+@; @itemlist[
+@; @item{原义不存，修改@litchar{扱}的偏旁@litchar{扌}为@litchar{亻}以暗示出参类型。}
+@; ]
+@; }
+
+@section+elemref{𫼛，弔、弔/入，伄、伄/入}
 @margin-note{
-@bold{“@racket[挮]”为古活字}
+@bold{“@racket[弔、𫼛、伄]”为古活字}
 @itemlist[
-@item{原义不存，是在@litchar{弟}的基础上增加@litchar{扌}偏旁而得用；}
-@item{@litchar{弟}在古代通@litchar{第}，故在此借用其意。}
-]
-@bold{“@racket[扱]”为古活字}
-@itemlist[
-@item{原义不存，因其形和“@racket[挮]”字能对仗呼应，故此使用之。}
-]
-@bold{“@racket[伋]”为古活字}
-@itemlist[
-@item{原义不存，修改@litchar{扱}的偏旁@litchar{扌}为@litchar{亻}以暗示出参类型。}
+@item{@litchar{弔}像是木桩上缠绕的绳子，借以表示“索引”的意思；}
+@item{@litchar{𫼛}是对@litchar{弔}加@litchar{扌}，表示提取某索引处的值。}
+@item{@litchar{伄}是对@litchar{弔}加@litchar{亻}，含义见：@secref["rules"]。}
 ]
 }
 
 @examples[#:eval (the-eval)
-(挮 '(a b c d e c f) 2)
-(扱 '(a b c d e c f) 'c)
-(扱/入 '(a b c d e c f)
+(𫼛 '(a b c d e c f) 2)
+(弔 '(a b c d e c f) 'c)
+(弔/入 '(a b c d e c f)
          (入 (x)
              (或 (同? x 'b)
                  (同? x 'c))))
 
-(伋 '(a b c d e c f) 'c)
-(伋/入 '(a b c d e c f)
+(伄 '(a b c d e c f) 'c)
+(伄/入 '(a b c d e c f)
          (入 (x)
              (或 (同? x 'b)
                  (同? x 'c))))

@@ -21,10 +21,10 @@
 >>> list-set 攸 @elem{修改􏿴@racket[第]N处的值为一个新的值} ;; 修 更 改 新 肖 攸 􏿛
 >>> list-update 攸/入 @elem{与@racket[攸]类似，不过进参是@racket[入]} ;; 攸
 
->>> index-of 扱 @elem{返回@racket[􏿴]某个值的@racket[挮]} ;; 引 导 笈
->>> indexes-of 伋 @elem{与@racket[扱]，不过返回的是所有符合条件的，并且返回数据的结构是@racket[􏿴]} ;; 􏿉 􏿊
->>> index-where 扱/入 @elem{与@racket[扱]类似，不过进参是@racket[入]} ;; 引 导  函 =》以例 􏿊
->>> indexes-where 伋/入 @elem{与@racket[伋]类似，不过进参是@racket[入]} ;; 􏿊
+>>> index-of 弔 @elem{返回@racket[􏿴]中某个值的索引} ;; 引 导 笈 扱
+>>> index-where 弔/入 @elem{与@racket[弔]类似，不过进参是@racket[入]} ;; 引 导  函 =》以例 􏿊 􏷻
+>>> indexes-of 伄 @elem{与@racket[弔]，不过返回的是所有符合条件的，并且返回数据的结构是@racket[􏿴]} ;; 􏿉 􏿊 伋 􏷺
+>>> indexes-where 伄/入 @elem{与@racket[伄]类似，不过进参是@racket[入]} ;; 􏿊
 
 >>> take 􏾺 "从􏿴中左起依次取出来N个元素并组成新􏿴返回"
 >>> take-right 𨚞 "与上类似，不过是从右边开始操作的"
