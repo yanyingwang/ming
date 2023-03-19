@@ -8,6 +8,8 @@
 
 @title[#:tag "preface"]{序}
 
+另见：@url{http://www.yanying.wang/SOICOL/}
+
 @section{灵感来源}
 纵观人类历史，很多有意义的成果往往都不是靠严谨的逻辑推理得来的，而是一时的灵感迸发，先有了结论，然后再去寻找现象去证明结论。
 
