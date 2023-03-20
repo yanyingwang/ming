@@ -21,10 +21,10 @@
 >>> list-set 攸 @elem{修改􏿴@racket[第]N处的值为一个新的值} ;; 修 更 改 新 肖 攸 􏿛
 >>> list-update 攸/入 @elem{与@racket[攸]类似，不过进参是@racket[入]} ;; 攸
 
->>> index-of 弔 @elem{返回@racket[􏿴]中某个值的索引} ;; 引 导 笈 扱
->>> index-where 弔/入 @elem{与@racket[弔]类似，不过进参是@racket[入]} ;; 引 导  函 =》以例 􏿊 􏷻
->>> indexes-of 伄 @elem{与@racket[弔]，不过返回的是所有符合条件的，并且返回数据的结构是@racket[􏿴]} ;; 􏿉 􏿊 伋 􏷺
->>> indexes-where 伄/入 @elem{与@racket[伄]类似，不过进参是@racket[入]} ;; 􏿊
+>>> index-of 引 @elem{返回@racket[􏿴]中某个值的索引} ;; 引 导 笈 扱 𫼛 弔
+>>> indexes-of 𠇁 @elem{与@racket[引]，不过返回的是所有符合条件的，并且返回数据的结构是@racket[􏿴]} ;; 􏿉 􏿊 伋 􏷺 伄
+>>> index-where 引/入 @elem{与@racket[引]类似，不过进参是@racket[入]} ;; 引 导  函 =》以例 􏿊 􏷻 弔
+>>> indexes-where 𠇁/入 @elem{与@racket[𠇁]类似，不过进参是@racket[入]} ;; 􏿊 伄
 
 >>> take 􏾺 "从􏿴中左起依次取出来N个元素并组成新􏿴返回"
 >>> take-right 𨚞 "与上类似，不过是从右边开始操作的"
@@ -57,8 +57,8 @@
 >>> check-duplicates 重 "从􏿴中查找出第一个重复的元素并返回之"
 >>> remove-duplicates 􏿄 "去除􏿴中所有重复的元素并返回去除后的􏿴" ; 去偅
 
->>> filter-not 􏾼 ;; 筛除 ; 淘 汰 剔 􏾽余
->>> partition 􏾽分 (elem "符合条件的元素选出为􏿴，和剩下的􏿴，共计返回两个值") ;; 筛开 筛分 筛离 筛分
+>>> filter-not 􏷸 ;; 筛除 ; 淘 汰 剔 􏾽余 􏾼
+>>> partition 􏷹分 (elem "符合条件的元素选出为􏿴，和剩下的􏿴，共计返回两个值") ;; 筛开 筛分 筛离 筛分 􏾽分
 >>> count 计 ;;度/入
 
 >>> filter-map 𮞑之􏾽 @elem{等同于@code{(􏾽 (入 (x) x) (𮞑 proc lst))}}

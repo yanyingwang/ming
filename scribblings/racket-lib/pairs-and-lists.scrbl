@@ -294,29 +294,40 @@
 @; ]
 @; }
 
-@section+elemref{𫼛，弔、弔/入，伄、伄/入}
+@; @section+elemref{𫼛，弔、弔/入，伄、伄/入}
+@; @margin-note{
+@; @bold{“@racket[弔、𫼛、伄]”为古活字}
+@; @itemlist[
+@; @item{@litchar{弔}像是木桩上缠绕的绳子，借以表示“索引”的意思；}
+@; @item{@litchar{𫼛}是对@litchar{弔}加@litchar{扌}，表示提取某索引处的值。}
+@; @item{@litchar{伄}是对@litchar{弔}加@litchar{亻}，含义见：@secref["rules"]。}
+@; ]
+@; }
+
+@section+elemref{引、引/入，𠇁、𠇁/入、𢪉}
 @margin-note{
-@bold{“@racket[弔、𫼛、伄]”为古活字}
+@bold{“@racket[𢪉、𠇁]”为古活字}
 @itemlist[
-@item{@litchar{弔}像是木桩上缠绕的绳子，借以表示“索引”的意思；}
-@item{@litchar{𫼛}是对@litchar{弔}加@litchar{扌}，表示提取某索引处的值。}
-@item{@litchar{伄}是对@litchar{弔}加@litchar{亻}，含义见：@secref["rules"]。}
+@item{@litchar{引}是“索引”的意思，即返回某值的索引；}
+@item{@litchar{𠇁}是对@litchar{引}加@litchar{亻}，含义见：@secref["rules"]。}
+@item{@litchar{𢪉}是对@litchar{引}加@litchar{扌}，表示用某索引提取相对应的值。}
 ]
 }
 
+
 @examples[#:eval (the-eval)
-(𫼛 '(a b c d e c f) 2)
-(弔 '(a b c d e c f) 'c)
-(弔/入 '(a b c d e c f)
+(引 '(a b c d e c f) 'c)
+(引/入 '(a b c d e c f)
          (入 (x)
              (或 (同? x 'b)
                  (同? x 'c))))
 
-(伄 '(a b c d e c f) 'c)
-(伄/入 '(a b c d e c f)
+(𠇁 '(a b c d e c f) 'c)
+(𠇁/入 '(a b c d e c f)
          (入 (x)
              (或 (同? x 'b)
                  (同? x 'c))))
+(𢪉 '(a b c d e c f) 2)
 ]
 
 
@@ -487,13 +498,14 @@
 (计 正数? '(1 2 -3 4))
 ]
 
-@section+elemref{查、􏾽、􏾼、􏾽分}
-@margin-note{@bold{“@racket[􏾽]”、“@racket[􏾼]”为新造字}}
+@section+elemref{查、􏷹、􏷸、􏷹分}
+@; @margin-note{@bold{“@racket[􏾽]”、“@racket[􏾼]”为新造字}}
+@margin-note{@bold{“@racket[􏷹]”、“@racket[􏷸]”为新造字}}
 @examples[#:eval (the-eval)
 (查 正数? '(1 2 -3 4))
-(􏾽 正数? '(1 2 -3 4))
-(􏾼 正数? '(1 2 -3 4))
-(􏾽分 正数? '(1 2 -3 4)) @; 􏾽离 would still be list
+(􏷹 正数? '(1 2 -3 4))
+(􏷸 正数? '(1 2 -3 4))
+(􏷹分 正数? '(1 2 -3 4)) @; 􏾽离 would still be list
 ]
 
 @section+elemref{各，𮞑，𮞑全、𮞑有，𮞑参予、𮞑倒参予，𮞑之􏾽、𮞑之􏿝}
