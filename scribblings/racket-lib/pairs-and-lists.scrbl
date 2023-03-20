@@ -366,7 +366,7 @@
 @margin-note{
 @bold{
 “@racket[􏾺]”、“@racket[𨚞]”为新造字 @linebreak{}
-“@racket[􏷵]”、“@racket[、􏷴]”为新造字
+“@racket[􏷵]”、“@racket[􏷴]”为新造字
 }
 
 }
