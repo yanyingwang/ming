@@ -33,32 +33,32 @@
 >>> foldl 𮞑参予 "􏿴中各个元素依次作为参数，和初始参数一块作用到某例程上"  ;; 各左参
 >>> foldr 𮞑倒参予 "􏿴中各个元素倒序地依次作为参数，和初始参数一块作用到某例程上"
 
->>> remove 􏷲 @elem{以@racket[同?]作为比较来查找并删除某值在􏿴中的第一个存在} ;; 刈 删 缺
->>> remw 􏷲/􏾬 @elem{与@racket[􏷲]类似，不过比较例程是@racket[􏾬?]}
->>> remv 􏷲/粡 @elem{与@racket[􏷲]类似，不过比较例程是@racket[粡?]}
->>> remq 􏷲/侗 @elem{与@racket[􏷲]类似，不过比较例程是@racket[侗?]}
+>>> remove 􏷲~ @elem{以@racket[同?]作为比较来查找并删除某值在􏿴中的第一个存在} ;; 刈 删 缺
+>>> remw 􏷲/􏾬 @elem{类上，另外比较例程是@racket[􏾬?]}
+>>> remv 􏷲/粡 @elem{类上，另外比较例程是@racket[粡?]}
+>>> remq 􏷲/侗 @elem{类上，另外比较例程是@racket[侗?]}
 ;; 刈~ should be acting as 刈, and result of (刈 'c '(a b c c d)) should be same as (刈* '(c) '(a b c c d))
 >>> remove* 􏷲* @elem{以@racket[同]作为比较来消去某值在􏿴中的全部存在}
->>> remw* 􏷲*/􏾬 @elem{与@racket[􏷲]类似，不过比较例程是@racket[􏾬?]}
->>> remv* 􏷲*/粡 @elem{与@racket[􏷲]类似，不过比较例程是@racket[粡?]}
->>> remq* 􏷲*/侗 @elem{与@racket[􏷲]类似，不过比较例程是@racket[侗?]}
+>>> remw* 􏷲*/􏾬 @elem{类上，另外比较例程是@racket[􏾬?]}
+>>> remv* 􏷲*/粡 @elem{类上，另外比较例程是@racket[粡?]}
+>>> remq* 􏷲*/侗 @elem{类上，另外比较例程是@racket[侗?]}
 
 >>> sort 􏿀 "整理、排序的意思" ; 亻理 𠍣 􏿀
 
 >>> member 𬩽 @elem{以@racket[同]作为比较来查询某值，返回􏿴中某值和其之后的数据组成的新􏿴}  ;; 后􏿴 索 ;; 索 寻 寻随
->>> memw 𬩽/􏾬 @elem{与@racket[𬩽]类似，不过比较例程是@racket[􏾬?]}
->>> memv 𬩽/粡 @elem{与@racket[𬩽]类似，不过比较例程是@racket[粡?]}
->>> memq 𬩽/侗 @elem{与@racket[𬩽]类似，不过比较例程是@racket[侗?]}
+>>> memw 𬩽/􏾬 @elem{与@racket[𬩽]类似，另外比较例程是@racket[􏾬?]}
+>>> memv 𬩽/粡 @elem{与@racket[𬩽]类似，另外比较例程是@racket[粡?]}
+>>> memq 𬩽/侗 @elem{与@racket[𬩽]类似，另外比较例程是@racket[侗?]}
 >>> memf 𬩽/入
 
 >>> assoc 􏿁 @elem{以@racket[同]作为比较来查找出联􏿴中阳位是某值的元素􏿴}  ; 探 挖 掘
->>> assw 􏿁/􏾬 @elem{与@racket[􏿁]类似，不过比较例程是@racket[􏾬?]}
->>> assv 􏿁/粡 @elem{与@racket[􏿁]类似，不过比较例程是@racket[粡?]}
->>> assq 􏿁/侗 @elem{与@racket[􏿁]类似，不过比较例程是@racket[侗?]}
+>>> assw 􏿁/􏾬 @elem{与@racket[􏿁]类似，另外比较例程是@racket[􏾬?]}
+>>> assv 􏿁/粡 @elem{与@racket[􏿁]类似，另外比较例程是@racket[粡?]}
+>>> assq 􏿁/侗 @elem{与@racket[􏿁]类似，另外比较例程是@racket[侗?]}
 >>> assf 􏿁/入
 
->>> findf 查 "查找出第一个符合条件的􏿴中元素并返回之"  ;; 查 找  选  查 寻 找 查 索 筛甲 @; 寻 找 查 搜 探 觅 检 索 俭
->>> filter 􏷹 @elem{查找出所有符合条件的􏿴中元素并组成新􏿴返回}  ;; 滤 筛 选 挑 挑 选 择 􏾽
+>>> findf 查 "查找出第一个符合条件的元素并返回之"  ;; 查 找  选  查 寻 找 查 索 筛甲 @; 寻 找 查 搜 探 觅 检 索 俭
+>>> filter 􏷹 @elem{查找出所有符合条件的元素并以原数据结构形式返回}  ;; 滤 筛 选 挑 挑 选 择 􏾽
 
 >>> caar 阳之阳 @elem{等同于@code{(阳 (阳 lst))}}
 >>> cdar 阳之阴 @elem{等同于@code{(阴 (阳 lst))}}

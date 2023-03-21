@@ -4,50 +4,51 @@
 ;;; (empty 空) not need as one defined same in base (null 空)
 >>> first 甲 "第一个的意思，源自中国古代文字记序符号十天干"
 >>> second 乙 "第二个的意思，源自中国古代文字记序符号十天干"
->>> third 丙
->>> fourth 丁
->>> fifth 戊
->>> sixth 己
->>> seventh 庚
->>> eighth 辛
->>> ninth 壬
->>> tenth 癸
->>> last 末
+>>> third 丙 "与上类似"
+>>> fourth 丁 "与上类似"
+>>> fifth 戊 "与上类似"
+>>> sixth 己 "与上类似"
+>>> seventh 庚 "与上类似"
+>>> eighth 辛 "与上类似"
+>>> ninth 壬 "与上类似"
+>>> tenth 癸 "与上类似"
+>>> last 末 "与上类似"
 >>> last-pair 􏷽 "取出最后一双元素" ;; 末链（链一定为双） 􏿦
 ;; >>> rest 末** "􏿴除去甲以外剩下的􏿴" ;; 甲外 剩余 去甲 舍甲
 
->>> make-list 复 "构造复􏿴（􏿴内各个元素相同的􏿴即为复􏿴，类比昆虫的“复眼”一词取名）"
+>>> make-list 复 "构造复式数据（数据内各个元素相同，类比（昆虫）“复眼”一词取名）"
 
->>> list-set 攸 @elem{修改􏿴@racket[第]N处的值为一个新的值} ;; 修 更 改 新 肖 攸 􏿛
->>> list-update 攸/入 @elem{与@racket[攸]类似，不过进参是@racket[入]} ;; 攸
+>>> list-set 攸 @elem{修改数据中的某个元素为新值并返回新数据} ;; 修 更 改 新 肖 攸 􏿛
+>>> list-update 攸/入 @elem{类上，另外进参是@racket[入]} ;; 攸
 
->>> index-of 引 @elem{返回@racket[􏿴]中某个值的索引} ;; 引 导 笈 扱 𫼛 弔
->>> indexes-of 𠇁 @elem{与@racket[引]，不过返回的是所有符合条件的，并且返回数据的结构是@racket[􏿴]} ;; 􏿉 􏿊 伋 􏷺 伄
->>> index-where 引/入 @elem{与@racket[引]类似，不过进参是@racket[入]} ;; 引 导  函 =》以例 􏿊 􏷻 弔
->>> indexes-where 𠇁/入 @elem{与@racket[𠇁]类似，不过进参是@racket[入]} ;; 􏿊 伄
+>>> index-of 引 @elem{返回@racket[􏿴]中某个元素的索引} ;; 引 导 笈 扱 𫼛 弔
+>>> index-where 引/入 @elem{类上，另外进参是@racket[入]} ;; 引 导  函 =》以例 􏿊 􏷻 弔
+>>> indexes-of 𠇁 @elem{类上，另外，返回的是所有符合条件的元素组成的@racket[􏿴]} ;; 􏿉 􏿊 伋 􏷺 伄
+>>> indexes-where 𠇁/入 @elem{类上，另外进参是@racket[入]} ;; 􏿊 伄
 
 >>> take 􏾺 "从􏿴中左起依次取出来N个元素并组成新􏿴返回"
->>> take-right 𨚞 "与上类似，不过是从右边开始操作的"
+>>> take-right 𨚞 "类上，另外是从右边开始操作的"
 
 >>> drop 􏷵 "从􏿴中的左边依次的去掉N个元素，剩余元素组成􏿴" ;􏾹
->>> drop-right 􏷴 "与上类似，不过是从右边开始操作的" ;􏾸
+>>> drop-right 􏷴 "类上，另外是从右边开始操作的" ;􏾸
 
->>> takef 􏾺/入 @elem{与@racket[􏾺]类似，不过进参是@racket[入]}
->>> takef-right 𨚞/入 "与上类似，不过是从右边开始操作的"
+>>> takef 􏾺/入 @elem{与@racket[􏾺]类似，另外进参是@racket[入]}
+>>> takef-right 𨚞/入 "类上，另外是从右边开始操作的"
 
->>> dropf 􏷵/入 @elem{与@racket[􏷵]类似，不过进参是@racket[入]} ;􏾹
->>> dropf-right 􏷴/入 "与上类似，不过是从右边开始操作的" ;􏾸
+>>> dropf 􏷵/入 @elem{与@racket[􏷵]类似，另外进参是@racket[入]} ;􏾹
+>>> dropf-right 􏷴/入 "类上，另外是从右边开始操作的" ;􏾸
 
->>> split-at 􏾺/分 @elem{与@racket[􏾺]类似，不过输出结果另包含余下的部分组成的􏿴（输出结果是一个复值（@racket[􏾴]））}
->>> split-at-right 𨚞/分 "与上类似，不过是从右边开始操作的"
+>>> split-at 分􏾺 @elem{将@racket[􏾺]和余下分离开（输出结果是一个复值）}
+>>> split-at-right 分𨚞 "类上，另外是从右边开始操作的"
 
->>> splitf-at 􏾺/分/入 @elem{同@racket[􏾺/分]类似，不过参数是@racket[入]}
->>> splitf-at-right 𨚞/分/入 "与上类似，不过是从右边开始操作的"
+>>> splitf-at 分􏾺/入 @elem{同@racket[分􏾺]类似，另外参数是@racket[入]}
+>>> splitf-at-right 分𨚞/入 "类上，另外是从右边开始操作的"
 
 >>> list-prefix? 􏾺于? @elem{某@racket[􏿴]是否是某另一@racket[􏿴]的@racket[􏾺]}
->>> take-common-prefix 䢼 @elem{返回两个@racket[􏿴]左起的相同元素组成的􏿴} ;;􏾺共项 􏾺共相 共同/􏾺 左䢼
->>> split-common-prefix 䢼/分 @elem{返回@racket[殖]：移除两个􏿴左起的相同元素后剩余的两个􏿴}
->>> drop-common-prefix 􏷳/分 @elem{返回@racket[殖]：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴} ;; ;;􏾺异项 􏾺异相 共异/􏾺 左􏾶分
+>>> take-common-prefix 䢼 @elem{返回左起相同的元素} ;;􏾺共项 􏾺共相 共同/􏾺 左䢼
+>>> drop-common-prefix 􏷳 @elem{删除左起相同的元素（输出结果是一个复值）} ;; ;;􏾺异项 􏾺异相 共异/􏾺 左􏾶分
+>>> split-common-prefix 分䢼 @elem{将@racket[䢼]和余下分离开（输出结果是一个复值）}
+
 
 >>> append* 􏿜 @elem{把多个@racket[􏿴]贯穿相连组成一个 @racket[􏿫]并返回之}
 
@@ -55,10 +56,10 @@
 >>> flatten 偏 @elem{把@racket[􏿴]中数据做扁平化处理} ;; 平 伻
 >>> shuffle 􏾷 @elem{打乱@racket[􏿴]中元素顺序};;洗 混 淆 纷 紊
 >>> check-duplicates 重 "从􏿴中查找出第一个重复的元素并返回之"
->>> remove-duplicates 𠝤 "去除􏿴中所有重复的元素并返回去除后的􏿴" ; 去偅 􏿄
+>>> remove-duplicates 𠝤 "去除掉所有重复的元素并返回新数据" ; 去偅 􏿄
 
->>> filter-not 􏷶 ;; 筛除 ; 淘 汰 剔 􏾽余 􏾼 􏷸
->>> partition 􏷹/分 (elem "符合条件的元素选出为􏿴，和剩下的􏿴，共计返回两个值") ;; 筛开 筛分 筛离 筛分 􏾽分
+>>> filter-not 􏷶 "去除掉所有符合条件的元素并返回新数据" ;; 筛除 ; 淘 汰 剔 􏾽余 􏾼 􏷸
+>>> partition 分􏷹 @elem{将@racket[􏷹]和余下的分离开（输出结果是一个复值）} ;; 筛开 筛分 筛离 筛分 􏾽分
 >>> count 计 ;;度/入
 
 >>> filter-map 𮞑之􏾽 @elem{等同于@code{(􏾽 (入 (x) x) (𮞑 proc lst))}}
