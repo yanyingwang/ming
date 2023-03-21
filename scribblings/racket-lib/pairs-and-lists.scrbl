@@ -31,23 +31,23 @@
                @; )
                (list
                @elem{左偏旁@litchar{亻}}
-               "相似者（返回相似之数据）"
+               "相似集（类型相同且元素相似）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
-               @elem{@racket[攸]、@racket[𠇁]、@racket[𰂋]、@racket[偏]、@racket[􏾷]、@racket[仮]、@racket[􏿀]}
+               @elem{@racket[攸]、@racket[𠇁]、@racket[𰂋]、@racket[偏]、@racket[􏾷]、@racket[仮]、@racket[􏿀]、@racket[􏷹]}
                )
 
                (list
                @elem{右偏旁@litchar{阝}}
-               "部分一样者（返回部分相同之数据）"
+               "连续集（类型相同且元素连续相同）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的一部分}
                @elem{@racket[􏾺]、@racket[𨚞]、@racket[左䢼]、@racket[𬩽]}
                )
 
                (list
                @elem{右偏旁@litchar{刂}}
-               "删除、移走、去掉整体中的一部分元素"
+               "缺失集（删除、移走、去掉部分元素之后的集合）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的子集}
-               @elem{@racket[􏷵]、@racket[􏷴]、@racket[𠝤]、@racket[􏷶]、@racket[删]}
+               @elem{@racket[􏷵]、@racket[􏷴]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
                )
 
                (list
@@ -61,7 +61,7 @@
                @elem{@litchar{*}结尾或包含@litchar{*/}}
                "加强力度"
                "仅对数据内容产生影响"
-               @elem{@racket[删*]、@racket[􏿴/数段*]}
+               @elem{@racket[􏷲*]、@racket[􏿴/数段*]}
                )
 
                (list
@@ -75,7 +75,7 @@
                @elem{@litchar{/入}}
                "进参为函数"
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[𬩽/入]、@racket[攸/入]、@racket[􏾺/入]}
+               @elem{@racket[引/入]、@racket[𠇁/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
                )
 
                @; (list
@@ -132,7 +132,6 @@
 ]
 }
 
-
 @examples[#:eval (the-eval)
 (双 1 2)
 
@@ -143,7 +142,6 @@
 (􏿫 1 2 3 4)
 (􏿫 1 2 3 '(4))
 ]
-
 
 @section+elemref{阴、阳，阴之阳、阳之阳、阴之阴阳、阳之阴阳}
 @margin-note{
@@ -482,22 +480,34 @@
 (􏿀 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
 ]
 
-
-@section+elemref{𬩽、𬩽/入，􏿁、􏿁/入，删、删*、计} @;删/入、删*/入，
+@section+elemref{𬩽、𬩽/入，􏿁、􏿁/入，􏷲、􏷲*，计} @;删/入、删*/入，刈、刈*
 @margin-note{
-@bold{“@racket[􏿁]”为新造字}
+@bold{“@racket[􏿁]”为新造字} @linebreak{}
+@bold{“@racket[𬩽]”为古活字} @linebreak{}
+@bold{“@racket[􏷲]”为新造字}
 @itemlist[
+@item{@litchar{寻}表意“寻找”；}
 @item{@litchar{日}偏旁表示“取@racket[阳]”之意。}
+@item{@litchar{阝}见：@secref["rules"]。}
+@item{@litchar{刂}见：@secref["rules"]。}
 ]
 }
+@; @margin-note{
+@; @bold{“@racket[刈]”为古活字}
+@; @itemlist[
+@; @item{@litchar{㐅}表意，“删除”的意思；}
+@; @item{@litchar{刂}见：@secref["rules"]。}
+@; ]
+@; }
+
 @examples[#:eval (the-eval)
 (𬩽 'c '(a b c d e f))
 (􏿁 'c '((a b) (c d) (e f)))
 (𬩽/入 数? '(a b 1 c d 3 e 9 f))
 (􏿁/入 数? '((a b) (1 d) (j k) (8 f))) ;;
 
-(删 'c '(a b c d e c f))
-(删* '(c e) '(a b c d e c f))
+(􏷲 'c '(a b c d e c f))
+(􏷲* '(c e) '(a b c d e c f))
 @; (删/入 正数? '(1 2 -3 4))
 @; (删*/入 正数? '(1 2 -3 4))
 
@@ -506,10 +516,12 @@
 
 @section+elemref{查、􏷹，􏷶、􏷶~，􏷹分}
 @margin-note{
-“@racket[􏷹]”、“@racket[􏷶]”为新造字
+“@racket[􏷹]”为新造字 @linebreak{}
+“@racket[􏷶]”为新造字
 @itemlist[
 @item{@litchar{查}表意，“查询”的意思；}
-@item{@litchar{亻}、@litchar{刂}见：@secref["rules"]。}
+@item{@litchar{亻}见：@secref["rules"]。}
+@item{@litchar{刂}见：@secref["rules"]。}
 ]
 }
 @examples[#:eval (the-eval)

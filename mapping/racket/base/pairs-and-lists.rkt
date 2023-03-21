@@ -33,15 +33,15 @@
 >>> foldl 𮞑参予 "􏿴中各个元素依次作为参数，和初始参数一块作用到某例程上"  ;; 各左参
 >>> foldr 𮞑倒参予 "􏿴中各个元素倒序地依次作为参数，和初始参数一块作用到某例程上"
 
->>> remove 删 @elem{以@racket[同?]作为比较来消去某值在􏿴中的第一个存在} ;; 刈
->>> remw 删/􏾬 @elem{与@racket[删]类似，不过比较例程是@racket[􏾬?]}
->>> remv 删/粡 @elem{与@racket[删]类似，不过比较例程是@racket[粡?]}
->>> remq 删/侗 @elem{与@racket[删]类似，不过比较例程是@racket[侗?]}
-
->>> remove 删* @elem{以@racket[同]作为比较来消去某值在􏿴中的全部存在}
->>> remw 删*/􏾬 @elem{与@racket[删]类似，不过比较例程是@racket[􏾬?]}
->>> remv 删*/粡 @elem{与@racket[删]类似，不过比较例程是@racket[粡?]}
->>> remq 删*/侗 @elem{与@racket[删]类似，不过比较例程是@racket[侗?]}
+>>> remove 􏷲 @elem{以@racket[同?]作为比较来删除某值在􏿴中的第一个存在} ;; 刈 删 缺
+>>> remw 􏷲/􏾬 @elem{与@racket[􏷲]类似，不过比较例程是@racket[􏾬?]}
+>>> remv 􏷲/粡 @elem{与@racket[􏷲]类似，不过比较例程是@racket[粡?]}
+>>> remq 􏷲/侗 @elem{与@racket[􏷲]类似，不过比较例程是@racket[侗?]}
+;; 刈~ should be acting as 刈, and result of (刈 'c '(a b c c d)) should be same as (刈* '(c) '(a b c c d))
+>>> remove* 􏷲* @elem{以@racket[同]作为比较来消去某值在􏿴中的全部存在}
+>>> remw* 􏷲*/􏾬 @elem{与@racket[􏷲]类似，不过比较例程是@racket[􏾬?]}
+>>> remv* 􏷲*/粡 @elem{与@racket[􏷲]类似，不过比较例程是@racket[粡?]}
+>>> remq* 􏷲*/侗 @elem{与@racket[􏷲]类似，不过比较例程是@racket[侗?]}
 
 >>> sort 􏿀 "整理、排序的意思" ; 亻理 𠍣 􏿀
 
