@@ -54,7 +54,7 @@
                @elem{@litchar{分}结尾或包含@litchar{分/}}
                "切分(返回复值数据)"
                @elem{出参数据为复值}
-               @elem{@racket[􏾺分]、@racket[􏾺分/入]、@racket[䢼分]、@racket[􏷹分]}
+               @elem{@racket[􏾺/分]、@racket[􏾺/分/入]、@racket[䢼/分]、@racket[􏷹/分]}
                )
 
                (list
@@ -360,7 +360,7 @@
 @; ]
 @; }
 @; @section+elemref{􏾺、𨚞，􏾹、􏾸，􏾺分、𨚞分，􏾺/入、𨚞/入，􏾺于?}
-@section+elemref{􏾺、𨚞，􏷵、􏷴，􏾺分、𨚞分，􏾺/入、𨚞/入，􏾺于?}
+@section+elemref{􏾺、𨚞，􏷵、􏷴，􏾺/分、𨚞/分，􏾺/入、𨚞/入，􏾺于?}
 @margin-note{
 @bold{
 “@racket[􏾺]”、“@racket[𨚞]”为新造字 @linebreak{}
@@ -379,8 +379,8 @@
 (􏷵 '(a b c d e f g) 2)
 (􏷴 '(a b c d e f g) 2)
 
-(􏾺分 '(a b c d e f g) 2)
-(𨚞分 '(a b c d e f g) 2)
+(􏾺/分 '(a b c d e f g) 2)
+(𨚞/分 '(a b c d e f g) 2)
 
 (􏾺/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 数?)
 (𨚞/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 数?)
@@ -390,7 +390,7 @@
 ]
 
 @; @section+elemref{左䢼，左䢼分、左􏾶分}
-@section+elemref{䢼，䢼分、􏷳分}
+@section+elemref{䢼，䢼/分、􏷳/分}
 @margin-note{
 @; @bold{“@racket[䢼]”、“@racket[􏾶]”为新造字}
 @bold{“@racket[䢼]”、“@racket[􏷳]”为新造字}
@@ -400,8 +400,8 @@
 }
 @examples[#:eval (the-eval)
 (䢼 '(a b x y z) '(a b c d e f g))
-(䢼分 '(a b x y z) '(a b c d e f g))
-(􏷳分 '(a b x y z) '(a b c d e f g))
+(䢼/分 '(a b x y z) '(a b c d e f g))
+(􏷳/分 '(a b x y z) '(a b c d e f g))
 ]
 
 
@@ -514,7 +514,7 @@
 (计 正数? '(1 2 -3 4))
 ]
 
-@section+elemref{查、􏷹，􏷶、􏷶~，􏷹分}
+@section+elemref{查、􏷹，􏷶、􏷶~，􏷹/分}
 @margin-note{
 “@racket[􏷹]”为新造字 @linebreak{}
 “@racket[􏷶]”为新造字
@@ -529,7 +529,7 @@
 (􏷹 正数? '(1 2 -3 4 -5))
 (􏷶 正数? '(1 2 -3 4 -5))
 (􏷶~ 正数? '(1 2 -3 4 -5))
-(􏷹分 正数? '(1 2 -3 4 -5)) @; 􏾽离 would still be list
+(􏷹/分 正数? '(1 2 -3 4 -5)) @; 􏾽离 would still be list
 ]
 
 @section+elemref{各，𮞑，𮞑全、𮞑有，𮞑参予、𮞑倒参予，𮞑之􏾽、𮞑之􏿝}
