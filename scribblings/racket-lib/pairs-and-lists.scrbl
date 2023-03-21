@@ -54,7 +54,7 @@
                @elem{@litchar{分}结尾或包含@litchar{分/}}
                "切分(返回复值数据)"
                @elem{出参数据为复值}
-               @elem{@racket[􏾺分]、@racket[􏾺分/入]、@racket[左䢼分]、@racket[􏷹分]}
+               @elem{@racket[􏾺分]、@racket[􏾺分/入]、@racket[䢼分]、@racket[􏷹分]}
                )
 
                (list
