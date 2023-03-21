@@ -40,7 +40,7 @@
                @elem{右偏旁@litchar{阝}}
                "连续集（类型相同且元素连续相同）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的一部分}
-               @elem{@racket[􏾺]、@racket[𨚞]、@racket[左䢼]、@racket[𬩽]}
+               @elem{@racket[􏾺]、@racket[𨚞]、@racket[䢼]、@racket[𬩽]}
                )
 
                (list
