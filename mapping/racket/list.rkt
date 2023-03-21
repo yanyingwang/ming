@@ -45,9 +45,9 @@
 >>> splitf-at-right 𨚞分/入 "与上类似，不过是从右边开始操作的"
 
 >>> list-prefix? 􏾺于? @elem{某@racket[􏿴]是否是某另一@racket[􏿴]的@racket[􏾺]}
->>> take-common-prefix 左䢼 @elem{返回两个@racket[􏿴]左起的相同元素组成的􏿴} ;;􏾺共项 􏾺共相 共同/􏾺
->>> split-common-prefix 左䢼分 @elem{返回@racket[殖]：移除两个􏿴左起的相同元素后剩余的两个􏿴}
->>> drop-common-prefix 左􏷳分 @elem{返回@racket[殖]：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴} ;; ;;􏾺异项 􏾺异相 共异/􏾺 左􏾶分
+>>> take-common-prefix 䢼 @elem{返回两个@racket[􏿴]左起的相同元素组成的􏿴} ;;􏾺共项 􏾺共相 共同/􏾺 左䢼
+>>> split-common-prefix 䢼分 @elem{返回@racket[殖]：移除两个􏿴左起的相同元素后剩余的两个􏿴}
+>>> drop-common-prefix 􏷳分 @elem{返回@racket[殖]：两个􏿴左起的相同元素组成的􏿴，原两个􏿴中剩余部分组成的􏿴} ;; ;;􏾺异项 􏾺异相 共异/􏾺 左􏾶分
 
 >>> append* 􏿜 @elem{把多个@racket[􏿴]贯穿相连组成一个 @racket[􏿫]并返回之}
 

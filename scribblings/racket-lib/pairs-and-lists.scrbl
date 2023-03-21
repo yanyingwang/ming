@@ -390,7 +390,7 @@
 ]
 
 @; @section+elemref{左䢼，左䢼分、左􏾶分}
-@section+elemref{左䢼，左䢼分、左􏷳分}
+@section+elemref{䢼，䢼分、􏷳分}
 @margin-note{
 @; @bold{“@racket[䢼]”、“@racket[􏾶]”为新造字}
 @bold{“@racket[䢼]”、“@racket[􏷳]”为新造字}
@@ -399,9 +399,9 @@
 ]
 }
 @examples[#:eval (the-eval)
-(左䢼 '(a b x y z) '(a b c d e f g))
-(左䢼分 '(a b x y z) '(a b c d e f g))
-(左􏷳分 '(a b x y z) '(a b c d e f g))
+(䢼 '(a b x y z) '(a b c d e f g))
+(䢼分 '(a b x y z) '(a b c d e f g))
+(􏷳分 '(a b x y z) '(a b c d e f g))
 ]
 
 
