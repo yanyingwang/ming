@@ -92,6 +92,29 @@
 @; ]
 @; }
 
+@defproc[(度/入 [某􏿴 􏿴?] [某例程 程?])
+          数?]{
+以@racket[某例程]来测量@racket[某􏿴]的长度。
+
+@margin-note{另见：@racket[度]、@racket[度􏷹]}
+
+@examples[#:eval (the-eval)
+(度/入 '(1 2 -3 4 -5) 正数?)
+]
+}
+
+
+@defproc[(􏷲 [某值 any/c] [某􏿴 􏿴?] (某例程 程? 同?))
+          数?]{
+从@racket[某􏿴]中找出@racket[某值]并删除之，最终返回更新后的数据。
+
+@margin-note{另见：@racket[􏷲~]、@racket[􏷲*]}
+
+@examples[#:eval (the-eval)
+(􏷲 'c '(a b c d e c f))
+]
+}
+
 
 @defproc[(部 [某􏿴 􏿴?] [数A 数?] [数B 数?])
           􏿴?]{

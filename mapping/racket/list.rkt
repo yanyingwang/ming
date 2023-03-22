@@ -60,7 +60,7 @@
 
 >>> filter-not 􏷶 "去除掉所有符合条件的元素并返回新数据" ;; 筛除 ; 淘 汰 剔 􏾽余 􏾼 􏷸
 >>> partition 分􏷹 @elem{将@racket[􏷹]和余下的分离开（输出结果是一个复值）} ;; 筛开 筛分 筛离 筛分 􏾽分
->>> count 计 ;;度/入
+>>> count 度􏷹 @elem{返回@racket[􏷹]的@racket[度]，等同于@code{(度 (􏷹 lst))}} ;;度/入 计 λ 度/入
 
 >>> filter-map 𮞑之􏾽 @elem{等同于@code{(􏾽 (入 (x) x) (𮞑 proc lst))}}
 >>> append-map 𮞑之􏿝 @elem{等同于@code{(􏿝 (𮞑 proc lst))}}

@@ -82,7 +82,7 @@
                @elem{@litchar{/入}}
                "进参为函数"
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[引/入]、@racket[𠇁/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
+               @elem{@racket[度/入]、@racket[引/入]、@racket[𠇁/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
                )
 
                @; (list
@@ -261,6 +261,13 @@
 @; (首 '(1 2 3 4))
 @; (身 '(1 2 3 4))
 @; (尾 '(1 2 3 4))
+]
+
+@section+elemref{度} @; 度􏷹 = 度/入
+@margin-note{另见：@racket[度/入]}
+@examples[#:eval (the-eval)
+(度 '(a b c d e 3 f g))
+@; (度/入 数? '(a b c d e 3 f g))
 ]
 
 @; @section+elemref{第，笈、笈/入，􏿊、􏿊/入}
@@ -492,7 +499,8 @@
 (􏿀 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
 ]
 
-@section+elemref{𬩽、𬩽/入，􏿁、􏿁/入，􏷲~、􏷲*，计} @;删/入、删*/入，刈、刈*
+@section+elemref{𬩽、𬩽/入，􏿁、􏿁/入，􏷲~、􏷲*} @;删/入、删*/入，刈、刈*
+
 @margin-note{
 @bold{“@racket[􏿁]”为新造字} @linebreak{}
 @bold{“@racket[𬩽]”为古活字} @linebreak{}
@@ -510,7 +518,7 @@
 @; @item{@litchar{刂}见：@secref["rules"]。}
 @; ]
 @; }
-
+@margin-note{另见：@racket[􏷲]}
 @examples[#:eval (the-eval)
 (𬩽 'c '(a b c d e f))
 (􏿁 'c '((a b) (c d) (e f)))
@@ -521,11 +529,9 @@
 (􏷲* '(c e) '(a b c d e c f))
 @; (删/入 正数? '(1 2 -3 4))
 @; (删*/入 正数? '(1 2 -3 4))
-
-(计 正数? '(1 2 -3 4))
 ]
 
-@section+elemref{查、􏷹，􏷶、􏷶~，分􏷹}
+@section+elemref{查、􏷹，􏷶、􏷶~，分􏷹，度􏷹}
 @margin-note{
 @bold{
 “@racket[􏷹]”为新造字 @linebreak{}
@@ -536,12 +542,14 @@
 @item{@litchar{亻}、@litchar{刂}，见：@secref["rules"]。}
 ]
 }
+@margin-note{另见：@racket[度]、@racket[度/入]}
 @examples[#:eval (the-eval)
 (查 正数? '(1 2 -3 4 -5))
 (􏷹 正数? '(1 2 -3 4 -5))
 (􏷶 正数? '(1 2 -3 4 -5))
 (􏷶~ 正数? '(1 2 -3 4 -5))
 (分􏷹 正数? '(1 2 -3 4 -5)) @; 􏾽离 would still be list
+(度􏷹 正数? '(1 2 -3 4 -5))
 ]
 
 @section+elemref{各，𮞑，𮞑全、𮞑有，𮞑参予、𮞑倒参予，𮞑之􏾽、𮞑之􏿝}
