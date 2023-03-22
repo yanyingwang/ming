@@ -40,7 +40,7 @@
                @elem{右偏旁@litchar{阝}}
                "连续集（类型相同且元素连续相同）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的一部分}
-               @elem{@racket[􏾺]、@racket[𨚞]、@racket[䢼]、@racket[𬩽]}
+               @elem{@racket[􏾺]、@racket[𨚞]、@racket[𬩵]、@racket[䢼]、@racket[𬩽]}
                )
 
                (list
@@ -162,7 +162,7 @@
 (阴 '(1 2 3 4))
 (阴之阳 '(1 2 3 4))
 (阴之阴阳 '(1 2 3 4))
-
+z
 (阳 '((1 1.1) 2 3 4))
 (阳之阳 '((1 1.1) 2 3 4))
 (阳之阴阳 '((1 1.1) 2 3 4))
@@ -172,9 +172,10 @@
 @section+elemref{􏿴/数段、􏿴/数段*}
 用于构造一个元素是一段整数的􏿴。
 @examples[#:eval (the-eval)
+(􏿴/数段 10)
 (􏿴/数段 10 20)
-(􏿴/数段* 10 20)
 (􏿴/数段 10 20 2)
+(􏿴/数段* 10 20)
 (􏿴/数段* 10 20 2)
 ]
 
@@ -373,7 +374,11 @@
 @;; }
 @; ]
 @; }
+
 @; @section+elemref{􏾺、𨚞，􏾹、􏾸，􏾺分、𨚞分，􏾺/入、𨚞/入，􏾺于?}
+@; @margin-note{
+@; @bold{“@racket[􏾹]”、“@racket[􏾸]”为新造字}
+@; }
 @section+elemref{􏾺、𨚞，􏷵、􏷴，分􏾺、分𨚞，􏾺/入、𨚞/入，􏾺于?}
 @margin-note{
 @bold{
@@ -386,10 +391,7 @@
 @item{@litchar{阝}、@litchar{刂}见：@secref["rules"]。}
 ]
 }
-@; @margin-note{
-@; @bold{“@racket[􏾹]”、“@racket[􏾸]”为新造字}
-@; }
-
+@margin-note{另见：@racket[𬩵]}
 @examples[#:eval (the-eval)
 (􏾺 '(a b c d e f g) 2)
 (𨚞 '(a b c d e f g) 2)

@@ -1,7 +1,7 @@
 #lang racket/base
 
 ;(provide 段) ; 􏿊 􏿚
-(provide 部 部* 度/入 􏷲)
+(provide 𬩵 𬩵* 度/入 􏷲)
 ;; (provide 筛分* 分* 右分* 分*/入 右分*/入 段)
 (require "racket/base.rkt" "racket/list.rkt")
 
@@ -38,7 +38,7 @@
 (名 (􏷲 V LST)
     (􏷲* (list V) LST))
 
-(名 (部 LIST0 N1 N2) ;; 中阝
+(名 (𬩵 LIST0 N1 N2) ;; 中阝; 部; 引阝
     (若非 (精确非负整数? N1)
           (报参错 '段 "精确非负整数?" 1 LIST0 N1))
     (若非 (精确非负整数? N2)
@@ -51,7 +51,7 @@
              (双 (阳 某􏿴) (演 (阴 某􏿴) (加一 序数) 数A 数B))])))
 
 
-(名 (部* LIST0 N1 N2)
+(名 (𬩵* LIST0 N1 N2)
     (若非 (精确非负整数? N1)
           (报参错 '部 "精确非负整数?" 1 LIST0 N1))
     (若非 (精确非负整数? N2)

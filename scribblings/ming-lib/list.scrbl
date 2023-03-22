@@ -15,7 +15,6 @@
 @title[#:tag "lists"]{􏿴}
 @defmodule[ming/list]
 名语言对Racket标准库@secref["pairs-and-lists"]的扩展。
-
 @margin-note{本页所列之例程的实现代码是名语言，因此源代码有参照意义。}
 
 @; @section{􏿊、􏿚}
@@ -49,10 +48,6 @@
 @; (􏿚 '(a b c d c f) 'c)
 @; ]
 @; }
-
-
-
-
 
 @; @defproc[(筛分* [程A 程?] [某􏿴 􏿴?])
 @;           􏿴?]{
@@ -95,9 +90,7 @@
 @defproc[(度/入 [某􏿴 􏿴?] [某例程 程?])
           数?]{
 以@racket[某例程]来测量@racket[某􏿴]的长度。
-
 @margin-note{另见：@racket[度]、@racket[度􏷹]}
-
 @examples[#:eval (the-eval)
 (度/入 '(1 2 -3 4 -5) 正数?)
 ]
@@ -106,35 +99,31 @@
 
 @defproc[(􏷲 [某值 any/c] [某􏿴 􏿴?] (某例程 程? 同?))
           数?]{
-从@racket[某􏿴]中找出@racket[某值]并删除之，最终返回更新后的数据。
-
+从@racket[某􏿴]中找出@racket[某值]删除之并返回新数据。
 @margin-note{另见：@racket[􏷲~]、@racket[􏷲*]}
-
 @examples[#:eval (the-eval)
 (􏷲 'c '(a b c d e c f))
 ]
 }
 
 
-@defproc[(部 [某􏿴 􏿴?] [数A 数?] [数B 数?])
-          􏿴?]{
-@racket[某􏿴]的其中一部分，从@racket[第]@racket[数A]处元素算起，到@racket[第]@racket[数B]止（不包括@racket[数B]）。
-
+@deftogether[(
+@defproc[(𬩵 [某􏿴 􏿴?] [N1 数?] [N2 数?])
+          􏿴?]
+@defproc[(𬩵* [某􏿴 􏿴?] [N1 数?] [N2 数?])
+          􏿴?]
+)]{
+@racket[𬩵]：返回@racket[某􏿴]的第@racket[N1]至第@racket[N2]（包含第N1不包含第N2）之间的部分元素。@linebreak[]
+@racket[𬩵*]：返回@racket[某􏿴]的第@racket[N1]至第@racket[N2]（包含第N1也包含第N2）之间的部分元素。
+@margin-note{另见：@racket[􏾺]、@racket[𨚞]}
 @examples[#:eval (the-eval)
-(部 '(a b c d e f) 0 0)
-(部 '(a b c d e f) 2 2)
-(部 '(a b c d e f) 0 2)
-]
-}
-
-
-@defproc[(部* [某􏿴 􏿴?] [数A 数?] [数B 数?])
-          􏿴?]{
-@racket[某􏿴]的其中一部分，从@racket[第]@racket[数A]处元素算起，到@racket[第]@racket[数B]止（包括@racket[数B]）。
-
-@examples[#:eval (the-eval)
-(部* '(a b c d e f) 0 0)
-(部* '(a b c d e f) 2 2)
-(部* '(a b c d e f) 0 2)
+(𬩵 '(a b c d e f) 0 0)
+(𬩵 '(a b c d e f) 0 1)
+(𬩵 '(a b c d e f) 0 2)
+(𬩵 '(a b c d e f) 2 5)
+(𬩵* '(a b c d e f) 0 0)
+(𬩵* '(a b c d e f) 0 1)
+(𬩵* '(a b c d e f) 0 2)
+(𬩵* '(a b c d e f) 2 5)
 ]
 }
