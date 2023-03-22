@@ -113,8 +113,8 @@
 @defproc[(𬩵* [某􏿴 􏿴?] [N1 数?] [N2 数?])
           􏿴?]
 )]{
-@racket[𬩵]：返回@racket[某􏿴]的第@racket[N1]至第@racket[N2]（包含第N1不包含第N2）之间的部分元素。@linebreak[]
-@racket[𬩵*]：返回@racket[某􏿴]的第@racket[N1]至第@racket[N2]（包含第N1也包含第N2）之间的部分元素。
+@racket[𬩵]：返回@racket[某􏿴]的第@racket[N1]至第@racket[N2]（从0算起，包含N1不包含N2）之间的部分元素。@linebreak[]
+@racket[𬩵*]：返回@racket[某􏿴]的第@racket[N1]至第@racket[N2]（从0算起，包含N1也包含N2）之间的部分元素。
 @margin-note{另见：@racket[􏾺]、@racket[𨚞]}
 @examples[#:eval (the-eval)
 (𬩵 '(a b c d e f) 0 0)
