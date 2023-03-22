@@ -119,11 +119,16 @@
 @examples[#:eval (the-eval)
 (𬩵 '(a b c d e f) 0 0)
 (𬩵 '(a b c d e f) 0 1)
+(𬩵 '(a b c d e f) 1 2)
 (𬩵 '(a b c d e f) 0 2)
+(𬩵 '(a b c d e f) 0 5)
 (𬩵 '(a b c d e f) 2 5)
+
 (𬩵* '(a b c d e f) 0 0)
 (𬩵* '(a b c d e f) 0 1)
+(𬩵* '(a b c d e f) 1 2)
 (𬩵* '(a b c d e f) 0 2)
+(𬩵* '(a b c d e f) 0 5)
 (𬩵* '(a b c d e f) 2 5)
 ]
 }
