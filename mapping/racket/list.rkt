@@ -62,8 +62,8 @@
 >>> partition 分􏷹 @elem{将@racket[􏷹]和余下的分离开（输出结果是一个复值）} ;; 筛开 筛分 筛离 筛分 􏾽分
 >>> count 度􏷹 @elem{返回@racket[􏷹]的@racket[度]，等同于@code{(度 (􏷹 lst))}} ;;度/入 计 λ 度/入
 
->>> filter-map 𮞑之􏾽 @elem{等同于@code{(􏾽 (入 (x) x) (𮞑 proc lst))}}
->>> append-map 𮞑之􏿝 @elem{等同于@code{(􏿝 (𮞑 proc lst))}}
+>>> filter-map 􏷹佫 @elem{等同于@code{(􏾽 (入 (x) x) (𮞑 proc lst))}} ;佫之􏷹
+>>> append-map 􏿝佫 @elem{等同于@code{(􏿝 (𮞑 proc lst))}} ;佫之􏿝
 
 >>> range 􏿴/数段 "A到B之间的一段数组成的􏿴（包括A不包括B）"
 >>> inclusive-range 􏿴/数段* "A到B之间的一段数组成的􏿴（包括A也包括B）"
@@ -73,8 +73,8 @@
 >>> in-combinations 􏿴序列/组合
 >>> in-permutations 􏿴序列/排列组合
 
->>> argmax 𮞑之最大数 "返回𮞑proc后是最大数的那个元素"
->>> argmin 𮞑之最小数 "返回𮞑proc后是最小数的那个元素"
+>>> argmax 佫/之最大数 "返回𮞑proc后是最大数的那个元素" ; /之 乞
+>>> argmin 佫/之最小数 "返回𮞑proc后是最小数的那个元素"
 
 >>> group-by 􏿴/分组
 >>> cartesian-product 􏿴/笛卡尔积

@@ -36,7 +36,7 @@
     (度􏷹 PROC LST))
 
 (名 (􏷲 V LST)
-    (􏷲* (list V) LST))
+    (􏷲^ (list V) LST))
 
 (名 (𬩵 LIST0 N1 N2) ;; 中阝; 部; 引阝
     (若非 (精确非负整数? N1)

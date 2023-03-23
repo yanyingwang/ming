@@ -23,42 +23,44 @@
 >>> append 􏿝 @elem{把多􏿴贯穿相连组成一个@racket[􏿴]并返回之} ;; 串 接
 >>> reverse 仮 "倒序排列" ;; 颠 倒 仮
 
-;; >>> for-each 巡 "酒席上给全座依次斟酒一遍称为巡杯（酒过三巡），这里意思是􏿴内元素依次执行某一个例程" ; 轮着 每 轮 依次 遍自 遍执 行 循序
->>> for-each 各 "􏿴内元素各自依次执行某一个例程"
->>> map 𮞑 "把某一例程依次映用到各个元素上，各个元素作为其参数" ;; 各 依次应 映
-
->>> andmap 𮞑全 @elem{等同于@code{(且 (𮞑 proc lst))}} ;; 各有应 各都 映且
->>> ormap 𮞑有 @elem{等同于@code{(或 (𮞑 proc lst))}} ;; 各无应 各有 映或
-
->>> foldl 𮞑参予 "􏿴中各个元素依次作为参数，和初始参数一块作用到某例程上"  ;; 各左参
->>> foldr 𮞑倒参予 "􏿴中各个元素倒序地依次作为参数，和初始参数一块作用到某例程上"
-
->>> remove 􏷲~ @elem{以@racket[同?]作为比较来查找并删除某值在􏿴中的第一个存在} ;; 刈 删 缺
->>> remw 􏷲/􏾬 @elem{类上，另外比较例程是@racket[􏾬?]}
->>> remv 􏷲/粡 @elem{类上，另外比较例程是@racket[粡?]}
->>> remq 􏷲/侗 @elem{类上，另外比较例程是@racket[侗?]}
+>>> remove 􏷲~ @elem{以@racket[同?]作为比较来删除第一个寻找到的某元素} ;; 刈 删 缺
+>>> remw 􏷲~/􏾬 @elem{类上，另外比较例程是@racket[􏾬?]}
+>>> remv 􏷲~/粡 @elem{类上，另外比较例程是@racket[粡?]}
+>>> remq 􏷲~/侗 @elem{类上，另外比较例程是@racket[侗?]}
 ;; 刈~ should be acting as 刈, and result of (刈 'c '(a b c c d)) should be same as (刈* '(c) '(a b c c d))
->>> remove* 􏷲* @elem{以@racket[同]作为比较来消去某值在􏿴中的全部存在}
->>> remw* 􏷲*/􏾬 @elem{类上，另外比较例程是@racket[􏾬?]}
->>> remv* 􏷲*/粡 @elem{类上，另外比较例程是@racket[粡?]}
->>> remq* 􏷲*/侗 @elem{类上，另外比较例程是@racket[侗?]}
+>>> remove* 􏷲^ @elem{类@racket[􏷲]，不过入参不同。}
+>>> remw* 􏷲^/􏾬 @elem{类上}
+>>> remv* 􏷲^/粡 @elem{类上}
+>>> remq* 􏷲^/侗 @elem{类上}
 
 >>> sort 􏿀 "整理、排序的意思" ; 亻理 𠍣 􏿀
 
->>> member 𬩽 @elem{以@racket[同]作为比较来查询某值，返回􏿴中某值和其之后的数据组成的新􏿴}  ;; 后􏿴 索 ;; 索 寻 寻随
->>> memw 𬩽/􏾬 @elem{与@racket[𬩽]类似，另外比较例程是@racket[􏾬?]}
->>> memv 𬩽/粡 @elem{与@racket[𬩽]类似，另外比较例程是@racket[粡?]}
->>> memq 𬩽/侗 @elem{与@racket[𬩽]类似，另外比较例程是@racket[侗?]}
->>> memf 𬩽/入
+>>> member 𬩽 @elem{以@racket[同]作为比较来寻找某元素和其之后的所有元素}  ;; 后􏿴 索 ;; 索 寻 寻随
+>>> memw 𬩽/􏾬 @elem{类上}
+>>> memv 𬩽/粡 @elem{类上}
+>>> memq 𬩽/侗 @elem{类上}
+>>> memf 𬩽/入 @elem{类上}
 
->>> assoc 􏿁 @elem{以@racket[同]作为比较来查找出联􏿴中阳位是某值的元素􏿴}  ; 探 挖 掘
->>> assw 􏿁/􏾬 @elem{与@racket[􏿁]类似，另外比较例程是@racket[􏾬?]}
->>> assv 􏿁/粡 @elem{与@racket[􏿁]类似，另外比较例程是@racket[粡?]}
->>> assq 􏿁/侗 @elem{与@racket[􏿁]类似，另外比较例程是@racket[侗?]}
->>> assf 􏿁/入
+>>> assoc 􏿁 @elem{以@racket[同]作为比较来寻找阳位是某值的元素}  ; 探 挖 掘
+>>> assw 􏿁/􏾬 @elem{类上}
+>>> assv 􏿁/粡 @elem{类上}
+>>> assq 􏿁/侗 @elem{类上}
+>>> assf 􏿁/入 @elem{类上}
 
->>> findf 查 "查找出第一个符合条件的元素并返回之"  ;; 查 找  选  查 寻 找 查 索 筛甲 @; 寻 找 查 搜 探 觅 检 索 俭
->>> filter 􏷹 @elem{查找出所有符合条件的元素并以原数据结构形式返回}  ;; 滤 筛 选 挑 挑 选 择 􏾽
+>>> findf 查 @elem{查找出第一个符合条件的某元素}  ;; 查 找  选  查 寻 找 查 索 筛甲 @; 寻 找 查 搜 探 觅 检 索 俭
+>>> filter 􏷹 @elem{查找出所有符合条件的元素}  ;; 滤 筛 选 挑 挑 选 择 􏾽
+
+
+;; >>> for-each 巡 "酒席上给全座依次斟酒一遍称为巡杯（酒过三巡），这里意思是􏿴内元素依次执行某一个例程" ; 轮着 每 轮 依次 遍自 遍执 行 循序
+>>> for-each 各 "􏿴内元素各自依次执行某一个例程"
+>>> map 佫 "把某一例程依次映用到各个元素上，各个元素作为其参数" ;; 各 依次应 映
+
+>>> andmap 各且 @elem{等同于@code{(且 (proc (甲 lst)) (proc (乙 lst)) (proc (丙 lst)) ...)}} ;; 各有应 各都 映且 且佫 全
+>>> ormap  各或 @elem{等同于@code{(或 (佫 proc lst))}} ;; 各无应 各有 映或 或佫 有
+
+>>> foldl 各参 "􏿴中各个元素依次作为参数，和初始参数一块作用到某例程上"  ;; 各左参 摄 扌参 参予 挌参 敋参 掺
+>>> foldr 右各参 "􏿴中各个元素倒序地依次作为参数，和初始参数一块作用到某例程上" 右掺
+
 
 >>> caar 阳之阳 @elem{等同于@code{(阳 (阳 lst))}}
 >>> cdar 阳之阴 @elem{等同于@code{(阴 (阳 lst))}}

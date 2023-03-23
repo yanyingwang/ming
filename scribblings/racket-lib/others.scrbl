@@ -30,6 +30,14 @@
 @; ]
 @; }
 
+@section+elemref{且、或}
+@examples[#:eval (the-eval)
+(且 3 2)
+(或 3 2)
+(且 (< 2 5) (> 2 0))
+(或 (< 2 5) (> 2 0))
+]
+
 @section+elemref{同?、􏾬?、粡?、侗?}
 @margin-note{
 @bold{@litchar{􏾬}为新造字}
