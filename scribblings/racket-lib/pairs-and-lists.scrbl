@@ -323,13 +323,14 @@
 @; ]
 @; }
 
-@section+elemref{引、引/入，𠇁、𠇁/入、𢪉}
+@section+elemref{引、引/入，𠇁、𠇁/入、弔}
 @margin-note{
-@bold{“@racket[𢪉、𠇁]”为古活字}
+@bold{“@racket[𢪉]”、“@racket[𠇁]”、“@racket[弔]”为古活字}
 @itemlist[
 @item{@litchar{引}是“索引”的意思，即返回某值的索引；}
 @item{@litchar{𠇁}是对@litchar{引}加@litchar{亻}，含义见：@secref["rules"]。}
-@item{@litchar{𢪉}是对@litchar{引}加@litchar{扌}，表示用某索引提取相对应的值。}
+@; @item{@litchar{𢪉}是对@litchar{引}加@litchar{扌}，表示用某索引提取相对应的值。}
+@item{@litchar{弔}表示是用某索引提取相对应的值。}
 ]
 }
 
@@ -346,7 +347,7 @@
          (入 (x)
              (或 (同? x 'b)
                  (同? x 'c))))
-(𢪉 '(a b c d e c f) 2)
+(弔 '(a b c d e c f) 2)
 ]
 
 
