@@ -51,17 +51,17 @@
                )
 
                (list
-               @elem{以@litchar{分}开头}
+               @elem{以@litchar{分}结尾}
                "分离成复值"
                @elem{出参数据为复值}
-               @elem{@racket[分􏾺]、@racket[分𨚞]、@racket[分䢼]、@racket[分􏷹]}
+               @elem{@racket[􏾺分]、@racket[𨚞分]、@racket[䢼分]、@racket[􏷹分]}
                )
 
                (list
                @elem{以@litchar{*}结尾}
                "加强力度"
                "仅对数据内容产生影响"
-               @elem{@racket[􏷲*]、@racket[􏿴/数段*]}
+               @elem{@racket[􏷲^]、@racket[􏿴/数段*]}
                )
 
                (list
@@ -380,7 +380,7 @@
 @; @margin-note{
 @; @bold{“@racket[􏾹]”、“@racket[􏾸]”为新造字}
 @; }
-@section+elemref{􏾺、𨚞，􏷵、􏷴，分􏾺、分𨚞，􏾺/入、𨚞/入，􏾺于?}
+@section+elemref{􏾺、𨚞，􏷵、􏷴，􏾺分、𨚞分，􏾺/入、𨚞/入，􏾺于?}
 @margin-note{
 @bold{
 “@racket[􏾺]”、“@racket[𨚞]”为新造字 @linebreak{}
@@ -400,8 +400,8 @@
 (􏷵 '(a b c d e f g) 2)
 (􏷴 '(a b c d e f g) 2)
 
-(分􏾺 '(a b c d e f g) 2)
-(分𨚞 '(a b c d e f g) 2)
+(􏾺分 '(a b c d e f g) 2)
+(𨚞分 '(a b c d e f g) 2)
 
 (􏾺/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 数?)
 (𨚞/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 数?)
@@ -411,7 +411,7 @@
 ]
 
 @; @section+elemref{左䢼，左䢼分、左􏾶分}
-@section+elemref{䢼，􏷳，分䢼}
+@section+elemref{䢼，􏷳，䢼分}
 @margin-note{
 @; @bold{“@racket[䢼]”、“@racket[􏾶]”为新造字}
 @bold{“@racket[䢼]”、“@racket[􏷳]”为新造字}
@@ -423,7 +423,7 @@
 @examples[#:eval (the-eval)
 (䢼 '(a b x y z) '(a b c d e f g))
 (􏷳 '(a b x y z) '(a b c d e f g))
-(分䢼 '(a b x y z) '(a b c d e f g))
+(䢼分 '(a b x y z) '(a b c d e f g))
 ]
 
 
@@ -502,7 +502,7 @@
 (􏿀 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
 ]
 
-@section+elemref{𬩽、𬩽/入，􏿁、􏿁/入，􏷲~、􏷲*} @;删/入、删*/入，刈、刈*
+@section+elemref{𬩽、𬩽/入，􏿁、􏿁/入，􏷲~、􏷲^} @;删/入、删*/入，刈、刈*
 
 @margin-note{
 @bold{“@racket[􏿁]”为新造字} @linebreak{}
@@ -534,7 +534,7 @@
 @; (删*/入 正数? '(1 2 -3 4))
 ]
 
-@section+elemref{查、􏷹，􏷶、􏷶~，分􏷹，度􏷹}
+@section+elemref{查、􏷹，􏷶、􏷶~，􏷹分，度􏷹}
 @margin-note{
 @bold{
 “@racket[􏷹]”为新造字 @linebreak{}
@@ -551,39 +551,67 @@
 (􏷹 正数? '(1 2 -3 4 -5))
 (􏷶 正数? '(1 2 -3 4 -5))
 (􏷶~ 正数? '(1 2 -3 4 -5))
-(分􏷹 正数? '(1 2 -3 4 -5)) @; 􏾽离 would still be list
+(􏷹分 正数? '(1 2 -3 4 -5)) @; 􏾽离 would still be list
 (度􏷹 正数? '(1 2 -3 4 -5))
 ]
 
-@section+elemref{各，佫，各且、各或，各参，􏷹佫、􏿝佫}
-@margin-note{@bold{“@racket[𮞑]”为古活字}}
+@section+elemref{各，佫，􏷮，􏷭，垎、右垎，􏷹佫、􏿝佫}
+ @; @margin-note{@bold{“@racket[𮞑]”为古活字}}
+@margin-note{
+@bold{“@racket[佫]”为古活字} @linebreak{}
+@bold{“@racket[􏷮]”为新造字} @linebreak{}
+@bold{“@racket[􏷭]”为新造字} @linebreak{}
+@bold{“@racket[垎]”为活用字}
+@itemlist[
+@item{@litchar{各}：表意，各个元素依次；}
+@item{@litchar{亻}，见：@secref["rules"]；}
+@item{@litchar{土}，表意，构建。见：@secref["rules"]；}
+@item{@litchar{且}：见@racket[且]；}
+@item{@litchar{或}：见@racket[或]；}
+]
+}
+@margin-note{
+为图理解，列下代码，两两等同：
+@itemlist[
+@item{@code{(佫 某例程 (􏿴 a b c))}}
+@item{@code{(􏿴 (某例程 a) (某例程 b) (某例程 c))}}
+@item{@code{(􏷮 某例程 (􏿴 a b c))}}
+@item{@code{(且 (某例程 a) (某例程 b) (某例程 c))}}
+@item{@code{(􏷭 某例程 (􏿴 a b c))}}
+@item{@code{(或 (某例程 a) (某例程 b) (某例程 c))}}
+@item{@code{(垎 某例程 z (􏿴 a b c))}}
+@item{@code{((某例程 c (某例程 b (某例程 a z))))}}
+@item{@code{(右垎 某例程 z (􏿴 a b c))}}
+@item{@code{((某例程 a (某例程 b (某例程 c z))))}}
+]
+}
+
 @examples[#:eval (the-eval)
 (各 行示 (􏿴 2 4 6 8))
 (佫 加一 '(1 2 3 4))
 (佫 + '(1 2 3 4) '(100 200 300 400))
 
-(各且 正数? '(1 2 -3 4))
-(各且 + '(1 2 3 4) '(100 200 300 400))
+(􏷮 正数? '(1 2 -3 4))
+(􏷮 + '(1 2 3 4) '(100 200 300 400))
 
-(各或 负数? '(1 2 -3 4))
-(各或 + '(1 2 3 4) '(100 200 300 400))
+(􏷭 负数? '(1 2 -3 4))
+(􏷭 + '(1 2 3 4) '(100 200 300 400))
 
-(各参 + 0 '(1 2 -3 4))
-(各参 双 '() '(1 2 -3 4))
-(右各参 双 '() '(1 2 -3 4))
+(垎 + 0 '(1 2 -3 4))
+(垎 双 '() '(1 2 -3 4))
+(右垎 双 '() '(1 2 -3 4))
 
-
-(􏷹佫 (入 (x) (且 (正数? x) (加一 x))) '(1 3 -4 5))
-(􏿝佫 vector->list '(#(1) #(2 3) #(4)))
+(佫􏷹 (入 (x) (且 (正数? x) (加一 x))) '(1 3 -4 5))
+(佫􏿝 vector->list '(#(1) #(2 3) #(4)))
 ]
 
 
-@section+elemref{佫/之最大数、佫/之最小数}
+@section+elemref{佫之最大数、佫之最小数}
 @examples[#:eval (the-eval)
-(佫/之最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(佫/之最小数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(佫/之最大数 阳 '((3 pears) (1 banana) (2 apples)))
-(佫/之最小数 阳 '((3 pears) (1 banana) (2 apples)))
+(佫之最大数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(佫之最小数 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(佫之最大数 阳 '((3 pears) (1 banana) (2 apples)))
+(佫之最小数 阳 '((3 pears) (1 banana) (2 apples)))
 ]
 
 
