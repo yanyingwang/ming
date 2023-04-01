@@ -1,11 +1,10 @@
-@font-face {
-     font-family: SourceHanSansCNX;
-     font-style: normal; /* italic oblique */
-     font-weight: normal; /* normal bold lighter bolder 100 900 */
-     font-stretch: normal; /* condensed expanded ultra-expanded 50% */
-     src: url("SourceHanSansCNX-Regular.woff2") format("woff2");
-}
-
+/* @font-face { */
+/*      font-family: SourceHanSansCNX; */
+/*      font-style: normal; /\* italic oblique *\/ */
+/*      font-weight: normal; /\* normal bold lighter bolder 100 900 *\/ */
+/*      font-stretch: normal; /\* condensed expanded ultra-expanded 50% *\/ */
+/*      src: url("SourceHanSansCNX-Regular.woff2") format("woff2"); */
+/* } */
 
 /* .wq-ext-font { */
 /*     font-family: 'WenQuanYiMicroHeiExtend'; */
@@ -19,7 +18,6 @@
     font-family: 'Fira-Mono', monospace, SourceHanSansCNX !important;
 }
 
-
 .RktIn, .RktRdr, .RktPn, .RktMeta,
 .RktMod, .RktKw, .RktVar, .RktSym,
 .RktRes, .RktOut, .RktCmt, .RktVal,
@@ -30,7 +28,6 @@
 .main, .refcontent, .tocview, .tocsub, .sroman, i {
     font-family: 'Charter-Racket', serif, SourceHanSansCNX !important;
 }
-
 
 h1, h2, h3, h4, h5, h6, h7, h8 {
     font-family: 'Fira', sans-serif, SourceHanSansCNX !important;
