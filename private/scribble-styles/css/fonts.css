@@ -1,11 +1,9 @@
 @font-face {
-     font-family: WenQuanYiMicroHeiExtend; 
-     font-style: normal; 
-     font-weight: bold; 
-     font-stretch: normal; 
-     /* src: url("https://raw.githubusercontent.com/yanyingwang/favfonts/master/WenQuanWeiMiHeiExtend/WenQuanYiMicroHeiExtend-Regular.ttf") format("truetype"); */
-     /* src: url("https://raw.githubusercontent.com/yanyingwang/favfonts/master/WenQuanWeiMiHeiExtend/WenQuanYiMicroHeiExtend-Regular.woff2") format("woff2"); */
-     src: url("WenQuanYiMicroHeiExtend-Regular.woff2") format("woff2");
+     font-family: SourceHanSansCNX;
+     font-style: normal; /* italic oblique */
+     font-weight: normal; /* normal bold lighter bolder 100 900 */
+     font-stretch: normal; /* condensed expanded ultra-expanded 50% */
+     src: url("SourceHanSansCNX-Regular.woff2") format("woff2");
 }
 
 
@@ -18,7 +16,7 @@
 /* } */
 
 .maincolumn, .refpara, .refelem, .tocset, .stt, .hspace, .refparaleft, .refelemleft {
-    font-family: 'Fira-Mono', monospace, WenQuanYiMicroHeiExtend !important;
+    font-family: 'Fira-Mono', monospace, SourceHanSansCNX !important;
 }
 
 
@@ -26,22 +24,22 @@
 .RktMod, .RktKw, .RktVar, .RktSym,
 .RktRes, .RktOut, .RktCmt, .RktVal,
 .RktBlk, .RktErr {
-    font-family: 'Fira-Mono', monospace, WenQuanYiMicroHeiExtend !important;
+    font-family: 'Fira-Mono', monospace, SourceHanSansCNX !important;
 }
 
 .main, .refcontent, .tocview, .tocsub, .sroman, i {
-    font-family: 'Charter-Racket', serif, WenQuanYiMicroHeiExtend !important;
+    font-family: 'Charter-Racket', serif, SourceHanSansCNX !important;
 }
 
 
 h1, h2, h3, h4, h5, h6, h7, h8 {
-    font-family: 'Fira', sans-serif, WenQuanYiMicroHeiExtend !important;
+    font-family: 'Fira', sans-serif, SourceHanSansCNX !important;
 }
 
 .tocset td {
-    font-family: 'Fira', sans-serif, WenQuanYiMicroHeiExtend !important;
+    font-family: 'Fira', sans-serif, SourceHanSansCNX !important;
 }
 
 .tocsubtitle {
-        font-family: 'Fira', sans-serif, WenQuanYiMicroHeiExtend !important;
+        font-family: 'Fira', sans-serif, SourceHanSansCNX !important;
 }
