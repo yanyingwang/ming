@@ -27,13 +27,14 @@ jobs:
       - name: build docs
         run: |
           raco scribble --htmls \
-                        # ++extra private/scribble-styles/css/SourceHanSansCNX-Regular.woff2 \
                         --dest-name doc \
                         ++main-xref-in \
                         --redirect-main https://docs.racket-lang.org/ \
                         --redirect https://docs.racket-lang.org/local-redirect/index.html \
                         scribblings/ming.scrbl
-                        # --redirect-main file:///home/yanying/racket/doc/index.html \  # for localhost doc
+                        # ++extra private/scribble-styles/css/SourceHanSansCNX-Regular.woff2 \
+                        # --redirect ~/racket/doc/local-redirect/index.html \
+                        # --redirect-main ~/racket/doc/index.html \
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v1.2.5
