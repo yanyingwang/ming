@@ -5,9 +5,6 @@
            ming/scribble
            )
 
-@(require (file "../private/scribble-styles/css/fonts.css.rkt"))
-@css/wenquan-extend-font
-
 @title[#:style '(toc) #:tag "racket library in chinese"]{Racket汉化库}
 
 

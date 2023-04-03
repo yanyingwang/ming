@@ -2,13 +2,10 @@
 
 @(require (for-label racket ming)
            scribble/example
-           scribble-rainbow-delimiters
-           (file "../private/scribble-styles/css/fonts.css.rkt")
-           )
+           scribble-rainbow-delimiters)
 @(define the-eval
          (make-eval-factory '(racket/base racket/list ming/racket/base ming/racket/list)))
 
-@css/wenquan-extend-font
 @script/rainbow-delimiters*
 
 
