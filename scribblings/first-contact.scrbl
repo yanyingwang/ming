@@ -85,11 +85,11 @@
 
 @examples[#:eval (the-eval) #:label "中文化后的示例："
 (􏿴 'val 'val 'val)
-(复 3 'val)
+(㙏 3 'val)
 
 (􏿴 1 2 3 4 5)
-(序 5 加一)
-(序 5 (入 (n) (复 n 'val)))
+(垿 5 加一)
+(垿 5 (入 (n) (㙏 n 'val)))
 ]
 
 
