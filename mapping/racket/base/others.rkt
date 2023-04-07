@@ -19,12 +19,13 @@
 >>> displayln 行陈
 
 >>> values 殖 "复值的意思" ;;  値 􏾴 􏾴 𡖻 殖
->>> call-with-values 入􏾴参予 "用continuation生成复值，并作为参数给予某例程"
+>>> call-with-values 入殖参予 "用continuation生成复值，并作为参数给予某例程"
 
 >>> for 遍 ;; 每 为 历、遍历 对于
 >>> for/list 遍/􏿴
 >>> apply 用 ;; 应 使
 >>> procedure? 程? "例程简称程"
+;; >>> listof 􏿴内
 >>> eval 求
 >>> void? 无?
 

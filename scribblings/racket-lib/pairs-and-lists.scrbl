@@ -54,8 +54,8 @@
                (list
                @elem{左偏旁@litchar{土}}
                "“构建”、“创建”的意思"
-               @elem{因为表意“创建”，所以出参和入参数据结构通常不同，但也可能相同，取决于具体情况}
-               @elem{@racket[垿]、@racket[㙏]、@racket[垎]}
+               @elem{出参类型不一而多变}
+               @elem{@racket[垎]}
                )
 
                (list
@@ -68,7 +68,7 @@
                (list
                @elem{以@litchar{*}结尾}
                "加强力度（对出参）"
-               "出参是􏿴数据结构"
+               "出参内容更加丰富"
                @elem{@racket[􏿴/数段*]}
                )
 
@@ -82,7 +82,7 @@
                (list
                @elem{以@litchar{~}结尾}
                "减轻力度"
-               "仅对数据内容产生影响"
+               "出参内容更加贫瘠"
                @elem{@racket[􏷲~]、@racket[􏷶~]}
                )
 
@@ -194,22 +194,14 @@
 (􏿴/数段* 10 20 2)
 ]
 
-@section+elemref{垿、㙏}
+@section+elemref{序、复}
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据。
-@margin-note{
-@bold{“@racket[垿]”为古活字} @linebreak{}
-@bold{“@racket[㙏]”为古活字}
-@itemlist[
-@item{@litchar{序}：表意，按顺序排列的数字；}
-@item{@litchar{复}：表意，元素的重复；}
-@item{@litchar{土}偏旁，见：@secref["rules"]。}
-]
-}
 @examples[#:eval (the-eval)
-(垿 5 殖)
-(垿 5 加一)
-(㙏 5 'foo)
-(垿 5 (入 (n) (㙏 n 'foo)))
+(复 5 'foo)
+(序 5 殖)
+(序 5 加一)
+(序 5 (入 (n)
+        (复 n 'foo)))
 ]
 
 @section+elemref{攸}
@@ -242,51 +234,37 @@
 @; (􏿛/入 '(10 15 20 25) 1 加一)
 @; ]
 
-@; @section+elemref{􏿝、􏿜}
-@; 用于对@elemref["what-is-􏿴􏿫" "􏿴"]类结构数据进行处理并输出相同于@racket[􏿴]、@racket[􏿫]例程输出数据之结构的数据。
-@; @margin-note{
-@; @bold{“@racket[􏿝]”、“@racket[􏿜]”为新造字}
-@; @itemlist[
-@; @item{两字分别是仿照@elemref[ "the-char-creating-of-􏿴􏿫" "􏿴、􏿫"]字而造：因为与他们处理数据后输出的结果之数据类型相同（不同在于新造字例程的输入参数之数据类型为@elemref["what-is-􏿴􏿫" "􏿴"]）；}
-@; @item{左上起笔处的偏旁@litchar{毌}，表示“贯穿”之意（@litchar{毌}是@litchar{贯}的古字）：因此意思即为把数个@elemref["what-is-􏿴􏿫" "􏿴"]贯穿起来组成一个新的@elemref["what-is-􏿴􏿫" "􏿴"]并返回之。}
-@; ]
-@; }
-@; @examples[#:eval (the-eval)
-@; (􏿴 1 2 3 4)
-@; (􏿝 '(1) '(2) '(3) '(4))
-@; (􏿫 1 2 3 4)
-@; (􏿜 '(1) '(2) '(3) '(4))
-@; (􏿫 1 2 3 '(4))
-@; (􏿜 '(1) '(2) '(3) '((4)))
-@; ]
-@section+elemref{􏾟、􏾞}
+@section+elemref{􏿝、􏿜}
 用于对@elemref["what-is-􏿴􏿫" "􏿴"]类结构数据进行处理并输出相同于@racket[􏿴]、@racket[􏿫]例程输出数据之结构的数据。
 @margin-note{
-@bold{“@racket[􏾟]”为新造字} @linebreak{}
-@bold{“@racket[􏾞]”为新造字}
+@bold{“@racket[􏿝]”、“@racket[􏿜]”为新造字}
 @itemlist[
-@item{􏿴：表意，见@racket[􏿴]}
-@item{􏿴：表意，见@racket[􏿴]}
-@item{左偏旁@litchar{土}，见：@secref["rules"]}
+@item{两字分别是仿照@elemref[ "the-char-creating-of-􏿴􏿫" "􏿴、􏿫"]字而造：因为与他们处理数据后输出的结果之数据类型相同（不同在于新造字例程的输入参数之数据类型为@elemref["what-is-􏿴􏿫" "􏿴"]）；}
+@item{左上起笔处的偏旁@litchar{毌}，表示“贯穿”之意（@litchar{毌}是@litchar{贯}的古字）：因此意思即为把数个@elemref["what-is-􏿴􏿫" "􏿴"]贯穿起来组成一个新的@elemref["what-is-􏿴􏿫" "􏿴"]并返回之。}
 ]
 }
 @examples[#:eval (the-eval)
 (􏿴 1 2 3 4)
-(􏾟 '(1) '(2) '(3) '(4))
-(􏾟 '(1) '(2 3 4) '(5 6) '(7))
+(􏿝 '(1) '(2) '(3) '(4))
+(􏿝 '(1) '(2 3 4) '(5 6) '(7))
+(􏿝 '(a b) 'c)
+(􏿝 '(a b) '(c . d))
+(􏿝 '() 'a)
+(􏿝 'a)
 
-(􏿫 '(1) '(2) '(3) '(4))
-(􏾞 '(1) '(2) '(3) '(4))
-(􏾞 '(1) '(2 3 4) '(5 6) '(7))
+(􏿫 1 2 3 4)
+(􏿜 '(1) '(2) '(3) '(4))
+(􏿜 '(1) '(2 3 4) '(5 6) '(7))
 
-
-(􏿫 '(1) '(2) '(3) '((4)))
-(􏾞 '(1) '(2) '(3) '((4)))
-(􏾞 '(1) '(2 22) '(3 33) '((4 44)))
-(􏾞 '(1) '(2 22) '((3 33)) '((4 44)))
-
+(􏿫 1 2 3 '(4))
+(􏿜 '(1) '(2) '(3) '((4)))
+(􏿜 '(1) '(2 22) '(3 33) '((4 44)))
+(􏿜 '(1) '(2 22) '((3 33)) '((4 44)))
+(􏿜 '(a b) '(c))
+(􏿜 '(a b) '((c . d)))
+(􏿜 '() '(a))
+(􏿜 '(a))
 ]
-
 
 
 @section+elemref{甲、乙、丙、丁、戊、己、庚、辛、壬、癸}
@@ -378,7 +356,8 @@
 
 @section+elemref{引、引/入，𠇁、𠇁/入、弔}
 @margin-note{
-@bold{“@racket[𢪉]”、“@racket[𠇁]”、“@racket[弔]”为古活字}
+@bold{“@racket[𠇁]”为古活字} @linebreak{}
+@bold{“@racket[弔]”为古活字}
 @itemlist[
 @item{@litchar{引}是“索引”的意思，即返回某值的索引；}
 @item{@litchar{𠇁}是对@litchar{引}加@litchar{亻}，含义见：@secref["rules"]。}
@@ -386,20 +365,14 @@
 @item{@litchar{弔}表示是用某索引提取相对应的值。}
 ]
 }
-
-
+@margin-note{
+另见：@racket[引*]、@racket[引*/入]，@racket[𠇁~]、@racket[𠇁~/入]，@racket[伄^]、@racket[􏾝]
+}
 @examples[#:eval (the-eval)
 (引 '(a b c d e c f) 'c)
-(引/入 '(a b c d e c f)
-         (入 (x)
-             (或 (同? x 'b)
-                 (同? x 'c))))
-
 (𠇁 '(a b c d e c f) 'c)
-(𠇁/入 '(a b c d e c f)
-         (入 (x)
-             (或 (同? x 'b)
-                 (同? x 'c))))
+(引/入 '(a b 11 d 22 c f) 数?)
+(𠇁/入 '(a b 11 d 22 c f) 数?)
 (弔 '(a b c d e c f) 2)
 ]
 
@@ -587,7 +560,7 @@
 @; (删*/入 正数? '(1 2 -3 4))
 ]
 
-@section+elemref{查、􏷹，􏷶、􏷶~，􏷹分，度􏷹}
+@section+elemref{查、􏷹，􏷶、􏷶~，􏷹分，􏷹度}
 @margin-note{
 @bold{
 “@racket[􏷹]”为新造字 @linebreak{}
@@ -605,10 +578,10 @@
 (􏷶 正数? '(1 2 -3 4 -5))
 (􏷶~ 正数? '(1 2 -3 4 -5))
 (􏷹分 正数? '(1 2 -3 4 -5)) @; 􏾽离 would still be list
-(度􏷹 正数? '(1 2 -3 4 -5))
+(􏷹度 正数? '(1 2 -3 4 -5))
 ]
 
-@section+elemref{各，佫，􏷮，􏷭，垎、右垎，􏷹佫、􏿝佫}
+@section+elemref{各，佫，􏷮，􏷭，垎、右垎，佫􏷹、佫􏿝}
  @; @margin-note{@bold{“@racket[𮞑]”为古活字}}
 @margin-note{
 @bold{“@racket[佫]”为古活字} @linebreak{}
@@ -624,7 +597,7 @@
 ]
 }
 @margin-note{
-为图理解，列下代码，两两等同：
+下列代码，为便理解，两两等同：
 @itemlist[
 @item{@code{(佫 某例程 (􏿴 a b c))}}
 @item{@code{(􏿴 (某例程 a) (某例程 b) (某例程 c))}}

@@ -16,7 +16,7 @@
 >>> last-pair 􏷽 "取出最后一双元素" ;; 末链（链一定为双） 􏿦
 ;; >>> rest 末** "􏿴除去甲以外剩下的􏿴" ;; 甲外 剩余 去甲 舍甲
 
->>> make-list 㙏 "构造复式数据（数据内各个元素相同，类比（昆虫）“复眼”一词取名）" ;; 复 㙏
+>>> make-list 复 "构造复式数据（数据内各个元素相同，类比（昆虫）“复眼”一词取名）" ;; 复 㙏
 
 >>> list-set 攸 @elem{修改数据中的某个元素为新值并返回新数据} ;; 修 更 改 新 肖 攸 􏿛
 >>> list-update 攸/入 @elem{类上，另外进参是@racket[入]} ;; 攸
@@ -50,7 +50,7 @@
 >>> split-common-prefix 䢼分 @elem{将@racket[䢼]和余下分离开（输出结果是一个复值）}
 
 
->>> append* 􏾞 @elem{把多个@racket[􏿴]贯穿相连组成一个 @racket[􏿫]并返回之} ;; 􏿜
+>>> append* 􏿜 @elem{把多个@racket[􏿴]贯穿相连组成一个 @racket[􏿫]并返回之} ;; 􏿜 􏾞
 
 >>> add-between 𰂋 @elem{@racket[􏿴]中每两个元素之间都插入另一元素} ;; 侠 夹 间 插 搀 掺 􏿃 侠
 >>> flatten 偏 @elem{把@racket[􏿴]中数据做扁平化处理} ;; 平 伻
@@ -60,10 +60,10 @@
 
 >>> filter-not 􏷶 "去除掉所有符合条件的元素并返回新数据" ;; 筛除 ; 淘 汰 剔 􏾽余 􏾼 􏷸
 >>> partition 􏷹分 @elem{将@racket[􏷹]和余下的分离开（输出结果是一个复值）} ;; 筛开 筛分 筛离 筛分 􏾽分
->>> count 度􏷹 @elem{返回@racket[􏷹]的@racket[度]，等同于@code{(度 (􏷹 lst))}} ;;度/入 计 λ 度/入
+>>> count 􏷹度 @elem{返回@racket[􏷹]的@racket[度]，等同于@code{(度 (􏷹 lst))}} ;;度/入 计 λ 度/入
 
->>> filter-map 佫􏷹 @elem{等同于@code{(􏾽 (入 (x) x) (𮞑 proc lst))}} ;佫之􏷹 􏷹佫 􏷯
->>> append-map 佫􏿝 @elem{等同于@code{(􏿝 (𮞑 proc lst))}} ;佫之􏿝
+>>> filter-map 佫􏷹 @elem{等同于@code{(􏷹 (入 (x) x) (佫 proc lst))}} ;佫之􏷹 􏷹佫 􏷯
+>>> append-map 佫􏿝 @elem{等同于@code{(􏿝 (佫 proc lst))}} ;佫之􏿝
 
 >>> range 􏿴/数段 "A到B之间的一段数组成的􏿴（包括A不包括B）"
 >>> inclusive-range 􏿴/数段* "A到B之间的一段数组成的􏿴（包括A也包括B）"
