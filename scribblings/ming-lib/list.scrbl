@@ -90,12 +90,17 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @; ]
 @; }
 
-
+@deftogether[(
+@defproc[(伄 [LST 􏿴?] [V 精确非负整数?] ...)
+          􏿴?]
 @defproc[(伄^ [LST 􏿴?] [V-LST (listof 精确非负整数?)])
-          􏿴?]{
-以@racket[V-LST]中的元素作为索引来查找出@racket[LST]中对应的元素。
+          􏿴?]
+)]{
+@racket[伄]：以多个@racket[V]作为索引来查找出@racket[LST]中全部对应的元素。 @linebreak{}
+@racket[伄^]：以@racket[V-LST]中的元素作为索引来查找出@racket[LST]中全部对应的元素。
 @margin-note{另见：@racket[弔]}
 @examples[#:eval (the-eval)
+(伄 '(a b c d e f g) 0 2 3)
 (伄^ '(a b c d e f g) '(0 2 3))
 ]
 }
@@ -137,7 +142,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @margin-note{另见：@racket[􏾺]、@racket[𨚞]}
 
 @examples[#:eval (the-eval)
-(𬩵 '(a b c d e f g) 1 2)
+(𬩵 '(a b c d e f g) 1 3)
 ]
 }
 

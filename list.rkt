@@ -3,7 +3,7 @@
 ;(provide 段) ; 􏿊 􏿚
 (provide 引* 引*/入
          𠇁~ 𠇁~/入
-         伄^
+         伄 伄^
          􏾝 􏾝*
          𬩵
          度/入
@@ -50,6 +50,10 @@
 
 (名 (􏷲 V LST)
   (􏷲^ (list V) LST))
+
+(名 (伄 LST . IDX-LST)
+  (佫 (入 (IDX) (弔 LST IDX))
+    IDX-LST))
 
 (名 (伄^ LST IDX-LST)
   (佫 (入 (IDX) (弔 LST IDX))

@@ -366,7 +366,7 @@
 ]
 }
 @margin-note{
-另见：@racket[引*]、@racket[引*/入]，@racket[𠇁~]、@racket[𠇁~/入]，@racket[伄^]、@racket[􏾝]
+另见：@racket[引*]、@racket[引*/入]，@racket[𠇁~]、@racket[𠇁~/入]，@racket[伄]、@racket[􏾝]
 }
 @examples[#:eval (the-eval)
 (引 '(a b c d e c f) 'c)
