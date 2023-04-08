@@ -12,7 +12,7 @@
 @script/rainbow-delimiters*
 
 
-@title[#:tag "lists"]{􏿴}
+@title[#:tag "ming-lists"]{􏿴}
 @defmodule[ming/list]
 Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @margin-note{本页所列之例程的实现代码是名语言，因此源代码有参照意义。}

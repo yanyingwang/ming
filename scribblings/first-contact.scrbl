@@ -68,7 +68,7 @@
 对于@racket[make-list]和@racket[build-list]这两个例程的具体作用，从名字上我们仅仅能看出它是用来创建􏿴的，并不能看出它的其它更具体的作用。
 
 @subsubsection{中文化后}
-中文化后，@racket[make-list]叫“复􏿴”（@racket[复]），意为􏿴内部的每个元素是重复的；@racket[build-list]叫“序􏿴”（@racket[􏿴]），意为􏿴内部的元素是按照一定的顺序排列的。
+中文化后，@racket[make-list]叫“复􏿴”（@racket[􏿴/复]），意为􏿴内部的每个元素是重复的；@racket[build-list]叫“序􏿴”（@racket[􏿴/序]），意为􏿴内部的元素是按照一定的顺序排列的。
 
 @itemlist[
 @item{第一，显然这两个例程的名字有着较原英文更加丰富的含义，这是我上文提到的我所说的中文化的意义；}
@@ -85,11 +85,11 @@
 
 @examples[#:eval (the-eval) #:label "中文化后的示例："
 (􏿴 'val 'val 'val)
-(复 3 'val)
+(􏿴/复 3 'val)
 
 (􏿴 1 2 3 4 5)
-(序 5 加一)
-(序 5 (入 (n) (复 n 'val)))
+(􏿴/序 5 加一)
+(􏿴/序 5 (入 (n) (􏿴/复 n 'val)))
 ]
 
 

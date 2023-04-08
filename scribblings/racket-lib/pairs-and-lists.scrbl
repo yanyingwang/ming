@@ -14,6 +14,7 @@
 
 
 @title[#:tag "pairs-and-lists"]{双和􏿴}
+@margin-note{另见名扩展库：@secref["ming-lists"]}
 
 @section[#:tag "rules"]{例程命名规则}
 除总@secref["naming-rules"]外，另有：
@@ -40,7 +41,7 @@
                @elem{右偏旁@litchar{阝}}
                "连续集（类型相同且元素连续相同）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的一部分}
-               @elem{@racket[􏾺]、@racket[𨚞]、@racket[𬩵]、@racket[䢼]、@racket[𬩽]}
+               @elem{@racket[􏾝]、@racket[􏾺]、@racket[𨚞]、@racket[𬩵]、@racket[䢼]、@racket[𬩽]}
                )
 
                (list
@@ -194,14 +195,14 @@
 (􏿴/数段* 10 20 2)
 ]
 
-@section+elemref{序、复}
+@section+elemref{􏿴/序、􏿴/复}
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据。
 @examples[#:eval (the-eval)
-(复 5 'foo)
-(序 5 殖)
-(序 5 加一)
-(序 5 (入 (n)
-        (复 n 'foo)))
+(􏿴/复 5 'foo)
+(􏿴/序 5 殖)
+(􏿴/序 5 加一)
+(􏿴/序 5 (入 (n)
+        (􏿴/复 n 'foo)))
 ]
 
 @section+elemref{攸}
@@ -606,9 +607,9 @@
 @item{@code{(􏷭 某例程 (􏿴 a b c))}}
 @item{@code{(或 (某例程 a) (某例程 b) (某例程 c))}}
 @item{@code{(垎 某例程 z (􏿴 a b c))}}
-@item{@code{((某例程 c (某例程 b (某例程 a z))))}}
+@item{@code{(某例程 c (某例程 b (某例程 a z)))}}
 @item{@code{(右垎 某例程 z (􏿴 a b c))}}
-@item{@code{((某例程 a (某例程 b (某例程 c z))))}}
+@item{@code{(某例程 a (某例程 b (某例程 c z)))}}
 ]
 }
 
