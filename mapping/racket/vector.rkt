@@ -3,21 +3,22 @@
 
 >>> vector-empty? 空􏿲?
 >>> vector-set*! 􏿲攸*!
->>> vector-map 􏿲𮞑
->>> vector-append 毌􏿲
+>>> vector-map 􏿲佫
+>>> vector-append 贯􏿲 ;; 土􏿲 土􏿴
 >>> vector-take 􏿲􏾺
 >>> vector-take-right 􏿲𨚞
->>> vector-drop 􏿲􏾹
->>> vector-drop-right 􏿲􏾸
+>>> vector-drop 􏿲􏷵
+>>> vector-drop-right 􏿲􏷴
 >>> vector-split-at 􏿲􏾺分
 >>> vector-split-at-right 􏿲𨚞分
->>> vector-copy 􏿲部
->>> vector-filter 􏿲􏾽
->>> vector-filter-not 􏿲􏾼
->>> vector-count 􏿲计
->>> vector-argmin 􏿲𮞑而最小数
->>> vector-argmax 􏿲𮞑而最大数
->>> vector-member 􏿲𬩽
->>> vector-memv 􏿲𬩽/齐
->>> vector-memq 􏿲𬩽/等
->>> vector-sort 􏿲𠍣
+>>> vector-copy 􏿲􏾝
+>>> vector-filter 􏿲􏷹
+>>> vector-filter-not 􏿲􏷶
+>>> vector-count 􏿲􏷹度
+>>> vector-argmin 􏿲佫之最小数
+>>> vector-argmax 􏿲佫之最大数
+>>> vector-member 􏿲引
+>>> vector-memv 􏿲引/粡
+>>> vector-memq 􏿲引/侗
+>>> vector-sort 􏿲􏿀
+>>> vector-sort! 􏿲􏿀!

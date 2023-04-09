@@ -29,5 +29,5 @@
 >>> eval 求
 >>> void? 无?
 
->>> immutable? 坚? @elem{“不可变的”的意思。另常用有“易”和其意思相对，意思是“可变的”，即@code{(非 坚?)}}
+>>> immutable? 贞? @elem{“不可变的”的意思}
 >>> raise-argument-error 报参错

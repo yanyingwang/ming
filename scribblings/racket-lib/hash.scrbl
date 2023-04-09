@@ -7,7 +7,8 @@
 @(define the-eval
          (make-eval-factory '(ming/racket/base)))
 
-
+@(require (file "../../private/scribble-styles/css/ming-fonts.css.rkt"))
+@css/ming-fonts
 @(require scribble-rainbow-delimiters)
 @script/rainbow-delimiters*
 

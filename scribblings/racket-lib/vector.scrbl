@@ -8,15 +8,15 @@
          (make-eval-factory '(ming/racket/base ming/racket/vector)))
 
 
+@(require (file "../../private/scribble-styles/css/ming-fonts.css.rkt"))
+@css/ming-fonts
 @(require scribble-rainbow-delimiters)
 @script/rainbow-delimiters*
 
 
 @title[#:tag "vector"]{􏿲}
 
-@section+elemref{􏿲、􏿲/坚，复􏿲、序􏿲，毌􏿲，空􏿲?、􏿲?}
-“􏿲”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "vector"]）是和“@racket[􏿴]”类似的一种数据结构，但显著的一个不同是访问和更新其元素值的时间复杂度是@hyperlink["https://zh.wikipedia.org/wiki/%E5%B8%B8%E6%95%B8%E6%99%82%E9%96%93" "常数时间"]。
-
+@section+elemref{􏿲、贞􏿲，空􏿲?，􏿲?}
 @margin-note{
 @bold{@litchar{􏿲}为新造字}
 @itemlist[
@@ -25,40 +25,58 @@
 ]
 }
 
+“􏿲”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "vector"]）是和“@racket[􏿴]”类似的一种数据结构，但显著的一个不同是访问和更新其元素值的时间复杂度是@hyperlink["https://zh.wikipedia.org/wiki/%E5%B8%B8%E6%95%B8%E6%99%82%E9%96%93" "常数时间"]。@linebreak{}
+
 @examples[#:eval (the-eval)
 (􏿲 1 2 3 4)
-(􏿲? (􏿲 1 2 3 4))
-(坚? (􏿲 1 2 3 4))
-(􏿲/坚 1 2 3 4)
-(􏿲? (􏿲/坚 1 2 3 4))
-(坚? (􏿲/坚 1 2 3 4))
-
-(复􏿲 5 'foo)
-(序􏿲 5 殖)
-
-(毌􏿲 '#(1) '#(2) '#(3) '#(4))
-
-(空􏿲? '#())
+(贞􏿲 1 2 3 4)
+(贞? (􏿲 1 2 3 4))
+(贞? '#(1 2 3 4))
+(空􏿲? #())
 ]
 
+@section+elemref{复􏿲、序􏿲，贯􏿲}
+@examples[#:eval (the-eval)
+(复􏿲 5 'foo)
+(序􏿲 5 加一)
+(贯􏿲 '#(1) '#(2) '#(3) '#(4))
+]
 
-@section+elemref{􏿲度、􏿲第、􏿲𠍣}
+@section+elemref{􏿲度、􏿲弔、􏿲􏿀}
+@margin-note{另见：@racket[弔]}
 @examples[#:eval (the-eval)
 (􏿲度 '#(1 2 3 4))
-(􏿲第 '#(a b c d) 2)
-(􏿲𠍣 '#(1 222 35 4) <)
+(􏿲弔 '#(a b c d) 2)
+(􏿲􏿀 '#(1 222 35 4) <)
 ]
 
-
-@section+elemref{􏿴->􏿲，􏿲->􏿲/坚，􏿲->􏿴，􏿲->殖}
+@section+elemref{􏿴􏿲化，􏿲贞化，􏿲􏿴化，􏿲殖化}
 @examples[#:eval (the-eval)
-(􏿴->􏿲 '(a b c d))
-(􏿲->􏿴 '#(a b c d))
-(􏿲->􏿲/坚 '#(a b c d))
-(􏿲->殖 '#(a b c d))
-(􏿲->殖 '#(a b c d) 0 2)
+(􏿴􏿲化 '(a b c d))
+(􏿲􏿴化 '#(a b c d))
+(􏿲贞化 '#(a b c d))
+(􏿲殖化 '#(a b c d))
+(􏿲􏾝殖化 '#(a b c d) 0 2)
+(􏿲􏾝*殖化 '#(a b c d) 0 2)
 ]
 
+@section+elemref{􏿲􏾺、􏿲􏷵、􏿲􏾺分、􏿲􏾝}
+@margin-note{另见：@racket[􏾺]、@racket[􏾺分]、@racket[􏾝]}
+@examples[#:eval (the-eval)
+(􏿲􏾺 '#(a b c d e f) 2)
+(􏿲􏷵 '#(a b c d e f) 2)
+(􏿲􏾺分 '#(a b c d e f) 2)
+(􏿲􏾝 '#(a b c d e f) 0 2)
+]
+
+@section+elemref{􏿲引，􏿲佫，􏿲􏷹，􏿲􏷶}
+@margin-note{另见：@racket[􏾺]、@racket[􏾺分]、@racket[􏾝]}
+@examples[#:eval (the-eval)
+(􏿲引 'c '#(a b 1 c 2 d 3 e))
+(􏿲佫 加一 '#(1 2 3 4))
+(􏿲􏷹 正数? '#(1 2 -3 4))
+(􏿲􏷶 正数? '#(1 2 -3 4))
+]
 
 @section+elemref{􏿲攸!、􏿲覆!、􏿲覆!/以它段}
 @examples[#:eval (the-eval)
@@ -67,31 +85,12 @@
   某􏿲)
 
 (令 ([某􏿲 (􏿲 'a 'b 'c 'd)])
-  (􏿲覆! 某􏿲 'x)
+  (􏿲复化! 某􏿲 'x)
   某􏿲)
 
 (令 ([某􏿲 (􏿲 'a 'b 'c 'd)])
   (􏿲覆!/以它段 某􏿲 0 '#(aa bb cc dd) 1 3)
   某􏿲)
-]
-
-
-@section+elemref{􏿲􏾺、􏿲􏾹、􏿲􏾺分、􏿲部}
-@examples[#:eval (the-eval)
-(􏿲􏾺 '#(a b c d e f) 2)
-(􏿲􏾹 '#(a b c d e f) 2)
-(􏿲􏾺分 '#(a b c d e f) 2)
-(􏿲部 '#(a b c d e f) 2 5)
-]
-
-@section+elemref{􏿲𬩽，􏿲𮞑，􏿲􏾽，􏿲􏾼}
-@examples[#:eval (the-eval)
-(􏿲𬩽 'c '#(a b 1 c 2 d 3 e))
-
-(􏿲𮞑 加一 '#(1 2 3 4))
-
-(􏿲􏾽 正数? '#(1 2 -3 4))
-(􏿲􏾼 正数? '#(1 2 -3 4))
 ]
 
 

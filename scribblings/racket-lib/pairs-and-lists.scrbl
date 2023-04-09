@@ -195,7 +195,7 @@
 (􏿴/数段* 10 20 2)
 ]
 
-@section+elemref{􏿴/序、􏿴/复}
+@section+elemref{序􏿴、复􏿴}
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据。
 @examples[#:eval (the-eval)
 (􏿴/复 5 'foo)
@@ -363,7 +363,7 @@
 @item{@litchar{引}是“索引”的意思，即返回某值的索引；}
 @item{@litchar{𠇁}是对@litchar{引}加@litchar{亻}，含义见：@secref["rules"]。}
 @; @item{@litchar{𢪉}是对@litchar{引}加@litchar{扌}，表示用某索引提取相对应的值。}
-@item{@litchar{弔}表示是用某索引提取相对应的值。}
+@item{@litchar{弔}（可以认为是@litchar{第}的简写）表示是用某索引提取相对应的值。}
 ]
 }
 @margin-note{
