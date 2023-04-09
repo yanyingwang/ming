@@ -198,11 +198,11 @@
 @section+elemref{序􏿴、复􏿴}
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据。
 @examples[#:eval (the-eval)
-(􏿴/复 5 'foo)
-(􏿴/序 5 殖)
-(􏿴/序 5 加一)
-(􏿴/序 5 (入 (n)
-        (􏿴/复 n 'foo)))
+(复􏿴 5 'foo)
+(序􏿴 5 殖)
+(序􏿴 5 加一)
+(序􏿴 5 (入 (n)
+        (复􏿴 n 'foo)))
 ]
 
 @section+elemref{攸}
