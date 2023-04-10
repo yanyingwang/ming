@@ -8,10 +8,10 @@
 >>> vector-length 􏿲度
 >>> vector-ref 􏿲弔
 >>> vector-set! 􏿲攸!
->>> vector->list 􏿲􏿴化 ; 􏿲->􏿴
->>> list->vector 􏿴􏿲化
+>>> vector->list 􏿲化􏿴 ; 􏿲->􏿴
+>>> list->vector 􏿴化􏿲
 >>> vector->immutable-vector  􏿲贞化 ;􏿲坚化 坚化/􏿲  􏿲->贞􏿲
->>> vector-fill! 􏿲复化! "把􏿲转化成@racket[复􏿲]"
->>> vector-copy! 􏿲覆!/以它段 (elem "从本􏿲的第N处数值（从0算起）开始做覆盖（以另一个􏿲中取出的一段数值）") ; 􏾝
->>> vector->values 􏿲􏾝殖化
+>>> vector-fill! 􏿲复化! @elem{把􏿲@racket[复􏿲]化}
+>>> vector-copy! 􏿲攸!/以􏾝 @elem{从本􏿲的第N处索引的数值开始做修改（以另一个􏿲的@racket[􏿲􏾝]内容）} ; 􏾝
+>>> vector->values 􏿲􏾝化殖
 >>> build-vector 序􏿲

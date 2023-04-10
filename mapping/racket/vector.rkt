@@ -4,6 +4,7 @@
 >>> vector-empty? 空􏿲?
 >>> vector-set*! 􏿲攸*!
 >>> vector-map 􏿲佫
+>>> vector-map! 􏿲佫!
 >>> vector-append 贯􏿲 ;; 土􏿲 土􏿴
 >>> vector-take 􏿲􏾺
 >>> vector-take-right 􏿲𨚞

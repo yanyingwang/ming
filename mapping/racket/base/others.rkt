@@ -29,5 +29,5 @@
 >>> eval 求
 >>> void? 无?
 
->>> immutable? 贞? @elem{“不可变的”的意思}
+>>> immutable? 贞? @elem{“不可变的”的意思} ;; 反义：花
 >>> raise-argument-error 报参错

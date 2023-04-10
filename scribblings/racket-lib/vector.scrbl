@@ -50,14 +50,14 @@
 (􏿲􏿀 '#(1 222 35 4) <)
 ]
 
-@section+elemref{􏿴􏿲化，􏿲贞化，􏿲􏿴化，􏿲殖化}
+@section+elemref{􏿲贞化，􏿲化􏿴、􏿴化􏿲、􏿲化殖}
 @examples[#:eval (the-eval)
-(􏿴􏿲化 '(a b c d))
-(􏿲􏿴化 '#(a b c d))
 (􏿲贞化 '#(a b c d))
-(􏿲殖化 '#(a b c d))
-(􏿲􏾝殖化 '#(a b c d) 0 2)
-(􏿲􏾝*殖化 '#(a b c d) 0 2)
+(􏿴化􏿲 '(a b c d))
+(􏿲化􏿴 '#(a b c d))
+(􏿲化殖 '#(a b c d))
+(􏿲􏾝化殖 '#(a b c d) 0 2)
+(􏿲􏾝*化殖 '#(a b c d) 0 2)
 ]
 
 @section+elemref{􏿲􏾺、􏿲􏷵、􏿲􏾺分、􏿲􏾝}
@@ -78,19 +78,16 @@
 (􏿲􏷶 正数? '#(1 2 -3 4))
 ]
 
-@section+elemref{􏿲攸!、􏿲覆!、􏿲覆!/以它段}
+@section+elemref{􏿲攸!、􏿲复化!、􏿲攸!/以􏾝}
 @examples[#:eval (the-eval)
-(令 ([某􏿲 (􏿲 'a 'b 'c 'd)])
-  (􏿲攸! 某􏿲 2 'x)
-  某􏿲)
-
-(令 ([某􏿲 (􏿲 'a 'b 'c 'd)])
-  (􏿲复化! 某􏿲 'x)
-  某􏿲)
-
-(令 ([某􏿲 (􏿲 'a 'b 'c 'd)])
-  (􏿲覆!/以它段 某􏿲 0 '#(aa bb cc dd) 1 3)
-  某􏿲)
+(名 vec (􏿲 'a 'b 'c 'd))
+vec
+(􏿲攸! vec 1 'x)
+vec
+(􏿲复化! vec 'x)
+vec
+(􏿲攸!/以􏾝 vec 0 '#(aa bb cc dd) 1 3)
+vec
 ]
 
 
