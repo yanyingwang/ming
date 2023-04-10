@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(require (for-label racket ming)
+@(require (for-label racket ming ming/vector ming/list)
            scribble/eval
            ming/scribble
            )
@@ -36,6 +36,7 @@
 ]
 
 @section+elemref{复􏿲、序􏿲，贯􏿲}
+@margin-note{另见：@racket[复􏿴]、@racket[序􏿴]，@racket[􏿝]}
 @examples[#:eval (the-eval)
 (复􏿲 5 'foo)
 (序􏿲 5 加一)
@@ -50,18 +51,19 @@
 (􏿲􏿀 '#(1 222 35 4) <)
 ]
 
-@section+elemref{􏿲贞化，􏿲化􏿴、􏿴化􏿲、􏿲化殖}
+@section+elemref{􏿲贞化，􏿲化􏿴、􏿴化􏿲、􏿲􏾝化殖}
+@margin-note{
+另见：@racket[贞?]，@racket[􏿲􏾝]、@racket[􏿲化殖]、@racket[􏿲􏾝*化殖]
+}
 @examples[#:eval (the-eval)
 (􏿲贞化 '#(a b c d))
 (􏿴化􏿲 '(a b c d))
 (􏿲化􏿴 '#(a b c d))
-(􏿲化殖 '#(a b c d))
 (􏿲􏾝化殖 '#(a b c d) 0 2)
-(􏿲􏾝*化殖 '#(a b c d) 0 2)
 ]
 
 @section+elemref{􏿲􏾺、􏿲􏷵、􏿲􏾺分、􏿲􏾝}
-@margin-note{另见：@racket[􏾺]、@racket[􏾺分]、@racket[􏾝]}
+@margin-note{另见：@racket[􏾺]，@racket[􏾺分]，@racket[􏾝]、@racket[􏿲􏾝*]}
 @examples[#:eval (the-eval)
 (􏿲􏾺 '#(a b c d e f) 2)
 (􏿲􏷵 '#(a b c d e f) 2)
@@ -70,7 +72,7 @@
 ]
 
 @section+elemref{􏿲引，􏿲佫，􏿲􏷹，􏿲􏷶}
-@margin-note{另见：@racket[􏾺]、@racket[􏾺分]、@racket[􏾝]}
+@margin-note{另见：@racket[引]，@racket[佫]，@racket[􏷶]}
 @examples[#:eval (the-eval)
 (􏿲引 'c '#(a b 1 c 2 d 3 e))
 (􏿲佫 加一 '#(1 2 3 4))
@@ -78,13 +80,16 @@
 (􏿲􏷶 正数? '#(1 2 -3 4))
 ]
 
-@section+elemref{􏿲攸!、􏿲复化!、􏿲攸!/以􏾝}
+@section+elemref{􏿲攸!，􏿲攸*!，􏿲复化!，􏿲攸!/以􏾝}
+@margin-note{另见：@racket[复􏿲]，@racket[􏿲􏾝]、@racket[􏿲攸!/以􏾝*]}
 @examples[#:eval (the-eval)
 (名 vec (􏿲 'a 'b 'c 'd))
 vec
 (􏿲攸! vec 1 'x)
 vec
-(􏿲复化! vec 'x)
+(􏿲攸*! vec 1 'y 2 'y)
+vec
+(􏿲复化! vec 'z)
 vec
 (􏿲攸!/以􏾝 vec 0 '#(aa bb cc dd) 1 3)
 vec

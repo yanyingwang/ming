@@ -1,7 +1,7 @@
-#lang s-exp "../../private/mapping-lang.rkt"
+#lang at-exp s-exp "../../private/mapping-lang.rkt"
 
 
->>> vector-empty? 空􏿲?
+>>> vector-empty? 空􏿲? @elem{􏿲是否是空}
 >>> vector-set*! 􏿲攸*!
 >>> vector-map 􏿲佫
 >>> vector-map! 􏿲佫!

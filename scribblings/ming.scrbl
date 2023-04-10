@@ -1,6 +1,10 @@
 #lang scribble/manual
 
 
+@(require (file "../private/scribble-styles/css/ming-fonts.css.rkt"))
+@css/ming-fonts
+
+
 @title[#:style '(toc)]{名语言/Ming-Language}
 @author[(author+email (hyperlink "https://yanying.wang" "Yanying Wang") "yanyingwang1@gmail.com")]
 

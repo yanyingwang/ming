@@ -5,9 +5,13 @@
            ming/scribble
            )
 
+@(require (file "../private/scribble-styles/css/ming-fonts.css.rkt"))
+@css/ming-fonts
+
 @title[#:style '(toc) #:tag "ming libs"]{名语言标准库}
 
 @(table-of-contents)
 
 @include-section["ming-lib/core.scrbl"]
 @include-section["ming-lib/list.scrbl"]
+@include-section["ming-lib/vector.scrbl"]

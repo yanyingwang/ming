@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(require (for-label ming/racket/base ming/racket/list ming/list)
+@(require (for-label ming/racket/base ming/racket/list)
            ming/list
            scribble/eval)
 @(define the-eval
@@ -107,7 +107,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 
 
 @deftogether[(
-@defproc[(􏾝 [LST 􏿴?] [N1 精确非负整数?] [N2 精确非负整数??])
+@defproc[(􏾝 [LST 􏿴?] [N1 精确非负整数?] [N2 精确非负整数?])
           􏿴?]
 @defproc[(􏾝* [LST 􏿴?] [N1 精确非负整数?] [N2 精确非负整数?])
           􏿴?]

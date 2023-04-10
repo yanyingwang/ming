@@ -5,6 +5,9 @@
            ming/scribble
            )
 
+@(require (file "../private/scribble-styles/css/ming-fonts.css.rkt"))
+@css/ming-fonts
+
 @title[#:style '(toc) #:tag "racket library in chinese"]{Racket汉化库}
 
 
