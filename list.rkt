@@ -3,7 +3,7 @@
 ;(provide 段) ; 􏿊 􏿚
 (provide 引* 引*/入
          𠇁~ 𠇁~/入
-         伄 伄^
+         弔-* 伄-* 伄^ 弔^
          􏾝 􏾝*
          𬩵
          度/入
@@ -51,13 +51,20 @@
 (名 (􏷲 V LST)
   (􏷲^ (list V) LST))
 
-(名 (伄 LST . IDX-LST)
+(名 (弔-* LST . IDX-LST)
+    (apply 殖 (佫 (入 (IDX) (弔 LST IDX))
+                  IDX-LST)))
+
+(名 (伄-* LST . IDX-LST)
   (佫 (入 (IDX) (弔 LST IDX))
     IDX-LST))
 
 (名 (伄^ LST IDX-LST)
   (佫 (入 (IDX) (弔 LST IDX))
       IDX-LST))
+(名 (弔^ LST IDX-LST)
+    (apply 殖 (佫 (入 (IDX) (弔 LST IDX))
+                  IDX-LST)))
 
 (名 (􏾝 LIST0 N1 N2)
     (若非 (精确非负整数? N1)

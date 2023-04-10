@@ -36,15 +36,15 @@
 ]
 
 @section+elemref{复􏿲、序􏿲，贯􏿲}
-@margin-note{另见：@racket[复􏿴]、@racket[序􏿴]，@racket[􏿝]}
+@margin-note{参见：@racket[复􏿴]、@racket[序􏿴]，@racket[􏿝]}
 @examples[#:eval (the-eval)
 (复􏿲 5 'foo)
 (序􏿲 5 加一)
 (贯􏿲 '#(1) '#(2) '#(3) '#(4))
 ]
 
-@section+elemref{􏿲度、􏿲弔、􏿲􏿀}
-@margin-note{另见：@racket[弔]}
+@section+elemref{􏿲度，􏿲弔，􏿲􏿀}
+@margin-note{参见：@racket[度]，@racket[弔]，@racket[􏿀]}
 @examples[#:eval (the-eval)
 (􏿲度 '#(1 2 3 4))
 (􏿲弔 '#(a b c d) 2)
@@ -52,9 +52,8 @@
 ]
 
 @section+elemref{􏿲贞化，􏿲化􏿴、􏿴化􏿲、􏿲􏾝化殖}
-@margin-note{
-另见：@racket[贞?]，@racket[􏿲􏾝]、@racket[􏿲化殖]、@racket[􏿲􏾝*化殖]
-}
+@margin-note{参见：@racket[贞?]，@racket[贞􏿲]}
+@margin-note{另见：@racket[􏿲􏾝]、@racket[􏿲化殖]、@racket[􏿲􏾝*化殖]}
 @examples[#:eval (the-eval)
 (􏿲贞化 '#(a b c d))
 (􏿴化􏿲 '(a b c d))
@@ -63,7 +62,8 @@
 ]
 
 @section+elemref{􏿲􏾺、􏿲􏷵、􏿲􏾺分、􏿲􏾝}
-@margin-note{另见：@racket[􏾺]，@racket[􏾺分]，@racket[􏾝]、@racket[􏿲􏾝*]}
+@margin-note{参见：@racket[􏾺]，@racket[􏾺分]，@racket[􏾝]}
+@margin-note{@racket[􏿲􏾝*]}
 @examples[#:eval (the-eval)
 (􏿲􏾺 '#(a b c d e f) 2)
 (􏿲􏷵 '#(a b c d e f) 2)
@@ -72,7 +72,7 @@
 ]
 
 @section+elemref{􏿲引，􏿲佫，􏿲􏷹，􏿲􏷶}
-@margin-note{另见：@racket[引]，@racket[佫]，@racket[􏷶]}
+@margin-note{参见：@racket[引]，@racket[佫]，@racket[􏷶]}
 @examples[#:eval (the-eval)
 (􏿲引 'c '#(a b 1 c 2 d 3 e))
 (􏿲佫 加一 '#(1 2 3 4))
@@ -80,14 +80,15 @@
 (􏿲􏷶 正数? '#(1 2 -3 4))
 ]
 
-@section+elemref{􏿲攸!，􏿲攸*!，􏿲复化!，􏿲攸!/以􏾝}
-@margin-note{另见：@racket[复􏿲]，@racket[􏿲􏾝]、@racket[􏿲攸!/以􏾝*]}
+@section+elemref{􏿲攸!，􏿲攸-*!，􏿲复化!，􏿲攸!/以􏾝}
+@margin-note{参见：@racket[复􏿲]，@racket[􏾝]、@racket[攸]}
+@margin-note{另见：@racket[􏿲􏾝]、@racket[􏿲攸!/以􏾝*]}
 @examples[#:eval (the-eval)
 (名 vec (􏿲 'a 'b 'c 'd))
 vec
 (􏿲攸! vec 1 'x)
 vec
-(􏿲攸*! vec 1 'y 2 'y)
+(􏿲攸-*! vec 1 'y 2 'y)
 vec
 (􏿲复化! vec 'z)
 vec
@@ -95,13 +96,10 @@ vec
 vec
 ]
 
-
-
 @section[#:tag "vector-base"]{基础例程}
 @defmapping[
 racket/base/vector
 ]
-
 
 @section[#:tag "vector-additional"]{额外例程}
 @defmodule[ming/racket/vector]

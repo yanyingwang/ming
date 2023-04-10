@@ -34,7 +34,7 @@
                @elem{左偏旁@litchar{亻}}
                "相似集（类型相同且元素相似）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
-               @elem{@racket[𠇁]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾷]、@racket[仮]、@racket[􏿀]、@racket[􏷹]}
+               @elem{@racket[𠇁]、@racket[伄]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾷]、@racket[仮]、@racket[􏿀]、@racket[􏷹]}
                )
 
                (list
@@ -68,9 +68,23 @@
 
                (list
                @elem{以@litchar{*}结尾}
-               "加强力度（对出参）"
+               "加强力度（对出参内容）"
                "出参内容更加丰富"
                @elem{@racket[􏿴/数段*]}
+               )
+
+               (list
+               @elem{以@litchar{*-}结尾}
+               "加强力度（对出参类型）"
+               "出参类型和内容更加丰富"
+               @elem{@racket[伄-*]、@racket[弔-*]}
+               )
+
+               (list
+               @elem{以@litchar{-*}结尾}
+               "加强力度（对入参）"
+               "入参内容更加丰富"
+               @elem{}
                )
 
                (list
@@ -367,7 +381,7 @@
 ]
 }
 @margin-note{
-另见：@racket[引*]、@racket[引*/入]，@racket[𠇁~]、@racket[𠇁~/入]，@racket[伄]、@racket[􏾝]
+另见：@racket[引*]、@racket[引*/入]，@racket[𠇁~]、@racket[𠇁~/入]，@racket[弔-*]、@racket[伄^]、@racket[􏾝]
 }
 @examples[#:eval (the-eval)
 (引 '(a b c d e c f) 'c)

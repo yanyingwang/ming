@@ -2,7 +2,7 @@
 
 
 >>> vector-empty? 空􏿲? @elem{􏿲是否是空}
->>> vector-set*! 􏿲攸*!
+>>> vector-set*! 􏿲攸-*!
 >>> vector-map 􏿲佫
 >>> vector-map! 􏿲佫!
 >>> vector-append 贯􏿲 ;; 土􏿲 土􏿴

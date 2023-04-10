@@ -91,17 +91,28 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @; }
 
 @deftogether[(
-@defproc[(伄 [LST 􏿴?] [V 精确非负整数?] ...)
+@defproc[(弔-* [LST 􏿴?] [V 精确非负整数?] ...)
+          殖?]
+@defproc[(伄-* [LST 􏿴?] [V 精确非负整数?] ...)
           􏿴?]
 @defproc[(伄^ [LST 􏿴?] [V-LST (listof 精确非负整数?)])
           􏿴?]
+@defproc[(弔^ [LST 􏿴?] [V-LST (listof 精确非负整数?)])
+          殖?]
 )]{
-@racket[伄]：以多个@racket[V]作为索引来查找出@racket[LST]中全部对应的元素。 @linebreak{}
-@racket[伄^]：以@racket[V-LST]中的元素作为索引来查找出@racket[LST]中全部对应的元素。
+@itemlist[
+@item{@racket[弔-*]：以多个@racket[V]作为索引来查找出@racket[LST]中全部对应的元素。}
+@item{@racket[伄-*]：与上同，除了出参类型不同外。}
+@item{@racket[伄^]：与上同，除了入参类型不同外。 }
+@item{@racket[弔^]：与上同，除了出参类型不同外。}
+]
+
 @margin-note{另见：@racket[弔]}
 @examples[#:eval (the-eval)
-(伄 '(a b c d e f g) 0 2 3)
+(弔-* '(a b c d e f g) 0 2 3)
+(伄-* '(a b c d e f g) 0 2 3)
 (伄^ '(a b c d e f g) '(0 2 3))
+(弔^ '(a b c d e f g) '(0 2 3))
 ]
 }
 
