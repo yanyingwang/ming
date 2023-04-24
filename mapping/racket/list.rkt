@@ -23,8 +23,8 @@
 
 >>> index-of 引 @elem{返回@racket[􏿴]中某个元素的索引} ;; 引 导 笈 扱 𫼛 弔
 >>> index-where 引/入 @elem{类上，另外进参是@racket[入]} ;; 引 导  函 =》以例 􏿊 􏷻 弔
->>> indexes-of 𠇁 @elem{类上，另外，返回的是所有符合条件的元素组成的@racket[􏿴]} ;; 􏿉 􏿊 伋 􏷺 伄
->>> indexes-where 𠇁/入 @elem{类上，另外进参是@racket[入]} ;; 􏿊 伄
+>>> indexes-of 引v @elem{类上，另外，返回的是所有符合条件的元素组成的@racket[􏿴]} ;; 􏿉 􏿊 伋 􏷺 伄 𠇁
+>>> indexes-where 引v/入 @elem{类上，另外进参是@racket[入]} ;; 􏿊 伄 引 𠇁
 
 >>> take 􏾺 "从􏿴中左起依次取出来N个元素并组成新􏿴返回"
 >>> take-right 𨚞 "类上，另外是从右边开始操作的"

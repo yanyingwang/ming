@@ -48,9 +48,8 @@
                @elem{右偏旁@litchar{刂}}
                "缺失集（删除、移走、去掉部分元素之后的集合）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的子集}
-               @elem{@racket[􏷵]、@racket[􏷴]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲~]}
+               @elem{@racket[􏷵]、@racket[􏷴]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
                )
-
 
                (list
                @elem{左偏旁@litchar{土}}
@@ -68,37 +67,28 @@
 
                (list
                @elem{以@litchar{*}结尾}
-               "加强力度（对出参内容）"
+               "加强力度"
                "出参内容更加丰富"
-               @elem{@racket[􏿴/数段*]}
+               @elem{@racket[引*]，@racket[􏾝*]，@racket[􏿴/数段*]}
                )
-
-               (list
-               @elem{以@litchar{*-}结尾}
-               "加强力度（对出参类型）"
-               "出参类型和内容更加丰富"
-               @elem{@racket[伄-*]、@racket[弔-*]}
-               )
-
-               (list
-               @elem{以@litchar{-*}结尾}
-               "加强力度（对入参）"
-               "入参内容更加丰富"
-               @elem{}
-               )
-
-               (list
-               @elem{以@litchar{^}结尾}
-               "加强力度（对入参）"
-               "入参是􏿴数据结构"
-               @elem{@racket[􏷲^]}
-               )
-
                (list
                @elem{以@litchar{~}结尾}
                "减轻力度"
                "出参内容更加贫瘠"
                @elem{@racket[􏷲~]、@racket[􏷶~]}
+               )
+
+               (list
+               @elem{以@litchar{v}结尾}
+               "加强力度（且改变出参成􏿴）"
+               "出参内容更加丰富且被封装成􏿴数据结构"
+               @elem{@racket[引v]}
+               )
+               (list
+               @elem{以@litchar{^}结尾}
+               "加强力度（通过改变入参成􏿴）"
+               "入参内容更加丰富且被封装进􏿴数据结构"
+               @elem{@racket[􏷲^]、@racket[伄^]}
                )
 
                (list
@@ -112,7 +102,7 @@
                @elem{@litchar{/入}}
                "进参为函数"
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[度/入]、@racket[引/入]、@racket[𠇁/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
+               @elem{@racket[度/入]、@racket[引/入]、@racket[引v/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
                )
 
                @; (list
@@ -139,7 +129,7 @@
 
 
 @section+elemref[#:tag "pair-car-cdr-list-list*"]{双，􏿴、􏿫}
-“双”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构：
+“双”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构：
 对于名语言来说，如果我们把两个数据配成对（@racket[双]在一块），我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。
 
 进而，@elemtag["what-is-􏿴􏿫" "如果一个“双”的阴位存的是另外一个“双”，数个双如此前后相接成链状："]
@@ -254,7 +244,7 @@
 @margin-note{
 @bold{“@racket[􏿝]”、“@racket[􏿜]”为新造字}
 @itemlist[
-@item{两字分别是仿照@elemref[ "the-char-creating-of-􏿴􏿫" "􏿴、􏿫"]字而造：因为与他们处理数据后输出的结果之数据类型相同（不同在于新造字例程的输入参数之数据类型为@elemref["what-is-􏿴􏿫" "􏿴"]）；}
+@item{两字分别是仿照@elemref["the-char-creating-of-􏿴􏿫" "􏿴、􏿫"]字而造：因为与他们处理数据后输出的结果之数据类型相同（不同在于新造字例程的输入参数之数据类型为@elemref["what-is-􏿴􏿫" "􏿴"]）；}
 @item{左上起笔处的偏旁@litchar{毌}，表示“贯穿”之意（@litchar{毌}是@litchar{贯}的古字）：因此意思即为把数个@elemref["what-is-􏿴􏿫" "􏿴"]贯穿起来组成一个新的@elemref["what-is-􏿴􏿫" "􏿴"]并返回之。}
 ]
 }
@@ -368,26 +358,26 @@
 @; @item{@litchar{伄}是对@litchar{弔}加@litchar{亻}，含义见：@secref["rules"]。}
 @; ]
 @; }
-
-@section+elemref{引、引/入，𠇁、𠇁/入、弔}
+@section+elemref{引、引/入，引v、引v/入、弔}
 @margin-note{
-@bold{“@racket[𠇁]”为古活字} @linebreak{}
+@; @bold{“@racket[𠇁]”为古活字} @linebreak{}
 @bold{“@racket[弔]”为古活字}
 @itemlist[
 @item{@litchar{引}是“索引”的意思，即返回某值的索引；}
-@item{@litchar{𠇁}是对@litchar{引}加@litchar{亻}，含义见：@secref["rules"]。}
+@; @item{@litchar{𠇁}是对@litchar{引}加@litchar{亻}，含义见：@secref["rules"]。}
 @; @item{@litchar{𢪉}是对@litchar{引}加@litchar{扌}，表示用某索引提取相对应的值。}
 @item{@litchar{弔}（可以认为是@litchar{第}的简写）表示是用某索引提取相对应的值。}
 ]
 }
 @margin-note{
-另见：@racket[引*]、@racket[引*/入]，@racket[𠇁~]、@racket[𠇁~/入]，@racket[弔-*]、@racket[伄^]、@racket[􏾝]
+@; 另见：@racket[引*]、@racket[引*/入]，@racket[𠇁~]、@racket[𠇁~/入]，@racket[弔-*]、@racket[伄^]、@racket[􏾝]
+另见：@racket[引*]、@racket[引*/入]，@racket[伄]、@racket[伄^]、@racket[􏾝]
 }
 @examples[#:eval (the-eval)
 (引 '(a b c d e c f) 'c)
-(𠇁 '(a b c d e c f) 'c)
+(引v '(a b c d e c f) 'c)
 (引/入 '(a b 11 d 22 c f) 数?)
-(𠇁/入 '(a b 11 d 22 c f) 数?)
+(引v/入 '(a b 11 d 22 c f) 数?)
 (弔 '(a b c d e c f) 2)
 ]
 

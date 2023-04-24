@@ -2,8 +2,10 @@
 
 ;(provide 段) ; 􏿊 􏿚
 (provide 引* 引*/入
-         𠇁~ 𠇁~/入
-         弔-* 伄-* 伄^ 弔^
+         ;; 𠇁~ 𠇁~/入
+         ;; 弔-* 伄-* 伄^ 弔^
+         ;; 弔*
+         伄 伄^
          􏾝 􏾝*
          𬩵
          度/入
@@ -14,16 +16,16 @@
 
 
 (名 (引* LST V)
-    (apply 殖 (𠇁 LST V)))
+    (apply 殖 (引v LST V)))
 
 (名 (引*/入 LST V)
-    (apply 殖 (𠇁/入 LST V)))
+    (apply 殖 (引v/入 LST V)))
 
-(名 (𠇁~ LST V)
-    (􏿴 (引 LST V)))
+;; (名 (𠇁~ LST V)
+;;     (􏿴 (引 LST V)))
 
-(名 (𠇁~/入 LST V)
-    (􏿴 (引/入 LST V)))
+;; (名 (𠇁~/入 LST V)
+;;     (􏿴 (引/入 LST V)))
 
 ;; (名 (筛分* 例程A 某􏿴)
 ;;     (复值参与 (入 () (筛分 例程A 某􏿴))
@@ -51,20 +53,18 @@
 (名 (􏷲 V LST)
   (􏷲^ (list V) LST))
 
-(名 (弔-* LST . IDX-LST)
-    (apply 殖 (佫 (入 (IDX) (弔 LST IDX))
-                  IDX-LST)))
-
-(名 (伄-* LST . IDX-LST)
+;; (名 (弔* LST . IDX-LST)
+;;     (apply 殖 (佫 (入 (IDX) (弔 LST IDX))
+;;                   IDX-LST)))
+;; (名 (弔^ LST IDX-LST)
+;;     (apply 殖 (佫 (入 (IDX) (弔 LST IDX))
+;;                   IDX-LST)))
+(名 (伄 LST . IDX-LST)
   (佫 (入 (IDX) (弔 LST IDX))
     IDX-LST))
-
 (名 (伄^ LST IDX-LST)
   (佫 (入 (IDX) (弔 LST IDX))
       IDX-LST))
-(名 (弔^ LST IDX-LST)
-    (apply 殖 (佫 (入 (IDX) (弔 LST IDX))
-                  IDX-LST)))
 
 (名 (􏾝 LIST0 N1 N2)
     (若非 (精确非负整数? N1)
@@ -78,7 +78,6 @@
             [(且 (>= 序数 数A) (< 序数 数B))
              (双 (阳 某􏿴) (演 (阴 某􏿴) (加一 序数) 数A 数B))])))
 
-
 (名 (􏾝* LIST0 N1 N2) ;; 段
     (若非 (精确非负整数? N1)
           (报参错 '部 "精确非负整数?" 1 LIST0 N1))
@@ -90,7 +89,6 @@
              (演 (阴 某􏿴) (加一 序数) 数A 数B)]
             [(且 (>= 序数 数A) (<= 序数 数B))
              (双 (阳 某􏿴) (演 (阴 某􏿴) (加一 序数) 数A 数B))])))
-
 
 (名 (𬩵 LIST0 N1 N2)
     (􏷴 (􏷵 LIST0 N1) N2))

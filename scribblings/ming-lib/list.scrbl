@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(require (for-label ming/racket/base ming/racket/list)
+@(require (for-label ming/racket/base ming/racket/list ming/list)
            ming/list
            scribble/eval)
 @(define the-eval
@@ -24,25 +24,25 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @; @item{在“@racket[笈]”字的基础上添加了左偏旁“亻”，表示例程的出参数据类型和入参的相同(即均为@elemref["what-is-􏿴􏿫" "􏿴"])；}
 @; ]
 @; }
-@section{引*、𠇁~}
+@section{引*}
 @margin-note{另见：@racket[引]、@racket[引/入]，@racket[𠇁/入]、@racket[𠇁/入]}
 @deftogether[(
 @defproc[(引* [LST 􏿴?] [V any/c])
           精确非负整数殖?]
-@defproc[(𠇁~ [LST 􏿴?] [V any/c])
-         (listof 精确非负整数?)]
+@; @defproc[(𠇁~ [LST 􏿴?] [V any/c])
+@;          (listof 精确非负整数?)]
 @defproc[(引*/入 [LST 􏿴?] [PROC 程?])
           精确非负整数殖?]
-@defproc[(𠇁~/入 [LST 􏿴?] [PROC 程?])
-         (listof 精确非负整数?)]
+@; @defproc[(𠇁~/入 [LST 􏿴?] [PROC 程?])
+@;          (listof 精确非负整数?)]
 )]{
 @racket[引*]、@racket[引*/入]分别与@racket[𠇁]、@racket[𠇁/入]同，除返回值不同外。 @linebreak{}
-@racket[𠇁~]、@racket[𠇁~/入]分别与@racket[引]、@racket[引/入]同，除返回值不同外。
+@; @racket[𠇁~]、@racket[𠇁~/入]分别与@racket[引]、@racket[引/入]同，除返回值不同外。
 @examples[#:eval (the-eval)
 (引* '(a b c d c f) 'c)
-(𠇁~ '(a b c d c f) 'c)
+@; (𠇁~ '(a b c d c f) 'c)
 (引*/入 '(a 32 c 11 c f) 数?)
-(𠇁~/入 '(a 32 c 11 c f) 数?)
+@; (𠇁~/入 '(a 32 c 11 c f) 数?)
 ]
 }
 
@@ -91,28 +91,28 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @; }
 
 @deftogether[(
-@defproc[(弔-* [LST 􏿴?] [V 精确非负整数?] ...)
-          殖?]
-@defproc[(伄-* [LST 􏿴?] [V 精确非负整数?] ...)
+@; @defproc[(弔* [LST 􏿴?] [V 精确非负整数?] ...)
+@;           殖?]
+@defproc[(伄 [LST 􏿴?] [V 精确非负整数?] ...)
           􏿴?]
 @defproc[(伄^ [LST 􏿴?] [V-LST (listof 精确非负整数?)])
           􏿴?]
-@defproc[(弔^ [LST 􏿴?] [V-LST (listof 精确非负整数?)])
-          殖?]
+@; @defproc[(弔^ [LST 􏿴?] [V-LST (listof 精确非负整数?)])
+@;           殖?]
 )]{
 @itemlist[
-@item{@racket[弔-*]：以多个@racket[V]作为索引来查找出@racket[LST]中全部对应的元素。}
-@item{@racket[伄-*]：与上同，除了出参类型不同外。}
+@; @item{@racket[弔*]：以多个@racket[V]作为索引来查找出@racket[LST]中全部对应的元素。}
+@; @item{@racket[弔^]：与上同，除了出参类型不同外。}
+@item{@racket[伄]：以多个@racket[V]作为索引来查找出@racket[LST]中全部对应的元素并组成@racket[􏿴]返回。}
 @item{@racket[伄^]：与上同，除了入参类型不同外。 }
-@item{@racket[弔^]：与上同，除了出参类型不同外。}
 ]
 
 @margin-note{另见：@racket[弔]}
 @examples[#:eval (the-eval)
-(弔-* '(a b c d e f g) 0 2 3)
-(伄-* '(a b c d e f g) 0 2 3)
+@; (弔* '(a b c d e f g) 0 2 3)
+@; (弔^ '(a b c d e f g) '(0 2 3))
+(伄 '(a b c d e f g) 0 2 3)
 (伄^ '(a b c d e f g) '(0 2 3))
-(弔^ '(a b c d e f g) '(0 2 3))
 ]
 }
 
