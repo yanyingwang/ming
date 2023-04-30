@@ -34,7 +34,7 @@
                @elem{左偏旁@litchar{亻}}
                "相似集（类型相同且元素相似）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
-               @elem{@racket[𠇁]、@racket[伄]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾷]、@racket[仮]、@racket[􏿀]、@racket[􏷹]}
+               @elem{@racket[伄]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾜]、@racket[􏾛]、@racket[偅]、@racket[𠆯]、@racket[􏷹]}
                )
 
                (list
@@ -447,7 +447,7 @@
 @; @bold{“@racket[䢼]”、“@racket[􏾶]”为新造字}
 @bold{“@racket[䢼]”、“@racket[􏷳]”为新造字}
 @itemlist[
-@item{@litchar{共}：共同、共有}
+@item{@litchar{共}：共同、共有；}
 @item{@litchar{阝}、@litchar{刂}，见：@secref["rules"]。}
 ]
 }
@@ -458,7 +458,7 @@
 ]
 
 
-@section+elemref{𰂋，偏，􏾷，重、𠝤} @; 侠 􏿃 􏿄 去偅 𠉗 伻
+@section+elemref{𰂋，偏，􏾜，重、𠝤} @; 侠 􏿃 􏿄 去偅 𠉗 伻
 @; @bold{“@racket[􏿃]”为活用字}
 @; @itemlist[
 @; @item{“掺”表示把某一值掺入到􏿴中；}
@@ -486,51 +486,64 @@
 @bold{
 “@racket[𰂋]”为新造字 @linebreak{}
 “@racket[偏]”为活用字 @linebreak{}
-“@racket[􏾷]”为新造字 @linebreak{}
+“@racket[􏾜]”为新造字 @linebreak{}
 “@racket[𠝤]”为古活字
 }
 @itemlist[
 @item{@litchar{间}：间以；}
 @item{@litchar{扁}：扁平；}
-@item{@litchar{紊}：乱（故有成语“有条不紊”）；}
+@item{@litchar{糸}：乱（@litchar{紊}去掉声旁，@litchar{紊}是“乱”的意思（故有成语“有条不紊”））；}
 @item{@litchar{重}：重复之元素；}
 @item{@litchar{亻}、@litchar{刂}，见：@secref["rules"]。}
 ]
 }
 
+@margin-note{
+另见：@racket[偅]
+}
+
 @examples[#:eval (the-eval)
 (𰂋 '(a b c d) '和)
 (偏 '((a b) (c d) (e f)))
-(􏾷 '(a b c d e d c b a))
+(􏾜 '(a b c d e d c b a))
 
 (重 '(a b c d e d c b a))
 (𠝤 '(a b c d e d c b a))
 ]
 
 
-@section+elemref{仮、􏿀} @; 𠍣
+@section+elemref{􏾛、𠆯} @; 𠍣
 @; @bold{“@racket[排]”为新造字}
 @; @itemlist[
 @; @item{@litchar{排}表意，意为“对􏿴中元素进行排序”。}
 @; ]
+@; @margin-note{
+@; @bold{“@racket[仮]”为古活字}
+@; @itemlist[
+@; @item{@litchar{反}表意，意为“反向、倒序”，即为“把􏿴反过来，对􏿴中元素进行倒序排列”。}
+@; ]
+@; }
+@; @margin-note{
+@; @bold{“@racket[􏿀]”为新造字}
+@; @itemlist[
+@; @item{@litchar{理}表意，意为“整理，排列”，即为“对􏿴中元素按照一定规则进行整理排序”。}
+@; ]
+@; }
 @margin-note{
-@bold{“@racket[仮]”为古活字}
+@bold{“@racket[􏾛]”为新造字} @linebreak{}
+@bold{“@racket[𠆯]”为古活字}
 @itemlist[
-@item{@litchar{反}表意，意为“反向、倒序”，即为“把􏿴反过来，对􏿴中元素进行倒序排列”。}
-]
-}
-@margin-note{
-@bold{“@racket[􏿀]”为新造字}
-@itemlist[
-@item{@litchar{理}表意，意为“整理，排列”，即为“对􏿴中元素按照一定规则进行整理排序”。}
+@item{@litchar{屰}：倒序（通@litchar{逆}，源于图画“一个倒立的人”）；}
+@item{@litchar{川}：理顺（类比@litchar{驯}、@litchar{训}而得造）。}
+@item{@litchar{亻}，见：@secref["rules"]。}
 ]
 }
 @examples[#:eval (the-eval)
-(仮 '(21 3 888 666 55 77 1000))
-(􏿀 '(21 3 888 666 55 77 1000) <)
-(􏿀 '(21 3 888 666 55 77 1000) >)
-(􏿀 '("cat" "dog" "chicken" "duck" "fox") 诗<?)
-(􏿀 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
+(􏾛 '(21 3 888 666 55 77 1000))
+(𠆯 '(21 3 888 666 55 77 1000) <)
+(𠆯 '(21 3 888 666 55 77 1000) >)
+(𠆯 '("cat" "dog" "chicken" "duck" "fox") 诗<?)
+(𠆯 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
 ]
 
 @section+elemref{𬩽、𬩽/入，􏿁、􏿁/入，􏷲~、􏷲^} @;删/入、删*/入，刈、刈*
@@ -602,7 +615,7 @@
 ]
 }
 @margin-note{
-下列代码，为便理解，两两等同：
+为便理解，列下代码，两两等同：
 @itemlist[
 @item{@code{(佫 某例程 (􏿴 a b c))}}
 @item{@code{(􏿴 (某例程 a) (某例程 b) (某例程 c))}}

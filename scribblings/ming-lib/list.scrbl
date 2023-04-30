@@ -25,7 +25,8 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @; ]
 @; }
 @section{引*}
-@margin-note{另见：@racket[引]、@racket[引/入]，@racket[𠇁/入]、@racket[𠇁/入]}
+@; @margin-note{另见：@racket[引]、@racket[引/入]，@racket[𠇁/入]、@racket[𠇁/入]}
+@margin-note{另见：@racket[引]、@racket[引/入]}
 @deftogether[(
 @defproc[(引* [LST 􏿴?] [V any/c])
           精确非负整数殖?]
@@ -166,6 +167,19 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 (度/入 '(a b 12 c 33 d  58 f g) 数?)
 ]
 }
+
+@defproc[(偅 [LST 􏿴?])
+          􏿴?]{
+返回@racket[LST]中的重复元素组成的@racket[􏿴]。
+@margin-note{另见：@racket[重]}
+@examples[#:eval (the-eval)
+(偅 '())
+(偅 '(11))
+(偅 '(11 22 33 22 44))
+(偅 '(11 11 11 22 55 22 33 88 88 88 99 99))
+]
+}
+
 
 
 @defproc[(􏷲 [V any/c] [LST 􏿴?] (PROC 程? 同?))

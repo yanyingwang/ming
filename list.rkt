@@ -10,6 +10,7 @@
          𬩵
          度/入
          􏷲
+         偅
          )
 ;; (provide 筛分* 分* 右分* 分*/入 右分*/入 段)
 (require "racket/base.rkt" "racket/list.rkt")
@@ -92,3 +93,17 @@
 
 (名 (𬩵 LIST0 N1 N2)
     (􏷴 (􏷵 LIST0 N1) N2))
+
+(名 (偅 LST)
+    (令 演 ([LST LST] [C 空] [R-LST '()])
+        (当 [(空? LST)
+             '()]
+            [(空? C)
+             (演 (阴 LST) (阳 LST) R-LST)]
+            [(引 R-LST C)
+             (演 (阴 LST) (阳 LST) R-LST)]
+            [(引 LST C)
+             (双 C (演 (阴 LST) (阳 LST) (双 C R-LST)))]
+            [否则
+             (演 (阴 LST) (阳 LST) R-LST)]))
+    )
