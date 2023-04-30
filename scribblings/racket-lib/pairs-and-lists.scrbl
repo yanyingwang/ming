@@ -215,7 +215,7 @@
 @bold{“@racket[攸]”为古活字}
 @itemlist[
 @item{@litchar{攵}本意是“用手敲打敦促使其改变”，在此引申为“修改”之意；}
-@item{@litchar{亻}和@litchar{攵}中间的@litchar{丨}表示只修改了@elemref["what-is-􏿴􏿫" "􏿴"]中的一项元素；}
+@; @item{@litchar{亻}和@litchar{攵}中间的@litchar{丨}表示只修改了@elemref["what-is-􏿴􏿫" "􏿴"]中的一项元素；}
 @item{另外，也可以认为该字分别取@litchar{修}字左部的偏旁（@litchar{亻丨}）和@litchar{改}字右部偏旁（@litchar{攵}）组成，也即含有“修改”的意思。}
 ]
 }
