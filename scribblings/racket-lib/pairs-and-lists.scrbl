@@ -62,14 +62,14 @@
                @elem{以@litchar{分}结尾}
                "分离成复值"
                @elem{出参数据为复值}
-               @elem{@racket[􏾺分]、@racket[𨚞分]、@racket[䢼分]、@racket[􏷹分]}
+               @elem{@racket[􏾺分]、@racket[𨚞分]、@racket[䢼分]、@racket[􏷳分]、@racket[􏷹分]}
                )
 
                (list
                @elem{以@litchar{*}结尾}
                "加强力度"
                "出参内容更加丰富"
-               @elem{@racket[引*]，@racket[􏾝*]，@racket[􏿴/数段*]}
+               @elem{@racket[引*]，@racket[􏾝*]，@racket[𥸬􏿴*]}
                )
                (list
                @elem{以@litchar{~}结尾}
@@ -80,22 +80,29 @@
 
                (list
                @elem{以@litchar{v}结尾}
-               "加强力度（且改变出参成􏿴）"
-               "出参内容更加丰富且被封装成􏿴数据结构"
+               @elem{加强力度（且改变出参成@racket[􏿴]）}
+               @elem{出参内容更加丰富且被封装成@racket[􏿴]数据结构}
                @elem{@racket[引v]}
                )
                (list
                @elem{以@litchar{^}结尾}
-               "加强力度（通过改变入参成􏿴）"
-               "入参内容更加丰富且被封装进􏿴数据结构"
+               @elem{加强力度（通过改变入参成@racket[􏿴]）}
+               @elem{入参内容更加丰富且被封装进@racket[􏿴]数据结构}
                @elem{@racket[􏷲^]、@racket[伄^]}
+               )
+
+               (list
+               @elem{以@litchar{􏿴}结尾}
+               @elem{构造生成@racket[􏿴]数据}
+               @elem{出参数据结构是@racket[􏿴]}
+               @elem{@racket[序􏿴]、@racket[复􏿴]、@racket[𥸬􏿴]}
                )
 
                (list
                @elem{以@litchar{/}符号分割}
                @elem{@litchar{/}之后的内容是为修饰@litchar{/}之前的内容的}
                @elem{出参数据由@litchar{/}之前的内容决定}
-               @elem{@racket[􏿴/数段]、@racket[􏿴/组合]}
+               @elem{@racket[􏿴/组合]、@racket[􏿴/分组]}
                )
 
                (list
@@ -139,10 +146,10 @@
 ]
 
 @margin-note{
-@bold{“@racket[􏿴]”、“@racket[􏿫]”为@elemtag["the-char-creating-of-􏿴􏿫" "新造字"]}
+@bold{@litchar{􏿴}、@litchar{􏿫}为@elemtag["the-char-creating-of-􏿴􏿫" "新造字"]}
 @itemlist[
 @item{
-因其所代表的数据结构（list）和“@racket[双]”所代表的数据结构（pair）互相之间的内生性变换转化关系而得造：
+因其所代表的数据结构（list）和@litchar{双}所代表的数据结构（pair）互相之间的内生性变换转化关系而得造：
 @itemlist[
 @item{多个“@racket[双]”互相衔接并且最后一个双的阴位留空即成“@racket[􏿴]”（不留空是为@racket[􏿫]）；}
 @item{每一个“􏿴”类型的数据同时也是“双”类型。}
@@ -188,15 +195,21 @@
 (阳之阴阳 '((1 1.1) 2 3 4))
 ]
 
-
-@section+elemref{􏿴/数段、􏿴/数段*}
-用于构造一个元素是一段整数的􏿴。
+@section+elemref{𥸬􏿴、𥸬􏿴*}
+用于构造元素是一段连续数字的􏿴。
+@margin-note{
+@bold{@litchar{𥸬}为古活字}
+@itemlist[
+@item{@litchar{米}：（@litchar{数}的简写）数字；}
+@item{@litchar{阝}、@litchar{􏿴}，见：@secref["rules"]。}
+]
+}
 @examples[#:eval (the-eval)
-(􏿴/数段 10)
-(􏿴/数段 10 20)
-(􏿴/数段 10 20 2)
-(􏿴/数段* 10 20)
-(􏿴/数段* 10 20 2)
+(𥸬􏿴 10)
+(𥸬􏿴 10 20)
+(𥸬􏿴 10 20 2)
+(𥸬􏿴* 10 20)
+(𥸬􏿴* 10 20 2)
 ]
 
 @section+elemref{序􏿴、复􏿴}
@@ -212,7 +225,7 @@
 @section+elemref{攸}
 修改􏿴中的某个元素为新值并返回修改后的􏿴。
 @margin-note{
-@bold{“@racket[攸]”为古活字}
+@bold{@litchar{攸}为古活字}
 @itemlist[
 @item{@litchar{攵}本意是“用手敲打敦促使其改变”，在此引申为“修改”之意；}
 @; @item{@litchar{亻}和@litchar{攵}中间的@litchar{丨}表示只修改了@elemref["what-is-􏿴􏿫" "􏿴"]中的一项元素；}
@@ -242,7 +255,7 @@
 @section+elemref{􏿝、􏿜}
 用于对@elemref["what-is-􏿴􏿫" "􏿴"]类结构数据进行处理并输出相同于@racket[􏿴]、@racket[􏿫]例程输出数据之结构的数据。
 @margin-note{
-@bold{“@racket[􏿝]”、“@racket[􏿜]”为新造字}
+@bold{@litchar{􏿝}、@litchar{􏿜}为新造字}
 @itemlist[
 @item{两字分别是仿照@elemref["the-char-creating-of-􏿴􏿫" "􏿴、􏿫"]字而造：因为与他们处理数据后输出的结果之数据类型相同（不同在于新造字例程的输入参数之数据类型为@elemref["what-is-􏿴􏿫" "􏿴"]）；}
 @item{左上起笔处的偏旁@litchar{毌}，表示“贯穿”之意（@litchar{毌}是@litchar{贯}的古字）：因此意思即为把数个@elemref["what-is-􏿴􏿫" "􏿴"]贯穿起来组成一个新的@elemref["what-is-􏿴􏿫" "􏿴"]并返回之。}
@@ -286,7 +299,7 @@
 @section+elemref{末、􏷽}
 返回􏿴中末尾位置的元素。
 @margin-note{
-@bold{“@racket[􏷽]”为新造字}
+@bold{@litchar{􏷽}为新造字}
 @itemlist[
 @item{因字所代表之例程的入参和操作入参的处理行为与“@racket[末]”类似而得偏旁@litchar{末}；}
 @item{又因其返回结果的数据之结构与“@racket[双]”的返回类似而得偏旁@litchar{又}。}
@@ -361,7 +374,7 @@
 @section+elemref{引、引/入，引v、引v/入、弔}
 @margin-note{
 @; @bold{“@racket[𠇁]”为古活字} @linebreak{}
-@bold{“@racket[弔]”为古活字}
+@bold{@litchar{弔}为古活字}
 @itemlist[
 @item{@litchar{引}是“索引”的意思，即返回某值的索引；}
 @; @item{@litchar{𠇁}是对@litchar{引}加@litchar{亻}，含义见：@secref["rules"]。}
@@ -414,8 +427,8 @@
 @section+elemref{􏾺、𨚞，􏷵、􏷴，􏾺分、𨚞分，􏾺/入、𨚞/入，􏾺于?}
 @margin-note{
 @bold{
-“@racket[􏾺]”、“@racket[𨚞]”为新造字 @linebreak{}
-“@racket[􏷵]”、“@racket[􏷴]”为新造字
+@litchar{􏾺}、@litchar{𨚞}为新造字 @linebreak{}
+@litchar{􏷵}、@litchar{􏷴}为新造字
 }
 @itemlist[
 @item{@litchar{左}：从左；}
@@ -442,10 +455,10 @@
 ]
 
 @; @section+elemref{左䢼，左䢼分、左􏾶分}
-@section+elemref{䢼，􏷳，䢼分}
+@section+elemref{䢼，􏷳分，䢼分}
 @margin-note{
 @; @bold{“@racket[䢼]”、“@racket[􏾶]”为新造字}
-@bold{“@racket[䢼]”、“@racket[􏷳]”为新造字}
+@bold{@litchar{䢼}、@litchar{􏷳}为新造字}
 @itemlist[
 @item{@litchar{共}：共同、共有；}
 @item{@litchar{阝}、@litchar{刂}，见：@secref["rules"]。}
@@ -453,7 +466,7 @@
 }
 @examples[#:eval (the-eval)
 (䢼 '(a b x y z) '(a b c d e f g))
-(􏷳 '(a b x y z) '(a b c d e f g))
+(􏷳分 '(a b x y z) '(a b c d e f g))
 (䢼分 '(a b x y z) '(a b c d e f g))
 ]
 
@@ -484,10 +497,10 @@
 
 @margin-note{
 @bold{
-“@racket[𰂋]”为新造字 @linebreak{}
-“@racket[偏]”为活用字 @linebreak{}
-“@racket[􏾜]”为新造字 @linebreak{}
-“@racket[𠝤]”为古活字
+@litchar{𰂋}为新造字 @linebreak{}
+@litchar{偏}为活用字 @linebreak{}
+@litchar{􏾜}为新造字 @linebreak{}
+@litchar{𠝤}为古活字
 }
 @itemlist[
 @item{@litchar{间}：间以；}
@@ -530,10 +543,10 @@
 @; ]
 @; }
 @margin-note{
-@bold{“@racket[􏾛]”为新造字} @linebreak{}
-@bold{“@racket[𠆯]”为古活字}
+@bold{@litchar{􏾛}为新造字} @linebreak{}
+@bold{@litchar{𠆯}为古活字}
 @itemlist[
-@item{@litchar{屰}：倒序（通@litchar{逆}，源于图画“一个倒立的人”）；}
+@item{@litchar{屰}：倒序（通@litchar{逆}，甲骨文、金文是“一个倒立的人”）；}
 @item{@litchar{川}：理顺（类比@litchar{驯}、@litchar{训}而得造）。}
 @item{@litchar{亻}，见：@secref["rules"]。}
 ]
@@ -549,9 +562,9 @@
 @section+elemref{𬩽、𬩽/入，􏿁、􏿁/入，􏷲~、􏷲^} @;删/入、删*/入，刈、刈*
 
 @margin-note{
-@bold{“@racket[􏿁]”为新造字} @linebreak{}
-@bold{“@racket[𬩽]”为古活字} @linebreak{}
-@bold{“@racket[􏷲]”为新造字}
+@bold{@litchar{􏿁}为新造字} @linebreak{}
+@bold{@litchar{𬩽}为古活字} @linebreak{}
+@bold{@litchar{􏷲}为新造字}
 @itemlist[
 @item{@litchar{寻}表意“寻找”；}
 @item{@litchar{日}偏旁表示“取@racket[阳]”之意。}
@@ -581,8 +594,8 @@
 @section+elemref{查、􏷹，􏷶、􏷶~，􏷹分，􏷹度}
 @margin-note{
 @bold{
-“@racket[􏷹]”为新造字 @linebreak{}
-“@racket[􏷶]”为新造字
+@litchar{􏷹}为新造字 @linebreak{}
+@litchar{􏷶}为新造字
 }
 @itemlist[
 @item{@litchar{查}：查询；}
@@ -602,10 +615,10 @@
 @section+elemref{各，佫，􏷮，􏷭，垎、右垎，佫􏷹、佫􏿝}
  @; @margin-note{@bold{“@racket[𮞑]”为古活字}}
 @margin-note{
-@bold{“@racket[佫]”为古活字} @linebreak{}
-@bold{“@racket[􏷮]”为新造字} @linebreak{}
-@bold{“@racket[􏷭]”为新造字} @linebreak{}
-@bold{“@racket[垎]”为活用字}
+@bold{@litchar{佫}为古活字} @linebreak{}
+@bold{@litchar{􏷮}为新造字} @linebreak{}
+@bold{@litchar{􏷭}为新造字} @linebreak{}
+@bold{@litchar{垎}为活用字}
 @itemlist[
 @item{@litchar{各}：表意，各个元素依次；}
 @item{@litchar{亻}，见：@secref["rules"]；}

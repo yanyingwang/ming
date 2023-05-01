@@ -24,9 +24,8 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @; @item{在“@racket[笈]”字的基础上添加了左偏旁“亻”，表示例程的出参数据类型和入参的相同(即均为@elemref["what-is-􏿴􏿫" "􏿴"])；}
 @; ]
 @; }
-@section{引*}
 @; @margin-note{另见：@racket[引]、@racket[引/入]，@racket[𠇁/入]、@racket[𠇁/入]}
-@margin-note{另见：@racket[引]、@racket[引/入]}
+@margin-note{另见：@racket[引]、@racket[引v]}
 @deftogether[(
 @defproc[(引* [LST 􏿴?] [V any/c])
           精确非负整数殖?]
@@ -37,7 +36,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @; @defproc[(𠇁~/入 [LST 􏿴?] [PROC 程?])
 @;          (listof 精确非负整数?)]
 )]{
-@racket[引*]、@racket[引*/入]分别与@racket[𠇁]、@racket[𠇁/入]同，除返回值不同外。 @linebreak{}
+@racket[引*]、@racket[引*/入]分别是对@racket[引]、@racket[引/入]加强力度。 @linebreak{}
 @; @racket[𠇁~]、@racket[𠇁~/入]分别与@racket[引]、@racket[引/入]同，除返回值不同外。
 @examples[#:eval (the-eval)
 (引* '(a b c d c f) 'c)

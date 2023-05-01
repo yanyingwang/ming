@@ -46,7 +46,7 @@
 
 >>> list-prefix? 􏾺于? @elem{某@racket[􏿴]是否是某另一@racket[􏿴]的@racket[􏾺]}
 >>> take-common-prefix 䢼 @elem{返回左起相同的元素} ;;􏾺共项 􏾺共相 共同/􏾺 左䢼
->>> drop-common-prefix 􏷳 @elem{删除左起相同的元素（输出结果是一个复值）} ;; ;;􏾺异项 􏾺异相 共异/􏾺 左􏾶分
+>>> drop-common-prefix 􏷳分 @elem{删除左起相同的元素（输出结果是一个复值）} ;; ;;􏾺异项 􏾺异相 共异/􏾺 左􏾶分
 >>> split-common-prefix 䢼分 @elem{将@racket[䢼]和余下分离开（输出结果是一个复值）}
 
 
@@ -65,8 +65,8 @@
 >>> filter-map 佫􏷹 @elem{等同于@code{(􏷹 (入 (x) x) (佫 proc lst))}} ;佫之􏷹 􏷹佫 􏷯
 >>> append-map 佫􏿝 @elem{等同于@code{(􏿝 (佫 proc lst))}} ;佫之􏿝
 
->>> range 􏿴/数段 "A到B之间的一段数组成的􏿴（包括A不包括B）"
->>> inclusive-range 􏿴/数段* "A到B之间的一段数组成的􏿴（包括A也包括B）"
+>>> range 𥸬􏿴 "构造从A到B之间的一段连续数字组成的􏿴（包括A不包括B）" ;􏿴/数段
+>>> inclusive-range 𥸬􏿴* "构造从A到B之间的一段连续数字组成的􏿴（包括A也包括B）"
 
 >>> combinations 􏿴/组合
 >>> permutations 􏿴/排列组合
