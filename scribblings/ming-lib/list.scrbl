@@ -25,7 +25,6 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @; ]
 @; }
 @; @margin-note{另见：@racket[引]、@racket[引/入]，@racket[𠇁/入]、@racket[𠇁/入]}
-@margin-note{另见：@racket[引]、@racket[引v]}
 @deftogether[(
 @defproc[(引* [LST 􏿴?] [V any/c])
           精确非负整数殖?]
@@ -38,6 +37,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 )]{
 @racket[引*]、@racket[引*/入]分别是对@racket[引]、@racket[引/入]加强力度。 @linebreak{}
 @; @racket[𠇁~]、@racket[𠇁~/入]分别与@racket[引]、@racket[引/入]同，除返回值不同外。
+@margin-note{另见：@racket[引]、@racket[引v]}
 @examples[#:eval (the-eval)
 (引* '(a b c d c f) 'c)
 @; (𠇁~ '(a b c d c f) 'c)
@@ -106,8 +106,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @item{@racket[伄]：以多个@racket[V]作为索引来查找出@racket[LST]中全部对应的元素并组成@racket[􏿴]返回。}
 @item{@racket[伄^]：与上同，除了入参类型不同外。 }
 ]
-
-@margin-note{另见：@racket[弔]}
+@margin-note{@litchar{伄}为古活字，另见：@racket[弔]}
 @examples[#:eval (the-eval)
 @; (弔* '(a b c d e f g) 0 2 3)
 @; (弔^ '(a b c d e f g) '(0 2 3))
@@ -125,7 +124,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 )]{
 @racket[􏾝]：返回@racket[LST]的第@racket[N1]至第@racket[N2]之间的元素（从0算起，包含N1不包含N2）。@linebreak[]
 @racket[􏾝*]：返回@racket[LST]的第@racket[N1]至第@racket[N2]之间的元素（从0算起，包含N1也包含N2）。
-@margin-note{另见：@racket[􏾺]、@racket[𨚞]}
+@margin-note{@litchar{􏾝}为新造字，另见：@racket[􏾺]、@racket[𨚞]}
 @examples[#:eval (the-eval)
 (􏾝 '(a b c d e f) 0 0)
 (􏾝 '(a b c d e f) 0 1)
@@ -150,8 +149,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 本例程即是如下代码的转换： @linebreak{}
 @code{(􏷴 (􏷵 LST N1) N2)}
 }
-@margin-note{另见：@racket[􏾺]、@racket[𨚞]}
-
+@margin-note{@litchar{𬩵}为古活字，另见：@racket[􏾺]、@racket[𨚞]}
 @examples[#:eval (the-eval)
 (𬩵 '(a b c d e f g) 1 3)
 ]
@@ -170,7 +168,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @defproc[(偅 [LST 􏿴?])
           􏿴?]{
 返回@racket[LST]中的重复元素组成的@racket[􏿴]。
-@margin-note{另见：@racket[重]}
+@margin-note{@litchar{偅}为古活字，另见：@racket[重]}
 @examples[#:eval (the-eval)
 (偅 '())
 (偅 '(11))
