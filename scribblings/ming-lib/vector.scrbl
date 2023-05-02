@@ -11,12 +11,41 @@
 @(require scribble-rainbow-delimiters)
 @script/rainbow-delimiters*
 
-
 @title[#:tag "ming-vector"]{􏿲}
 @defmodule[ming/vector]
 Racket标准库@secref["vector"]的名语言扩展。
 @margin-note{本页所列之例程的实现代码是名语言，因此源代码有参照意义。}
 
+
+@defthing[空􏿲 􏿲?]{
+生成@racket[空]@racket[􏿲]，与@code{(􏿲)}等同。
+
+@examples[#:eval (the-eval)
+空􏿲
+(􏿲)
+]
+}
+
+@defproc[(易􏿲 [V 精确非负整数?] ...)
+􏿲?]{
+生成@racket[易?]@racket[􏿲]。
+@examples[#:eval (the-eval)
+(易􏿲 1 2 3 4)
+]
+}
+
+@deftogether[(
+@defproc[(易􏿲? [VEC 􏿲?])
+          boolean?]
+          @defproc[(固􏿲? [VEC 􏿲?])
+          boolean?])]{
+@margin-note{参见：@racket[􏿲?]}
+是否是@racket[易􏿲]、@racket[固􏿲]。
+@examples[#:eval (the-eval)
+(易􏿲? '#(1 2 3 4))
+(固􏿲? '#(1 2 3 4))
+]
+}
 
 @defproc[(􏿲􏾝* [VEC 􏿲?] [N1 精确非负整数?] [N2 精确非负整数?])
 􏿲?]{
@@ -30,12 +59,12 @@ Racket标准库@secref["vector"]的名语言扩展。
 @deftogether[(
 @defproc[(􏿲化殖 [VEC 􏿲?])
           殖?]
-@defproc[(􏿲􏾝*化殖 [VEC 􏿲?] [N1 精确非负整数?] [N2 精确非负整数?])
+@defproc[(􏿲􏾝化殖* [VEC 􏿲?] [N1 精确非负整数?] [N2 精确非负整数?])
          殖?])]{
 @margin-note{另见：@racket[􏿲􏾝*]、@racket[􏿲􏾝化殖]}
 @examples[#:eval (the-eval)
 (􏿲化殖 '#(a b c d))
-(􏿲􏾝*化殖 '#(a b c d) 0 2)
+(􏿲􏾝化殖* '#(a b c d) 0 2)
 ]
 }
 

@@ -21,5 +21,5 @@
 >>> vector-member 􏿲引
 >>> vector-memv 􏿲引/粡
 >>> vector-memq 􏿲引/侗
->>> vector-sort 􏿲􏿀
->>> vector-sort! 􏿲􏿀!
+>>> vector-sort 􏿲𠆯 ;􏿲􏿀
+>>> vector-sort! 􏿲𠆯!

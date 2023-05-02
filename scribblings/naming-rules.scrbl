@@ -1,114 +1,161 @@
 #lang scribble/manual
 
-@(require (for-label racket ming)
+@(require (for-label racket ming ming/list ming/vector)
            scribble/example
            scribble-rainbow-delimiters)
 @(define the-eval
          (make-eval-factory '(racket/base racket/list ming/racket/base ming/racket/list)))
 
+@(require (file "../private/scribble-styles/css/ming-fonts.css.rkt"))
+@css/ming-fonts
+@(require scribble-rainbow-delimiters)
 @script/rainbow-delimiters*
 
 
-@title[#:tag "naming-rules"]{命名规则}
-我曾在@secref["retrofit-chinese-to-lisp"]中提到，中文化有利于LISP代码更易被读懂，原因是中文的单字表意特性会更利于构造命名。所以，名语言的关键字命名必须依托在一套工整的规则之上，如此才能实现我所谓的更易读。
+《SOICOL》中@hyperlink["http://www.yanying.wang/SOICOL/zhaiyao.html" "摘要"]、@hyperlink["http://www.yanying.wang/SOICOL/fenxi.html#%28part._~e4~ba~8c~e8~bf~9b~e5~88~b6_~e6~98~93~e7~bb~8f~e5~92~8c~e6~b1~89~e5~ad~97%29" "二进制、易经和汉字"]章节可以被认为是本命名规则的哲学思源概述。
 
-@section[#:tag "word creating rules"]{组词规则}
-由字组词的规则如下：
+@title[#:tag "naming-rules"]{命名总则}
 
-@tabular[#:style 'boxed
-         #:column-properties '(left left)
-         #:row-properties '(bottom-border ())
-         (list (list @bold{规则} @bold{解释} @bold{示例})
-               (list "单字例程名且带有“亻”偏旁"  "表示例程入参和出参的数据类型相同（且数据内容也部分相同）" "佐、佑、攸")
-               (list "例程名字中包含“/入”"  "表示例程的入参并非常规数据，而是一个函数例程或是匿名函数"  "佐/入、攸/入、消/入")
-               (list "例程名字中包含“/以”" "用于提示例程的入参数据类型"  "诗修!/以它段")
-               (list "例程名字中包含“/成”的"  "用于提示例程的输出结果是某一类型" "/成诗、/成词")
-               )]
+@section[#:tag "word creating rules"]{单字}
+@tabular[@;#:sep @hspace[0]
+         #:style 'boxed
+         #:column-properties '(center)
+         #:row-properties '(border)
+         (list (list @bold{规则} @bold{含义} @bold{进出参} @bold{举例})
+               (list
+               @elem{左偏旁@litchar{亻}}
+               "相似集（类型相同且元素相似）"
+               @elem{出参数据与进参数据相比，类型相同且内容类似}
+               @elem{@racket[伄]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾜]、@racket[􏾛]、@racket[偅]、@racket[𠆯]、@racket[􏷹]}
+               )
 
+               (list
+               @elem{右偏旁@litchar{阝}}
+               "连续集（类型相同且元素连续相同）"
+               @elem{出参数据与进参数据相比，类型相同且前者是后者的一部分}
+               @elem{@racket[􏾝]、@racket[􏾺]、@racket[𨚞]、@racket[𬩵]、@racket[䢼]、@racket[𬩽]}
+               )
 
+               (list
+               @elem{右偏旁@litchar{刂}}
+               "缺失集（删除、移走、去掉部分元素之后的集合）"
+               @elem{出参数据与进参数据相比，类型相同且前者是后者的子集}
+               @elem{@racket[􏷵]、@racket[􏷴]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
+               )
 
-@itemlist[
-@item{原则上带有“亻”偏旁的例程名，是为暗示例程入参和出参的数据类型相同（且数据内容也部分相同）。此如：@racket[佐]、@racket[佑]、@racket[攸]等。}
-@item{凡是例程名字中包含@litchar{/入}的，均表示例程的入参并非常规数据，而是一个函数例程或是匿名函数（@racket[入]）。此如：@racket[佐/入]、@racket[攸/入]、@racket[消/入]等。}
-@item{凡是例程名字中包含@litchar{/以}，均是在提示例程的入参数据类型。此如：@racket[消*/以􏿴]表示其例程的参数是@racket[􏿴?]；又如@racket[诗修!/以它段]较@racket[诗修!]而言，参数多出了三个（这三个分别为另外一个诗，和对另外一个诗取@racket[诗段]的参数）。}
+               (list
+               @elem{左偏旁@litchar{土}}
+               "“构建”、“创建”的意思"
+               @elem{出参类型不一而多变}
+               @elem{@racket[垎]}
+               )
 
-@; @item{凡是例程名以@litchar{*}结尾的，表示加强力度。如@racket[提*]较@racket[提]会返回更多的结果；又如@racket[消*/入]较@racket[消/入]会移除更多的元素。}
-@; @item{凡是例程名以@litchar{~}结尾的，表示减轻力度。如@racket[􏿴~]较@racket[􏿴]返回的结果尾部无多余空；又如@racket[连~]较@racket[连]返回的结果尾部也无多余空。}
-@item{凡是例程名字中包含@litchar{/成}的，均表示例程的输出结果是某一类型。比如@litchar{/成􏿴}表示此例程返回的结果是一个@racket[􏿴?]；类似的还有@litchar{/成诗}（@racket[诗?]）、@litchar{/成词}（@racket[词?]）等等。}
-
-@item{......}
-@item{......}
-]
-
-@section[#:tag "character creating rules"]{选造字规则}
-
-@subsection{关键数据结构}
-@tabular[#:style 'boxed
-         #:column-properties '(left left)
-         #:row-properties '(bottom-border ())
-         (list
-         (list @bold{英语单词（English Word）}  @bold{中文字符（Chinese Character）}   @bold{数据结构示例/（Showing）} @bold{数据结构创建示例/（Constructor）})
-         (list "pair"   "双"          @racket['(a . b)]       @racket[(双 'a 'b)])
-         (list "list"  "􏿴"           @racket['(a b c)]       @racket[(􏿴 a b c)])
-         (list "list"  "􏿫"           @racket['(a b . c)]       @racket[(􏿫 a b c)])
-         (list "circular-list"  "􏿮"   @code|{'􏿸(a b c)}|       @racket[(􏿮 'a 'b 'c)])
-         (list "vector" "􏿲"           @code|{'􏿷(a b c)}| @racket[(􏿲 'a 'b 'c)])
-         (list "----------" "---" "----------------------------" "---------------------------------------")
-         (list "association list" "􏿳"  @racket['((a . b) (c . d))] @racket[(􏿳 'a 'b 'c 'd)])
-         (list "hash" "􏿱"            @code|{'T((a . b) (c . d))}|       @racket[(􏿱 'a 'b 'c 'd)])
-         (list "dict" "􏿰" "" "")
-         (list "----------" "---" "----------------------------" "---------------------------------------")
-         (list "struct" "􏿭" "" "")
-         (list "class" "􏿬" "" "")
-         @; (list "----------" "---" "----------------------------" "---------------------------------------")
-         @; (list "length"  "度"       "使用示例："  @code|{(度 '(a b c d e)) ==> 5}|)
-         @; (list "vector-length" "􏿺" "使用示例："  @code|{(􏿺 '􏿷(a b c d e)) ==> 5}|)
-         @; (list "string-length" "𬤏" "使用示例："  @code|{(𬤏 "abcde") ==> 5}|)
-         )]
+         )
+         ]
 
 
-@subsection{造字规则}
+@section[#:tag "word creating rules"]{标点}
+@tabular[@;#:sep @hspace[0]
+         #:style 'boxed
+         #:column-properties '(center)
+         #:row-properties '(border)
+         (list (list @bold{规则} @bold{含义} @bold{进出参} @bold{举例})
+               (list
+               @elem{以@litchar{?}结尾}
+               "指示出参"
+               "出参是布尔值"
+               @elem{@racket[空?]}
+               )
+               (list
+               @elem{以@litchar{!}结尾}
+               "指示过程"
+               "对入参数据做出了直接修改"
+               @elem{@racket[􏿲攸!]}
+               )
+               (list
+               @elem{以@litchar{~}结尾}
+               "减轻力度"
+               "出参内容更加贫瘠"
+               @elem{@racket[􏷲~]、@racket[􏷶~]}
+               )
 
-汉字的构造法才是汉语的精髓所在：汉字的构造，在其本质上是关于如何把现实世界间存在的多维度实物（以及实物间的关联关系）全都抽象化的体现在一个二维世界上的超级实践。
+               (list
+               @elem{以@litchar{v}结尾}
+               @elem{加强力度（且改变出参成@racket[􏿴]）}
+               @elem{出参内容更加丰富且被封装成@racket[􏿴]数据结构}
+               @elem{@racket[引v]}
+               )
+               (list
+               @elem{以@litchar{^}结尾}
+               @elem{加强力度（通过改变入参成@racket[􏿴]）}
+               @elem{入参内容更加丰富且被封装进@racket[􏿴]数据结构}
+               @elem{@racket[􏷲^]、@racket[伄^]}
+               )
 
-能熟练读或写中文的人，基本上都明白汉字的造字方法，我下面将举例说明如何在编程语言中引入这种造字法去表达编程中的固有概念：
+               (list
+               @elem{以@litchar{/}符号分割}
+               @elem{@litchar{/}之后的内容是为修饰@litchar{/}之前的内容的}
+               @elem{出参数据由@litchar{/}之前的内容决定}
+               @elem{@racket[􏿴/组合]、@racket[􏿴/分组]}
+               )
+         )
+         ]
 
-首先我们知道LISP编程语言里有以下数据类型和数据操作函数：pair、cons、list、vector、association list、hash、length、string-length、vector-length：
+@section[#:tag "word creating rules"]{组词}
+@tabular[@;#:sep @hspace[0]
+         #:style 'boxed
+         #:column-properties '(center)
+         #:row-properties '(border)
+         (list (list @bold{规则} @bold{含义} @bold{进出参} @bold{举例})
+               (list
+               @elem{以@litchar{分}结尾}
+               "分离成复值"
+               @elem{出参数据为复值}
+               @elem{@racket[􏾺分]、@racket[𨚞分]、@racket[䢼分]、@racket[􏷳分]、@racket[􏷹分]}
+               )
 
-@itemlist[
-@item{@bold{pair}在中文中我们可以用@litchar{双}来表示，这个汉字字符很容易让人理解@bold{pair}是什么：类似@racket['(1 . 2)]这样成对的一组数据结构我们称之为“双”。我们使用@racket[(cons 1 2)]来生成一个“双”。}
-@; @item{@bold{cons}是一个数据操作函数，用来把两个数据组合在一块生成一个“双”，例如@racket[(cons 1 2)]的执行结果是一个双：@racket['(1 . 2)]。如果用汉字的造字理论，cons可以用汉字@litchar{𭠎}来表示（该汉字古已有之，由偏旁@litchar{扌}和@litchar{又}组成），@litchar{扌}是@litchar{手}的意思。
-@; }
+               (list
+               @elem{以@litchar{􏿴}结尾}
+               @elem{构造生成@racket[􏿴]数据}
+               @elem{出参数据结构是@racket[􏿴]}
+               @elem{@racket[序􏿴]、@racket[复􏿴]、@racket[𥸬􏿴]}
+               )
 
-@item{@bold{list}是另外一个数据结构，它是@bold{pair}这种数据结构的衍生：用@racket[cons]像@racket[(cons 1 (cons 2 (cons 3 '())))]这样就会生成@racket['(1 2 3)]这样的@bold{list}数据结构。
-@linebreak{}
-我们用@litchar{􏿴}（由半包围结构的@litchar{又}和@litchar{㐅}组成，）来表达@bold{list}，这里半包围结构的@litchar{又}表示一个或多个的@litchar{又}（表示数据）组合在一块，@litchar{㐅}表示结尾为空。
-}
+               (list
+               @elem{@litchar{/入}}
+               "进参为函数"
+               @elem{进参并非常规数据，而是函数}
+               @elem{@racket[度/入]、@racket[引/入]、@racket[引v/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
+               )
 
-@item{@bold{vector}也是一种数据结构，它和@bold{list}类似。如：@racket['#(1 2 3 4)]。
-@linebreak{}
-@bold{vector}可以用汉字@litchar{􏿲}（由半包围结构的@litchar{矢}和@litchar{㐅}组成，左右半包围结构）来表示。}
+               (list
+               @elem{以@litchar{化}结尾}
+               @elem{类型转换}
+               @elem{出参数据内容不变而类型作小幅度改变}
+               @elem{@racket[􏿲定化]}
+               )
 
-@item{@bold{association list}是@bold{list}这种数据结构的衍生数据结构：每个元素都是@bold{pair}的@bold{list}。如：@racket['((1 . 2) (3 . 4) (5 . 6))]。
-@linebreak{}
-@bold{association list}用@litchar{􏿳}来表示。
-}
-
-@item{@bold{hash}也是一种数据结构，它和@bold{association list}类似。如：@racket[#hash((1 . 2) (3 . 4))]。
-@linebreak{}
-@bold{hash}可以用汉字@litchar{􏿱}来表示。}
-
-@item{@bold{struct}是较以上各数据结构都更结构化的一种数据结构，我们用汉字@litchar{缀}表示之。}
-@item{@bold{class}是较@bold{struct}更为抽象的一种数据结构，我们用汉字@litchar{䄌}表示之。}
-]
-
-下面让我们把以上所讲内容汇总成表格，来观察一下编程语言的各个概念之间的关联关系是如何被用汉字造字法创造出来的字符所含蕴的：
+               (list
+               @elem{以@litchar{化}联结}
+               @elem{类型转换}
+               @elem{出参数据内容不变而类型改变}
+               @elem{@racket[􏿲化􏿴]、@racket[􏿴化􏿲]}
+               )
+         )
+         ]
 
 
-如果我们把@litchar{又}看成是编程中数据的概念抽象的话，通过以上例子，我们就可以明白要如何用汉字的造字法来的表达LISP语言里面的固有概念。并且我们能看到，较之英文，汉字的表达是更能体现出概念之间的逻辑关系的。
-
-另外值得注意的是，我们如果把汉字的这个字符创造法用在其他的编程语言上恐怕未必能达到以上这样的效果，这主要因为LISP编程语言的极简主义特色：把一些简单的概念层层堆叠以组建表达复杂的概念。
-
-这个特色在我看来，和中国上古时期易经的“太极生两仪，两仪生四象，四象生八卦”，亦或是春秋战国时期道家老庄哲学的“道生一，一生二，二生三，三生万物”有异曲同工之妙。
-
-然后再反观中国汉字的造字法，会感觉这三者好似都遵从了同一理念。
+@section[#:tag "word creating rules"]{混用}
+@tabular[@;#:sep @hspace[0]
+         #:style 'boxed
+         #:column-properties '(center)
+         #:row-properties '(border)
+         (list (list @bold{规则} @bold{含义} @bold{进出参} @bold{举例})
+               (list
+               @elem{@litchar{/入}}
+               "进参为函数"
+               @elem{进参并非常规数据，而是函数}
+               @elem{@racket[度/入]、@racket[引/入]、@racket[引v/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
+               )
+         )
+         ]

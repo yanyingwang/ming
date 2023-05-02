@@ -8,6 +8,8 @@
          (make-eval-factory '(ming/racket/base)))
 
 
+@(require (file "../../private/scribble-styles/css/ming-fonts.css.rkt"))
+@css/ming-fonts
 @(require scribble-rainbow-delimiters)
 @script/rainbow-delimiters*
 
@@ -35,8 +37,8 @@
 }
 
 @examples[#:eval (the-eval)
-(矢/坚 "val")
-(坚? (矢/坚 "val"))
+(固矢 "val")
+(固? (固矢 "val"))
 (矢 "val")
 (􏾢 (矢 "val"))
 (令 ([某 (矢 "val")])

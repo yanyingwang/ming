@@ -29,5 +29,9 @@
 >>> eval 求
 >>> void? 无?
 
->>> immutable? 贞? @elem{“不可变的”的意思} ;; 反义：花
+>>> immutable? 固? @elem{是否是不可变的} ;; 反义：花 定 坚
+;; (名 (易? V)
+;;     (negate (固? V)))
+;; ; negate => 禾屰
+
 >>> raise-argument-error 报参错
