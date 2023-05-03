@@ -96,7 +96,7 @@
                @elem{进参并非常规数据，而是函数}
                @elem{@racket[度/入]、@racket[引/入]、@racket[引v/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
                )
-         )
+         )]
 
 @section+elemref[#:tag "pair-car-cdr-list-list*"]{双，􏿴、􏿫}
 “双”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构：

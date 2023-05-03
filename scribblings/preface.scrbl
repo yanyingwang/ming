@@ -1,10 +1,17 @@
 #lang scribble/manual
 
+@(require (for-label racket ming ming/list ming/vector)
+           scribble/example
+           scribble-rainbow-delimiters)
+@(define the-eval
+         (make-eval-factory '(racket/base racket/list ming/racket/base ming/racket/list)))
 
-@(require (for-label racket ming))
 
+@(require (file "../private/scribble-styles/css/ming-fonts.css.rkt"))
+@css/ming-fonts
 @(require scribble-rainbow-delimiters)
 @script/rainbow-delimiters*
+
 
 @title[#:tag "preface"]{序}
 
@@ -85,8 +92,93 @@ It's very obvious to notice that comparing to English, Chinese can use less spac
 
 如果我们撇掉汉字的概念不谈，那这其实相当于创造了一个字符系统。然后我们用这个字符系统作为人机交互的中间语言，而这个中间语言也就是人类使用编程语言的API。
 
-这样讲太抽象，也体现不出来采用汉字造字法来命名编程语言原有内部概念的优势，我另有举例说明如何选用或采用汉字的造字法来新造汉字去表达LISP编程语言里面的一些固有概念，可续读@secref["character creating rules"]。
+这样讲太抽象，也体现不出来采用汉字造字法来命名编程语言原有内部概念的优势，我另有举例说明如何选用或采用汉字的造字法来新造汉字去表达LISP编程语言里面的一些固有概念。
 
+
+
+@section[#:tag "ming-s-retrofit"]{中文化一角}
+@smaller{此章节为我部分实现了名语言后的新增：}
+
+我在序的《@secref["retrofit-chinese-to-lisp"]》一章节中，曾谈到说把LISP中文化是很有意义的，中文可以改进LISP的难读性并为其带来新的活力。本章节即是我结合之前所说，所实现的一部分名语言的代码。
+
+
+@subsection{pairs}
+@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "pairs"]是LISP语言非常基础的一个数据结构，@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "lists"]、 @secref["dicts" #:doc '(lib "scribblings/reference/reference.scrbl")]等更为复杂的数据结构都是它的衍生。
+
+一个pair包含两个数据，构造一个pair的函数是@racket[cons]。
+
+pair在名语言中，被翻译为“@racket[对]”（后又改为了@racket[双]）。“对”在中文中可以是动词（对酒当歌），也可以是名词（成双成对）。因此，可以用“对”这个单字来构造所有跟“pair”有关的数据结构。
+
+对于英文而言，“pair”其实也是可以作为动词使用的，但是英文单词和语法的基石是区分词性，区分词性也更利于意思的表达。
+
+然而对于中文来说，严格区分词性不是中文的惯例。如果需要，比如“对子”则肯定是一个名词了。虽然并非所有的词都是通过加“子”变成名词的，但中文具备这种能力，只是在实际使用中没有做完全发挥。
+
+通常情况下，对于编程语言来说，一旦有了一个中心意义的实体，就会在编程中因为各种情况需要不断的围绕它定义名字。中文强大的造词能力所能定义出来一些相关词汇集合，从这些词汇的构成上天然的就能看出他们之间所隐含存在着的一些关联和衍生关系，这对于程序员记忆和理解代码是有极大帮助的。
+
+@examples[#:eval (the-eval) #:label "英文"
+(cons 'a 'b)
+(pair? '(a . b))
+]
+
+@examples[#:eval (the-eval) #:label "中文"
+(双 'a 'b)
+(双? '(a . b))
+]
+
+仿照@racket[双]，进而又有了@racket[􏿴]、@racket[􏿫]、@racket[􏿲]、@racket[􏿱]等。
+
+
+@subsection{make-list和build-list}
+我们以两个Racket标准库里面的例程（Procedures）：@racket[make-list]和@racket[build-list]为例来尝试阐述所说。
+
+@subsubsection{原英文}
+从他们的英文名字上，我们很容易得出这两个例程都是用来创建“@racket[list]”的（名语言称之为“@racket[􏿴]”）。
+
+@itemlist[
+@item{
+@examples[#:eval (the-eval) #:label @elem{对于@racket[make-list]有：}
+(make-list 3 'foo)
+(make-list 6 "foo")
+]
+很容易明白，它是用来创建一个包含n个相同值的􏿴的。
+}
+@item{
+@examples[#:eval (the-eval) #:label @elem{对于@racket[build-list]有：}
+(build-list 5 values) (code:comment "生成一个包含0-4这个5个数的􏿴。")
+(build-list 10 values) (code:comment "生成一个包含0-9这个10个数的􏿴。")
+(build-list 10 add1) (code:comment "生成一个包含0-9这个10个数的􏿴，并且每一个数都加上1。")
+(build-list 10 (lambda (e) (* e e))) (code:comment "生成一个包含0-9这个10个数的􏿴，并且每一个数都是自身的平方。")
+]
+@racket[build-list]的行为更加复杂些：它是用来生成一个􏿴，这个􏿴包含从0数起的n个数，并且生成的时候，这些数是可以被做一些附加处理的。
+}
+]
+
+对于@racket[make-list]和@racket[build-list]这两个例程的具体作用，从名字上我们仅仅能看出它是用来创建􏿴的，并不能看出它的其它更具体的作用。
+
+@subsubsection{中文化后}
+中文化后，@racket[make-list]叫“复􏿴”（@racket[复􏿴]），意为􏿴内部的每个元素是重复的；@racket[build-list]叫“序􏿴”（@racket[序􏿴]），意为􏿴内部的元素是按照一定的顺序排列的。
+
+@itemlist[
+@item{第一，显然这两个例程的名字有着较原英文更加丰富的含义，这是我上文提到的我所说的中文化的意义；}
+@item{第二，古中文即文言文中，字词的词性很弱，或者说是常常有名词活用动词，动词活用名词的用法。故此，“􏿴”这个字是可以被用作动词的，意为创建􏿴、􏿴起来一组数据、将一组数据存在􏿴结构中。总之，字词的表意性因其所处的语境而可以有被活用的留白；}
+@item{第三，从整体性的角度讲，和其他例程名放在一块，名字显得有更加有规律可循，语言使用者更容易从整体的角度出发获取到更多意义上的理解。}
+]
+
+
+当然你可以说，这其中的“第一”是因为这两个例程原本的英文名字起的不好。
+
+但我们更加应该看到的是，这本质上反应的是一种文化上的差异：英文世界里是存在着一种把事情都简单化的趋向的，这是我认为这两个例程都采用了@litchar{make-list}和@litchar{build-list}的根本原因，我们即使找出更加贴切的英文词汇来作为这两个例程的名字，但或许这些词汇在实际的实现上看起来都是不够直观的。
+
+但对中文来讲就不一样了，中文的造词能力更强：支撑中文造词能力强的技术层原因是它的单字表意特性；非技术层原因是它所造出的词是更加容易被接收者所理解的（这可能和它字的表象特性有关）。
+
+@examples[#:eval (the-eval) #:label "中文化后的示例："
+(􏿴 'val 'val 'val)
+(复􏿴 3 'val)
+
+(􏿴 1 2 3 4 5)
+(序􏿴 5 加一)
+(序􏿴 5 (入 (n) (复􏿴 n 'val)))
+]
 
 @section{如何做}
 @itemlist[

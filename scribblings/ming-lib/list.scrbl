@@ -46,6 +46,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 (伄 '(a b c d e f g) 0 2 3)
 (伄^ '(a b c d e f g) '(0 2 3))
 ]
+}
 
 @deftogether[(
 @defproc[(􏾝 [LST 􏿴?] [N1 精确非负整数?] [N2 精确非负整数?])

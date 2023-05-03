@@ -12,7 +12,7 @@
 @script/rainbow-delimiters*
 
 
-《SOICOL》中@hyperlink["http://www.yanying.wang/SOICOL/zhaiyao.html" "摘要"]、@hyperlink["http://www.yanying.wang/SOICOL/fenxi.html#%28part._~e4~ba~8c~e8~bf~9b~e5~88~b6_~e6~98~93~e7~bb~8f~e5~92~8c~e6~b1~89~e5~ad~97%29" "二进制、易经和汉字"]章节可以被认为是本命名规则的哲学思源概述。
+《SOICOL》中的@hyperlink["http://www.yanying.wang/SOICOL/zhaiyao.html" "〈摘要〉"]、@hyperlink["http://www.yanying.wang/SOICOL/fenxi.html#%28part._~e4~ba~8c~e8~bf~9b~e5~88~b6_~e6~98~93~e7~bb~8f~e5~92~8c~e6~b1~89~e5~ad~97%29" "〈二进制、易经和汉字〉"]章节可以被认为是本命名规则的哲学思源概述，而@hyperlink["http://www.yanying.wang/SOICOL/sheji.html#%28part._~e6~b1~89~e5~ad~97~e9~80~a0~e5~ad~97~e6~b3~95_~e5~9f~ba~e4~ba~8e~e5~85~b6~e5~8f~91~e5~b1~95~e5~87~ba~e7~9a~84~e6~95~b0~e6~8d~ae~e7~bb~93~e6~9e~84~e5~90~8d%29" "〈汉字造字法：基于其发展出的数据结构名〉"]章节对这种哲学思源作出了具象概括。
 
 @title[#:tag "naming-rules"]{命名总则}
 
