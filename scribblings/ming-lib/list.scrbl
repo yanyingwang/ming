@@ -31,14 +31,15 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 (引*/入 '(a 32 c 11 c f) 数?)
 ]
 }
+
 @deftogether[(
-@defproc[(伄 [LST 􏿴?] [V 精确非负整数?] ...)
+@defproc[(伄 [LST 􏿴?] [N 精确非负整数?] ...)
           􏿴?]
-@defproc[(伄^ [LST 􏿴?] [V-LST (listof 精确非负整数?)])
+@defproc[(伄^ [LST 􏿴?] [N-LST (listof 精确非负整数?)])
           􏿴?]
 )]{
 @itemlist[
-@item{@racket[伄]：以多个@racket[V]作为索引来查找出@racket[LST]中全部对应的元素并组成@racket[􏿴]返回。}
+@item{@racket[伄]：以多个@racket[N]作为索引来查找出@racket[LST]中全部对应的元素并组成@racket[􏿴]返回。}
 @item{@racket[伄^]：与上同，除了入参类型不同外。 }
 ]
 @margin-note{@litchar{伄}为古活字，另见：@racket[弔]}
@@ -73,6 +74,24 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 (􏾝* '(a b c d e f) 2 5)
 ]
 }
+
+@deftogether[(
+@defproc[(􏾘 [LST 􏿴?] [N 精确非负整数?])
+          􏿴?]
+@defproc[(􏾘^ [LST 􏿴?] [N-LST (listof 精确非负整数?)])
+          􏿴?]
+)]{
+@itemlist[
+@item{@racket[􏾘]：从@racket[LST]中删除索引@racket[N]所对应的元素。}
+@item{@racket[􏾘^]：与上同，除了入参类型不同外。 }
+]
+@margin-note{@litchar{􏾘}为新造字，另见：@racket[弔]，@racket[􏷲]，@racket[􏷶]}
+@examples[#:eval (the-eval)
+(􏾘 '(a b c d e f g) 1)
+(􏾘^ '(a b c d e f g) '(0 1 3))
+]
+}
+
 
 @defproc[(𬩵 [LST 􏿴?] [N1 精确非负整数?] [N2 精确非负整数?])
           􏿴?]{

@@ -40,7 +40,7 @@
                @elem{右偏旁@litchar{刂}}
                "缺失集（删除、移走、去掉部分元素之后的集合）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的子集}
-               @elem{@racket[􏷵]、@racket[􏷴]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
+               @elem{@racket[􏷵]、@racket[􏷴]、@racket[􏾘]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
                )
                (list
                @elem{左偏旁@litchar{土}}
@@ -76,7 +76,7 @@
                @elem{以@litchar{^}结尾}
                @elem{加强力度（通过改变入参成@racket[􏿴]）}
                @elem{入参内容更加丰富且被封装进@racket[􏿴]数据结构}
-               @elem{@racket[􏷲^]、@racket[伄^]}
+               @elem{@racket[􏷲^]、@racket[伄^]、@racket[􏾘^]}
                )
                (list
                @elem{以@litchar{􏿴}结尾}
@@ -271,7 +271,7 @@
 ]
 }
 @margin-note{
-另见：@racket[引*]、@racket[引*/入]，@racket[伄]、@racket[伄^]、@racket[􏾝]
+另见：@racket[引*]、@racket[引*/入]，@racket[伄]，@racket[􏾘]，@racket[􏾝]
 }
 @examples[#:eval (the-eval)
 (引 '(a b c d e c f) 'c)
@@ -393,7 +393,7 @@
 @; @item{@litchar{刂}见：@secref["rules"]。}
 @; ]
 @; }
-@margin-note{另见：@racket[􏷲]}
+@margin-note{另见：@racket[􏷲]，@racket[􏾘]}
 @examples[#:eval (the-eval)
 (𬩽 'c '(a b c d e f))
 (􏿁 'c '((a b) (c d) (e f)))
