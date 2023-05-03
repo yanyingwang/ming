@@ -14,7 +14,7 @@
 
 
 @title[#:tag "pairs-and-lists"]{双和􏿴}
-@margin-note{另见名扩展库：@secref["ming-lists"]}
+@margin-note{另见名扩展库：@secref["ming-list"]}
 
 @section[#:tag "rules"]{例程命名规则}
 除总@secref["naming-rules"]外，另有：

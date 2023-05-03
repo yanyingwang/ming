@@ -15,6 +15,7 @@
 
 
 @title[#:tag "vector"]{􏿲}
+@margin-note{另见名扩展库：@secref["ming-vector"]}
 
 @section[#:tag "rules"]{例程命名规则}
 除总@secref["naming-rules"]外，另有：
@@ -61,7 +62,9 @@
 }
 
 “􏿲”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "vector"]）是和“@racket[􏿴]”类似的一种数据结构，但显著的一个不同是访问和更新其元素值的时间复杂度是@hyperlink["https://zh.wikipedia.org/wiki/%E5%B8%B8%E6%95%B8%E6%99%82%E9%96%93" "常数时间"]。@linebreak{}
-@margin-note{另见：@racket[固?]、@racket[易?]、@racket[易􏿲]、@racket[易􏿲?]、@racket[固􏿲?]、@racket[空􏿲]}
+@margin-note{
+参见：@racket[固?]、@racket[易?] @linebreak{}
+另见：@racket[易􏿲]、@racket[易􏿲?]、@racket[固􏿲?]、@racket[空􏿲]}
 @examples[#:eval (the-eval)
 (􏿲 1 2 3 4)
 (固􏿲 1 2 3 4)
@@ -91,8 +94,8 @@
 
 @section+elemref{􏿲固化，􏿲化􏿴、􏿴化􏿲、􏿲􏾝化殖}
 @margin-note{
-参见：@racket[固?]，@racket[固􏿲] @linebreak{}
-另见：@racket[􏿲􏾝]、@racket[􏿲化殖]、@racket[􏿲􏾝化殖*]
+参见：@racket[固?]，@racket[固􏿲]、@racket[􏿲􏾝]、@racket[􏿲化殖] @linebreak{}
+另见：@racket[􏿲􏾝化殖*]
 }
 @examples[#:eval (the-eval)
 (􏿲固化 '#(a b c d))
@@ -102,8 +105,11 @@
 ]
 
 @section+elemref{􏿲􏾺、􏿲􏷵、􏿲􏾺分、􏿲􏾝}
-@margin-note{参见：@racket[􏾺]，@racket[􏾺分]，@racket[􏾝]}
-@margin-note{@racket[􏿲􏾝*]}
+@margin-note{
+参见：@racket[􏾺]，@racket[􏾺分]，@racket[􏾝] @linebreak{}
+另见：@racket[􏿲􏾝*]
+}
+
 @examples[#:eval (the-eval)
 (􏿲􏾺 '#(a b c d e f) 2)
 (􏿲􏷵 '#(a b c d e f) 2)
