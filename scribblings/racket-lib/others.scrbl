@@ -9,6 +9,8 @@
          (make-eval-factory '(ming/racket/base ming/racket/list)))
 
 
+@(require (file "../../private/scribble-styles/css/ming-fonts.css.rkt"))
+@css/ming-fonts
 @(require scribble-rainbow-delimiters)
 @script/rainbow-delimiters*
 
@@ -36,50 +38,38 @@
 (或 (< 2 5) (> 2 0))
 ]
 
-@section+elemref{同?、􏾬?、粡?、侗?}
+@section+elemref{同?、􏾗?、􏾕?、侗?}
 @margin-note{
-@bold{@litchar{􏾬}为新造字}
+@bold{@litchar{􏾗}为新造字} @linebreak{}
+@bold{@litchar{􏾕}为新造字} @linebreak{}
+@bold{@litchar{侗}为活用字} @linebreak{}
 @itemlist[
-@item{偏旁@litchar{彡}，是为“易”的意思，即“坚”（@racket[坚?]）的反义；}
-@item{整体上是对@litchar{同}字增加了偏旁@litchar{彡}，即表示本例程在效果上是和@racket[同?]类似的，另外更有@racket[坚?]的作用。}
+@item{偏旁@litchar{古}，表示是@racket[固?]；}
+@item{偏旁@litchar{人}，表示是“复合数据（list/struct等）”；}
+@item{偏旁@litchar{舍}，表示是@litchar{人}+@litchar{古}；}
+@; @item{偏旁@litchar{米}，表示是@racket[数?]；}
+@item{偏旁@litchar{亻}，意思是“实体上一样”。}
 ]
-
-@bold{@litchar{侗}为活用字}
-@itemlist[
-@item{@litchar{侗}在@litchar{同}的基础上增加了偏旁@litchar{亻}，意思是“实体上一样”。}
-]
-@; @bold{@litchar{􏾪}为新造字}
-@; @itemlist[
-@; @item{其字的偏旁@litchar{米}是“数”（@racket[数?]）的意思；}
-@; @item{其字整体上是对@litchar{侗}字增加了偏旁@litchar{米}，即表示本例程在效果上是和@racket[侗?]类似的，另在@racket[数?]的地方表现不同。}
-@; ]
-@bold{@litchar{粡}为活古字}
-@itemlist[
-@item{偏旁@litchar{米}是“数”（@racket[数?]）的意思；}
-@item{整体上是对@litchar{侗}字修改了偏旁@litchar{米}，即表示本例程在效果上是和@racket[侗?]类似的，另在@racket[数?]的地方表现不同。}
-]
-@; @bold{““@litchar{狪}”为活用字}
-@; @itemlist[
-@; @item{@litchar{狪}在@litchar{同}的基础上增加了偏旁@litchar{犭}，意思是“@racket[狪?]在使用效果上相当于退化了的@racket[同?]”。}
-@; ]
 }
-
 @examples[#:eval (the-eval)
-(同? (expt 2 100) (expt 2 100))
-(同? (list 1 2) (list 1 2))
-(同? (make-string 3 #\z) (make-string 3 #\z))
-
-(􏾬? (expt 2 100) (expt 2 100))
-(􏾬? (list 1 2) (list 1 2))
-(􏾬? (make-string 3 #\z) (make-string 3 #\z))
-
-(粡? (expt 2 100) (expt 2 100))
-(粡? (list 1 2) (list 1 2))
-(粡? (make-string 3 #\z) (make-string 3 #\z))
-
-(侗? (expt 2 100) (expt 2 100))
-(侗? (list 1 2) (list 1 2))
+(􏾗? (make-string 3 #\z) (make-string 3 #\z))
+(􏾗? (list 1 2) (list 1 2))
+(􏾗? (expt 2 100) (expt 2 100))
+]
+@examples[#:eval (the-eval)
+(􏾕? (make-string 3 #\z) (make-string 3 #\z))
+(􏾕? (list 1 2) (list 1 2))
+(􏾕? (expt 2 100) (expt 2 100))
+]
+@examples[#:eval (the-eval)
 (侗? (make-string 3 #\z) (make-string 3 #\z))
+(侗? (list 1 2) (list 1 2))
+(侗? (expt 2 100) (expt 2 100))
+]
+@examples[#:eval (the-eval)
+(同? (make-string 3 #\z) (make-string 3 #\z))
+(同? (list 1 2) (list 1 2))
+(同? (expt 2 100) (expt 2 100))
 ]
 
 @section+elemref{遍?}
