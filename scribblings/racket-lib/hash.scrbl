@@ -1,11 +1,10 @@
 #lang scribble/manual
 
-@(require (for-label racket ming)
+@(require (for-label racket ming ming/list ming/hash)
            scribble/eval
-           ming/scribble
-           )
+           ming/scribble)
 @(define the-eval
-         (make-eval-factory '(ming/racket/base)))
+         (make-eval-factory '(ming/racket/base ming/racket/hash ming/hash)))
 
 @(require (file "../../private/scribble-styles/css/ming-fonts.css.rkt"))
 @css/ming-fonts
@@ -13,83 +12,134 @@
 @script/rainbow-delimiters*
 
 
-@title[#:tag "hash"]{􏿱}
+@title[#:tag "hash"]{􏿰}
+@margin-note{另见名扩展库：@secref["ming-hash"]}
 
-@section+elemref{􏿱、􏾔、􏾒、􏾓，􏿱~?、􏿱?、􏾔?、􏾒?、􏾓?，刚􏿱~?、柔􏿱~?}
-“􏿱”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "hash"]）是一种元素是“键值对（key/value）”的数据结构，其在以下几种特性上可以被进一步细分：
-@itemlist[
-@item{@bold{是否可以增加、修改、删除“键值对”}：
-即“􏿱”的内容是否可以被修改（见：@racket[固?]，以@litchar{!}结尾的例程不能作用在一个内容不可变的“􏿱”上）。}
-@item{@bold{不能有重复的“键值对”：}
-即“􏿱”中“键值对”的唯一性是如何被确立的（是通过各个“键值对”之间“键”的相互比较来保证的，这种比较可以是基于@racket[同?]、@racket[􏾗?]、@racket[􏾕?]、@racket[侗?]中的任意一种的，因而与之对应的即有@racket[􏿱]、@racket[􏾔]、@racket[􏾒]、@racket[􏾓]）。}
-@item{@bold{刚、柔}：对“􏿱”数据而言，其“键”的存储可以是“刚性”（默认）或“柔性”的。}
-]
+@section[#:tag "rules"]{例程命名规则}
+除总@secref["naming-rules"]外，另有：
+@tabular[@;#:sep @hspace[0]
+         #:style 'boxed
+         #:column-properties '(center)
+         #:row-properties '(border)
+         (list (list @bold{规则} @bold{指示} @bold{含义} @bold{举例})
+               (list
+               @elem{以@litchar{^}结尾}
+               @elem{指示入参}
+               @elem{入参数据是@racket[􏿳]类数据}
+               @elem{@racket[􏿰^]、@racket[􏾋^]、@racket[􏾊^]、@racket[􏾉^]}
+               )
+               (list
+               @elem{包含@litchar{􏿰}和@litchar{囗}/@litchar{古}/@litchar{舌}/@litchar{亻}中任一者的}
+               @elem{指示“􏿰”中“键值对”唯一性的确立方式}
+               @elem{是通过与之对应的@racket[同?]/@racket[􏾗?]/@racket[􏾃?]/@racket[侗?]中的任一者所确立的}
+               @elem{@racket[􏾌]、@racket[􏾋]、@racket[􏾊]、@racket[􏾉]}
+               )
+               (list
+               @elem{包含@litchar{􏿰}和@litchar{山}/@litchar{氵}中任一者的}
+               @elem{指示“􏿰”中“键值对”是否可变}
+               @elem{是不可或可被增加、删除或修改的}
+               @elem{@racket[􏾐]、@racket[􏾑]}
+               )
+               (list
+               @elem{包含@litchar{􏿰}和@litchar{⺮}/@litchar{艹}中任一者的}
+               @elem{指示“􏿰”中“键值对”之“键”的存储存方式}
+               @elem{是刚性或柔性的}
+               @elem{@racket[􏾎?]、@racket[􏾏?]}
+               )
+         )
+         ]
+
+
+@section+elemref{􏿰、􏿰?，􏾌、􏾋、􏾊、􏾉，􏾌?、􏾋?、􏾊?、􏾉?，􏾐?、􏾑?，􏾎?、􏾏?、􏾈?}
 
 @margin-note{
-@bold{@litchar{􏿱}为新造字} @linebreak{}
-@bold{@litchar{􏾔}为新造字} @linebreak{}
-@bold{@litchar{􏾒}为新造字} @linebreak{}
-@bold{@litchar{􏾓}为新造字}
+@bold{@litchar{􏿰}为新造字}
 @itemlist[
-@item{该字中的偏旁@litchar{宀}代表“内容不可变”（@racket[固?]），除非指明，比如@racket[易􏿱]代表“内容可变”（@racket[易?]）；}
-@item{偏旁@litchar{双}表示该数据的主要组成元素是一种“键值对”（类似@racket[双]）。}
-@item{偏旁@litchar{古}表示@litchar{􏾗}；}
-@item{偏旁@litchar{舍}表示@litchar{􏾕}；}
-@item{偏旁@litchar{亻}表示@litchar{侗}；}
+@item{@litchar{广}：工厂、容器、外壳；}
+@item{@litchar{双}：键值对（因为类似@racket[双]，另见：@racket[􏿳]）；}
+]
+@bold{@litchar{􏾌}}、@bold{@litchar{􏾋}}、@bold{@litchar{􏾊}}、@bold{@litchar{􏾉}为新造字}
+@itemlist[
+@item{@litchar{囗}：代表@racket[同?]；}
+@item{@litchar{古}：代表@racket[􏾗?]；}
+@item{@litchar{舌}：代表@racket[􏾃?]；}
+@item{@litchar{亻}：代表@racket[侗?]。}
+]
+@bold{@litchar{􏾐}}、@bold{@litchar{􏾑}}、@bold{@litchar{􏾎}}、@bold{@litchar{􏾏}、@bold{@litchar{􏾈}}为新造字}
+@itemlist[
+@item{@litchar{山}：内容稳固的，不可变的（因为“山”是稳定的，见：@racket[􏾐?]）；}
+@item{@litchar{氵}（顺时针转动45°）：内容易变的，可变的（因为“水”是易变的，另见：@racket[􏾑?]）；}
+@item{@litchar{⺮}：刚韧的（因为“竹”是刚韧的，见：@racket[􏾎?]）；}
+@item{@litchar{艹}：柔弱的（因为“艸”（草）是柔弱的，见：@racket[􏾏?]）；}
+@item{@litchar{艹}（中间加@litchar{丨}）：见@racket[􏾈?]。}
 ]
 }
+@margin-note{另见：@racket[􏾐]、@racket[􏾐]，@racket[􏾑]、@racket[􏾑?]}
 
-
-@examples[#:eval (the-eval)
-(􏿱 1 2 3 4)
-(固? (􏿱 1 2 3 4))
-(􏿱? (􏿱 1 2 3 4))
-(􏿱~? (􏿱 1 2 3 4))
-(刚􏿱~? (􏿱 1 2 3 4))
-
-(􏾔 1 2 3 4)
-(固? (􏾔 1 2 3 4))
-(􏾔? (􏾔 1 2 3 4))
-(􏿱~? (􏾔 1 2 3 4))
-(刚􏿱~? (􏾔 1 2 3 4))
-]
-
-@section+elemref{􏿱化􏿳，􏿳化􏿱、􏿳化􏾔、􏿳化􏾒、􏿳化􏾓}
-通过@racket[􏿴]数据结构也能构造出来元素是“键值对”的数据结构，这种数据结构我们称之为“􏿳”（association list），然其和“􏿱”在内部特性上是有所不同的（是否可以修改“键值对”、“键值对”是否具有唯一性）。
-@margin-note{
-@bold{@litchar{􏿳}为新造字}
+“@racket[􏿰]”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "hash"]）是一种内部元素都是“键值对（key/value）”的数据结构，其在以下特性上可以被进一步细分：
 @itemlist[
-@item{该字仿照@litchar{􏿴}字而造，表示其也是一种@racket[􏿴]数据结构；}
-@item{偏旁@litchar{双}表示该数据的主要组成元素是一种“键值对”（类似@racket[双]）。}
+@item{
+@bold{是否可以增加、修改、删除“键值对”}，即“􏿰”的内容是否可以被改变：
+@itemlist[
+@item{@bold{@racket[􏾐]}：内容不可改变的“􏿰”，也称“固􏿰”；}
+@item{@bold{@racket[􏾑]}：内容可改变的“􏿰”，也称“易􏿰”（以@litchar{!}结尾的例程只能作用在“易􏿰”上）。}
 ]
 }
-
-@examples[#:eval (the-eval)
-(􏿱 1 2 3 4)
-(􏿱化􏿳 (􏿱 1 2 3 4))
-(􏿳化􏿱 '((1 . 2) (3 . 4)))
-(固? (􏿳化􏿱 '((1 . 2) (3 . 4))))
-(􏿱? (􏿳化􏿱 '((1 . 2) (3 . 4))))
-(刚􏿱~? (􏿳化􏿱 '((1 . 2) (3 . 4))))
-(􏿱~? (􏿳化􏿱 '((1 . 2) (3 . 4))))
+@item{
+@bold{不能有重复的“键值对”}，即“键值对”的唯一性要如何被确立（通过各个“键值对”之间“键”的相互比较来确立）：
+@itemlist[
+@item{@bold{@racket[􏾌]}：比较函数是@racket[同?]；}
+@item{@bold{@racket[􏾋]}：比较函数是@racket[􏾗?]；}
+@item{@bold{@racket[􏾊]}：比较函数是@racket[􏾃?]；}
+@item{@bold{@racket[􏾉]}：比较函数是@racket[侗?]。}
+]
+}
+@item{对于“键值对”，其“键”的存储可以是：}
+@itemlist[
+@item{@bold{@racket[􏾎]}：刚性的；}
+@item{@bold{@racket[􏾏]}：柔性的；}
+@item{@bold{@racket[􏾈]}：类􏾧的。}
+]
 ]
 
-@section+elemref{􏿳化易􏿱、􏿳化易􏾔、􏿳化易􏾒、􏿳化􏾓}
 @examples[#:eval (the-eval)
-(􏿳化易􏿱 '((1 . 2) (3 . 4)))
-(􏿱? (􏿳化易􏿱 '((1 . 2) (3 . 4))))
-(刚􏿱~? (􏿳化易􏿱 '((1 . 2) (3 . 4))))
-(固? (􏿳化易􏿱 '((1 . 2) (3 . 4))))
-(􏿱? (􏿳化易􏿱 '((1 . 2) (3 . 4))))
+(􏿰 1 2 3 4)
+(􏿰? (􏿰 1 2 3 4))
+(􏾌? (􏿰 1 2 3 4))
+(􏾐? (􏿰 1 2 3 4))
+(􏾎? (􏿰 1 2 3 4))
 ]
 
-@section+elemref{􏿳化柔􏿱、􏿳化柔􏾔、􏿳化柔􏾒、􏿳化柔􏾓}
+@section+elemref{􏿰^、􏾋^、􏾊^、􏾉^，􏿱化􏿳}
+通过“@racket[􏿴]”也能构造出来元素是“键值对”的数据结构，这种数据结构我们称之为“@racket[􏿳]”（association list）。 @linebreak{}
+“􏿳”可以被看作是减配的“􏿰”（比如“键值对”不必唯一），“􏿳”和“􏿰”可以互相进行转换。
 @examples[#:eval (the-eval)
-(􏿳化柔􏿱 '((1 . 2) (3 . 4)))
-(􏿱? (􏿳化柔􏿱 '((1 . 2) (3 . 4))))
-(刚􏿱~? (􏿳化柔􏿱 '((1 . 2) (3 . 4))))
-(固? (􏿳化柔􏿱 '((1 . 2) (3 . 4))))
-(􏿱? (􏿳化柔􏿱 '((1 . 2) (3 . 4))))
+(􏿰^ '((1 . 2) (3 . 4)))
+(􏾑? (􏿰^ '((1 . 2) (3 . 4))))
+(􏾎? (􏿰^ '((1 . 2) (3 . 4))))
+(􏾌? (􏿰^ '((1 . 2) (3 . 4))))
+(􏿰? (􏿰^ '((1 . 2) (3 . 4))))
+(􏿰化􏿳 (􏿰 1 2 3 4))
+(􏿰化􏿳 (􏾋 1 2 3 4))
+(􏿰化􏿳 (􏾑 1 2 3 4))
+]
+
+
+@section+elemref{􏾐^、􏾆^、􏾅^、􏾄^}
+@examples[#:eval (the-eval)
+(􏾐^ '((1 . 2) (3 . 4)))
+(􏾆? (􏾐^ '((1 . 2) (3 . 4))))
+(􏾅? (􏾐^ '((1 . 2) (3 . 4))))
+(􏾄? (􏾐^ '((1 . 2) (3 . 4))))
+(􏿰? (􏾐^ '((1 . 2) (3 . 4))))
+]
+@section+elemref{􏾏^、􏾁^、􏾀^、􏽿^}
+@examples[#:eval (the-eval)
+(􏾏^ '((1 . 2) (3 . 4)))
+(􏾏? (􏾏^ '((1 . 2) (3 . 4))))
+(􏾌? (􏾏^ '((1 . 2) (3 . 4))))
+(􏾐? (􏾏^ '((1 . 2) (3 . 4))))
+(􏿰? (􏾏^ '((1 . 2) (3 . 4))))
 ]
 
 

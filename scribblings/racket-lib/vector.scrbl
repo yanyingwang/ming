@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(require (for-label racket ming ming/vector ming/list)
+@(require (for-label racket ming ming/list ming/vector)
            scribble/eval
            ming/scribble
            )

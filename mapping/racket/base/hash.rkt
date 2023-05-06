@@ -1,38 +1,38 @@
 #lang at-exp s-exp "../../../private/mapping-lang.rkt"
 
 
->>> hash 􏿱 @elem{创建数据（且键的比较采用的是@racket[同?]）}
->>> hashalw 􏾔 @elem{与上同，不过键的比较采用的是@racket[􏾗?]} ; 􏾱􏿱
->>> hasheqv 􏾒 @elem{与上同，不过键的比较采用的是@racket[􏾕?]}; 􏾪􏿱 􏾰􏿱 􏾭 􏾫
->>> hasheq 􏾓 @elem{与上同，不过键的比较采用的是@racket[侗?]}; 􏾯􏿱
+>>> hash 􏿰 @elem{创建@racket[􏾐]}
+>>> hashalw 􏾋 @elem{类上，不过键的唯一性是通过@racket[􏾗?]确立的} ; 􏾱􏿱
+>>> hasheqv 􏾊 @elem{类上，不过键的唯一性是通过@racket[􏾃?]确立的}; 􏾪􏿱 􏾰􏿱 􏾭 􏾫
+>>> hasheq 􏾉 @elem{类上，不过键的唯一性是通过@racket[侗?]确立的}; 􏾯􏿱
 
->>> hash? 􏿱~? @elem{是否是@racket[􏿱]、@racket[􏾔]、@racket[􏾒]、@racket[􏾓]的任一种}
->>> hash-equal? 􏿱? @elem{是否是@racket[􏿱]}
->>> hash-equal-always? 􏾔? @elem{是否是@racket[􏾔]}
->>> hash-eqv? 􏾒? @elem{是否是@racket[􏾒]}
->>> hash-eq? 􏾓? @elem{是否是@racket[􏾓]}
+>>> hash? 􏿰? @elem{是否是@racket[􏾌]、@racket[􏾋]、@racket[􏾊]、@racket[􏾉]的任一种}
+>>> hash-equal? 􏾌? @elem{是否是@racket[􏾌]}
+>>> hash-equal-always? 􏾋? @elem{是否是@racket[􏾋]}
+>>> hash-eqv? 􏾊? @elem{是否是@racket[􏾊]}
+>>> hash-eq? 􏾉? @elem{是否是@racket[􏾉]}
 
->>> hash-strong? 刚􏿱~? @elem{与上同，不过键是被刚性存储的} ; 刚 强
->>> hash-weak? 柔􏿱~? @elem{与上同，不过键是被柔性存储的}; 柔
->>> hash-ephemeron? 􏾧􏿱~? @elem{与上同，不过键的存储采用@racket[􏾧]}
+>>> hash-strong? 􏾎? @elem{类上，键是否是被刚性存储的} ; 刚 强
+>>> hash-weak? 􏾏? @elem{类上，键是否是被柔性存储的}; 柔
+>>> hash-ephemeron? 􏾈? @elem{类上，键的存储是否是采用@racket[􏾧]}
 
->>> make-immutable-hash 􏿳化􏿱 @elem{@racket[􏿳]转换成@racket[􏿱]}
->>> make-immutable-hashalw 􏿳化􏾔 @elem{@racket[􏿳]转换成@racket[􏾔]}
->>> make-immutable-hasheqv 􏿳化􏾒 @elem{@racket[􏿳]转换成@racket[􏾒]}
->>> make-immutable-hasheq 􏿳化􏾓 @elem{@racket[􏿳]转换成@racket[􏾓]}
+>>> make-hash 􏿰^ @elem{@racket[􏿳]转换成@racket[􏾑]}
+>>> make-hashalw 􏾋^ @elem{@racket[􏿳]转换成@racket[􏾑]}
+>>> make-hasheqv 􏾊^ @elem{@racket[􏿳]转换成@racket[􏾑]}
+>>> make-hasheq 􏾉^ @elem{@racket[􏿳]转换成@racket[􏾑]}
 
->>> make-hash 􏿳化易􏿱 @elem{@racket[􏿳]转换成@racket[易?]@racket[􏿱]}
->>> make-hashalw 􏿳化易􏾔 @elem{@racket[􏿳]转换成@racket[易?]@racket[􏾔]}
->>> make-hasheqv 􏿳化易􏾒 @elem{@racket[􏿳]转换成@racket[易?]@racket[􏾒]}
->>> make-hasheq 􏿳化易􏾓 @elem{@racket[􏿳]转换成@racket[易?]@racket[􏾓]}
+>>> make-immutable-hash 􏾐^ @elem{@racket[􏿳]转换成@racket[􏾐]}
+>>> make-immutable-hashalw 􏾆^ @elem{@racket[􏿳]转换成@racket[􏾆]}
+>>> make-immutable-hasheqv 􏾅^ @elem{@racket[􏿳]转换成@racket[􏾅]}
+>>> make-immutable-hasheq 􏾄^ @elem{@racket[􏿳]转换成@racket[􏾄]}
 
->>> make-weak-hash 􏿳化柔􏿱 @elem{@racket[􏿳]转换成@racket[柔?]@racket[􏿱]}
->>> make-weak-hashalw 􏿳化柔􏾔 @elem{@racket[􏿳]转换成@racket[柔?]@racket[􏾔]}
->>> make-weak-hasheqv 􏿳化柔􏾒 @elem{@racket[􏿳]转换成@racket[柔?]@racket[􏾒]}
->>> make-weak-hasheq 􏿳化柔􏾓 @elem{@racket[􏿳]转换成@racket[柔?]@racket[􏾓]}
+>>> make-weak-hash 􏾏^ @elem{@racket[􏿳]转换成@racket[􏾏]}
+>>> make-weak-hashalw 􏾁^ @elem{@racket[􏿳]转换成@racket[􏾁]}
+>>> make-weak-hasheqv 􏾀^ @elem{@racket[􏿳]转换成@racket[􏾀]}
+>>> make-weak-hasheq 􏽿^ @elem{@racket[􏿳]转换成@racket[􏽿]}
 
->>> hash-set 􏿱􏾩
->>> hash-set! 􏿱􏾩!
+>>> hash-set 􏿰攸
+>>> hash-set! 􏿰攸!
 ;; >>> hash-set*! 􏿱􏾩*!
 
 >>> hash-ref 􏿱抇 @elem{对于每一个@racket[􏿱]，以其“明”中“阳”位数据为基准，来索引查询“阴”位数据并返回；}
@@ -51,13 +51,12 @@
 >>> hash-clear 􏿱清
 >>> hash-copy-clear 􏿱清/复制
 
->>> hash-map 􏿱𮞑
->>> hash-map 􏿱𮞑/复
+>>> hash-map 􏿰佫
 
 >>> hash-keys 􏿱->日􏿴
 >>> hash-values 􏿱->月􏿴
 
->>> hash->list 􏿱化􏿳
+>>> hash->list 􏿰化􏿳
 
 >>> hash-keys-subset? 􏿱键􏿴?/共
 >>> hash-for-each 􏿱各

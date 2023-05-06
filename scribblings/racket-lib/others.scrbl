@@ -38,17 +38,15 @@
 (或 (< 2 5) (> 2 0))
 ]
 
-@section+elemref{同?、􏾗?、􏾕?、侗?}
+@section+elemref{同?、􏾗?、􏾃?、侗?}
 @margin-note{
 @bold{@litchar{􏾗}为新造字} @linebreak{}
-@bold{@litchar{􏾕}为新造字} @linebreak{}
+@bold{@litchar{􏾃}为新造字} @linebreak{}
 @bold{@litchar{侗}为活用字} @linebreak{}
 @itemlist[
-@item{偏旁@litchar{古}，表示是@racket[固?]；}
-@item{偏旁@litchar{人}，表示是“复合数据（list/struct等）”；}
-@item{偏旁@litchar{舍}，表示是@litchar{人}+@litchar{古}；}
-@; @item{偏旁@litchar{米}，表示是@racket[数?]；}
-@item{偏旁@litchar{亻}，意思是“实体上一样”。}
+@item{偏旁@litchar{古}：表示“稳固的、不变的”（见@racket[固?]）；}
+@item{偏旁@litchar{舌}：中@litchar{丿}表示“复合数据”（list/struct等）；}
+@item{偏旁@litchar{亻}：表示“实体上一样”。}
 ]
 }
 @examples[#:eval (the-eval)
@@ -57,9 +55,9 @@
 (􏾗? (expt 2 100) (expt 2 100))
 ]
 @examples[#:eval (the-eval)
-(􏾕? (make-string 3 #\z) (make-string 3 #\z))
-(􏾕? (list 1 2) (list 1 2))
-(􏾕? (expt 2 100) (expt 2 100))
+(􏾃? (make-string 3 #\z) (make-string 3 #\z))
+(􏾃? (list 1 2) (list 1 2))
+(􏾃? (expt 2 100) (expt 2 100))
 ]
 @examples[#:eval (the-eval)
 (侗? (make-string 3 #\z) (make-string 3 #\z))

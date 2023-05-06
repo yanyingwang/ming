@@ -10,8 +10,8 @@
 >>> remainder 余数
 >>> quotient/remainder 商和余数
 >>> modulo 模
->>> add1 加一
->>> sub1 减一
+>>> add1 加一 ;; 米曾 增
+>>> sub1 减一 ; 米员 损
 >>> abs 绝对值
 >>> max 最大数
 >>> min 最小数
