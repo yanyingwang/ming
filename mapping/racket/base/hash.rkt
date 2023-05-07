@@ -1,7 +1,7 @@
 #lang at-exp s-exp "../../../private/mapping-lang.rkt"
 
 
->>> hash 􏿰 @elem{创建@racket[􏾐]}
+>>> hash 􏿰 @elem{创建@racket[􏾌]}
 >>> hashalw 􏾋 @elem{类上，不过键的唯一性是通过@racket[􏾗?]确立的} ; 􏾱􏿱
 >>> hasheqv 􏾊 @elem{类上，不过键的唯一性是通过@racket[􏾃?]确立的}; 􏾪􏿱 􏾰􏿱 􏾭 􏾫
 >>> hasheq 􏾉 @elem{类上，不过键的唯一性是通过@racket[侗?]确立的}; 􏾯􏿱
@@ -21,15 +21,21 @@
 >>> make-hasheqv 􏾊^ @elem{@racket[􏿳]转换成@racket[􏾑]}
 >>> make-hasheq 􏾉^ @elem{@racket[􏿳]转换成@racket[􏾑]}
 
->>> make-immutable-hash 􏾐^ @elem{@racket[􏿳]转换成@racket[􏾐]}
->>> make-immutable-hashalw 􏾆^ @elem{@racket[􏿳]转换成@racket[􏾆]}
->>> make-immutable-hasheqv 􏾅^ @elem{@racket[􏿳]转换成@racket[􏾅]}
->>> make-immutable-hasheq 􏾄^ @elem{@racket[􏿳]转换成@racket[􏾄]}
+>>> make-immutable-hash 􏾐^ @elem{如上类推}
+>>> make-immutable-hashalw 􏾆^ @elem{如上类推}
+>>> make-immutable-hasheqv 􏾅^ @elem{如上类推}
+>>> make-immutable-hasheq 􏾄^ @elem{如上类推}
 
->>> make-weak-hash 􏾏^ @elem{@racket[􏿳]转换成@racket[􏾏]}
->>> make-weak-hashalw 􏾁^ @elem{@racket[􏿳]转换成@racket[􏾁]}
->>> make-weak-hasheqv 􏾀^ @elem{@racket[􏿳]转换成@racket[􏾀]}
->>> make-weak-hasheq 􏽿^ @elem{@racket[􏿳]转换成@racket[􏽿]}
+>>> make-weak-hash 􏾏^ @elem{如上类推}
+>>> make-weak-hashalw 􏾁^ @elem{如上类推}
+>>> make-weak-hasheqv 􏾀^ @elem{如上类推}
+>>> make-weak-hasheq 􏽿^ @elem{如上类推}
+
+>>> make-ephemeron-hash 􏾈^ @elem{如上类推}
+>>> make-ephemeron-hashalw 􏽽^ @elem{如上类推}
+>>> make-ephemeron-hasheqv 􏽼^ @elem{如上类推}
+>>> make-ephemeron-hasheq 􏽻^ @elem{如上类推}
+
 
 >>> hash-set 􏿰攸
 >>> hash-set! 􏿰攸!
