@@ -92,12 +92,14 @@
 @item{@bold{@racket[􏾉]}：比较函数是@racket[侗?]。}
 ]
 }
-@item{对于“键值对”，其“键”的存储可以是：}
+@item{
+对于“键值对”，其“键”的存储可以是：
 @itemlist[
 @item{@bold{@racket[􏾎]}：刚性的；}
 @item{@bold{@racket[􏾏]}：柔性的；}
 @item{@bold{@racket[􏾈]}：类􏾧的。}
 ]
+}
 ]
 通过@racket[􏿰]创建的是@racket[􏾌?]、@racket[􏾎?]和@racket[􏾐?]都是真的“􏿰”。
 @examples[#:eval (the-eval)
@@ -107,7 +109,7 @@
 
 @section+elemref{􏿰^、􏾋^、􏾊^、􏾉^，􏾏^、􏾁^、􏾀^、􏽿^，􏾈^、􏽽^、􏽼^、􏽻^，􏾐^、􏾆^、􏾅^、􏾄^，􏿰化􏿳}
 “􏿳”和“􏿰”可以互相进行转换，“@racket[􏿳]化@racket[􏿰]”在此用@litchar{^}标记来简写。 @linebreak{}
-通过@racket[􏿰^]创建的是@racket[􏾌?]、@racket[􏾎?]和@racket[􏾑?]都为真的“􏿰”：
+通过@racket[􏿰^]创建的是@racket[􏾌?]、@racket[􏾎?]和@racket[􏾑?]都为真的“􏿰”。
 @margin-note{另见：@racket[􏾑]、@racket[􏿳]}
 @examples[#:eval (the-eval)
 (􏿰^ '((1 . 2) (3 . 4)))
@@ -128,6 +130,7 @@
 @margin-note{
 另见：@linebreak{}
 @racket[􏾐?]、@racket[􏾑?]，@linebreak{}
+@racket[􏽞?]、@racket[􏽝?]、@racket[􏽜?]、@racket[􏽛?]，@linebreak{}
 @racket[􏽮?]、@racket[􏽭?]、@racket[􏽬?]、@racket[􏽫?]，@linebreak{}
 @racket[􏽦?]、@racket[􏽥?]、@racket[􏽤?]、@racket[􏽣?]，@linebreak{}
 @racket[􏽪?]、@racket[􏽩?]、@racket[􏽨?]、@racket[􏽧?]，@linebreak{}
