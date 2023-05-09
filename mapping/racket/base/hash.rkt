@@ -36,31 +36,32 @@
 >>> make-ephemeron-hasheqv 􏽼^ @elem{如上类推}
 >>> make-ephemeron-hasheq 􏽻^ @elem{如上类推}
 
+>>> hash-set 􏿰攸 @elem{以新造数据的方式来修改某“键”对应的“值”}
+>>> hash-set* 􏿰攸^- @elem{以新造数据的方式来修改某些“键”所对应的“值”}
+>>> hash-update 􏿰攸/入 "类上，区别是入参不同"
+>>> hash-set! 􏿰􏾩 @elem{直接修改某“键”对应的“值”}
+>>> hash-set*! 􏿰􏾩^- @elem{直接修改某些“键”所对应的“值”}
+>>> hash-update! 􏿰􏾩/入 "类上，区别是入参不同"
 
->>> hash-set 􏿰攸
->>> hash-set! 􏿰攸!
-;; >>> hash-set*! 􏿱􏾩*!
+>>> hash-ref 􏿰弔 @elem{以“键值对”中“阳”位数据为基准，来索引查询“键值对”并返回“阴”位数据（未找到数据则返回默认设置值）；} ;􏽚
+>>> hash-ref-key 􏿰􏽙 @elem{以“键值对”中“阳”位数据为基准，来索引查询“键值对”并返回“阳”位数据；} ;𦙨
+;; >>> hash-ref-key 􏿰弔日 @elem{以“键值对”中“阴”位数据为基准，来索引查询“阳”位数据并返回；} ;𦙨
 
->>> hash-ref 􏿱抇 @elem{对于每一个@racket[􏿱]，以其“明”中“阳”位数据为基准，来索引查询“阴”位数据并返回；}
->>> hash-ref-key 􏿱抈 @elem{对于每一个@racket[􏿱]，以其“明”中“阴”位数据为基准，来索引查询“阳”位数据并返回；}
+>>> hash-ref! 􏿰𫼛 @elem{以“键值对”中“阳”位数据为基准，来索引查询“键值对”并返回“阴”位数据（未找到数据则直接修改原数据增加新“键值对”）；}
+>>> hash-has-key? 􏿰日? @elem{是否存在某“键”}
 
->>> hash-ref! 􏿱抇/􏾩!
->>> hash-has-key? 􏿱抇?
+>>> hash-remove 􏿰􏾘 @elem{以新造数据的方式来删除某“键”和其对应的“值”}
+>>> hash-remove! 􏿰􏽘 @elem{直接删除某“键”和其对应的“值”}
 
->>> hash-update 􏿱􏾩/入
->>> hash-update! 􏿱􏾩!/入
+>>> hash-clear 􏿰𠛮 @elem{以新造数据的方式来删除全部“键”和其对应的“值”}
+>>> hash-clear! 􏿰􏽗 @elem{直接删除全部“键”和其对应的“值”}
 
->>> hash-remove! 􏿱删!
->>> hash-remove 􏿱删
-
->>> hash-clear! 􏿱清!
->>> hash-clear 􏿱清
->>> hash-copy-clear 􏿱清/复制
+>>> hash-copy-clear 𠛮空􏿰 @elem{以删除全部“键”和其对应的“值”的方式新造空数据}
 
 >>> hash-map 􏿰佫
 
->>> hash-keys 􏿱->日􏿴
->>> hash-values 􏿱->月􏿴
+>>> hash-keys 􏿰阳 @elem{返回􏿰中所有键值对的“键”组成的@elem{􏿴}}
+>>> hash-values 􏿰阴 @elem{返回􏿰中所有键值对的“值”组成的@elem{􏿴}}
 
 >>> hash->list 􏿰化􏿳
 

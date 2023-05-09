@@ -46,6 +46,18 @@
                @elem{是刚性或柔性的}
                @elem{@racket[􏾎?]、@racket[􏾏?]}
                )
+               (list
+               @elem{@litchar{扌}}
+               @elem{指示修改方式}
+               @elem{修改了原始数据而非另新造数据}
+               @elem{@racket[􏿰􏾩]、@racket[􏿰𫼛]}
+               )
+               (list
+               @elem{@litchar{^-}}
+               @elem{指示入参}
+               @elem{入参数据以同样的方式、不同内容的多次出现}
+               @elem{@racket[􏿰􏾩^-]、@racket[􏾩^-]}
+               )
          )
          ]
 
@@ -80,7 +92,7 @@
 @bold{是否可以增加、修改、删除“键值对”}，即“􏿰”的内容是否可以被改变：
 @itemlist[
 @item{@bold{@racket[􏾐]}：内容不可改变的“􏿰”，也称“固􏿰”；}
-@item{@bold{@racket[􏾑]}：内容可改变的“􏿰”，也称“易􏿰”（以@litchar{!}结尾的例程只能作用在“易􏿰”上）。}
+@item{@bold{@racket[􏾑]}：内容可改变的“􏿰”，也称“易􏿰”（@litchar{扌}偏旁相关的例程或以@litchar{!}结尾的例程只能作用在“易􏿰”上）。}
 ]
 }
 @item{
@@ -108,7 +120,7 @@
 ]
 
 @section+elemref{􏿰^、􏾋^、􏾊^、􏾉^，􏾏^、􏾁^、􏾀^、􏽿^，􏾈^、􏽽^、􏽼^、􏽻^，􏾐^、􏾆^、􏾅^、􏾄^，􏿰化􏿳}
-“􏿳”和“􏿰”可以互相进行转换，“@racket[􏿳]化@racket[􏿰]”在此用@litchar{^}标记来简写。 @linebreak{}
+“􏿳”和“􏿰”可以互相进行转换，@litchar{􏿳化􏿰}在此用@litchar{^}标记来简写。 @linebreak{}
 通过@racket[􏿰^]创建的是@racket[􏾌?]、@racket[􏾎?]和@racket[􏾑?]都为真的“􏿰”。
 @margin-note{另见：@racket[􏾑]、@racket[􏿳]}
 @examples[#:eval (the-eval)
@@ -154,30 +166,75 @@
 ]
 
 
-@section+elemref{􏿱抇、􏿱抈}
-对于@racket[􏿱]中的“键值对”，因其是类似于一种@racket[双]的结构而存在的，所以也特别的在此被称之为“明”（@racket[阴]字和@racket[阳]字各取右边偏旁组成的字）。进而：
-@itemlist[
-@item{@racket[􏿱抇]：表示对于每一个􏿱，以其“明”中“阳”位数据为基准，来索引查询“阴”位数据并返回；}
-@item{@racket[􏿱抈]：表示对于每一个􏿱，以其“明”中“阴”位数据为基准，来索引查询“阳”位数据并返回。}
-]
-
+@; @section+elemref{􏿰􏽚、􏿰𦙨}
+@section+elemref{􏿰弔、􏿰𫼛，􏿰􏽙，􏿰􏾘、􏿰􏽘，􏿰阳、􏿰阴，􏿰日?}
 @margin-note{
-@bold{@litchar{抇}为新造字}
+@bold{@litchar{𫼛}为古活字} @linebreak{}
+@bold{@litchar{􏽙}为新造字}
+@bold{@litchar{􏾘}为新造字}
+@bold{@litchar{􏽘}为新造字}
+@; @bold{@litchar{􏽚}为新造字} @linebreak{}
+@; @bold{@litchar{𦙨}为古活字}
 @itemlist[
-@item{“@litchar{扌}”有“出参数据结构是进参数据结构中的某一个元素”的含义；}
-@item{“@litchar{日}”是@racket{阳}的意思。}
-]
-@bold{@litchar{抈}为新造字}
-@itemlist[
-@item{“@litchar{扌}”有“出参数据结构是进参数据结构中的某一个元素”的含义；}
-@item{“@litchar{月}”是@racket{阴}的意思。}
+@; @item{@litchar{日}：阳，见@racket[阳]；}
+@; @item{@litchar{月}：阴，见@racket[阴]；}
+@item{@litchar{日}：“键值对”的“键”（@racket[双]的@racket[阳]）；}
+@item{@litchar{弔}：索引、查询（见@racket[弔]）；}
 ]
 }
-
-
+对于@racket[􏿰]中的“键值对”，因其类于@racket[双]，故在此也称为“明”（@racket[阳]+@racket[阴]）。进而，“键值对”的“键”称为“日”，“值”称为“月”。
+@; @itemlist[
+@; @item{@racket[􏿰􏽚]：表示对于每一个“􏿰”，以其“明”中“阳”位数据为基准，来索引查询“阴”位数据并返回；}
+@; @item{@racket[􏿰𦙨]：表示对于每一个“􏿰”，以其“明”中“阴”位数据为基准，来索引查询“阳”位数据并返回。}
+@; ]
 @examples[#:eval (the-eval)
-(􏿱抇 (􏿱 'a "apple" 'b "banana" 'c "cat" 'd "dog") 'b)
-(􏿱抈 (􏿱 'a "apple" 'b "banana" 'c "cat" 'd "dog") "cat")
+@; (􏿰𦙨 (􏿰 'a "apple" 'b "banana" 'c "cat" 'd "dog") "cat")
+(􏿰弔 (􏿰 'a "apple" 'b "banana") 'b)
+(􏿰弔 (􏿰 'a "apple" 'b "banana") 'b "cat")
+(􏿰弔 (􏿰 'a "apple" 'b "banana") 'c "cat")
+(􏿰􏽙 (􏿰 'a "apple" 'b "banana") 'b)
+(􏿰􏽙 (􏿰 'a "apple" 'b "banana") 'b "cat")
+(􏿰􏽙 (􏿰 'a "apple" 'b "banana") 'c "cat")
+(􏿰日? (􏿰 'a "apple" 'b "banana") 'a)
+(􏿰􏾘 (􏿰 'a "apple" 'b "banana") 'a)
+(􏿰阳 (􏿰 'a "apple" 'b "banana"))
+(􏿰阴 (􏿰 'a "apple" 'b "banana"))
+]
+@examples[#:eval (the-eval)
+(名 h (􏾑 'a "apple" 'b "banana"))
+(􏿰𫼛 h 'c "cat")
+h
+(􏿰􏽘 h 'a)
+h
+]
+
+
+@section+elemref{􏿰攸、􏿰攸^-，􏿰􏾩、􏿰􏾩^-，􏿰攸/入、􏿰􏾩/入}
+@margin-note{参见：@racket[攸]}
+@examples[#:eval (the-eval)
+(􏿰攸 (􏿰 'a "apple" 'b "banana") 'b "ba")
+(􏿰攸^- (􏿰 'a "apple" 'b "banana") 'a "ap" 'b "ba")
+(􏿰攸/入 (􏿰 'a "apple" 'b "banana" 'c 1) 'c 加一)
+
+(名 h (􏾑 'a "apple" 'b "banana"))
+(􏿰􏾩^- h 'a "ap" 'b "ba")
+h
+]
+
+
+@section+elemref{􏿰𠛮、􏿰􏽗}
+@margin-note{
+@bold{@litchar{𠛮}为刚古活字}
+
+@itemlist[
+@item{@litchar{刂}：删除；}
+]
+}
+@examples[#:eval (the-eval)
+(􏿰𠛮 (􏿰 'a "apple" 'b "banana"))
+(名 h (􏾑 'a "apple" 'b "banana"))
+(􏿰􏽗 h)
+h
 ]
 
 
