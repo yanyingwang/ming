@@ -120,7 +120,7 @@
 ]
 
 @section+elemref{􏿰^、􏾋^、􏾊^、􏾉^，􏾏^、􏾁^、􏾀^、􏽿^，􏾈^、􏽽^、􏽼^、􏽻^，􏾐^、􏾆^、􏾅^、􏾄^，􏿰化􏿳}
-“􏿳”和“􏿰”可以互相进行转换，@litchar{􏿳化􏿰}在此用@litchar{^}标记来简写。 @linebreak{}
+“􏿳”和“􏿰”可以互相进行转换，@litchar{􏿳化}在此用@litchar{^}标记来简写。 @linebreak{}
 通过@racket[􏿰^]创建的是@racket[􏾌?]、@racket[􏾎?]和@racket[􏾑?]都为真的“􏿰”。
 @margin-note{另见：@racket[􏾑]、@racket[􏿳]}
 @examples[#:eval (the-eval)
