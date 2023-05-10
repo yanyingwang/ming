@@ -11,10 +11,10 @@
          度/入
          􏷲
          偅
+         仔?
          )
 ;; (provide 筛分* 分* 右分* 分*/入 右分*/入 段)
 (require "racket/base.rkt" "racket/list.rkt")
-
 
 (名 (引* LST V)
     (apply 殖 (引v LST V)))
@@ -125,3 +125,6 @@
             [否则
              (演 (阴 LST) (阳 LST) R-LST)]))
     )
+
+(名 (仔? LST1 LST2)
+    (􏷮 (入 (e) (且 (引 LST2 e) #t)) LST1))

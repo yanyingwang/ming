@@ -16,7 +16,7 @@
 @title[#:tag "pairs-and-lists"]{双和􏿴}
 @margin-note{另见名扩展库：@secref["ming-list"]}
 
-@section[#:tag "rules"]{例程命名规则}
+@section[#:tag "list-rules"]{例程命名规则}
 除总@secref["naming-rules"]外，另有：
 
 @tabular[@;#:sep @hspace[0]
@@ -28,7 +28,7 @@
                @elem{左偏旁@litchar{亻}}
                "相似集（类型相同且元素相似）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
-               @elem{@racket[伄]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾜]、@racket[􏾛]、@racket[偅]、@racket[𠆯]、@racket[􏷹]}
+               @elem{@racket[伄]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾜]、@racket[􏾛]、@racket[偅]、@racket[𠆯]、@racket[􏷹]、@racket[仔?]}
                )
                (list
                @elem{右偏旁@litchar{阝}}
@@ -164,7 +164,7 @@
 @bold{@litchar{𥸬}为古活字}
 @itemlist[
 @item{@litchar{米}：（@litchar{数}的简写）数字；}
-@item{@litchar{阝}、@litchar{􏿴}，见：@secref["rules"]。}
+@item{@litchar{阝}、@litchar{􏿴}，见：@secref["list-rules"]。}
 ]
 }
 @examples[#:eval (the-eval)
@@ -290,7 +290,7 @@
 @itemlist[
 @item{@litchar{左}：从左；}
 @item{@litchar{右}：从右；}
-@item{@litchar{阝}、@litchar{刂}见：@secref["rules"]。}
+@item{@litchar{阝}、@litchar{刂}见：@secref["list-rules"]。}
 ]
 }
 @margin-note{另见：@racket[𬩵]}
@@ -316,7 +316,7 @@
 @bold{@litchar{䢼}、@litchar{􏷳}为新造字}
 @itemlist[
 @item{@litchar{共}：共同、共有；}
-@item{@litchar{阝}、@litchar{刂}，见：@secref["rules"]。}
+@item{@litchar{阝}、@litchar{刂}，见：@secref["list-rules"]。}
 ]
 }
 @examples[#:eval (the-eval)
@@ -339,7 +339,7 @@
 @item{@litchar{扁}：扁平；}
 @item{@litchar{糸}：乱（@litchar{紊}去掉声旁，@litchar{紊}是“乱”的意思（故有成语“有条不紊”））；}
 @item{@litchar{重}：重复之元素；}
-@item{@litchar{亻}、@litchar{刂}，见：@secref["rules"]。}
+@item{@litchar{亻}、@litchar{刂}，见：@secref["list-rules"]。}
 ]
 }
 
@@ -364,7 +364,7 @@
 @itemlist[
 @item{@litchar{屰}：倒序（通@litchar{逆}，甲骨文、金文是“一个倒立的人”）；}
 @item{@litchar{川}：理顺（类比@litchar{驯}、@litchar{训}而得造）。}
-@item{@litchar{亻}，见：@secref["rules"]。}
+@item{@litchar{亻}，见：@secref["list-rules"]。}
 ]
 }
 @examples[#:eval (the-eval)
@@ -383,14 +383,14 @@
 @itemlist[
 @item{@litchar{寻}表意“寻找”；}
 @item{@litchar{日}偏旁表示“取@racket[阳]”之意。}
-@item{@litchar{亻}、@litchar{刂}，见：@secref["rules"]。}
+@item{@litchar{亻}、@litchar{刂}，见：@secref["list-rules"]。}
 ]
 }
 @; @margin-note{
 @; @bold{“@racket[刈]”为古活字}
 @; @itemlist[
 @; @item{@litchar{㐅}表意，“删除”的意思；}
-@; @item{@litchar{刂}见：@secref["rules"]。}
+@; @item{@litchar{刂}见：@secref["list-rules"]。}
 @; ]
 @; }
 @margin-note{另见：@racket[􏷲]，@racket[􏾘]}
@@ -412,7 +412,7 @@
 }
 @itemlist[
 @item{@litchar{查}：查询；}
-@item{@litchar{亻}、@litchar{刂}，见：@secref["rules"]。}
+@item{@litchar{亻}、@litchar{刂}，见：@secref["list-rules"]。}
 ]
 }
 @margin-note{另见：@racket[度]、@racket[度/入]}
@@ -433,8 +433,8 @@
 @bold{@litchar{垎}为活用字}
 @itemlist[
 @item{@litchar{各}：表意，各个元素依次；}
-@item{@litchar{亻}，见：@secref["rules"]；}
-@item{@litchar{土}，表意，构建。见：@secref["rules"]；}
+@item{@litchar{亻}，见：@secref["list-rules"]；}
+@item{@litchar{土}，表意，构建。见：@secref["list-rules"]；}
 @item{@litchar{且}：见@racket[且]；}
 @item{@litchar{或}：见@racket[或]；}
 ]

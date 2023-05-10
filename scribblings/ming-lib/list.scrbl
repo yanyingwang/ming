@@ -136,3 +136,19 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 ]
 }
 
+@defproc[(仔? [LST1 􏿴?] [LST2 􏿴?])
+          boolean?]{
+@racket[LST1]是否是@racket[LST2]的子集。
+@margin-note{
+@bold{@litchar{仔}为活用字}
+@itemlist[
+@item{@litchar{子}：子集；}
+@item{@litchar{亻}：见@secref["list-rules"]}
+]
+}
+@examples[#:eval (the-eval)
+(仔? '(a b) '(a b c d e f g))
+(仔? '(a e) '(a b c d e f g))
+(仔? '(a z) '(a b c d e f g))
+]
+}

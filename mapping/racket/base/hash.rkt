@@ -2,9 +2,9 @@
 
 
 >>> hash 􏿰 @elem{创建@racket[􏾌]}
->>> hashalw 􏾋 @elem{类上，不过键的唯一性是通过@racket[􏾗?]确立的} ; 􏾱􏿱
->>> hasheqv 􏾊 @elem{类上，不过键的唯一性是通过@racket[􏾃?]确立的}; 􏾪􏿱 􏾰􏿱 􏾭 􏾫
->>> hasheq 􏾉 @elem{类上，不过键的唯一性是通过@racket[侗?]确立的}; 􏾯􏿱
+>>> hashalw 􏾋 @elem{类上，不过键的唯一性是通过@racket[􏾗?]确立的} ; 􏾱􏿰
+>>> hasheqv 􏾊 @elem{类上，不过键的唯一性是通过@racket[􏾃?]确立的}; 􏾪􏿰 􏾰􏿰 􏾭 􏾫
+>>> hasheq 􏾉 @elem{类上，不过键的唯一性是通过@racket[侗?]确立的}; 􏾯􏿰
 
 >>> hash? 􏿰? @elem{是否是@racket[􏾌]、@racket[􏾋]、@racket[􏾊]、@racket[􏾉]的任一种}
 >>> hash-equal? 􏾌? @elem{是否是@racket[􏾌]}
@@ -44,34 +44,37 @@
 >>> hash-update! 􏿰􏾩/入 "类上，区别是入参不同"
 
 >>> hash-ref 􏿰弔 @elem{以“键值对”中“阳”位数据为基准，来索引查询“键值对”并返回“阴”位数据（未找到数据则返回默认设置值）；} ;􏽚
->>> hash-ref-key 􏿰􏽙 @elem{以“键值对”中“阳”位数据为基准，来索引查询“键值对”并返回“阳”位数据；} ;𦙨
+>>> hash-ref-key 􏿰弔日 @elem{以“键值对”中“阳”位数据为基准，来索引查询“键值对”并返回“阳”位数据；} ;𦙨 􏽙
 ;; >>> hash-ref-key 􏿰弔日 @elem{以“键值对”中“阴”位数据为基准，来索引查询“阳”位数据并返回；} ;𦙨
 
 >>> hash-ref! 􏿰𫼛 @elem{以“键值对”中“阳”位数据为基准，来索引查询“键值对”并返回“阴”位数据（未找到数据则直接修改原数据增加新“键值对”）；}
 >>> hash-has-key? 􏿰日? @elem{是否存在某“键”}
 
 >>> hash-remove 􏿰􏾘 @elem{以新造数据的方式来删除某“键”和其对应的“值”}
->>> hash-remove! 􏿰􏽘 @elem{直接删除某“键”和其对应的“值”}
+>>> hash-remove! 􏿰􏾘! @elem{直接删除某“键”和其对应的“值”}
 
 >>> hash-clear 􏿰𠛮 @elem{以新造数据的方式来删除全部“键”和其对应的“值”}
->>> hash-clear! 􏿰􏽗 @elem{直接删除全部“键”和其对应的“值”}
+>>> hash-clear! 􏿰𠛮! @elem{直接删除全部“键”和其对应的“值”}
 
->>> hash-copy-clear 𠛮空􏿰 @elem{以删除全部“键”和其对应的“值”的方式新造空数据}
+>>> hash-copy-clear 𠛮􏿰 @elem{以删除全部“键”和其对应的“值”的方式新造空数据}
 
->>> hash-map 􏿰佫
+>>> hash-map 􏿰􏽖
+>>> hash-map/copy 􏿰佫
 
 >>> hash-keys 􏿰阳 @elem{返回􏿰中所有键值对的“键”组成的@elem{􏿴}}
 >>> hash-values 􏿰阴 @elem{返回􏿰中所有键值对的“值”组成的@elem{􏿴}}
 
 >>> hash->list 􏿰化􏿳
 
->>> hash-keys-subset? 􏿱键􏿴?/共
->>> hash-for-each 􏿱各
->>> hash-count 􏿱度
->>> hash-iterate-first 􏿱迭首
->>> hash-iterate-next 􏿱迭继
->>> hash-iterate-key 􏿱迭键
->>> hash-iterate-value 􏿱迭值
->>> hash-iterate-pair 􏿱迭双
->>> hash-iterate-key+value 􏿱迭键值
->>> hash-copy 􏿱复制
+>>> hash-keys-subset? 􏿰阳仔? @elem{前者是否是后者的@racket[阳]的子集}
+>>> hash-for-each 􏿰各
+>>> hash-count 􏿰度
+>>> hash-empty? 􏿰空?
+
+>>> hash-iterate-first 􏿰引
+>>> hash-iterate-next 􏿰继引
+>>> hash-iterate-key 􏿰引日
+>>> hash-iterate-value 􏿰引月
+>>> hash-iterate-pair 􏿰引明
+>>> hash-iterate-key+value 􏿰引日月
+>>> hash-copy 􏿰􏽕 @elem{复制原数据成新数据并返回之} ; 袭 抄 仿 摹 模 拟 似 抄

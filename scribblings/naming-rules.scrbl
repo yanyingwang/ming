@@ -132,7 +132,7 @@
                @elem{以@litchar{化}结尾}
                @elem{类型转换}
                @elem{出参数据内容不变而类型作小幅度改变}
-               @elem{@racket[􏿲定化]}
+               @elem{@racket[􏿲固化]}
                )
 
                (list

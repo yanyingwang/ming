@@ -15,7 +15,7 @@
 @title[#:tag "hash"]{􏿰}
 @margin-note{另见名扩展库：@secref["ming-hash"]}
 
-@section[#:tag "rules"]{例程命名规则}
+@section[#:tag "hash-rules"]{例程命名规则}
 除总@secref["naming-rules"]外，另有：
 @tabular[@;#:sep @hspace[0]
          #:style 'boxed
@@ -47,16 +47,34 @@
                @elem{@racket[􏾎?]、@racket[􏾏?]}
                )
                (list
-               @elem{@litchar{扌}}
+               @elem{左偏旁@litchar{亻}}
+               "相似集（类型相同且元素相似）"
+               @elem{出参数据与进参数据相比，类型相同且内容类似}
+               @elem{@racket[􏿰攸]、@racket[􏿰􏽕]}
+               )
+               (list
+               @elem{右偏旁@litchar{刂}}
+               "缺失集（删除、移走、去掉部分元素之后的集合）"
+               @elem{出参数据与进参数据相比，类型相同且前者是后者的子集}
+               @elem{@racket[􏿰􏾘]、@racket[􏿰𠛮]}
+               )
+               (list
+               @elem{@litchar{扌}偏旁}
                @elem{指示修改方式}
-               @elem{修改了原始数据而非另新造数据}
+               @elem{有触发修改原始数据的可能性}
                @elem{@racket[􏿰􏾩]、@racket[􏿰𫼛]}
+               )
+               (list
+               @elem{以@litchar{!}结尾}
+               @elem{指示修改方式}
+               @elem{会直接修改原始数据而非另造新数据作输出}
+               @elem{@racket[􏿰􏾘!]、@racket[􏿰𠛮!]}
                )
                (list
                @elem{@litchar{^-}}
                @elem{指示入参}
-               @elem{入参数据以同样的方式、不同内容的多次出现}
-               @elem{@racket[􏿰􏾩^-]、@racket[􏾩^-]}
+               @elem{入参数据以相同方式多次出现}
+               @elem{@racket[􏿰􏾩^-]}
                )
          )
          ]
@@ -167,18 +185,17 @@
 
 
 @; @section+elemref{􏿰􏽚、􏿰𦙨}
-@section+elemref{􏿰弔、􏿰𫼛，􏿰􏽙，􏿰􏾘、􏿰􏽘，􏿰阳、􏿰阴，􏿰日?}
+@section+elemref{􏿰弔、􏿰𫼛，􏿰弔日，􏿰􏾘、􏿰􏾘!，􏿰阳、􏿰阴，􏿰日?}
 @margin-note{
 @bold{@litchar{𫼛}为古活字} @linebreak{}
-@bold{@litchar{􏽙}为新造字}
+@; @bold{@litchar{􏽙}为新造字}
 @bold{@litchar{􏾘}为新造字}
-@bold{@litchar{􏽘}为新造字}
+@; @bold{@litchar{􏽘}为新造字}
 @; @bold{@litchar{􏽚}为新造字} @linebreak{}
 @; @bold{@litchar{𦙨}为古活字}
 @itemlist[
-@; @item{@litchar{日}：阳，见@racket[阳]；}
-@; @item{@litchar{月}：阴，见@racket[阴]；}
 @item{@litchar{日}：“键值对”的“键”（@racket[双]的@racket[阳]）；}
+@; @item{@litchar{月}：阴，见@racket[阴]；}
 @item{@litchar{弔}：索引、查询（见@racket[弔]）；}
 ]
 }
@@ -192,9 +209,9 @@
 (􏿰弔 (􏿰 'a "apple" 'b "banana") 'b)
 (􏿰弔 (􏿰 'a "apple" 'b "banana") 'b "cat")
 (􏿰弔 (􏿰 'a "apple" 'b "banana") 'c "cat")
-(􏿰􏽙 (􏿰 'a "apple" 'b "banana") 'b)
-(􏿰􏽙 (􏿰 'a "apple" 'b "banana") 'b "cat")
-(􏿰􏽙 (􏿰 'a "apple" 'b "banana") 'c "cat")
+(􏿰弔日 (􏿰 'a "apple" 'b "banana") 'b)
+(􏿰弔日 (􏿰 'a "apple" 'b "banana") 'b "cat")
+(􏿰弔日 (􏿰 'a "apple" 'b "banana") 'c "cat")
 (􏿰日? (􏿰 'a "apple" 'b "banana") 'a)
 (􏿰􏾘 (􏿰 'a "apple" 'b "banana") 'a)
 (􏿰阳 (􏿰 'a "apple" 'b "banana"))
@@ -202,12 +219,13 @@
 ]
 @examples[#:eval (the-eval)
 (名 h (􏾑 'a "apple" 'b "banana"))
+(􏿰𫼛 h 'b "cat")
+h
 (􏿰𫼛 h 'c "cat")
 h
-(􏿰􏽘 h 'a)
+(􏿰􏾘! h 'a)
 h
 ]
-
 
 @section+elemref{􏿰攸、􏿰攸^-，􏿰􏾩、􏿰􏾩^-，􏿰攸/入、􏿰􏾩/入}
 @margin-note{参见：@racket[攸]}
@@ -222,10 +240,9 @@ h
 ]
 
 
-@section+elemref{􏿰𠛮、􏿰􏽗}
+@section+elemref{􏿰𠛮、􏿰𠛮!，𠛮􏿰}
 @margin-note{
-@bold{@litchar{𠛮}为刚古活字}
-
+@bold{@litchar{𠛮}为古活字}
 @itemlist[
 @item{@litchar{刂}：删除；}
 ]
@@ -233,8 +250,59 @@ h
 @examples[#:eval (the-eval)
 (􏿰𠛮 (􏿰 'a "apple" 'b "banana"))
 (名 h (􏾑 'a "apple" 'b "banana"))
-(􏿰􏽗 h)
+(􏿰𠛮! h)
 h
+(𠛮􏿰 (􏿰 'a "apple" 'b "banana"))
+]
+
+@section+elemref{􏿰各、􏿰􏽖、􏿰佫}
+@margin-note{
+@bold{@litchar{􏽖}为新造字}
+@itemlist[
+@item{@litchar{又}：@litchar{􏿴}的缩写；}
+@item{@litchar{佫}：参见：@racket[佫]。}
+]
+}
+@examples[#:eval (the-eval)
+(􏿰各 (􏿰 'a "apple" 'b "banana") (入 (K V) (示 K) (示 V)))
+(􏿰􏽖 (􏿰 'a "apple" 'b "banana") (入 (K V) (􏿴 V K)))
+(􏿰佫 (􏿰 'a "apple" 'b "banana") (入 (K V) (殖 V K)))
+]
+
+@section+elemref{􏿰阳仔?}
+@margin-note{
+另见：@racket[􏿰阳]
+}
+@margin-note{
+参见：@racket[仔?]
+}
+@examples[#:eval (the-eval)
+(􏿰阳仔? (􏿰 'a "aa" 'b "bb") (􏿰 'a "aaa" 'b "bbb" 'c "ccc"))
+(􏿰阳仔? (􏿰 'a "aa" 'c "cc") (􏿰 'a "aaa" 'b "bbb" 'c "ccc"))
+(􏿰阳仔? (􏿰 'a "aa" 'd "dd") (􏿰 'a "aaa" 'b "bbb" 'c "ccc"))
+(􏿰阳仔? (􏿰 'b "bb") (􏿰 'a "aaa" 'b "bbb" 'c "ccc"))
+]
+
+@section+elemref{􏿰度、􏿰空?}
+@margin-note{
+参见：@racket[度]、@racket[空?]
+}
+@examples[#:eval (the-eval)
+(􏿰度 (􏿰 'a "aa" 'b "bb"))
+(􏿰空? (􏿰 'a "aa" 'b "bb"))
+(􏿰空? (􏿰))
+]
+
+@section+elemref{􏿰􏽕}
+@margin-note{
+@bold{@litchar{􏽕}为新造字}
+@itemlist[
+@item{@litchar{复}：复制；}
+@item{@litchar{亻}，见：@secref["hash-rules"]。}
+]
+}
+@examples[#:eval (the-eval)
+(􏿰􏽕 (􏿰 'a "aa" 'b "bb"))
 ]
 
 
