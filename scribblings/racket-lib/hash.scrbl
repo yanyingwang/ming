@@ -61,7 +61,7 @@
                (list
                @elem{@litchar{扌}偏旁}
                @elem{指示修改方式}
-               @elem{有触发修改原始数据的可能性}
+               @elem{会直接修改原始数据而非另造新数据作输出，并且出参相较无litchar{扌}时有本质上的区别}
                @elem{@racket[􏿰􏾩]、@racket[􏿰𫼛]}
                )
                (list
@@ -95,8 +95,8 @@
 ]
 @bold{@litchar{􏾐}}、@bold{@litchar{􏾑}}、@bold{@litchar{􏾎}}、@bold{@litchar{􏾏}、@bold{@litchar{􏾈}}为新造字}
 @itemlist[
-@item{@litchar{山}：内容不可变的（因为“山”是稳定的，见：@racket[􏾐?]）；}
-@item{@litchar{氵}：内容可变的（因为“水”是易变的，见：@racket[􏾑?]）；}
+@item{@litchar{山}：稳定的、内容不变的（因为“山”是稳定的，见：@racket[􏾐?]）；}
+@item{@litchar{氵}：易动的、内容可变的（因为“水”是易变的，见：@racket[􏾑?]）；}
 @item{@litchar{⺮}：刚韧的（因为“竹”是刚韧的，见：@racket[􏾎?]）；}
 @item{@litchar{艹}：柔弱的（因为“艸”（草）是柔弱的，见：@racket[􏾏?]）；}
 @item{@litchar{艹}（中间加@litchar{丨}）：见@racket[􏾈?]。}
@@ -185,9 +185,9 @@
 
 
 @; @section+elemref{􏿰􏽚、􏿰𦙨}
-@section+elemref{􏿰弔、􏿰𫼛，􏿰弔日，􏿰􏾘、􏿰􏾘!，􏿰阳、􏿰阴，􏿰日?}
+@section+elemref{􏿰弔、􏿰弔!，􏿰弔日，􏿰􏾘、􏿰􏾘!，􏿰阳、􏿰阴，􏿰日?}
 @margin-note{
-@bold{@litchar{𫼛}为古活字} @linebreak{}
+@; @bold{@litchar{𫼛}为古活字} @linebreak{}
 @; @bold{@litchar{􏽙}为新造字}
 @bold{@litchar{􏾘}为新造字}
 @; @bold{@litchar{􏽘}为新造字}
@@ -219,9 +219,9 @@
 ]
 @examples[#:eval (the-eval)
 (名 h (􏾑 'a "apple" 'b "banana"))
-(􏿰𫼛 h 'b "cat")
+(􏿰弔! h 'b "cat")
 h
-(􏿰𫼛 h 'c "cat")
+(􏿰弔! h 'c "cat")
 h
 (􏿰􏾘! h 'a)
 h

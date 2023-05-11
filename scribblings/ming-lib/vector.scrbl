@@ -17,33 +17,45 @@ Racket标准库@secref["vector"]的名语言扩展。
 @margin-note{本页所列之例程的实现代码是名语言，因此源代码有参照意义。}
 
 
-@defthing[空􏿲 􏿲?]{
-生成@racket[空]@racket[􏿲]，与@code{(􏿲)}等同。
+@; @defthing[空􏿲 􏿲?]{
+@; 生成@racket[空]@racket[􏿲]，与@code{(􏿲)}等同。
+@; @examples[#:eval (the-eval)
+@; 空􏿲
+@; (􏿲)
+@; ]
+@; }
 
+@defproc[(􏽓 [V 精确非负整数?] ...)
+􏽓?]{
+@margin-note{参见：@racket[易?]}
+@margin-note{另见：@racket[􏿲]、@racket[􏽔]}
+生成内容可以被修改的数组。
 @examples[#:eval (the-eval)
-空􏿲
-(􏿲)
-]
-}
-
-@defproc[(易􏿲 [V 精确非负整数?] ...)
-􏿲?]{
-生成@racket[易?]@racket[􏿲]。
-@examples[#:eval (the-eval)
-(易􏿲 1 2 3 4)
+(􏽓 1 2 3 4)
 ]
 }
 
 @deftogether[(
-@defproc[(易􏿲? [VEC 􏿲?])
+@defproc[(􏽓? [VEC any?])
           boolean?]
-          @defproc[(固􏿲? [VEC 􏿲?])
+          @defproc[(􏽔? [VEC any?])
           boolean?])]{
-@margin-note{参见：@racket[􏿲?]}
-是否是@racket[易􏿲]、@racket[固􏿲]。
+@margin-note{
+@itemlist[
+@item{
+@code{(􏽓? VEC)}等同于：
+@code{(且 (易? VEC) (􏿲? VEC))}
+}
+@item{
+@code{(􏽔? VEC)}等同于：
+@code{(且 (固? VEC) (􏿲? VEC))}
+}
+]
+}
+是否是@racket[􏽓]和@racket[􏽔]。
 @examples[#:eval (the-eval)
-(易􏿲? '#(1 2 3 4))
-(固􏿲? '#(1 2 3 4))
+(􏽓? '#(1 2 3 4))
+(􏽔? '#(1 2 3 4))
 ]
 }
 
@@ -69,13 +81,23 @@ Racket标准库@secref["vector"]的名语言扩展。
 }
 
 
-@defproc[(􏿲攸!/以􏾝* [VEC 􏿲?] [N 精确非负整数?] [VECC 􏿲?] [NN1 精确非负整数?] [NN2 精确非负整数?])
+@defproc[(􏿲􏾩/以􏾝* [VEC 􏿲?] [N 精确非负整数?] [VECC 􏿲?] [NN1 精确非负整数?] [NN2 精确非负整数?])
 􏿲?]{
-@margin-note{另见：@racket[􏿲攸!/以􏾝]}
+@margin-note{另见：@racket[􏿲􏾩/以􏾝]}
 @examples[#:eval (the-eval)
 (名 vec (􏿲 'a 'b 'c 'd))
 (名 vecc (􏿲 'aa 'bb 'cc 'dd))
-(􏿲攸!/以􏾝* vec 0 vecc 1 3)
+(􏿲􏾩/以􏾝* vec 0 vecc 1 3)
+vec
+]
+}
+
+@defproc[(易? [V any?]) boolean?]{
+@racket[固?]的反义。
+@examples[#:eval (the-eval)
+(名 vec (􏿲 'a 'b 'c 'd))
+(名 vecc (􏿲 'aa 'bb 'cc 'dd))
+(􏿲􏾩/以􏾝* vec 0 vecc 1 3)
 vec
 ]
 }

@@ -2,9 +2,9 @@
 
 
 >>> vector-empty? 空􏿲? @elem{􏿲是否是空}
->>> vector-set*! 􏿲攸-*!
+>>> vector-set*! 􏿲􏾩^-
 >>> vector-map 􏿲佫
->>> vector-map! 􏿲佫!
+>>> vector-map! 􏿲挌
 >>> vector-append 贯􏿲 ;; 土􏿲 土􏿴
 >>> vector-take 􏿲􏾺
 >>> vector-take-right 􏿲𨚞
@@ -19,7 +19,7 @@
 >>> vector-argmin 􏿲佫之最小数
 >>> vector-argmax 􏿲佫之最大数
 >>> vector-member 􏿲引
->>> vector-memv 􏿲引/粡
->>> vector-memq 􏿲引/侗
+>>> vector-memv 􏿲引/􏾗
+>>> vector-memq 􏿲引/􏾃
 >>> vector-sort 􏿲𠆯 ;􏿲􏿀
->>> vector-sort! 􏿲𠆯!
+>>> vector-sort! 􏿲􏽒
