@@ -17,7 +17,7 @@
 @title[#:tag "box-weak-box-ephemeron"]{矢、䒨、􏾧}
 
 @section+elemref{矢?，矢，𪭨，􏽅}
-“矢”可以被看成是只含有一个元素的@racket[􏿲]的数据结构。
+“矢”（@secref["boxes" #:doc '(lib "scribblings/reference/reference.scrbl")]）可以被看成是只含有一个元素的@racket[􏿲]的数据结构。
 
 @margin-note{
 @bold{@litchar{矢}为活用字}
