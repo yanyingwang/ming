@@ -16,7 +16,7 @@
 
 @title[#:tag "box-weak-box-ephemeron"]{矢、䒨、􏾧}
 
-@section+elemref{矢?，矢、固矢，􏾢、𥎪!}
+@section+elemref{矢?，矢，𪭨，􏽅}
 “矢”可以被看成是只含有一个元素的@racket[􏿲]的数据结构。
 
 @margin-note{
@@ -25,29 +25,29 @@
 @item{取自@racket[􏿲]的偏旁以表示是类似只含有一个元素的@racket[􏿲]的数据结构。}
 ]
 
-@bold{@litchar{􏾢}为新造字}
+@bold{@litchar{􏽅}为新造字}
 @itemlist[
 @item{意为返回@racket[矢]的内部值。}
 ]
 
-@bold{@litchar{𥎪}为新造字}
+@bold{@litchar{𪭨}为新造字}
 @itemlist[
 @item{意为修改@racket[矢]的内部值为一个新值。}
+@item{@litchar{扌}表示直接修改了数据。}
 ]
 }
 
 @examples[#:eval (the-eval)
-(固矢 "val")
-(固? (固矢 "val"))
+(㞺 "val")
+(固? (㞺 "val"))
 (矢 "val")
-(􏾢 (矢 "val"))
-(令 ([某 (矢 "val")])
-  (𥎪! 某 "value")
-  某
-)
+(􏽅 (矢 "val"))
+(名 b (矢 "val"))
+(𪭨 b "value")
+b
 ]
 
-@section+elemref{䒨?、䒨、􏾡}
+@section+elemref{䒨?、䒨、􏽅}
 “䒨”（@secref["weakbox" #:doc '(lib "scribblings/reference/reference.scrbl")]）是类似@racket[矢]的一种数据结构，不过采用@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "weak references"]。
 
 @margin-note{
@@ -57,21 +57,20 @@
 @item{整体上是在@racket[矢]的基础上增加了偏旁，因为是与之类似的数据结构。}
 
 ]
-
-@bold{@litchar{􏾡}为新造字}
-@itemlist[
-@item{意为返回@racket[䒨]的内部值。}
-]
+@; @bold{@litchar{􏾡}为新造字}
+@; @itemlist[
+@; @item{意为返回@racket[䒨]的内部值。}
+@; ]
 }
 
 @examples[#:eval (the-eval)
 (䒨 "val")
-(􏾡 (䒨 "val"))
+(䒨内 (䒨 "val"))
 ]
 
 
 
-@section+elemref{􏾧?、􏾧、􏾠}
+@section+elemref{􏾧?、􏾧、􏾧内}
 “􏾧”（@secref["ephemerons" #:doc '(lib "scribblings/reference/reference.scrbl")]）是类似@racket[䒨]的一种数据结构，不过是一种类似“键值对”的数据结构。
 
 @margin-note{
@@ -83,7 +82,7 @@
 
 @examples[#:eval (the-eval)
 (􏾧 'key "val")
-(􏾠 (􏾧 'key "val"))
+(􏾧内 (􏾧 'key "val"))
 ]
 
 @section[#:tag "vector-base"]{例程}
