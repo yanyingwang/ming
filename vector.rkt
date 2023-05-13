@@ -23,13 +23,13 @@
     (􏿲􏾝化殖 VEC))
 
 (名 (􏿲􏾝化殖* VEC N1 N2)
-    (􏿲􏾝化殖 VEC N1 (加一 N2)))
+    (􏿲􏾝化殖 VEC N1 (􏽊 N2)))
 
 (名 (􏿲􏾝* VEC N1 N2)
-    (􏿲􏾝 VEC N1 (加一 N2)))
+    (􏿲􏾝 VEC N1 (􏽊 N2)))
 
 (名 (􏿲􏾩/以􏾝* VEC N VECC NN1 NN2)
-    (􏿲􏾩/以􏾝 VEC N VECC NN1 (加一 NN2)))
+    (􏿲􏾩/以􏾝 VEC N VECC NN1 (􏽊 NN2)))
 
 
 (名 (易? V)
