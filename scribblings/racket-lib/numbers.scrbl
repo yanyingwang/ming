@@ -18,7 +18,7 @@
 
 @title[#:tag "numbers"]{数}
 
-@litchar{数}被简写为@litchar{米}，以便用单字表示所有跟其相关的概念。
+@margin-note{在跟“数字”相关的例程命名中，@litchar{数}被简写为@litchar{米}偏旁，以便用单字表示跟其相关的概念。}
 
 @section{示例}
 @examples[#:eval (the-eval)

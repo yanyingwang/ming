@@ -3,7 +3,7 @@
 >>> box 矢
 >>> box? 矢?
 >>> box-immutable 㞺 ;;固矢 ; 矢/坚
->>> unbox 􏽅
+>>> unbox 矢内
 >>> set-box! 𪭨 ; 𥎪 𥎪! ;矢攸! ; 𥎪
 
 >>> unbox* 􏽅*

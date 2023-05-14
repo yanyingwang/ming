@@ -16,7 +16,7 @@
 
 @title[#:tag "box-weak-box-ephemeron"]{矢、䒨、􏾧}
 
-@section+elemref{矢?，矢，𪭨，􏽅}
+@section+elemref{矢?，矢，㞺，𪭨，􏽅}
 “矢”（@secref["boxes" #:doc '(lib "scribblings/reference/reference.scrbl")]）可以被看成是只含有一个元素的@racket[􏿲]的数据结构。
 
 @margin-note{
@@ -41,7 +41,7 @@
 (㞺 "val")
 (固? (㞺 "val"))
 (矢 "val")
-(􏽅 (矢 "val"))
+(矢内 (矢 "val"))
 (名 b (矢 "val"))
 (𪭨 b "value")
 b

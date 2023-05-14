@@ -16,8 +16,8 @@
 >>> vector-filter 􏿲􏷹
 >>> vector-filter-not 􏿲􏷶
 >>> vector-count 􏿲􏷹度
->>> vector-argmin 􏿲佫之最小数
->>> vector-argmax 􏿲佫之最大数
+>>> vector-argmin 􏿲佫之􏽇
+>>> vector-argmax 􏿲佫之􏽈
 >>> vector-member 􏿲引
 >>> vector-memv 􏿲引/􏾗
 >>> vector-memq 􏿲引/􏾃
