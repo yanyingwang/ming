@@ -77,4 +77,4 @@
 >>> hash-iterate-value 􏿰引月
 >>> hash-iterate-pair 􏿰引明
 >>> hash-iterate-key+value 􏿰引日月
->>> hash-copy 􏿰􏽕 @elem{复制原数据成新数据并返回之} ; 袭 抄 仿 摹 模 拟 似 抄
+>>> hash-copy 􏾑化 @elem{将@racket[􏾐]转化为@racket[􏾑]} ; 袭 抄 仿 摹 模 拟 似 抄 􏿰􏽕

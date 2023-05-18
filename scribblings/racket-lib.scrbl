@@ -24,7 +24,12 @@ Racket库的名语言汉化，汉化了的Racket内部库程序应都置于此�
 @; @include-section["racket-lib/mem-man.scrbl"]
 @include-section["racket-lib/hash.scrbl"]
 @; @include-section["racket-lib/dict.scrbl"]
+@include-section["racket-lib/characters.scrbl"]
+@include-section["racket-lib/symbols.scrbl"]
+@include-section["racket-lib/keywords.scrbl"]
 @include-section["racket-lib/string.scrbl"]
+
+
 @include-section["racket-lib/single-level-data-types.scrbl"]
 @include-section["racket-lib/syntactic-forms.scrbl"]
 @include-section["racket-lib/others.scrbl"]

@@ -14,8 +14,6 @@
 @script/rainbow-delimiters*
 
 
-@script/rainbow-delimiters*
-
 @title[#:tag "numbers"]{数}
 
 @margin-note{在跟“数字”相关的例程命名中，@litchar{数}被简写为@litchar{米}偏旁，以便用单字表示跟其相关的概念。}

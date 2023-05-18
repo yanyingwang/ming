@@ -16,3 +16,4 @@
 @include-section["ming-lib/list.scrbl"]
 @include-section["ming-lib/vector.scrbl"]
 @include-section["ming-lib/hash.scrbl"]
+@include-section["ming-lib/string.scrbl"]

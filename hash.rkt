@@ -1,7 +1,7 @@
 #lang racket/base
 
 (provide 􏿳
-         􏾌 􏾑
+         􏾌 􏾑 􏾐
          􏾐? 􏾑? ; 􏾐
          􏽞? 􏽝? 􏽜? 􏽛?
          􏽮? 􏽭? 􏽬? 􏽫? ;; 􏽲? 􏽱? 􏽰? 􏽯?
@@ -19,10 +19,13 @@
             [(𥺿? I)
              (双 (双 X (阳 LST)) (演 (阴 LST) (􏽊 I) (阳 LST)))])))
 
+
 (名 (􏾌 . V-LST)
     (apply 􏿰 V-LST))
 (名 (􏾑 . V-LST)
     (􏿰^ (apply 􏿳 V-LST)))
+(名 (􏾐 . V-LST)
+    (􏾐^ (apply 􏿳 V-LST)))
 
 
 (名 (􏾐? V)

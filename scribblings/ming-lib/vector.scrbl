@@ -61,7 +61,7 @@ Racket标准库@secref["vector"]的名语言扩展。
 
 @defproc[(􏿲􏾝* [VEC 􏿲?] [N1 精确非负整数?] [N2 精确非负整数?])
 􏿲?]{
-@margin-note{另见：@racket[􏿲􏾝*]}
+@margin-note{另见：@racket[􏿲􏾝]}
 @examples[#:eval (the-eval)
 (􏿲􏾝* '#(a b c d e f) 0 2)
 ]

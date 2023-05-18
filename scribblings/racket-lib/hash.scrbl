@@ -232,7 +232,7 @@ h
 @examples[#:eval (the-eval)
 (􏿰攸 (􏿰 'a "apple" 'b "banana") 'b "ba")
 (􏿰攸^- (􏿰 'a "apple" 'b "banana") 'a "ap" 'b "ba")
-(􏿰攸/入 (􏿰 'a "apple" 'b "banana" 'c 1) 'c 加一)
+(􏿰攸/入 (􏿰 'a "apple" 'b "banana" 'c 1) 'c 􏽊)
 
 (名 h (􏾑 'a "apple" 'b "banana"))
 (􏿰􏾩^- h 'a "ap" 'b "ba")
@@ -293,16 +293,17 @@ h
 (􏿰空? (􏿰))
 ]
 
-@section+elemref{􏿰􏽕}
-@margin-note{
-@bold{@litchar{􏽕}为新造字}
-@itemlist[
-@item{@litchar{复}：复制；}
-@item{@litchar{亻}，见：@secref["hash-rules"]。}
-]
-}
+@section+elemref{􏾑化}
+@; @margin-note{
+@; @bold{@litchar{􏽕}为新造字}
+@; @itemlist[
+@; @item{@litchar{复}：复制；}
+@; @item{@litchar{亻}，见：@secref["hash-rules"]。}
+@; ]
+@; }
 @examples[#:eval (the-eval)
-(􏿰􏽕 (􏿰 'a "aa" 'b "bb"))
+(􏾐? (􏿰 'a "aa" 'b "bb"))
+(􏾐? (􏾑化 (􏿰 'a "aa" 'b "bb")))
 ]
 
 

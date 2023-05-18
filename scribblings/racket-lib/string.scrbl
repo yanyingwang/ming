@@ -1,57 +1,103 @@
 
 #lang scribble/manual
 
-@(require (for-label racket ming)
+@(require (for-label racket ming ming/list ming/vector ming/hash ming/string)
            scribble/eval
            ming/scribble
            )
 @(define the-eval
-         (make-eval-factory '(ming/racket/base ming/racket/string)))
+         (make-eval-factory '(ming/racket/base ming/racket/string ming/string)))
 
+
+@(require (file "../../private/scribble-styles/css/ming-fonts.css.rkt"))
+@css/ming-fonts
 @(require scribble-rainbow-delimiters)
 @script/rainbow-delimiters*
 
-@margin-note{另可参见：@secref["zi--wen"]。}
+@; @margin-note{另可参见：@secref["zi--wen"]。}
 
-@title[#:tag "string"]{诗}
-“诗”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "String"]）是一种数据结构，也就是通常所说的“字符串”。名语言用单字表示之称为“诗”。 @; string 连
+@title[#:tag "string"]{句}
+@margin-note{另见名扩展库：@secref["ming-string"]}
 
-诗有“易诗”和“坚诗”之分：
+
+@section+elemref{句、􏽀、􏽁，句、􏽀?、􏽁?}
+@margin-note{
+@bold{@litchar{句}为活用字} @linebreak{}
+@bold{@litchar{􏽁}为新造字} @linebreak{}
+@bold{@litchar{􏽀}为新造字}
 @itemlist[
-@item{“易诗”（“易”在这里是“易变的，可以被改变的”的意思）是一种内容可以被修改的字符串数据结构，通常很多诗相关的例程比如@racket[诗]、@racket[复诗]、@racket[诗段]等处理完原始数据之后的结果输出都是易诗；}
-@item{“坚诗”与之相反，是一种内容固定不能被修改的字符串数据结构，通过半格双引号@racket[""]创建出来的诗是“坚诗”。要注意的是，所谓的“不能被修改”很多时候会不容易被注意到，这是因为很多诗相关的例程在处理“坚诗”的时候，会新生成“易诗”并作为结果替换输出之，间接的完成了“坚诗”到“易诗”的转化。真正操作“诗”的原始数据并加以修改的例程都会以@racket[!]结尾以表警示。}
+@item{@litchar{勹}：工厂、容器、外壳；（@litchar{勹}是@litchar{丩}的增笔，有扭曲盘勾之意思）}
+@item{@litchar{口}：无实意，代表"数据内容"；}
+@item{@litchar{山}：稳定的、内容不变的（因为“山”是稳定的，见：@racket[􏽁?]）；}
+@item{@litchar{氵}：易动的、内容可变的（因为“水”是易变的，见：@racket[􏽀?]）；}
 ]
-
-@section[#:tag "string-base"]{基础例程}
+}
+@margin-note{参见：@racket[􏽔]、@racket[􏽓]}
+@margin-note{另见：@racket[勺]、@racket[勾]}
+“句”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "String"]）是一种数据结构，也就是通常所说的“字符串”，名语言用单字表示之称为“句”。 @linebreak{}
+像@racket[􏿲]和@racket[􏿰]一样，“句”按内容是否可以被修改，也可以被分为：“易句”和“固句”，简写为“@racket[􏽁]”和“@racket[􏽀]”。@racket[句]默认创建的是“@racket[􏽀]”。
 @examples[#:eval (the-eval)
-(诗 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。)
-(复诗 5 #\鹅)
-@; (名 鹅 "鹅鹅鹅，曲项向天歌。白毛浮绿水，绿掌拨清波。")
-(诗度 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。")
-(诗提 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 0)
-(令 ([某诗 (诗->易诗 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。")])
-    (行示 某诗)
-    (诗修! 某诗 1 #\白)
-    (行示 某诗))
-@; (诗改! (诗->易诗 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。") 0 #\白)
-(诗段 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 10)
-(诗段 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 10 15)
-
-(令 ([某A诗 (诗->易诗 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。")]
-     [某B诗 "大中小白黑蓝"])
-    (行示 某A诗)
-    (诗修!/以它段 某A诗 0 某B诗 2 4)
-    (行示 某A诗))
-
-(令 ([某诗 (诗->易诗 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。")])
-    (行示 某诗)
-    (诗复! 某诗 #\呱)
-    (行示 某诗))
-
-(连诗 "鹅鹅鹅" "曲项向天歌" "白毛浮绿水" "红掌拨清波")
-(诗->􏿴 "鹅鹅鹅，曲项向天歌。")
-(􏿴->诗 (􏿴 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
+(句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。)
+(句? (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
+(􏽀? (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
+(􏽁? (􏽁 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
+(􏽁? "鹅鹅鹅，曲项向天歌。")
+(句? "鹅鹅鹅，曲项向天歌。")
 ]
+
+@section+elemref{复句，序句，贯句、贯􏽁}
+@margin-note{
+参见：@racket[复􏿴]，@racket[序􏿴]，@racket[贯􏿲]。
+}
+@examples[#:eval (the-eval)
+(复句 5 #\鹅)
+(序句 5 数化字)
+(贯句 "AAA" "BBB" "CCC")
+(贯􏽁 "AAA" "BBB" "CCC")
+(􏽁? (贯句 "AAA" "BBB" "CCC"))
+(􏽁? (贯􏽁 "AAA" "BBB" "CCC"))
+]
+
+@section+elemref{句度，句弔，句􏾝}
+@margin-note{参见：@racket[弔]，@racket[度]，@racket[􏾝]}
+@margin-note{另见：@racket[句􏾝*]}
+
+
+@examples[#:eval (the-eval)
+(句度 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。")
+(句弔 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
+(句􏾝 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
+(句􏾝 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3 8)
+]
+
+@section+elemref{句􏾩，句􏾩/以􏾝}
+@margin-note{参见：@racket[􏿲􏾩]、@racket[􏿰􏾩]，@racket[􏿲􏾩/以􏾝]}
+@examples[#:eval (the-eval)
+(名 str (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
+
+(句􏾩 str 1 #\白)
+str
+
+(句􏾩/以􏾝 str 0 "ABCDEFG" 2 4)
+str
+
+(句复! str #\Z)
+str
+]
+
+@section+elemref{􏽁化，􏽀化}
+@examples[#:eval (the-eval)
+(􏽁? (􏽁化 (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。)))
+(􏽀? (􏽀化 "鹅鹅鹅，曲项向天歌。"))
+]
+
+@section+elemref{句化􏿴，􏿴化句}
+@examples[#:eval (the-eval)
+(句化􏿴 "鹅鹅鹅，曲项向天歌。")
+(􏿴化句 (􏿴 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
+]
+
+
 
 @defmapping[racket/base/string]
 
