@@ -42,10 +42,10 @@ Racket标准库@secref["string"]的名语言扩展。
 }
 
 
-@defproc[(句􏾝* [STR 句?] [N1 精确非负整数?] [N2 精确非负整数?])
+@defproc[(邭* [STR 句?] [N1 精确非负整数?] [N2 精确非负整数?])
 句?]{
-@margin-note{另见：@racket[句􏾝]}
+@margin-note{另见：@racket[邭]}
 @examples[#:eval (the-eval)
-(句􏾝* "abcdefg" 0 2)
+(邭* "abcdefg" 0 2)
 ]
 }

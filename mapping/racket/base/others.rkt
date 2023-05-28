@@ -15,7 +15,7 @@
 >>> writeln  行写
 >>> print 示
 >>> println 行示
->>> display 陈 ;; 陈 显 现 呈 示
+>>> display 陈 ;; 陈 显 现 呈 示 曰
 >>> displayln 行陈
 
 >>> values 殖 "复值的意思" ;;  値 􏾴 􏾴 𡖻 殖

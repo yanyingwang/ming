@@ -1,4 +1,3 @@
-
 #lang scribble/manual
 
 @(require (for-label racket ming ming/list ming/vector ming/hash ming/string)
@@ -20,7 +19,7 @@
 @margin-note{另见名扩展库：@secref["ming-string"]}
 
 
-@section+elemref{句、􏽀、􏽁，句、􏽀?、􏽁?}
+@section+elemref{句、􏽀、􏽁，句?、􏽀?、􏽁?}
 @margin-note{
 @bold{@litchar{句}为活用字} @linebreak{}
 @bold{@litchar{􏽁}为新造字} @linebreak{}
@@ -45,82 +44,183 @@
 (句? "鹅鹅鹅，曲项向天歌。")
 ]
 
-@section+elemref{复句，序句，贯句、贯􏽁}
-@margin-note{
-参见：@racket[复􏿴]，@racket[序􏿴]，@racket[贯􏿲]。
-}
-@examples[#:eval (the-eval)
-(复句 5 #\鹅)
-(序句 5 数化字)
-(贯句 "AAA" "BBB" "CCC")
-(贯􏽁 "AAA" "BBB" "CCC")
-(􏽁? (贯句 "AAA" "BBB" "CCC"))
-(􏽁? (贯􏽁 "AAA" "BBB" "CCC"))
-]
-
-@section+elemref{句度，句弔，句􏾝}
-@margin-note{参见：@racket[弔]，@racket[度]，@racket[􏾝]}
-@margin-note{另见：@racket[句􏾝*]}
-
-
-@examples[#:eval (the-eval)
-(句度 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。")
-(句弔 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
-(句􏾝 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
-(句􏾝 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3 8)
-]
-
-@section+elemref{句􏾩，句􏾩/以􏾝}
-@margin-note{参见：@racket[􏿲􏾩]、@racket[􏿰􏾩]，@racket[􏿲􏾩/以􏾝]}
-@examples[#:eval (the-eval)
-(名 str (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
-
-(句􏾩 str 1 #\白)
-str
-
-(句􏾩/以􏾝 str 0 "ABCDEFG" 2 4)
-str
-
-(句复! str #\Z)
-str
-]
-
 @section+elemref{􏽁化，􏽀化}
 @examples[#:eval (the-eval)
 (􏽁? (􏽁化 (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。)))
 (􏽀? (􏽀化 "鹅鹅鹅，曲项向天歌。"))
 ]
 
-@section+elemref{句化􏿴，􏿴化句}
+@section+elemref{复句，序句}
+@margin-note{
+参见：@racket[复􏿴]，@racket[序􏿴]。
+}
 @examples[#:eval (the-eval)
-(句化􏿴 "鹅鹅鹅，曲项向天歌。")
-(􏿴化句 (􏿴 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
+(复句 5 #\鹅)
+(序句 5 数化字)
 ]
 
+
+@section+elemref{􏼱，􏼯，􏼰}
+@margin-note{
+@bold{@litchar{􏼱}为新造字} @linebreak{}
+@bold{@litchar{􏼯}为新造字} @linebreak{}
+@bold{@litchar{􏼰}为新造字}
+@itemlist[
+@item{@litchar{申}：“贯穿”的意思，参见：@racket[􏿝]；}
+@item{@litchar{􏽁}：见：@racket[􏽁]；}
+@item{@litchar{由}+@litchar{又}：“贯穿”的意思，且末尾数据是@racket[􏿴]，参见：@racket[􏿜]。}
+]
+}
+@margin-note{
+参见：@racket[􏿝]、@racket[􏿜]。
+}
+@examples[#:eval (the-eval)
+(􏼱 "AAA" "BBB" "CCC")
+(􏼯 "AAA" "BBB" "CCC")
+(􏼰 "AAA" "BBB" '("CCC" "DDD"))
+(􏽁? (􏼱 "AAA" "BBB" "CCC"))
+(􏽁? (􏼯 "AAA" "BBB" "CCC"))
+(􏽁? (􏼰 "AAA" "BBB" '("CCC" "DDD")))
+]
+
+@section+elemref{􏼬，􏼭，邭}
+@margin-note{
+@bold{@litchar{􏼬}为新造字} @linebreak{}
+@bold{@litchar{􏼭}为新造字} @linebreak{}
+@bold{@litchar{邭}为古活字}
+@itemlist[
+@item{@litchar{度}：“计算长度”的意思，参见：@racket[度]；}
+@item{@litchar{弔}：“第”的意思，参见：@racket[弔]；}
+@item{@litchar{阝}：“部分”的意思。}
+]
+}
+@margin-note{参见：@racket[弔]，@racket[度]，@racket[􏾝]}
+@margin-note{另见：@racket[邭*]}
+@examples[#:eval (the-eval)
+(􏼬 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。")
+(􏼭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
+(邭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
+(邭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3 8)
+]
+
+@section+elemref{拘，拘/以邭，句􏼿}
+@margin-note{
+@bold{@litchar{拘}为古活字} @linebreak{}
+@bold{@litchar{􏼿}为古活字}
+@itemlist[
+@item{@litchar{扌}：“@litchar{!}”的意思；}
+]
+}
+@margin-note{参见：@racket[􏿲􏾩]、@racket[􏿰􏾩]，@racket[􏿲􏾩/以􏾝]}
+@examples[#:eval (the-eval)
+(名 str (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
+
+(拘 str 1 #\白)
+str
+
+(拘/以邭 str 0 "ABCDEFG" 2 4)
+str
+
+(句􏼿 str #\Z)
+str
+]
+
+@section+elemref{􏼩、􏼪，􏼳、􏼲}
+@margin-note{
+@bold{@litchar{􏼩}为新造字} @linebreak{}
+@bold{@litchar{􏼪}为新造字} @linebreak{}
+@bold{@litchar{􏼳}为新造字} @linebreak{}
+@bold{@litchar{􏼲}为新造字}
+@itemlist[
+@item{上下结构的@litchar{又}+@litchar{㐅}：@racket[􏿴]；}
+@item{上下结构的@litchar{又}+@litchar{子}：组成元素是@racket[字]的@racket[􏿴]；}
+@item{@litchar{􏼩}：把@racket[句]转化为@racket[􏿴]；}
+@item{@litchar{􏼳}：把@racket[句]转化为组成元素是字的@racket[􏿴]；}
+@item{@litchar{􏼪}：把@racket[􏿴]转化为@racket[句]；}
+@item{@litchar{􏼲}：把组成元素是@racket[字]的@racket[􏿴]转化为@racket[句]。}
+]
+}
+@examples[#:eval (the-eval)
+(􏼪 '("鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌"))
+(􏼪 '("鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌") "")
+(􏼪 '("鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌") "-")
+
+(􏼩 "鹅鹅鹅，曲项向天歌")
+(􏼩 "鹅鹅鹅，曲项向天歌" "")
+(􏼩 "鹅鹅鹅，曲项向天歌" "，")
+(􏼩 "鹅-鹅-鹅-曲-项-向-天-歌" "-")
+
+(􏼲 '(#\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
+(􏼳 "鹅鹅鹅，曲项向天歌。")
+]
+
+@section+elemref{􏼥，􏼙，􏼚}
+@margin-note{
+@bold{@litchar{􏼥}为新造字} @linebreak{}
+@bold{@litchar{􏼙}为新造字} @linebreak{}
+@bold{@litchar{􏼚}为新造字}
+@itemlist[
+@item{@litchar{戈}：本意是“兵器”，引申为“修改、替换”之意；}
+@item{@litchar{匕}：本意是“匕首”，引申为“修剪、删除”之意；}
+@item{@litchar{穴}：@litchar{空}的简写；}
+@item{上下结构的@litchar{丷}+@litchar{匕}：修剪起始处和结尾处；}
+@item{上下结构的@litchar{穴}+@litchar{一}：将相连的多个空格单一化成一个。}
+]
+}
+@examples[#:eval (the-eval)
+(􏼥 "鹅鹅鹅，曲项向天歌。" "鹅鹅鹅" "小黄鸭")
+(􏼥 "鹅鹅鹅，曲项向天歌。" "鹅" "")
+(􏼥 "\n\r鹅鹅鹅，\n\r曲项向天歌。\n\r\n\r" "\n\r" "")
+
+(􏼙 "\n\r鹅鹅鹅，\n\r曲项向天歌。\n\r\n\r")
+(􏼙 "鹅鹅鹅，曲项向天歌。" "鹅鹅鹅")
+
+(􏼚 "鹅  鹅    鹅   \n \n 曲项向天歌 \n\r")
+]
+
+@section+elemref{􏼤?、􏼣?、􏼢?，􏼠?}
+@margin-note{
+@bold{@litchar{􏼤}为新造字} @linebreak{}
+@bold{@litchar{􏼣}为新造字} @linebreak{}
+@bold{@litchar{􏼢}为新造字}
+@itemlist[
+@item{@litchar{本}：本意是“树根”，在此引申为“起始、开头”之意；}
+@item{@litchar{末}：本意是“树梢”，在此引申为“结尾、末尾”之意；}
+@item{@litchar{干}：本意是“树杈状的武器”，因“树干”一词在此引申为“中间、包含”之意；}
+@item{@litchar{穴}：@litchar{空}的简写；}
+@item{上下结构的@litchar{穴}+@litchar{非}：非空。}
+]
+}
+@examples[#:eval (the-eval)
+(􏼤? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "鹅鹅鹅")
+(􏼣? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "拨清波。")
+(􏼢? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "白毛浮绿水")
+
+(􏼠? "鹅鹅鹅")
+(􏼠? "")
+]
+
+@section+elemref{􏼨，􏼧，􏼦}
+@margin-note{
+@bold{@litchar{􏼨}为新造字} @linebreak{}
+@bold{@litchar{􏼧}为新造字} @linebreak{}
+@bold{@litchar{􏼦}为新造字}
+@itemlist[
+@item{@litchar{与}：@litchar{写}的简写；}
+]
+}
+@examples[#:eval (the-eval)
+(􏼨 "string upper case")
+(􏼧 "string lower case")
+(􏼦 "string title case")
+]
 
 
 @defmapping[racket/base/string]
 
-
 @section[#:tag "string-additional"]{额外例程}
 @defmodule[ming/racket/string]
 
-@examples[#:eval (the-eval)
-(􏿴合成诗 (􏿴 "鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌" "。"))
-(􏿴合成诗 (􏿴 "鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌" "。") "-")
-(􏿴合成诗 (􏿴 "鹅" "鹅" "鹅" "，" "曲" "项" "向" "天" "歌" "。") "")
 
-(诗碎成􏿴 "鹅  鹅  鹅   \n \n 曲项向天歌 \n\r")
-(诗碎成􏿴 "鹅-鹅-鹅-曲-项-向-天-歌" "-")
-
-(诗简空 "鹅  鹅    鹅   \n \n 曲项向天歌 \n\r")
-
-(诗更 "鹅鹅鹅，曲项向天歌。" "鹅鹅鹅" "小黄鸭")
-(诗更 "鹅鹅鹅，曲项向天歌。" "鹅鹅鹅" "")
-
-(诗含? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "白毛浮绿水")
-(诗起? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "鹅鹅鹅")
-(诗终? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "拨清波。")
-]
 
 @defmapping[racket/string]
