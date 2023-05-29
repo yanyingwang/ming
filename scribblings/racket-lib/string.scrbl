@@ -50,13 +50,13 @@
 (􏽀? (􏽀化 "鹅鹅鹅，曲项向天歌。"))
 ]
 
-@section+elemref{复句，序句}
+@section+elemref{􏼗，􏼔}
 @margin-note{
 参见：@racket[复􏿴]，@racket[序􏿴]。
 }
 @examples[#:eval (the-eval)
-(复句 5 #\鹅)
-(序句 5 数化字)
+(􏼗 5 #\鹅)
+(􏼔 5 数化字)
 ]
 
 
@@ -103,9 +103,9 @@
 (邭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3 8)
 ]
 
-@section+elemref{拘，拘/以邭，句􏼿}
+@section+elemref{􏼘，􏼘/以邭，句􏼿}
 @margin-note{
-@bold{@litchar{拘}为古活字} @linebreak{}
+@; @bold{@litchar{拘}为古活字} @linebreak{}
 @bold{@litchar{􏼿}为古活字}
 @itemlist[
 @item{@litchar{扌}：“@litchar{!}”的意思；}
@@ -115,10 +115,10 @@
 @examples[#:eval (the-eval)
 (名 str (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
 
-(拘 str 1 #\白)
+(􏼘 str 1 #\白)
 str
 
-(拘/以邭 str 0 "ABCDEFG" 2 4)
+(􏼘/以邭 str 0 "ABCDEFG" 2 4)
 str
 
 (句􏼿 str #\Z)
