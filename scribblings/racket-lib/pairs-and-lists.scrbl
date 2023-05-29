@@ -175,14 +175,22 @@
 (𥸬􏿴* 10 20 2)
 ]
 
-@section+elemref{序􏿴、复􏿴}
+@section+elemref{􏼒、􏼓}
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据。
+@margin-note{
+@bold{@litchar{􏼒}为新造字} @linebreak{}
+@bold{@litchar{􏼓}为新造字}
+@itemlist[
+@item{旋转180°的@litchar{弔}：原被用于“索引”之意（见@racket[弔]），但因索引是从零开始的序数，在此借用为“序数”之意；}
+@item{@litchar{三}：道生一，一生二，二生三，三生万物，故三个相同的@litchar{一}在此为“若干个相同元素”之意；}
+]
+}
 @examples[#:eval (the-eval)
-(复􏿴 5 'foo)
-(序􏿴 5 殖)
-(序􏿴 5 􏽊)
-(序􏿴 5 (入 (n)
-        (复􏿴 n 'foo)))
+(􏼓 5 'foo)
+(􏼒 5 殖)
+(􏼒 5 􏽊)
+(􏼒 5 (入 (n)
+        (􏼓 n 'foo)))
 ]
 
 @section+elemref{攸}
@@ -371,8 +379,8 @@
 (􏾛 '(21 3 888 666 55 77 1000))
 (𠆯 '(21 3 888 666 55 77 1000) <)
 (𠆯 '(21 3 888 666 55 77 1000) >)
-(𠆯 '("cat" "dog" "chicken" "duck" "fox") 诗<?)
-(𠆯 '("cat" "dog" "chicken" "duck" "fox") 诗>?)
+(𠆯 '("cat" "dog" "chicken" "duck" "fox") 句<?)
+(𠆯 '("cat" "dog" "chicken" "duck" "fox") 句>?)
 ]
 
 @section+elemref{𬩽、𬩽/入，􏿁、􏿁/入，􏷲~、􏷲^}

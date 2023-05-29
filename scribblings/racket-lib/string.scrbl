@@ -50,12 +50,12 @@
 (􏽀? (􏽀化 "鹅鹅鹅，曲项向天歌。"))
 ]
 
-@section+elemref{􏼗，􏼔}
+@section+elemref{􏼑，􏼔}
 @margin-note{
-参见：@racket[复􏿴]，@racket[序􏿴]。
+参见：@racket[􏼓]，@racket[􏼒]。
 }
 @examples[#:eval (the-eval)
-(􏼗 5 #\鹅)
+(􏼑 5 #\鹅)
 (􏼔 5 数化字)
 ]
 
@@ -121,7 +121,7 @@ str
 (􏼘/以邭 str 0 "ABCDEFG" 2 4)
 str
 
-(句􏼿 str #\Z)
+(􏼑𰅡 str #\Z)
 str
 ]
 
