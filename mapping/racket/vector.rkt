@@ -5,7 +5,7 @@
 >>> vector-set*! 􏿲􏾩^-
 >>> vector-map 􏿲佫
 >>> vector-map! 􏿲挌
->>> vector-append 贯􏿲 ;; 土􏿲 土􏿴
+>>> vector-append 􏼉 ;; 土􏿲 土􏿴 贯􏿲
 >>> vector-take 􏿲􏾺
 >>> vector-take-right 􏿲𨚞
 >>> vector-drop 􏿲􏷵

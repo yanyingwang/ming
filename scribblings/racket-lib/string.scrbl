@@ -52,13 +52,17 @@
 
 @section+elemref{􏼑，􏼔}
 @margin-note{
-参见：@racket[􏼓]，@racket[􏼒]。
+@bold{@litchar{􏼑}为新造字} @linebreak{}
+@bold{@litchar{􏼔}为新造字}  @linebreak{}
 }
+@margin-note{
+参见：@racket[􏼓]，@racket[􏼎]。
+}
+
 @examples[#:eval (the-eval)
 (􏼑 5 #\鹅)
 (􏼔 5 数化字)
 ]
-
 
 @section+elemref{􏼱，􏼯，􏼰}
 @margin-note{
@@ -103,7 +107,7 @@
 (邭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3 8)
 ]
 
-@section+elemref{􏼘，􏼘/以邭，句􏼿}
+@section+elemref{􏼘，􏼘/以邭，􏼑𰅡}
 @margin-note{
 @; @bold{@litchar{拘}为古活字} @linebreak{}
 @bold{@litchar{􏼿}为古活字}

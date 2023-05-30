@@ -16,7 +16,7 @@
 >>> last-pair 􏷽 "取出最后一双元素" ;; 末链（链一定为双） 􏿦
 ;; >>> rest 末** "􏿴除去甲以外剩下的􏿴" ;; 甲外 剩余 去甲 舍甲
 
->>> make-list 􏼓 @elem{构造生成内容是若干而相同元素的@racket[􏿴]} ;; 复 㙏 复􏿴 构造复@racket[􏿴]（数据内各个元素是相同的，类比（昆虫）“复眼”一词取名
+>>> make-list 􏼓 @elem{构造内容是若干个相同元素的@racket[􏿴]} ;; 复 㙏 复􏿴 构造复@racket[􏿴]（数据内各个元素是相同的，类比（昆虫）“复眼”一词取名
 
 >>> list-set 攸 @elem{修改数据中的某个元素为新值并返回新数据} ;; 修 更 改 新 肖 攸 􏿛
 >>> list-update 攸/入 @elem{类上，另外进参是@racket[入]} ;; 攸
@@ -50,7 +50,7 @@
 >>> split-common-prefix 䢼分 @elem{将@racket[䢼]和余下分离开（输出结果是一个复值）}
 
 
->>> append* 􏿜 @elem{把多个@racket[􏿴]贯穿相连组成一个 @racket[􏿫]并返回之} ;; 􏿜 􏾞
+>>> append* 􏿜 @elem{把多个@racket[􏿴]贯穿相连组成一个@racket[􏿫]并返回之} ;; 􏿜 􏾞
 
 >>> add-between 𰂋 @elem{@racket[􏿴]中每两个元素之间都插入另一元素} ;; 侠 夹 间 插 搀 掺 􏿃 侠
 >>> flatten 偏 @elem{把@racket[􏿴]中数据做扁平化处理} ;; 平 伻
@@ -65,8 +65,8 @@
 >>> filter-map 佫􏷹 @elem{等同于@code{(􏷹 (入 (x) x) (佫 proc lst))}} ;佫之􏷹 􏷹佫 􏷯
 >>> append-map 佫􏿝 @elem{等同于@code{(􏿝 (佫 proc lst))}} ;佫之􏿝
 
->>> range 𥸬􏿴 "构造从A到B之间的一段连续数字组成的􏿴（包括A不包括B）" ;􏿴/数段
->>> inclusive-range 𥸬􏿴* "构造从A到B之间的一段连续数字组成的􏿴（包括A也包括B）"
+>>> range 􏼏 "构造从A到B之间的一段连续数字组成的􏿴（包括A不包括B）" ;􏿴/数段 𥸬􏿴
+>>> inclusive-range 􏼏* "构造从A到B之间的一段连续数字组成的􏿴（包括A也包括B）" ;𥸬􏿴
 
 >>> combinations 􏿴/组合
 >>> permutations 􏿴/排列组合

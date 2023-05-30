@@ -25,6 +25,12 @@
          #:row-properties '(border)
          (list (list @bold{规则} @bold{含义} @bold{进出参} @bold{举例})
                (list
+               @elem{对@litchar{􏿴}加偏旁}
+               @elem{构造生成特殊元素组成的@racket[􏿴]}
+               @elem{出参数据结构是@racket[􏿴]}
+               @elem{@racket[􏼓]、@racket[􏼎]、@racket[􏼏]、@racket[􏿝]}
+               )
+               (list
                @elem{左偏旁@litchar{亻}}
                "相似集（类型相同且元素相似）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
@@ -58,7 +64,7 @@
                @elem{以@litchar{*}结尾}
                "加强力度"
                "出参内容更加丰富"
-               @elem{@racket[引*]，@racket[􏾝*]，@racket[𥸬􏿴*]}
+               @elem{@racket[引*]，@racket[􏾝*]，@racket[􏼏*]}
                )
                (list
                @elem{以@litchar{~}结尾}
@@ -78,12 +84,12 @@
                @elem{入参内容更加丰富且被封装进@racket[􏿴]数据结构}
                @elem{@racket[􏷲^]、@racket[伄^]、@racket[􏾘^]}
                )
-               (list
-               @elem{以@litchar{􏿴}结尾}
-               @elem{构造生成@racket[􏿴]数据}
-               @elem{出参数据结构是@racket[􏿴]}
-               @elem{@racket[序􏿴]、@racket[复􏿴]、@racket[𥸬􏿴]}
-               )
+               @; (list
+               @; @elem{以@litchar{􏿴}结尾}
+               @; @elem{构造生成@racket[􏿴]数据}
+               @; @elem{出参数据结构是@racket[􏿴]}
+               @; @elem{@racket[序􏿴]、@racket[复􏿴]、@racket[𥸬􏿴]}
+               @; )
                (list
                @elem{以@litchar{/}符号分割}
                @elem{@litchar{/}之后的内容是为修饰@litchar{/}之前的内容的}
@@ -158,53 +164,40 @@
 (阳之阴阳 '((1 1.1) 2 3 4))
 ]
 
-@section+elemref{𥸬􏿴、𥸬􏿴*}
+@section+elemref{􏼏、􏼏*}
 用于构造元素是一段连续数字的􏿴。
 @margin-note{
-@bold{@litchar{𥸬}为古活字}
+@; @bold{@litchar{𥸬}为古活字}
+@bold{@litchar{􏼏}为新造字}
 @itemlist[
-@item{@litchar{米}：（@litchar{数}的简写）数字；}
-@item{@litchar{阝}、@litchar{􏿴}，见：@secref["list-rules"]。}
+@item{@litchar{米}：@litchar{数}的简写，见@racket[数?]；}
+@; @item{@litchar{阝}、@litchar{􏿴}，见：@secref["list-rules"]。}
 ]
 }
 @examples[#:eval (the-eval)
-(𥸬􏿴 10)
-(𥸬􏿴 10 20)
-(𥸬􏿴 10 20 2)
-(𥸬􏿴* 10 20)
-(𥸬􏿴* 10 20 2)
+(􏼏 10)
+(􏼏 10 20)
+(􏼏 10 20 2)
+(􏼏* 10 20)
+(􏼏* 10 20 2)
 ]
 
-@section+elemref{􏼒、􏼓}
+@section+elemref{􏼓、􏼎}
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据。
 @margin-note{
-@bold{@litchar{􏼒}为新造字} @linebreak{}
-@bold{@litchar{􏼓}为新造字}
+@bold{@litchar{􏼓}为新造字}  @linebreak{}
+@bold{@litchar{􏼎}为新造字}
 @itemlist[
-@item{旋转180°的@litchar{弔}：原被用于“索引”之意（见@racket[弔]），但因索引是从零开始的序数，在此借用为“序数”之意；}
+@item{@litchar{弔}：原被用于“索引”之意（见@racket[弔]），但因索引是从零开始的序数，在此借用为“序数”之意；}
 @item{@litchar{三}：道生一，一生二，二生三，三生万物，故三个相同的@litchar{一}在此为“若干个相同元素”之意；}
 ]
 }
 @examples[#:eval (the-eval)
 (􏼓 5 'foo)
-(􏼒 5 殖)
-(􏼒 5 􏽊)
-(􏼒 5 (入 (n)
+(􏼎 5 殖)
+(􏼎 5 􏽊)
+(􏼎 5 (入 (n)
         (􏼓 n 'foo)))
-]
-
-@section+elemref{攸}
-修改􏿴中的某个元素为新值并返回修改后的􏿴。
-@margin-note{
-@bold{@litchar{攸}为古活字}
-@itemlist[
-@item{@litchar{攵}本意是“用手敲打敦促使其改变”，在此引申为“修改”之意；}
-@item{另外，也可以认为该字分别取@litchar{修}字左部的偏旁（@litchar{亻丨}）和@litchar{改}字右部偏旁（@litchar{攵}）组成，也即含有“修改”的意思。}
-]
-}
-@examples[#:eval (the-eval)
-(攸 '(10 15 20 25) 1 1555)
-(攸/入 '(10 15 20 25) 1 􏽊)
 ]
 
 @section+elemref{􏿝、􏿜}
@@ -237,6 +230,21 @@
 (􏿜 '(a b) '((c . d)))
 (􏿜 '() '(a))
 (􏿜 '(a))
+]
+
+
+@section+elemref{攸}
+修改􏿴中的某个元素为新值并返回修改后的􏿴。
+@margin-note{
+@bold{@litchar{攸}为古活字}
+@itemlist[
+@item{@litchar{攵}本意是“用手敲打敦促使其改变”，在此引申为“修改”之意；}
+@item{另外，也可以认为该字分别取@litchar{修}字左部的偏旁（@litchar{亻丨}）和@litchar{改}字右部偏旁（@litchar{攵}）组成，也即含有“修改”的意思。}
+]
+}
+@examples[#:eval (the-eval)
+(攸 '(10 15 20 25) 1 1555)
+(攸/入 '(10 15 20 25) 1 􏽊)
 ]
 
 
