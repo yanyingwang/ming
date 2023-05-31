@@ -50,41 +50,36 @@
 (􏽀? (􏽀化 "鹅鹅鹅，曲项向天歌。"))
 ]
 
-@section+elemref{􏼑，􏼔}
+@section+elemref{􏼅，􏼄}
 @margin-note{
-@bold{@litchar{􏼑}为新造字} @linebreak{}
-@bold{@litchar{􏼔}为新造字}  @linebreak{}
+@bold{@litchar{􏼅}为新造字} @linebreak{}
+@bold{@litchar{􏼄}为新造字}  @linebreak{}
 }
-@margin-note{
-参见：@racket[􏼓]，@racket[􏼎]。
-}
-
+@margin-note{参见：@racket[􏼓]，@racket[􏼎]。}
 @examples[#:eval (the-eval)
-(􏼑 5 #\鹅)
-(􏼔 5 数化字)
+(􏼅 5 #\鹅)
+(􏼄 5 数化字)
 ]
 
-@section+elemref{􏼱，􏼯，􏼰}
+@section+elemref{􏼃，􏼁，􏼂}
 @margin-note{
-@bold{@litchar{􏼱}为新造字} @linebreak{}
-@bold{@litchar{􏼯}为新造字} @linebreak{}
-@bold{@litchar{􏼰}为新造字}
+@bold{@litchar{􏼃}为新造字} @linebreak{}
+@bold{@litchar{􏼂}为新造字} @linebreak{}
+@bold{@litchar{􏼁}为新造字}
 @itemlist[
-@item{@litchar{申}：“贯穿”的意思，参见：@racket[􏿝]；}
-@item{@litchar{􏽁}：见：@racket[􏽁]；}
-@item{@litchar{由}+@litchar{又}：“贯穿”的意思，且末尾数据是@racket[􏿴]，参见：@racket[􏿜]。}
+@item{@litchar{申}：“贯穿”的意思；}
+@item{@litchar{山}：见：@racket[􏽁]；}
+@item{@litchar{毌}+@litchar{又}：“贯穿”的意思，且末尾数据是@racket[􏿴]。}
 ]
 }
-@margin-note{
-参见：@racket[􏿝]、@racket[􏿜]。
-}
+@margin-note{参见：@racket[􏼓]，@racket[􏼎]。}
 @examples[#:eval (the-eval)
-(􏼱 "AAA" "BBB" "CCC")
-(􏼯 "AAA" "BBB" "CCC")
-(􏼰 "AAA" "BBB" '("CCC" "DDD"))
-(􏽁? (􏼱 "AAA" "BBB" "CCC"))
-(􏽁? (􏼯 "AAA" "BBB" "CCC"))
-(􏽁? (􏼰 "AAA" "BBB" '("CCC" "DDD")))
+(􏼃 "AAA" "BBB" "CCC")
+(􏼁 "AAA" "BBB" "CCC")
+(􏼂 "AAA" "BBB" '("CCC" "DDD"))
+(􏽁? (􏼃 "AAA" "BBB" "CCC"))
+(􏽁? (􏼁 "AAA" "BBB" "CCC"))
+(􏽁? (􏼂 "AAA" "BBB" '("CCC" "DDD")))
 ]
 
 @section+elemref{􏼬，􏼭，邭}
@@ -107,14 +102,18 @@
 (邭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3 8)
 ]
 
-@section+elemref{􏼘，􏼘/以邭，􏼑𰅡}
+@section+elemref{􏼘，􏼘/以邭，􏼅𰅡}
 @margin-note{
 @; @bold{@litchar{拘}为古活字} @linebreak{}
-@bold{@litchar{􏼿}为古活字}
+@; @bold{@litchar{􏼿}为古活字}
+@bold{@litchar{􏼘}为新造字} @linebreak{}
+@bold{@litchar{邭}为古活字} @linebreak{}
+@bold{@litchar{𰅡}为古活字} @linebreak{}
 @itemlist[
 @item{@litchar{扌}：“@litchar{!}”的意思；}
 ]
 }
+@margin-note{另见：@racket[􏼅]，@racket[邭]}
 @margin-note{参见：@racket[􏿲􏾩]、@racket[􏿰􏾩]，@racket[􏿲􏾩/以􏾝]}
 @examples[#:eval (the-eval)
 (名 str (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
@@ -125,7 +124,7 @@ str
 (􏼘/以邭 str 0 "ABCDEFG" 2 4)
 str
 
-(􏼑𰅡 str #\Z)
+(􏼅𰅡 str #\Z)
 str
 ]
 

@@ -1,7 +1,7 @@
 #lang s-exp "../../private/mapping-lang.rkt"
 
 
->>> string-append* 􏼰 @elem{类@racket[􏼱]，不过最后一个句是@racket[􏿴]}
+>>> string-append* 􏼂 @elem{类@racket[􏼱]，不过最后一个句是@racket[􏿴]} ;􏼰
 
 >>> string-join 􏼪 "把一个􏿴内的各个元素聚集在一块组成句" ; 􏼻
 >>> string-split 􏼩 "把句分割并组成􏿴" ;􏼼 􏼼 􏼼
