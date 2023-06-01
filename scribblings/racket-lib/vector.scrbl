@@ -88,24 +88,26 @@
          )
          ]
 
-@section+elemref{􏻿，􏻽、􏻼，􏻿?，􏻽?、􏻼?，空􏻿、空􏻿?}
+@section+elemref{􏻿，􏻽、􏻼，􏻿?，􏻽?、􏻼?，􏻸?}
 @margin-note{
 @bold{@litchar{􏻿}为新造字} @linebreak{}
 @bold{@litchar{􏻽}为新造字} @linebreak{}
-@bold{@litchar{􏻼}为新造字}
+@bold{@litchar{􏻼}为新造字} @linebreak{}
+@bold{@litchar{􏻸}为新造字}
 @itemlist[
-@item{偏旁@litchar{矢}：“矢量（vector）”的意思，呈现为半包围结构，表示该数据结构与@racket[􏿴]类似；}
-@item{偏旁@litchar{十}：本意是“十个元素”，在这里引申为“元素长度是固定的”之意；}
+@item{@litchar{矢}：“矢量（vector）”的意思，呈现为半包围结构，表示该数据结构与@racket[􏿴]类似；}
+@item{@litchar{十}：本意是“十个元素”，在这里引申为“元素长度是固定的”之意；}
 @item{@litchar{山}：稳定的、内容不变的（因“山”是稳定的，见：@racket[固?]）；}
 @item{@litchar{氵}：易动的、内容可变的（因为“水”是易变的，见：@racket[易?]）；}
+@item{@litchar{穴}：简写，通@litchar{空}；}
 ]
 }
 @margin-note{
 参见：@racket[固?]、@racket[易?] @linebreak{}
 }
-“􏻿”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "vector"]）是和“@racket[􏿴]”类似的一种数据结构（通常被称为“数组”），但显著的一个不同是访问和更新其元素值的时间复杂度是@hyperlink["https://zh.wikipedia.org/wiki/%E5%B8%B8%E6%95%B8%E6%99%82%E9%96%93" "常数时间"]。 @linebreak{}
-在以下场景下使用@racket[􏻿]比@racket[􏿴]会更加合适：元素长度确定、需要频繁获取或修改元素而不需要增加或移除元素。@linebreak{}
-“􏻿”按内容是否可以被修改，可以被分为：“易􏻿”和“固􏻿”，简写为“􏻼”和“􏻽”。@racket[􏻿]默认创建的是“􏻽”。
+“􏻿”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "vector"]）是类似于“@racket[􏿴]”的一种数据结构，通常被称为“数组”。  @linebreak{}
+相比于@racket[􏿴]，在以下场景下使用@racket[􏻿]会更具效率优势：元素长度确定、需要频繁获取或修改元素而不需要增加或移除元素。  @linebreak{}
+另外，“􏻿”按内容是否可以被修改，可以被分为：“易􏻿”和“固􏻿”，简写为“􏻽”和“􏻼”，“􏻽”为默认值。
 @examples[#:eval (the-eval)
 (􏻿 1 2 3 4)
 (􏻽? (􏻿 1 2 3 4))
@@ -117,8 +119,8 @@
 (􏻿? (􏻿 1 2 3 4))
 (􏻿? (􏻼 1 2 3 4))
 
-(空􏻿? (􏻿))
-(空􏻿? #())
+(􏻸? (􏻿))
+(􏻸? #())
 ]
 
 @section+elemref{􏻺、􏻻，􏻹}

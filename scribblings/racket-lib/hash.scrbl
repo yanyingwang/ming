@@ -101,8 +101,13 @@
 @item{@litchar{艹}：柔弱的（因为“艸”（草）是柔弱的，见：@racket[􏾏?]）；}
 @item{@litchar{艹}（中间加@litchar{丨}）：见@racket[􏾈?]。}
 ]
+@bold{@litchar{􏻵}为新造字}
+@itemlist[
+@item{@litchar{穴}：简写，通@litchar{空}。}
+]
 }
 @margin-note{另见：@racket[􏾑]}
+
 
 “@racket[􏿰]”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "hash"]）是一种内部元素都是“键值对（key/value）”的数据结构，其在以下特性上可以被进一步细分：
 @itemlist[
@@ -156,7 +161,7 @@
 (􏿰化􏿳 (􏾑 1 2 3 4))
 ]
 
-@section+elemref{􏿰?，􏾌?、􏾋?、􏾊?、􏾉?，􏾎?、􏾏?、􏾈?}
+@section+elemref{􏿰?，􏾌?、􏾋?、􏾊?、􏾉?，􏾎?、􏾏?、􏾈?，􏻵?}
 @margin-note{
 另见：@linebreak{}
 @racket[􏾐?]、@racket[􏾑?]，@linebreak{}
@@ -181,6 +186,9 @@
 
 (􏽦? (􏾏^ '((1 . 2) (3 . 4))))
 (􏽡? (􏾁^ '((1 . 2) (3 . 4))))
+
+(􏻵? (􏿰 'a "aa" 'b "bb"))
+(􏻵? (􏿰))
 ]
 
 
@@ -283,14 +291,13 @@ h
 (􏿰阳仔? (􏿰 'b "bb") (􏿰 'a "aaa" 'b "bbb" 'c "ccc"))
 ]
 
-@section+elemref{􏿰度、􏿰空?}
+@section+elemref{􏿰度}
 @margin-note{
 参见：@racket[度]、@racket[空?]
 }
 @examples[#:eval (the-eval)
 (􏿰度 (􏿰 'a "aa" 'b "bb"))
-(􏿰空? (􏿰 'a "aa" 'b "bb"))
-(􏿰空? (􏿰))
+
 ]
 
 @section+elemref{􏾑化}

@@ -10,7 +10,7 @@
 >>> string-replace 􏼥 "将数据内容的一部分更换成另一部分" ;敂
 
 >>> string-trim 􏼙 @elem{修剪句} ; 􏼡
->>> non-empty-string? 􏼠? @elem{非空句?}; 䆜
+>>> non-empty-string? 􏻶? @elem{非空句?}; 䆜 􏼠 􏻷
 
 >>> string-contains? 􏼢? @elem{某句是否是某句中间的一部分} ;; create a procedure named: 诗含字 􏼴
 >>> string-prefix? 􏼤? @elem{某句是否是某句起头的一部分} ;; 诗起于字 􏼶

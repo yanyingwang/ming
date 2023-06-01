@@ -181,7 +181,7 @@ str
 (􏼚 "鹅  鹅    鹅   \n \n 曲项向天歌 \n\r")
 ]
 
-@section+elemref{􏼤?、􏼣?、􏼢?，􏼠?}
+@section+elemref{􏼤?、􏼣?、􏼢?，􏻶?}
 @margin-note{
 @bold{@litchar{􏼤}为新造字} @linebreak{}
 @bold{@litchar{􏼣}为新造字} @linebreak{}
@@ -191,7 +191,7 @@ str
 @item{@litchar{末}：本意是“树梢”，在此引申为“结尾、末尾”之意；}
 @item{@litchar{干}：本意是“树杈状的武器”，因“树干”一词在此引申为“中间、包含”之意；}
 @item{@litchar{穴}：@litchar{空}的简写；}
-@item{上下结构的@litchar{穴}+@litchar{非}：非空。}
+@; @item{上下结构的@litchar{穴}+@litchar{非}：非空。}
 ]
 }
 @examples[#:eval (the-eval)
@@ -199,8 +199,8 @@ str
 (􏼣? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "拨清波。")
 (􏼢? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "白毛浮绿水")
 
-(􏼠? "鹅鹅鹅")
-(􏼠? "")
+(􏻶? "鹅鹅鹅")
+(􏻶? "")
 ]
 
 @section+elemref{􏼨，􏼧，􏼦}
