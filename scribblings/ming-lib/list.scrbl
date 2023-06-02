@@ -20,9 +20,9 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 
 @deftogether[(
 @defproc[(引* [LST 􏿴?] [V any/c])
-          精确非负整数殖?]
+          􏻱􏻲殖?]
 @defproc[(引*/入 [LST 􏿴?] [PROC 程?])
-          精确非负整数殖?]
+          􏻱􏻲殖?]
 )]{
 @racket[引*]、@racket[引*/入]分别是对@racket[引]、@racket[引/入]加强力度。 @linebreak{}
 @margin-note{另见：@racket[引]、@racket[引v]}
@@ -33,9 +33,9 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 }
 
 @deftogether[(
-@defproc[(伄 [LST 􏿴?] [N 精确非负整数?] ...)
+@defproc[(伄 [LST 􏿴?] [N 􏻱􏻲?] ...)
           􏿴?]
-@defproc[(伄^ [LST 􏿴?] [N-LST (listof 精确非负整数?)])
+@defproc[(伄^ [LST 􏿴?] [N-LST (listof 􏻱􏻲?)])
           􏿴?]
 )]{
 @itemlist[
@@ -50,9 +50,9 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 }
 
 @deftogether[(
-@defproc[(􏾝 [LST 􏿴?] [N1 精确非负整数?] [N2 精确非负整数?])
+@defproc[(􏾝 [LST 􏿴?] [N1 􏻱􏻲?] [N2 􏻱􏻲?])
           􏿴?]
-@defproc[(􏾝* [LST 􏿴?] [N1 精确非负整数?] [N2 精确非负整数?])
+@defproc[(􏾝* [LST 􏿴?] [N1 􏻱􏻲?] [N2 􏻱􏻲?])
           􏿴?]
 )]{
 @racket[􏾝]：返回@racket[LST]的第@racket[N1]至第@racket[N2]之间的元素（从0算起，包含N1不包含N2）。@linebreak[]
@@ -76,9 +76,9 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 }
 
 @deftogether[(
-@defproc[(􏾘 [LST 􏿴?] [N 精确非负整数?])
+@defproc[(􏾘 [LST 􏿴?] [N 􏻱􏻲?])
           􏿴?]
-@defproc[(􏾘^ [LST 􏿴?] [N-LST (listof 精确非负整数?)])
+@defproc[(􏾘^ [LST 􏿴?] [N-LST (listof 􏻱􏻲?)])
           􏿴?]
 )]{
 @itemlist[
@@ -93,7 +93,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 }
 
 
-@defproc[(𬩵 [LST 􏿴?] [N1 精确非负整数?] [N2 精确非负整数?])
+@defproc[(𬩵 [LST 􏿴?] [N1 􏻱􏻲?] [N2 􏻱􏻲?])
           􏿴?]{
 返回@racket[LST]的中间那部分元素（左边移除N1个元素，右边移除N2个元素）。
 @margin-note{
@@ -107,7 +107,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 }
 
 @defproc[(度/入 [LST 􏿴?] [PROC 程?])
-          精确非负整数?]{
+          􏻱􏻲?]{
 以@racket[PROC]来测量@racket[LST]的长度。
 @margin-note{另见：@racket[度]、@racket[􏷹度]}
 @examples[#:eval (the-eval)
