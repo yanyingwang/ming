@@ -6,24 +6,24 @@
 >>> - - "减"
 >>> * * "乘"
 >>> / / "除"
->>> quotient 商
->>> remainder 余数
+>>> quotient 商 ;TODO: 新造字：米商
+>>> remainder 余数 ; TODO: 新造字：𥺌 = 米余
 >>> quotient/remainder 商和余数
->>> modulo 模
+>>> modulo 糢 "模" ; TODO: 新造字：米莫
 >>> add1 􏽊 "加一（由增字得造）" ;; 米曾 增
 >>> sub1 􏽉 "减一（由损字得造）" ; 米员 损
 >>> abs 􏽆 "绝对值（各取偏旁得造）"
->>> max 􏽇 "最大数（各取偏旁得造）"
->>> min 􏽈 "最小数（各取偏旁得造）"
+>>> max 􏻡 "最大数（各取偏旁得造）" ;􏽇
+>>> min 􏻠 "最小数（各取偏旁得造）" ; 􏽈
 >>> gcd 最大公约数
 >>> lcm 最小公约数
 >>> round 趋偶整数
 >>> floor 下取整数
 >>> ceiling 上取整数
 >>> truncate 去小整数
->>> numerator 分子
->>> denominator 分母
->>> rationalize 粃化 "有理化"
+>>> numerator 分子 ;TODO: 新造字：米八子
+>>> denominator 分母 ;TODO: 新造字：米八母
+>>> rationalize 粊化 "有理化"
 
 ;; = > < >= <=
 >>> = = "等于"
@@ -48,8 +48,8 @@
 
 >>> make-rectangular 矩数??? ;; ???
 >>> make-polar 极式复数???
->>> real-part 􏽐 "实部"
->>> imag-part 􏽏 "虚部"
+>>> real-part 宩 "实数部（各取偏旁得造）" ; 􏽐
+>>> imag-part 􏻟 "虚数部（各取偏旁得造）" ;􏽏
 >>> magnitude 极式复数量???
 >>> angle 极式复数度???
 
