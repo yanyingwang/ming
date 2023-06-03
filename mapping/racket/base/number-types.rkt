@@ -20,7 +20,7 @@
 >>> even? 􏻣? "偶数（各取偏旁得造）" ;𥻑
 >>> odd? 􏻢? "奇数（各取偏旁得造）"
 >>> exact? 􏻧? "准确数（各取偏旁得造，所有数字要么是准确数，要么不是）"
->>> inexact? 非􏻧? "非准确数（非准确数是用浮点数实现的）"
+>>> inexact? 􏻜? "非准确数（非准确数是用浮点数实现的）" ;非􏻧
 >>> inexact->exact 􏻧化 @elem{@racket[􏻜]转化为@racket[􏻧]}
 >>> exact->inexact 􏻜化 @elem{@racket[􏻧]转化为@racket[􏻜]}
 >>> real->single-flonum 􏻞化 @elem{@racket[宩]转化为@racket[􏻞]} ;单釆化
