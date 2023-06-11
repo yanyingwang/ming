@@ -33,7 +33,7 @@
 }
 @margin-note{参见：@racket[􏽔]、@racket[􏽓]}
 @margin-note{另见：@racket[勺]、@racket[勾]}
-“句”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "String"]）是一种数据结构，也就是通常所说的“字符串”，名语言用单字表示之称为“句”。 @linebreak{}
+“句”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "String"]）是一种数据结构，也就是通常所说的“字符串”，名语言用单字表示之称为“句”。 @linebreak{}
 像@racket[􏿲]和@racket[􏿰]一样，“句”按内容是否可以被修改，也可以被分为：“易句”和“固句”，简写为“@racket[􏽁]”和“@racket[􏽀]”。@racket[句]默认创建的是“@racket[􏽀]”。
 @examples[#:eval (the-eval)
 (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。)
