@@ -35,11 +35,11 @@
               @elem{大类概念}
               @elem{@racket[夈?]、@racket[宩]、@racket[􏻟]、@racket[粊?]、@racket[䉾?]、@racket[􏻧?]、@racket[􏻥?]}
               )
-              @; (list
-              @; @elem{上偏旁@bold{@litchar{米}}}
-              @; @elem{常用概念}
-              @; @elem{@racket[􏻛?]、@racket[􏻚?]、@racket[􏻘?]、@racket[􏻙?]}
-              @; )
+              (list
+              @elem{上偏旁@bold{@litchar{米}}}
+              @elem{常用概念}
+              @elem{@racket[􏻛?]、@racket[􏻚?]、@racket[􏺧?]、@racket[􏺦?]}
+              )
               (list
               @elem{整体性结构的@bold{@litchar{米}}}
               @elem{常用概念}
@@ -113,6 +113,28 @@
 ]
 
 
+@section+elemref{常用概念：􏻛?、􏻚?，􏺧?、􏺦?}
+@margin-note{
+@bold{@litchar{􏻛}为新造字}  @linebreak{}
+@bold{@litchar{􏻚}为新造字}  @linebreak{}
+@bold{@litchar{􏺧}为新造字}  @linebreak{}
+@bold{@litchar{􏺦}为新造字}  @linebreak{}
+@itemlist[
+@item{@litchar{正}：正数的；}
+@item{@litchar{贝}：负数的，@litchar{负}的简写；}
+@item{@litchar{日}：奇数的，“奇数”在古代叫“阳数”（阴阳是贯穿于本语言的基本概念）；}
+@item{@litchar{月}：偶数的，“偶数”在古代叫“阴数”（阴阳是贯穿于本语言的基本概念）。}
+]
+}
+对于“粊”而言，最常使用的子概念是：“􏻛”（正数）、“􏻚”（负数）；对于“􏻴”而言，最常使用的子概念是：“􏺧”（奇数）、“􏺦”（偶数）。
+@examples[#:eval (the-eval)
+(􏻛? 1)
+(􏻚? -1)
+(􏺧? 1)
+(􏺦? 2)
+]
+
+
 @section+elemref{实现概念：釆?、􏻞?、􏻝?，􏺸?、􏺟?}
 @margin-note{
 @bold{@litchar{釆}为古活字}  @linebreak{}
@@ -158,50 +180,6 @@
 ]
 
 
-@; @section+elemref{常用概念：􏻛?、􏻚，􏻙?、􏻘?}
-@; @margin-note{
-@; @bold{@litchar{􏻛}为新造字}  @linebreak{}
-@; @bold{@litchar{􏻚}为新造字}  @linebreak{}
-@; @bold{@litchar{􏻙}为新造字}  @linebreak{}
-@; @bold{@litchar{􏻘}为新造字}  @linebreak{}
-@; @itemlist[
-@; @item{@litchar{正}：正数的；}
-@; @item{@litchar{贝}：负数的，@litchar{负}的简写；}
-@; @item{@litchar{可}：奇数的，@litchar{奇}的简写；}
-@; @item{@litchar{禸}：偶数的，@litchar{偶}的简写。}
-@; ]
-@; }
-@; 对于“粊”而言，最常使用的子概念是：“􏻛”（正数）、“􏻚”（负数）、“􏻙”（奇数）、“􏻘”（偶数）。
-
-@; @examples[#:eval (the-eval)
-@; (􏻛? 1)
-@; (􏻚? -1)
-@; (􏻙? 1)
-@; (􏻘? 2)
-@; ]
-
-
-@section+elemref{常用概念：􏽌?、􏽋?，􏺞?、􏺝?}
-@margin-note{
-@bold{@litchar{􏽌}为新造字}  @linebreak{}
-@bold{@litchar{􏽋}为新造字}  @linebreak{}
-@bold{@litchar{􏺞}为新造字}  @linebreak{}
-@bold{@litchar{􏺝}为新造字}  @linebreak{}
-@itemlist[
-@item{@litchar{正}：正数的；}
-@item{@litchar{负}：负数的；}
-@item{@litchar{日}：奇数的，“奇数”在古代叫“阳数”（阴阳是贯穿于本语言的基本概念）；}
-@item{@litchar{月}：偶数的，“偶数”在古代叫“阴数”（阴阳是贯穿于本语言的基本概念）。}
-]
-}
-对于“粊”而言，最常使用的子概念是：“􏽌”（正数）、“􏽋”（负数）、“􏺞”（奇数）、“􏺝”（偶数）。
-@examples[#:eval (the-eval)
-(􏽌? 1)
-(􏽋? -1)
-(􏺞? 1)
-(􏺝? 2)
-]
-
 
 @section+elemref{运算概念：􏽊、􏽉，􏻡、􏻠}
 @margin-note{
@@ -224,41 +202,42 @@
 (􏻠 1 2 3 4 5)
 ]
 
-@section+elemref{数值转化概念：􏻏，􏺿、􏺽、􏺾、􏺼}
+@section+elemref{数值转化概念：􏻏，􏺚、􏺽、􏺾、􏺙}
 @margin-note{
 @bold{@litchar{􏻏}为新造字}  @linebreak{}
-@bold{@litchar{􏺿}为新造字}  @linebreak{}
+@bold{@litchar{􏺚}为新造字}  @linebreak{}
 @bold{@litchar{􏺾}为新造字}  @linebreak{}
 @bold{@litchar{􏺽}为新造字}  @linebreak{}
-@bold{@litchar{􏺼}为新造字}  @linebreak{}
+@bold{@litchar{􏺙}为新造字}  @linebreak{}
 @itemlist[
+
+@item{@litchar{􏻴}：整数的简写；}
 @item{@litchar{刀}：修改数值；}
 @item{@litchar{匕}：小幅修改数值；}
-@item{@litchar{禸}：偶数，@litchar{偶}的简写；}
-@item{@litchar{日}：@litchar{最}的简写；}
+@item{@litchar{月}：偶数（阴数），见@racket[􏺦?]；}
 @item{@litchar{大}：数值大的；}
 @item{@litchar{小}：数值小的。}
-@item{@litchar{口}：〇。}
+@item{@litchar{穴}：@litchar{𥥪}的简写，见@racket[𥥪?]。}
 ]
 }
-@litchar{刀}和@litchar{匕}都是一种武器，都被用于修改数字，只是修改幅度略有所不同。
+@litchar{刀}和@litchar{匕}都是一种利刃，都被用于修改数字，只是修改幅度略有所不同。
 @examples[#:eval (the-eval)
 (􏻏 -1)
 (􏻏 1)
 
-(􏺿 1.1)
-(􏺿 1.5)
-(􏺿 1.6)
-(􏺿 2.5)
-(􏺿 2.6)
+(􏺚 1.1)
+(􏺚 1.5)
+(􏺚 1.6)
+(􏺚 2.5)
+(􏺚 2.6)
 
 (􏺽 1.1)
 (􏺽 -1.1)
 (􏺾 1.9)
 (􏺾 -1.9)
 
-(􏺼 1.9)
-(􏺼 -1.9)
+(􏺙 1.9)
+(􏺙 -1.9)
 ]
 
 
