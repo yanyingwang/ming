@@ -44,6 +44,27 @@
                )
 
                (list
+               @elem{@bold{@litchar{刀}}}
+               "修改"
+               @elem{}
+               @elem{@racket[􏻏]}
+               )
+
+               (list
+               @elem{@bold{@litchar{戈}}}
+               @elem{修改替换}
+               @elem{入参为“值”和“值”}
+               @elem{@racket[􏼥]}
+               )
+
+               (list
+               @elem{@bold{@litchar{匕}}}
+               @elem{小幅度的修改}
+               @elem{}
+               @elem{@racket[􏼙]、@racket[􏺚]、@racket[􏺽]、@racket[􏺾]}
+               )
+
+               (list
                @elem{@bold{@litchar{土}}}
                "构建、创建"
                @elem{出参类型不一而多变}
@@ -64,12 +85,6 @@
                @elem{@racket[攸]、@racket[􏼘]}
                )
 
-               (list
-               @elem{@bold{@litchar{戈}}}
-               @elem{修改替换}
-               @elem{入参为“值”和“值”}
-               @elem{@racket[􏼥]}
-               )
 
                (list
                @elem{@bold{@litchar{三}}}
