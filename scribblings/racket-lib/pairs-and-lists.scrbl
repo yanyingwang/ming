@@ -170,7 +170,7 @@
 @; @bold{@litchar{𥸬}为古活字}
 @bold{@litchar{􏼏}为新造字}
 @itemlist[
-@item{@litchar{米}：@litchar{数}的简写，见@racket[数?]；}
+@item{@litchar{米}：@litchar{数}的简写，见@racket[米?]；}
 @; @item{@litchar{阝}、@litchar{􏿴}，见：@secref["list-rules"]。}
 ]
 }
@@ -292,8 +292,8 @@
 @examples[#:eval (the-eval)
 (引 '(a b c d e c f) 'c)
 (引v '(a b c d e c f) 'c)
-(引/入 '(a b 11 d 22 c f) 数?)
-(引v/入 '(a b 11 d 22 c f) 数?)
+(引/入 '(a b 11 d 22 c f) 米?)
+(引v/入 '(a b 11 d 22 c f) 米?)
 (弔 '(a b c d e c f) 2)
 ]
 
@@ -320,8 +320,8 @@
 (􏾺分 '(a b c d e f g) 2)
 (𨚞分 '(a b c d e f g) 2)
 
-(􏾺/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 数?)
-(𨚞/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 数?)
+(􏾺/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 米?)
+(𨚞/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 米?)
 
 (􏾺于? '(a b) '(a b c d e f g))
 (􏾺于? '(a b z) '(a b c d e f g))
@@ -413,8 +413,8 @@
 @examples[#:eval (the-eval)
 (𬩽 'c '(a b c d e f))
 (􏿁 'c '((a b) (c d) (e f)))
-(𬩽/入 数? '(a b 1 c d 3 e 9 f))
-(􏿁/入 数? '((a b) (1 d) (j k) (8 f))) ;;
+(𬩽/入 米? '(a b 1 c d 3 e 9 f))
+(􏿁/入 米? '((a b) (1 d) (j k) (8 f))) ;;
 
 (􏷲~ 'c '(a b c d e c f))
 (􏷲^ '(c e) '(a b c d e c f))
@@ -433,12 +433,12 @@
 }
 @margin-note{另见：@racket[度]、@racket[度/入]}
 @examples[#:eval (the-eval)
-(查 􏽌? '(1 2 -3 4 -5))
-(􏷹 􏽌? '(1 2 -3 4 -5))
-(􏷶 􏽌? '(1 2 -3 4 -5))
-(􏷶~ 􏽌? '(1 2 -3 4 -5))
-(􏷹分 􏽌? '(1 2 -3 4 -5)) @; 􏾽离 would still be list
-(􏷹度 􏽌? '(1 2 -3 4 -5))
+(查 􏻛? '(1 2 -3 4 -5))
+(􏷹 􏻛? '(1 2 -3 4 -5))
+(􏷶 􏻛? '(1 2 -3 4 -5))
+(􏷶~ 􏻛? '(1 2 -3 4 -5))
+(􏷹分 􏻛? '(1 2 -3 4 -5)) @; 􏾽离 would still be list
+(􏷹度 􏻛? '(1 2 -3 4 -5))
 ]
 
 @section+elemref{各，佫，􏷬，㦴，垎、右垎，佫􏷹、佫􏿝}
@@ -477,27 +477,27 @@
 (佫 􏽊 '(1 2 3 4))
 (佫 + '(1 2 3 4) '(100 200 300 400))
 
-(􏷬 􏽌? '(1 2 -3 4))
+(􏷬 􏻛? '(1 2 -3 4))
 (􏷬 + '(1 2 3 4) '(100 200 300 400))
 
-(􏷬 􏽋? '(1 2 -3 4))
+(􏷬 􏻚? '(1 2 -3 4))
 (㦴 + '(1 2 3 4) '(100 200 300 400))
 
 (垎 + 0 '(1 2 -3 4))
 (垎 双 '() '(1 2 -3 4))
 (右垎 双 '() '(1 2 -3 4))
 
-(佫􏷹 (入 (x) (且 (􏽌? x) (􏽊 x))) '(1 3 -4 5))
+(佫􏷹 (入 (x) (且 (􏻛? x) (􏽊 x))) '(1 3 -4 5))
 (佫􏿝 vector->list '(#(1) #(2 3) #(4)))
 ]
 
 
 @section+elemref{佫之􏽇、佫之􏽈}
 @examples[#:eval (the-eval)
-(佫之􏽇 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(佫之􏽈 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(佫之􏽇 阳 '((3 pears) (1 banana) (2 apples)))
-(佫之􏽈 阳 '((3 pears) (1 banana) (2 apples)))
+(佫之􏻡 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(佫之􏻠 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(佫之􏻡 阳 '((3 pears) (1 banana) (2 apples)))
+(佫之􏻠 阳 '((3 pears) (1 banana) (2 apples)))
 ]
 
 
@@ -506,7 +506,7 @@
 (􏿴/组合 '(a b c))
 (􏿴/排列组合 '(a b c))
 (􏿴/笛卡尔积 '(1 2 3) '(a b c))
-(􏿴/分组 数? '(1 a 2 b 3 c))
+(􏿴/分组 米? '(1 a 2 b 3 c))
 ]
 
 

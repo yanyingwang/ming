@@ -58,7 +58,7 @@
               (list
               @elem{左偏旁@bold{@litchar{􏻴}}}
               @elem{运算或转化例程（出参是整数型数字）}
-              @elem{@racket[􏺿]、@racket[􏺾]、@racket[􏺽]、@racket[􏺼]}
+              @elem{@racket[􏺚]、@racket[􏺾]、@racket[􏺽]、@racket[􏺙]}
               )
               (list
               @elem{左偏旁@bold{@litchar{刀}}}
@@ -68,7 +68,7 @@
               (list
               @elem{左偏旁@bold{@litchar{匕}}}
               @elem{小幅度修改转化了入参}
-              @elem{@racket[􏺿]、@racket[􏺽]、@racket[􏺾]、@racket[􏺼]}
+              @elem{@racket[􏺚]、@racket[􏺽]、@racket[􏺾]、@racket[􏺙]}
               )
          )]
 
@@ -190,7 +190,7 @@
 @itemlist[
 @item{@litchar{曾}：@litchar{增}的简写，@litchar{曾}是一种多层的蒸屉；}
 @item{@litchar{员}：@litchar{损}/@litchar{陨}的简写，@litchar{陨}本意是“球高从落下”；}
-@item{@litchar{日}：@litchar{最}的简写；}
+@item{@litchar{日}：@litchar{最}的简写，也做@litchar{阳}的简写（极其的意思，即是“最”）；}
 @item{@litchar{大}：数值大的；}
 @item{@litchar{小}：数值小的。}
 ]
