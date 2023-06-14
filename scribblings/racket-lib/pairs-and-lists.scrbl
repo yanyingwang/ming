@@ -25,61 +25,61 @@
          #:row-properties '(border)
          (list (list @bold{规则} @bold{含义} @bold{进出参} @bold{举例})
                (list
-               @elem{对@litchar{􏿴}加偏旁}
+               @elem{对@bold{@litchar{􏿴}}加偏旁}
                @elem{构造生成特殊元素组成的@racket[􏿴]}
                @elem{出参数据结构是@racket[􏿴]}
                @elem{@racket[􏼓]、@racket[􏼎]、@racket[􏼏]、@racket[􏿝]}
                )
                (list
-               @elem{左偏旁@litchar{亻}}
+               @elem{左偏旁@bold{@litchar{亻}}}
                "相似集（类型相同且元素相似）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
                @elem{@racket[伄]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾜]、@racket[􏾛]、@racket[偅]、@racket[𠆯]、@racket[􏷹]、@racket[仔?]}
                )
                (list
-               @elem{右偏旁@litchar{阝}}
+               @elem{右偏旁@bold{@litchar{阝}}}
                "连续集（类型相同且元素连续相同）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的一部分}
                @elem{@racket[􏾝]、@racket[􏾺]、@racket[𨚞]、@racket[𬩵]、@racket[䢼]、@racket[𬩽]}
                )
                (list
-               @elem{右偏旁@litchar{刂}}
+               @elem{右偏旁@bold{@litchar{刂}}}
                "缺失集（删除、移走、去掉部分元素之后的集合）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的子集}
                @elem{@racket[􏷵]、@racket[􏷴]、@racket[􏾘]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
                )
                (list
-               @elem{左偏旁@litchar{土}}
+               @elem{左偏旁@bold{@litchar{土}}}
                "“构建”、“创建”的意思"
                @elem{出参类型不一而多变}
                @elem{@racket[垎]}
                )
                (list
-               @elem{以@litchar{分}结尾}
+               @elem{以@bold{@litchar{分}}结尾}
                "分离成复值"
                @elem{出参数据为复值}
                @elem{@racket[􏾺分]、@racket[𨚞分]、@racket[䢼分]、@racket[􏷳分]、@racket[􏷹分]}
                )
                (list
-               @elem{以@litchar{*}结尾}
+               @elem{以@bold{@litchar{*}}结尾}
                "加强力度"
                "出参内容更加丰富"
                @elem{@racket[引*]，@racket[􏾝*]，@racket[􏼏*]}
                )
                (list
-               @elem{以@litchar{~}结尾}
+               @elem{以@bold{@litchar{~}}结尾}
                "减轻力度"
                "出参内容更加贫瘠"
                @elem{@racket[􏷲~]、@racket[􏷶~]}
                )
                (list
-               @elem{以@litchar{v}结尾}
+               @elem{以@bold{@litchar{v}}结尾}
                @elem{加强力度（且改变出参成@racket[􏿴]）}
                @elem{出参内容更加丰富且被封装成@racket[􏿴]数据结构}
                @elem{@racket[引v]}
                )
                (list
-               @elem{以@litchar{^}结尾}
+               @elem{以@bold{@litchar{^}}结尾}
                @elem{加强力度（通过改变入参成@racket[􏿴]）}
                @elem{入参内容更加丰富且被封装进@racket[􏿴]数据结构}
                @elem{@racket[􏷲^]、@racket[伄^]、@racket[􏾘^]}
@@ -91,13 +91,13 @@
                @; @elem{@racket[序􏿴]、@racket[复􏿴]、@racket[𥸬􏿴]}
                @; )
                (list
-               @elem{以@litchar{/}符号分割}
+               @elem{以@bold{@litchar{/}}符号分割}
                @elem{@litchar{/}之后的内容是为修饰@litchar{/}之前的内容的}
                @elem{出参数据由@litchar{/}之前的内容决定}
                @elem{@racket[􏿴/组合]、@racket[􏿴/分组]}
                )
                (list
-               @elem{@litchar{/入}}
+               @elem{@bold{@litchar{/入}}}
                "进参为函数"
                @elem{进参并非常规数据，而是函数}
                @elem{@racket[度/入]、@racket[引/入]、@racket[引v/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
@@ -273,11 +273,19 @@
 (􏷽 '(1 2 3 4))
 ]
 
-@section+elemref{度}
-@margin-note{另见：@racket[度/入]}
-@examples[#:eval (the-eval)
-(度 '(a b c d e 3 f g))
+@section+elemref{巨}
+@margin-note{
+@bold{@litchar{巨}为活用字}
+@itemlist[
+@item{@litchar{巨}：测量返回长度（本意是“木工用方尺做丈量”（圆是规，方是矩，固有“无规矩不成方圆”之说））。}
 ]
+}
+@margin-note{另见：@racket[巨/入]}
+@examples[#:eval (the-eval)
+(巨 '(a b c d e 3 f g))
+]
+
+
 @section+elemref{引、引/入，引v、引v/入、弔}
 @margin-note{
 @bold{@litchar{弔}为古活字}
@@ -420,7 +428,7 @@
 (􏷲^ '(c e) '(a b c d e c f))
 ]
 
-@section+elemref{查、􏷹，􏷶、􏷶~，􏷹分，􏷹度}
+@section+elemref{查、􏷹，􏷶、􏷶~，􏷹分，􏷹巨}
 @margin-note{
 @bold{
 @litchar{􏷹}为新造字 @linebreak{}
@@ -438,7 +446,7 @@
 (􏷶 􏻛? '(1 2 -3 4 -5))
 (􏷶~ 􏻛? '(1 2 -3 4 -5))
 (􏷹分 􏻛? '(1 2 -3 4 -5)) @; 􏾽离 would still be list
-(􏷹度 􏻛? '(1 2 -3 4 -5))
+(􏷹巨 􏻛? '(1 2 -3 4 -5))
 ]
 
 @section+elemref{各，佫，􏷬，㦴，垎、右垎，佫􏷹、佫􏿝}

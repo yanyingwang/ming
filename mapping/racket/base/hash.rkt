@@ -68,7 +68,7 @@
 
 >>> hash-keys-subset? 􏿰阳仔? @elem{前者是否是后者的@racket[阳]的子集}
 >>> hash-for-each 􏿰各
->>> hash-count 􏿰度
+>>> hash-count 􏿰巨
 >>> hash-empty? 􏻵? ; 空􏿰 􏿰空
 
 >>> hash-iterate-first 􏿰引

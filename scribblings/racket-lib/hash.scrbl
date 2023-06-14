@@ -23,55 +23,55 @@
          #:row-properties '(border)
          (list (list @bold{规则} @bold{指示} @bold{含义} @bold{举例})
                (list
-               @elem{以@litchar{^}结尾}
+               @elem{以@bold{@litchar{^}}结尾}
                @elem{指示入参}
                @elem{入参数据是@racket[􏿳]类数据}
                @elem{@racket[􏿰^]、@racket[􏾋^]、@racket[􏾊^]、@racket[􏾉^]}
                )
                (list
-               @elem{包含@litchar{􏿰}和@litchar{囗}/@litchar{古}/@litchar{舌}/@litchar{亻}中任一者的}
+               @elem{包含@bold{@litchar{􏿰}}和@bold{@litchar{囗}}/@bold{@litchar{古}}/@bold{@litchar{舌}}/@bold{@litchar{亻}}中任一者的}
                @elem{指示“􏿰”中“键值对”唯一性的确立方式}
                @elem{是通过与之对应的@racket[同?]/@racket[􏾗?]/@racket[􏾃?]/@racket[侗?]中的任一者所确立的}
                @elem{@racket[􏾌]、@racket[􏾋]、@racket[􏾊]、@racket[􏾉]}
                )
                (list
-               @elem{包含@litchar{􏿰}和@litchar{山}/@litchar{氵}中任一者的}
+               @elem{包含@bold{@litchar{􏿰}}和@bold{@litchar{山}}/@bold{@litchar{氵}}中任一者的}
                @elem{指示“􏿰”中“键值对”是否可变}
                @elem{是不可或可被增加、删除或修改的}
                @elem{@racket[􏾐?]、@racket[􏾑?]}
                )
                (list
-               @elem{包含@litchar{􏿰}和@litchar{⺮}/@litchar{艹}中任一者的}
+               @elem{包含@bold{@litchar{􏿰}}和@bold{@litchar{⺮}}/@bold{@litchar{艹}}中任一者的}
                @elem{指示“􏿰”中“键值对”之“键”的存储方式}
                @elem{是刚性或柔性的}
                @elem{@racket[􏾎?]、@racket[􏾏?]}
                )
                (list
-               @elem{左偏旁@litchar{亻}}
+               @elem{左偏旁@bold{@litchar{亻}}}
                "相似集（类型相同且元素相似）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
                @elem{@racket[􏿰攸]、@racket[􏿰􏽕]}
                )
                (list
-               @elem{右偏旁@litchar{刂}}
+               @elem{右偏旁@bold{@litchar{刂}}}
                "缺失集（删除、移走、去掉部分元素之后的集合）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的子集}
                @elem{@racket[􏿰􏾘]、@racket[􏿰𠛮]}
                )
                (list
-               @elem{@litchar{扌}偏旁}
+               @elem{@bold{@litchar{扌}}偏旁}
                @elem{指示修改方式}
                @elem{会直接修改原始数据而非另造新数据作输出，并且出参相较无litchar{扌}时有本质上的区别}
                @elem{@racket[􏿰􏾩]、@racket[􏿰𫼛]}
                )
                (list
-               @elem{以@litchar{!}结尾}
+               @elem{以@bold{@litchar{!}}结尾}
                @elem{指示修改方式}
                @elem{会直接修改原始数据而非另造新数据作输出}
                @elem{@racket[􏿰􏾘!]、@racket[􏿰𠛮!]}
                )
                (list
-               @elem{@litchar{^-}}
+               @elem{@bold{@litchar{^-}}}
                @elem{指示入参}
                @elem{入参数据以相同方式多次出现}
                @elem{@racket[􏿰􏾩^-]}
@@ -291,12 +291,12 @@ h
 (􏿰阳仔? (􏿰 'b "bb") (􏿰 'a "aaa" 'b "bbb" 'c "ccc"))
 ]
 
-@section+elemref{􏿰度}
+@section+elemref{􏿰巨}
 @margin-note{
-参见：@racket[度]、@racket[空?]
+参见：@racket[巨]、@racket[空?]
 }
 @examples[#:eval (the-eval)
-(􏿰度 (􏿰 'a "aa" 'b "bb"))
+(􏿰巨 (􏿰 'a "aa" 'b "bb"))
 
 ]
 

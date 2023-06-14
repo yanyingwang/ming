@@ -94,14 +94,14 @@
                @elem{@bold{@litchar{穴}}}
                @elem{空的，无值的（@litchar{空}的简写）}
                @elem{无}
-               @elem{@racket[􏻸?]、@racket[􏻵?]、@racket[􏻷?]、@racket[􏻶?]}
+               @elem{@racket[空?]、@racket[𥥪]?、@racket[􏻸?]、@racket[􏻵?]、@racket[􏻷?]、@racket[􏻶?]}
                )
 
                (list
                @elem{@bold{@litchar{米}}}
                @elem{数字（@litchar{数}的简写）}
                @elem{无}
-               @elem{@racket[􏼏]、@racket[􏽐?]}
+               @elem{@racket[􏼏]、@racket[米?]、@racket[𥥪?]、@racket[夈?]、@racket[粊?]、@racket[􏻛?]、@racket[􏺧?]、@racket[􏽊]、@racket[􏺚]}
                )
 
                (list

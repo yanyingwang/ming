@@ -60,7 +60,7 @@
 
 >>> filter-not 􏷶 "去除掉所有符合条件的元素并返回新数据" ;; 筛除 ; 淘 汰 剔 􏾽余 􏾼 􏷸
 >>> partition 􏷹分 @elem{将@racket[􏷹]和余下的分离开（输出结果是一个复值）} ;; 筛开 筛分 筛离 筛分 􏾽分
->>> count 􏷹度 @elem{返回@racket[􏷹]的@racket[度]，等同于@code{(度 (􏷹 lst))}} ;;度/入 计 λ 度/入
+>>> count 􏷹巨 @elem{返回@racket[􏷹]的@racket[巨]，等同于@code{(巨 (􏷹 lst))}} ;;度/入 计 λ 度/入
 
 >>> filter-map 佫􏷹 @elem{等同于@code{(􏷹 (入 (x) x) (佫 proc lst))}} ;佫之􏷹 􏷹佫 􏷯
 >>> append-map 佫􏿝 @elem{等同于@code{(􏿝 (佫 proc lst))}} ;佫之􏿝
@@ -73,8 +73,8 @@
 >>> in-combinations 􏿴序列/组合
 >>> in-permutations 􏿴序列/排列组合
 
->>> argmax 佫之􏽇 @elem{@racket[佫]之@racket[􏽇]}
->>> argmin 佫之􏽈 @elem{@racket[佫]之@racket[􏽈]}
+>>> argmax 佫之􏻡 @elem{@racket[佫]之@racket[􏻡]}
+>>> argmin 佫之􏻠 @elem{@racket[佫]之@racket[􏻠]}
 
 >>> group-by 􏿴/分组
 >>> cartesian-product 􏿴/笛卡尔积

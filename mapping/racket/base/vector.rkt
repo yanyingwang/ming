@@ -6,7 +6,7 @@
 >>> make-vector 􏻺 @elem{构造构造内容是若干而相同元素的@racket[􏻿]}
 ;; >>> make-vector 复􏻿 @elem{构造复@racket[􏻿]（数据内各个元素是相同的，类比（昆虫）“复眼”一词取名）}
 >>> vector-immutable 􏻼 @elem{构造内容不能被修改的数组} ;; 贞􏻿 坚􏻿 定􏻿 固
->>> vector-length 􏻿度 @elem{返回􏻿的长度}
+>>> vector-length 􏻿巨 @elem{返回􏻿的长度} ;􏻿度
 >>> vector-ref 􏻿弔 @elem{返回􏻿的某索引处的元素}
 >>> vector-set! 􏻿􏾩 @elem{直接修改原数组中某索引处的元素为新值}
 >>> vector*-length vector*-length

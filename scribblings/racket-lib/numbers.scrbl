@@ -14,14 +14,17 @@
 @script/rainbow-delimiters*
 
 
-@title[#:tag "numbers"]{数}
-@margin-note{@litchar{数}被简写为@litchar{米}偏旁，以便构造单字来表示跟其相关的概念。}
+@title[#:tag "numbers"]{米}
+@margin-note{
+@bold{@litchar{数}被简写为@litchar{米}偏旁，以便构造单字来表示跟其相关的概念}
+@itemlist[
+@item{现代汉语中“数”有关的概念和词汇很多都来对英文的直接翻译，并且大都使用词组来构造；}
+@item{但我认为仅单个汉字所能包含的意义很多时候就已经比英文中的单词多了，进而还构造使用词组进行表达就会显得“含意过剩”，反而显得啰唆，含意不清；}
+@item{故此，本语言对关于“数”的例程做了简化：剔除多余无效的表意偏旁，代之以简洁有效的偏旁组合成单字进行表达。}
+]
+}
 
 “数”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "numbers"]）是编程语言乃至现代科学中极其重要的一个概念。 @linebreak{}
-
-现代汉语中“数”有关的概念和词汇很多都来对英文的直接翻译，并且大都使用词组来构造。@linebreak{}
-但我认为仅单个汉字所能包含的意义很多时候就已经比英文中的单词多了，进而还构造使用词组进行表达就会显得“含意过剩”，反而显得啰唆，含意不清。 @linebreak{}
-故此，本语言对关于“数”的例程做了简化：剔除多余无效的表意偏旁，代之以简洁有效的偏旁组合成单字进行表达，比如所有跟“数”相关的概念均采用@litchar{米}偏旁来构造。
 
 
 @section[#:tag "list-rules"]{单字命名规则}
@@ -33,7 +36,7 @@
               (list
               @elem{下偏旁@bold{@litchar{米}}}
               @elem{大类概念}
-              @elem{@racket[夈?]、@racket[宩]、@racket[􏻟]、@racket[粊?]、@racket[䉾?]、@racket[􏻧?]、@racket[􏻥?]}
+              @elem{@racket[米?]、@racket[夈?]、@racket[宩]、@racket[􏻟]、@racket[粊?]、@racket[䉾?]、@racket[􏻧?]、@racket[􏻥?]}
               )
               (list
               @elem{上偏旁@bold{@litchar{米}}}
@@ -46,11 +49,6 @@
               @elem{@racket[米?]、@racket[􏻴?]、@racket[釆?]}
               )
               (list
-              @elem{左偏旁@bold{@litchar{立}}}
-              @elem{精确位数}
-              @elem{@racket[􏻞?]、@racket[􏻝?]}
-              )
-              (list
               @elem{左偏旁@bold{@litchar{米}}}
               @elem{运算或转化例程（出参是数字）}
               @elem{@racket[􏽉]、@racket[􏽊]、@racket[􏻡]、@racket[􏻠]、@racket[􏻏]}
@@ -59,6 +57,11 @@
               @elem{左偏旁@bold{@litchar{􏻴}}}
               @elem{运算或转化例程（出参是整数型数字）}
               @elem{@racket[􏺚]、@racket[􏺾]、@racket[􏺽]、@racket[􏺙]}
+              )
+              (list
+              @elem{左偏旁@bold{@litchar{立}}}
+              @elem{精确位数}
+              @elem{@racket[􏻞?]、@racket[􏻝?]}
               )
               (list
               @elem{左偏旁@bold{@litchar{刀}}}
@@ -120,6 +123,7 @@
 @bold{@litchar{􏺧}为新造字}  @linebreak{}
 @bold{@litchar{􏺦}为新造字}  @linebreak{}
 @itemlist[
+@item{上偏旁@litchar{米}：数相关的常用概念；}
 @item{@litchar{正}：正数的；}
 @item{@litchar{贝}：负数的，@litchar{负}的简写；}
 @item{@litchar{日}：奇数的，“奇数”在古代叫“阳数”（阴阳是贯穿于本语言的基本概念）；}

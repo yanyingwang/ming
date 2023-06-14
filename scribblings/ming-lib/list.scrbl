@@ -106,12 +106,12 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 ]
 }
 
-@defproc[(度/入 [LST 􏿴?] [PROC 程?])
+@defproc[(巨/入 [LST 􏿴?] [PROC 程?])
           􏻱􏻲?]{
 以@racket[PROC]来测量@racket[LST]的长度。
-@margin-note{另见：@racket[度]、@racket[􏷹度]}
+@margin-note{另见：@racket[巨]、@racket[􏷹巨]}
 @examples[#:eval (the-eval)
-(度/入 '(a b 12 c 33 d  58 f g) 数?)
+(巨/入 '(a b 12 c 33 d  58 f g) 数?)
 ]
 }
 
