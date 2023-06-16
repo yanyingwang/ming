@@ -500,7 +500,7 @@
 ]
 
 
-@section+elemref{佫之􏽇、佫之􏽈}
+@section+elemref{佫之􏻡、佫之􏻠}
 @examples[#:eval (the-eval)
 (佫之􏻡 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
 (佫之􏻠 char->integer '(#\a #\y #\b #\k #\c #\j #\d))

@@ -123,14 +123,14 @@
                @elem{@bold{@litchar{山}}}
                @elem{稳定的、内容不变的（见：@racket[固?]）}
                @elem{无}
-               @elem{@racket[􏻼]、@racket[􏾐]}
+               @elem{@racket[􏻼]、@racket[􏾐]、@racket[􏽁]}
                )
 
                (list
                @elem{@bold{@litchar{氵}}}
                @elem{易动的、内容可变的（见：@racket[易?]）}
                @elem{无}
-               @elem{@racket[􏻽]、@racket[􏾑]}
+               @elem{@racket[􏻽]、@racket[􏾑]、@racket[􏽀]}
                )
          )
          ]

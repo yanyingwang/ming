@@ -36,7 +36,7 @@
               (list
               @elem{下偏旁@bold{@litchar{米}}}
               @elem{大类概念}
-              @elem{@racket[米?]、@racket[夈?]、@racket[宩]、@racket[􏻟]、@racket[粊?]、@racket[䉾?]、@racket[􏻧?]、@racket[􏻥?]}
+              @elem{@racket[米?]、@racket[夈?]、@racket[宩]、@racket[􏻟]、@racket[粊?]、@racket[䉾?]、@racket[􏻥?]}
               )
               (list
               @elem{上偏旁@bold{@litchar{米}}}
@@ -50,8 +50,8 @@
               )
               (list
               @elem{左偏旁@bold{@litchar{米}}}
-              @elem{运算或转化例程（出参是数字）}
-              @elem{@racket[􏽉]、@racket[􏽊]、@racket[􏻡]、@racket[􏻠]、@racket[􏻏]}
+              @elem{内部实现、运算或转化例程（出参是数字）}
+              @elem{@racket[􏺸]、@racket[􏽉]、@racket[􏽊]、@racket[􏻡]、@racket[􏻠]、@racket[􏻏]}
               )
               (list
               @elem{左偏旁@bold{@litchar{􏻴}}}
@@ -247,18 +247,12 @@
 
 
 @section+elemref{类型转化：􏺸化、􏺟化、􏻞化、􏻝化}
-@margin-note{
-@bold{@litchar{􏻛}为新造字}  @linebreak{}
-@bold{@litchar{􏻚}为新造字}  @linebreak{}
-@bold{@litchar{􏻙}为新造字}  @linebreak{}
-@bold{@litchar{􏻘}为新造字}  @linebreak{}
-@itemlist[
-@; @item{@litchar{禸}：偶数的，@litchar{偶}的简写。}
-]
-}
 @; 对于“粊”而言，最常使用的子概念是：“􏻛”（正数）、“􏻚”（负数）、“􏻙”（奇数）、“􏻘”（偶数）。
-
 @examples[#:eval (the-eval)
+(􏺸化 1.1)
+(􏺟化 1)
+(􏻞化 1)
+(􏻝化 1)
 ]
 
 

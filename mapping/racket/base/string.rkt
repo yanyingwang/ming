@@ -5,7 +5,7 @@
 >>> string 句 "创建一个内容可变的字符串数据结构" ;; TODO: create all the procedures started with 易 to 坚
 >>> make-string 􏼅 @elem{构造内容是若干个相同元素的@racket[句]} ;复句
 >>> string->immutable-string 􏽁化 @elem{把@racket[􏽀]转变为@racket[􏽁]}
->>> string-length 􏼬 "句的长度"
+>>> string-length 􏺕 "句的长度"  ;􏼬
 >>> string-ref 􏼭 "返回句的第N个元素（从0算起）"
 >>> string-set! 􏼘 @elem{直接修改原始数据第N处字（从0算起）为某字} ;句􏾩 敂! 拘
 >>> substring 邭 @elem{返回句第N到M处内容组成的@racket[􏽀]} ;句􏾝
@@ -30,7 +30,7 @@
 >>> string-ci>? 句ci>?
 >>> string-ci>=? 句ci>=?
 
->>> string-upcase 􏼨 @elem{将句大写化}
->>> string-downcase 􏼧 @elem{将句小写化}
->>> string-titlecase 􏼦 @elem{将句中单词首字母大写化其余小写化}
->>> string-foldcase 􏼧* @elem{将句中单词做CaseFolding处理}
+>>> string-upcase 􏺔 @elem{将句大写化} ;􏼨
+>>> string-downcase 􏺓 @elem{将句小写化} ;􏼧
+>>> string-titlecase 􏺒 @elem{将句中单词首字母大写化其余小写化} ;􏺒
+>>> string-foldcase 􏺓* @elem{将句中单词做CaseFolding处理} ;
