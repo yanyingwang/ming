@@ -23,7 +23,7 @@
 @bold{@litchar{勾}为活用字}
 @itemlist[
 @item{@litchar{勹}：工厂、容器、外壳；}
-@item{@litchar{厶}：参数；}
+@item{@litchar{厶}：参数（通@litchar{参}）；}
 @item{@litchar{勾}：在古代通@litchar{句}，在此借用为表示@racket[勾]是和@racket[句]相近的一种数据结构；}
 ]
 }
