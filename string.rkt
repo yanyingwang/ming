@@ -3,6 +3,7 @@
 (provide 􏽀 􏽁
          􏽁? 􏽀?
          邭*
+         􏻷
          )
 (require "racket/base.rkt" "racket/string.rkt" racket/function)
 
@@ -26,3 +27,9 @@
 
 (名 (易? V)
     ((negate 固?) V))
+
+(名 (􏻷? V)
+    ((negate 􏼟?) V))
+
+(名 (􏻷? V)
+    ((negate 􏻶?) V))

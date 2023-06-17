@@ -16,6 +16,8 @@
 
 @title[#:tag "vector"]{􏻿}
 @margin-note{另见名扩展库：@secref["ming-vector"]}
+“􏻿”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "vector"]）是类似于“@secref["pairs-and-lists"]”的一种数据结构，通常被称为“数组”。
+
 
 @section[#:tag "rules"]{例程命名规则}
 除总@secref["naming-rules"]外，另有：
@@ -111,7 +113,6 @@
 @margin-note{
 参见：@racket[固?]、@racket[易?] @linebreak{}
 }
-“􏻿”（@tech[ #:doc '(lib "scribblings/reference/reference.scrbl") "vector"]）是类似于“@secref["pairs-and-lists"]”的一种数据结构，通常被称为“数组”。  @linebreak{}
 相比于@racket[􏿴]，在以下场景下使用@racket[􏻿]会更具效率优势：元素长度确定、需要频繁获取或修改元素而不需要增加或移除元素。  @linebreak{}
 另外，“􏻿”按内容是否可以被修改，可以被分为：“易􏻿”和“固􏻿”，简写为“􏻽”和“􏻼”，“􏻽”为默认值。
 @examples[#:eval (the-eval)

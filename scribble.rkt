@@ -44,7 +44,7 @@
     [(_ pars ...)
      (datum->syntax stx `(begin
                            ,(cons 'section #'(pars ...))
-                           ,@(for/list ([e (string-split (syntax-e (last (syntax-e #'(pars ...)))) #rx"(、|，)")]) (list 'elemtag (string-trim e))) ; fix last, when source code includes newlines
+                           ,@(for/list ([e (string-split (syntax-e (last (syntax-e #'(pars ...)))) #rx"(、|，|：)")]) (list 'elemtag (string-trim e))) ; fix last, when source code includes newlines
                            (linebreak)))]
     )
   )

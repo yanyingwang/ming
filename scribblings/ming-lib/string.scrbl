@@ -49,3 +49,12 @@ Racket标准库@secref["string"]的名语言扩展。
 (邭* "abcdefg" 0 2)
 ]
 }
+
+
+@defproc[(􏼟 [V any?])
+boolean?]{
+@margin-note{另见：@racket[邭]}
+@examples[#:eval (the-eval)
+(邭* "abcdefg" 0 2)
+]
+}

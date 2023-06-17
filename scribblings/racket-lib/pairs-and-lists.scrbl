@@ -15,6 +15,8 @@
 
 @title[#:tag "pairs-and-lists"]{双和􏿴}
 @margin-note{另见名扩展库：@secref["ming-list"]}
+“双”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构。
+
 
 @section[#:tag "list-rules"]{例程命名规则}
 除总@secref["naming-rules"]外，另有：
@@ -105,7 +107,6 @@
          )]
 
 @section+elemref[#:tag "pair-car-cdr-list-list*"]{双，􏿴、􏿫}
-“双”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "pair"]）是LISP语言最最基础的数据结构：
 对于名语言来说，如果我们把两个数据配成对（@racket[双]在一块），我们就得到一个“双”，而双在一块的这两个数据分别处于他们所构成的这个“双”的@racket[阳]位和@racket[阴]位。
 
 进而，@elemtag["what-is-􏿴􏿫" "如果一个“双”的阴位存的是另外一个“双”，数个双如此前后相接成链状："]

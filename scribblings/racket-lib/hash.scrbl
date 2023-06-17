@@ -14,6 +14,8 @@
 
 @title[#:tag "hash"]{􏿰}
 @margin-note{另见名扩展库：@secref["ming-hash"]}
+“@racket[􏿰]”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "hash"]）是一种内部元素都是“键值对（key/value）”的数据结构。
+
 
 @section[#:tag "hash-rules"]{例程命名规则}
 除总@secref["naming-rules"]外，另有：
@@ -108,8 +110,7 @@
 }
 @margin-note{另见：@racket[􏾑]}
 
-
-“@racket[􏿰]”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "hash"]）是一种内部元素都是“键值对（key/value）”的数据结构，其在以下特性上可以被进一步细分：
+“􏿰”在以下特性上可以被进一步细分：
 @itemlist[
 @item{
 @bold{是否可以增加、修改、删除“键值对”}，即“􏿰”的内容是否可以被改变：

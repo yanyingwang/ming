@@ -15,6 +15,9 @@
 
 @title[#:tag "keywords"]{勾}
 
+@section[#:tag "list-rules"]{例程命名规则}
+见@secref["naming-rules"]。
+
 
 @section+elemref{勾}
 “勾”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "keywords"]）。
@@ -32,3 +35,9 @@
 @defmapping[
 racket/base/keywords
 ]
+
+
+
+@section[#:tag "symbols-additional"]{额外例程}
+@defmodule[ming/racket/keywords]
+@defmapping[racket/keyword]

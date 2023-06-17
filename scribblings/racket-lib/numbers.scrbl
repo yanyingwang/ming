@@ -15,6 +15,10 @@
 
 
 @title[#:tag "numbers"]{米}
+“数”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "numbers"]）是编程语言乃至现代科学中极其重要的一个概念。
+
+
+@section[#:tag "list-rules"]{单字命名规则}
 @margin-note{
 @bold{@litchar{数}被简写为@litchar{米}偏旁，以便构造单字来表示跟其相关的概念}
 @itemlist[
@@ -24,10 +28,6 @@
 ]
 }
 
-“数”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "numbers"]）是编程语言乃至现代科学中极其重要的一个概念。 @linebreak{}
-
-
-@section[#:tag "list-rules"]{单字命名规则}
 @tabular[@;#:sep @hspace[0]
         #:style 'boxed
         #:column-properties '(center)
