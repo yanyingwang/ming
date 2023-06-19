@@ -12,6 +12,8 @@
          􏷲
          偅
          仔?
+         􏿳 􏿳?
+         􏺈 􏺇
          )
 ;; (provide 筛分* 分* 右分* 分*/入 右分*/入 段)
 (require "racket/base.rkt" "racket/list.rkt")
@@ -129,5 +131,28 @@
              (演 (阴 LST) (阳 LST) R-LST)]))
     )
 
-(名 (仔? LST1 LST2) ; 阜
-    (􏷬 (入 (e) (且 (弓 LST2 e) #t)) LST1))
+(名 (仔? LST1 LST2) ; 阜 人
+    (􏷮 (入 (e)
+           (且 (弓 LST2 e) #t))
+       LST1))
+
+
+
+(名 (􏿳 . V-LST)
+    (令 演 ([LST V-LST] [I 0] [X 空])
+        (当 [(空? LST) '()]
+            [(􏺦? I)
+             (演 (阴 LST) (􏽊 I) (阳 LST))]
+            [(􏺧? I)
+             (双 (双 X (阳 LST)) (演 (阴 LST) (􏽊 I) (阳 LST)))])))
+
+
+(名 (􏿳? V)
+    (且 (􏿴? V) (􏷮 双? V)))
+
+
+(名 (􏺈 ALST)
+    (佫 阳 ALST))
+
+(名 (􏺇 ALST)
+    (佫 阴 ALST))

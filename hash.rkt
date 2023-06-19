@@ -1,7 +1,6 @@
 #lang racket/base
 
-(provide 􏿳
-         􏾌 􏾑 􏾐
+(provide 􏾌 􏾑 􏾐
          􏾐? 􏾑? ; 􏾐
          􏽞? 􏽝? 􏽜? 􏽛?
          􏽮? 􏽭? 􏽬? 􏽫? ;; 􏽲? 􏽱? 􏽰? 􏽯?
@@ -9,15 +8,7 @@
          􏽪? 􏽩? 􏽨? 􏽧?
          􏽢? 􏽡? 􏽠? 􏽟?
          )
-(require racket/function "racket/base.rkt" "racket/hash.rkt")
-
-(名 (􏿳 . V-LST)
-    (令 演 ([LST V-LST] [I 0] [X 空])
-        (当 [(空? LST) '()]
-            [(􏺦? I)
-             (演 (阴 LST) (􏽊 I) (阳 LST))]
-            [(􏺧? I)
-             (双 (双 X (阳 LST)) (演 (阴 LST) (􏽊 I) (阳 LST)))])))
+(require racket/function "racket/base.rkt" "racket/hash.rkt" "list.rkt")
 
 
 (名 (􏾌 . V-LST)

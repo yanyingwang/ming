@@ -75,7 +75,7 @@
                @elem{@bold{@litchar{扌}}}
                @elem{直接修改了原始数据（通标点@bold{@litchar{!}}）}
                @elem{无出参}
-               @elem{􏾩（@racket[􏻿􏾩]）、@racket[􏼘]、􏽒（@racket[􏻿􏽒]）、𰅡（@racket[􏻺𰅡]）、@racket[􏻿􏾩/以􏾝]}
+               @elem{􏾩(@racket[􏻿􏾩]、@racket[􏿰􏾩])、@racket[􏼘]、􏽒（@racket[􏻿􏽒]）、𰅡(@racket[􏻺𰅡])、@racket[􏻿􏾩/以􏾝]}
                )
 
                (list
@@ -87,7 +87,7 @@
 
 
                (list
-               @elem{上@bold{@litchar{三}}}
+               @elem{@bold{@litchar{三}}}
                @elem{若干个相同元素 @linebreak{}
                      （道生一，一生二，二生三，三生万物。故“三”有“多”之意，进而解释为：三个（若干个）一（相同的元素））}
                @elem{无}
@@ -95,7 +95,7 @@
                )
 
                (list
-               @elem{上@bold{@litchar{弔}}}
+               @elem{@bold{@litchar{弔}}}
                @elem{序数（原是“索引”之意（见@racket[弔]），但因索引是从零开始的序数，故在此借用之）}
                @elem{无}
                @elem{@racket[􏼎]、@racket[􏻻]、@racket[􏼄]}
@@ -128,17 +128,11 @@
                @elem{@racket[􏼟?]、@racket[𥥪?]、@racket[􏻸?]、@racket[􏻵?]、@racket[􏻷?]、@racket[􏼟?]}
                )
 
-               (list
-               @elem{@bold{@litchar{巨}}}
-               @elem{测量长度}
-               @elem{出参是@racket{米?}（数字）}
-               @elem{@racket[巨]、@racket[􏺕]、@racket[􏻿巨]、@racket[􏿰巨]}
-               )
 
                (list
                @elem{@bold{@litchar{巨}}}
                @elem{测量长度}
-               @elem{出参是@racket{米?}（数字）}
+               @elem{出参是@racket[米?]（数字）}
                @elem{@racket[巨]、@racket[􏺕]、@racket[􏻿巨]、@racket[􏿰巨]}
                )
 
@@ -191,12 +185,12 @@
                @elem{@racket[􏷲~]、@racket[􏷶~]}
                )
 
-               (list
-               @elem{以@bold{@litchar{v}}结尾}
-               @elem{加强力度（且改变出参成@racket[􏿴]）}
-               @elem{出参内容更加丰富且被封装成@racket[􏿴]数据结构}
-               @elem{@racket[引v]}
-               )
+               @; (list
+               @; @elem{以@bold{@litchar{v}}结尾}
+               @; @elem{加强力度（且改变出参成@racket[􏿴]）}
+               @; @elem{出参内容更加丰富且被封装成@racket[􏿴]数据结构}
+               @; @elem{@racket[引v]}
+               @; )
                (list
                @elem{以@bold{@litchar{^}}结尾}
                @elem{加强力度（通过改变入参成@racket[􏿴]）}
@@ -266,7 +260,7 @@
                @elem{包含@bold{@litchar{/入}}}
                "进参为函数"
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[度/入]、@racket[引/入]、@racket[引v/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
+               @elem{@racket[巨/入]、@racket[弓/入]、@racket[𰁣/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
                )
          )
          ]

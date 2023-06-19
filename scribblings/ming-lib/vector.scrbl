@@ -41,13 +41,12 @@ Racket标准库@secref["vector"]的名语言扩展。
           @defproc[(􏻼? [VEC any?])
           boolean?])]{
 @margin-note{
+两例程分别等同于：
 @itemlist[
 @item{
-@code{(􏻽? VEC)}等同于：
 @code{(且 (易? VEC) (􏻿? VEC))}
 }
 @item{
-@code{(􏻼? VEC)}等同于：
 @code{(且 (固? VEC) (􏻿? VEC))}
 }
 ]

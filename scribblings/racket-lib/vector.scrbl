@@ -64,10 +64,10 @@
                @; @elem{@racket[􏻿㙏!]}
                @; )
                (list
-               @elem{@bold{@litchar{^-}}结尾}
+               @elem{@bold{@litchar{+}}结尾}
                @elem{指示入参}
                @elem{入参数据以相同方式多次出现}
-               @elem{@racket[􏻿􏾩^-]}
+               @elem{@racket[􏻿􏾩+]}
                )
                @; (list
                @; @elem{以@litchar{􏻿}结尾}
@@ -181,7 +181,7 @@
 vec
 ]
 
-@section+elemref{􏻿􏾩，􏻿􏾩^-，􏻺𰅡，􏻿􏾩/以􏾝}
+@section+elemref{􏻿􏾩，􏻿􏾩+，􏻺𰅡，􏻿􏾩/以􏾝}
 @margin-note{参见：@racket[􏾝]、@racket[攸]}
 @margin-note{另见：@racket[􏻿􏾝]、@racket[􏻿􏾩/以􏾝*]}
 @examples[#:eval (the-eval)
@@ -189,7 +189,7 @@ vec
 vec
 (􏻿􏾩 vec 1 'x)
 vec
-(􏻿􏾩^- vec 1 'y 2 'y)
+(􏻿􏾩+ vec 1 'y 2 'y)
 vec
 (􏻺𰅡 vec 'z)
 vec

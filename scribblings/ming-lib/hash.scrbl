@@ -16,26 +16,6 @@
 Racket标准库@secref["hash"]的名语言扩展。
 @margin-note{本页所列之例程的实现代码是名语言，因此源代码有参照意义。}
 
-@defproc[(􏿳 [V any?] ...) 􏿳?]{
-生成元素是“键值对”之@racket[􏿴]。 @linebreak{}
-通过“@racket[􏿴]”也能构造出来元素是“键值对”的数据结构，这种数据结构我们称之为“@racket[􏿳]”（association list）。 @linebreak{}
-“􏿳”可以被看作是减配的“􏿰”（比如“键值对”不必唯一）。
-
-@margin-note{
-@bold{@litchar{􏿳}为新造字}
-@itemlist[
-@item{该字仿照@litchar{􏿴}字而造，表示其也是一种@racket[􏿴]数据结构；}
-@item{偏旁@litchar{双}表示该数据的主要组成元素是一种“键值对”（类似@racket[双]）。}
-]
-}
-@examples[#:eval (the-eval)
-(􏿳 1 2 3 4 1 5)
-(􏿳)
-(􏿳 1)
-(􏿳 1 2 3)
-]
-}
-
 @deftogether[(
 @defproc[(􏾌 [V any?] ...) 􏾌?]
 @defproc[(􏾑 [V any?] ...) 􏾑?]
@@ -77,9 +57,9 @@ Racket标准库@secref["hash"]的名语言扩展。
 @litchar{􏽞}、@litchar{􏽝}、@litchar{􏽜}、@litchar{􏽛}是新造字
 }
 @itemlist[
-@item{@litchar{十}：@litchar{艹}的缩写；}
-@item{@litchar{丿一丶}：@litchar{⺮}的缩写；}
-@item{@litchar{丶丶}：@litchar{氵}的缩写。}
+@item{@litchar{十}：@litchar{艹}的简写；}
+@item{@litchar{丿一丶}：@litchar{⺮}的简写；}
+@item{@litchar{丷}：@litchar{氵}的简写。}
 ]
 }
 @examples[#:eval (the-eval)

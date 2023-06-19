@@ -45,12 +45,14 @@
 @bold{@litchar{侗}为活用字} @linebreak{}
 @itemlist[
 @item{偏旁@litchar{古}：表示“稳固的、不变的”（见@racket[固?]）；}
-@item{偏旁@litchar{舌}：中@litchar{丿}表示“复合数据”（list/struct等）；}
+@item{偏旁@litchar{舌}：@litchar{古}+@litchar{丿}，@litchar{丿}表示“复合数据”（list/struct等）；}
 @item{偏旁@litchar{亻}：表示“实体上一样”。}
 ]
 }
 @examples[#:eval (the-eval)
-(􏾗? (make-string 3 #\z) (make-string 3 #\z))
+(􏾗? (句 #\a #\b #\b) (句 #\a #\b #\b))
+(􏾗? (􏽁 #\a #\b #\b) (􏽁 #\a #\b #\b))
+
 (􏾗? (list 1 2) (list 1 2))
 (􏾗? (expt 2 100) (expt 2 100))
 ]

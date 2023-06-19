@@ -68,7 +68,7 @@
                @elem{以@bold{@litchar{*}}结尾}
                "加强力度至出参"
                "出参内容更加丰富"
-               @elem{@racket[弓*]，@racket[􏼏*]}
+               @elem{@racket[弓*]、@racket[􏼏*]}
                )
                (list
                @elem{以@bold{@litchar{~}}结尾}
@@ -457,11 +457,13 @@
 (􏷹巨 􏻛? '(1 2 -3 4 -5))
 ]
 
-@section+elemref{各，佫，􏷬，㦴，垎、右垎，佫􏷹、佫􏿝} @;􏷮，􏷭
+@section+elemref{各，佫，􏷮、􏷭，垎、右垎，佫􏷹、佫􏿝} @;􏷮，􏷭
 @margin-note{
 @bold{@litchar{佫}为古活字} @linebreak{}
-@bold{@litchar{􏷬}为新造字} @linebreak{}
-@bold{@litchar{㦴}为古活字} @linebreak{}
+@; @bold{@litchar{􏷬}为新造字} @linebreak{}
+@; @bold{@litchar{㦴}为古活字} @linebreak{}
+@bold{@litchar{􏷮}为新造字} @linebreak{}
+@bold{@litchar{􏷭}为新造字} @linebreak{}
 @bold{@litchar{垎}为活用字}
 @itemlist[
 @item{@litchar{各}：表意，各个元素依次；}
@@ -477,9 +479,9 @@
 @itemlist[
 @item{@code{(佫 某例程 (􏿴 a b c))}}
 @item{@code{(􏿴 (某例程 a) (某例程 b) (某例程 c))}}
-@item{@code{(􏷬 某例程 (􏿴 a b c))}}
+@item{@code{(􏷮 某例程 (􏿴 a b c))}}
 @item{@code{(且 (某例程 a) (某例程 b) (某例程 c))}}
-@item{@code{(㦴 某例程 (􏿴 a b c))}}
+@item{@code{(􏷭 某例程 (􏿴 a b c))}}
 @item{@code{(或 (某例程 a) (某例程 b) (某例程 c))}}
 @item{@code{(垎 某例程 z (􏿴 a b c))}}
 @item{@code{(某例程 c (某例程 b (某例程 a z)))}}
@@ -493,11 +495,11 @@
 (佫 􏽊 '(1 2 3 4))
 (佫 + '(1 2 3 4) '(100 200 300 400))
 
-(􏷬 􏻛? '(1 2 -3 4))
-(􏷬 + '(1 2 3 4) '(100 200 300 400))
+(􏷮 􏻛? '(1 2 -3 4))
+(􏷮 + '(1 2 3 4) '(100 200 300 400))
 
-(􏷬 􏻚? '(1 2 -3 4))
-(㦴 + '(1 2 3 4) '(100 200 300 400))
+(􏷭 􏻚? '(1 2 -3 4))
+(􏷭 + '(1 2 3 4) '(100 200 300 400))
 
 (垎 + 0 '(1 2 -3 4))
 (垎 双 '() '(1 2 -3 4))

@@ -25,25 +25,25 @@
 
 >>> remove 􏷲~ @elem{以@racket[同?]作为比较来删除第一个寻找到的某元素} ;; 刈 删 缺
 >>> remw 􏷲~/􏾗 @elem{类上，另外比较例程是@racket[􏾗?]}
->>> remv 􏷲~/􏾖 @elem{类上，另外比较例程是@racket[􏾖?]}
+>>> remv 􏷲~/􏾃 @elem{类上，另外比较例程是@racket[?􏾃]}
 >>> remq 􏷲~/侗 @elem{类上，另外比较例程是@racket[侗?]}
 ;; 刈~ should be acting as 刈, and result of (刈 'c '(a b c c d)) should be same as (刈* '(c) '(a b c c d))
 >>> remove* 􏷲^ @elem{类@racket[􏷲]，不过入参不同。}
 >>> remw* 􏷲^/􏾗 @elem{类上}
->>> remv* 􏷲^/􏾖 @elem{类上}
+>>> remv* 􏷲^/􏾃 @elem{类上}
 >>> remq* 􏷲^/侗 @elem{类上}
 
 >>> sort 𠆯 @elem{将@racket[􏿴]中元素以指定的规则理顺} ; 亻理 𠍣 􏿀 􏿀
 
 >>> member 𬩽 @elem{以@racket[同]作为比较来寻找某元素和其之后的所有元素}  ;; 后􏿴 索 ;; 索 寻 寻随
 >>> memw 𬩽/􏾗 @elem{类上}
->>> memv 𬩽/􏾖 @elem{类上}
+>>> memv 𬩽/􏾃 @elem{类上}
 >>> memq 𬩽/侗 @elem{类上}
 >>> memf 𬩽/入 @elem{类上}
 
 >>> assoc 􏿁 @elem{以@racket[同]作为比较来寻找阳位是某值的元素}  ; 探 挖 掘
 >>> assw 􏿁/􏾗 @elem{类上}
->>> assv 􏿁/􏾖 @elem{类上}
+>>> assv 􏿁/􏾃 @elem{类上}
 >>> assq 􏿁/侗 @elem{类上}
 >>> assf 􏿁/入 @elem{类上}
 
@@ -55,8 +55,8 @@
 >>> for-each 各 "各个元素依次执行某一个例程" ; 𮞑 𮞑
 >>> map 佫 @elem{把某一个例程依次作用在各个元素上} ;; 各 依次应 映
 
->>> andmap 􏷬 @elem{各个元素全都是...} ;; 各有应 各都 映且 且佫 全 各且 􏷱 􏷮
->>> ormap 㦴 @elem{各个元素有的是...} ;; 各无应 各有 映或 或佫 有 各或 􏷰 􏷭
+>>> andmap 􏷮 @elem{各个元素全都是...} ;; 各有应 各都 映且 且佫 全 各且 􏷱 􏷮 􏷬
+>>> ormap 􏷭 @elem{各个元素有的是...} ;; 各无应 各有 映或 或佫 有 各或 􏷰 㦴 􏷭
 >>> foldl 垎 @elem{各个元素作为参数连同上次结果一块依次参与作用到函数上}  ;; 各左参 摄 扌参 参予 挌参 敋参 掺 各参 臵 垎 珞 敋 垎 酪
 >>> foldr 右垎 @elem{从右边起，各个元素作为参数连同上次结果一块依次参与作用到函数上} ;;右掺
 
