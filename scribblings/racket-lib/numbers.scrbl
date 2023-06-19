@@ -18,7 +18,7 @@
 “数”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "numbers"]）是编程语言乃至现代科学中极其重要的一个概念。
 
 
-@section[#:tag "list-rules"]{单字命名规则}
+@section[#:tag "list-rules"]{命名规则}
 @margin-note{
 @bold{@litchar{数}被简写为@litchar{米}偏旁，以便构造单字来表示跟其相关的概念}
 @itemlist[
@@ -27,6 +27,8 @@
 @item{故此，本语言对关于“数”的例程做了简化：剔除多余无效的表意偏旁，代之以简洁有效的偏旁组合成单字进行表达。}
 ]
 }
+
+见@secref["naming-rules"]，有：
 
 @tabular[@;#:sep @hspace[0]
         #:style 'boxed
@@ -51,12 +53,12 @@
               (list
               @elem{左偏旁@bold{@litchar{米}}}
               @elem{内部实现、运算或转化例程（出参是数字）}
-              @elem{@racket[􏺸]、@racket[􏽉]、@racket[􏽊]、@racket[􏻡]、@racket[􏻠]、@racket[􏻏]}
+              @elem{@racket[􏺸?]、@racket[􏽉]、@racket[􏽊]、@racket[􏻡]、@racket[􏻠]、@racket[􏻏]}
               )
               (list
               @elem{左偏旁@bold{@litchar{􏻴}}}
               @elem{运算或转化例程（出参是整数型数字）}
-              @elem{@racket[􏺚]、@racket[􏺾]、@racket[􏺽]、@racket[􏺙]}
+              @elem{@racket[􏺢?]、@racket[􏺚]、@racket[􏺾]、@racket[􏺽]、@racket[􏺙]}
               )
               (list
               @elem{左偏旁@bold{@litchar{立}}}

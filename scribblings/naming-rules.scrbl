@@ -16,7 +16,7 @@
 
 @title[#:tag "naming-rules"]{命名总则}
 
-@section[#:tag "word creating rules"]{单字}
+@section[#:tag "word creating rules"]{成字}
 @tabular[@;#:sep @hspace[0]
          #:style 'boxed
          #:column-properties '(center)
@@ -33,14 +33,14 @@
                @elem{@bold{@litchar{阝}}}
                "连续集（类型相同且元素连续相同）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的一部分}
-               @elem{（@racket[阴]、@racket[阳]）@racket[􏾝]、@racket[􏾺]、@racket[𨚞]、@racket[𬩵]、@racket[䢼]、@racket[𬩽]}
+               @elem{（@racket[阴]、@racket[阳]）、@racket[􏾝]、@racket[􏾺]、@racket[𨚞]、@racket[䢼]、@racket[𬩽]、@racket[邭]}
                )
 
                (list
                @elem{@bold{@litchar{刂}}}
                "缺失集（删除、移走、去掉部分元素之后的集合）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的子集}
-               @elem{@racket[􏷵]、@racket[􏷴]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
+               @elem{@racket[􏷵]、@racket[􏷴]、@racket[􏺊]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
                )
 
                (list
@@ -61,7 +61,7 @@
                @elem{@bold{@litchar{匕}}}
                @elem{小幅度的修改}
                @elem{}
-               @elem{@racket[􏼙]、@racket[􏺚]、@racket[􏺽]、@racket[􏺾]}
+               @elem{@racket[􏼝]、@racket[􏺚]、@racket[􏺽]、@racket[􏺾]}
                )
 
                (list
@@ -73,43 +73,73 @@
 
                (list
                @elem{@bold{@litchar{扌}}}
-               @elem{直接修改了原始数据（通@litchar{!}）}
+               @elem{直接修改了原始数据（通标点@bold{@litchar{!}}）}
                @elem{无出参}
-               @elem{@racket[􏻿􏾩]、@racket[􏼘]、@racket[􏻿􏽒]、@racket[􏻺𰅡]}
+               @elem{􏾩（@racket[􏻿􏾩]）、@racket[􏼘]、􏽒（@racket[􏻿􏽒]）、𰅡（@racket[􏻺𰅡]）、@racket[􏻿􏾩/以􏾝]}
                )
 
                (list
                @elem{@bold{@litchar{攵}}}
                @elem{修改}
                @elem{入参为“索引数字”和“值”}
-               @elem{@racket[攸]、@racket[􏼘]}
+               @elem{@racket[攸]、@racket[􏼘]、@racket[􏿰攸]}
                )
 
 
                (list
-               @elem{@bold{@litchar{三}}}
+               @elem{上@bold{@litchar{三}}}
                @elem{若干个相同元素 @linebreak{}
                      （道生一，一生二，二生三，三生万物。故“三”有“多”之意，进而解释为：三个（若干个）一（相同的元素））}
                @elem{无}
                @elem{@racket[􏼓]、@racket[􏻺]、@racket[􏼅]}
                )
+
                (list
-               @elem{@bold{@litchar{弔}}}
+               @elem{上@bold{@litchar{弔}}}
                @elem{序数（原是“索引”之意（见@racket[弔]），但因索引是从零开始的序数，故在此借用之）}
                @elem{无}
                @elem{@racket[􏼎]、@racket[􏻻]、@racket[􏼄]}
                )
                (list
+               @elem{@bold{@litchar{弔}}}
+               @elem{视具体情况，均与“索引”之意有关}
+               @elem{进参或出参为@racket[􏺡?]（精确非负整数）}
+               @elem{@racket[弔]、@racket[伄]、@racket[􏾘]、@racket[􏾝]、@racket[􏼭]、@racket[􏻿弔]、@racket[􏿰弔]、@racket[􏿰􏾘]}
+               )
+               
+               (list
                @elem{@bold{@litchar{毌}}}
                @elem{贯穿（@litchar{贯}的古字）；}
                @elem{无}
-               @elem{@racket[􏿝]、@racket[􏻹]、@racket[􏼃]}
+               @elem{@racket[􏿝]、@racket[􏻹]、@racket[􏼃]、@racket[􏼂]、@racket[􏼁]、}
                )
+
                (list
                @elem{@bold{@litchar{穴}}}
                @elem{空的，无值的（@litchar{空}的简写）}
                @elem{无}
-               @elem{@racket[空?]、@racket[𥥪]?、@racket[􏻸?]、@racket[􏻵?]、@racket[􏻷?]、@racket[􏻶?]}
+               @elem{@racket[空?]、@racket[𥥪?]、@racket[􏻸?]、@racket[􏻵?]、@racket[􏻷?]、@racket[􏼟?]}
+               )
+
+               (list
+               @elem{@bold{@litchar{非}}}
+               @elem{否定含意}
+               @elem{无}
+               @elem{@racket[􏼟?]、@racket[𥥪?]、@racket[􏻸?]、@racket[􏻵?]、@racket[􏻷?]、@racket[􏼟?]}
+               )
+
+               (list
+               @elem{@bold{@litchar{巨}}}
+               @elem{测量长度}
+               @elem{出参是@racket{米?}（数字）}
+               @elem{@racket[巨]、@racket[􏺕]、@racket[􏻿巨]、@racket[􏿰巨]}
+               )
+
+               (list
+               @elem{@bold{@litchar{巨}}}
+               @elem{测量长度}
+               @elem{出参是@racket{米?}（数字）}
+               @elem{@racket[巨]、@racket[􏺕]、@racket[􏻿巨]、@racket[􏿰巨]}
                )
 
                (list
@@ -150,8 +180,8 @@
                )
                (list
                @elem{以@bold{@litchar{!}}结尾}
-               "指示过程"
-               "对入参数据做出了直接修改"
+               @elem{对入参数据做出了直接修改（通@bold{@litchar{扌}}）}
+               "无出参"
                @elem{@racket[􏿰􏾘!]、@racket[􏿰𠛮!]}
                )
                (list
@@ -171,7 +201,7 @@
                @elem{以@bold{@litchar{^}}结尾}
                @elem{加强力度（通过改变入参成@racket[􏿴]）}
                @elem{入参内容更加丰富且被封装进@racket[􏿴]数据结构}
-               @elem{@racket[􏷲^]、@racket[伄^]}
+               @elem{@racket[􏷲^]、@racket[伄^]、@racket[]}
                )
 
                (list
@@ -219,7 +249,7 @@
          ]
 
 
-@section[#:tag "word creating rules"]{混用}
+@section[#:tag "word creating rules"]{混合}
 @tabular[@;#:sep @hspace[0]
          #:style 'boxed
          #:column-properties '(center)

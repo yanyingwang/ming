@@ -20,7 +20,8 @@
 
 
 @section[#:tag "list-rules"]{例程命名规则}
-除总@secref["naming-rules"]外，另有：
+见@secref["naming-rules"]，有：
+
 @tabular[@;#:sep @hspace[0]
          #:style 'boxed
          #:column-properties '(center)
@@ -62,9 +63,9 @@
 ]
 }
 @margin-note{参见：@racket[􏻼]、@racket[􏻽]}
-@margin-note{另见：@secref["symbols"]、@secref["keywords"]}
+@margin-note{另见：@secref["symbols"]、@secref["keywords"]，@racket[􏻷?]}
 
-像@secref["vector"]和@secref["hash"]一样，“句”按内容是否可以被修改，也可以被分为：“易句”和“固句”（简写为“@racket[􏽁]”和“@racket[􏽀]”）。@racket[句]默认创建的是“@racket[􏽀]”，通过双引号创建的则是“@racket[􏽁]”。
+像@secref["vector"]和@secref["hash"]一样，“句”按内容是否可以被修改，也可以被分为：“易句”和“固句”（简写为“@racket[􏽁]”和“@racket[􏽀]”）。@racket[句]默认创建的是“@racket[􏽀]”，通过英文双引号（""）创建的则是“@racket[􏽁]”。
 @examples[#:eval (the-eval)
 (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。)
 (句? (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))

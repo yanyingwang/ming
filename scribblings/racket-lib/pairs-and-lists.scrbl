@@ -19,16 +19,16 @@
 
 
 @section[#:tag "list-rules"]{例程命名规则}
-除总@secref["naming-rules"]外，另有：
+见@secref["naming-rules"]，有：
 
 @tabular[@;#:sep @hspace[0]
          #:style 'boxed
          #:column-properties '(center)
          #:row-properties '(border)
-         (list (list @bold{规则} @bold{含义} @bold{进出参} @bold{举例})
+         (list (list @bold{成字} @bold{含义} @bold{进出参} @bold{举例})
                (list
-               @elem{对@bold{@litchar{􏿴}}加偏旁}
-               @elem{构造生成特殊元素组成的@racket[􏿴]}
+               @elem{@bold{@litchar{􏿴}}偏旁}
+               @elem{构造生成规律元素所组成的@racket[􏿴]}
                @elem{出参数据结构是@racket[􏿴]}
                @elem{@racket[􏼓]、@racket[􏼎]、@racket[􏼏]、@racket[􏿝]}
                )
@@ -36,19 +36,19 @@
                @elem{左偏旁@bold{@litchar{亻}}}
                "相似集（类型相同且元素相似）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
-               @elem{@racket[伄]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾜]、@racket[􏾛]、@racket[偅]、@racket[𠆯]、@racket[􏷹]、@racket[仔?]}
+               @elem{@racket[伄]、@racket[𰁣]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾜]、@racket[􏾛]、@racket[偅]、@racket[𠆯]、@racket[􏷹]、@racket[仔?]}
                )
                (list
                @elem{右偏旁@bold{@litchar{阝}}}
                "连续集（类型相同且元素连续相同）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的一部分}
-               @elem{@racket[􏾝]、@racket[􏾺]、@racket[𨚞]、@racket[𬩵]、@racket[䢼]、@racket[𬩽]}
+               @elem{@racket[􏾝]、@racket[􏾺]、@racket[𨚞]、@racket[䢼]、@racket[𬩽]}
                )
                (list
                @elem{右偏旁@bold{@litchar{刂}}}
                "缺失集（删除、移走、去掉部分元素之后的集合）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的子集}
-               @elem{@racket[􏷵]、@racket[􏷴]、@racket[􏾘]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
+               @elem{@racket[􏷵]、@racket[􏷴]、@racket[􏺊]、@racket[􏾘]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
                )
                (list
                @elem{左偏旁@bold{@litchar{土}}}
@@ -56,30 +56,32 @@
                @elem{出参类型不一而多变}
                @elem{@racket[垎]}
                )
+               (list @bold{组词} @bold{-} @bold{-} @bold{-})
                (list
                @elem{以@bold{@litchar{分}}结尾}
                "分离成复值"
                @elem{出参数据为复值}
                @elem{@racket[􏾺分]、@racket[𨚞分]、@racket[䢼分]、@racket[􏷳分]、@racket[􏷹分]}
                )
+               (list @bold{标点} @bold{-} @bold{-} @bold{-})
                (list
                @elem{以@bold{@litchar{*}}结尾}
-               "加强力度"
+               "加强力度至出参"
                "出参内容更加丰富"
-               @elem{@racket[引*]，@racket[􏾝*]，@racket[􏼏*]}
+               @elem{@racket[弓*]，@racket[􏼏*]}
                )
                (list
                @elem{以@bold{@litchar{~}}结尾}
-               "减轻力度"
+               "减轻力度至出参"
                "出参内容更加贫瘠"
                @elem{@racket[􏷲~]、@racket[􏷶~]}
                )
-               (list
-               @elem{以@bold{@litchar{v}}结尾}
-               @elem{加强力度（且改变出参成@racket[􏿴]）}
-               @elem{出参内容更加丰富且被封装成@racket[􏿴]数据结构}
-               @elem{@racket[引v]}
-               )
+               @; (list
+               @; @elem{以@bold{@litchar{v}}结尾}
+               @; @elem{加强力度（且改变出参成@racket[􏿴]）}
+               @; @elem{出参内容更加丰富且被封装成@racket[􏿴]数据结构}
+               @; @elem{@racket[引v]}
+               @; )
                (list
                @elem{以@bold{@litchar{^}}结尾}
                @elem{加强力度（通过改变入参成@racket[􏿴]）}
@@ -98,11 +100,13 @@
                @elem{出参数据由@litchar{/}之前的内容决定}
                @elem{@racket[􏿴/组合]、@racket[􏿴/分组]}
                )
+
+               (list @bold{混合} @bold{-} @bold{-} @bold{-})
                (list
                @elem{@bold{@litchar{/入}}}
                "进参为函数"
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[度/入]、@racket[引/入]、@racket[引v/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
+               @elem{@racket[巨/入]、@racket[弓/入]、@racket[𰁣/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
                )
          )]
 
@@ -287,23 +291,25 @@
 ]
 
 
-@section+elemref{引、引/入，引v、引v/入、弔}
+@section+elemref{弔，弓、弓/入，𰁣、𰁣/入}
 @margin-note{
-@bold{@litchar{弔}为古活字}
+@bold{@litchar{弔}为古活字} @linebreak{}
+@bold{@litchar{弓}为活用字}
 @itemlist[
-@item{@litchar{引}是“索引”的意思，即返回某值的索引；}
-@item{@litchar{弔}（可以认为是@litchar{第}的简写）表示是用某索引提取相对应的值。}
+@item{@litchar{弔}：@litchar{第}的简写，像是绳子缠绕在树干表皮上，表示是用某索引提取相对应的值。}
+@item{@litchar{弓}：@litchar{引}的简写，像是缠绕在树干表皮上的绳子，即“索引”的意思，亦即返回某值的索引；}
+@item{@litchar{亻}，见：@secref["list-rules"]。}
 ]
 }
-@margin-note{
-另见：@racket[引*]、@racket[引*/入]，@racket[伄]，@racket[􏾘]，@racket[􏾝]
-}
+@margin-note{另见：@racket[伄]、@racket[􏾘]、@racket[􏾝]，@racket[弓*]、@racket[弓*/入]}
 @examples[#:eval (the-eval)
-(引 '(a b c d e c f) 'c)
-(引v '(a b c d e c f) 'c)
-(引/入 '(a b 11 d 22 c f) 米?)
-(引v/入 '(a b 11 d 22 c f) 米?)
 (弔 '(a b c d e c f) 2)
+
+(弓 '(a b c d e c f) 'c)
+(𰁣 '(a b c d e c f) 'c)
+
+(弓/入 '(a b 11 d 22 c f) 米?)
+(𰁣/入 '(a b 11 d 22 c f) 米?)
 ]
 
 @section+elemref{􏾺、𨚞，􏷵、􏷴，􏾺分、𨚞分，􏾺/入、𨚞/入，􏾺于?}
@@ -315,10 +321,11 @@
 @itemlist[
 @item{@litchar{左}：从左；}
 @item{@litchar{右}：从右；}
+@item{@litchar{口}：@litchar{右}的简写；}
 @item{@litchar{阝}、@litchar{刂}见：@secref["list-rules"]。}
 ]
 }
-@margin-note{另见：@racket[𬩵]}
+@margin-note{另见：@racket[􏺊]}
 @examples[#:eval (the-eval)
 (􏾺 '(a b c d e f g) 2)
 (𨚞 '(a b c d e f g) 2)
@@ -440,7 +447,7 @@
 @item{@litchar{亻}、@litchar{刂}，见：@secref["list-rules"]。}
 ]
 }
-@margin-note{另见：@racket[度]、@racket[度/入]}
+@margin-note{另见：@racket[巨]、@racket[巨/入]}
 @examples[#:eval (the-eval)
 (查 􏻛? '(1 2 -3 4 -5))
 (􏷹 􏻛? '(1 2 -3 4 -5))
@@ -450,7 +457,7 @@
 (􏷹巨 􏻛? '(1 2 -3 4 -5))
 ]
 
-@section+elemref{各，佫，􏷬，㦴，垎、右垎，佫􏷹、佫􏿝}
+@section+elemref{各，佫，􏷬，㦴，垎、右垎，佫􏷹、佫􏿝} @;􏷮，􏷭
 @margin-note{
 @bold{@litchar{佫}为古活字} @linebreak{}
 @bold{@litchar{􏷬}为新造字} @linebreak{}

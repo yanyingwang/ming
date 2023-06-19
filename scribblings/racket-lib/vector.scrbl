@@ -20,7 +20,7 @@
 
 
 @section[#:tag "rules"]{例程命名规则}
-除总@secref["naming-rules"]外，另有：
+见@secref["naming-rules"]，有：
 
 @tabular[@;#:sep @hspace[0]
          #:style 'boxed
@@ -182,7 +182,7 @@ vec
 ]
 
 @section+elemref{􏻿􏾩，􏻿􏾩^-，􏻺𰅡，􏻿􏾩/以􏾝}
-@margin-note{参见：@racket[复􏻿]，@racket[􏾝]、@racket[攸]}
+@margin-note{参见：@racket[􏾝]、@racket[攸]}
 @margin-note{另见：@racket[􏻿􏾝]、@racket[􏻿􏾩/以􏾝*]}
 @examples[#:eval (the-eval)
 (名 vec (􏻿 'a 'b 'c 'd))

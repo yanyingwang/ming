@@ -18,7 +18,7 @@
 
 
 @section[#:tag "hash-rules"]{例程命名规则}
-除总@secref["naming-rules"]外，另有：
+见@secref["naming-rules"]，有：
 @tabular[@;#:sep @hspace[0]
          #:style 'boxed
          #:column-properties '(center)

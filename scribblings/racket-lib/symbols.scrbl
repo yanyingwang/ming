@@ -16,34 +16,12 @@
 @title[#:tag "symbols"]{勺}
 “勺”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "symbols"]）是一种跟@secref["string"]类似的数据结构，但是它更广泛的在Racket语言的内部实现中被使用。
 
+
 @section[#:tag "list-rules"]{例程命名规则}
 见@secref["naming-rules"]中关于@litchar{化}和@litchar{土}的条目。
 
 
 @section+elemref{勺?、􏺏?、􏺋?，􏺌}
-“勺”可以被细分为：“􏺏”（interned）、“􏺎”（unreadable/partially interned）、“􏺍”（uninterned）。
-
-@examples[#:eval (the-eval)
-(勺? 'symbol)
-(􏺏? 'symbol)
-(􏺋? 'symbol)
-(􏺌 'symbol)
-(􏺏? (􏺌 'symbol))
-]
-
-
-@section+elemref{转化例程：勺化􏽁、勺化句、句化勺、句化􏺍、句化􏺋}
-@examples[#:eval (the-eval)
-(勺化􏽁 'symbol)
-(勺化句 'symbol)
-
-(句化勺 "string")
-(句化􏺍 "string")
-(句化􏺋 "string")
-]
-
-
-
 @margin-note{
 @bold{@litchar{勺}为古活字} @linebreak{}
 @bold{@litchar{􏺋}为新造字} @linebreak{}
@@ -57,6 +35,24 @@
 @item{@litchar{勺}：因为外形和@racket[勾]、@racket[句]相近，在此借用为表示@racket[勺]是和它们相近的一种数据结构；}
 ]
 }
+“勺”可以被细分为：“􏺏”（interned）、“􏺋”（unreadable/partially interned）、“􏺍”（uninterned）。
+@examples[#:eval (the-eval)
+(勺? 'symbol)
+(􏺏? 'symbol)
+(􏺋? 'symbol)
+(􏺌 'symbol)
+(􏺏? (􏺌 'symbol))
+]
+
+@section+elemref{转化例程：勺化􏽁、勺化句、句化勺、句化􏺍、句化􏺋}
+@examples[#:eval (the-eval)
+(勺化􏽁 'symbol)
+(勺化句 'symbol)
+
+(句化勺 "string")
+(句化􏺍 "string")
+(句化􏺋 "string")
+]
 
 @section[#:tag "symbols-base"]{基础例程}
 @defmapping[

@@ -21,7 +21,7 @@ Racket标准库@secref["string"]的名语言扩展。
 @defproc[(􏽀 [V any?] ...) 􏽀?]
 @defproc[(􏽁 [V any?] ...) 􏽁?]
 )]{
-@margin-note{参见：@racket[􏾐]、@racket[􏾑]。}
+@margin-note{参见：@racket[􏾐]、@racket[􏾑]}
 @racket[􏽀]：生成内容可以被修改的“字符串”。 @linebreak{}
 @racket[􏽀]：生成内容不可被修改的“字符串”。
 @examples[#:eval (the-eval)
@@ -42,19 +42,19 @@ Racket标准库@secref["string"]的名语言扩展。
 }
 
 
-@defproc[(邭* [STR 句?] [N1 精确非负整数?] [N2 精确非负整数?])
-句?]{
-@margin-note{另见：@racket[邭]}
-@examples[#:eval (the-eval)
-(邭* "abcdefg" 0 2)
-]
-}
+@; @defproc[(邭* [STR 句?] [N1 精确非负整数?] [N2 精确非负整数?])
+@; 句?]{
+@; @margin-note{另见：@racket[邭]}
+@; @examples[#:eval (the-eval)
+@; (邭* "abcdefg" 0 2)
+@; ]
+@; }
 
-
-@defproc[(􏼟 [V any?])
+@defproc[(􏻷? [V any?])
 boolean?]{
-@margin-note{另见：@racket[邭]}
+@margin-note{另见：@racket[􏼟?]}
 @examples[#:eval (the-eval)
-(邭* "abcdefg" 0 2)
+(􏻷? "abcdefg")
+(􏻷? "")
 ]
 }
