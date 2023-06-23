@@ -15,11 +15,11 @@
 >>> vector-copy 􏻿􏾝
 >>> vector-filter 􏻿􏷹
 >>> vector-filter-not 􏻿􏷶
->>> vector-count 􏻿􏷹度
->>> vector-argmin 􏻿佫之􏽇
->>> vector-argmax 􏻿佫之􏽈
->>> vector-member 􏻿引
->>> vector-memv 􏻿引/􏾗
->>> vector-memq 􏻿引/􏾃
+>>> vector-count 􏻿􏷹巨
+>>> vector-argmin 􏻿佫之􏻡
+>>> vector-argmax 􏻿佫之􏻠
+>>> vector-member 􏻿弓
+>>> vector-memv 􏻿弓/􏾗
+>>> vector-memq 􏻿弓/􏾃
 >>> vector-sort 􏻿𠆯 ;􏻿􏿀
 >>> vector-sort! 􏻿􏽒

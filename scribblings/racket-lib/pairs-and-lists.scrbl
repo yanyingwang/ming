@@ -264,18 +264,19 @@
 (癸 '(1 2 3 4 5 6 7 8 9 10))
 ]
 
-@section+elemref{末、􏷽}
+@section+elemref{末、􏹥}
 返回􏿴中末尾位置的元素。
 @margin-note{
-@bold{@litchar{􏷽}为新造字}
+@bold{@litchar{􏹥}为新造字}
 @itemlist[
-@item{因字所代表之例程的入参和操作入参的处理行为与“@racket[末]”类似而得偏旁@litchar{末}；}
-@item{又因其返回结果的数据之结构与“@racket[双]”的返回类似而得偏旁@litchar{又}。}
+@item{@litchar{末}：见@racket[末]；}
+@item{@litchar{又}：@litchar{双}的简写，见@racket[双]。}
 ]
 }
 @examples[#:eval (the-eval)
 (末 '(1 2 3 4))
-(􏷽 '(1 2 3 4))
+(􏹥 '(1 2 3 4))
+(􏹥 '(1 2 3 . 4))
 ]
 
 @section+elemref{巨}
@@ -498,7 +499,7 @@
 (􏷮 􏻛? '(1 2 -3 4))
 (􏷮 + '(1 2 3 4) '(100 200 300 400))
 
-(􏷭 􏻚? '(1 2 -3 4))
+(􏷮 􏻚? '(1 2 -3 4))
 (􏷭 + '(1 2 3 4) '(100 200 300 400))
 
 (垎 + 0 '(1 2 -3 4))

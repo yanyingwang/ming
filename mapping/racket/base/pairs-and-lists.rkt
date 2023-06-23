@@ -7,7 +7,7 @@
 >>> car 阳 @elem{返回@racket[双]中的第一个数据}
 >>> cdr 阴 @elem{返回@racket[双]中的第二个数据}
 
->>> null? 空?
+>>> null? 空? ;𥤦
 >>> null 空
 
 >>> list 􏿴  @elem{将一个@racket[双]的@racket[阴]位放置另一个双，数个双如此前后相接组成链状（末尾双的@racket[阴]位留@racket[空]）} ;; 􏿴子
