@@ -11,7 +11,7 @@
 >>> syntax-span 􏹵 @elem{所占用的长度（从0算起）} ;􏹶
 >>> syntax-original? ?syntax-original?
 >>> syntax-source-module ?􏺃司 ; module 函 司
->>> syntax-e 􏹲 @elem{以解开􏺃的方式转化成文（（原料数据））} ;文 攵 􏺃匕 􏹺 􏹰 􏹲
+>>> syntax-e 􏹲 @elem{以解开􏺃的方式转化成文（（原料数据））} ;文 攵 􏺃匕 􏹺 􏹰 􏹲 􏹲 􏹤
 
 >>> syntax->list 􏹩 @elem{􏺃化􏿴}
 >>> syntax->datum 􏹴 @elem{􏺃化文（将􏺃转化成文（原料数据））}

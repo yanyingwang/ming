@@ -58,18 +58,6 @@
                @elem{@racket[􏻿􏾩]、@racket[􏻿􏽒]、@racket[􏻿挌]}
                )
                @; (list
-               @; @elem{@litchar{!}结尾}
-               @; @elem{指示修改方式}
-               @; @elem{直接修改了原始数据}
-               @; @elem{@racket[􏻿㙏!]}
-               @; )
-               (list
-               @elem{@bold{@litchar{+}}结尾}
-               @elem{指示入参}
-               @elem{入参数据以相同方式多次出现}
-               @elem{@racket[􏻿􏾩+]}
-               )
-               @; (list
                @; @elem{以@litchar{􏻿}结尾}
                @; @elem{指示出参}
                @; @elem{出参数据是@racket[􏻿]类数据}
@@ -92,6 +80,18 @@
                @elem{类型转换}
                @elem{出参数据内容不变而类型改变}
                @elem{@racket[􏻿化􏿴]、@racket[􏿴化􏻿]}
+               )
+               @; (list
+               @; @elem{@litchar{!}结尾}
+               @; @elem{指示修改方式}
+               @; @elem{直接修改了原始数据}
+               @; @elem{@racket[􏻿㙏!]}
+               @; )
+               (list
+               @elem{@bold{@litchar{+}}结尾}
+               @elem{入参}
+               @elem{入参数据以相同方式多次出现}
+               @elem{@racket[􏻿􏾩+]}
                )
          )
          ]
@@ -148,8 +148,9 @@
 ]
 
 @section+elemref{􏻼化，􏻿化􏿴、􏿴化􏻿、􏻿􏾝化殖}
-@margin-note{参见：@racket[􏻼]、@racket[􏻿􏾝]、@racket[􏻿化殖]}
-@margin-note{另见：@racket[􏻿􏾝化殖*]}
+@margin-note{参见：@racket[􏻼]、@racket[􏻿􏾝]  @;、@racket[􏻿化殖]
+}
+@; @margin-note{另见：@racket[􏻿􏾝化殖*]}
 @examples[#:eval (the-eval)
 (􏻼化 '#(a b c d))
 (􏿴化􏻿 '(a b c d))
@@ -159,7 +160,7 @@
 
 @section+elemref{􏻿􏾺、􏻿􏷵、􏻿􏾺分、􏻿􏾝}
 @margin-note{参见：@racket[􏾺]，@racket[􏾺分]，@racket[􏾝]}
-@margin-note{另见：@racket[􏻿􏾝*]}
+@; @margin-note{另见：@racket[􏻿􏾝*]}
 
 @examples[#:eval (the-eval)
 (􏻿􏾺 '#(a b c d e f) 2)
@@ -168,10 +169,10 @@
 (􏻿􏾝 '#(a b c d e f) 0 2)
 ]
 
-@section+elemref{􏻿引，􏻿佫、􏻿挌，􏻿􏷹，􏻿􏷶}
-@margin-note{参见：@racket[引]，@racket[佫]，@racket[􏷶]}
+@section+elemref{􏻿弓，􏻿佫、􏻿挌，􏻿􏷹，􏻿􏷶}
+@margin-note{参见：@racket[弓]，@racket[佫]，@racket[􏷶]}
 @examples[#:eval (the-eval)
-(􏻿引 'c '#(a b 1 c 2 d 3 e))
+(􏻿弓 'c '#(a b 1 c 2 d 3 e))
 (􏻿佫 􏽊 '#(1 2 3 4))
 (􏻿􏷹 􏻛? '#(1 2 -3 4))
 (􏻿􏷶 􏻛? '#(1 2 -3 4))
@@ -183,7 +184,8 @@ vec
 
 @section+elemref{􏻿􏾩，􏻿􏾩+，􏻺𰅡，􏻿􏾩/以􏾝}
 @margin-note{参见：@racket[􏾝]、@racket[攸]}
-@margin-note{另见：@racket[􏻿􏾝]、@racket[􏻿􏾩/以􏾝*]}
+@margin-note{另见：@racket[􏻿􏾝] @;、@racket[􏻿􏾩/以􏾝*]
+}
 @examples[#:eval (the-eval)
 (名 vec (􏻿 'a 'b 'c 'd))
 vec

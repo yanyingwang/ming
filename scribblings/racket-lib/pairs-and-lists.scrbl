@@ -68,7 +68,8 @@
                @elem{以@bold{@litchar{*}}结尾}
                "加强力度至出参"
                "出参内容更加丰富"
-               @elem{@racket[弓*]、@racket[􏼏*]}
+               @; @elem{@racket[弓*]、@racket[􏼏*]}
+               @elem{@racket[􏼏*]}
                )
                (list
                @elem{以@bold{@litchar{~}}结尾}
@@ -264,19 +265,20 @@
 (癸 '(1 2 3 4 5 6 7 8 9 10))
 ]
 
-@section+elemref{末、􏹥}
+@section+elemref{末、􏹨}
 返回􏿴中末尾位置的元素。
 @margin-note{
-@bold{@litchar{􏹥}为新造字}
+@bold{@litchar{􏹨}为新造字}
 @itemlist[
 @item{@litchar{末}：见@racket[末]；}
-@item{@litchar{又}：@litchar{双}的简写，见@racket[双]。}
+@item{@litchar{双}：见@racket[双]；}
+@; @item{@litchar{又}：@litchar{双}的简写，见@racket[双]。}
 ]
 }
 @examples[#:eval (the-eval)
 (末 '(1 2 3 4))
-(􏹥 '(1 2 3 4))
-(􏹥 '(1 2 3 . 4))
+(􏹨 '(1 2 3 4))
+(􏹨 '(1 2 3 . 4))
 ]
 
 @section+elemref{巨}
@@ -302,7 +304,9 @@
 @item{@litchar{亻}，见：@secref["list-rules"]。}
 ]
 }
-@margin-note{另见：@racket[伄]、@racket[􏾘]、@racket[􏾝]，@racket[弓*]、@racket[弓*/入]}
+@margin-note{
+另见：@racket[伄]、@racket[􏾘]、@racket[􏾝] @;，@racket[弓*]、@racket[弓*/入]
+}
 @examples[#:eval (the-eval)
 (弔 '(a b c d e c f) 2)
 

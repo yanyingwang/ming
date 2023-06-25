@@ -127,8 +127,8 @@
 @item{@litchar{阝}：“部分”的意思。}
 ]
 }
-@margin-note{参见：@racket[巨]，@racket[弔]，@racket[􏾝]}
-@margin-note{另见：@racket[邭*]}
+@margin-note{参见：@racket[巨]，@racket[弔]，@racket[􏾝]，@racket[􏻿􏾝]}
+@; @margin-note{另见：@racket[邭*]}
 @examples[#:eval (the-eval)
 (􏺕 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。")
 

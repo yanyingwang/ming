@@ -18,19 +18,19 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @margin-note{本页所列之例程的实现代码是名语言，因此源代码有参照意义。}
 
 
-@deftogether[(
-@defproc[(弓* [LST 􏿴?] [V any/c])
-          殖?]
-@defproc[(弓*/入 [LST 􏿴?] [PROC 程?])
-          殖?]
-)]{
-@racket[弓*]、@racket[弓*/入]分别是对@racket[弓]、@racket[弓/入]加强力度。 @linebreak{}
-@margin-note{@litchar{弓}为活用字，另见：@racket[弓]、@racket[𰁣]}
-@examples[#:eval (the-eval)
-(弓* '(a b c d c f) 'c)
-(弓*/入 '(a 32 c 11 c f) 米?)
-]
-}
+@; @deftogether[(
+@; @defproc[(弓* [LST 􏿴?] [V any/c])
+@;           殖?]
+@; @defproc[(弓*/入 [LST 􏿴?] [PROC 程?])
+@;           殖?]
+@; )]{
+@; @racket[弓*]、@racket[弓*/入]分别是对@racket[弓]、@racket[弓/入]加强力度。 @linebreak{}
+@; @margin-note{@litchar{弓}为活用字，另见：@racket[弓]、@racket[𰁣]}
+@; @examples[#:eval (the-eval)
+@; (弓* '(a b c d c f) 'c)
+@; (弓*/入 '(a 32 c 11 c f) 米?)
+@; ]
+@; }
 
 @deftogether[(
 @defproc[(伄 [LST 􏿴?] [N 􏺡?] ...)

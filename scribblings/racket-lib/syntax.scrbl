@@ -76,6 +76,7 @@
 @item{@litchar{􏹴}：@litchar{文}+@litchar{􏺃}各取偏旁得造；}
 ]
 }
+@margin-note{另见：@racket[􏼩]、@racket[􏼳]、@racket[􏼪]、@racket[􏼲]}
 @examples[#:eval (the-eval)
 (􏹲 #'a)
 (􏹲 #'(a b c))
