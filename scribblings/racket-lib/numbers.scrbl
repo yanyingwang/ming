@@ -1,7 +1,7 @@
 #lang scribble/manual
 
 
-@(require (for-label racket ming)
+@(require (for-label racket ming ming/number)
            scribble/eval
            ming/scribble
            )
@@ -15,6 +15,7 @@
 
 
 @title[#:tag "numbers"]{米}
+@margin-note{另见名扩展库：@secref["ming-number"]}
 “数”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "numbers"]）是编程语言乃至现代科学中极其重要的一个概念。
 
 
@@ -51,14 +52,24 @@
               @elem{@racket[米?]、@racket[􏻴?]、@racket[釆?]}
               )
               (list
-              @elem{左偏旁@bold{@litchar{米}}}
-              @elem{内部实现、运算或转化例程（出参是数字）}
-              @elem{@racket[􏺸?]、@racket[􏽉]、@racket[􏽊]、@racket[􏻡]、@racket[􏻠]、@racket[􏻏]}
+              @elem{偏旁@bold{@litchar{石}}}
+              @elem{“准确”相关}
+              @elem{@racket[􏻧?]、@racket[􏻲?]、@racket[􏺟?]，@racket[􏺡?]}
               )
               (list
-              @elem{左偏旁@bold{@litchar{􏻴}}}
-              @elem{运算或转化例程（出参是整数型数字）}
-              @elem{@racket[􏺢?]、@racket[􏺚]、@racket[􏺾]、@racket[􏺽]、@racket[􏺙]}
+              @elem{左偏旁@bold{@litchar{米}}}
+              @elem{内部实现、运算或转化例程（进参、出参都是数字）}
+              @elem{@racket[􏽉]、@racket[􏽊]、@racket[􏺗]、@racket[􏺘]}
+              )
+              (list
+              @elem{偏旁@bold{@litchar{􏻴}}}
+              @elem{整数相关}
+              @elem{@racket[􏹓]、@racket[􏻲?]、@racket[􏺡?]}
+              )
+              (list
+              @elem{偏旁@bold{@litchar{彡}}}
+              @elem{近视值}
+              @elem{@racket[􏹔]、@racket[􏹓]、@racket[􏹒]、@racket[􏹑]、@racket[􏹐]}
               )
               (list
               @elem{左偏旁@bold{@litchar{立}}}
@@ -66,15 +77,21 @@
               @elem{@racket[􏻞?]、@racket[􏻝?]}
               )
               (list
-              @elem{左偏旁@bold{@litchar{刀}}}
-              @elem{修改转化了入参}
-              @elem{@racket[􏻏]}
+              @elem{@bold{@litchar{化}}}
+              @elem{类型转化}
+              @elem{@racket[􏻧化]、@racket[􏺟化]， @racket[􏻞化]、@racket[􏻝化]，@racket[米化句]、@racket[句化米]、@racket[宩化􏹔句]}
               )
-              (list
-              @elem{左偏旁@bold{@litchar{匕}}}
-              @elem{小幅度修改转化了入参}
-              @elem{@racket[􏺚]、@racket[􏺽]、@racket[􏺾]、@racket[􏺙]}
-              )
+              @; (list
+              @; @elem{左偏旁@bold{@litchar{刀}}}
+              @; @elem{修改转化了入参}
+              @; @elem{@racket[􏻏]}
+              @; )
+
+              @; (list
+              @; @elem{左偏旁@bold{@litchar{匕}}}
+              @; @elem{小幅度修改转化了入参}
+              @; @elem{@racket[􏺚]、@racket[􏺽]、@racket[􏺾]、@racket[􏺙]}
+              @; )
          )]
 
 @section+elemref{大类概念：米?，夈?，宩?、􏻟?，粊?、䉾?}
@@ -141,12 +158,12 @@
 ]
 
 
-@section+elemref{实现概念：釆?、􏻞?、􏻝?，􏺸?、􏺟?}
+@section+elemref{实现概念：釆?、􏻞?、􏻝?，􏻧?、􏺟?}
 @margin-note{
 @bold{@litchar{釆}为古活字}  @linebreak{}
 @bold{@litchar{􏻞}为新造字}  @linebreak{}
 @bold{@litchar{􏻝}为新造字}  @linebreak{}
-@bold{@litchar{􏺸}为新造字}  @linebreak{}
+@bold{@litchar{􏻧}为新造字}  @linebreak{}
 @bold{@litchar{􏺟}为新造字}  @linebreak{}
 @itemlist[
 @item{@litchar{釆}：@litchar{浮}+@litchar{米}组成而成；}
@@ -156,21 +173,20 @@
 @item{@litchar{非}：非；}
 ]
 }
-在编程语言的具体实现中，“米”有“􏺸”（准确）和“􏺟”（不准确）之分；“􏻴”是“􏺸”，而“􏺟”是用“釆”（浮点数）实现的（见：@hyperlink["https://en.wikipedia.org/wiki/IEEE_754" "WIKI:IEEE_754"]）；“釆”按照精确度可分为“􏻞”（单倍精度浮点数）和“􏻝”（双倍精度浮点数）。
+在编程语言的具体实现中，“米”有“􏻧”（准确）和“􏺟”（不准确）之分；“􏻴”是“􏻧”，而“􏺟”是用“釆”（浮点数）实现的（见：@hyperlink["https://en.wikipedia.org/wiki/IEEE_754" "WIKI:IEEE_754"]）；“釆”按照精确度可分为“􏻞”（单倍精度浮点数）和“􏻝”（双倍精度浮点数）。
 @examples[#:eval (the-eval)
 (釆? 1.1)
 (􏻞? 1.1)
 (􏻝? 1.1)
 
-(􏺸? 1)
+(􏻧? 1)
 (􏺟? 1.1)
 ]
 
 
-@section+elemref{组合表达：􏺢?，􏺡?}
+@section+elemref{组合表达：􏻲?，􏺡?}
 @margin-note{
-
-@bold{@litchar{􏺢}为新造字}  @linebreak{}
+@bold{@litchar{􏻲}为新造字}  @linebreak{}
 @bold{@litchar{􏺡}为新造字}  @linebreak{}
 @itemlist[
 @item{@litchar{􏻴}：@litchar{整数}的简写；}
@@ -181,22 +197,23 @@
 ]
 }
 @examples[#:eval (the-eval)
-(􏺢? 1)
+(􏻲? 1)
 (􏺡? 1)
 ]
 
 
 
-@section+elemref{运算概念：􏽊、􏽉，􏻡、􏻠}
+@section+elemref{运算概念：􏽊、􏽉，􏺗、􏺘}
 @margin-note{
 @bold{@litchar{􏽊}为新造字}  @linebreak{}
 @bold{@litchar{􏽉}为新造字}  @linebreak{}
-@bold{@litchar{􏻡}为新造字}  @linebreak{}
-@bold{@litchar{􏻠}为新造字}  @linebreak{}
+@bold{@litchar{􏺗}为新造字}  @linebreak{}
+@bold{@litchar{􏺘}为新造字}  @linebreak{}
 @itemlist[
 @item{@litchar{曾}：@litchar{增}的简写，@litchar{曾}是一种多层的蒸屉；}
 @item{@litchar{员}：@litchar{损}/@litchar{陨}的简写，@litchar{陨}本意是“球高从落下”；}
-@item{@litchar{日}：@litchar{最}的简写，也做@litchar{阳}的简写（极其的意思，即是“最”）；}
+@; @item{@litchar{日}：@litchar{最}的简写，也做@litchar{阳}的简写（极其的意思，即是“最”）；}
+@item{@litchar{彐}：寻找，参见@racket[彐]；}
 @item{@litchar{大}：数值大的；}
 @item{@litchar{小}：数值小的。}
 ]
@@ -204,57 +221,91 @@
 @examples[#:eval (the-eval)
 (􏽊 1)
 (􏽉 1)
-(􏻡 1 2 3 4 5)
-(􏻠 1 2 3 4 5)
+(􏺗 1 2 3 4 5)
+(􏺘 1 2 3 4 5)
 ]
 
-@section+elemref{数值转化概念：􏻏，􏺚、􏺽、􏺾、􏺙}
-@margin-note{
-@bold{@litchar{􏻏}为新造字}  @linebreak{}
-@bold{@litchar{􏺚}为新造字}  @linebreak{}
-@bold{@litchar{􏺾}为新造字}  @linebreak{}
-@bold{@litchar{􏺽}为新造字}  @linebreak{}
-@bold{@litchar{􏺙}为新造字}  @linebreak{}
-@itemlist[
 
+@section+elemref{数值修改：􏹚，􏹓、􏹒、􏹑、􏹐} @;􏻏，􏺚、􏺽、􏺾、􏺙 􏻛化，􏹢化、􏹡化、􏹠化、􏹟化 􏹕 􏹕
+@margin-note{
+@bold{@litchar{􏹚}为新造字}  @linebreak{}
+@bold{@litchar{􏹓}为新造字}  @linebreak{}
+@bold{@litchar{􏹒}为新造字}  @linebreak{}
+@bold{@litchar{􏹑}为新造字}  @linebreak{}
+@bold{@litchar{􏹐}为新造字}  @linebreak{}
+@itemlist[
 @item{@litchar{􏻴}：整数的简写；}
-@item{@litchar{刀}：修改数值；}
-@item{@litchar{匕}：小幅修改数值；}
-@item{@litchar{月}：偶数（阴数），见@racket[􏺦?]；}
-@item{@litchar{大}：数值大的；}
-@item{@litchar{小}：数值小的。}
-@item{@litchar{穴}：@litchar{𥥪}的简写，见@racket[𥥪?]。}
+@; @item{@litchar{􏻛}：绝对值，见@racket[􏻛?]；}
+@; @item{@litchar{刀}：修改数值；}
+@; @item{@litchar{匕}：小幅修改数值；}
+@; @item{@litchar{月}：数值趋偶数（阴数）的，见@racket[􏺦?]；}
+@item{@litchar{丨丨}：绝对值（源自数学上的符号）；}
+@item{@litchar{彡}：数值修约、简化、近似值的；}
+@item{@litchar{大}：数值趋大的；}
+@item{@litchar{小}：数值趋小的。}
+@item{@litchar{穴}：数值趋零的，@litchar{𥥪}的简写，见@racket[𥥪?]。}
 ]
 }
-@litchar{刀}和@litchar{匕}都是一种利刃，都被用于修改数字，只是修改幅度略有所不同。
+@margin-note{另见：@racket[􏹔]}
+@; @litchar{刀}和@litchar{匕}都是一种利刃，都被用于修改数字，只是修改幅度略有所不同。
+对于“数值修约”而言，可分为无条件修约与有条件修约。
+
+前者方法有：上取整（@racket[􏹑]）、下取整（@racket[􏹒]）、截尾取整（@racket[􏹐]）、无条件进位（@racket[􏹍]）；后者方法则有：四舍五入、五舍六入、四舍六入五留双（奇进偶舍）（@racket[􏹓]）。
+
+上述方法中，“四舍五入法”最广为人知：如遇0、1、2、3、4则退位，5、6、7、8、9则进位，进退位虽都各为五个数字。但是0其实是不处理值、准确无变化值，这样算来退位实为1、2、3、4这四个，所以从统计学角度讲平均值是偏大的。
+
+而“四舍六入五留双”其实是更精确的规则，所以默认采用之。
+
+
 @examples[#:eval (the-eval)
-(􏻏 -1)
-(􏻏 1)
+(􏹚 -1)
+(􏹚 1)
+(􏹚 0)
 
-(􏺚 1.1)
-(􏺚 1.5)
-(􏺚 1.6)
-(􏺚 2.5)
-(􏺚 2.6)
+(􏹓 1.1)
+(􏹓 1.5)
+(􏹓 1.6)
+(􏹓 2.1)
+(􏹓 2.5)
+(􏹓 2.6)
 
-(􏺽 1.1)
-(􏺽 -1.1)
-(􏺾 1.9)
-(􏺾 -1.9)
+(􏹒 1.1)
+(􏹒 -1.1)
 
-(􏺙 1.9)
-(􏺙 -1.9)
+(􏹑 1.9)
+(􏹑 -1.9)
+
+(􏹐 1.9)
+(􏹐 -1.9)
 ]
 
 
 
-@section+elemref{类型转化：􏺸化、􏺟化、􏻞化、􏻝化}
-@; 对于“粊”而言，最常使用的子概念是：“􏻛”（正数）、“􏻚”（负数）、“􏻙”（奇数）、“􏻘”（偶数）。
+@section+elemref{类型转化：􏻧化、􏺟化、􏻞化、􏻝化，米化句、句化米，宩化􏹔句}
+@margin-note{
+@bold{@litchar{􏹔}为新造字}  @linebreak{}
+@itemlist[
+@item{@litchar{彡}：数值修约、简化、近似值的；}
+]
+}
+@margin-note{另见：@racket[􏹔]}
 @examples[#:eval (the-eval)
-(􏺸化 1.1)
+(􏻧化 1.1)
 (􏺟化 1)
 (􏻞化 1)
 (􏻝化 1)
+
+(米化句 1.123)
+(句化米 "1.1")
+(句化米 "1.0")
+(句化米 "1")
+
+(宩化􏹔句 0.014)
+(宩化􏹔句 0.015)
+(宩化􏹔句 0.016)
+(宩化􏹔句 0.044)
+(宩化􏹔句 0.045)
+(宩化􏹔句 0.046)
 ]
 
 

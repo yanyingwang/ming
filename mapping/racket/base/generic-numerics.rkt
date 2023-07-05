@@ -11,15 +11,15 @@
 >>> modulo 糢 "模" ; TODO: 新造字：米莫
 >>> add1 􏽊 "加一（由增字得造）" ;; 米曾 增 􏻊  𫦨  􏻀 􏻂 "加一"
 >>> sub1 􏽉 "减一（由损/陨字得造）" ; 米员 损 􏻉 𥸷 􏻁 􏻃 "减一"
->>> abs 􏻏 "绝对值（各取偏旁得造）" ; 􏽆
->>> max 􏻡 "最大数（各取偏旁得造）" ;􏽇
->>> min 􏻠 "最小数（各取偏旁得造）" ; 􏽈
+>>> abs 􏹚 "绝对值" ; 􏽆 ; X􏻛化 􏽌化 􏻏 X (abs 0) is 0 􏹕
+>>> max 􏺗 "找出最大数" ;􏽇
+>>> min 􏺘 "找出最小数" ; 􏽈
 >>> gcd ?最大公约数
 >>> lcm ?最小公约数
->>> round 􏺚 "趋偶取整（各取偏旁得造）" ; 􏻎 􏺿
->>> floor 􏺾 "趋小取整（各取偏旁得造）" ; 􏻍
->>> ceiling 􏺽 "趋大取整（各取偏旁得造）" ; 􏻌
->>> truncate 􏺙 "趋〇取整（各取偏旁得造）" ; 􏻋
+>>> round 􏹓 "趋偶取整，即四舍六入五留双（奇进偶退）" ; 􏻎 􏺿 􏺚 􏹢化
+>>> floor 􏹑 "趋小取整" ; 􏻍 􏺾 􏹠化
+>>> ceiling 􏹒 "趋大取整" ; 􏻌 􏺽 􏹡化
+>>> truncate 􏹐 "趋〇取整" ; 􏻋 􏺙 􏹟化
 >>> numerator ?分子 ;TODO: 新造字：米八子
 >>> denominator ?分母 ;TODO: 新造字：米八母
 >>> rationalize ?粊化 "有理化"
@@ -84,9 +84,9 @@
 ;random-sample
 
 ;; 4.3.2.9 Number–String Conversions
->>> number->string 数化句
->>> string->number 句化数
->>> real->decimal-string 宩化十进句
+>>> number->string 米化句
+>>> string->number 句化米
+>>> real->decimal-string 宩化􏹔句 @elem{将@racket[宩]转化成@racket[􏹔]@racket[句]}
 >>> integer-bytes->integer ->?integer-bytes->integer
 >>> integer->integer-bytes ->?integer->integer-bytes
 >>> floating-point-bytes->real ->?floating-point-bytes->real
