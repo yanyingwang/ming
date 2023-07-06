@@ -169,13 +169,13 @@
 (􏻿􏾝 '#(a b c d e f) 0 2)
 ]
 
-@section+elemref{􏻿弓，􏻿佫、􏻿挌，􏻿􏷹，􏻿􏷶}
-@margin-note{参见：@racket[弓]，@racket[佫]，@racket[􏷶]}
+@section+elemref{􏻿弓，􏻿佫、􏻿挌，􏻿􏹈，􏻿􏹇}
+@margin-note{参见：@racket[弓]，@racket[佫]，@racket[􏹇]}
 @examples[#:eval (the-eval)
 (􏻿弓 'c '#(a b 1 c 2 d 3 e))
 (􏻿佫 􏽊 '#(1 2 3 4))
-(􏻿􏷹 􏻛? '#(1 2 -3 4))
-(􏻿􏷶 􏻛? '#(1 2 -3 4))
+(􏻿􏹈 􏻛? '#(1 2 -3 4))
+(􏻿􏹇 􏻛? '#(1 2 -3 4))
 
 (名 vec (􏻿 1 2 3 4))
 (􏻿挌 􏽊 vec)

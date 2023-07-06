@@ -78,14 +78,14 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 @deftogether[(
 @defproc[(􏾘 [LST 􏿴?] [N 􏺡?])
           􏿴?]
-@defproc[(􏾘^ [LST 􏿴?] [N-LST (listof 􏺡?)])
+@defproc[(􏾘^ [LST 􏿴?] [N-LST (listof? 􏺡?)])
           􏿴?]
 )]{
 @itemlist[
 @item{@racket[􏾘]：从@racket[LST]中删除索引@racket[N]所对应的元素。}
 @item{@racket[􏾘^]：与上同，除了入参类型不同外。 }
 ]
-@margin-note{@litchar{􏾘}为新造字，另见：@racket[弔]，@racket[􏷲]，@racket[􏷶]}
+@margin-note{@litchar{􏾘}为新造字，另见：@racket[弔]，@racket[􏹊]，@racket[􏹇]}
 @examples[#:eval (the-eval)
 (􏾘 '(a b c d e f g) 1)
 (􏾘^ '(a b c d e f g) '(0 1 3))
@@ -106,12 +106,12 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 ]
 }
 
-@defproc[(巨/入 [LST 􏿴?] [PROC 程?])
+@defproc[(􏹃 [LST 􏿴?] [PROC 程?])
           􏺡?]{
 以@racket[PROC]来测量@racket[LST]的长度。
-@margin-note{@litchar{巨}为活用字，另见：@racket[巨]、@racket[􏷹巨]}
+@margin-note{@bold{@litchar{􏹃}为新造字}，另见：@racket[巨]、@racket[􏹈巨]}
 @examples[#:eval (the-eval)
-(巨/入 '(a b 12 c 33 d  58 f g) 米?)
+(􏹃 '(a b 12 c 33 d  58 f g) 米?)
 ]
 }
 
@@ -127,12 +127,12 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 ]
 }
 
-@defproc[(􏷲 [V any/c] [LST 􏿴?] (PROC 程? 同?))
+@defproc[(􏹊 [V any/c] [LST 􏿴?] (PROC 程? 同?))
           􏿴?]{
 从@racket[LST]中找出@racket[V]并移除之。
-@margin-note{@litchar{􏷲}为新造字，另见：@racket[􏷲~]、@racket[􏷲^]}
+@margin-note{@litchar{􏹊}为新造字，另见：@racket[􏹊~]、@racket[􏹊^]}
 @examples[#:eval (the-eval)
-(􏷲 'c '(a b c d e c f))
+(􏹊 'c '(a b c d e c f))
 ]
 }
 
@@ -207,7 +207,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 ]
 }
 @margin-note{
-参见：@racket[􏿰􏺈]、@racket[􏿰􏺇]
+另见：@racket[􏹉]，@racket[􏿰􏺈]、@racket[􏿰􏺇]
 }
 
 @examples[#:eval (the-eval)

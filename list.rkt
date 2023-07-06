@@ -8,8 +8,8 @@
          􏾝 ;􏾝*
          􏾘 􏾘^
          􏺊 ;𬩵
-         巨/入
-         􏷲
+         􏹃
+         􏹊
          偅
          仔?
          􏿳 􏿳?
@@ -50,11 +50,11 @@
 ;;     (复值参与 (入 () (右分/入 某􏿴 数A))
 ;;               􏿴))
 
-(名 (巨/入 LST PROC)
-  (􏷹巨 PROC LST))
+(名 (􏹃 LST PROC)
+  (􏹈巨 PROC LST))
 
-(名 (􏷲 V LST)
-  (􏷲^ (list V) LST))
+(名 (􏹊 V LST)
+  (􏹊^ (list V) LST))
 
 ;; (名 (弔* LST . IDX-LST)
 ;;     (apply 殖 (佫 (入 (IDX) (弔 LST IDX))

@@ -23,32 +23,32 @@
 >>> append 􏿝 @elem{把多􏿴贯穿相连组成一个@racket[􏿴]并返回之} ;; 串 接 通 捅 􏿝 􏾟
 >>> reverse 􏾛 "倒序排列" ;; 颠 倒 仮 􏾛 仮
 
->>> remove 􏷲~ @elem{以@racket[同?]作为比较来删除第一个寻找到的某元素} ;; 刈 删 缺
->>> remw 􏷲~/􏾗 @elem{类上，另外比较例程是@racket[􏾗?]}
->>> remv 􏷲~/􏾃 @elem{类上，另外比较例程是@racket[?􏾃]}
->>> remq 􏷲~/侗 @elem{类上，另外比较例程是@racket[侗?]}
+>>> remove 􏹊~ @elem{以@racket[同?]作为比较来删除第一个寻找到的某元素} ;; 刈 删 缺
+>>> remw 􏹊~/􏾗 @elem{类上，另外比较例程是@racket[􏾗?]}
+>>> remv 􏹊~/􏾃 @elem{类上，另外比较例程是@racket[?􏾃]}
+>>> remq 􏹊~/侗 @elem{类上，另外比较例程是@racket[侗?]}
 ;; 刈~ should be acting as 刈, and result of (刈 'c '(a b c c d)) should be same as (刈* '(c) '(a b c c d))
->>> remove* 􏷲^ @elem{类@racket[􏷲]，不过入参不同。}
->>> remw* 􏷲^/􏾗 @elem{类上}
->>> remv* 􏷲^/􏾃 @elem{类上}
->>> remq* 􏷲^/侗 @elem{类上}
+>>> remove* 􏹊^ @elem{类@racket[􏷲]，不过入参不同。}
+>>> remw* 􏹊^/􏾗 @elem{类上}
+>>> remv* 􏹊^/􏾃 @elem{类上}
+>>> remq* 􏹊^/侗 @elem{类上}
 
 >>> sort 𠆯 @elem{将@racket[􏿴]中元素以指定的规则理顺} ; 亻理 𠍣 􏿀 􏿀
 
->>> member 𬩽 @elem{以@racket[同]作为比较来寻找某元素和其之后的所有元素}  ;; 后􏿴 索 ;; 索 寻 寻随
->>> memw 𬩽/􏾗 @elem{类上}
->>> memv 𬩽/􏾃 @elem{类上}
->>> memq 𬩽/侗 @elem{类上}
->>> memf 𬩽/入 @elem{类上}
+>>> member 􏹋 @elem{以@racket[同]作为比较来寻找某元素和其之后的所有元素}  ;; 后􏿴 索 ;; 索 寻 寻随
+>>> memw 􏹋/􏾗 @elem{类上}
+>>> memv 􏹋/􏾃 @elem{类上}
+>>> memq 􏹋/侗 @elem{类上}
+>>> memf 􏹅 @elem{类上}
 
->>> assoc 􏿁 @elem{以@racket[同]作为比较来寻找阳位是某值的元素}  ; 探 挖 掘
->>> assw 􏿁/􏾗 @elem{类上}
->>> assv 􏿁/􏾃 @elem{类上}
->>> assq 􏿁/侗 @elem{类上}
->>> assf 􏿁/入 @elem{类上}
+>>> assoc 􏹉 @elem{以@racket[同]作为比较来寻找阳位是某值的元素}  ; 探 挖 掘
+>>> assw 􏹉/􏾗 @elem{类上}
+>>> assv 􏹉/􏾃 @elem{类上}
+>>> assq 􏹉/侗 @elem{类上}
+>>> assf 􏹄 @elem{类上}
 
->>> findf 查 @elem{查找出第一个符合条件的某元素}  ;; 查 找  选  查 寻 找 查 索 筛甲 @; 寻 找 查 搜 探 觅 检 索 俭 叟 傁
->>> filter 􏷹 @elem{查找出所有符合条件的元素}  ;; 滤 筛 选 挑 挑 选 择 􏾽
+>>> findf 􏹌 @elem{查找出第一个符合条件的某元素}  ;; 查 找  选  查 寻 找 查 索 筛甲 @; 寻 找 查 搜 探 觅 检 索 俭 叟 傁
+>>> filter 􏹈 @elem{查找出所有符合条件的元素}  ;; 滤 筛 选 挑 挑 选 择 􏾽
 
 
 ;; >>> for-each 巡 "酒席上给全座依次斟酒一遍称为巡杯（酒过三巡），这里意思是􏿴内元素依次执行某一个例程" ; 轮着 每 轮 依次 遍自 遍执 行 循序

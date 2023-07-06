@@ -13,11 +13,11 @@
 >>> vector-split-at 􏻿􏾺分
 >>> vector-split-at-right 􏻿𨚞分
 >>> vector-copy 􏻿􏾝
->>> vector-filter 􏻿􏷹
->>> vector-filter-not 􏻿􏷶
->>> vector-count 􏻿􏷹巨
->>> vector-argmin 􏻿佫之􏻡
->>> vector-argmax 􏻿佫之􏻠
+>>> vector-filter 􏻿􏹈
+>>> vector-filter-not 􏻿􏹇
+>>> vector-count 􏻿􏹈巨
+>>> vector-argmin 􏻿佫之􏺗
+>>> vector-argmax 􏻿佫之􏺘
 >>> vector-member 􏻿弓
 >>> vector-memv 􏻿弓/􏾗
 >>> vector-memq 􏻿弓/􏾃

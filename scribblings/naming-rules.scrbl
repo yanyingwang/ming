@@ -26,43 +26,50 @@
                @elem{@bold{@litchar{亻}}}
                "相似集（类型相同且元素相似）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
-               @elem{@racket[伄]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾜]、@racket[􏾛]、@racket[偅]、@racket[𠆯]、@racket[􏷹]}
+               @elem{@racket[伄]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾜]、@racket[􏾛]、@racket[偅]、@racket[𠆯]、@racket[􏹈]}
                )
 
                (list
                @elem{@bold{@litchar{阝}}}
                "连续集（类型相同且元素连续相同）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的一部分}
-               @elem{（@racket[阴]、@racket[阳]）、@racket[􏾝]、@racket[􏾺]、@racket[𨚞]、@racket[䢼]、@racket[𬩽]、@racket[邭]}
+               @elem{（@racket[阴]、@racket[阳]）、@racket[􏾝]、@racket[􏾺]、@racket[𨚞]、@racket[䢼]、@racket[􏹋]、@racket[邭]}
                )
 
                (list
                @elem{@bold{@litchar{刂}}}
                "缺失集（删除、移走、去掉部分元素之后的集合）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的子集}
-               @elem{@racket[􏷵]、@racket[􏷴]、@racket[􏺊]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
+               @elem{@racket[􏷵]、@racket[􏷴]、@racket[􏺊]、@racket[𠝤]、@racket[􏹇]、@racket[􏹊]}
                )
 
                (list
-               @elem{@bold{@litchar{刀}}}
-               "修改"
-               @elem{}
-               @elem{@racket[􏻏]}
+               @elem{@bold{@litchar{彐}}}
+               @elem{寻找（@litchar{寻}的简写）}
+               @elem{进参数量很多，而出参数量很少且是其的子集（并非约定规则，但是“寻找”这一动作必然预示着会有这样的效果）}
+               @elem{@racket[􏹋]、@racket[􏹉]、@racket[􏹊]、@racket[􏹅]、@racket[􏹌]、@racket[􏹈]、@racket[􏹇]，@racket[􏺗]、@racket[􏺘]}
                )
+
+               @; (list
+               @; @elem{@bold{@litchar{刀}}}
+               @; "修改"
+               @; @elem{}
+               @; @elem{@racket[􏻏]}
+               @; )
 
                (list
                @elem{@bold{@litchar{戈}}}
                @elem{修改替换}
-               @elem{入参为“值”和“值”}
+               @elem{进参至少有三个（非约定规则，是“替换”这一动作使然）”}
                @elem{@racket[􏼥]}
                )
 
-               (list
-               @elem{@bold{@litchar{匕}}}
-               @elem{小幅度的修改}
-               @elem{}
-               @elem{@racket[􏼝]、@racket[􏺚]、@racket[􏺽]、@racket[􏺾]}
-               )
+               @; (list
+               @; @elem{@bold{@litchar{匕}}}
+               @; @elem{小幅度的修改}
+               @; @elem{}
+               @; @elem{@racket[􏼝]、@racket[􏺚]、@racket[􏺽]、@racket[􏺾]}
+               @; )
 
                (list
                @elem{@bold{@litchar{土}}}
@@ -81,7 +88,7 @@
                (list
                @elem{@bold{@litchar{攵}}}
                @elem{修改}
-               @elem{入参为“索引数字”和“值”}
+               @elem{入参为“索引数字”和“值”（“修改”这一动作使然）}
                @elem{@racket[攸]、@racket[􏼘]、@racket[􏿰攸]}
                )
 
@@ -140,7 +147,7 @@
                @elem{@bold{@litchar{米}}}
                @elem{数字（@litchar{数}的简写）}
                @elem{无}
-               @elem{@racket[􏼏]、@racket[米?]、@racket[𥥪?]、@racket[夈?]、@racket[粊?]、@racket[􏻛?]、@racket[􏺧?]、@racket[􏽊]、@racket[􏺚]}
+               @elem{@racket[􏼏]、@racket[米?]、@racket[𥥪?]、@racket[夈?]、@racket[粊?]、@racket[􏻛?]、@racket[􏺧?]、@racket[􏽊]}
                )
 
                (list
@@ -182,7 +189,7 @@
                @elem{以@bold{@litchar{~}}结尾}
                "减轻力度"
                "出参内容更加贫瘠"
-               @elem{@racket[􏷲~]、@racket[􏷶~]}
+               @elem{@racket[􏹊~]、@racket[􏹇~]}
                )
 
                @; (list
@@ -195,7 +202,7 @@
                @elem{以@bold{@litchar{^}}结尾}
                @elem{加强力度（通过改变入参成@racket[􏿴]）}
                @elem{入参内容更加丰富且被封装进@racket[􏿴]数据结构}
-               @elem{@racket[􏷲^]、@racket[伄^]、@racket[]}
+               @elem{@racket[􏹊^]、@racket[伄^]}
                )
 
                (list
@@ -217,7 +224,7 @@
                @elem{以@bold{@litchar{分}}结尾}
                "分离成复值"
                @elem{出参数据为复值}
-               @elem{@racket[􏾺分]、@racket[𨚞分]、@racket[䢼分]、@racket[􏷳分]、@racket[􏷹分]}
+               @elem{@racket[􏾺分]、@racket[𨚞分]、@racket[䢼分]、@racket[􏷳分]、@racket[􏹈分]}
                )
 
                @; (list
@@ -260,7 +267,7 @@
                @elem{包含@bold{@litchar{/入}}}
                "进参为函数"
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[巨/入]、@racket[弓/入]、@racket[𰁣/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
+               @elem{@racket[弓/入]、@racket[𰁣/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
                )
          )
          ]

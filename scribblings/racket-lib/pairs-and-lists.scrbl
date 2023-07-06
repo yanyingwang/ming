@@ -5,7 +5,7 @@
            ming/scribble
            )
 @(define the-eval
-         (make-eval-factory '(ming/racket/base ming/racket/list)))
+         (make-eval-factory '(ming/racket/base ming/racket/list ming/racket/vector)))
 
 @(require (file "../../private/scribble-styles/css/ming-fonts.css.rkt"))
 @css/ming-fonts
@@ -36,19 +36,25 @@
                @elem{左偏旁@bold{@litchar{亻}}}
                "相似集（类型相同且元素相似）"
                @elem{出参数据与进参数据相比，类型相同且内容类似}
-               @elem{@racket[伄]、@racket[𰁣]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾜]、@racket[􏾛]、@racket[偅]、@racket[𠆯]、@racket[􏷹]、@racket[仔?]}
+               @elem{@racket[伄]、@racket[𰁣]、@racket[攸]、@racket[𰂋]、@racket[偏]、@racket[􏾜]、@racket[􏾛]、@racket[偅]、@racket[𠆯]、@racket[􏹈]、@racket[仔?]}
                )
                (list
                @elem{右偏旁@bold{@litchar{阝}}}
                "连续集（类型相同且元素连续相同）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的一部分}
-               @elem{@racket[􏾝]、@racket[􏾺]、@racket[𨚞]、@racket[䢼]、@racket[𬩽]}
+               @elem{@racket[􏾝]、@racket[􏾺]、@racket[𨚞]、@racket[䢼]、@racket[􏹋]}
                )
                (list
                @elem{右偏旁@bold{@litchar{刂}}}
                "缺失集（删除、移走、去掉部分元素之后的集合）"
                @elem{出参数据与进参数据相比，类型相同且前者是后者的子集}
-               @elem{@racket[􏷵]、@racket[􏷴]、@racket[􏺊]、@racket[􏾘]、@racket[𠝤]、@racket[􏷶]、@racket[􏷲]}
+               @elem{@racket[􏷵]、@racket[􏷴]、@racket[􏺊]、@racket[􏾘]、@racket[𠝤]、@racket[􏹊]、@racket[􏹇]}
+               )
+               (list
+               @elem{下偏旁@bold{@litchar{入}}}
+               @elem{提示入参类型，通@litchar{/入}}
+               @elem{进参并非常规数据，而是函数}
+               @elem{@racket[􏹃]、@racket[􏹌]、@racket[􏹅]、@racket[􏹇]}
                )
                (list
                @elem{左偏旁@bold{@litchar{土}}}
@@ -61,7 +67,7 @@
                @elem{以@bold{@litchar{分}}结尾}
                "分离成复值"
                @elem{出参数据为复值}
-               @elem{@racket[􏾺分]、@racket[𨚞分]、@racket[䢼分]、@racket[􏷳分]、@racket[􏷹分]}
+               @elem{@racket[􏾺分]、@racket[𨚞分]、@racket[䢼分]、@racket[􏷳分]、@racket[􏹈分]}
                )
                (list @bold{标点} @bold{-} @bold{-} @bold{-})
                (list
@@ -75,7 +81,7 @@
                @elem{以@bold{@litchar{~}}结尾}
                "减轻力度至出参"
                "出参内容更加贫瘠"
-               @elem{@racket[􏷲~]、@racket[􏷶~]}
+               @elem{@racket[􏹊~]、@racket[􏹇~]}
                )
                @; (list
                @; @elem{以@bold{@litchar{v}}结尾}
@@ -87,7 +93,7 @@
                @elem{以@bold{@litchar{^}}结尾}
                @elem{加强力度（通过改变入参成@racket[􏿴]）}
                @elem{入参内容更加丰富且被封装进@racket[􏿴]数据结构}
-               @elem{@racket[􏷲^]、@racket[伄^]、@racket[􏾘^]}
+               @elem{@racket[􏹊^]、@racket[伄^]、@racket[􏾘^]}
                )
                @; (list
                @; @elem{以@litchar{􏿴}结尾}
@@ -105,9 +111,9 @@
                (list @bold{混合} @bold{-} @bold{-} @bold{-})
                (list
                @elem{@bold{@litchar{/入}}}
-               "进参为函数"
+               "提示进参类型"
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[巨/入]、@racket[弓/入]、@racket[𰁣/入]、@racket[𬩽/入]、@racket[􏿁/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
+               @elem{@racket[弓/入]、@racket[𰁣/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
                )
          )]
 
@@ -288,7 +294,7 @@
 @item{@litchar{巨}：测量返回长度（本意是“木工用方尺做丈量”（圆是规，方是矩，固有“无规矩不成方圆”之说））。}
 ]
 }
-@margin-note{另见：@racket[巨/入]}
+@margin-note{另见：@racket[􏹃]}
 @examples[#:eval (the-eval)
 (巨 '(a b c d e 3 f g))
 ]
@@ -412,57 +418,44 @@
 (𠆯 '("cat" "dog" "chicken" "duck" "fox") 句>?)
 ]
 
-@section+elemref{𬩽、𬩽/入，􏿁、􏿁/入，􏷲~、􏷲^}
-@margin-note{
-@bold{@litchar{􏿁}为新造字} @linebreak{}
-@bold{@litchar{𬩽}为古活字} @linebreak{}
-@bold{@litchar{􏷲}为新造字}
-@itemlist[
-@item{@litchar{寻}表意“寻找”；}
-@item{@litchar{日}偏旁表示“取@racket[阳]”之意。}
-@item{@litchar{亻}、@litchar{刂}，见：@secref["list-rules"]。}
-]
-}
-@; @margin-note{
-@; @bold{“@racket[刈]”为古活字}
-@; @itemlist[
-@; @item{@litchar{㐅}表意，“删除”的意思；}
-@; @item{@litchar{刂}见：@secref["list-rules"]。}
-@; ]
-@; }
-@margin-note{另见：@racket[􏷲]，@racket[􏾘]}
-@examples[#:eval (the-eval)
-(𬩽 'c '(a b c d e f))
-(􏿁 'c '((a b) (c d) (e f)))
-(𬩽/入 米? '(a b 1 c d 3 e 9 f))
-(􏿁/入 米? '((a b) (1 d) (j k) (8 f))) ;;
-
-(􏷲~ 'c '(a b c d e c f))
-(􏷲^ '(c e) '(a b c d e c f))
-]
-
-@section+elemref{查、􏷹，􏷶、􏷶~，􏷹分，􏷹巨}
+@section+elemref{􏹋、􏹉、􏹊~、􏹊^，􏹅，􏹄，􏹌、􏹈，􏹇~、􏹇}
 @margin-note{
 @bold{
-@litchar{􏷹}为新造字 @linebreak{}
-@litchar{􏷶}为新造字
+@litchar{􏹋}、@litchar{􏹊}、@litchar{􏹉}为新造字 @linebreak{}
+@litchar{􏹌}、@litchar{􏹈}、@litchar{􏹇}为新造字 @linebreak{}
 }
 @itemlist[
-@item{@litchar{查}：查询；}
-@item{@litchar{亻}、@litchar{刂}，见：@secref["list-rules"]。}
+@item{@litchar{彐}：寻找（@litchar{寻}的简写）；}
+@item{@litchar{日}：取@racket[阳]；}
+@item{@litchar{入}：入参是lambda(λ)函数（λ的汉字偏旁写法）；}
+@item{@litchar{~}、@litchar{^}，@litchar{亻}、@litchar{刂}、@litchar{阝}，见：@secref["list-rules"]。}
 ]
 }
-@margin-note{另见：@racket[巨]、@racket[巨/入]}
+@margin-note{另见：@racket[􏹊]，@racket[􏾘]，@racket[􏺈]、@racket[􏺇]}
 @examples[#:eval (the-eval)
-(查 􏻛? '(1 2 -3 4 -5))
-(􏷹 􏻛? '(1 2 -3 4 -5))
-(􏷶 􏻛? '(1 2 -3 4 -5))
-(􏷶~ 􏻛? '(1 2 -3 4 -5))
-(􏷹分 􏻛? '(1 2 -3 4 -5)) @; 􏾽离 would still be list
-(􏷹巨 􏻛? '(1 2 -3 4 -5))
+(􏹋 'c '(a b c d e f))
+(􏹉 'c '((a b) (c d) (e f)))
+(􏹊~ 'c '(a b c d e c f))
+(􏹊^ '(c e) '(a b c d e c f))
+
+(􏹌 米? '(a b 1 c d 3 e 9 f))
+(􏹈 米? '(a b 1 c d 3 e 9 f))
+
+(􏹅 米? '(a b 1 c d 3 e 9 f))
+(􏹄 米? '((a b) (1 d) (j k) (8 f)))
+
+(􏹇 米? '(a b 1 c d 3 e 9 f))
+(􏹇~ 米? '(a b 1 c d 3 e 9 f))
 ]
 
-@section+elemref{各，佫，􏷮、􏷭，垎、右垎，佫􏷹、佫􏿝} @;􏷮，􏷭
+@section+elemref{􏹈分，􏹈巨}
+@margin-note{另见：@racket[巨]、@racket[􏹃]}
+@examples[#:eval (the-eval)
+(􏹈分 米? '(a b 1 c d 3 e 9 f))
+(􏹈巨 米? '(a b 1 c d 3 e 9 f))
+]
+
+@section+elemref{各，佫，􏷮、􏷭，垎、右垎，佫􏹈、佫􏿝} @;􏷮，􏷭
 @margin-note{
 @bold{@litchar{佫}为古活字} @linebreak{}
 @; @bold{@litchar{􏷬}为新造字} @linebreak{}
@@ -476,7 +469,7 @@
 @item{@litchar{亻}，见：@secref["list-rules"]；}
 @item{@litchar{土}，表意，构建。见：@secref["list-rules"]；}
 @item{@litchar{且}：见@racket[且]；}
-@item{@litchar{戈}：@litchar{或}的简写，见@racket[或]；}
+@; @item{@litchar{戈}：@litchar{或}的简写，见@racket[或]；}
 ]
 }
 @margin-note{
@@ -510,17 +503,17 @@
 (垎 双 '() '(1 2 -3 4))
 (右垎 双 '() '(1 2 -3 4))
 
-(佫􏷹 (入 (x) (且 (􏻛? x) (􏽊 x))) '(1 3 -4 5))
-(佫􏿝 vector->list '(#(1) #(2 3) #(4)))
+(佫􏹈 (入 (x) (且 (􏻛? x) (􏽊 x))) '(1 3 -4 5))
+(佫􏿝 􏻿化􏿴 '(#(1) #(2 3) #(4)))
 ]
 
 
-@section+elemref{佫之􏻡、佫之􏻠}
+@section+elemref{佫之􏺗、佫之􏺘}
 @examples[#:eval (the-eval)
-(佫之􏻡 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(佫之􏻠 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
-(佫之􏻡 阳 '((3 pears) (1 banana) (2 apples)))
-(佫之􏻠 阳 '((3 pears) (1 banana) (2 apples)))
+(佫之􏺗 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(佫之􏺘 char->integer '(#\a #\y #\b #\k #\c #\j #\d))
+(佫之􏺗 阳 '((3 pears) (1 banana) (2 apples)))
+(佫之􏺘 阳 '((3 pears) (1 banana) (2 apples)))
 ]
 
 
