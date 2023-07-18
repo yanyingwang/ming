@@ -30,7 +30,7 @@ usage:
 (require (mingize racket/list))
 
 ;; usage
-;; (require (mingize racket/list))  ;; mingize 名化，汉化 chineselize
+;; (require (mingize racket/list))  ;; mingize 名化，汉化 chineselize ;;  TODO: change names to: mingify chinesify
 ;; (乙 (list 1 2 3))
 ;; (甲 (􏿴 1 2 3))
 |#
