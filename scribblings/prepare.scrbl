@@ -30,6 +30,15 @@
 @item{需要安装@hyperlink["https://rime.im/" "中州韵（rime）输入法"]，加以使用@hyperlink["https://github.com/yanyingwang/asdfzma/" "键序郑码（asdfzma）"]用以输入之（也可实现与双拼、拼音混输，可见：@hyperlink[ "https://github.com/yanyingwang/rime_custom" "rime_custom"]）；}
 ]
 
+@section[#:tag "highlight-on-emacs"]{Emacs编辑器的语法高亮}
+@code{git clone https://github.com/yanyingwang/racket-mode-for-ming}之后，在emacs的配置文件中加入：
+@codeblock|{
+(use-package racket-mode
+  :load-path "/your-clone-path/racket-mode-for-ming"
+)
+}|
+
+
 @section{运行代码}
 @subsection{通过终端}
 在终端中执行@racket[racket]命令来打开repl。然后例如，可以有以下输入输出：
