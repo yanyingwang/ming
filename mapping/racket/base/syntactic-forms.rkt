@@ -1,12 +1,17 @@
 #lang s-exp "../../../private/mapping-lang.rkt"
 
 
+
+
+>>> values 殖 "复值的意思" ;;  値 􏾴 􏾴 𡖻 殖
+>>> call-with-values 入殖参予 "用continuation生成复值，并作为参数给予某例程"
+
 >>> lambda 入 ;; 入 道
->>> define 名 "代表，定义" ;;   ;; 旨 意 义
->>> define-values 复名
+>>> define 名 "定义，命名" ;;   ;; 旨 意 义
+>>> define-values 􏹀 "定义复值(殖)" ;复名 並(ifki)名
 
 >>> let 令 ;; 凭
->>> let-values 复令 ; 􏾴
+>>> let-values 􏸿 ; 􏾴 复令
 
 >>> require 受 "接受，引入" ;; 召 召见 , 引入的意思       入 出 拿 给 引进 输出 j举,承 受
 >>> provide 授 "授于，提供" ;; 宣 对外宣布的意思   把....供起来   奏 奉(侍奉,奉献,供奉) 贡 献 供 授
@@ -15,14 +20,14 @@
 ;;;;;; conditaionals
 ;; 如 若 倘 况
 >>> if 若 "若是"
->>> case 倘 "倘如"
+>>> case 倘 "倘如" ;尚（且）
 >>> cond 当 "在……时候，当某某某某情况下则某某某某"
 >>> else 否则
 
 >>> when 若是
 >>> unless 若非
 
->>> and 且 ;; 也 还 又 且 并 兼 而
->>> or 或 ;; 不
+>>> and 且 ;; 也 还 又 且 兼 而 并（且）
+>>> or 或 ;; 不 而（且）
 
->>> not 非
+>>> not 非 ;否，是则返回#t (是 'a) => #t (是 1) => #t; (否 'a) => #f (否 1) => #f

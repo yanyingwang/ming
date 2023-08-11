@@ -54,7 +54,7 @@
                @elem{下偏旁@bold{@litchar{入}}}
                @elem{提示入参类型，通@litchar{/入}}
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[􏹃]、@racket[􏹌]、@racket[􏹅]、@racket[􏹇]}
+               @elem{@racket[􏹃]、@racket[􏹌]、@racket[􏹅]、@racket[􏹇]、@racket[􏹂]、@racket[􏹁]}
                )
                (list
                @elem{左偏旁@bold{@litchar{土}}}
@@ -113,7 +113,7 @@
                @elem{@bold{@litchar{/入}}}
                "提示进参类型"
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[弓/入]、@racket[𰁣/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
+               @elem{@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
                )
          )]
 
@@ -300,7 +300,7 @@
 ]
 
 
-@section+elemref{弔，弓、弓/入，𰁣、𰁣/入}
+@section+elemref{弔，弓、􏹂，𰁣、􏹁}
 @margin-note{
 @bold{@litchar{弔}为古活字} @linebreak{}
 @bold{@litchar{弓}为活用字}
@@ -319,8 +319,8 @@
 (弓 '(a b c d e c f) 'c)
 (𰁣 '(a b c d e c f) 'c)
 
-(弓/入 '(a b 11 d 22 c f) 米?)
-(𰁣/入 '(a b 11 d 22 c f) 米?)
+(􏹂 '(a b 11 d 22 c f) 米?)
+(􏹁 '(a b 11 d 22 c f) 米?)
 ]
 
 @section+elemref{􏾺、𨚞，􏷵、􏷴，􏾺分、𨚞分，􏾺/入、𨚞/入，􏾺于?}

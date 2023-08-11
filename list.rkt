@@ -21,8 +21,8 @@
 (名 (弓* LST V)
     (apply 殖 (𰁣 LST V)))
 
-(名 (弓*/入 LST V)
-    (apply 殖 (𰁣/入 LST V)))
+;; (名 (􏹂* LST V)
+;;     (apply 殖 (􏹂 LST V)))
 
 ;; (名 (𠇁~ LST V)
 ;;     (􏿴 (弓 LST V)))

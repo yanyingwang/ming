@@ -22,9 +22,9 @@
 >>> list-update 攸/入 @elem{类上，另外进参是@racket[入]} ;; 攸
 
 >>> index-of 弓 @elem{返回@racket[􏿴]中某个元素的索引} ;; 引 导 笈 扱 𫼛 弔
->>> index-where 弓/入 @elem{类上，另外进参是@racket[入]} ;; 引 导  函 =》以例 􏿊 􏷻 弔
+>>> index-where 􏹂 @elem{类上，另外进参是@racket[入]} ;; 引 导  函 =》以例 􏿊 􏷻 弔 弓/入
 >>> indexes-of 𰁣 @elem{类上，另外，返回的是所有符合条件的元素组成的@racket[􏿴]} ;; 􏿉 􏿊 伋 􏷺 伄 𠇁 弓v
->>> indexes-where 𰁣/入 @elem{类上，另外进参是@racket[入]} ;; 􏿊 伄 引 𠇁 弓v
+>>> indexes-where 􏹁 @elem{类上，另外进参是@racket[入]} ;; 􏿊 伄 引 𠇁 弓v 𰁣/入
 
 >>> take 􏾺 "从􏿴中左起依次取出来N个元素并组成新􏿴返回"
 >>> take-right 𨚞 "类上，另外是从右边开始操作的"

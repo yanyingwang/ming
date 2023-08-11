@@ -14,6 +14,7 @@
     "/racket/math.rkt"
     "/racket/string.rkt"
     "/racket/symbol.rkt"
+    "/racket/bool.rkt"
     "/racket/vector.rkt"
     "/racket.rkt")
   )
