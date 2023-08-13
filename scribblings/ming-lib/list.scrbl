@@ -20,9 +20,9 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 
 @; @deftogether[(
 @; @defproc[(弓* [LST 􏿴?] [V any/c])
-@;           殖?]
+@;           􏸼?]
 @; @defproc[(弓*/入 [LST 􏿴?] [PROC 程?])
-@;           殖?]
+@;           􏸼?]
 @; )]{
 @; @racket[弓*]、@racket[弓*/入]分别是对@racket[弓]、@racket[弓/入]加强力度。 @linebreak{}
 @; @margin-note{@litchar{弓}为活用字，另见：@racket[弓]、@racket[𰁣]}

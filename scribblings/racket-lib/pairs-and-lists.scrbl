@@ -206,7 +206,7 @@
 }
 @examples[#:eval (the-eval)
 (􏼓 5 'foo)
-(􏼎 5 殖)
+(􏼎 5 􏸼)
 (􏼎 5 􏽊)
 (􏼎 5 (入 (n)
         (􏼓 n 'foo)))

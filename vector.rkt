@@ -2,7 +2,7 @@
 
 (provide ;; 空􏻿
          易? 􏻽 􏻽? 􏻼?
-         􏻿化殖 􏻿􏾝化殖*
+         􏻿化􏸼 􏻿􏾝化􏸼*
          􏻿􏾝* 􏻿􏾩/以􏾝*)
 (require "racket/base.rkt" "racket/vector.rkt" racket/function)
 
@@ -19,11 +19,11 @@
 
 
 ;; TODO: enh below funcs with let loop
-(名 (􏻿化殖 VEC)
-    (􏻿􏾝化殖 VEC))
+(名 (􏻿化􏸼 VEC)
+    (􏻿􏾝化􏸼 VEC))
 
-(名 (􏻿􏾝化殖* VEC N1 N2)
-    (􏻿􏾝化殖 VEC N1 (􏽊 N2)))
+(名 (􏻿􏾝化􏸼* VEC N1 N2)
+    (􏻿􏾝化􏸼 VEC N1 (􏽊 N2)))
 
 (名 (􏻿􏾝* VEC N1 N2)
     (􏻿􏾝 VEC N1 (􏽊 N2)))

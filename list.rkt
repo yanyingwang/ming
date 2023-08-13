@@ -19,10 +19,10 @@
 (require "racket/base.rkt" "racket/list.rkt")
 
 (名 (弓* LST V)
-    (apply 殖 (𰁣 LST V)))
+    (apply 􏸼 (𰁣 LST V)))
 
 ;; (名 (􏹂* LST V)
-;;     (apply 殖 (􏹂 LST V)))
+;;     (apply 􏸼 (􏹂 LST V)))
 
 ;; (名 (𠇁~ LST V)
 ;;     (􏿴 (弓 LST V)))
@@ -57,10 +57,10 @@
   (􏹊^ (list V) LST))
 
 ;; (名 (弔* LST . IDX-LST)
-;;     (apply 殖 (佫 (入 (IDX) (弔 LST IDX))
+;;     (apply 􏸼 (佫 (入 (IDX) (弔 LST IDX))
 ;;                   IDX-LST)))
 ;; (名 (弔^ LST IDX-LST)
-;;     (apply 殖 (佫 (入 (IDX) (弔 LST IDX))
+;;     (apply 􏸼 (佫 (入 (IDX) (弔 LST IDX))
 ;;                   IDX-LST)))
 
 (名 (伄 LST . IDX-LST)

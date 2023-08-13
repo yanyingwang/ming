@@ -289,7 +289,7 @@ h
 @examples[#:eval (the-eval)
 (􏿰各 (􏿰 'a "apple" 'b "banana") (入 (K V) (示 K) (示 V)))
 (􏿰􏺆 (􏿰 'a "apple" 'b "banana") (入 (K V) (􏿴 V K)))
-(􏿰佫 (􏿰 'a "apple" 'b "banana") (入 (K V) (殖 V K)))
+(􏿰佫 (􏿰 'a "apple" 'b "banana") (入 (K V) (􏸼 V K)))
 ]
 
 @section+elemref{􏿰􏺈仔?}
