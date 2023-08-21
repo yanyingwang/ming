@@ -43,7 +43,7 @@
 且 => 并
 􏷮 =>各并
 
-# rename cn char of case
+# rename cn char of case (done)
 倘 => 尚
 
 # enh funcs names of string

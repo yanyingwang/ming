@@ -116,16 +116,16 @@
 ]
 
 
-@section+elemref{􏺕，􏼭，邭}
+@section+elemref{􏺕，􏼭，句􏾝}
 @margin-note{
 @bold{@litchar{􏺕}为新造字} @linebreak{}
 @bold{@litchar{􏼭}为新造字} @linebreak{}
-@bold{@litchar{邭}为古活字}
+@; @bold{@litchar{邭}为古活字}
 @itemlist[
 @item{@litchar{巨}：“测量长度”的意思，参见：@racket[巨]；}
 @item{@litchar{弔}：“第”的意思，参见：@racket[弔]；}
-@item{@litchar{阝}：“部分”的意思。}
-@item{@litchar{邭}：@litchar{句􏾝}的缩写。}
+@; @item{@litchar{阝}：“部分”的意思。}
+@; @item{@litchar{邭}：@litchar{句􏾝}的缩写。}
 ]
 }
 @margin-note{参见：@racket[巨]，@racket[弔]，@racket[􏾝]，@racket[􏻿􏾝]}
@@ -135,22 +135,23 @@
 
 (􏼭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
 
-(邭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
-(邭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3 8)
+(句􏾝 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
+(句􏾝 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3 8)
 ]
 
-@section+elemref{􏼘，􏼘/以邭，􏼅𰅡}
+@section+elemref{􏼘，􏼘/以􏾝，􏼅𰅡}
 @margin-note{
 @; @bold{@litchar{拘}为古活字} @linebreak{}
 @; @bold{@litchar{􏼿}为古活字}
 @bold{@litchar{􏼘}为新造字} @linebreak{}
-@bold{@litchar{邭}为古活字} @linebreak{}
+@; @bold{@litchar{邭}为古活字} @linebreak{}
 @bold{@litchar{𰅡}为古活字} @linebreak{}
 @itemlist[
 @item{@litchar{扌}：“@litchar{!}”的意思；}
 ]
 }
-@margin-note{另见：@racket[􏼅]，@racket[邭]}
+@; @margin-note{另见：@racket[􏼅]，@racket[邭]}
+@margin-note{另见：@racket[􏼅]}
 @margin-note{参见：@racket[攸]、@racket[􏻿􏾩]、@racket[􏿰􏾩]，@racket[􏻿􏾩/以􏾝]}
 @examples[#:eval (the-eval)
 (名 str (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
@@ -158,7 +159,7 @@
 (􏼘 str 1 #\白)
 str
 
-(􏼘/以邭 str 0 "ABCDEFG" 2 4)
+(􏼘/以􏾝 str 0 "ABCDEFG" 2 4)
 str
 
 (􏼅𰅡 str #\Z)
