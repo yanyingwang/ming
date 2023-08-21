@@ -8,9 +8,9 @@
 >>> string-length 􏺕 "句的长度"  ;􏼬 句巨
 >>> string-ref 􏼭 "返回句的第N个元素（从0算起）" ; 句弔
 >>> string-set! 􏼘 @elem{直接修改原始数据第N处字（从0算起）为某字} ;句􏾩 敂! 拘
->>> substring 邭 @elem{句􏾝（返回句第N到M处内容组成的@racket[􏽀]）} ;句􏾝
+>>> substring 句􏾝 @elem{返回句第N到M处内容组成的@racket[􏽀]} ;邭 句􏾝
 >>> string-copy 􏽀化 @elem{把@elem{􏽁}转化为@elem{􏽀}}
->>> string-copy! 􏼘/以邭 @elem{从第N处字（从0算起）开始做覆盖（以另一个句的@racket[句􏾝]结果为内容）} ;句􏾩/以􏾝
+>>> string-copy! 􏼘/以􏾝 @elem{从第N处字（从0算起）开始做覆盖（以另一个句的@racket[句􏾝]结果为内容）} ;句􏾩/以􏾝
 >>> string-fill! 􏼅𰅡 "把句的内容全部变成某一个重复的字" ; 句㙏! 句复! 𰅡 𢪎 􏼗化! 􏼗𰅡 􏼗𢪎  􏼗 􏼖
 >>> string-append 􏼃 @elem{把很多句连成一个@racket[􏽀]} ; 贯句 􏼱
 >>> string-append-immutable 􏼁 @elem{把很多句连成一个@racket[􏽁]} ; 􏼯

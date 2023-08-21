@@ -65,6 +65,7 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 (􏾝 '(a b c d e f) 0 2)
 (􏾝 '(a b c d e f) 0 5)
 (􏾝 '(a b c d e f) 2 5)
+(􏾝 '(a b c d e f) 2)
 
 @; (􏾝* '(a b c d e f) 0 0)
 @; (􏾝* '(a b c d e f) 0 1)
