@@ -12,10 +12,10 @@
     (apply 􏻿 E-LST))
 
 (名 (􏻽? VEC)
-    (且 (易? VEC) (􏻿? VEC)))
+    (并 (易? VEC) (􏻿? VEC)))
 
 (名 (􏻼? VEC)
-    (且 (固? VEC) (􏻿? VEC)))
+    (并 (固? VEC) (􏻿? VEC)))
 
 
 ;; TODO: enh below funcs with let loop
