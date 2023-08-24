@@ -3,12 +3,13 @@
 (λ0 (displayln "aaa")) => (λ () (displayln "aaa")) 
 (λ2 a b (displayln "aaa")) => (λ (a b) (displayln "aaa")) 
 
-# nwe chars for 坐标
-並示 => 坐标的意思
-並𢀖 => 坐标之X
-並韦 => 坐标之Y
-􏸹 =>X值
-􏸸 => Y值
+# 叉㐅
+```racket
+(叉㐅 4 a b c d e f g h) =>
+(叉㐅/4 a b c d e f g h) =>
+(􏿴 (􏿴 a b c d) (􏿴 e f g h))
+```
+
 
 # depths works with 􏿰
 􏿰*^ => no matter how depths data are:
@@ -19,6 +20,15 @@
         [6 . ([7  8]
               [9 10])])]))
 ```
+
+
+# nwe chars for 坐标
+並示 => 坐标的意思
+並𢀖 => 坐标之X
+並韦 => 坐标之Y
+􏸹 =>X值
+􏸸 => Y值
+
 
 # 人称代词的应用/he she it in let
 发展出一种编程规范，在let等作用域内，变量用代词
@@ -63,3 +73,11 @@
 
 # new char for else
 𡖄、外(以外、例外、另外)宀外、宀不, 否刂, 不夕犬 俖 𠥀 𨹭
+
+
+
+# fix (仔? LST1 LST2)
+renaming to: 亻􏿴? and new defining for: 阝􏿴
+
+
+# implement dict as 礻双

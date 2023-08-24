@@ -16,9 +16,9 @@
     (􏽁化 (apply 句 E-LST)))
 
 (名 (􏽁? STR)
-    (且 (固? STR) (句? STR)))
+    (并 (固? STR) (句? STR)))
 (名 (􏽀? STR)
-    (且 (易? STR) (句? STR)))
+    (并 (易? STR) (句? STR)))
 
 
 ;; (名 (邭* STR N1 [N2 空])
