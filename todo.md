@@ -1,7 +1,7 @@
 # λ extended
-(入口 (displayln "aaa")) => (λ () (displayln "aaa")) 
-(λ0 (displayln "aaa")) => (λ () (displayln "aaa")) 
-(λ2 a b (displayln "aaa")) => (λ (a b) (displayln "aaa")) 
+(入口 (displayln "aaa")) => (λ () (displayln "aaa"))
+(λ0 (displayln "aaa")) => (λ () (displayln "aaa"))
+(λ2 a b (displayln "aaa")) => (λ (a b) (displayln "aaa"))
 
 # 叉㐅
 ```racket
@@ -81,3 +81,10 @@ renaming to: 亻􏿴? and new defining for: 阝􏿴
 
 
 # implement dict as 礻双
+
+
+# begin 区
+
+# set! 𢪛 扌名
+
+# (􏾝 (􏾛 LST))  => 屰弔阝
