@@ -468,7 +468,7 @@
 @item{@litchar{夂}：@litchar{各}的简写；}
 @item{@litchar{亻}，见：@secref["list-rules"]；}
 @item{@litchar{土}，表意，构建。见：@secref["list-rules"]；}
-@item{@litchar{且}：见@racket[且]；}
+@item{@litchar{并}：见@racket[并]；}
 @; @item{@litchar{戈}：@litchar{或}的简写，见@racket[或]；}
 ]
 }
@@ -478,7 +478,7 @@
 @item{@code{(佫 某例程 (􏿴 a b c))}}
 @item{@code{(􏿴 (某例程 a) (某例程 b) (某例程 c))}}
 @item{@code{(􏷮 某例程 (􏿴 a b c))}}
-@item{@code{(且 (某例程 a) (某例程 b) (某例程 c))}}
+@item{@code{(并 (某例程 a) (某例程 b) (某例程 c))}}
 @item{@code{(􏷭 某例程 (􏿴 a b c))}}
 @item{@code{(或 (某例程 a) (某例程 b) (某例程 c))}}
 @item{@code{(垎 某例程 z (􏿴 a b c))}}
@@ -503,7 +503,7 @@
 (垎 双 '() '(1 2 -3 4))
 (右垎 双 '() '(1 2 -3 4))
 
-(佫􏹈 (入 (x) (且 (􏻛? x) (􏽊 x))) '(1 3 -4 5))
+(佫􏹈 (入 (x) (并 (􏻛? x) (􏽊 x))) '(1 3 -4 5))
 (佫􏿝 􏻿化􏿴 '(#(1) #(2 3) #(4)))
 ]
 

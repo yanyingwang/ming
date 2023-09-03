@@ -19,7 +19,7 @@
 (require "racket/base.rkt" "racket/list.rkt")
 
 (名 (弓* LST V)
-    (apply 􏸼 (𰁣 LST V)))
+    (𡊤 􏸼 (𰁣 LST V)))
 
 ;; (名 (􏹂* LST V)
 ;;     (apply 􏸼 (􏹂 LST V)))
@@ -54,7 +54,7 @@
   (􏹈巨 PROC LST))
 
 (名 (􏹊 V LST)
-  (􏹊^ (list V) LST))
+    (􏹊^ (􏿴 V) LST))
 
 ;; (名 (弔* LST . IDX-LST)
 ;;     (apply 􏸼 (佫 (入 (IDX) (弔 LST IDX))
@@ -82,20 +82,20 @@
 
 
 (名 (􏾘 LST N)
-    (若非 (􏺡? N)
-          (报参错 '􏾘 "􏺡?" 1 LST N))
+    (􏸞 (􏺡? N)
+        (报参错 '􏾘 "􏺡?" 1 LST N))
     (令 演 ([LST LST] [I 0] [N N])
         (当 [(空? LST) '()]
             [(= I N)
              (演 (阴 LST) (􏽊 I) N)]
-            [俖 (双 (阳 LST) (演 (阴 LST) (􏽊 I) N))])))
+            [夬 (双 (阳 LST) (演 (阴 LST) (􏽊 I) N))])))
 
 (名 (􏾘^ LST N-LST)
     (令 演 ([LST LST] [I 0] [N N-LST])
         (当 [(空? LST) '()]
             [(弓 N-LST I)
              (演 (阴 LST) (􏽊 I) N-LST)]
-            [俖 (双 (阳 LST) (演 (阴 LST) (􏽊 I) N-LST))])))
+            [夬 (双 (阳 LST) (演 (阴 LST) (􏽊 I) N-LST))])))
 
 
 
@@ -112,7 +112,7 @@
              (演 (阴 LST) (阳 LST) R-LST)]
             [(弓 LST C)
              (双 C (演 (阴 LST) (阳 LST) (双 C R-LST)))]
-            [俖 (演 (阴 LST) (阳 LST) R-LST)]))
+            [夬 (演 (阴 LST) (阳 LST) R-LST)]))
     )
 
 (名 (仔? LST1 LST2) ; 阜 人

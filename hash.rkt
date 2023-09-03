@@ -8,15 +8,15 @@
          􏽪? 􏽩? 􏽨? 􏽧?
          􏽢? 􏽡? 􏽠? 􏽟?
          )
-(require racket/function "racket/base.rkt" "racket/hash.rkt" "list.rkt")
+(require "racket/function.rkt" "racket/base.rkt" "racket/hash.rkt" "list.rkt")
 
 
 (名 (􏾌 . V-LST)
-    (apply 􏿰 V-LST))
+    (𡊤 􏿰 V-LST))
 (名 (􏾑 . V-LST)
-    (􏿰^ (apply 􏿳 V-LST)))
+    (􏿰^ (𡊤 􏿳 V-LST)))
 (名 (􏾐 . V-LST)
-    (􏾐^ (apply 􏿳 V-LST)))
+    (􏾐^ (𡊤 􏿳 V-LST)))
 
 
 (名 (􏾐? V)
@@ -75,7 +75,5 @@
 
 
 
-
-
 (名 (易? V)
-    ((negate 固?) V))
+    ((𥟍 固?) V))

@@ -6,14 +6,14 @@
          􏻷?
          􏸵
          )
-(require "racket/base.rkt" "racket/string.rkt" racket/function)
+(require "racket/base.rkt" "racket/string.rkt" "racket/function.rkt")
 
 ;; (名 空􏿲 (􏿲))
 
 (名 (􏽀 . E-LST)
-    (apply 句 E-LST))
+    (𡊤 句 E-LST))
 (名 (􏽁 . E-LST)
-    (􏽁化 (apply 句 E-LST)))
+    (􏽁化 (𡊤 句 E-LST)))
 
 (名 (􏽁? STR)
     (并 (固? STR) (句? STR)))
@@ -27,10 +27,10 @@
 ;;         (邭 STR N1 (􏽊 N2))))
 
 (名 (易? V)
-    ((negate 固?) V))
+    ((𥟍 固?) V))
 
 (名 (􏻷? V)
-    ((negate 􏼟?) V))
+    ((𥟍 􏼟?) V))
 
 (名 (􏸵 S)
     (􏼥 S " " ""))

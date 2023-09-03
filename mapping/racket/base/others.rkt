@@ -21,16 +21,11 @@
 
 >>> for 遍 ;; 每 为 历、遍历 对于
 >>> for/list 遍/􏿴
->>> apply 𡊤 ;; 应 使
->>> procedure? 程? "例程简称程"
+
 ;; >>> listof 􏿴内
 >>> eval 求
 >>> void? 无?
+>>> void 无
 
 >>> immutable? 固? @elem{是否是不可变的} ;; 反义：花 定 坚
-;; (名 (易? V)
-;;     (negate (固? V)))
-;; ; negate => 禾屰
-
 >>> raise-argument-error 报参错
-

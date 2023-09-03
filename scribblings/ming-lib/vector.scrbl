@@ -92,12 +92,12 @@ Racket标准库@secref["vector"]的名语言扩展。
 @; ]
 @; }
 
-@defproc[(易? [V any?]) boolean?]{
-@racket[固?]的反义。
-@examples[#:eval (the-eval)
-(名 vec (􏻿 'a 'b 'c 'd))
-(名 vecc (􏻿 'aa 'bb 'cc 'dd))
-(􏻿􏾩/以􏾝* vec 0 vecc 1 3)
-vec
-]
-}
+@; @defproc[(易? [V any?]) boolean?]{
+@; @racket[固?]的反义。
+@; @examples[#:eval (the-eval)
+@; (名 vec (􏻿 'a 'b 'c 'd))
+@; (名 vecc (􏻿 'aa 'bb 'cc 'dd))
+@; (􏻿􏾩/以􏾝* vec 0 vecc 1 3)
+@; vec
+@; ]
+@; }

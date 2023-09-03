@@ -2,14 +2,16 @@
 
 (provide ;; 空􏻿
          易? 􏻽 􏻽? 􏻼?
-         􏻿化􏸼 􏻿􏾝化􏸼*
-         􏻿􏾝* 􏻿􏾩/以􏾝*)
-(require "racket/base.rkt" "racket/vector.rkt" racket/function)
+         􏻿化􏸼
+         ;; 􏻿􏾝化􏸼*
+         ;; 􏻿􏾝* 􏻿􏾩/以􏾝*
+         )
+(require "racket/base.rkt" "racket/vector.rkt" "racket/function.rkt")
 
 ;; (名 空􏻿 (􏻿))
 
 (名 (􏻽 . E-LST)
-    (apply 􏻿 E-LST))
+    (𡊤 􏻿 E-LST))
 
 (名 (􏻽? VEC)
     (并 (易? VEC) (􏻿? VEC)))
@@ -22,15 +24,15 @@
 (名 (􏻿化􏸼 VEC)
     (􏻿􏾝化􏸼 VEC))
 
-(名 (􏻿􏾝化􏸼* VEC N1 N2)
-    (􏻿􏾝化􏸼 VEC N1 (􏽊 N2)))
+;; (名 (􏻿􏾝化􏸼* VEC N1 N2)
+;;     (􏻿􏾝化􏸼 VEC N1 (􏽊 N2)))
 
-(名 (􏻿􏾝* VEC N1 N2)
-    (􏻿􏾝 VEC N1 (􏽊 N2)))
+;; (名 (􏻿􏾝* VEC N1 N2)
+;;     (􏻿􏾝 VEC N1 (􏽊 N2)))
 
-(名 (􏻿􏾩/以􏾝* VEC N VECC NN1 NN2)
-    (􏻿􏾩/以􏾝 VEC N VECC NN1 (􏽊 NN2)))
+;; (名 (􏻿􏾩/以􏾝* VEC N VECC NN1 NN2)
+;;     (􏻿􏾩/以􏾝 VEC N VECC NN1 (􏽊 NN2)))
 
 
 (名 (易? V)
-    ((negate 固?) V))
+    ((𥟍 固?) V))
