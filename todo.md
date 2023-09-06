@@ -88,3 +88,20 @@ renaming to: 亻􏿴? and new defining for: 阝􏿴
 # set! 𢪛 扌名
 
 # (􏾝 (􏾛 LST))  => 屰弔阝
+
+
+
+# 􏼥 => 名夂刀
+
+
+# bool: true, false
+阴阳爻
+
+
+# values 
+􏸼 => 並
+call-with-values => 土並入
+call-with-values => 土並
+apply => 土又㐅
+垎
+
