@@ -18,6 +18,6 @@
 >>> vector->immutable-vector 􏻼化 @elem{将@racket[􏻽]数据转化为@racket[􏻼]数据} ;􏻿定化 􏻿坚化 坚化/􏻿  􏻿->定􏻿
 >>> vector-fill! 􏻺𰅡 @elem{直接修改@racket[􏻿]数据使其转化成@racket[复􏻿]数据} ;􏻿㙏! 􏼊化!
 >>> vector-copy! 􏻿􏾩/以􏾝 @elem{从本􏻿的第N处索引的数值开始做修改（以另一个􏻿的@racket[􏻿􏾝]为内容）} ; 􏾝
->>> vector->values 􏻿􏾝化殖 @elem{将@racket[􏻿]数据转化为@racket[殖]数据}
+>>> vector->values 􏻿􏾝化􏸼 @elem{将@racket[􏻿]数据转化为@racket[􏸼]数据}
 >>> build-vector 􏻻 @elem{构造内容是一系列序数的@racket[􏻿]}
 ;; >>> build-vector 序􏻿 @elem{构造序@racket[􏻿]（数据内部的各个个元素是按照一定次序排列的）}

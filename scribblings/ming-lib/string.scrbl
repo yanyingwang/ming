@@ -58,3 +58,21 @@ boolean?]{
 (􏻷? "")
 ]
 }
+
+
+@defproc[(􏸵 [STR 句?])
+句?]{
+@margin-note{
+@bold{@litchar{􏸵}为新造字}
+@itemlist[
+@item{@litchar{穴}：空格；}
+@item{@litchar{刀}：移除、删除（@litchar{刂}的非偏旁写法）；}
+]
+}
+@margin-note{
+等同于：@code{(􏼥 STR " " "")}}
+将@racket[STR]的空格全部移除。
+@examples[#:eval (the-eval)
+(􏸵 " a b  cd    e   ")
+]
+}

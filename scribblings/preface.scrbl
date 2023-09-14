@@ -198,6 +198,7 @@ pair在名语言中，被翻译为“@racket[对]”（后又改为了@racket[�
 
 @section{汉语字典索引}
 @itemlist[
+@item{@url{https://www.hanyuguoxue.com}}
 @item{@url{http://qiyuan.chaziwang.com/}}
 @item{@url{https://www.hwxnet.com/}}
 @item{@url{https://cidian.qianp.com/}}

@@ -54,7 +54,7 @@
                @elem{下偏旁@bold{@litchar{入}}}
                @elem{提示入参类型，通@litchar{/入}}
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[􏹃]、@racket[􏹌]、@racket[􏹅]、@racket[􏹇]}
+               @elem{@racket[􏹃]、@racket[􏹌]、@racket[􏹅]、@racket[􏹇]、@racket[􏹂]、@racket[􏹁]}
                )
                (list
                @elem{左偏旁@bold{@litchar{土}}}
@@ -113,7 +113,7 @@
                @elem{@bold{@litchar{/入}}}
                "提示进参类型"
                @elem{进参并非常规数据，而是函数}
-               @elem{@racket[弓/入]、@racket[𰁣/入]、@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
+               @elem{@racket[攸/入]、@racket[􏾺/入]、@racket[𨚞/入]}
                )
          )]
 
@@ -206,7 +206,7 @@
 }
 @examples[#:eval (the-eval)
 (􏼓 5 'foo)
-(􏼎 5 殖)
+(􏼎 5 􏸼)
 (􏼎 5 􏽊)
 (􏼎 5 (入 (n)
         (􏼓 n 'foo)))
@@ -300,7 +300,7 @@
 ]
 
 
-@section+elemref{弔，弓、弓/入，𰁣、𰁣/入}
+@section+elemref{弔，弓、􏹂，𰁣、􏹁}
 @margin-note{
 @bold{@litchar{弔}为古活字} @linebreak{}
 @bold{@litchar{弓}为活用字}
@@ -319,8 +319,8 @@
 (弓 '(a b c d e c f) 'c)
 (𰁣 '(a b c d e c f) 'c)
 
-(弓/入 '(a b 11 d 22 c f) 米?)
-(𰁣/入 '(a b 11 d 22 c f) 米?)
+(􏹂 '(a b 11 d 22 c f) 米?)
+(􏹁 '(a b 11 d 22 c f) 米?)
 ]
 
 @section+elemref{􏾺、𨚞，􏷵、􏷴，􏾺分、𨚞分，􏾺/入、𨚞/入，􏾺于?}
@@ -468,7 +468,7 @@
 @item{@litchar{夂}：@litchar{各}的简写；}
 @item{@litchar{亻}，见：@secref["list-rules"]；}
 @item{@litchar{土}，表意，构建。见：@secref["list-rules"]；}
-@item{@litchar{且}：见@racket[且]；}
+@item{@litchar{并}：见@racket[并]；}
 @; @item{@litchar{戈}：@litchar{或}的简写，见@racket[或]；}
 ]
 }
@@ -478,7 +478,7 @@
 @item{@code{(佫 某例程 (􏿴 a b c))}}
 @item{@code{(􏿴 (某例程 a) (某例程 b) (某例程 c))}}
 @item{@code{(􏷮 某例程 (􏿴 a b c))}}
-@item{@code{(且 (某例程 a) (某例程 b) (某例程 c))}}
+@item{@code{(并 (某例程 a) (某例程 b) (某例程 c))}}
 @item{@code{(􏷭 某例程 (􏿴 a b c))}}
 @item{@code{(或 (某例程 a) (某例程 b) (某例程 c))}}
 @item{@code{(垎 某例程 z (􏿴 a b c))}}
@@ -503,7 +503,7 @@
 (垎 双 '() '(1 2 -3 4))
 (右垎 双 '() '(1 2 -3 4))
 
-(佫􏹈 (入 (x) (且 (􏻛? x) (􏽊 x))) '(1 3 -4 5))
+(佫􏹈 (入 (x) (并 (􏻛? x) (􏽊 x))) '(1 3 -4 5))
 (佫􏿝 􏻿化􏿴 '(#(1) #(2 3) #(4)))
 ]
 

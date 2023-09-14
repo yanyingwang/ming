@@ -5,6 +5,9 @@
            ming/scribble
            scribble-rainbow-delimiters
           )
+
+@(require (file "../../private/scribble-styles/css/ming-fonts.css.rkt"))
+@css/ming-fonts
 @script/rainbow-delimiters*
 
 @(define the-eval

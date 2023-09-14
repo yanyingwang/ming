@@ -68,14 +68,14 @@ Racket标准库@secref["vector"]的名语言扩展。
 
 
 @; @deftogether[(
-@; @defproc[(􏻿化殖 [VEC 􏻿?])
-@;           殖?]
-@; @defproc[(􏻿􏾝化殖* [VEC 􏻿?] [N1 精确非负整数?] [N2 精确非负整数?])
-@;          殖?])]{
-@; @margin-note{另见：@racket[􏻿􏾝*]、@racket[􏻿􏾝化殖]}
+@; @defproc[(􏻿化􏸼 [VEC 􏻿?])
+@;           􏸼?]
+@; @defproc[(􏻿􏾝化􏸼* [VEC 􏻿?] [N1 精确非负整数?] [N2 精确非负整数?])
+@;          􏸼?])]{
+@; @margin-note{另见：@racket[􏻿􏾝*]、@racket[􏻿􏾝化􏸼]}
 @; @examples[#:eval (the-eval)
-@; (􏻿化殖 '#(a b c d))
-@; (􏻿􏾝化殖* '#(a b c d) 0 2)
+@; (􏻿化􏸼 '#(a b c d))
+@; (􏻿􏾝化􏸼* '#(a b c d) 0 2)
 @; ]
 @; }
 
@@ -92,12 +92,12 @@ Racket标准库@secref["vector"]的名语言扩展。
 @; ]
 @; }
 
-@defproc[(易? [V any?]) boolean?]{
-@racket[固?]的反义。
-@examples[#:eval (the-eval)
-(名 vec (􏻿 'a 'b 'c 'd))
-(名 vecc (􏻿 'aa 'bb 'cc 'dd))
-(􏻿􏾩/以􏾝* vec 0 vecc 1 3)
-vec
-]
-}
+@; @defproc[(易? [V any?]) boolean?]{
+@; @racket[固?]的反义。
+@; @examples[#:eval (the-eval)
+@; (名 vec (􏻿 'a 'b 'c 'd))
+@; (名 vecc (􏻿 'aa 'bb 'cc 'dd))
+@; (􏻿􏾩/以􏾝* vec 0 vecc 1 3)
+@; vec
+@; ]
+@; }

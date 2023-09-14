@@ -147,15 +147,15 @@
 (􏻿􏽒 (􏻿 1 222 35 4) <)
 ]
 
-@section+elemref{􏻼化，􏻿化􏿴、􏿴化􏻿、􏻿􏾝化殖}
-@margin-note{参见：@racket[􏻼]、@racket[􏻿􏾝]  @;、@racket[􏻿化殖]
+@section+elemref{􏻼化，􏻿化􏿴、􏿴化􏻿、􏻿􏾝化􏸼}
+@margin-note{参见：@racket[􏻼]、@racket[􏻿􏾝]  @;、@racket[􏻿化􏸼]
 }
-@; @margin-note{另见：@racket[􏻿􏾝化殖*]}
+@; @margin-note{另见：@racket[􏻿􏾝化􏸼*]}
 @examples[#:eval (the-eval)
 (􏻼化 '#(a b c d))
 (􏿴化􏻿 '(a b c d))
 (􏻿化􏿴 '#(a b c d))
-(􏻿􏾝化殖 '#(a b c d) 0 2)
+(􏻿􏾝化􏸼 '#(a b c d) 0 2)
 ]
 
 @section+elemref{􏻿􏾺、􏻿􏷵、􏻿􏾺分、􏻿􏾝}

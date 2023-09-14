@@ -43,7 +43,7 @@
                @elem{左偏旁@bold{@litchar{句}}}
                @elem{指示入参}
                @elem{入参是句结构}
-               @elem{@racket[􏺕]、@racket[􏼭]、@racket[邭]、@racket[􏼩]、@racket[􏼳]、@racket[􏼥]、@racket[􏼝]、@racket[􏼛]、@racket[􏺔]、@racket[􏺓]、@racket[􏺒]}
+               @elem{@racket[􏺕]、@racket[􏼭]、@racket[􏼩]、@racket[􏼳]、@racket[􏼥]、@racket[􏼝]、@racket[􏼛]、@racket[􏺔]、@racket[􏺓]、@racket[􏺒]}
                )
          )]
 
@@ -116,15 +116,16 @@
 ]
 
 
-@section+elemref{􏺕，􏼭，邭，邭?}
+@section+elemref{􏺕，􏼭，句􏾝}
 @margin-note{
 @bold{@litchar{􏺕}为新造字} @linebreak{}
 @bold{@litchar{􏼭}为新造字} @linebreak{}
-@bold{@litchar{邭}为古活字}
+@; @bold{@litchar{邭}为古活字}
 @itemlist[
 @item{@litchar{巨}：“测量长度”的意思，参见：@racket[巨]；}
 @item{@litchar{弔}：“第”的意思，参见：@racket[弔]；}
-@item{@litchar{阝}：“部分”的意思。}
+@; @item{@litchar{阝}：“部分”的意思。}
+@; @item{@litchar{邭}：@litchar{句􏾝}的缩写。}
 ]
 }
 @margin-note{参见：@racket[巨]，@racket[弔]，@racket[􏾝]，@racket[􏻿􏾝]}
@@ -134,23 +135,23 @@
 
 (􏼭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
 
-(邭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
-(邭 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3 8)
-(邭? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "白毛浮绿水")
+(句􏾝 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3)
+(句􏾝 "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" 3 8)
 ]
 
-@section+elemref{􏼘，􏼘/以邭，􏼅𰅡}
+@section+elemref{􏼘，􏼘/以􏾝，􏼅𰅡}
 @margin-note{
 @; @bold{@litchar{拘}为古活字} @linebreak{}
 @; @bold{@litchar{􏼿}为古活字}
 @bold{@litchar{􏼘}为新造字} @linebreak{}
-@bold{@litchar{邭}为古活字} @linebreak{}
+@; @bold{@litchar{邭}为古活字} @linebreak{}
 @bold{@litchar{𰅡}为古活字} @linebreak{}
 @itemlist[
 @item{@litchar{扌}：“@litchar{!}”的意思；}
 ]
 }
-@margin-note{另见：@racket[􏼅]，@racket[邭]}
+@; @margin-note{另见：@racket[􏼅]，@racket[邭]}
+@margin-note{另见：@racket[􏼅]}
 @margin-note{参见：@racket[攸]、@racket[􏻿􏾩]、@racket[􏿰􏾩]，@racket[􏻿􏾩/以􏾝]}
 @examples[#:eval (the-eval)
 (名 str (句 #\鹅 #\鹅 #\鹅 #\， #\曲 #\项 #\向 #\天 #\歌 #\。))
@@ -158,7 +159,7 @@
 (􏼘 str 1 #\白)
 str
 
-(􏼘/以邭 str 0 "ABCDEFG" 2 4)
+(􏼘/以􏾝 str 0 "ABCDEFG" 2 4)
 str
 
 (􏼅𰅡 str #\Z)
@@ -219,21 +220,23 @@ str
 (􏼛 "鹅  鹅    鹅   \n \n 曲项向天歌 \n\r")
 ]
 
-@section+elemref{􏼤?、􏼣?}
+@section+elemref{􏼹?，􏼸?，􏸶?}
 @margin-note{
-@bold{@litchar{􏼤}为新造字} @linebreak{}
-@bold{@litchar{􏼣}为新造字} @linebreak{}
+@bold{@litchar{􏼹}为新造字} @linebreak{}
+@bold{@litchar{􏼸}为新造字} @linebreak{}
 @; @bold{@litchar{􏼢}为新造字}
 @itemlist[
 @item{@litchar{本}：本意是“树根”，在此引申为“起始、开头”之意；}
 @item{@litchar{末}：本意是“树梢”，在此引申为“结尾、末尾”之意；}
-@; @item{@litchar{干}：本意是“树杈状的武器”，因“树干”一词在此引申为“中间、包含”之意；}
-
+@item{@litchar{干}：本意是“枝干”，在此引申为“中间、包含”之意；}
 ]
 }
 @examples[#:eval (the-eval)
-(􏼤? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "鹅鹅鹅")
-(􏼣? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "拨清波。")
+(􏼹? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "鹅鹅鹅")
+(􏼸? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "拨清波。")
+(􏸶? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "鹅鹅鹅")
+(􏸶? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "拨清波。")
+(􏸶? "鹅鹅鹅，曲项向天歌。白毛浮绿水，红掌拨清波。" "白毛")
 ]
 
 @section+elemref{􏺔，􏺓，􏺒}
