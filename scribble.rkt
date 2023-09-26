@@ -92,7 +92,7 @@
     (define enid (car ecr))
     (define cnid (cadr ecr))
     (define rsn (if (> (length ecr) 2) (caddr ecr) ""))
-    (define rsn+secref `(elem ,rsn (elemref ,(symbol->string cnid) "  more.") ))
+    (define rsn+secref `(elem ,rsn (elemref #:underline? #f  ,(symbol->string cnid) "【MORE】") ))
     #`(defhzify #,cnid #,rsn+secref #,enid))
   (syntax-case stx ()
     [(_ path)
