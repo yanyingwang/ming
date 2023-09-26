@@ -254,8 +254,9 @@ str
 (􏺒 "string title case")
 ]
 
-
+@section[#:tag "string-base"]{基础例程}
 @defmapping[racket/base/string]
+@defmodule[ming/racket/base]
 
 @section[#:tag "string-additional"]{额外例程}
 @defmodule[ming/racket/string]

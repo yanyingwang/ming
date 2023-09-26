@@ -527,7 +527,9 @@
 
 
 @section[#:tag "list-base"]{基础例程}
+@defmodule[ming/racket/base]
 @defmapping[racket/base/pairs-and-lists]
+
 @section[#:tag "list-additional"]{扩展例程}
 @defmodule[ming/racket/list]
 @defmapping[racket/list]
