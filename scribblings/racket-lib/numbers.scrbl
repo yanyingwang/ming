@@ -312,7 +312,9 @@
 
 
 @section[#:tag "number-types"]{数的类型例程}
+@defmodule[ming/racket/base]
 @defmapping[racket/base/number-types]
 
 @section[#:tag "generic-numerics"]{数的运算例程}
+@defmodule[ming/racket/base]
 @defmapping[racket/base/generic-numerics]

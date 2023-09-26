@@ -1,4 +1,3 @@
-#lang racket/base
+#lang at-exp s-exp "../private/provide-lang.rkt"
 
-(require "../private/core.rkt")
-(provide-with-mingizily-require racket/vector)
+mapping: "../mapping/racket/vector.rkt"

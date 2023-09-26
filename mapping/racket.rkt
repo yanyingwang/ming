@@ -1,30 +1,94 @@
 #lang racket/base
 
 (provide mapping)
+(require (rename-in "racket/base.rkt" [mapping mapping1])
+         (rename-in "racket/hash.rkt" [mapping mapping2])
+         (rename-in "racket/keyword.rkt" [mapping mapping3])
+         (rename-in "racket/list.rkt" [mapping mapping4])
+         (rename-in "racket/math.rkt" [mapping mapping5])
+         (rename-in "racket/string.rkt" [mapping mapping6])
+         (rename-in "racket/symbol.rkt" [mapping mapping7])
+         (rename-in "racket/bool.rkt" [mapping mapping8])
+         (rename-in "racket/function.rkt" [mapping mapping9])
+         (rename-in "racket/vector.rkt" [mapping mapping10])
+         )
 
-(require (for-syntax racket/base racket/string racket/syntax racket/sequence racket/runtime-path))
-
-(begin-for-syntax
-  (define-runtime-path the-path "racket")
-  (define the-files
-    (for/list ([f (directory-list the-path)]
-               #:when (string-suffix? (path->string f) ".rkt"))
-      (format "racket/~a" f))))
-
-(define-syntax (require-racket/* stx)
-  (let ([sub-requires (for/list ([f the-files]
-                                 [i (in-range (length the-files))])
-                        `(rename-in ,f [mapping ,(format-symbol "mapping~a" i)]))])
-    (datum->syntax stx `(require ,@sub-requires))))
-
-(define-syntax (define-mapping stx)
-  (let ([append-lists (for/list ([i (in-range (sequence-length the-files))])
-                        `(,(format-symbol "mapping~a" i) #:scribble? scribble?))])
-    (datum->syntax stx
-                   `(define (mapping #:scribble? [scribble? #f])
-                      (append ,@append-lists)))))
+(define mapping
+  (append mapping1
+          mapping2
+          mapping3
+          mapping4
+          mapping5
+          mapping6
+          mapping7
+          mapping8
+          mapping9
+          mapping10
+          ))
 
 
-(require-racket/*)
-(define-mapping)
-
+;; TODO: fix racket and racket/base combines of ming mapping
+;; racket/base
+;; racket/bool
+;; racket/bytes
+;; racket/class
+;; racket/cmdline
+;; racket/contract
+;; racket/dict
+;; racket/file
+;; racket/format
+;; racket/function
+;; racket/future
+;; racket/include
+;; racket/list
+;; racket/local
+;; racket/match
+;; racket/math
+;; racket/path
+;; racket/place
+;; racket/port
+;; racket/pretty
+;; racket/promise
+;; racket/sequence
+;; racket/set
+;; racket/shared
+;; racket/stream
+;; racket/string
+;; racket/system
+;; racket/tcp
+;; racket/udp
+;; racket/unit
+;; racket/vector
+;;;;;;;;
+;; racket/base
+;; racket/base
+;; racket/bool
+;; racket/bytes
+;; racket/class
+;; racket/cmdline
+;; racket/contract
+;; racket/dict
+;; racket/file
+;; racket/format
+;; racket/function
+;; racket/future
+;; racket/include
+;; racket/list
+;; racket/local
+;; racket/match
+;; racket/math
+;; racket/path
+;; racket/place
+;; racket/port
+;; racket/pretty
+;; racket/promise
+;; racket/sequence
+;; racket/set
+;; racket/shared
+;; racket/stream
+;; racket/string
+;; racket/system
+;; racket/tcp
+;; racket/udp
+;; racket/unit
+;; racket/vector

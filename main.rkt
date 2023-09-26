@@ -1,8 +1,8 @@
 #lang racket/base
 
 
-(provide (all-from-out "core.rkt" "racket.rkt"))
-(require "core.rkt" "racket.rkt")
+(provide (all-from-out "racket.rkt"))
+(require "racket.rkt")
 
 
 (module reader racket/base ;; TODO: refactor it with syntax/module-reader

@@ -1,4 +1,4 @@
-#lang s-exp "../../../private/mapping-lang.rkt"
+#lang at-exp s-exp "../../../private/mapping-lang.rkt"
 
 ;; Arithmetic
 >>> + + "加"
@@ -57,25 +57,25 @@
 >>> angle ?极式复数度???
 
 ;; Bitwise Operations
->>> bitwise-ior ?bitwise-ior
->>> bitwise-and ?bitwise-and
->>> bitwise-xor ?bitwise-xor
->>> bitwise-not ?bitwise-not
->>> bitwise-bit-set? ?bitwise-bit-set?
->>> bitwise-bit-field ?bitwise-bit-field
->>> arithmetic-shift ?arithmetic-shift
->>> integer-length ?integer-length
+;; >>> bitwise-ior ?bitwise-ior
+;; >>> bitwise-and ?bitwise-and
+;; >>> bitwise-xor ?bitwise-xor
+;; >>> bitwise-not ?bitwise-not
+;; >>> bitwise-bit-set? ?bitwise-bit-set?
+;; >>> bitwise-bit-field ?bitwise-bit-field
+;; >>> arithmetic-shift ?arithmetic-shift
+;; >>> integer-length ?integer-length
 
 ;; 4.3.2.7 Random Numbers
->>> random ?random
->>> random-seed ?random-seed
->>> make-pseudo-random-generator ?make-pseudo-random-generator
->>> pseudo-random-generator? ?pseudo-random-generator?
->>> current-pseudo-random-generator ?current-pseudo-random-generator
->>> pseudo-random-generator->vector ?pseudo-random-generator->vector
->>> vector->pseudo-random-generator ?vector->pseudo-random-generator
->>> vector->pseudo-random-generator! ?vector->pseudo-random-generator!
->>> pseudo-random-generator-vector? ?pseudo-random-generator-vector?
+;; >>> random ?random
+;; >>> random-seed ?random-seed
+;; >>> make-pseudo-random-generator ?make-pseudo-random-generator
+;; >>> pseudo-random-generator? ?pseudo-random-generator?
+;; >>> current-pseudo-random-generator ?current-pseudo-random-generator
+;; >>> pseudo-random-generator->vector ?pseudo-random-generator->vector
+;; >>> vector->pseudo-random-generator ?vector->pseudo-random-generator
+;; >>> vector->pseudo-random-generator! ?vector->pseudo-random-generator!
+;; >>> pseudo-random-generator-vector? ?pseudo-random-generator-vector?
 
 ;; 4.3.2.8 Other Randomness Utilities
 ;; (require racket/random)
@@ -87,11 +87,11 @@
 >>> number->string 米化句
 >>> string->number 句化米
 >>> real->decimal-string 宩化􏹔句 @elem{将@racket[宩]转化成@racket[􏹔]@racket[句]}
->>> integer-bytes->integer ->?integer-bytes->integer
->>> integer->integer-bytes ->?integer->integer-bytes
->>> floating-point-bytes->real ->?floating-point-bytes->real
->>> real->floating-point-bytes ->?real->floating-point-bytes
->>> system-big-endian? ?system-big-endian?
+;; >>> integer-bytes->integer ->?integer-bytes->integer
+;; >>> integer->integer-bytes ->?integer->integer-bytes
+;; >>> floating-point-bytes->real ->?floating-point-bytes->real
+;; >>> real->floating-point-bytes ->?real->floating-point-bytes
+;; >>> system-big-endian? ?system-big-endian?
 
 
 ;; 4.3.2.10 Extra Constants and Functions

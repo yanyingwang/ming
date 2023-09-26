@@ -22,6 +22,5 @@
 
 
 @section[#:tag "character-base"]{例程}
-@defmapping[
-racket/base/characters
-]
+@defmodule[ming/racket/base]
+@defmapping[racket/base/characters]

@@ -324,7 +324,11 @@ h
 ]
 
 
+
 @section[#:tag "hash-base"]{基础例程}
-@defmapping[
-racket/base/hash
-]
+@defmodule[ming/racket/base]
+@defmapping[racket/base/hash]
+
+@section[#:tag "hash-addtional"]{额外例程}
+@defmodule[ming/racket/hash]
+@defmapping[racket/hash]

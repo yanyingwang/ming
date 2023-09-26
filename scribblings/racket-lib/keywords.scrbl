@@ -41,9 +41,8 @@
 
 
 @section[#:tag "symbols-base"]{基础例程}
-@defmapping[
-racket/base/keywords
-]
+@defmodule[ming/racket/base]
+@defmapping[racket/base/keywords]
 
 @section[#:tag "symbols-additional"]{额外例程}
 @defmodule[ming/racket/keywords]

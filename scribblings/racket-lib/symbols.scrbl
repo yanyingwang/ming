@@ -55,9 +55,8 @@
 ]
 
 @section[#:tag "symbols-base"]{基础例程}
-@defmapping[
-racket/base/symbols
-]
+@defmodule[ming/racket/base]
+@defmapping[racket/base/symbols]
 
 @section[#:tag "symbols-additional"]{额外例程}
 @defmodule[ming/racket/symbol]

@@ -15,7 +15,7 @@
 
 >>> syntax->list 􏹩 @elem{􏺃化􏿴}
 >>> syntax->datum 􏹴 @elem{􏺃化文（将􏺃转化成文（原料数据））}
->>> datum->syntax 􏹳 @elme{文化􏺃}
+>>> datum->syntax 􏹳 @elem{文化􏺃}
 >>> syntax-binding-set? ?syntax-binding-set?
 >>> syntax-binding-set ?syntax-binding-set
 >>> syntax-binding-set->syntax ?syntax-binding-set->syntax

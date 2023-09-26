@@ -88,9 +88,8 @@
 
 
 @section[#:tag "syntax-base"]{基础例程}
-@defmapping[
-racket/base/syntax
-]
+@defmodule[ming/racket/base]
+@defmapping[racket/base/syntax]
 
 @; @section[#:tag "syntax-additional"]{额外例程}
 @; @defmodule[ming/racket/syntax]

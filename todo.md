@@ -98,10 +98,27 @@ renaming to: 亻􏿴? and new defining for: 阝􏿴
 阴阳爻
 
 
-# values 
+# values
 􏸼 => 並
 call-with-values => 土並入
 call-with-values => 土並
 apply => 土又㐅
 垎
+
+
+
+## symbol*=?
+(symbol*=? a b) <== (and (symbol? a) (symbol? b) (symbol=? a b))
+
+
+
+## abs
+consider renaming 􏹚 to 𫂱 since | | was used in racket for creating symbol:
+```racket
+'|racket|
+```
+
+
+## implement scribble/ming lang
+file:///home/yanying/racket/doc/scribble/doclang.html
 
