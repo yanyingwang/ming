@@ -1,4 +1,4 @@
-#lang racket/base
 
-(require "../private/core.rkt")
-(provide-with-mingizily-require racket/function)
+#lang at-exp s-exp "../private/provide-lang.rkt"
+
+mapping: "../mapping/racket/function.rkt"

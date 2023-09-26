@@ -1,4 +1,4 @@
-#lang s-exp "../../../private/mapping-lang.rkt"
+#lang at-exp s-exp "../../../private/mapping-lang.rkt"
 
 
 >>> equal? 同? ;;; 同 同齐 同等 俤

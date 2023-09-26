@@ -9,10 +9,10 @@
 >>> vector-length 􏻿巨 @elem{返回􏻿的长度} ;􏻿度
 >>> vector-ref 􏻿弔 @elem{返回􏻿的某索引处的元素}
 >>> vector-set! 􏻿􏾩 @elem{直接修改原数组中某索引处的元素为新值}
->>> vector*-length vector*-length
->>> vector*-ref vector*-ref
->>> vector*-set! vector*-set!
->>> vector-cas! vector-cas!
+;; >>> vector*-length vector*-length
+;; >>> vector*-ref vector*-ref
+;; >>> vector*-set! vector*-set!
+;; >>> vector-cas! vector-cas!
 >>> vector->list 􏻿化􏿴 @elem{将@racket[􏻿]数据转化为@racket[􏻿]} ; 􏻿->􏿴
 >>> list->vector 􏿴化􏻿 @elem{将@racket[􏻿]数据转化为@racket[􏻿]}
 >>> vector->immutable-vector 􏻼化 @elem{将@racket[􏻽]数据转化为@racket[􏻼]数据} ;􏻿定化 􏻿坚化 坚化/􏻿  􏻿->定􏻿

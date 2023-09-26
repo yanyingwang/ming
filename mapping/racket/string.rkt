@@ -1,4 +1,4 @@
-#lang s-exp "../../private/mapping-lang.rkt"
+#lang at-exp s-exp "../../private/mapping-lang.rkt"
 
 
 >>> string-append* 􏼂 @elem{类@racket[􏼱]，不过最后一个句是@racket[􏿴]} ;􏼰

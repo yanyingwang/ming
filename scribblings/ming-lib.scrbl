@@ -12,7 +12,7 @@
 
 @(table-of-contents)
 
-@include-section["ming-lib/core.scrbl"]
+@; @include-section["ming-lib/core.scrbl"]
 @include-section["ming-lib/kernel.scrbl"]
 @include-section["ming-lib/list.scrbl"]
 @include-section["ming-lib/vector.scrbl"]

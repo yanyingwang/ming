@@ -25,7 +25,7 @@
 
 >>> remove 􏹊~ @elem{以@racket[同?]作为比较来删除第一个寻找到的某元素} ;; 刈 删 缺
 >>> remw 􏹊~/􏾗 @elem{类上，另外比较例程是@racket[􏾗?]}
->>> remv 􏹊~/􏾃 @elem{类上，另外比较例程是@racket[?􏾃]}
+>>> remv 􏹊~/􏾃 @elem{类上，另外比较例程是@racket[􏾃?]}
 >>> remq 􏹊~/侗 @elem{类上，另外比较例程是@racket[侗?]}
 ;; 刈~ should be acting as 刈, and result of (刈 'c '(a b c c d)) should be same as (刈* '(c) '(a b c c d))
 >>> remove* 􏹊^ @elem{类@racket[􏷲]，不过入参不同。}
