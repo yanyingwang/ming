@@ -5,7 +5,7 @@
            ming/scribble
            )
 @(define the-eval
-         (make-eval-factory '(ming/racket/base ming/racket/list ming/racket/vector)))
+         (make-eval-factory '(ming/racket/base ming/racket/list ming/racket/vector ming/list)))
 
 @(require (file "../../private/scribble-styles/css/ming-fonts.css.rkt"))
 @css/ming-fonts
@@ -194,7 +194,7 @@
 (􏼏* 10 20 2)
 ]
 
-@section+elemref{􏼓、􏼎}
+@section+elemref{􏼓0、􏼎}
 用于构造@elemref["what-is-􏿴􏿫" "􏿴"]类型的数据。
 @margin-note{
 @bold{@litchar{􏼓}为新造字}  @linebreak{}
@@ -205,11 +205,11 @@
 ]
 }
 @examples[#:eval (the-eval)
-(􏼓 5 'foo)
-(􏼎 5 􏸼)
+(􏼓 'foo 5)
+(􏼎 5 並)
 (􏼎 5 􏽊)
 (􏼎 5 (入 (n)
-        (􏼓 n 'foo)))
+        (􏼓 'foo 5)))
 ]
 
 @section+elemref{􏿝、􏿜}

@@ -154,6 +154,12 @@ Racket标准库@secref["pairs-and-lists"]的名语言扩展。
 ]
 }
 
+@defproc[(􏼓 [V any?] [N 􏺡?] ...) 􏿴?]{
+same as @racket[􏼓0] except the reverse order of arguments.
+@examples[#:eval (the-eval)
+(􏼓 'val 8)
+]
+}
 
 
 @defproc[(􏿳 [V any?] ...) 􏿳?]{

@@ -100,7 +100,7 @@ renaming to: 亻􏿴? and new defining for: 阝􏿴
 
 # values
 􏸼 => 並
-call-with-values => 土並入
+call-with-values => 土並入 甩
 call-with-values => 土並
 apply => 土又㐅
 垎

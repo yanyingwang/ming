@@ -4,7 +4,7 @@
            scribble/example
            scribble-rainbow-delimiters)
 @(define the-eval
-         (make-eval-factory '(racket/base racket/list ming/racket/base ming/racket/list)))
+         (make-eval-factory '(racket/base racket/list ming/list ming/racket/base ming/racket/list)))
 
 
 @(require (file "../private/scribble-styles/css/ming-fonts.css.rkt"))
@@ -173,11 +173,11 @@ pair在名语言中，被翻译为“@racket[对]”（后又改为了@racket[�
 
 @examples[#:eval (the-eval) #:label "中文化后的示例："
 (􏿴 'val 'val 'val)
-(􏼓 3 'val)
+(􏼓 'val 3)
 
 (􏿴 1 2 3 4 5)
 (􏼎 5 􏽊)
-(􏼎 5 (入 (n) (􏼓 n 'val)))
+(􏼎 5 (λ (n) (􏼓 'val n)))
 ]
 
 @section{如何做}
