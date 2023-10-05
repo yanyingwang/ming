@@ -1,5 +1,3 @@
-
-
 #lang scribble/manual
 
 @(require (for-label racket ming)
@@ -29,14 +27,6 @@
 @; @item{@litchar{米}偏旁取自“@litchar{数}字的起首偏旁，有@racket[数?]的意思；}
 @; ]
 @; }
-
-@section+elemref{且、或}
-@examples[#:eval (the-eval)
-(且 3 2)
-(或 3 2)
-(且 (< 2 5) (> 2 0))
-(或 (< 2 5) (> 2 0))
-]
 
 @section+elemref{同?、􏾗?、􏾃?、侗?}
 @margin-note{

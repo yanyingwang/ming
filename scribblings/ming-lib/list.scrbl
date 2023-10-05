@@ -181,11 +181,7 @@ same as @racket[􏼓0] except the reverse order of arguments.
 
 
 @defproc[(􏿳? [V any?]) boolean?]{
-是否是@racket[􏿳]。
-@margin-note{
-等同于： @linebreak{}
-@code{(且 (􏿴? V) (􏷮 双? V))}
-}
+If @racket[V] is @racket[􏿳] or not. Same as @code{(并 (􏿴? V) (􏷮 双? V))}.
 @examples[#:eval (the-eval)
 (􏿳? '(1 2 3 4))
 (􏿳? (􏿳 1 2 3 4))

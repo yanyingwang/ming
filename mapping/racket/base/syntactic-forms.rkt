@@ -22,9 +22,9 @@
 >>> else 夬 "do ... when no valid conditions are found" ;外 ;;否则 㚈 􏸴 􏸲 俖
 
 >>> when 􏸣
->>> unless 􏸞
+>>> unless 􏸟 ;; 􏸞
 
 >>> and 并 ;; 也 还 又 且 兼 而 并（且）
->>> or 或 ;; 不 而（且）
+>>> or 戈 "shorts for 或" ;; 不 而（且） 或 戓
 
 >>> not 非 ;; 非 否

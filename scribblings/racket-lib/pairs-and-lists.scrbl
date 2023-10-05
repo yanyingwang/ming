@@ -455,36 +455,33 @@
 (􏹈巨 米? '(a b 1 c d 3 e 9 f))
 ]
 
-@section+elemref{各，佫，􏷮、􏷭，垎、右垎，佫􏹈、佫􏿝} @;􏷮，􏷭
+@section+elemref{各，佫，􏷱、􏷰，垎、右垎，佫􏹈、佫􏿝} @;􏷮，􏷭
 @margin-note{
 @bold{@litchar{佫}为古活字} @linebreak{}
-@; @bold{@litchar{􏷬}为新造字} @linebreak{}
-@; @bold{@litchar{㦴}为古活字} @linebreak{}
-@bold{@litchar{􏷮}为新造字} @linebreak{}
-@bold{@litchar{􏷭}为新造字} @linebreak{}
+@bold{@litchar{􏷱}为新造字} @linebreak{}
+@bold{@litchar{􏷰}为新造字} @linebreak{}
 @bold{@litchar{垎}为活用字}
 @itemlist[
 @item{@litchar{各}：表意，各个元素依次；}
-@item{@litchar{夂}：@litchar{各}的简写；}
 @item{@litchar{亻}，见：@secref["list-rules"]；}
 @item{@litchar{土}，表意，构建。见：@secref["list-rules"]；}
 @item{@litchar{并}：见@racket[并]；}
-@; @item{@litchar{戈}：@litchar{或}的简写，见@racket[或]；}
+@item{@litchar{戈}：见@racket[戈]；}
 ]
 }
 @margin-note{
 为便理解，列下代码，两两等同：
 @itemlist[
-@item{@code{(佫 某例程 (􏿴 a b c))}}
-@item{@code{(􏿴 (某例程 a) (某例程 b) (某例程 c))}}
-@item{@code{(􏷮 某例程 (􏿴 a b c))}}
-@item{@code{(并 (某例程 a) (某例程 b) (某例程 c))}}
-@item{@code{(􏷭 某例程 (􏿴 a b c))}}
-@item{@code{(或 (某例程 a) (某例程 b) (某例程 c))}}
-@item{@code{(垎 某例程 z (􏿴 a b c))}}
-@item{@code{(某例程 c (某例程 b (某例程 a z)))}}
-@item{@code{(右垎 某例程 z (􏿴 a b c))}}
-@item{@code{(某例程 a (某例程 b (某例程 c z)))}}
+@item{@code{(佫 PROC (􏿴 a b c))}}
+@item{@code{(􏿴 (PROC a) (PROC b) (PROC c))}}
+@item{@code{(􏷱 PROC (􏿴 a b c))}}
+@item{@code{(并 (PROC a) (PROC b) (PROC c))}}
+@item{@code{(􏷰 PROC (􏿴 a b c))}}
+@item{@code{(戈 (PROC a) (PROC b) (PROC c))}}
+@item{@code{(垎 PROC z (􏿴 a b c))}}
+@item{@code{(PROC c (PROC b (PROC a z)))}}
+@item{@code{(右垎 PROC z (􏿴 a b c))}}
+@item{@code{(PROC a (PROC b (PROC c z)))}}
 ]
 }
 
@@ -493,11 +490,11 @@
 (佫 􏽊 '(1 2 3 4))
 (佫 + '(1 2 3 4) '(100 200 300 400))
 
-(􏷮 􏻛? '(1 2 -3 4))
-(􏷮 + '(1 2 3 4) '(100 200 300 400))
+(􏷱 􏻛? '(1 2 -3 4))
+(􏷱 + '(1 2 3 4) '(100 200 300 400))
 
-(􏷮 􏻚? '(1 2 -3 4))
-(􏷭 + '(1 2 3 4) '(100 200 300 400))
+(􏷱 􏻚? '(1 2 -3 4))
+(􏷰 + '(1 2 3 4) '(100 200 300 400))
 
 (垎 + 0 '(1 2 -3 4))
 (垎 双 '() '(1 2 -3 4))
