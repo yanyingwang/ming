@@ -24,6 +24,8 @@
          (rename-in "../mapping/racket/base/string.rkt" [mapping mapping/racket/base/string])
          (rename-in "../mapping/racket/base/symbols.rkt" [mapping mapping/racket/base/symbols])
          (rename-in "../mapping/racket/base/syntactic-forms.rkt" [mapping mapping/racket/base/syntactic-forms])
+         (rename-in "../mapping/racket/base/conditionals.rkt" [mapping mapping/racket/base/conditionals])
+         (rename-in "../mapping/racket/base/values.rkt" [mapping mapping/racket/base/values])
          (rename-in "../mapping/racket/base/syntax.rkt" [mapping mapping/racket/base/syntax])
          (rename-in "../mapping/racket/base/vector.rkt" [mapping mapping/racket/base/vector])
          )
@@ -51,6 +53,8 @@
           'racket/base/string mapping/racket/base/string
           'racket/base/symbols mapping/racket/base/symbols
           'racket/base/syntactic-forms mapping/racket/base/syntactic-forms
+          'racket/base/conditionals mapping/racket/base/conditionals
+          'racket/base/values mapping/racket/base/values
           'racket/base/syntax mapping/racket/base/syntax
           'racket/base/vector mapping/racket/base/vector
           ))
