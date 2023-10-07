@@ -1,8 +1,9 @@
 #lang racket/base
 
 
-(provide defmapping defhzify section+elemref)
-(require scribble/manual
+(provide defmapping defhzify defzi section+elemref section+autotag
+         像注 elucidate)
+(require scribble/manual racket/string scribble/core
          (for-syntax racket/base racket/string racket/list
                      "private/zitable.rkt"))
 
@@ -26,7 +27,10 @@
   (define (gen-defhzify ecr)
     (define enid (car ecr))
     (define cnid (cadr ecr))
-    (define rsn (if (> (length ecr) 2) (caddr ecr) ""))
+    (define rsn
+      (if (> (length ecr) 2)
+          `(elem ,(caddr ecr) (hspace 1))
+          ""))
     (define rsn+secref `(elem ,rsn (elemref #:underline? #f  ,(symbol->string cnid) "【MORE】") ))
     (datum->syntax stx `(defhzify ,cnid ,rsn+secref ,enid)))
   (syntax-case stx ()
@@ -38,3 +42,18 @@
              (defth ...)))]
     )
   )
+
+
+(define (defzi tag . content)
+  (elemtag tag (elem (bold (litchar tag)) ":" (hspace 1) content)))
+
+
+(define (section+autotag . content)
+  (define tag (string-join content ""))
+  (section #:tag tag content))
+
+(define (像注 . content) ;; elephant-note
+  (margin-note (elem "🐘" (hspace 1) content)))
+
+(define (elucidate . content) ;; 释义
+  (elem (italic content)))

@@ -2,8 +2,8 @@
 
 
 >>> if 丫 ; 如 若 倘 况
->>> when 􏸣
->>> unless 􏸟 ;; 􏸞
+>>> when 􏸣 @elem{@racket[丫] + @litchar{一}}
+>>> unless 􏸟 @elem{@racket[􏸣] + @racket[非]} ;; 􏸞
 
 >>> and 并 ;; 也 还 又 且 兼 而 并（且）
 >>> or 戈  ;; 不 而（且） 或 戓

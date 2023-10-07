@@ -1,7 +1,13 @@
 #lang racket/base
 
-(provide 􏸧 􏸬 􏸫 􏸪)
-(require "racket/base.rkt")
+(provide 􏸧 􏸬 􏸫 􏸪
+         (all-from-out "conditionals.rkt")
+         (all-from-out "values.rkt")
+         )
+
+(require "racket/base.rkt"
+         "conditionals.rkt"
+         "values.rkt")
 
 (define-syntax 􏸧
   (syntax-rules ()

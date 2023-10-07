@@ -47,3 +47,11 @@ Same as:
 ((􏸬 x x) 10)
 ]
 }
+
+@defform[(􏸞 a b c)]{
+@像注{@secref{丫，􏸣、􏸟}}
+Is short for @code{(丫 (非 a) b c)}, which can always be wrote as @code{(丫 a c b)}, thus it should take precedence over the described form in the using if necessary.
+@examples[#:eval (the-eval)
+(􏸞 (= 1 1) 'unequal 'equal)
+]
+}

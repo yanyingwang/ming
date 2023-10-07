@@ -1,7 +1,7 @@
 #lang s-exp "../../../private/mapping-lang.rkt"
 
 >>> apply 𡊤 ;; 应 使
->>> procedure? 禾? "例程简称程" ;程?
+>>> procedure? 禾?  ;程?
 
 ;; compose
 ;; compose1
