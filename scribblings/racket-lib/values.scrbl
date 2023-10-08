@@ -13,12 +13,10 @@
 @script/rainbow-delimiters*
 
 
-@title[#:tag "ming-values"]{並}
+@title[#:tag "values"]{並}
 Racket's @tech[#:doc '(lib "scribblings/reference/reference.scrbl") "value"] is especially called @zi{𰅰} in ming-lang.
 
 Racket's @secref["values" #:doc '(lib "scribblings/reference/reference.scrbl")] is especially called @zi{並} in ming-lang.
-
-@elemref["并"]{并}
 
 @section+autotag{𰅰，並，𡌶}
 @eleph-note{@racket[􏸾]、@racket[􏸽]}

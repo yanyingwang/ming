@@ -1,11 +1,11 @@
-#lang s-exp "../../../private/mapping-lang.rkt"
+#lang at-exp s-exp "../../../private/mapping-lang.rkt"
 
->>> apply 𡊤 ;; 应 使
->>> procedure? 禾?  ;程?
+>>> apply 𡊤 ;; 应 使 土 士
+>>> procedure? 禾? @elem{@zi{禾} + @zi{?}} ;程?
 
-;; compose
-;; compose1
-;; procedure-rename
+>>> compose 􏸛 @elem{@zi{土} + @zi{禾}} ; 秝
+>>> compose1 􏸚 @elem{@zi{􏸛} + @litchar{一}}
+>>> procedure-rename 􏸘 @elem{@zi{禾} + @zi{名} + @zi{攵}}
 ;; procedure-realm
 ;; procedure->method
 ;; procedure-closure-contents-eq?

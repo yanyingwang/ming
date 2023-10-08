@@ -34,4 +34,5 @@ Racket库的名语言汉化，汉化了的Racket内部库程序应都置于此�
 @include-section["racket-lib/syntax.scrbl"]
 @include-section["racket-lib/conditionals.scrbl"]
 @include-section["racket-lib/values.scrbl"]
+@include-section["racket-lib/procedures.scrbl"]
 @include-section["racket-lib/others.scrbl"]

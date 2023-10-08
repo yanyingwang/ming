@@ -3,7 +3,7 @@
 
 (provide defmapping defhzify section+elemref section+autotag
          eleph-note elucidate
-         defzi zi
+         defzi zi defzi/unicode-pua
          modernly-simplifies anciently-simplifies modernly-means
          )
 (require scribble/manual racket/string scribble/core
@@ -46,6 +46,8 @@
     )
   )
 
+(define (defzi/unicode-pua tag)
+  (elemtag tag (elem (bold (litchar tag)) ":" (hspace 1) "character from Unicode Privae Use Areas especially designed by ming-lang.")))
 
 (define (defzi tag . content)
   (elemtag tag (elem (bold (litchar tag)) ":" (hspace 1) content)))
@@ -58,11 +60,15 @@
   (define tag (string-join content ""))
   (section #:tag tag content))
 
-(define (eleph-note . content) ;; 像注
-  (margin-note (elem "🐘" (hspace 1) content)))
+(define (eleph-note . content) ;; 像注, elephant in chinese is wrote as 象, and 像 means like, resemble
+  (margin-note (elem "🐘" (hspace 1) content))) ;; 💡
 
 (define (elucidate . content) ;; 释义
   (elem (italic content)))
+
+(define (modernly-means elucidation . content)
+  @elem{means @elucidate{@elucidation} in modern chinese. @content}
+  )
 
 (define (modernly-simplifies zi elucidation . content)
   @elem{simplifies from @(litchar zi), which means @(elucidate elucidation) in modern chinese. @content}
@@ -70,8 +76,4 @@
 
 (define (anciently-simplifies zi elucidation ming-elu . content)
   @elem{simplifies from @litchar{@zi} in ancient chinese, means @elucidate{@elucidation}, especially means @elucidate{@ming-elu} in ming-lang. @content}
-  )
-
-(define (modernly-means elucidation . content)
-  @elem{means @elucidate{@elucidation} in modern chinese. @content}
   )
