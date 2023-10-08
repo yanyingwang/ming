@@ -51,7 +51,7 @@
   (elemtag tag (elem (bold (litchar tag)) ":" (hspace 1) content)))
 
 (define (zi c) ;; zi shorts for hanzi, means chinese chars.
-  (elemref c c)
+  (elemref c (racketplainfont c))
   )
 
 (define (section+autotag . content)
