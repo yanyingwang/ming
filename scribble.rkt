@@ -1,8 +1,11 @@
-#lang racket/base
+#lang at-exp racket/base
 
 
-(provide defmapping defhzify defzi section+elemref section+autotag
-         像注 elucidate)
+(provide defmapping defhzify section+elemref section+autotag
+         eleph-note elucidate
+         defzi zi
+         modernly-simplifies anciently-simplifies modernly-means
+         )
 (require scribble/manual racket/string scribble/core
          (for-syntax racket/base racket/string racket/list
                      "private/zitable.rkt"))
@@ -47,13 +50,28 @@
 (define (defzi tag . content)
   (elemtag tag (elem (bold (litchar tag)) ":" (hspace 1) content)))
 
+(define (zi c) ;; zi shorts for hanzi, means chinese chars.
+  (elemref c c)
+  )
 
 (define (section+autotag . content)
   (define tag (string-join content ""))
   (section #:tag tag content))
 
-(define (像注 . content) ;; elephant-note
+(define (eleph-note . content) ;; 像注
   (margin-note (elem "🐘" (hspace 1) content)))
 
 (define (elucidate . content) ;; 释义
   (elem (italic content)))
+
+(define (modernly-simplifies zi elucidation . content)
+  @elem{simplifies from @(litchar zi), which means @(elucidate elucidation) in modern chinese. @content}
+  )
+
+(define (anciently-simplifies zi elucidation ming-elu . content)
+  @elem{simplifies from @litchar{@zi} in ancient chinese, means @elucidate{@elucidation}, especially means @elucidate{@ming-elu} in ming-lang. @content}
+  )
+
+(define (modernly-means elucidation . content)
+  @elem{means @elucidate{@elucidation} in modern chinese. @content}
+  )
