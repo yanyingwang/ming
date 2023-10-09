@@ -6,7 +6,7 @@
 ;; const*
 ;; thunk
 ;; thunk*
->>> negate 𥟍 ;; ;𥟍􏸝
+>>> negate 𥟍 @elem{@zi{禾} + @racket[非]} ;; ;𥟍􏸝
 ;; conjoin
 ;; disjoin
 ;; curry

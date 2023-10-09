@@ -22,10 +22,10 @@ Racket's @secref["values" #:doc '(lib "scribblings/reference/reference.scrbl")] 
 @eleph-note{@racket[􏸾]、@racket[􏸽]}
 @itemlist[
 @item{
-@defzi["𰅰"]{@modernly-simplifies["值" "value"]}
+@defzi[𰅰]{@modernly-simplifies["值" "value"]}
 }
 @item{
-@defzi["並"]{@anciently-simplifies["竝" "two or more than two objects as a whole" "multiple values"]{(Not confuse with @zi{并})}. }
+@defzi[並]{@anciently-simplifies["竝" "two or more than two objects as a whole" "multiple values"]{(Not confuse with @zi{并})}. }
 }
 ]
 @examples[#:eval (the-eval)

@@ -3,8 +3,9 @@
 
 (provide defmapping defhzify section+elemref section+autotag
          eleph-note elucidate
-         defzi zi defzi/unicode-pua
-         modernly-simplifies anciently-simplifies modernly-means
+         defzi defzi/puauni zi
+         modernly-simplifies anciently-simplifies
+         modernly-means mingly-resembles
          )
 (require scribble/manual racket/string scribble/core
          (for-syntax racket/base racket/string racket/list
@@ -46,14 +47,32 @@
     )
   )
 
-(define (defzi/unicode-pua tag)
-  (elemtag tag (elem (bold (litchar tag)) ":" (hspace 1) "character from Unicode Privae Use Areas especially designed by ming-lang.")))
 
-(define (defzi tag . content)
+(define (defzi0/puauni tag) ;; unicode from pivate use areas
+  (elemtag tag (elem (bold (litchar tag)) ":" (hspace 1) "PUA unicode, especially designs for ming-lang.")))
+
+(define (defzi0 tag . content)
   (elemtag tag (elem (bold (litchar tag)) ":" (hspace 1) content)))
 
-(define (zi c) ;; zi shorts for hanzi, means chinese chars.
-  (elemref c (racketplainfont c))
+(define-syntax (defzi/puauni stx)
+  (syntax-case stx ()
+    [(_ zi content ...)
+     (with-syntax ([str-zi (symbol->string (syntax-e #'zi))])
+       #'(elemtag str-zi (elem (bold (racket (code:hilite zi))) ":" (hspace 1) "PUA unicode, especially designs for ming-lang.")))
+     ])
+  )
+
+(define-syntax (defzi stx)
+  (syntax-case stx ()
+    [(_ zi content ...)
+     (with-syntax ([str-zi (symbol->string (syntax-e #'zi))])
+       #'(elemtag str-zi (elem (bold (racket (code:hilite zi))) ":" (hspace 1) content ...)))
+     ])
+  )
+
+(define (zi c) ;; zi shorts for hanzi, means chinese char.
+  (elem #:style "RktInBG"
+        (elemref c (racketplainfont c)))
   )
 
 (define (section+autotag . content)
@@ -70,10 +89,14 @@
   @elem{means @elucidate{@elucidation} in modern chinese. @content}
   )
 
+(define (mingly-resembles zi elucidation . content)
+  @elem{resembles @litchar{@zi}, especially means @elucidate{@elucidation} in ming-lang. @content}
+  )
+
 (define (modernly-simplifies zi elucidation . content)
-  @elem{simplifies from @(litchar zi), which means @(elucidate elucidation) in modern chinese. @content}
+  @elem{simplifies for @(litchar zi), which means @(elucidate elucidation) in modern chinese. @content}
   )
 
 (define (anciently-simplifies zi elucidation ming-elu . content)
-  @elem{simplifies from @litchar{@zi} in ancient chinese, means @elucidate{@elucidation}, especially means @elucidate{@ming-elu} in ming-lang. @content}
+  @elem{simplifies for @litchar{@zi} in ancient chinese, means @elucidate{@elucidation}, especially means @elucidate{@ming-elu} in ming-lang. @content}
   )

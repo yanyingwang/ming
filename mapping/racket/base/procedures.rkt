@@ -1,11 +1,17 @@
 #lang at-exp s-exp "../../../private/mapping-lang.rkt"
 
->>> apply 𡊤 ;; 应 使 土 士
->>> procedure? 禾? @elem{@zi{禾} + @zi{?}} ;程?
+
+>>> lambda 入 ;; 禾 入 道 犭 刁
+>>> case-lambda 􏸗 @elem{@zi{入} + @zi{肖}} ;; 􏸗 􏸖
+>>> define 名
+>>> let 令
+
+>>> apply 𡊤 ;; 应 使 土 士 􏸛
+>>> procedure? 禾? @elem{@zi{禾} + @zi{?}}
 
 >>> compose 􏸛 @elem{@zi{土} + @zi{禾}} ; 秝
 >>> compose1 􏸚 @elem{@zi{􏸛} + @litchar{一}}
->>> procedure-rename 􏸘 @elem{@zi{禾} + @zi{名} + @zi{攵}}
+>>> procedure-rename 􏸘 @elem{@zi{禾} + @zi{名} + @zi{攵}} ;;  名攵 shorts for it
 ;; procedure-realm
 ;; procedure->method
 ;; procedure-closure-contents-eq?

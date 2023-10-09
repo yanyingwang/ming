@@ -30,13 +30,16 @@ The kernel methods and syntaxes of ming lang.
 @defform[(􏸬 arg1 exprs ...)]
 @defform[(􏸫 arg1 arg2 exprs ...)]
 @defform[(􏸪 arg1 arg2 arg3 exprs ...)])]{
+@eleph-note{@racket[入]}
+
 Same as:
 @itemlist[
 @item{@code{(λ () exprs ...)}}
 @item{@code{(λ (arg1) exprs ...)}}
 @item{@code{(λ (arg1 arg2) exprs ...)}}
 @item{@code{(λ (arg1 arg2 arg3) exprs ...)}}
-].
+]
+
 @examples[#:eval (the-eval)
 ((􏸧 (􏿴 1 2 3)))
 ((􏸬 x (􏿴 1 2 x)) 3)

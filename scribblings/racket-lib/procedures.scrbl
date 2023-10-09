@@ -18,17 +18,33 @@ Racket's @secref["procedures" #:doc '(lib "scribblings/reference/reference.scrbl
 
 
 
-@section+autotag{禾，禾?}
-@defzi["禾"]{@modernly-simplifies["程" "journey/procedure"]}
+@section+autotag{禾、禾?}
+@defzi[禾]{@modernly-simplifies["程" "journey/procedure"]}
 @examples[#:eval (the-eval)
 (禾? (􏸧 1))
+]
+
+@section+autotag{入、􏸗}
+@eleph-note{@racket[􏸧]、@racket[􏸬]、@racket[􏸫]、@racket[􏸪]}
+@defzi[入]{@mingly-resembles["λ" "lambda"]}
+@examples[#:eval (the-eval)
+(入 () 空)
+(名 fun
+  (􏸗 [() #f]
+      [(x) x]
+      [(x y) (􏿴 x y)]
+      [(x y z) (􏻿 x y z)]))
+(fun)
+(fun 1)
+(fun 1 2)
+(fun 1 2 3)
 ]
 
 
 @section+autotag{􏸛，􏸚}
 @itemlist[
-@item{@defzi/unicode-pua{􏸛}}
-@item{@defzi/unicode-pua{􏸚}}
+@item{@defzi/puauni[􏸛]}
+@item{@defzi/puauni[􏸚]}
 ]
 @examples[#:eval (the-eval)
 ((􏸛 􏿴 􏾺分) '("a" "b" "c") 2)
@@ -36,17 +52,18 @@ Racket's @secref["procedures" #:doc '(lib "scribblings/reference/reference.scrbl
 ]
 
 @section+autotag{􏸘}
-@defzi/unicode-pua{􏸘}
+@defzi/puauni[􏸘]
 @examples[#:eval (the-eval)
 ((􏸘 􏿴 '􏿴1) 'a 'b 'c 'd)
 ]
 
 
-@section[#:tag "base-procedures"]{Base References}
+@section[#:tag "base-functions"]{Base References}
 @defmodule[ming/racket/base]
 @defmapping[racket/base/procedures]
 
-
-@section[#:tag "extended-procedures"]{Extended References}
+@section[#:tag "addtional-functions"]{Additional References}
 @defmodule[ming/racket/function]
 @defmapping[racket/function]
+
+
