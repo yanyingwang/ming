@@ -23,7 +23,7 @@
          (rename-in "../mapping/racket/base/procedures.rkt" [mapping mapping/racket/base/procedures])
          (rename-in "../mapping/racket/base/string.rkt" [mapping mapping/racket/base/string])
          (rename-in "../mapping/racket/base/symbols.rkt" [mapping mapping/racket/base/symbols])
-         (rename-in "../mapping/racket/base/syntactic-forms.rkt" [mapping mapping/racket/base/syntactic-forms])
+         ;; (rename-in "../mapping/racket/base/syntactic-forms.rkt" [mapping mapping/racket/base/syntactic-forms])
          (rename-in "../mapping/racket/base/conditionals.rkt" [mapping mapping/racket/base/conditionals])
          (rename-in "../mapping/racket/base/values.rkt" [mapping mapping/racket/base/values])
          (rename-in "../mapping/racket/base/syntax.rkt" [mapping mapping/racket/base/syntax])

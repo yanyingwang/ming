@@ -12,7 +12,7 @@
          (rename-in "base/procedures.rkt" [mapping mapping9])
          (rename-in "base/string.rkt" [mapping mapping10])
          (rename-in "base/symbols.rkt" [mapping mapping11])
-         (rename-in "base/syntactic-forms.rkt" [mapping mapping12])
+         ;; (rename-in "base/syntactic-forms.rkt" [mapping mapping12])
          (rename-in "base/syntax.rkt" [mapping mapping13])
          (rename-in "base/vector.rkt" [mapping mapping14])
          (rename-in "base/conditionals.rkt" [mapping mapping15])
@@ -38,7 +38,7 @@
           mapping9
           mapping10
           mapping11
-          mapping12
+          ;; mapping12
           mapping13
           mapping14
           mapping15

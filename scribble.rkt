@@ -100,3 +100,18 @@
 (define (anciently-simplifies zi elucidation ming-elu . content)
   @elem{simplifies for @litchar{@zi} in ancient chinese, means @elucidate{@elucidation}, especially means @elucidate{@ming-elu} in ming-lang. @content}
   )
+
+
+
+(名 z "zzzz")
+
+(名 z
+    (禾 (a b c)
+      (printf "show args: ~a, ~a, ~a" a b c)))
+
+(禾名 fun (a b c)
+      (printf "show args: ~a, ~a, ~a" a b c))
+
+(fun a b c)
+
+(乞 fun '(a b c))

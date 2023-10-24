@@ -1,16 +1,16 @@
 #lang at-exp s-exp "../../../private/mapping-lang.rkt"
 
 
->>> lambda 入 ;; 禾 入 道 犭 刁
->>> case-lambda 􏸗 @elem{@zi{入} + @zi{肖}} ;; 􏸗 􏸖
->>> define 名
+;; >>> lambda 禾 ;; 道 犭 刁
+>>> λ 入
+>>> case-lambda 􏸗 @elem{@zi{入} + @zi{肖}} ;; 􏸗 􏸖 􏸗 𤇕
+>>> define 名 ;; define: (名 a "aaa") ;; define-procedure (禾名 a1 (a) (displayln a)) <= (名 a1 (λ (a) (displayln a1)))
 >>> let 令
+>>> apply 𡊤 ;; 应 使 土 士 􏸛 乞 饣 食
 
->>> apply 𡊤 ;; 应 使 土 士 􏸛
 >>> procedure? 禾? @elem{@zi{禾} + @zi{?}}
-
->>> compose 􏸛 @elem{@zi{土} + @zi{禾}} ; 秝
->>> compose1 􏸚 @elem{@zi{􏸛} + @litchar{一}}
+>>> compose 秝 @elem{@zi{禾} + @zi{禾}} ; 秝 秝 􏸛
+>>> compose1 􏸕 @elem{@zi{秝} + @litchar{一}}
 >>> procedure-rename 􏸘 @elem{@zi{禾} + @zi{名} + @zi{攵}} ;;  名攵 shorts for it
 ;; procedure-realm
 ;; procedure->method
@@ -38,3 +38,5 @@
 ;; primitive?
 ;; primitive-closure?
 ;; primitive-result-arity
+
+
