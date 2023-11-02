@@ -52,7 +52,7 @@
           'racket/base/procedures mapping/racket/base/procedures
           'racket/base/string mapping/racket/base/string
           'racket/base/symbols mapping/racket/base/symbols
-          'racket/base/syntactic-forms mapping/racket/base/syntactic-forms
+          ;; 'racket/base/syntactic-forms mapping/racket/base/syntactic-forms
           'racket/base/conditionals mapping/racket/base/conditionals
           'racket/base/values mapping/racket/base/values
           'racket/base/syntax mapping/racket/base/syntax
