@@ -102,16 +102,3 @@
   )
 
 
-
-(名 z "zzzz")
-
-(名 z
-    (禾 (a b c)
-      (printf "show args: ~a, ~a, ~a" a b c)))
-
-(禾名 fun (a b c)
-      (printf "show args: ~a, ~a, ~a" a b c))
-
-(fun a b c)
-
-(乞 fun '(a b c))
