@@ -19,9 +19,10 @@ Originates from @secref["keywords" #:doc '(lib "scribblings/reference/reference.
 @section[#:tag "nameing-rules-of-keyword"]{Naming Rules}
 @secref["naming-rules"]
 
-@section+elemref{􏶿?，􏶿化句、句化􏶿、􏶿化􏽁}
-@defzi[􏶿]{@mingly-resembles["􏷂" "keyword"]}
-
+@section{􏶿?，􏶿化句、句化􏶿、􏶿化􏽁}
+@defideogr[􏶿 "keyword" "􏷂" "spoon"]{
+Resembles @zi[􏷂], because they are similar in data struct sence.
+}
 @examples[#:eval (the-eval)
 (􏶿? '#:keyword)
 (􏶿化句 '#:keyword)

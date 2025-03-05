@@ -393,7 +393,9 @@ Implies the input data are more than one and they are in the same type.
 @defideogr[川 "sort" "顺" "in order, comply, sort"]
 
 @defideogr[􏾛 (亻 屰) #f #f #f]
-@defideogr[(𠆯 􏽒) ((亻 扌) 川) #f #f #f]
+@defideogr[(𠆯 􏽒) ((亻 扌) 川) #f #f #f]{
+Resembles Chinese characters such as @zi-tool{训}, @zi-tool{驯}, and thus have a simliar meaning.
+}
 @examples[#:eval (the-eval)
 (􏾛 '(21 3 888 666 55 77 1000))
 (𠆯 '(21 3 888 666 55 77 1000) <)

@@ -17,14 +17,13 @@
 Racket's @secref["procedures" #:doc '(lib "scribblings/reference/reference.scrbl")] is especially called @zi[禾] in Ming.
 
 
-
-@section+autotag{禾、禾?}
-@defzi[禾]{@modernly-simplifies["程" "journey/procedure"]}
+@section{禾、禾?}
+@defideogr[禾 "procedure" "程" "journey, progress"]
 @examples[#:eval (the-eval)
 (禾? (􏸧 1))
 ]
 
-@section+autotag{入、􏸗}
+@section{入、􏸗}
 @eleph-note{@racket[􏸧]、@racket[􏸬]、@racket[􏸫]、@racket[􏸪]}
 @examples[#:eval (the-eval)
 (入 () 空)
@@ -39,19 +38,16 @@ Racket's @secref["procedures" #:doc '(lib "scribblings/reference/reference.scrbl
 (fun 1 2 3)
 ]
 
-
-@section+autotag{􏸛，􏸚}
-@itemlist[
-@item{@defzi/puauni[􏸛]}
-@item{@defzi/puauni[􏸚]}
-]
+@section{􏸛，􏸚}
+@defideogr[􏸛 (土 禾) #f #f #f]
+@defideogr[􏸚 (土 禾 一) #f #f #f]
 @examples[#:eval (the-eval)
 ((􏸛 􏿴 􏾺分) '("a" "b" "c") 2)
 ((􏸚 句化􏷂 􏶒) '("a" "b" "c"))
 ]
 
-@section+autotag{􏸘}
-@defzi/puauni[􏸘]
+@section{􏸘}
+@defideogr[􏸘 (禾 名 攵) #f #f #f]
 @examples[#:eval (the-eval)
 ((􏸘 􏿴 '􏿴1) 'a 'b 'c 'd)
 ]
@@ -60,7 +56,7 @@ Racket's @secref["procedures" #:doc '(lib "scribblings/reference/reference.scrbl
 @defmodule[ming/racket/base]
 @defmapping[racket/base/procedures]
 
-@defideogr[(入 /入 λ) (/ 入 λ) "lambda" "入" "get in"]{
+@defideogr[(入 λ) "lambda" "入" "entrance, get in"]{
 Implies the input data is procedure instead of normal data.
 @ziexamples[􏹌 攸/入]
 }
@@ -71,7 +67,5 @@ Implies the input data is procedure instead of normal data.
 @section[#:tag "addtional-functions"]{Additional References}
 @defmodule[ming/racket/function]
 @defmapping[racket/function]
-
-
 
 
