@@ -39,7 +39,7 @@ Originates from @secref["pairs-and-lists"].
           􏿴?]
 )]{
 @; @defzi[伄]{Composed of @racket[亻] + @racket[弔] + @racket[^].}
-@defideogr[(伄 伄^) (亻 弔 ^) #f #f #f]
+@defideogr[(伄 伄^) (亻 弔 ^SFX) #f #f #f]
 @examples[#:eval (the-eval)
 (伄 '(a b c d e f g) 0 2 3)
 (伄^ '(a b c d e f g) '(0 2 3))
@@ -78,7 +78,7 @@ Originates from @secref["pairs-and-lists"].
 @defproc[(􏾘^ [LST 􏿴?] [N-LST (listof? 􏺡?)])
           􏿴?]
 )]{
-@defideogr[(􏾘 􏾘^) (弔 刂 ^) #f #f #f]
+@defideogr[(􏾘 􏾘^) (弔 刂 ^SFX) #f #f #f]
 @eleph-note{@racket[􏾺] @racket[𨚞]}
 @examples[#:eval (the-eval)
 (􏾘 '(a b c d e f g) 1)
@@ -129,7 +129,7 @@ Shorts for @code{(􏷴 (􏷵 LST N) M)}.
           boolean?]{
 @racket[LST1] is a subset of @racket[LST2] or not.
 @defideogr[􏷍 (亻 􏿴) #f #f #f]
-@defideogr[􏷍? (􏷍 ?) #f #f #f]
+@defideogr[􏷍? (􏷍 ?SFX) #f #f #f]
 @examples[#:eval (the-eval)
 (􏷍? '(a b) '(a b c d e f g))
 (􏷍? '(a e) '(a b c d e f g))
@@ -158,7 +158,7 @@ Shorts for @code{(􏷴 (􏷵 LST N) M)}.
 
 
 @defproc[(􏿳? [V any?]) boolean?]{
-@defideogr[􏿳? (􏿳 ?) #f #f #f]
+@defideogr[􏿳? (􏿳 ?SFX) #f #f #f]
 @var[V] is @racket[􏿳] or not.
 Shorts for @code{(并 (􏿴? V) (􏷐 双? V))}.
 @examples[#:eval (the-eval)

@@ -15,7 +15,7 @@ Ideographic LISP dialect, Lisp spirit embodied in chineseoid characters. @hspace
 
 @include-section["rationale.scrbl"]
 @include-section["startup.scrbl"]
-@include-section["naming-rules.scrbl"]
+@; @include-section["naming-rules.scrbl"]
 @include-section["general-ideographs.scrbl"]
 @include-section["ming-lib.scrbl"]
 @include-section["racket-lib.scrbl"]

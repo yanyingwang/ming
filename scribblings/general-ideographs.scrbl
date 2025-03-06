@@ -16,7 +16,7 @@
 
 
 @; @section[#:tag "as-parts"]{As parts of another character}
-@tech[#:doc "naming-rules"]
+@; @tech[#:doc "naming-rules"]
 
 
 @defideogr[(亻) "general subset" "亻" "person, people, human"]{

@@ -16,7 +16,7 @@
 Originates from @secref["hashtables" #:doc '(lib "scribblings/reference/reference.scrbl")] and Extends to @secref["ming-hash"].
 
 @section[#:tag "nameing-rules-of-hash"]{Naming Rules}
-Extended from @secref["naming-rules"], specifically there are：
+@; Extended from @secref["naming-rules"], specifically there are：
 @tabular[@;#:sep @hspace[0]
          #:style 'boxed
          #:column-properties '(center)

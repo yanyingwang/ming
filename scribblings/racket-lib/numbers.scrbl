@@ -29,7 +29,7 @@
 ]
 }
 
-见@secref["naming-rules"]，有：
+@; 见@secref["naming-rules"]，有：
 
 @tabular[@;#:sep @hspace[0]
         #:style 'boxed

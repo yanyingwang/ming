@@ -17,7 +17,7 @@
 Originates from @secref["keywords" #:doc '(lib "scribblings/reference/reference.scrbl")].
 
 @section[#:tag "nameing-rules-of-keyword"]{Naming Rules}
-@secref["naming-rules"]
+@; @secref["naming-rules"]
 
 @section{􏶿?，􏶿化句、句化􏶿、􏶿化􏽁}
 @defideogr[􏶿 "keyword" "􏷂" "spoon"]{

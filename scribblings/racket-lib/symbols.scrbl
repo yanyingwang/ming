@@ -17,7 +17,7 @@
 Originates from @secref["symbols" #:doc '(lib "scribblings/reference/reference.scrbl")].
 
 @section[#:tag "naming-rules-of-symbol"]{Naming Rules}
-@secref["naming-rules"]
+@; @secref["naming-rules"]
 
 @section[#:tag "symbol-interned-uninterned-unreadable"]{􏷂 􏺏 􏺍 􏺋}
 @racket[􏷂] normally is 􏺏(interned symbol). Also can be：􏺍(uninterned), 􏺋(unreadable, partially interned).

@@ -17,7 +17,7 @@
 Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scrbl")] and Extends to @secref["ming-list"].
 
 @section[#:tag "nameing-rules-of-pair-list"]{Naming Rules}
-Extended from @secref["naming-rules"], specifically there are：
+@; Extended from @secref["naming-rules"], specifically there are：
 @tabular[@;#:sep @hspace[0]
          #:style 'boxed
          #:column-properties '(center)
@@ -71,7 +71,7 @@ Extended from @secref["naming-rules"], specifically there are：
                @; @elem{@racket[􏸄] @racket[􏸃]}
                @; )
                (list
-               @elem{@zi[入] as component or @zi[/入] as prefix}
+               @elem{@zi[入] as component or @zi[入] as suffix}
                "function as input"
                @elem{Implies the type of input data is function.}
                @elem{@rackets[􏹃 􏹅 􏹌 􏹂 攸/入 􏾺/入 𨚞/入]}
@@ -83,14 +83,14 @@ Extended from @secref["naming-rules"], specifically there are：
                @; @elem{@racket[􏼓0]}
                @; )
                (list
-               @elem{@zi[*]}
+               @elem{@zi[*SFX]}
                "strengthen"
                "Strengthen the process, thus the data of output may become longer, and the type may be changed accordingly."
                @; @elem{@racket[弓*]、@racket[􏼏*]}
                @elem{@racket[弓*] @racket[􏹂*] @racket[􏼏*]}
                )
                (list
-               @elem{@zi[~]}
+               @elem{@zi[~SFX]}
                "soften"
                "Soften the process, thus the output data shorter."
                @elem{@racket[􏹊~] @racket[􏹇~]}
@@ -102,7 +102,7 @@ Extended from @secref["naming-rules"], specifically there are：
                @; @elem{@racket[引v]}
                @; )
                (list
-               @elem{@zi[^]}
+               @elem{@zi[^SFX]}
                @elem{list as input}
                @elem{Implies the type of input data is list.}
                @elem{@racket[􏹊^] @racket[伄^] @racket[􏾘^]}
@@ -114,7 +114,7 @@ Extended from @secref["naming-rules"], specifically there are：
                @; @elem{@racket[序􏿴]、@racket[复􏿴]、@racket[𥸬􏿴]}
                @; )
                (list
-               @elem{@zi[?]}
+               @elem{@zi[?SFX]}
                @elem{boolean as output}
                @elem{Implies the type of output data is boolean.}
                @elem{@racket[双?] @racket[􏿴?] @racket[􏿳?]}
@@ -131,12 +131,12 @@ Further more, if we put another @racket[双] to @racket[阴] position of the for
 
 @defideogr[又 "elment" "又" "Right hand, borrowed as again in simplified chinese."]{
 Resembles @italic{human's hand that is holding an object}.
-@ziexamples[双 􏿫]
+@ideoexamples[@rackets[双 􏿫]]
 }
 
 @defideogr[又LB (又 LB) "links pairs, linked pairs" #f #f]{
 Is reaching from Left through Bottom to right, we write it in this way to stand multiple @racket[双] linked together.
-@ziexamples[􏿴 􏿫]
+@ideoexamples[@rackets[􏿴 􏿫]]
 }
 
 @defideogr[双 (又 又) "cons, pair" "双" "pair"]{
@@ -145,7 +145,7 @@ Two human hand here stand for an object with including two holding data.
 
 @defideogr[㐅 "null" #f #f]{
 Is same as @zi[穴], because @racket[㐅] is same as @racket[穴].
-@ziexamples[㐅? 􏿴]
+@ideoexamples[@rackets[㐅? 􏿴]]
 }
 
 @defideogr[􏿴 (又LB 㐅) "list" #f #f]{
@@ -154,7 +154,7 @@ The reaching from Left through Bottom to right @zi[又] means @italic{multiple @
 
 @defideogr[􏿴BR (􏿴 BR) "list resemblance" #f #f]{
 Has the similar function process as it resembles and the type of output is same as @racket[􏿴] accordingly.
-@ziexamples[􏼓 􏼎 􏼏 􏿝]
+@ideoexamples[@rackets[􏼓 􏼎 􏼏 􏿝]]
 }
 
 @defideogr[􏿫 (又LB 又) "list with last element be pair" #f #f]{
@@ -163,7 +163,7 @@ Resembles @zi[􏿴] except substituting @litchar{㐅} with @litchar{又}, which 
 
 @defideogr[􏿫BR (􏿫 BR) "resembles 􏿫" #f #f]{
 Has the similar function process as it resembles and the type of output is same as @racket[􏿫] accordingly.
-@ziexamples[􏿜]
+@ideoexamples[@rackets[􏿜]]
 }
 
 @examples[#:eval (the-eval)

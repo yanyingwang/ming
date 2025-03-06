@@ -2,24 +2,24 @@
 
 
 >>> vector-empty? 􏻸?  ; 空􏻿
->>> vector-set*! 􏻿𢪛 (􏻿Px 𢪛)  ; 􏻿􏾩+
->>> vector-map 􏻿􏷑 (􏻿Px 􏷑) ;佫
->>> vector-map! 􏻿􏷉 (􏻿Px 􏷉)
+>>> vector-set*! 􏻿𢪛 (􏻿PFX 𢪛)  ; 􏻿􏾩+
+>>> vector-map 􏻿􏷑 (􏻿PFX 􏷑) ;佫
+>>> vector-map! 􏻿􏷉 (􏻿PFX 􏷉)
 >>> vector-append 􏻹 ;; 土􏻿 土􏿴 贯􏻿
->>> vector-take 􏻿􏾺 (􏻿Px 􏾺)
->>> vector-take-right 􏻿𨚞 (􏻿Px 𨚞)
->>> vector-drop 􏻿􏷵 (􏻿Px 􏷵)
->>> vector-drop-right 􏻿􏷴 (􏻿Px 􏷴)
->>> vector-split-at 􏻿􏸄 (􏻿Px 􏸄)
->>> vector-split-at-right 􏻿􏸃 (􏻿Px 􏸃)
->>> vector-copy 􏻿􏾝 (􏻿Px 􏾝)
->>> vector-filter 􏻿􏹈 (􏻿Px 􏹈)
->>> vector-filter-not 􏻿􏹇 (􏻿Px 􏹇)
->>> vector-count 􏻿􏹈巨 (􏻿Px 􏹈 巨)
->>> vector-argmin 􏻿􏷑􏺗 (􏻿Px 􏷑 􏺗)
->>> vector-argmax 􏻿􏷑􏺘 (􏻿Px 􏷑 􏺘)
->>> vector-member 􏻿弓 (􏻿Px 弓)
->>> vector-memv 􏻿弓/􏾗 (􏻿Px 弓 / 􏾗)
->>> vector-memq 􏻿弓/􏾃 (􏻿Px 弓 / 􏾃)
->>> vector-sort 􏻿𠆯  (􏻿Px 𠆯) ;;􏻿􏿀
->>> vector-sort! 􏻿􏽒 (􏻿Px 􏽒)
+>>> vector-take 􏻿􏾺 (􏻿PFX 􏾺)
+>>> vector-take-right 􏻿𨚞 (􏻿PFX 𨚞)
+>>> vector-drop 􏻿􏷵 (􏻿PFX 􏷵)
+>>> vector-drop-right 􏻿􏷴 (􏻿PFX 􏷴)
+>>> vector-split-at 􏻿􏸄 (􏻿PFX 􏸄)
+>>> vector-split-at-right 􏻿􏸃 (􏻿PFX 􏸃)
+>>> vector-copy 􏻿􏾝 (􏻿PFX 􏾝)
+>>> vector-filter 􏻿􏹈 (􏻿PFX 􏹈)
+>>> vector-filter-not 􏻿􏹇 (􏻿PFX 􏹇)
+>>> vector-count 􏻿􏹈巨 (􏻿PFX 􏹈 巨)
+>>> vector-argmin 􏻿􏷑􏺗 (􏻿PFX 􏷑 􏺗)
+>>> vector-argmax 􏻿􏷑􏺘 (􏻿PFX 􏷑 􏺘)
+>>> vector-member 􏻿弓 (􏻿PFX 弓)
+>>> vector-memv 􏻿弓/冃 (􏻿PFX 弓 / 冃)
+>>> vector-memq 􏻿弓/􏷅 (􏻿PFX 弓 / 􏷅)
+>>> vector-sort 􏻿𠆯  (􏻿PFX 𠆯) ;;􏻿􏿀
+>>> vector-sort! 􏻿􏽒 (􏻿PFX 􏽒)
