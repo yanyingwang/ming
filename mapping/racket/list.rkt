@@ -3,16 +3,16 @@
 
 
 >>> empty 穴 ;空 ; not need as one defined same in base (null 空)
->>> first 􏷜 (弔 一)
->>> second 􏷛 (弔 二)
->>> third 􏷚 (弔 三)
->>> fourth 􏷙 (弔 四)
->>> fifth 􏷘 (弔 五)
->>> sixth 􏷗 (弔 六)
->>> seventh 􏷖 (弔 七)
->>> eighth 􏷕 (弔 八)
->>> ninth 􏷔 (弔 九)
->>> tenth 􏷓 (弔 十)
+>>> first 􏷜
+>>> second 􏷛
+>>> third 􏷚
+>>> fourth 􏷙
+>>> fifth 􏷘
+>>> sixth 􏷗
+>>> seventh 􏷖
+>>> eighth 􏷕
+>>> ninth 􏷔
+>>> tenth 􏷓
 >>> last 末
 >>> last-pair 􏹧 ;; 末链（链一定为双） 􏿦 􏷽 􏹧
 ;; >>> rest 末** "􏿴除去甲以外剩下的􏿴" ;; 甲外 剩余 去甲 舍甲
@@ -27,8 +27,8 @@
 >>> indexes-of 弓* ;; 􏿉 􏿊 伋 􏷺 伄 𠇁 弓v
 >>> indexes-where 􏹂*  ;; 􏿊 伄 引 𠇁 弓v 𰁣/入
 
->>> take 􏾺 
->>> take-right 𨚞 
+>>> take 􏾺
+>>> take-right 𨚞
 
 >>> drop 􏷵 ;􏾹
 >>> drop-right 􏷴 ;􏾸
@@ -39,8 +39,8 @@
 >>> dropf 􏷵/入  ;􏾹
 >>> dropf-right 􏷴/入  ;􏾸
 
->>> split-at 􏸄 
->>> split-at-right 􏸃 
+>>> split-at 􏸄
+>>> split-at-right 􏸃
 
 >>> splitf-at 􏸄/入
 >>> splitf-at-right 􏸃/入

@@ -31,7 +31,7 @@ Examples: @zi[􏻿]
 Examples: @zi[􏻸] @zi[􏻼] @zi[􏻺] @zi[􏻻] @zi[􏻹]
 }
 
-@defideogr[􏻿Px (􏻿 Px) "process vector" #f #f]{
+@defideogr[􏻿PFX (􏻿 PFX) "process vector" #f #f]{
 Implies the type of input data is @zi[􏻿], and how to process this data thus the output are both denpending on the suffix.
 @ziexamples[􏻿巨 􏻿弔 􏻿弔]
 }

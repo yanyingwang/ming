@@ -13,8 +13,8 @@
          ;; defradical defcomponent defcharacter defhybrid
          defradical defcomponent defsuffix defprefix definsert defhas
          defzi defzis defzi/puauni defzi/sub defcompost
-         defideogr
-         zi zi-ref zi-tool
+         defideogr ideoexamples
+         zi zis zi-ref zi-tool
          ziexamples rackets
          short-for-code short-for-racket
          )
@@ -135,8 +135,16 @@
      (with-syntax ([(racket-refs ...)
                     (map (lambda (e) #`(elem (hspace 1) (racket #,e)))
                          (syntax->list #'(examples ...)))])
-       #`(elem #:style (style #f (list (alt-tag "p")))
+       #`(elem #:style (style #f (list (alt-tag "p") [style . "margin-top: 2em;"]))
           "Examples: " racket-refs ... "."))
+     ])
+  )
+
+(define-syntax (ideoexamples stx)
+  (syntax-case stx ()
+    [(_ examples ...)
+     #`(elem #:style (style #f (list (alt-tag "div") (attributes '([style . "margin-top: 1em;"]))))
+             "Examples: " examples ...)
      ])
   )
 
@@ -147,6 +155,16 @@
                     (map (lambda (e) #`(elem (hspace 1) (racket #,e)))
                          (syntax->list #'(ids ...)))])
        #`(elem  racket-refs ...))
+     ])
+  )
+
+(define-syntax (zis stx)
+  (syntax-case stx ()
+    [(_ ids ...)
+     (with-syntax ([(refs ...)
+                    (map (lambda (e) #`(elem (hspace 1) (zi-ref #,(symbol->string (syntax->datum e)))))
+                         (syntax->list #'(ids ...)))])
+       #`(elem refs ...))
      ])
   )
 

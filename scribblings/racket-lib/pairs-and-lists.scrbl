@@ -295,20 +295,11 @@ Simplifies from @litchar{第} and resembles @italic{an stick wrapped with a rope
 ]
 
 @section{􏷜, 􏷛, 􏷚, 􏷙, 􏷘, 􏷗, 􏷖, 􏷕, 􏷔, 􏷓}
-@defideogr[一 "one" "一" "one"]
-@defideogr[二 "two" "二" "two"]
-@defideogr[三 "three" "三" "three"]{
-Note that, meaning is changed to @italic{duplicated elements} if is used with @zi[􏿴BR]. e.g., @racket[􏼓].
+@defideogr[弔RTTz (弔 RTTz) "No." #f #f]{
+@zi[弔] rotates in -90 degrees, stands from @italic{No.}, such as No.1 or 2 or 3.... .
 }
-@defideogr[四 "four" "四" "four"]
-@defideogr[五 "five" "五" "five"]
-@defideogr[六 "six" "六" "six"]
-@defideogr[七 "seven" "七" "seven"]
-@defideogr[八 "eight" "八" "eight"]
-@defideogr[九 "nine" "九" "nine"]
-@defideogr[十 "ten" "十" "ten"]{
-Note that, meaning is changed to @italic{a few of fixed length elements} if is used within @zi[􏻿].
-}
+@defideogr[(􏷜 􏷛 􏷚 􏷙 􏷘 􏷗 􏷗 􏷖 􏷕 􏷔 􏷓) (弔RTTz (一 二 三 四 五 六 七 八 九 十)) "No.1 or 2 or 3..." #f #f]
+@eleph-note{@code{(􏷜 '(1 2 3 4 5 6 7 8 9 10))} is same as @code{(弔 '(1 2 3 4 5 6 7 8 9 10) 1)}.}
 @examples[#:eval (the-eval)
 (􏷜 '(1 2 3 4 5 6 7 8 9 10))
 (􏷛 '(1 2 3 4 5 6 7 8 9 10))
