@@ -73,7 +73,7 @@ As chart shown above, the keywords of Ming are much short in length, and in form
 
 Further more, the connotations behind the characters work the same way, they are related to each other and complex concepts are broke to simple concepts as well.
 
-Most importantly, the chineseoid characters implemented here also have the ability to imply to human about the arguments and results of functions, check @secref["naming-rules"] for more.
+Most importantly, the chineseoid characters implemented here also have the ability to imply to human about the arguments and results of functions, check @secref["general-ideographs"] for more.
 
 
 @section[#:tag "character-implications"]{Character implications}
@@ -81,4 +81,4 @@ Since the chineseoid chracters are much complicated than general western charact
 
 Simply put it, @italic{phrase} is composed by more than one @italic{characters}, @italic{character} is composed by more than on @italic{parts}. For the @italic{parts} of an @italic{specific character}, only one of them can be counted as @italic{radical}, which usually is another @italic{standalone character} that provides the basic meaning for the @italic{specific character}, and the other one can be counted as @italic{component}, which usually implies the difference(type of input, type of output, etc.) between the meaning of @italic{radical} and the @italic{specific character}.
 
-Take example of the procedure @racket[伄], this @italic{character} is composed of two @italic{parts}:  @zi[亻] as @italic{component} and @zi[弔] as @italic{radical}. By composition, we can deduce that this procedure has a similar usage as @racket[弔] since it is the @italic{radical}. And the @zi[亻] additionally means the type of output data is list(read @secref["naming-rules"] for more).
+Take example of the procedure @racket[伄], this @italic{character} is composed of two @italic{parts}:  @zi[亻] as @italic{component} and @zi[弔] as @italic{radical}. By composition, we can deduce that this procedure has a similar usage as @racket[弔] since it is the @italic{radical}. And the @zi[亻] additionally means the type of output data is list(read @secref["general-ideographs"] for more).

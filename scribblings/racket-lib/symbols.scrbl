@@ -22,7 +22,10 @@ Originates from @secref["symbols" #:doc '(lib "scribblings/reference/reference.s
 @section[#:tag "symbol-interned-uninterned-unreadable"]{􏷂 􏺏 􏺍 􏺋}
 @racket[􏷂] normally is 􏺏(interned symbol). Also can be：􏺍(uninterned), 􏺋(unreadable, partially interned).
 
-@defideogr[􏷂 "string" "勺" "spoon, spoon-shape objects"]
+@eleph-note[@zis[句 􏶿]]
+@defideogr[􏷂 (勹 丶) "string" "勺" "spoon, spoon-shape objects"]{
+@zi[丶] is just a placehold here, no specific meaning. But the simpler way to write indicates it is a simpler data type than both @zi[句] and @zi[􏶿].
+}
 @defideogr[罒 "interned" "罒" "fishing or bird net, net-shape object, caught by net"]
 @defideogr[􏺎 "uninterned" #f #f]{
 Resembles @zi[罒], but is broken, thus means "broken bird net".

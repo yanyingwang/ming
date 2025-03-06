@@ -111,6 +111,7 @@
              (map (lambda (e)
                     (case e
                       (["*" "?" "~" "^"] `(zi ,(string->symbol (string-append e "SFX"))))
+                      (["􏿰" "􏻿"] `(zi ,(string->symbol (string-append e "PFX"))))
                       (else `(zi ,(string->symbol e)))))
                   (filter non-empty-string? (string-split (symbol->string cnid) "")))]
             [else '()]))
@@ -251,7 +252,8 @@
                    [(content ...) #'(meaning (zi-tool cnchar) cnchar-meaning)])
        #`(elem
           (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "boxed"] [style . "margin-top: 2em; margin-bottom: 1em; "]))))
-                gen-elemtags ...  " : " p+p+p
+                gen-elemtags ...
+                (linebreak) (hspace 2) " : " p+p+p
                 (~@ (if content (elem (linebreak) (hspace 2) header " : " content) "")) ...)
           (elem elaboration ...)))]
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

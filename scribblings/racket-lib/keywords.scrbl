@@ -20,6 +20,7 @@ Originates from @secref["keywords" #:doc '(lib "scribblings/reference/reference.
 @; @secref["naming-rules"]
 
 @section{􏶿?，􏶿化句、句化􏶿、􏶿化􏽁}
+@eleph-note[@zis[句 􏷂]]
 @defideogr[􏶿 "keyword" "􏷂" "spoon"]{
 Resembles @zi[􏷂], because they are similar in data struct sence.
 }
@@ -29,7 +30,6 @@ Resembles @zi[􏷂], because they are similar in data struct sence.
 (􏶿化􏽁 '#:keyword)
 (句化􏶿 "string")
 ]
-
 
 
 @section[#:tag "symbols-base"]{ming/racket/base}

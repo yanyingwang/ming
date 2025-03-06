@@ -14,7 +14,7 @@
 
 
 @title[#:tag "pairs-and-lists"]{双 and 􏿴}
-Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scrbl")] and Extends to @secref["ming-list"].
+Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scrbl")] and extends to @secref["ming-list"].
 
 @section[#:tag "nameing-rules-of-pair-list"]{Naming Rules}
 @; Extended from @secref["naming-rules"], specifically there are：
@@ -118,10 +118,21 @@ Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scr
                @elem{boolean as output}
                @elem{Implies the type of output data is boolean.}
                @elem{@racket[双?] @racket[􏿴?] @racket[􏿳?]}
-               )
-
-               
+              )
          )]
+
+@defideogr[又 "elment" "又" "Right hand, borrowed as again in simplified chinese."]{
+Resembles @italic{human's hand that is holding an object}.
+@ideoexamples[@rackets[双 􏿫]]
+}
+@defideogr[又LB (又 LB) "links pairs, linked pairs" #f #f]{
+Is reaching from Left through Bottom to right, we write it in this way to stand multiple @racket[双] linked together.
+@ideoexamples[@rackets[􏿴 􏿫]]
+}
+@defideogr[㐅 "null" #f #f]{
+Is same as @zi[穴], because @racket[㐅] is same as @racket[穴].
+@ideoexamples[@rackets[㐅? 􏿴]]
+}
 
 @section[#:tag "pair-car-cdr-list-list*"]{双, 㐅, 􏿴, 􏿫, 阴, 阳}
 Abstractly, we can pair two data together. Integrally, it is called @zi[双]. Separately, the position where set the first data is call @zi[阳], the second is call @zi[阴].
@@ -129,27 +140,13 @@ Abstractly, we can pair two data together. Integrally, it is called @zi[双]. Se
 Further more, if we put another @racket[双] to @racket[阴] position of the former @racket[双], we get a linked data. Likewise, the linked data can be extended as long as you want. By this way, if we leave @racket[阴] of the ending @racket[双] to be empty(@racket[㐅]), we get a data called @racket[􏿴]; if not, we call it @racket[􏿫].
 
 
-@defideogr[又 "elment" "又" "Right hand, borrowed as again in simplified chinese."]{
-Resembles @italic{human's hand that is holding an object}.
-@ideoexamples[@rackets[双 􏿫]]
+
+@defideogr[双 (又 又) "cons a pair data type" "双" "pair"]{
+Two human hand here stand for a data type with spaces of holding two holding data. (@zi[双] is a special minor data type of @zi[􏿴])
 }
 
-@defideogr[又LB (又 LB) "links pairs, linked pairs" #f #f]{
-Is reaching from Left through Bottom to right, we write it in this way to stand multiple @racket[双] linked together.
-@ideoexamples[@rackets[􏿴 􏿫]]
-}
-
-@defideogr[双 (又 又) "cons, pair" "双" "pair"]{
-Two human hand here stand for an object with including two holding data.
-}
-
-@defideogr[㐅 "null" #f #f]{
-Is same as @zi[穴], because @racket[㐅] is same as @racket[穴].
-@ideoexamples[@rackets[㐅? 􏿴]]
-}
-
-@defideogr[􏿴 (又LB 㐅) "list" #f #f]{
-The reaching from Left through Bottom to right @zi[又] means @italic{multiple @racket[双] linked together}; @litchar{㐅} means ending with empty(@zi[㐅]).
+@defideogr[􏿴 (又LB 㐅) "list, introduce a list data type" #f #f]{
+The reaching from Left through Bottom to right @zi[又] stands for @italic{multiple @racket[双] linked head to tail}; @litchar{㐅} means ending with empty(@zi[㐅]).
 }
 
 @defideogr[􏿴BR (􏿴 BR) "list resemblance" #f #f]{
@@ -296,7 +293,7 @@ Simplifies from @litchar{第} and resembles @italic{an stick wrapped with a rope
 
 @section{􏷜, 􏷛, 􏷚, 􏷙, 􏷘, 􏷗, 􏷖, 􏷕, 􏷔, 􏷓}
 @defideogr[弔RTTz (弔 RTTz) "No." #f #f]{
-@zi[弔] rotates in -90 degrees, stands from @italic{No.}, such as No.1 or 2 or 3.... .
+Is @zi[弔] rotated -90 degrees, means @italic{No.}, such as No.1 or 2 or 3.... .
 }
 @defideogr[(􏷜 􏷛 􏷚 􏷙 􏷘 􏷗 􏷗 􏷖 􏷕 􏷔 􏷓) (弔RTTz (一 二 三 四 五 六 七 八 九 十)) "No.1 or 2 or 3..." #f #f]
 @eleph-note{@code{(􏷜 '(1 2 3 4 5 6 7 8 9 10))} is same as @code{(弔 '(1 2 3 4 5 6 7 8 9 10) 1)}.}

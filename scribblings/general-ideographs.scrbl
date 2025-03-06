@@ -41,7 +41,7 @@ Returns a new list as output with removing some elements from the input list.
 Are Shot for: Left, Right, Bottom, Top. Those characters imply the prefix's position as it composes an ideograph.
 }
 
-@defideogr[(LB BR BL) ((L R B T) (L R B T)) "extends from one position to another" #f #f]{
+@defideogr[(LB BR BL) ((L R B T) (L R B T)) "extends the prefix from one position to another" #f #f]{
 Means the prefix of it extends from such as Left to Bottom in an ideograph when it composes this ideograph. @linebreak{}
 @ideoexamples{@zis[又LB 􏿴BR 􏿫BR]}
 }
@@ -51,7 +51,7 @@ Are Shot for: Prefix, Suffix, Infix. Which imply the position of its prefix as t
 @ideoexamples[@zis[化IFX 化SFX]]
 }
 
-@defideogr[(RTTa RTTb RTTy RTTz) "rotates prefix" #f #f]{
+@defideogr[(RTTa RTTb RTTy RTTz) "rotates the prefix" #f #f]{
 Rotates the prefix in 90 or 180 or -90 or -180 degree clockwise.
 @ideoexamples{@zi[弔RTTz]}
 }
@@ -63,28 +63,30 @@ When you see this component in ideographs that are used to name procedures, you 
 }
 
 
-@defideogr[?SFX (? SFX) "output is boolean" #f #f]{
+@defideogr[?SFX (? SFX) "is or is not" #f #f]{
 Implies the output is boolean.
 @ideoexamples[@rackets[双? 􏿴? 􏿳?]]
 }
 
+@eleph-note{@racket[弓*] is similar to @racket[弓] except the process is strengthened.}
 @defideogr[*SFX (* SFX) "strengthen" #f #f]{
 Almost has the same usage as the one named without @zi[*], except this strengthen the processing of inputted data. Thus the data of output may become longer, and the type may be changed accordingly.
 @ideoexamples[@rackets[弓*]]
 }
-@eleph-note{@racket[弓*] is similar to @racket[弓] except the process is strengthened.}
 
+
+@eleph-note{@racket[􏹊~] is similar to @racket[􏹊] except the process is softened.}
 @defideogr[~SFX (~ SFX) "~ as suffix, implies strengthen" #f #f]{
 Almost has the same usage as the one named without @zi[~], except this soften the processing of inputted data. Thus the data of output may become shorten.
 @ideoexamples[@rackets[􏹊~]]
 }
-@eleph-note{@racket[􏹊~] is similar to @racket[􏹊] except the process is softened.}
 
+@eleph-note{@racket[􏹊^] is similar to @racket[􏹊] except the input dat is list.}
 @defideogr[^SFX (^ SFX) "^ as suffix, implies list as input" #f #f]{
 Almost has the same usage as the one named without @zi[^], except that input data is a list.
 @ideoexamples[@rackets[􏹊^ 伄^ 􏾘^]]
 }
-@eleph-note{@racket[􏹊^] is similar to @racket[􏹊] except the input dat is list.}
+
 
 @defideogr[/IFX (/ IFX) "/ as infix, implies extending" #f #f]{
 The suffix of it is considered as an extending explanation of the prefix.

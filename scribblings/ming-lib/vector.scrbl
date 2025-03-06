@@ -37,7 +37,7 @@ Originates from @secref["vector"].
           boolean?]
 @defproc[(􏻼? [VEC any?])
           boolean?])]{
-@defideogr[(􏻼? 􏻽?) ((􏻼 􏻽) ?) #f #f #f]
+@defideogr[(􏻼? 􏻽?) ((􏻼 􏻽) ?SFX) #f #f #f]
 Short for @racket[(并 (水? VEC) (􏻿? VEC))] and @racket[(并 (山? VEC) (􏻿? VEC))].
 @examples[#:eval (the-eval)
 (􏻽? '#(1 2 3 4))

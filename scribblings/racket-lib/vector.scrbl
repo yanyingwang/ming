@@ -15,7 +15,7 @@
 
 
 @title[#:tag "vector"]{􏻿}
-Originates from @secref["vectors" #:doc '(lib "scribblings/reference/reference.scrbl")] and Extends to @secref["ming-vector"].
+Originates from @secref["vectors" #:doc '(lib "scribblings/reference/reference.scrbl")] and extends to @secref["ming-vector"].
 
 
 @section{􏻿 􏻽 􏻼, 􏻿? 􏻽? 􏻼?, 􏻸?}
@@ -24,8 +24,8 @@ Originates from @secref["vectors" #:doc '(lib "scribblings/reference/reference.s
 Examples: @zi[􏻿]
 }
 
-@defideogr[􏻿 (矢LB 十) "vector" #f #f]{
-@litchar{十} here specifically means @italic{a few of fixed length of elements}.
+@defideogr[􏻿 (矢LB 十) "vector, introduce a vector data type" #f #f]{
+@zi[十] here specifically means @italic{a few of fixed length of elements}.
 }
 @defideogr[(􏻿B 􏻿BR) (􏻿 (B BR)) "vector resemblance" #f #f]{
 Examples: @zi[􏻸] @zi[􏻼] @zi[􏻺] @zi[􏻻] @zi[􏻹]

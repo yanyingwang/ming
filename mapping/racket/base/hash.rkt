@@ -37,10 +37,10 @@
 >>> make-ephemeron-hasheq 􏽻^
 
 >>> hash-set 􏿰攸
->>> hash-set* 􏿰攸+ (􏿰攸 +)
+>>> hash-set* 􏿰𰁦 ;(􏿰攸 +)
 >>> hash-update 􏿰攸/入
 >>> hash-set! 􏿰􏾩
->>> hash-set*! 􏿰􏾩+ (􏿰􏾩 +)
+>>> hash-set*! 􏿰𢪛 ;(􏿰􏾩 +)
 >>> hash-update! 􏿰􏾩/入
 
 >>> hash-ref 􏿰弔 ;􏽚; make new char from merging 􏿰弔 as one
@@ -58,23 +58,23 @@
 
 >>> hash-copy-clear 𠛮􏿰
 
->>> hash-map 􏿰􏷑化􏿴 (􏿰􏷑 化 􏿴)
+>>> hash-map 􏿰􏷑化􏿴 (􏿰􏷑 化IFX 􏿴)
 >>> hash-map/copy 􏿰􏷑
 
 >>> hash-keys 􏿰􏺈 ;􏿰阳
 >>> hash-values 􏿰􏺇 ;􏿰阴
 
->>> hash->list 􏿰化􏿳
+>>> hash->list 􏿰化􏿳 ( 􏿰 化IFX 􏿳)
 
->>> hash-keys-subset? 􏿰􏺈?^
+;; >>> hash-keys-subset? 􏿰􏺈?^
 >>> hash-for-each 􏿰􏷒
 >>> hash-count 􏿰巨
 >>> hash-empty? 􏻵?
 
->>> hash-iterate-first ?􏿰引
->>> hash-iterate-next ?􏿰继引
->>> hash-iterate-key ?􏿰引日
->>> hash-iterate-value ?􏿰引月
->>> hash-iterate-pair ?􏿰引明
->>> hash-iterate-key+value ?􏿰引日月
->>> hash-copy 􏾑化 ; 袭 抄 仿 摹 模 拟 似 抄 􏿰􏽕
+;; >>> hash-iterate-first ?􏿰引
+;; >>> hash-iterate-next ?􏿰继引
+;; >>> hash-iterate-key ?􏿰引日
+;; >>> hash-iterate-value ?􏿰引月
+;; >>> hash-iterate-pair ?􏿰引明
+;; >>> hash-iterate-key+value ?􏿰引日月
+>>> hash-copy 􏾑化 (􏾑 化SFX); 袭 抄 仿 摹 模 拟 似 抄 􏿰􏽕

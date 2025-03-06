@@ -17,22 +17,31 @@
 @title[#:tag "string"]{句}
 Originates from @secref["strings" #:doc '(lib "scribblings/reference/reference.scrbl")] and extends to @secref["ming-string"].
 
+
+@section[#:tag "overall-of-string"]{Overall}
+@defideogr[勹 "introduce a specific data type" "勹" "wrap, wrapper"]{
+Imagines it as a data spaces where specific content.
+@ideoexamples[@zis[句 􏷂 􏶿]]
+}
+
+
 @section{句 􏽀 􏽁, 句? 􏽀? 􏽁?, 􏼟?}
 @eleph-note{@zi[􏷂] @zi[􏶿]}
 @eleph-note{@zi[􏽀] @zi[􏽁]}
 
-@defideogr[句 "string" "句" "sentences"]{
-@ziexamples[句? 句化􏿴 􏿴化句]
+@defideogr[句 (勹 口) "string, introduce a string data type" "句" "sentences"]{
+@zi[勹] introduces a space of a specific data type, where the inside @zi[口] doesn't have a specific meaning, it is just a placehold to distinguish it between @zi[􏷂] or @zi[􏶿]. All of the three characters are similar data types, this is also the reason they share @zi[勹].
+@ideoexamples[@rackets[句? 句化􏿴 􏿴化句]]
 }
 @nested[#:style 'inset]{
 @defideogr[句B (句 B) "output type is string" #f #f]{
-@ziexamples[􏽀 􏼅 􏼄 􏼃 􏼂]
+@ideoexamples[@rackets[􏽀 􏼅 􏼄 􏼃 􏼂]]
 }
 @defideogr[句L (句 L) "input type is string" #f #f]{
-@ziexamples[􏺕 􏼭 􏶐 􏶊 􏶋 邭 􏶉 􏶈 􏶇 􏶆 􏼸? 􏼹?]
+@ideoexamples[@rackets[􏺕 􏼭 􏶐 􏶊 􏶋 邭 􏶉 􏶈 􏶇 􏶆 􏼸? 􏼹?]]
 }
 @defideogr[句R (句 R) "output type is string" #f #f]{
-@; @ziexamples[􏶑]
+@; @ideoexamples[􏶑]
 }
 }
 
