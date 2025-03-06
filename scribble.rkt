@@ -106,9 +106,12 @@
                   (string-contains? (symbol->string cnid) "/"))
              (add-between (map (lambda (e) `(racket ,(string->symbol e)))
                                (string-split (symbol->string cnid) "/"))
-                          `(zi /))]
+                          `(zi /IFX))]
             [(= (length ecr) 2)
-             (map (lambda (e) `(zi ,(string->symbol e)))
+             (map (lambda (e)
+                    (case e
+                      (["*" "?" "~" "^"] `(zi ,(string->symbol (string-append e "SFX"))))
+                      (else `(zi ,(string->symbol e)))))
                   (filter non-empty-string? (string-split (symbol->string cnid) "")))]
             [else '()]))
     (define exploded `(elem ,@(add-between raw-exploded " + ")))
@@ -322,9 +325,9 @@
        #'(zi-ref str-z))
      ])
   )
-(define (zi-ref c) ;; zi shorts for hanzi, means chinese char.
+(define (zi-ref c [c1 c]) ;; zi shorts for hanzi, means chinese char.
   (elem #:style (style #f (list (attributes '([style . "background:  #f5eef8; "])))) ; [class . "highlighted"]
-        (elemref c (racketplainfont c)))
+        (elemref c (racketplainfont c1)))
   )
 
 (define (section+autotag . content)

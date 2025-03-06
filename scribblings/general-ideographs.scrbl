@@ -63,30 +63,30 @@ When you see this component in ideographs that are used to name procedures, you 
 }
 
 
-@defideogr[?SFX "output is boolean" #f #f]{
+@defideogr[?SFX (? SFX) "output is boolean" #f #f]{
 Implies the output is boolean.
 @ideoexamples[@rackets[双? 􏿴? 􏿳?]]
 }
 
-@defideogr[*SFX "strengthen" #f #f]{
+@defideogr[*SFX (* SFX) "strengthen" #f #f]{
 Almost has the same usage as the one named without @zi[*], except this strengthen the processing of inputted data. Thus the data of output may become longer, and the type may be changed accordingly.
 @ideoexamples[@rackets[弓*]]
 }
 @eleph-note{@racket[弓*] is similar to @racket[弓] except the process is strengthened.}
 
-@defideogr[~SFX "~ as suffix, implies strengthen" #f #f]{
+@defideogr[~SFX (~ SFX) "~ as suffix, implies strengthen" #f #f]{
 Almost has the same usage as the one named without @zi[~], except this soften the processing of inputted data. Thus the data of output may become shorten.
 @ideoexamples[@rackets[􏹊~]]
 }
 @eleph-note{@racket[􏹊~] is similar to @racket[􏹊] except the process is softened.}
 
-@defideogr[^SFX "^ as suffix, implies list as input" #f #f]{
+@defideogr[^SFX (^ SFX) "^ as suffix, implies list as input" #f #f]{
 Almost has the same usage as the one named without @zi[^], except that input data is a list.
 @ideoexamples[@rackets[􏹊^ 伄^ 􏾘^]]
 }
 @eleph-note{@racket[􏹊^] is similar to @racket[􏹊] except the input dat is list.}
 
-@defideogr[/IFX "/ as infix, implies extending" #f #f]{
+@defideogr[/IFX (/ IFX) "/ as infix, implies extending" #f #f]{
 The suffix of it is considered as an extending explanation of the prefix.
 @ideoexamples[@rackets[􏷍/组合]]
 }
@@ -114,7 +114,7 @@ Appends the elements, goes through the elements and connect them as one together
 
 @defideogr[攵 "modify value" "攵" "raping over something with hands"]{
 Appends the elements, goes through the elements and connect them as one together. (Do not confuse with @zi[夂].)
-@ideoexamples[@rackets[𰁦 攸 􏾩 𢪛]]
+@ideoexamples[@zis[𰁦 攸 􏾩 𢪛]]
 }
 
 @defideogr[(土 􏷪) "produce data" "土" "ground, earth"]{
