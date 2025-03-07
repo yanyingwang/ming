@@ -14,7 +14,7 @@
 @script/rainbow-delimiters*
 
 
-@title[#:tag "rationle"]{Rationale}
+@title[#:tag "rationale"]{Rationale}
 ref to: @url{http://www.yanying.wang/SOICOL}
 
 @section{Lisp and its parenthsis}
@@ -69,16 +69,41 @@ At last, we use those characters instead of common English words for the concept
 (list @code{(􏿰 'a 'b 'c 'd)} @code{(hash 'a 'b 'c 'd)})
 )]
 
-As chart shown above, the keywords of Ming are much short in length, and in forms the complex characters are usually constituted by other simpler characters, and those simpler characters are usually used for related function names as well.
+As chart shown above, the keywords of Ming are shorter in length, and in forms the complex characters are usually constituted by other simpler characters, and those simpler characters are usually used for related function names as well.
 
 Further more, the connotations behind the characters work the same way, they are related to each other and complex concepts are broke to simple concepts as well.
 
-Most importantly, the chineseoid characters implemented here also have the ability to imply to human about the arguments and results of functions, check @secref["general-ideographs"] for more.
+Most importantly, the chineseoid characters implemented here also have the ability to imply to human about the arguments and results of functions.
 
 
 @section[#:tag "character-implications"]{Character implications}
-Since the chineseoid chracters are much complicated than general western characters, there are few terminologies we need to know in advance: @italic{radical}, @italic{component}, @italic{part}(check the @hyperlink["https://en.wiktionary.org/wiki/%E5%81%8F%E6%97%81" "wiktionary page"] for details).
+Since the chineseoid chracters are more complicated than general western characters, there are few terminologies we need to know in advance: @italic{radical}, @italic{component}, @italic{part}(check the @hyperlink["https://en.wiktionary.org/wiki/%E5%81%8F%E6%97%81" "wiktionary page"] for details).
 
-Simply put it, @italic{phrase} is composed by more than one @italic{characters}, @italic{character} is composed by more than on @italic{parts}. For the @italic{parts} of an @italic{specific character}, only one of them can be counted as @italic{radical}, which usually is another @italic{standalone character} that provides the basic meaning for the @italic{specific character}, and the other one can be counted as @italic{component}, which usually implies the difference(type of input, type of output, etc.) between the meaning of @italic{radical} and the @italic{specific character}.
+Simply put it, @italic{phrase} is composed by more than one @italic{characters}, @italic{character} is composed by more than on @italic{parts}.
 
-Take example of the procedure @racket[伄], this @italic{character} is composed of two @italic{parts}:  @zi[亻] as @italic{component} and @zi[弔] as @italic{radical}. By composition, we can deduce that this procedure has a similar usage as @racket[弔] since it is the @italic{radical}. And the @zi[亻] additionally means the type of output data is list(read @secref["general-ideographs"] for more).
+For the @italic{parts} of an @italic{specific character}:
+@itemlist[
+@item{only one of them can be counted as @italic{radical}, which usually is another @italic{standalone character} that provides the basic meaning for the @italic{specific character}.}
+@item{And the other one can be seen as @italic{component}, which usually implies the difference(type of input, type of output, etc.) between the meaning of @italic{radical} and the @italic{specific character}.}
+]
+
+Take example of the procedure @racket[伄], this @italic{character} is composed of two @italic{parts}:
+@itemlist[
+@item{@zi[亻] as @italic{component,}}
+@item{@zi[弔] as @italic{radical.}}
+]
+By above composition, we can deduce that:
+@itemlist[
+@item{this procedure has a similar usage as @racket[弔] since it is the @italic{radical},}
+@item{and the @zi[亻] additionally means the type of output data is list. (read @secref["general-ideographs"] for more)}
+]
+
+@section[#:tag "character-implications"]{Character implications in word}
+Furthermore, word is composed by more than one characters. And there are also rules implemented on words. Take the basic one, also the example @racket[弔]:
+@itemlist[
+@item{@zi[弔] is actually shorts for @litchar{􏿴弔}.}
+@item{Then we have procedures like @racket[􏻿弔] and @racket[􏿰弔], etc.}
+@item{Thus, @zi[􏻿] and @zi[􏿰] prefixed in @zi[弔] actually change the type of processing object(consequently the data type of input and output). (@zi[􏻿PFX], @zi[􏿰PFX])}
+]
+
+Likewise, for the procedure of @racket[伄], from it we can deduce how the procedures @racket[􏿰伄] or @racket[􏻿伄] acts, it is just we haven't implemented them yet.

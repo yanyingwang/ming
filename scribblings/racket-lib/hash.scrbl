@@ -41,6 +41,10 @@ Originates from @secref["hashtables" #:doc '(lib "scribblings/reference/referenc
                (list
                @elem{@bold{@zi[^SFX]}}
                @elem{@racket[􏿰^] @racket[􏾋^] @racket[􏾊^] @racket[􏾉^]}
+               )
+               (list
+               @elem{@bold{@zi[􏿰PFX]}}
+               @elem{@rackets[􏿰􏾘 􏿰𠛮 􏿰𫼛]}
                ))]
 
 @defideogr[广 "indicates a specific data type" "广" "house"]{

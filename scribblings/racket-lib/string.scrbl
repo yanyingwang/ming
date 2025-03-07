@@ -19,6 +19,23 @@ Originates from @secref["strings" #:doc '(lib "scribblings/reference/reference.s
 
 
 @section[#:tag "overall-of-string"]{Overall}
+
+@tabular[@;#:sep @hspace[0]
+         #:style 'boxed
+         #:column-properties '(center)
+         #:row-properties '(border)
+         (list (list @bold{Rule} @bold{Example})
+               (list
+               @elem{@bold{@zi[句B]}}
+               @elem{@zis[􏽀 􏼅 􏼄 􏼃 􏼂]}
+               )
+               (list
+               @elem{@bold{@zi[句L]}}
+               @elem{@zis[􏺕 􏼭 􏶐 􏶊 􏶋 邭 􏶉 􏶈 􏶇 􏶆]}
+               )
+               )]
+
+
 @defideogr[勹 "introduce a specific data type" "勹" "wrap, wrapper"]{
 Imagines it as a data spaces where specific content.
 @ideoexamples[@zis[句 􏷂 􏶿]]

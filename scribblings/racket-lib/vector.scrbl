@@ -18,11 +18,41 @@
 Originates from @secref["vectors" #:doc '(lib "scribblings/reference/reference.scrbl")] and extends to @secref["ming-vector"].
 
 
-@section{􏻿 􏻽 􏻼, 􏻿? 􏻽? 􏻼?, 􏻸?}
+@section[#:tag "overall-of-vector"]{Overall}
+@; Extended from @secref["naming-rules"], specifically there are：
+@tabular[@;#:sep @hspace[0]
+         #:style 'boxed
+         #:column-properties '(center)
+         #:row-properties '(border)
+         (list (list @bold{Rule} @bold{Example})
+               (list
+               @elem{@bold{@zi[亻]}}
+               @elem{@rackets[􏻿􏷑 􏻿𠆯 􏻿􏹈]}
+               )
+               (list
+               @elem{@bold{@zi[阝]}}
+               @elem{@rackets[􏻿􏾺 􏻿𨚞]}
+               )
+               (list
+               @elem{@bold{@zi[刂]}}
+               @elem{@racket[􏻿􏷵 􏻿􏷴]}
+               )
+               (list
+               @elem{@bold{@zi[扌]}}
+               @elem{@rackets[􏻿􏾩 􏻿𢪛 􏻿􏽒]}
+               )
+               (list
+               @elem{@bold{@zi[􏻿PFX]}}
+               @elem{@racket[􏻿𠆯 􏻿􏷴 􏻿􏾩 􏻿􏽒]}
+               ))]
+
+
 @defideogr[矢 "something has specific direction or fixed length" "矢" "arrow"]
 @defideogr[矢LB (矢 LB) "something similar to vector" #f #f]{
 Examples: @zi[􏻿]
 }
+
+@section{􏻿 􏻽 􏻼, 􏻿? 􏻽? 􏻼?, 􏻸?}
 
 @defideogr[􏻿 (矢LB 十) "vector, introduce a vector data type" #f #f]{
 @zi[十] here specifically means @italic{a few of fixed length of elements}.
