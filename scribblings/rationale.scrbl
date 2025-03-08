@@ -17,7 +17,7 @@
 @title[#:tag "rationale"]{Rationale}
 ref to: @url{http://www.yanying.wang/SOICOL}
 
-@section{Lisp and its parenthsis}
+@section{Lisp and its parenthesis}
 Lisp, as an ancient programming language, when I was learning it with inherent ideas from modern programming languages such as Ruby, I noticed there are a few distinctions. Among these, The most prominent one is the form.
 
 LISP is highly flat in forms, all are parenthesis. On the contrary, most modern PLs adhere to use different forms for different operations:
@@ -39,14 +39,14 @@ In conclusion, the function names of LISP take more responsibilities to annotate
 
 
 @section{Ideogram}
-Following my theory above, we need to break down concepts of current programming languages to atomic components, with those components we build up all the ideogram characters and words for all the function names. (Upon which, we may possibly and hopefully turn bunch of code to sentences in the future.)
+Following my observation above, we need to break down concepts of current programming languages to atomic components, with those components we build up all the ideogram characters and words for all the function names. (Upon which, we may possibly and hopefully turn bunch of code to sentences in the future.)
 
 To this date since what has been broadly used ideogram is Chinese character, I intentionally design Ming's ideographs with Chinese characters flavour. This is also the reason that most Chinese speakers find them seeming familar but not recognizable.
 
 Because I also intentionally originate Chinese ideograms to an ancient time, reserve the ideographic components and leave out the phonetic components(hopefully in the future I can make English words used as phonetic components but not suggest sound here espectially borrow its meaning in Ming), thus to be redeveloped and adapted for PL concepts, as well as redesign them be easily learned for international users.
 
 
-@section{Chineseoid characters}
+@section{Chineseoid character}
 Compare to English, of which the writing is based on the pronounciation of speaking, Chinese contrarily emphasize its writing more than speaking, which has actually developed a way to write related objects and concepts, we call it @hyperlink["https://en.wikipedia.org/wiki/Chinese_character_classification" "LiuShu(六书)"].
 
 With the fact that chinese characters are just the implementation of using LiuShu for the communication of human, what I am doing here is using it to invent and design lots of @italic{chinese resembled characters}, where we draw the phrase @italic{chineseoid character}, which is ideogram and especially called @italic{zi}, means looking like chinese characters but can not be recognized by most Chinese people.
@@ -76,7 +76,7 @@ Further more, the connotations behind the characters work the same way, they are
 Most importantly, the chineseoid characters implemented here also have the ability to imply to human about the arguments and results of functions.
 
 
-@section[#:tag "character-implications"]{Character implications}
+@section[#:tag "character-implication"]{Character implication}
 Since the chineseoid chracters are more complicated than general western characters, there are few terminologies we need to know in advance: @italic{radical}, @italic{component}, @italic{part}(check the @hyperlink["https://en.wiktionary.org/wiki/%E5%81%8F%E6%97%81" "wiktionary page"] for details).
 
 Simply put it, @italic{phrase} is composed by more than one @italic{characters}, @italic{character} is composed by more than on @italic{parts}.
@@ -98,7 +98,7 @@ By above composition, we can deduce that:
 @item{and the @zi[亻] additionally means the type of output data is list. (read @secref["general-ideographs"] for more)}
 ]
 
-@section[#:tag "character-implications"]{Character implications in word}
+@section[#:tag "character-implication"]{Character implication in word}
 Furthermore, word is composed by more than one characters. And there are also rules implemented on words. Take the basic one, also the example @racket[弔]:
 @itemlist[
 @item{@zi[弔] is actually shorts for @litchar{􏿴弔}.}
