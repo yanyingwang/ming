@@ -52,7 +52,7 @@ Same as:
 }
 
 @defform[(􏸞 a b c)]{
-@eleph-note{@secref{丫，􏸣、􏸟}}
+@eleph-note{@rackets[丫 􏸣 􏸟]}
 Is short for @code{(丫 (非 a) b c)}, which can always be wrote as @code{(丫 a c b)}, thus it should take precedence over the previous form in using unless it's really necessary.
 @examples[#:eval (the-eval)
 (􏸞 (= 1 1) 'unequal 'equal)

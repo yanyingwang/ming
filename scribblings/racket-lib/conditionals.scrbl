@@ -17,11 +17,11 @@
 
 @section{丫，􏸣、􏸟}
 @eleph-note{@racket[􏸞]}
-@defideogr[丫 "if" "丫" #f]{
+@defideogr[丫 "if" "丫" "diverge, branch"]{
 imagine a data flow that is importing in, and there are two paths it can be exported out.
 }
-@defideogr[􏸣 (丫 一) "when" #f #f]{
-for the data flow case of @zi[丫], imagine @litchar{一} as a barrier which has blocked one direction of the export paths, thus the other export path is extended.
+@defideogr[􏸣 (丫 丶) "when" #f #f]{
+for the data flow case of @zi[丫], imagine @litchar{丶} as a barrier which has blocked one direction of the export paths, thus the other export path is extended.
 }
 @defideogr[􏸟 (􏸣 非) "unless" #f #f]{
 @code{(􏸟 a b1 ...)} is short for @code{(􏸣 (非 a) b1 ...)}.
