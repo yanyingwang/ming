@@ -14,63 +14,66 @@
 @script/rainbow-delimiters*
 
 
-@title[#:tag "syntax"]{􏺃}
-“􏺃”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "syntax object"]）是Racket编程语言构建其语言的基石。
+@title[#:tag "syntax"]{文}
+Originates from @tech[#:doc '(lib "scribblings/reference/reference.scrbl") "syntax object"].
 
-
-@section+elemref{􏺃，卩?，􏺃?}
-“􏺃”其实就是通俗意义上的“代码”，而“代码”究其本质而言是封装了“词法信息”和“位置信息”的“数据”。“卩”（@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "identifier"]）可以看作是“􏺃”的极简单特例。
-
-@margin-note{
-@bold{@litchar{卩}为古活字} @linebreak{}
-@bold{@litchar{􏺃}为新造字} @linebreak{}
-@itemlist[
-@item{@litchar{卩}：@litchar{节}的古字，本意是“瑞信，古代出使等用作凭证之物”，引申为“语法，包含了上下文信息的数据”；}
-@item{@litchar{厂}：工厂，容器，内容。}
-]
+@defideogr[文 "syntax" "文" "tatoo, text, texture, script"]
+@defideogr[卩 "identifier" "卩" "identifier, token, certificate"]{
+Also can be seen as the short for @zi-tool{节}.
 }
+
 @examples[#:eval (the-eval)
-(􏺃? #'(+ 1 2))
-(􏺃? #'(+ 1 2))
-(􏺃? #'1)
+(文? #'(+ 1 2))
+(文? #'(+ 1 2))
+(文? #'1)
 (卩? #'1)
 ]
 
 
-@section+elemref{位置信息：􏹷，􏹸、􏹹，􏹾，􏹵}
-“􏺃”中的“位置信息”我们用单字“元”来表示，“元”包括：“􏹷”（地址）、“􏹾”（位置）、“􏹹”（经度（第几行））、“􏹸”（纬度（第几列））、“􏹵”（所占用的空间（长度））。
-@margin-note{
-@bold{@litchar{􏹷}为新造字} @linebreak{}
-@bold{@litchar{􏹹}为新造字} @linebreak{}
-@bold{@litchar{􏹸}为新造字} @linebreak{}
-@bold{@litchar{􏹾}为新造字} @linebreak{}
-@bold{@litchar{􏹵}为新造字} @linebreak{}
-@itemlist[
-@item{@litchar{止}：本意是“足”，在此为“地址”的意思；}
-@item{@litchar{􏹹}：第几列，仿@litchar{经}字得造；}
-@item{@litchar{􏹸}：第几行，仿@litchar{纬}字得造；}
-@item{@litchar{􏹾}：第几位；}
-]
+@section{􏵥 􏵢 􏵡 􏵣 􏵤}
+@tech[#:doc '(lib "scribblings/reference/reference.scrbl") "source location"] is especially called @zi[􏵟], which has fields we call: @zi[􏵥], @zi[􏵡], @zi[􏵢], @zi[􏵣], @zi[􏵤].
+
+@defideogr[􏵟 (文 元) "source location of syntax" #f #f]
+@defideogr[􏵥 (文 止) "path of source location" #f #f]
+@defideogr[􏵢 (文 韦) "line of source location" #f #f]
+@defideogr[􏵡 (文 𢀖) "column of source location" #f #f]
+@defideogr[􏵤 (文 占) "span of source location" #f #f]
+
+@defideogr[元 "source location" "元" "head, begining, original"]
+@defideogr[止 "location, path" "止" "foot, footprint"]{
+Also can be seen as the short for @zi-tool{址}, which exactly means @italic{address, location}.
 }
+@defideogr[𢀖 "column" "𢀖" "the vertical line in the loom"]{
+Also can be seen as the short for @zi-tool{经}.
+}
+@defideogr[韦 "line" "韦" "the horizontal line in the loom"]{
+Also can be seen as the short for @zi-tool{纬}.
+}
+@defideogr[立 "position" "立" "positon, location"]{
+Also can be seen as the short for @zi-tool{位}, which exactly means @italic{position}.
+}
+@defideogr[占 "span" "占" "occupy"]
+
 @examples[#:eval (the-eval)
-(􏹷 #'a)
-(􏹹 #'a)
-(􏹸 #'a)
-(􏹾 #'a)
-(􏹵 #'a)
+(􏵥 #'a)
+(􏵡 #'a)
+(􏵢 #'a)
+(􏵣 #'a)
+(􏵤 #'a)
 ]
 
 
-@section+elemref{转化：􏹲，􏹩，􏹴、􏹳}
+
+@section+elemref{转化：刘，􏹩，􏹴、􏹳}
 “数据”我们用单字“文”来表示，此如@racket[􏿴?]、@racket[􏻿?]、@racket[􏿰?]、@racket[句?]、@racket[勺?]等数据结构所构造出的数据都是“文”。 “文”添加上“词法信息”和“位置信息”就组成了“􏺃”，而“􏺃”剥离掉“词法信息”和“位置信息”就余下“文”了。
 @margin-note{
-@bold{@litchar{􏹲}为新造字} @linebreak{}
+@bold{@litchar{刘}为新造字} @linebreak{}
 @bold{@litchar{􏹩}为新造字} @linebreak{}
 @bold{@litchar{􏹴}为新造字} @linebreak{}
 @bold{@litchar{􏹳}为新造字} @linebreak{}
 @itemlist[
 @; @item{@litchar{匕}：小幅度转化。}
-@item{@litchar{􏹲}：@litchar{􏺃}+@litchar{解}各取偏旁得造；}
+@item{@litchar{刘}：@litchar{􏺃}+@litchar{解}各取偏旁得造；}
 @item{@litchar{􏹩}：@litchar{􏺃}+@litchar{􏿴}各取偏旁得造；}
 @item{@litchar{􏹴}：@litchar{􏺃}+@litchar{文}各取偏旁得造；}
 @item{@litchar{􏹴}：@litchar{文}+@litchar{􏺃}各取偏旁得造；}
@@ -78,8 +81,8 @@
 }
 @margin-note{另见：@racket[􏶑]、@racket[句化􏿴]、@racket[􏶒]、@racket[􏿴化句]}
 @examples[#:eval (the-eval)
-(􏹲 #'a)
-(􏹲 #'(a b c))
+(刘 #'a)
+(刘 #'(a b c))
 (􏹩 #'(a b c))
 (􏹴 #'(a b c))
 (􏹳 #f '(a b c))

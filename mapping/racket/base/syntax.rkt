@@ -1,21 +1,21 @@
 #lang at-exp s-exp "../../../private/mapping-lang.rkt"
 
 
->>> syntax 􏺃 @elem{生成代码} ;𠨳 􏺃
->>> syntax? 􏺃? @elem{代码（包含了词法信息和位置信息的数据）} ;𠨳 􏺃
+>>> syntax 文 ;𠨳 􏺃
+>>> syntax? 文? ;𠨳 􏺃
 >>> identifier? 卩? ;兯 卩 卪 卪
->>> syntax-source 􏹷 @elem{地址，比如是文件路径} ;方 牛 止 􏹻
->>> syntax-line 􏹸 @elem{所在文件的具体哪一行（纬是横向的，参见“纬线”一词）} ;􏺃行 􏺀
->>> syntax-column 􏹹 @elem{所在文件的具体哪一列（经是竖向的，参见“经线”一词）} ;􏺃列 􏺃丁 􏺃弓
->>> syntax-position 􏹾 @elem{所在文件的第几位} ;􏹾
->>> syntax-span 􏹵 @elem{所占用的长度（从0算起）} ;􏹶
+>>> syntax-source 􏵥 ;方 牛 止 􏹻
+>>> syntax-line 􏵢 ;􏺃行 􏺀
+>>> syntax-column 􏵡 ;􏺃列 􏺃丁 􏺃弓
+>>> syntax-position 􏵣  ;􏵣
+>>> syntax-span 􏵤 ;􏹶
 >>> syntax-original? ?syntax-original?
 >>> syntax-source-module ?􏺃司 ; module 函 司
->>> syntax-e 􏹲 @elem{以解开􏺃的方式转化成文（（原料数据））} ;文 攵 􏺃匕 􏹺 􏹰 􏹲 􏹲 􏹤
+>>> syntax-e 刘  ;文 攵 􏺃匕 􏹺 􏹰 􏵠 􏵠 􏹤
 
->>> syntax->list 􏹩 @elem{􏺃化􏿴}
->>> syntax->datum 􏹴 @elem{􏺃化文（将􏺃转化成文（原料数据））}
->>> datum->syntax 􏹳 @elem{文化􏺃}
+>>> syntax->list 文化􏿴
+>>> syntax->datum 文化云
+>>> datum->syntax 云化文
 >>> syntax-binding-set? ?syntax-binding-set?
 >>> syntax-binding-set ?syntax-binding-set
 >>> syntax-binding-set->syntax ?syntax-binding-set->syntax
