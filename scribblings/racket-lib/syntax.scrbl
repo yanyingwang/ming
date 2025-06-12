@@ -38,7 +38,6 @@ Also can be seen as the short for @zi-tool{节}.
 @defideogr[􏵢 (文 韦) "line of source location" #f #f]
 @defideogr[􏵡 (文 𢀖) "column of source location" #f #f]
 @defideogr[􏵤 (文 占) "span of source location" #f #f]
-
 @defideogr[元 "source location" "元" "head, begining, original"]
 @defideogr[止 "location, path" "止" "foot, footprint"]{
 Also can be seen as the short for @zi-tool{址}, which exactly means @italic{address, location}.
@@ -64,28 +63,18 @@ Also can be seen as the short for @zi-tool{位}, which exactly means @italic{pos
 
 
 
-@section+elemref{转化：刘，􏹩，􏹴、􏹳}
-“数据”我们用单字“文”来表示，此如@racket[􏿴?]、@racket[􏻿?]、@racket[􏿰?]、@racket[句?]、@racket[勺?]等数据结构所构造出的数据都是“文”。 “文”添加上“词法信息”和“位置信息”就组成了“􏺃”，而“􏺃”剥离掉“词法信息”和“位置信息”就余下“文”了。
-@margin-note{
-@bold{@litchar{刘}为新造字} @linebreak{}
-@bold{@litchar{􏹩}为新造字} @linebreak{}
-@bold{@litchar{􏹴}为新造字} @linebreak{}
-@bold{@litchar{􏹳}为新造字} @linebreak{}
-@itemlist[
-@; @item{@litchar{匕}：小幅度转化。}
-@item{@litchar{刘}：@litchar{􏺃}+@litchar{解}各取偏旁得造；}
-@item{@litchar{􏹩}：@litchar{􏺃}+@litchar{􏿴}各取偏旁得造；}
-@item{@litchar{􏹴}：@litchar{􏺃}+@litchar{文}各取偏旁得造；}
-@item{@litchar{􏹴}：@litchar{文}+@litchar{􏺃}各取偏旁得造；}
-]
+@section{刘 文化􏿴 文化云 云化文}
+@defideogr[云 "data" "云" "cloud"]
+@defideogr[刘 (文 刂) "unwrap syntax" "刘" "a kind of weapon, kill"]{
+@zi[刂] especially means @italic{unwrap} here when it comes to @litchar{文} as component in the character.
 }
-@margin-note{另见：@racket[􏶑]、@racket[句化􏿴]、@racket[􏶒]、@racket[􏿴化句]}
+
 @examples[#:eval (the-eval)
 (刘 #'a)
 (刘 #'(a b c))
-(􏹩 #'(a b c))
-(􏹴 #'(a b c))
-(􏹳 #f '(a b c))
+(文化􏿴 #'(a b c))
+(文化云 #'(a b c))
+(云化文 #f '(a b c))
 ]
 
 

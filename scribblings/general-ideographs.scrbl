@@ -34,6 +34,7 @@ As component of ideographs, it implies The type of output data is same as the in
 
 @defideogr[(刂) "broken subset" "刂" "knife"]{
 Returns a new list as output with removing some elements from the input list.
+Especially means @italic{unwrap} when it comes to 文 as component in the character, @zi[刘].
 @ideoexamples[@rackets[􏷵 􏷴 􏺊 􏾘 􏹊 􏹇 𠝤]]
 }
 
