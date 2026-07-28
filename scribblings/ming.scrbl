@@ -9,7 +9,7 @@
 @author[(author+email (hyperlink "https://yanying.wang" "Yanying Wang") "yanyingwang1@gmail.com")]
 
 @defmodule[ming #:lang]
-Ideographic LISP dialect, Lisp spirit embodied in chineseoid characters. @hspace[1] @smaller{@hyperlink["https://www.yanying.wang/ming-doc-zh-cn/" "(中文版)"]}
+Logographic LISP, Lisp spirit embodied in the structure of chineseoid characters. @hspace[1] @smaller{@hyperlink["https://www.yanying.wang/ming-doc-zh-cn/" "(中文版)"]}
 
 @(table-of-contents)
 

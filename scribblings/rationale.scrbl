@@ -38,18 +38,18 @@ By the examples above, we can see in Ruby, different operations are wrote in dis
 In conclusion, the function names of LISP take more responsibilities to annotate various operations than modern PLs. The more informations that function names convey to us, the better we can distinguish them and understand the purpose and usage of them.
 
 
-@section{Ideogram}
-Following my observation above, we need to break down concepts of current programming languages to atomic components, with those components we build up all the ideogram characters and words for all the function names. (Upon which, we may possibly and hopefully turn bunch of code to sentences in the future.)
+@section{Logogram}
+Following my observation above, we need to break down concepts of current programming languages to atomic components, with those components we build up all the @hyperlink{"https://en.wikipedia.org/wiki/Logogram" "logogram"} characters and words for all the function names. (Upon which, we may possibly and hopefully turn bunch of code to sentences in the future.)
 
-To this date since what has been broadly used ideogram is Chinese character, I intentionally design Ming's ideographs with Chinese characters flavour. This is also the reason that most Chinese speakers find them seeming familar but not recognizable.
+To this date since what has been broadly used logogram is Chinese character, I intentionally design Ming's logographs with Chinese characters flavour. This is also the reason that most Chinese speakers find them seeming familar but not recognizable.
 
-Because I also intentionally originate Chinese ideograms to an ancient time, reserve the ideographic components and leave out the phonetic components(hopefully in the future I can make English words used as phonetic components but not suggest sound here espectially borrow its meaning in Ming), thus to be redeveloped and adapted for PL concepts, as well as redesign them be easily learned for international users.
+Because I also intentionally originate Chinese logogram to an ancient time, reserve the semantic components and leave out the phonetic components(hopefully in the future I can make English words used as phonetic components but not suggest sound here espectially borrow its meaning in Ming), thus to be redeveloped and adapted for PL concepts, as well as redesign them to be easily learned for international users.
 
 
 @section{Chineseoid character}
 Compare to English, of which the writing is based on the pronounciation of speaking, Chinese contrarily emphasize its writing more than speaking, which has actually developed a way to write related objects and concepts, we call it @hyperlink["https://en.wikipedia.org/wiki/Chinese_character_classification" "LiuShu(六书)"].
 
-With the fact that chinese characters are just the implementation of using LiuShu for the communication of human, what I am doing here is using it to invent and design lots of @italic{chinese resembled characters}, where we draw the phrase @italic{chineseoid character}, which is ideogram and especially called @italic{zi}, means looking like chinese characters but can not be recognized by most Chinese people.
+With the fact that chinese characters are just the implementation of using LiuShu for the communication of human, what I am doing here is using it to invent and design lots of @italic{chinese resembled characters}, where we draw the phrase @italic{chineseoid character}, which is logogram and especially called @italic{zi}, means looking like chinese characters but can not be recognized by most Chinese people.
 
 At last, we use those characters instead of common English words for the concepts of Lisp and even the whole programming language world to make human interact better with it.
 
@@ -76,6 +76,12 @@ Further more, the connotations behind the characters work the same way, they are
 Most importantly, the chineseoid characters implemented here also have the ability to imply to human about the arguments and results of functions.
 
 
+@section{The structure of Chineseoid character}
+Chinese characters are generally logographs, but some are also pictographs and ideographs. Except pictographs and ideographs, most logographs are compounds, which has made the logographs being @hyperlink["structural" "https://en.wikipedia.org/wiki/Chinese_character_classification#Structural_analysis"], which is the key feature that I exploit on to implement my style of PL from Lisp.
+
+Ming rarely use the original logographs, instead for most cases, it borrow original pictographs and ideographs as semantic components or to imply rules of how the input type or output type acts or relates.
+
+
 @section[#:tag "character-implication"]{Character implication}
 Since the chineseoid chracters are more complicated than general western characters, there are few terminologies we need to know in advance: @italic{radical}, @italic{component}, @italic{part}(check the @hyperlink["https://en.wiktionary.org/wiki/%E5%81%8F%E6%97%81" "wiktionary page"] for details).
 
@@ -95,7 +101,7 @@ Take example of the procedure @racket[伄], this @italic{character} is composed 
 By above composition, we can deduce that:
 @itemlist[
 @item{this procedure has a similar usage as @racket[弔] since it is the @italic{radical},}
-@item{and the @zi[亻] additionally means the type of output data is list. (read @secref["general-ideographs"] for more)}
+@item{and the @zi[亻] additionally means the type of output data is list. (read @secref["general-logographs"] for more)}
 ]
 
 @section[#:tag "character-implication"]{Character implication in word}

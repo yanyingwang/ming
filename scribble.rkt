@@ -209,7 +209,7 @@
   (syntax-case stx ()
     [(_ zis content ...)
      #`(elem #:style (style #f (list (alt-tag "p") (attributes '([class . "boxed"]))))
-             #,(gen-elemtags (zis-of-str #'zis)) ":" (hspace 1) content ... #,(r-background-label "ideograph"))
+             #,(gen-elemtags (zis-of-str #'zis)) ":" (hspace 1) content ... #,(r-background-label "logograph"))
      ])
   )
 
@@ -224,7 +224,7 @@
 ;;                                  (elem #:style (style #f (list (alt-tag "blockquote") (attributes '([class . "SubFlow"]))))
 ;;                                        (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "RBackgroundLabel SIEHidden"]))))
 ;;                                              (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "RBackgroundLabelInner"]))))
-;;                                                    (elem #:style (style #f (list (alt-tag "p"))) "ideographsdfsdf")))
+;;                                                    (elem #:style (style #f (list (alt-tag "p"))) "logographsdfsdf")))
 ;;                                        (elem #:style (style #f (list (alt-tag "p") (attributes '([class . "RForeground"])))) "a" " : " "b"))))
 ;;                       (elem #:style (style #f (list (alt-tag "tr")))
 ;;                            (elem #:style (style #f (list (alt-tag "td")))
@@ -242,7 +242,7 @@
                            #`(elemtag #,(symbol->string (syntax-e e))
                                       (elem (bold (racket (code:hilite #,e))) (hspace 1)
                                             (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "RBackgroundLabel SIEHidden"]))))
-                                                  #,(r-background-label "ideographs"))))
+                                                  #,(r-background-label "logographs"))))
                            )
                          (syntax->list #'(zis ...)))]
                    [p+p+p #`#,(cons 'elem (add-between (map (lambda (e) (if (list? e)
@@ -265,7 +265,7 @@
        #`(elem
           (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "boxed"] [style . "margin-top: 2em; margin-bottom: 1em; "]))))
                 (elemtag str-z (elem (bold (racket (code:hilite z))) " : " ppp))
-                (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "RBackgroundLabel SIEHidden"])))) #,(r-background-label "ideograph"))
+                (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "RBackgroundLabel SIEHidden"])))) #,(r-background-label "logograph"))
                 (~@ (if content (elem (linebreak) (hspace 2) header " : " content) "")) ...)
           (elem elaboration ...)))]
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -282,7 +282,7 @@
        #`(elem
           (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "boxed"] [style . "margin-top: 2em; margin-bottom: 1em; "]))))
                 gen-elemtags ...
-                (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "RBackgroundLabel SIEHidden"])))) #,(r-background-label "ideographs"))
+                (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "RBackgroundLabel SIEHidden"])))) #,(r-background-label "logographs"))
                 (~@ (if content (elem (linebreak) (hspace 2) header " : " content) "")) ...)
           (elem elaboration ...)))]
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -293,7 +293,7 @@
        #`(elem
           (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "boxed"] [style . "margin-top: 2em; margin-bottom: 1em; "]))))
                 (elemtag str-z (elem (bold (racket (code:hilite z)))))
-                (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "RBackgroundLabel SIEHidden"])))) #,(r-background-label "ideograph"))
+                (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "RBackgroundLabel SIEHidden"])))) #,(r-background-label "logograph"))
                 (~@ (if content (elem (linebreak) (hspace 2) header " : " content) "")) ...)
           (elem elaboration ...)))]
     )
@@ -306,7 +306,7 @@
        #`(elem  #:style (style #f (list (alt-tag "div") (attributes '([class . "boxed"] [style . "margin-top: 2em; margin-bottom: 1em; "]))))
                 (elemtag str-zi (elem (bold (racket (code:hilite zi))) ":" (hspace 1) content ...
                                       (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "RBackgroundLabel SIEHidden"]))))
-                                            #,(r-background-label "ideograph"))
+                                            #,(r-background-label "logograph"))
                                       ))))
      ])
   )

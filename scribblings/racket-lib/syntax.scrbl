@@ -60,9 +60,7 @@ Also can be seen as the short for @zi-tool{位}, which exactly means @italic{pos
 (􏵣 #'a)
 (􏵤 #'a)
 ]
-
-
-
+ 
 @section{刘 文化􏿴 文化云 云化文}
 @defideogr[云 "data" "云" "cloud"]
 @defideogr[刘 (文 刂) "unwrap syntax" "刘" "a kind of weapon, kill"]{
