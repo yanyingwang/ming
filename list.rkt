@@ -20,7 +20,7 @@
 (require "racket/base.rkt" "racket/list.rkt")
 
 ;; (名 (弓* LST V)
-;;     (𡊤 並 (𰁣 LST V)))
+;;     (用 並 (𰁣 LST V)))
 
 ;; (名 (􏹂* LST V)
 ;;     (apply 􏸼 (􏹂 LST V)))
