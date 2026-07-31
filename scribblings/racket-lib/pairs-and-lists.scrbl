@@ -137,7 +137,7 @@ Is same as @zi[穴], because @racket[㐅] is same as @racket[穴].
 @section[#:tag "pair-car-cdr-list-list*"]{双, 㐅, 􏿴, 􏿫, 阴, 阳}
 Abstractly, we can pair two data together. Integrally, it is called @zi[双]. Separately, the position where set the first data is call @zi[阳], the second is call @zi[阴].
 
-Further more, if we put another @racket[双] to @racket[阴] position of the former @racket[双], we get a linked data. Likewise, the linked data can be extended as long as you want. By this way, if we leave @racket[阴] of the ending @racket[双] to be empty(@racket[㐅]), we get a data called @racket[􏿴]; if not, we call it @racket[􏿫].
+Further more, if we put another @racket[双] to @racket[阴] position of the former @racket[双], we get a linked data. Likewise, the linked data can be extended as long as you want. By this way, if we leave @racket[阴] of the ending @racket[双] to be null(@racket[㐅]), we get a data called @racket[􏿴]; if not, we call it @racket[􏿫].
 
 @defideogr[双 (又 又) "cons a pair data type" "双" "pair"]{
 Two human hand here stand for a data type with spaces of holding two holding data. (@zi[双] is a special minor data type of @zi[􏿴])
