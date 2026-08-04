@@ -3,6 +3,7 @@
 
 
 >>> empty 穴 ;空 ; not need as one defined same in base (null 空)
+>>> empty? 穴?
 >>> first 􏷜
 >>> second 􏷛
 >>> third 􏷚
