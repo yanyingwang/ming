@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(require ming/core ming/scribble
+@(require ming/kernel ming/scribble
           (for-label racket
                      ming/racket ming/core ming/scribble
                      scribble/decode scribble/base)

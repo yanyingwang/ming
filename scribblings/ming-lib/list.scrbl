@@ -116,6 +116,15 @@ Shorts for @code{(􏷴 (􏷵 LST N) M)}.
 ]
 }
 
+
+@defproc[(彐? (V any/c) [LST 􏿴?])
+          boolean?]{
+@defideogr[彐? (彐 ?) #f #f #f]
+@examples[#:eval (the-eval)
+(彐? 'c '(a b c d e c f))
+]
+}
+
 @defproc[(􏹊 [V any/c] [LST 􏿴?] (PROC 程? 同?))
           􏿴?]{
 @defideogr[􏹊 (彐 刂) #f #f #f]
