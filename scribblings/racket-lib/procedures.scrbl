@@ -38,12 +38,20 @@ Racket's @secref["procedures" #:doc '(lib "scribblings/reference/reference.scrbl
 (fun 1 2 3)
 ]
 
-@section{􏸛，􏸚}
-@defideogr[􏸛 (土 禾) #f #f #f]
-@defideogr[􏸚 (土 禾 一) #f #f #f]
+@section{㞢}
+@defideogr[㞢 "apply" "㞢" "to go"]{
+Imagines @litchar{一} as the first element(the procedure), and @litchar{凵} as the pathesis, and @litchar{丨} as an arrow, which moves the @litchar{一} to the upper position. Since we rotates @zi[㞢] 90 degrees for writing, we are now imaging the moving from left to right not below to upper.
+}
 @examples[#:eval (the-eval)
-((􏸛 􏿴 􏾺分) '("a" "b" "c") 2)
-((􏸚 句化􏷂 􏶒) '("a" "b" "c"))
+(㞢 􏼃 '("a" "b" "c"))
+]
+
+@section{秝，􏸕}
+@defideogr[􏸛 (禾 禾) #f #f #f]
+@defideogr[􏸚 (秝 一) #f #f #f]
+@examples[#:eval (the-eval)
+((秝 􏿴 􏾺分) '("a" "b" "c") 2)
+((􏸕 句化􏷂 􏶒) '("a" "b" "c"))
 ]
 
 @section{􏸘}
@@ -51,6 +59,8 @@ Racket's @secref["procedures" #:doc '(lib "scribblings/reference/reference.scrbl
 @examples[#:eval (the-eval)
 ((􏸘 􏿴 '􏿴1) 'a 'b 'c 'd)
 ]
+
+@defideogr[􏵃 (非 禾) #f #f #f]
 
 @section[#:tag "base-functions"]{Base References}
 @defmodule[ming/racket/base]

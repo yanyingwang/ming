@@ -119,7 +119,7 @@ Shorts for @code{(􏷴 (􏷵 LST N) M)}.
 
 @defproc[(彐? (V any/c) [LST 􏿴?])
           boolean?]{
-@defideogr[彐? (彐 ?) #f #f #f]
+@defideogr[彐? (彐 ?SFX) #f #f #f]
 @examples[#:eval (the-eval)
 (彐? 'c '(a b c d e c f))
 ]
@@ -165,11 +165,10 @@ Shorts for @code{(􏷴 (􏷵 LST N) M)}.
 ]
 }
 
-
 @defproc[(􏿳? [V any?]) boolean?]{
 @defideogr[􏿳? (􏿳 ?SFX) #f #f #f]
 @var[V] is @racket[􏿳] or not.
-Shorts for @code{(并 (􏿴? V) (􏷐 双? V))}.
+@var[V] is a @racket[􏿴?] of @racket[双?] or not. Which dictates this form: @racket['((any . any)...)].
 @examples[#:eval (the-eval)
 (􏿳? '(1 2 3 4))
 (􏿳? (􏿳 1 2 3 4))
@@ -179,6 +178,63 @@ Shorts for @code{(并 (􏿴? V) (􏷐 双? V))}.
 ]
 }
 
+@defproc[(􏴳? [V any?]) boolean?]{
+@defideogr[􏴳? (􏴳 ?SFX) #f #f #f]
+@defideogr[􏴳 (􏿴 􏿴) #f #f #f]
+@var[V] is a @racket[􏿴?] of @racket[􏿴?]s or not. Which dictates this form: @racket['((any ...)...)].
+@examples[#:eval (the-eval)
+(􏴳? '(1 2 3 4))
+(􏴳? (􏿳 1 2 3 4))
+(􏴳? '((1 . 2) (3 . 4)))
+(􏴳? '((1 2) (3 4)))
+(􏴳? '((1 (2)) (3 (4))))
+]
+}
+
+@defproc[(􏴷? [V any?]) boolean?]{
+@defideogr[􏴷? (􏿴 句 ?SFX) #f #f #f]
+@var[V] is a @racket[􏿴?] of @racket[句?]s or not. Which dictates this form: @racket['(str1 ...)].
+@examples[#:eval (the-eval)
+(􏴷? '(1 2 3 4))
+(􏴷? '("a" "b" "c" "d"))
+]
+}
+
+@defproc[(􏴶? [V any?]) boolean?]{
+@defideogr[􏴶? (􏿴 􏷂 ?SFX) #f #f #f]
+@var[V] is a @racket[􏿴?] of @racket[句?]s or not. Which dictates this form: @racket['(sym1 ...)].
+@examples[#:eval (the-eval)
+(􏴶? '(1 2 3 4))
+(􏴶? '(a b c d))
+]
+}
+
+@defproc[(􏴵? [V any?]) boolean?]{
+@defideogr[􏴵? (􏿴 􏶿 ?SFX) #f #f #f]
+@var[V] is a @racket[􏿴?] of @racket[􏶿?]s or not. Which dictates this form: @racket['(kw1 ...)].
+@examples[#:eval (the-eval)
+(􏴵? '(1 2 3 4))
+(􏴵? '(#:a #:b #:c #:d))
+]
+}
+
+@defproc[(􏴴? [V any?]) boolean?]{
+@defideogr[􏴴? (􏿴 􏶃 ?SFX) #f #f #f]
+@var[V] is a @racket[􏿴?] of @racket[􏶃?]s or not. Which dictates this form: @racket['(char1 ...)].
+@examples[#:eval (the-eval)
+(􏴴? '(1 2 3 4))
+(􏴴? '(#\a #\b #\c #\d))
+]
+}
+
+@defproc[(􏴲? [V any?]) boolean?]{
+@defideogr[􏴲? (􏿴 􏿰 ?SFX) #f #f #f]
+@var[V] is a @racket[􏿴?] of @racket[􏿰?]s or not. Which dictates this form: @racket['(hash1 ...)].
+@examples[#:eval (the-eval)
+(􏴲? '(1 2 3 4))
+(􏴲? '(#hash((a . b)) #hash((c . d) (e . f)) ))
+]
+}
 
 @deftogether[(
 @defproc[(􏺈 [ALST 􏿳?])

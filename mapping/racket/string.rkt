@@ -3,8 +3,8 @@
 
 >>> string-append* 􏼂 ;􏼰
 
->>> string-join 􏿴􏵷句  ; 􏼻
->>> string-split 句􏵸􏿴 ;􏼼 􏼼 􏼼
+>>> string-join 􏴼  ; 􏼻 􏿴􏵷句 􏵃
+>>> string-split 􏴸 ;􏼼 􏼼 􏼼 句􏵸􏿴
 
 >>> string-normalize-spaces 􏶋 ; 㲁 椌 𤗇 𤗇 瞾 箜 𭄲 句􏼺 􏼮 􏶋 􏼚
 >>> string-replace 􏶐 ;敂

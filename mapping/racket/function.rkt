@@ -6,7 +6,7 @@
 ;; const*
 ;; thunk
 ;; thunk*
->>> negate 𥟍 (禾 非) ;; ;𥟍􏸝
+>>> negate 􏵃 (禾 非) ;; ;𥟍􏸝􏵀
 ;; conjoin
 ;; disjoin
 ;; curry

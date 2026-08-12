@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(require (for-label ming/racket/base ming/racket/hash ming/racket/list
+@(require (for-label ming/racket/base ming/racket/hash ming/racket/list ming/racket/string
                       ming/list ming/string  ming/hash)
            ming/scribble
            scribble/eval)
@@ -13,7 +13,7 @@
 @script/rainbow-delimiters*
 
 @title[#:tag "ming-string"]{句}
-Orignates from @secref["string"].
+Originates from @secref["string"].
 @defmodule[ming/string]
 
 @(require scribble/core)
@@ -44,7 +44,7 @@ Orignates from @secref["string"].
 @deftogether[(
 @defproc[(􏽀? [V any?]) boolean?]
 @defproc[(􏽁? [V any?]) boolean?])]{
-@zi[􏽀] + @zi[?], @zi[􏽁] + @zi[?]
+@zi[􏽀] + @zi[?SFX], @zi[􏽁] + @zi[?SFX]
 @examples[#:eval (the-eval)
 (􏽀? (􏽀 #\a #\b #\c #\d))
 (􏽁? (􏽁 #\a #\b #\c #\d))
@@ -64,7 +64,7 @@ Orignates from @secref["string"].
 @defproc[(􏻷? [V any?])
 boolean?]{
 @eleph-note{@racket[􏼟?]}
-@zi[􏻷] + @zi[?]
+@zi[􏻷] + @zi[?SFX]
 @examples[#:eval (the-eval)
 (􏻷? "abcdefg")
 (􏻷? "")
@@ -79,5 +79,16 @@ boolean?]{
 Same as：@code{(􏶐 STR " " "")}}
 @examples[#:eval (the-eval)
 (􏸵 " a b  cd    e   ")
+]
+}
+
+@defproc[(􏴾 [STR 􏴷?])
+句?]{
+@eleph-note{@racket[􏴼]}
+@defideogr[􏴾 (㞢 􏼃) #f #f #f]
+@margin-note{
+Same as：@code{(㞢 􏼃 '(str1 str2 str3))}}
+@examples[#:eval (the-eval)
+(􏴾 '("str1" "str2" "str3"))
 ]
 }

@@ -69,11 +69,11 @@ Imagine that the data flow is importing in, lots of conditions and cases are imp
 ]
 
 @section{非}
-@eleph-note{@racket[𥟍]}
+@eleph-note{@racket[􏵃]}
 @defideogr[非 "not" "非" "not"]
 @examples[#:eval (the-eval)
 (非 1)
-((𥟍 𥥪?) 1)
+((􏵃 𥥪?) 1)
 ]
 
 

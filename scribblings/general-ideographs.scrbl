@@ -31,6 +31,10 @@ As component of ideographs, it implies The type of output data is same as the in
 @ideoexamples[@rackets[􏾝 􏾺 𨚞 􏹋]]
 }
 
+@defideogr[(􏴺 􏴻) "split" "段" "to break, section, segment"]{
+Split or break the element to many sections.
+@ideoexamples[@zis[􏴸]]
+}
 
 @defideogr[(刂) "broken subset" "刂" "knife"]{
 Returns a new list as output with removing some elements from the input list.
@@ -109,11 +113,12 @@ Simplifies from @zi[空], which means @italic{empty}.
 @ideoexamples[@rackets[水? 􏻽 􏾑? 􏽀]]
 }
 
-@defideogr[毌 "append" "毌" "to pass through, all over"]{
+@defideogr[(毌 􏵀) "append" "毌" "to pass through, all over"]{
 Appends the elements, goes through the elements and connect them as one together. (@zi[毌] is the initial form of modern chinese char @zi-tool{贯}.)
-@ideoexamples[@rackets[􏿝 􏼉 􏼃]]
+@ideoexamples[@rackets[􏿝 􏼉 􏼃 􏴾]]
+@zi[􏵀] only has subtly different with @zi[毌].
+@ideoexamples[@rackets[􏴼]]
 }
-
 
 @defideogr[攵 "modify value" "攵" "raping over something with hands"]{
 Appends the elements, goes through the elements and connect them as one together. (Do not confuse with @zi[夂].)

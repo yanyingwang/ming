@@ -5,6 +5,7 @@
          ;; 邭*
          􏻷?
          􏸵
+         􏴾
          ;; 􏶊*
          )
 (require "racket/base.rkt" "racket/string.rkt" "racket/function.rkt" "bool.rkt")
@@ -12,9 +13,9 @@
 ;; (名 空􏿲 (􏿲))
 
 (名 (􏽀 . E-LST)
-    (用 句 E-LST))
+    (㞢 句 E-LST))
 (名 (􏽁 . E-LST)
-    (􏽁化 (用 句 E-LST)))
+    (􏽁化 (㞢 句 E-LST)))
 
 (名 (􏽁? STR)
     (并 (山? STR) (句? STR)))
@@ -28,10 +29,13 @@
 ;;         (邭 STR N1 (􏽊 N2))))
 
 (名 (􏻷? V)
-    ((𥟍 􏼟?) V))
+    ((􏵃 􏼟?) V))
 
 (名 (􏸵 S)
     (􏶐 S " " ""))
+
+(名 (􏴾 LST)
+    (㞢 􏼃 LST))
 
 
 ;; (名 (􏶊* S . RST)

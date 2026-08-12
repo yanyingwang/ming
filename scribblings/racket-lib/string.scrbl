@@ -140,16 +140,19 @@ str
 str
 ]
 
-@section{􏿴􏵷句 句􏵸􏿴 句化􏿴 􏿴化句}
+@section{􏴼 􏴸 句化􏿴 􏿴化句}
+@eleph-note{@racket[􏴾]}
+@defideogr[􏴼 (㞢 􏵀 句) #f #f #f]
+@defideogr[􏴸 (句 􏴺) #f #f #f]
 @examples[#:eval (the-eval)
-(􏿴􏵷句 '("This" "Is" "String"))
-(􏿴􏵷句 '("This" "Is" "String") "")
-(􏿴􏵷句 '("This" "Is" "String") "-")
+(􏴼 '("This" "Is" "String"))
+(􏴼 '("This" "Is" "String") "")
+(􏴼 '("This" "Is" "String") "-")
 
-(句􏵸􏿴 "This Is String")
-(句􏵸􏿴 "This Is String" "")
-(句􏵸􏿴 "This Is String" " ")
-(句􏵸􏿴 "This-Is-String" "-")
+(􏴸 "This Is String")
+(􏴸 "This Is String" "")
+(􏴸 "This Is String" " ")
+(􏴸 "This-Is-String" "-")
 
 (句化􏿴 "ThisIsString")
 (􏿴化句 '(#\T #\h #\i #\s #\I #\s #\S #\t #\r #\i #\n #\g))

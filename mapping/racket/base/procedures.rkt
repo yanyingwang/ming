@@ -7,7 +7,7 @@
 >>> define 名 ;; define: (名 a "aaa") ;; define-procedure (禾名 a1 (a) (displayln a)) <= (名 a1 (λ (a) (displayln a1)))
 >>> let 令
 >>> let* 令*
->>> apply 用 ;; 应 使 土 士 􏸛 乞 饣 食 𡊤
+>>> apply 㞢 ;; 应 使 土 士 􏸛 乞 饣 食 𡊤 用
 
 >>> procedure? 禾? (禾 ?)
 >>> compose 秝 (禾 禾) ; 秝 秝 􏸛
