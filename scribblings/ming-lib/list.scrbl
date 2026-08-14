@@ -31,6 +31,13 @@ Originates from @secref["pairs-and-lists"].
 @; (弓*/入 '(a 32 c 11 c f) 米?)
 @; ]
 @; }
+@defproc[(𢎨 [LST 􏿴?] [N 􏺡?])
+                       􏿴?]{
+Almost same as @racket[弔] except that it refs an element in the sense of human(from 1 instead of 0).
+@examples[#:eval (the-eval)
+(𢎨 '(a b c d e f g) 1)
+]
+}
 
 @deftogether[(
 @defproc[(伄 [LST 􏿴?] [N 􏺡?] ...)
@@ -47,13 +54,23 @@ Originates from @secref["pairs-and-lists"].
 }
 
 @deftogether[(
+@defproc[(􏴛 [LST 􏿴?] [N2 􏺡?] [N1 􏺡? 0])
+          􏿴?]
 @defproc[(􏾝 [LST 􏿴?] [N1 􏺡?] [N2 􏺡? +inf.0])
           􏿴?]
 @; @defproc[(􏾝* [LST 􏿴?] [N1 􏺡?] [N2 􏺡?])
 @;           􏿴?]
 )]{
-@defideogr[􏾝 (弔 阝) #f #f #f]
+@defideogr[(􏴛 􏾝) (弔 (阝 􏴚)) #f #f #f]
 @examples[#:eval (the-eval)
+(􏴛 '(a b c d e f) 0)
+(􏴛 '(a b c d e f) 0 0)
+(􏴛 '(a b c d e f) 1 0)
+(􏴛 '(a b c d e f) 2 1)
+(􏴛 '(a b c d e f) 2 0)
+(􏴛 '(a b c d e f) 5 0)
+(􏴛 '(a b c d e f) 5 2)
+
 (􏾝 '(a b c d e f) 0)
 (􏾝 '(a b c d e f) 0 0)
 (􏾝 '(a b c d e f) 0 1)

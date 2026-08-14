@@ -273,11 +273,11 @@ For example, @code{(阴+-- lst)} is short for @code{(阴 (阴 (阳 (阴 lst))))}
 Resembles @italic{a rope wraped on stick, thus this rope can be used to count how many circles it is wrapping on stick}. Especially means @italic{the index} of an object in Ming.
 }
 @defideogr[􏹂 (弓 入) #f #f #f]
-@defideogr[弔 "refer a vlaue from index" "第" "refer, rank"]{
-Simplifies from @litchar{第} and resembles @italic{an stick wrapped with a rope in circles, thus it can be used to ref to an specific circle}. Especially means @italic{refer} in Ming.
+@defideogr[(弔 𢎨) "refers a value from an specific index or position" "第" "refer, rank"]{
+Simplifies from @litchar{第}. @zi[𢎨] is different from @zi[弔] in the indexes or positions of starting from 1 for human instead of 0 for computers.
 }
 @eleph-note{
-@racket[伄] @racket[􏾘] @racket[􏾝] @;，@racket[弓*]、@racket[弓*/入]
+@rackets[𢎨 伄 􏾘 􏾝] @;，@racket[弓*]、@racket[弓*/入]
 }
 @examples[#:eval (the-eval)
 (弔 '(a b c d e c f) 2)

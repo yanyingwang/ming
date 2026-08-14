@@ -26,9 +26,9 @@ Note that, if the procedure name has another ideograph prefix it as a word, the 
 @ideoexamples[@zis[伄 攸 𰂋 偏 􏾜 􏾛 偅 𠆯 􏹈]]
 }
 
-@defideogr[(阝) "serial subset" "阝" "hill"]{
-As component of ideographs, it implies The type of output data is same as the input. And the elements of ouput data is a serial of successive elements of the input.
-@ideoexamples[@rackets[􏾝 􏾺 𨚞 􏹋]]
+@defideogr[(阝 􏴚) "serial subset" "阝" "hill"]{
+As component of ideographs, it implies The type of output data is same as the input. And the elements of ouput data is a serial of successive elements of the input. What differs @zi[􏴚] from @zi[阝] is that @zi[􏴚] returns parts from where the procedure specified to the end, while @zi[阝] returns parts from the beginning to where.
+@ideoexamples[@rackets[􏴛 􏾝 􏾺 𨚞 􏹋]]
 }
 
 @defideogr[(􏴺 􏴻) "split" "段" "to break, section, segment"]{
