@@ -35,7 +35,7 @@
                @elem{@bold{@litchar{阝}}}
                "serial subset"
                @elem{The type of output data is same as input, content is a serial part of input.}
-               @elem{@code{阴 阳 􏾝 􏾺 𨚞 䢼 􏹋 邭}}
+               @elem{@code{阴 阳 􏾝 􏾺 􏴌 䢼 􏹋 邭}}
                )
 
                (list
@@ -231,7 +231,7 @@
                @elem{suffix @bold{@litchar{分}}}
                "splits data"
                "Splits input data, and output them in values type."
-               @elem{@racket[􏾺分]、@racket[𨚞分]、@racket[䢼分]、@racket[􏷳分]、@racket[􏹈分]}
+               @elem{@racket[􏾺分]、@racket[􏴌分]、@racket[䢼分]、@racket[􏷳分]、@racket[􏹈分]}
                )
 
                @; (list
@@ -263,7 +263,7 @@
                @elem{include @bold{@litchar{/入}}}
                "Function as input"
                @elem{Means Type of input data is procedure.}
-               @elem{@code{弓/入 𰁣/入 攸/入 􏾺/入 𨚞/入}}
+               @elem{@code{弓/入 𰁣/入 攸/入 􏾺/入 􏴌/入}}
                )
          )
          ]

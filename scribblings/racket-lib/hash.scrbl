@@ -113,7 +113,7 @@ when @zi[^SFX] meets 􏿰 family chars(􏾐, 􏾌 etc.), the input will be @zi[�
 ]
 
 @section{􏿰?, 􏾌? 􏾋? 􏾊? 􏾉?, 􏾎? 􏾏? 􏾈?, 􏻵?}
-@defideogr[(􏿰? 􏾌? 􏾋? 􏾊? 􏾉? 􏾎? 􏾏? 􏾈? 􏻵?) ((􏿰 􏾌 􏾋 􏾊 􏾉 􏾎 􏾏 􏾈 􏻵) ?SFX) #f #f #f] 
+@defideogr[(􏿰? 􏾌? 􏾋? 􏾊? 􏾉? 􏾎? 􏾏? 􏾈? 􏻵?) ((􏿰 􏾌 􏾋 􏾊 􏾉 􏾎 􏾏 􏾈 􏻵) ?SFX) #f #f #f]
 @eleph-note{
 @racket[􏾐?] @racket[􏾑?] @linebreak{}
 @racket[􏽞?] @racket[􏽝?] @racket[􏽜?] @racket[􏽛?] @linebreak{}

@@ -25,8 +25,8 @@ Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scr
          (list (list @bold{Ideograph} @bold{Connotation} @bold{Elucidation} @bold{Example})
                (list
                @elem{@zi[亻] as component}
-               "general subset"
-               @elem{Returns a new list with elements produced from the input list. (Implies the input data and output data are the same type.)}
+               "general derived set"
+               @elem{Returns a new list with elements produced from the original input list. (Implies the input data and output data are the same type.)}
                @elem{@rackets[伄 攸 𰂋 偏 􏾜 􏾛 偅 𠆯 􏹈 􏷍?]}
                )
                @; (list
@@ -39,7 +39,13 @@ Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scr
                @elem{@zi[阝] as component}
                "serial subset"
                @elem{Returns a new list with elements serially produced from the input list.(Implies the input data and output data are the same type.)}
-               @elem{@racket[􏾝] @racket[􏾺] @racket[𨚞] @racket[􏹋]}
+               @elem{@racket[􏴛] @racket[􏾺] @racket[􏴌]}
+               )
+               (list
+               @elem{@zi[􏴗] as component}
+               "the rest part of the serial subset"
+               @elem{Returns a new list with elements serially produced from the input list.(Implies the input data and output data are the same type.)}
+               @elem{@racket[􏾝] @racket[􏹋] @racket[􏳹] @racket[􏳸] @racket[􏺊]}
                )
                @; (list
                @; @elem{@defcomponent[􏸋]}
@@ -51,7 +57,7 @@ Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scr
                @elem{@zi[刂] as component}
                "broken subset"
                @elem{Returns a new list with removing some elements from the input list.}
-               @elem{@racket[􏷵] @racket[􏷴] @racket[􏺊] @racket[􏾘] @racket[𠝤] @racket[􏹊] @racket[􏹇]}
+               @elem{ @racket[􏾘] @racket[𠝤] @racket[􏹊] @racket[􏹇]}
                )
                @; (list
                @; @elem{@defcomponent[􏸌]}
@@ -60,10 +66,10 @@ Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scr
                @; @elem{@racket[左􏸒]}
                @; )
                (list
-               @elem{@zi[分] as component or suffix}
-               "split input list to values"
-               @elem{Implies the type of output data is values(@racket[並]).}
-               @elem{@rackets[􏸄 􏸃 䢼分 􏹈分]})
+               @elem{@zi[􏴺] as component}
+               "sectional sets"
+               @elem{split the input list to sections or rearrange it to many related sets}
+               @elem{@rackets[􏳷 􏳶 􏳳 􏳰]})
                @; (list
                @; @elem{@defcomponent[􏸍]}
                @; "split input lists to values"
@@ -74,7 +80,7 @@ Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scr
                @elem{@zi[入] as component or @zi[入] as suffix}
                "function as input"
                @elem{Implies the type of input data is function.}
-               @elem{@rackets[􏹃 􏹅 􏹌 􏹂 攸/入 􏾺/入 𨚞/入]}
+               @elem{@rackets[􏹃 􏹅 􏹌 􏹂 􏳭 􏴁 􏳾]}
                )
                @; (list
                @; @elem{@defsuffix[0]}
@@ -176,7 +182,6 @@ Has the similar function process as it resembles and the type of output is same 
 
 (阳 '(1 2 3 4))
 (阴 '(1 2 3 4))
-
 ]
 
 @section{阴阳+-}
@@ -237,13 +242,14 @@ For example, @code{(阴+-- lst)} is short for @code{(阴 (阴 (阳 (阴 lst))))}
 
 
 @section{攸}
-@defideogr[(攸 􏾩 𰁦 𢪛) ((亻 扌) 丨 攵) #f #f #f]{
+@defideogr[(攸 􏾩 𰁦 𢪛 􏳭) ((亻 扌) 丨 攵 入) #f #f #f]{
 @litchar{丨} at here implies only change one value, thus the input values are only two: the index and the setting value.
 }
+
 @eleph-note{@racket[𰁦] @racket[􏾩] @racket[𢪛]}
 @examples[#:eval (the-eval)
 (攸 '(10 15 20 25) 1 1555)
-(攸/入 '(10 15 20 25) 1 􏽊)
+(􏳭 '(10 15 20 25) 1 􏽊)
 ]
 
 
@@ -290,11 +296,11 @@ Simplifies from @litchar{第}. @zi[𢎨] is different from @zi[弔] in the index
 ]
 
 @section{􏷜, 􏷛, 􏷚, 􏷙, 􏷘, 􏷗, 􏷖, 􏷕, 􏷔, 􏷓}
-@defideogr[弔RTTz (弔 RTTz) "No." #f #f]{
-Is @zi[弔] rotated -90 degrees, means @italic{No.}, such as No.1 or 2 or 3.... .
+@defideogr[𢎨RTTc (𢎨 RTTc) "No." #f #f]{
+Is @zi[𢎨] rotated -90 degrees, means @italic{No.}, such as No.1 or 2 or 3.... .
 }
-@defideogr[(􏷜 􏷛 􏷚 􏷙 􏷘 􏷗 􏷗 􏷖 􏷕 􏷔 􏷓) (弔RTTz (一 二 三 四 五 六 七 八 九 十)) "No.1 or 2 or 3..." #f #f]
-@eleph-note{@code{(􏷜 '(1 2 3 4 5 6 7 8 9 10))} is same as @code{(弔 '(1 2 3 4 5 6 7 8 9 10) 1)}.}
+@defideogr[(􏷜 􏷛 􏷚 􏷙 􏷘 􏷗 􏷗 􏷖 􏷕 􏷔 􏷓) (𢎨RTTc (一 二 三 四 五 六 七 八 九 十)) "No.1 or 2 or 3..." #f #f]
+@eleph-note{@code{(􏷜 '(1 2 3 4 5 6 7 8 9 10))} is same as @code{(𢎨 '(1 2 3 4 5 6 7 8 9 10) 1)}.}
 @examples[#:eval (the-eval)
 (􏷜 '(1 2 3 4 5 6 7 8 9 10))
 (􏷛 '(1 2 3 4 5 6 7 8 9 10))
@@ -317,40 +323,34 @@ Is @zi[弔] rotated -90 degrees, means @italic{No.}, such as No.1 or 2 or 3.... 
 (巨 '(a b c d e 3 f g))
 ]
 
-@section{􏾺,𨚞, 􏷵,􏷴, 􏸄,􏸃, 􏾺/入,𨚞/入, 􏾺?}
-@defideogr[左 "left, from left" "左" "left"]
-@defideogr[右 "right, from right" "右" "right"]
-@defideogr[分 "split" "分" "split"]{
-Implies the output type is @zi[並].
-}
-@defideogr[(􏾺 𨚞 􏷵 􏷴 􏸃 􏸄) ((左 右) (阝 刂 分)) #f #f #f]
+@section{􏾺,􏴌, 􏳹,􏳸, 􏳳,􏳲, 􏴁,􏳾, 􏳫?}
+@defideogr[𠂇 "left, from left" "左" "left"]
+@defideogr[􏴊 "right, from right" "右" "right"]
+@defideogr[(􏳫? 􏾺 􏴌 􏳹 􏳸 􏴁 􏳾 􏳳 􏳲 􏳰) (􏳬 (𠂇 􏴊) 入 (阝 􏴗 􏳥) ?SFX) #f #f #f]
 @eleph-note{@racket[􏺊]}
 @examples[#:eval (the-eval)
 (􏾺 '(a b c d e f g) 2)
-(𨚞 '(a b c d e f g) 2)
+(􏴌 '(a b c d e f g) 2)
 
-(􏷵 '(a b c d e f g) 2)
-(􏷴 '(a b c d e f g) 2)
+(􏳹 '(a b c d e f g) 2)
+(􏳸 '(a b c d e f g) 2)
 
-(􏸄 '(a b c d e f g) 2)
-(􏸃 '(a b c d e f g) 2)
+(􏳳 '(a b c d e f g) 2)
+(􏳲 '(a b c d e f g) 2)
 
-(􏾺/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 米?)
-(𨚞/入 '(8 4 a b 1 c d 2 e f g 3 5 9) 米?)
+(􏴁 '(8 4 a b 1 c d 2 e f g 3 5 9) 米?)
+(􏳾 '(8 4 a b 1 c d 2 e f g 3 5 9) 米?)
 
-(􏾺? '(a b) '(a b c d e f g))
-(􏾺? '(a b z) '(a b c d e f g))
+(􏳫? '(a b) '(a b c d e f g))
+(􏳫? '(a b z) '(a b c d e f g))
 ]
 
-@section{䢼, 􏷳, 䢼分}
-@defideogr[共 "share" "共" "share, together"]{
-Implies the input data are more than one and they are in the same type.
-}
-@defideogr[(䢼 􏷳) (共 (阝 刂)) #f #f #f]
+@section{􏳨, 􏳧, 􏳦}
+@defideogr[(􏳨 􏳧 􏳦) (􏳬 同 (阝 􏳤 􏳥)) #f #f #f]
 @examples[#:eval (the-eval)
-(䢼 '(a b x y z) '(a b c d e f g))
-(􏷳 '(a b x y z) '(a b c d e f g))
-(䢼分 '(a b x y z) '(a b c d e f g))
+(􏳨 '(a b x y z) '(a b c d e f g))
+(􏳧 '(a b x y z) '(a b c d e f g))
+(􏳦 '(a b x y z) '(a b c d e f g))
 ]
 
 @section{𰂋，偏，􏾜，重、𠝤}
@@ -372,7 +372,6 @@ Implies the input data are more than one and they are in the same type.
 (重 '(a b c d e d c b a))
 (𠝤 '(a b c d e d c b a))
 ]
-
 
 @section{􏾛、𠆯}
 @defideogr[屰 "reverse" "屰" "rotated adult"]
@@ -452,7 +451,7 @@ Do not confuse with @zi[攵].
 ]
 
 
-@section{􏷑􏹈,􏷑􏿝, 􏷑􏺗、􏷑􏺘}
+@section{􏷑􏹈，􏷑􏿝，􏷑􏺗、􏷑􏺘}
 @defideogr[大 "max" "大" "big"]
 @defideogr[小 "min" "小" "small"]
 @defideogr[(􏺗 􏺘) (米 彐 (大 小)) #f #f #f]
@@ -467,12 +466,32 @@ Do not confuse with @zi[攵].
 (􏷑􏺘 阳 '((3 pears) (1 banana) (2 apples)))
 ]
 
-@section+elemref{􏷍/组合、􏷍/排列组合，􏷍/笛卡尔积，􏷍/分组}
+@section{侕、􏳓，􏳖，􏳊}
+@defideogr[(侕 􏳓) (亻 (而 􏳗)) #f #f #f]{
+Since having @zi[亻] and @zis[而 􏳗], as a whole they specify the input is list and output is a list of lists.
+}
+
+@defideogr[(􏳖) (亻 􏳬 X 􏳗) #f #f #f]{
+@litchar{X} stands for the methemathic sign of cartesian product(X).
+@zi[􏳬] specifies the input to be more than one same type values.
+}
+
+@margin-note{Although @zi[而] is same as @zi-tool{而}, but it does not has the same meaning at all in Ming-Lang. @linebreak{}}
+@defideogr[(而 􏳗) (丆 (𦉫 一)) "list to sectional lists of list" #f #f]{
+@zi[􏳗] differs itself with @zi[而] in the place that the output is more ordered or formal, while @zi[而] specifies the output to be more casual.
+}
+
+
+@defideogr[丆 (一 丿) #f #f #f]{
+When it is wrote together with @zi[而] or @zi[􏳗], as a whole they specify one list as input and lists of a new list(@zi[􏴳]) as output.
+}
+
 @examples[#:eval (the-eval)
-(􏷍/组合 '(a b c))
-(􏷍/排列组合 '(a b c))
-(􏷍/笛卡尔积 '(1 2 3) '(a b c))
-(􏷍/分组 米? '(1 a 2 b 3 c))
+(侕 '(a b c))
+(侕 '(a b c) 2)
+(􏳓 '(a b c))
+(􏳖 '(1 2 3) '(a b c) '(x y z))
+(􏳊 米? '(1 a 2 b 3 c))
 ]
 
 

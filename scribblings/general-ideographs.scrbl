@@ -19,27 +19,45 @@
 @; @tech[#:doc "naming-rules"]
 
 
-@defideogr[(亻) "general subset" "亻" "person, people, human"]{
+
+@defideogr[(亻) "general derived set" "亻" "person, people, human"]{
 As component of ideographs, it implies The type of output data is same as the input. And the elements of output data are part of the input.
 In particular, @zi[化] is exceptionally different, which has a more diverse usages scenarios, @zi[化IFX], @zi[化SFX].
 Note that, if the procedure name has another ideograph prefix it as a word, the input and output type is determinated by the prefix ideographs, e.g., @rackets[􏻿𢪛 􏿰攸 􏻿弔 􏿰弔 􏻿巨 􏿰巨].
 @ideoexamples[@zis[伄 攸 𰂋 偏 􏾜 􏾛 偅 𠆯 􏹈]]
 }
 
-@defideogr[(阝 􏴚) "serial subset" "阝" "hill"]{
-As component of ideographs, it implies The type of output data is same as the input. And the elements of ouput data is a serial of successive elements of the input. What differs @zi[􏴚] from @zi[阝] is that @zi[􏴚] returns parts from where the procedure specified to the end, while @zi[阝] returns parts from the beginning to where.
-@ideoexamples[@rackets[􏴛 􏾝 􏾺 𨚞 􏹋]]
+@defideogr[(阝 􏴗) "serial subset" "阝" "hill"]{
+As component of ideographs, it implies The type of output data is same as the input. And the elements of ouput data is a serial of successive elements of the input. What differs @zi[􏴗] from @zi[阝] is that @zi[􏴗] returns parts from where the procedure specified to the end, while @zi[阝] returns parts from the beginning.
+@ideoexamples[@rackets[􏴛 􏾝 􏾺 􏴌 􏺊 􏹋]]
 }
 
-@defideogr[(􏴺 􏴻) "split" "段" "to break, section, segment"]{
-Split or break the element to many sections.
-@ideoexamples[@zis[􏴸]]
+@defideogr[(􏴫 􏴺 􏴻) "sectional" "段" "sections, segments"]{
+Split, break or transfer the input to many sections. @zi[􏴫] is @zi[􏴺] without @zi[一], which means the output is only two, while @zi[􏴺] means any.
+@ideoexamples[@zis[􏴸 􏳷 􏳶 􏳳 􏳲]]
+}
+@defideogr[􏳬 "same type values as input" #f #f]{
+@zi[􏳬] is @zi[􏴺] @zi[RTTc]ed, which specifies the input to be any same type values.
+}
+
+@defideogr[𦉫 "sectional output" #f #f]{
+Is @zi[􏳬] @zi[RTTb]ed, which specifies the output to be any saome type values.
+}
+
+@defideogr[􏳋(亻 􏴫) "general derived 􏴳 as output" #f #f]{
+Since @zi[亻] specifies the input and output to be same type and @zi[􏴫] specifies the output to be sectional, as a whole they specify the input to be list, and output to be a list of lists(@zi[􏴳]).
+@ideoexamples[@rackets[􏳊]]
+}
+
+@defideogr[(􏳥 􏳤) ((􏴺 􏴗) 並) "output is 並" #f #f]{
+Split, break or transfer the elements to many sections in values.(@zi[业] is simplfied writing version of @zi[並] when it is used in the condensed space.)
+@ideoexamples[@zis[􏳳 􏳧]]
 }
 
 @defideogr[(刂) "broken subset" "刂" "knife"]{
 Returns a new list as output with removing some elements from the input list.
 Especially means @italic{unwrap} when it comes to 文 as component in the character, @zi[刘].
-@ideoexamples[@rackets[􏷵 􏷴 􏺊 􏾘 􏹊 􏹇 𠝤]]
+@ideoexamples[@rackets[􏾘 􏹊 􏹇 𠝤]]
 }
 
 @defideogr[(L R B T) #f #f #f]{
@@ -56,9 +74,9 @@ Are Shot for: Prefix, Suffix, Infix. Which imply the position of its prefix as t
 @ideoexamples[@zis[化IFX 化SFX]]
 }
 
-@defideogr[(RTTa RTTb RTTy RTTz) "rotates the prefix" #f #f]{
-Rotates the prefix in 90 or 180 or -90 or -180 degree clockwise.
-@ideoexamples{@zi[弔RTTz]}
+@defideogr[(RTTa RTTb RTTc) "rotates the prefix" #f #f]{
+Rotates the prefix in 90 or 180 or 270 degrees clockwise.
+@ideoexamples{@zi[𢎨RTTc]}
 }
 
 @defideogr[(扌 !) "warning, is changing original data" "手" "hands, handle"]{

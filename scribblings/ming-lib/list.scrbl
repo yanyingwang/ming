@@ -31,9 +31,9 @@ Originates from @secref["pairs-and-lists"].
 @; (弓*/入 '(a 32 c 11 c f) 米?)
 @; ]
 @; }
-@defproc[(𢎨 [LST 􏿴?] [N 􏺡?])
+@defproc[(𢎨 [LST 􏿴?] [N 􏻛?])
                        􏿴?]{
-Almost same as @racket[弔] except that it refs an element in the sense of human(from 1 instead of 0).
+Almost same as @racket[弔] except that it refers an element in the sense of human(from 1 instead of 0).
 @examples[#:eval (the-eval)
 (𢎨 '(a b c d e f g) 1)
 ]
@@ -96,7 +96,7 @@ Almost same as @racket[弔] except that it refs an element in the sense of human
           􏿴?]
 )]{
 @defideogr[(􏾘 􏾘^) (弔 刂 ^SFX) #f #f #f]
-@eleph-note{@racket[􏾺] @racket[𨚞]}
+@eleph-note{@racket[􏾺] @racket[􏴌]}
 @examples[#:eval (the-eval)
 (􏾘 '(a b c d e f g) 1)
 (􏾘^ '(a b c d e f g) '(0 1 3))

@@ -112,8 +112,8 @@
 
 
 
-(名 (􏺊 LIST0 N1 N2) ;𬩵
-    (􏷴 (􏷵 LIST0 N1) N2))
+(名 (􏺊 LIST0 N1 N2)
+    (􏳸 (􏳹 LIST0 N1) N2))
 
 (名 (偅 LST)
     (令 演 ([LST LST] [C 㐅] [R-LST '()])

@@ -21,35 +21,35 @@
 >>> make-list 􏼓 ;; 复 㙏 复􏿴 构造复@racket[􏿴]（数据内各个元素是相同的，类比（昆虫）“复眼”一词取名 􏼓0
 
 >>> list-set 攸  ;; 修 更 改 新 肖 攸 􏿛
->>> list-update 攸/入 ;; 攸
+>>> list-update 􏳭 (攸 入) ;; 攸
 
 >>> index-of 弓  ;; 引 导 笈 扱 𫼛 弔
 >>> index-where 􏹂 ;; 引 导  函 =》以例 􏿊 􏷻 弔 弓/入
 >>> indexes-of 弓* ;; 􏿉 􏿊 伋 􏷺 伄 𠇁 弓v
 >>> indexes-where 􏹂*  ;; 􏿊 伄 引 𠇁 弓v 𰁣/入
 
->>> take 􏾺
->>> take-right 𨚞
+>>> take 􏾺 (𠂇 阝) ;; 􏾺 􏴍 􏴝
+>>> take-right 􏴌 (􏴊 阝);;  𨚞 􏴉
 
->>> drop 􏷵 ;􏾹
->>> drop-right 􏷴 ;􏾸
+>>> drop 􏳹 (𠂇 􏴗);􏾹 􏷵
+>>> drop-right 􏳸 (􏴊 􏴗);􏾸 􏷴
 
->>> takef 􏾺/入
->>> takef-right 𨚞/入
+>>> takef 􏴁 (􏾺 入);;􏾺/入
+>>> takef-right 􏳿 (􏴌 入) ;;𨚞/入
 
->>> dropf 􏷵/入  ;􏾹
->>> dropf-right 􏷴/入  ;􏾸
+>>> dropf 􏴀 (􏳹 入) ;;􏷵/入  ;􏾹
+>>> dropf-right 􏳾 (􏳸 入) ;;􏷴/入  ;􏾸
 
->>> split-at 􏸄
->>> split-at-right 􏸃
+>>> split-at 􏳳 (𠂇 􏳥)
+>>> split-at-right 􏳲 (􏴊 􏳥)
 
->>> splitf-at 􏸄/入
->>> splitf-at-right 􏸃/入
+>>> splitf-at 􏳱 (􏳳 入)
+>>> splitf-at-right 􏳰 (􏳲)
 
->>> list-prefix? 􏾺?
->>> take-common-prefix 䢼  ;;􏾺共项 􏾺共相 共同/􏾺 左䢼
->>> drop-common-prefix 􏷳   ;; ;;􏾺异项 􏾺异相 共异/􏾺 左􏾶分 左􏸑, 左􏸒, 左􏸓
->>> split-common-prefix 䢼分
+>>> list-prefix? 􏳫? (􏳬 􏾺 ?SFX)
+>>> take-common-prefix 􏳨 (􏳬 同 阝) ;;􏾺共项 􏾺共相 共同/􏾺 左䢼
+>>> drop-common-prefix 􏳧 (􏳬 同 􏳤)  ;; ;;􏾺异项 􏾺异相 共异/􏾺 左􏾶分 左􏸑, 左􏸒, 左􏸓
+>>> split-common-prefix 􏳦 (􏳬 同 􏳥)
 
 >>> append* 􏿜  ;; 􏿜 􏾞
 
@@ -69,16 +69,16 @@
 >>> range 􏼏  ;􏿴/数段 𥸬􏿴
 >>> inclusive-range 􏼏* ;𥸬􏿴
 
->>> combinations 􏷍/组合
->>> permutations 􏷍/排列组合
->>> in-combinations 􏷍序列/组合
->>> in-permutations 􏷍序列/排列组合
+>>> combinations 侕
+>>> permutations 􏳓
+>>> in-combinations in侕
+>>> in-permutations in􏳓
 
 >>> argmax 􏷑􏺗 ; @elem{@racket[佫]之@racket[􏺗]}
 >>> argmin 􏷑􏺘 ; @elem{@racket[佫]之@racket[􏺘]}
 
->>> group-by 􏷍/分组
->>> cartesian-product 􏷍/笛卡尔积
+>>> group-by 􏳊
+>>> cartesian-product 􏳖
 
  >>> remf 􏹇~ ;; 删/入 (elem "以例程做对比来消除某一符合条件元素" ) ;消 迭
 ;; >>> remf* 删*/入 (elem "以例程做对比来消除所有符合条件元素" ) ; 消* 迭， 见：fitler-not

@@ -31,7 +31,7 @@ Originates from @secref["vectors" #:doc '(lib "scribblings/reference/reference.s
                )
                (list
                @elem{@bold{@zi[阝]}}
-               @elem{@rackets[􏻿􏾺 􏻿𨚞]}
+               @elem{@rackets[􏻿􏾺 􏻿􏴌]}
                )
                (list
                @elem{@bold{@zi[刂]}}

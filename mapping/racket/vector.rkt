@@ -7,7 +7,7 @@
 >>> vector-map! 􏻿􏷉 (􏻿PFX 􏷉)
 >>> vector-append 􏻹 ;; 土􏻿 土􏿴 贯􏻿
 >>> vector-take 􏻿􏾺 (􏻿PFX 􏾺)
->>> vector-take-right 􏻿𨚞 (􏻿PFX 𨚞)
+>>> vector-take-right 􏻿􏴌 (􏻿PFX 􏴌)
 >>> vector-drop 􏻿􏷵 (􏻿PFX 􏷵)
 >>> vector-drop-right 􏻿􏷴 (􏻿PFX 􏷴)
 >>> vector-split-at 􏻿􏸄 (􏻿PFX 􏸄)
