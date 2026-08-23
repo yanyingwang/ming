@@ -28,7 +28,9 @@ Note that, if the procedure name has another ideograph prefix it as a word, the 
 }
 
 @defideogr[(阝 􏴗) "serial subset" "阝" "hill"]{
-As component of ideographs, it implies The type of output data is same as the input. And the elements of ouput data is a serial of successive elements of the input. What differs @zi[􏴗] from @zi[阝] is that @zi[􏴗] returns parts from where the procedure specified to the end, while @zi[阝] returns parts from the beginning.
+As component of ideographs, it implies The type of output data is same as the input. And the elements of ouput data is a serial of successive elements of the input.
+
+What differs @zi[􏴗] from @zi[阝] is that @zi[􏴗] returns parts from the element where the procedure specified to the end, while @zi[阝] returns parts from the beginning.
 @ideoexamples[@rackets[􏴛 􏾝 􏾺 􏴌 􏺊 􏹋]]
 }
 
@@ -44,7 +46,7 @@ Split, break or transfer the input to many sections. @zi[􏴫] is @zi[􏴺] with
 Is @zi[􏳬] @zi[RTTb]ed, which specifies the output to be any saome type values.
 }
 
-@defideogr[􏳋(亻 􏴫) "general derived 􏴳 as output" #f #f]{
+@defideogr[􏳋 (亻 􏴫) "general derived 􏴳 as output" #f #f]{
 Since @zi[亻] specifies the input and output to be same type and @zi[􏴫] specifies the output to be sectional, as a whole they specify the input to be list, and output to be a list of lists(@zi[􏴳]).
 @ideoexamples[@rackets[􏳊]]
 }

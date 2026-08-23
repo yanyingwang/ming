@@ -61,9 +61,14 @@ Almost same as @racket[弔] except that it refers an element in the sense of hum
 @; @defproc[(􏾝* [LST 􏿴?] [N1 􏺡?] [N2 􏺡?])
 @;           􏿴?]
 )]{
-@defideogr[(􏴛 􏾝) (弔 (阝 􏴚)) #f #f #f]
+Returns elements from where of index N1(include) to N2(exclude).
+@defideogr[(􏴛 􏾝) (弔 (阝 􏴗)) #f #f #f]
+@eleph-note{@rackets[􏴛 􏾝] are almost the same as @rackets[􏾺 􏾺], except that there is a second argument can be used to delimit the begining or ending.}
 @examples[#:eval (the-eval)
 (􏴛 '(a b c d e f) 0)
+(􏴛 '(a b c d e f) 1)
+(􏴛 '(a b c d e f) 2)
+(􏴛 '(a b c d e f) 3)
 (􏴛 '(a b c d e f) 0 0)
 (􏴛 '(a b c d e f) 1 0)
 (􏴛 '(a b c d e f) 2 1)
@@ -72,6 +77,9 @@ Almost same as @racket[弔] except that it refers an element in the sense of hum
 (􏴛 '(a b c d e f) 5 2)
 
 (􏾝 '(a b c d e f) 0)
+(􏾝 '(a b c d e f) 1)
+(􏾝 '(a b c d e f) 2)
+(􏾝 '(a b c d e f) 3)
 (􏾝 '(a b c d e f) 0 0)
 (􏾝 '(a b c d e f) 0 1)
 (􏾝 '(a b c d e f) 1 2)
@@ -96,7 +104,7 @@ Almost same as @racket[弔] except that it refers an element in the sense of hum
           􏿴?]
 )]{
 @defideogr[(􏾘 􏾘^) (弔 刂 ^SFX) #f #f #f]
-@eleph-note{@racket[􏾺] @racket[􏴌]}
+
 @examples[#:eval (the-eval)
 (􏾘 '(a b c d e f g) 1)
 (􏾘^ '(a b c d e f g) '(0 1 3))

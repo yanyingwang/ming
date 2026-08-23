@@ -137,7 +137,7 @@ Is reaching from Left through Bottom to right, we write it in this way to stand 
 }
 @defideogr[㐅 "null" #f #f]{
 Is same as @zi[穴], because @racket[㐅] is same as @racket[穴].
-@ideoexamples[@rackets[㐅? 􏿴]]
+@ideoexamples[@rackets[㐅 􏿴]]
 }
 
 @section[#:tag "pair-car-cdr-list-list*"]{双, 㐅, 􏿴, 􏿫, 阴, 阳}
@@ -146,7 +146,7 @@ Abstractly, we can pair two data together. Integrally, it is called @zi[双]. Se
 Further more, if we put another @racket[双] to @racket[阴] position of the former @racket[双], we get a linked data. Likewise, the linked data can be extended as long as you want. By this way, if we leave @racket[阴] of the ending @racket[双] to be null(@racket[㐅]), we get a data called @racket[􏿴]; if not, we call it @racket[􏿫].
 
 @defideogr[双 (又 又) "cons a pair data type" "双" "pair"]{
-Two human hand here stand for a data type with spaces of holding two holding data. (@zi[双] is a special minor data type of @zi[􏿴])
+Two human hand here stand for a data type with spaces of holding two data.
 }
 
 @defideogr[􏿴 (又LB 㐅) "list, introduce a list data type" #f #f]{
@@ -245,7 +245,7 @@ For example, @code{(阴+-- lst)} is short for @code{(阴 (阴 (阳 (阴 lst))))}
 @defideogr[(攸 􏾩 𰁦 𢪛 􏳭) ((亻 扌) 丨 攵 入) #f #f #f]{
 @litchar{丨} at here implies only change one value, thus the input values are only two: the index and the setting value.
 }
-
+@defideogr[丨 "the input is only one argument" #f #f]
 @eleph-note{@racket[𰁦] @racket[􏾩] @racket[𢪛]}
 @examples[#:eval (the-eval)
 (攸 '(10 15 20 25) 1 1555)
@@ -282,9 +282,7 @@ Resembles @italic{a rope wraped on stick, thus this rope can be used to count ho
 @defideogr[(弔 𢎨) "refers a value from an specific index or position" "第" "refer, rank"]{
 Simplifies from @litchar{第}. @zi[𢎨] is different from @zi[弔] in the indexes or positions of starting from 1 for human instead of 0 for computers.
 }
-@eleph-note{
-@rackets[𢎨 伄 􏾘 􏾝] @;，@racket[弓*]、@racket[弓*/入]
-}
+@eleph-note{@rackets[𢎨 伄 􏾘 􏾝]}
 @examples[#:eval (the-eval)
 (弔 '(a b c d e c f) 2)
 
@@ -327,7 +325,7 @@ Is @zi[𢎨] rotated -90 degrees, means @italic{No.}, such as No.1 or 2 or 3....
 @defideogr[𠂇 "left, from left" "左" "left"]
 @defideogr[􏴊 "right, from right" "右" "right"]
 @defideogr[(􏳫? 􏾺 􏴌 􏳹 􏳸 􏴁 􏳾 􏳳 􏳲 􏳰) (􏳬 (𠂇 􏴊) 入 (阝 􏴗 􏳥) ?SFX) #f #f #f]
-@eleph-note{@racket[􏺊]}
+@eleph-note{@rackets[􏴛 􏾝 􏺊]}
 @examples[#:eval (the-eval)
 (􏾺 '(a b c d e f g) 2)
 (􏴌 '(a b c d e f g) 2)
@@ -476,15 +474,16 @@ Since having @zi[亻] and @zis[而 􏳗], as a whole they specify the input is l
 @zi[􏳬] specifies the input to be more than one same type values.
 }
 
-@margin-note{Although @zi[而] is same as @zi-tool{而}, but it does not has the same meaning at all in Ming-Lang. @linebreak{}}
+@margin-note{Although @zi[而] is same as cn char @zi-tool{而}, but it does not has the same meaning at all.}
 @defideogr[(而 􏳗) (丆 (𦉫 一)) "list to sectional lists of list" #f #f]{
 @zi[􏳗] differs itself with @zi[而] in the place that the output is more ordered or formal, while @zi[而] specifies the output to be more casual.
 }
 
-
 @defideogr[丆 (一 丿) #f #f #f]{
 When it is wrote together with @zi[而] or @zi[􏳗], as a whole they specify one list as input and lists of a new list(@zi[􏴳]) as output.
 }
+
+@defideogr[􏳊 (􏳋 􏹌) #f #f #f]
 
 @examples[#:eval (the-eval)
 (侕 '(a b c))
