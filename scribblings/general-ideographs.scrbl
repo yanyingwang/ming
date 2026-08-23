@@ -39,11 +39,11 @@ Split, break or transfer the input to many sections. @zi[􏴫] is @zi[􏴺] with
 @ideoexamples[@zis[􏴸 􏳷 􏳶 􏳳 􏳲]]
 }
 @defideogr[􏳬 "same type values as input" #f #f]{
-@zi[􏳬] is @zi[􏴺] @zi[RTTc]ed, which specifies the input to be any same type values.
+@zi[􏳬] is @zi[􏴺] @zi[RTT3]ed, which specifies the input to be any same type values.
 }
 
 @defideogr[𦉫 "sectional output" #f #f]{
-Is @zi[􏳬] @zi[RTTb]ed, which specifies the output to be any saome type values.
+Is @zi[􏳬] @zi[RTT2]ed, which specifies the output to be any saome type values.
 }
 
 @defideogr[􏳋 (亻 􏴫) "general derived 􏴳 as output" #f #f]{
@@ -76,9 +76,9 @@ Are Shot for: Prefix, Suffix, Infix. Which imply the position of its prefix as t
 @ideoexamples[@zis[化IFX 化SFX]]
 }
 
-@defideogr[(RTTa RTTb RTTc) "rotates the prefix" #f #f]{
+@defideogr[(RTT1 RTT2 RTT3) "rotates the prefix" #f #f]{
 Rotates the prefix in 90 or 180 or 270 degrees clockwise.
-@ideoexamples{@zi[𢎨RTTc]}
+@ideoexamples{@zi[𢎨RTT3]}
 }
 
 @defideogr[(扌 !) "warning, is changing original data" "手" "hands, handle"]{

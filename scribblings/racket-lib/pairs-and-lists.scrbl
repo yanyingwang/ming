@@ -294,10 +294,10 @@ Simplifies from @litchar{第}. @zi[𢎨] is different from @zi[弔] in the index
 ]
 
 @section{􏷜, 􏷛, 􏷚, 􏷙, 􏷘, 􏷗, 􏷖, 􏷕, 􏷔, 􏷓}
-@defideogr[𢎨RTTc (𢎨 RTTc) "No." #f #f]{
+@defideogr[𢎨RTT3 (𢎨 RTT3) "No." #f #f]{
 Is @zi[𢎨] rotated -90 degrees, means @italic{No.}, such as No.1 or 2 or 3.... .
 }
-@defideogr[(􏷜 􏷛 􏷚 􏷙 􏷘 􏷗 􏷗 􏷖 􏷕 􏷔 􏷓) (𢎨RTTc (一 二 三 四 五 六 七 八 九 十)) "No.1 or 2 or 3..." #f #f]
+@defideogr[(􏷜 􏷛 􏷚 􏷙 􏷘 􏷗 􏷗 􏷖 􏷕 􏷔 􏷓) (𢎨RTT3 (一 二 三 四 五 六 七 八 九 十)) "No.1 or 2 or 3..." #f #f]
 @eleph-note{@code{(􏷜 '(1 2 3 4 5 6 7 8 9 10))} is same as @code{(𢎨 '(1 2 3 4 5 6 7 8 9 10) 1)}.}
 @examples[#:eval (the-eval)
 (􏷜 '(1 2 3 4 5 6 7 8 9 10))
