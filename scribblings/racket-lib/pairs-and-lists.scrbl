@@ -280,7 +280,9 @@ Resembles @italic{a rope wraped on stick, thus this rope can be used to count ho
 }
 @defideogr[􏹂 (弓 入) #f #f #f]
 @defideogr[(弔 𢎨) "refers a value from an specific index or position" "第" "refer, rank"]{
-Simplifies from @litchar{第}. @zi[𢎨] is different from @zi[弔] in the indexes or positions of starting from 1 for human instead of 0 for computers.
+Simplifies from @litchar{第}.
+
+@zi[𢎨] is different from @zi[弔] at where the indexes or positions starting from 1 for human instead of 0 for computers.
 }
 @eleph-note{@rackets[𢎨 伄 􏾘 􏾝]}
 @examples[#:eval (the-eval)
@@ -295,10 +297,10 @@ Simplifies from @litchar{第}. @zi[𢎨] is different from @zi[弔] in the index
 
 @section{􏷜, 􏷛, 􏷚, 􏷙, 􏷘, 􏷗, 􏷖, 􏷕, 􏷔, 􏷓}
 @defideogr[𢎨RTT3 (𢎨 RTT3) "No." #f #f]{
-Is @zi[𢎨] rotated -90 degrees, means @italic{No.}, such as No.1 or 2 or 3.... .
+Is @zi[𢎨] rotated 270 degrees, means @italic{No.}, e.g., No.1 or 2 or 3....
 }
-@defideogr[(􏷜 􏷛 􏷚 􏷙 􏷘 􏷗 􏷗 􏷖 􏷕 􏷔 􏷓) (𢎨RTT3 (一 二 三 四 五 六 七 八 九 十)) "No.1 or 2 or 3..." #f #f]
-@eleph-note{@code{(􏷜 '(1 2 3 4 5 6 7 8 9 10))} is same as @code{(𢎨 '(1 2 3 4 5 6 7 8 9 10) 1)}.}
+@defideogr[(􏷜 􏷛 􏷚 􏷙 􏷘 􏷗 􏷗 􏷖 􏷕 􏷔 􏷓) (𢎨RTT3 (一 二 三 四 五 六 七 八 九 十)) "No.1 2 3 ..." #f #f]
+@eleph-note{@code{(􏷜 '(1 2 3 4 5 6 7 8 9 10))} is same as @code{(𢎨 '(1 2 3 4 5 6 7 8 9 10) 1)} and @code{(弔 '(1 2 3 4 5 6 7 8 9 10) 0)}.}
 @examples[#:eval (the-eval)
 (􏷜 '(1 2 3 4 5 6 7 8 9 10))
 (􏷛 '(1 2 3 4 5 6 7 8 9 10))
