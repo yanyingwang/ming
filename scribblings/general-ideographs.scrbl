@@ -21,17 +21,22 @@
 
 
 @defideogr[(亻) "general derived set" "亻" "person, people, human"]{
-As component of ideographs, it implies The type of output data is same as the input. And the elements of output data are part of the input.
+As component of ideographs, it specifies The type of output data is same as the input. And the elements of output data are part of the input.
+
 In particular, @zi[化] is exceptionally different, which has a more diverse usages scenarios, @zi[化IFX], @zi[化SFX].
-Note that, if the procedure name has another ideograph prefix it as a word, the input and output type is determinated by the prefix ideographs, e.g., @rackets[􏻿𢪛 􏿰攸 􏻿弔 􏿰弔 􏻿巨 􏿰巨].
+
+Note that, if the procedure name has another ideograph prefixed as a word, the input and output type is determinated by the prefixed ideographs, e.g., @rackets[􏻿𢪛 􏿰攸 􏻿弔 􏿰弔 􏻿巨 􏿰巨].
 @ideoexamples[@zis[伄 攸 𰂋 偏 􏾜 􏾛 偅 𠆯 􏹈]]
 }
 
-@defideogr[(阝 􏴗) "serial subset" "阝" "hill"]{
-As component of ideographs, it implies The type of output data is same as the input. And the elements of ouput data is a serial of successive elements of the input.
+@defideogr[阝 "serial subset" "阝" "hill"]{
+As component of ideographs, it specifies The type of output data is same as the input. And the elements of ouput data is a serial of successive elements of the input.
+@ideoexamples[@rackets[􏴛 􏾺 􏴌]]
+}
 
+@defideogr[􏴗 (阝 丶) "the rest part of the serial subset" #f]{
 What differs @zi[􏴗] from @zi[阝] is that @zi[􏴗] returns parts from the element where the procedure specified to the end, while @zi[阝] returns parts from the beginning.
-@ideoexamples[@rackets[􏴛 􏾝 􏾺 􏴌 􏺊 􏹋]]
+@ideoexamples[@rackets[􏾝 􏺊 􏹋]]
 }
 
 @defideogr[(􏴫 􏴺 􏴻) "sectional" "段" "sections, segments"]{

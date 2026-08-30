@@ -17,6 +17,12 @@
 @title[#:tag "rationale"]{Rationale}
 ref to: @url{http://www.yanying.wang/SOICOL}
 
+@section{Introduction}
+Ming is a programming language that explores how the compositional principles of Chinese ideographs can serve as a semantic system for programming. In Ming, an ideograph is not merely an arbitrary symbol assigned to an operation; its components may constitute naming rules that encode structural properties and constraints of the operation, such as the relationships between its inputs and outputs, the organization of data, and the transformations it performs. These rules can be composed to form more specific ideographs, allowing semantic information to be progressively incorporated into names rather than being expressed entirely through separate type declarations or annotations.
+
+Ming therefore treats naming as a form of semantic expression. A name can carry information about an operation's structure and constraints while remaining part of the same compositional notation. The distinction between explicit and implicit constraints is also fundamental: some properties are directly represented by the structure of an ideograph, while others are implied by the relationships established by its components and context. In this sense, Ming does not simply adopt Chinese characters as a surface syntax; it investigates whether the underlying principles by which ideographs are constructed can provide a coherent foundation for the design of a programming language.
+
+
 @section{Lisp and its parenthesis}
 Lisp, as an ancient programming language, when I was learning it with inherent ideas from modern programming languages such as Ruby, I noticed there are a few distinctions. Among these, The most prominent one is the form.
 

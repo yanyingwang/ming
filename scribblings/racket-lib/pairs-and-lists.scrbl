@@ -16,7 +16,7 @@
 @title[#:tag "pairs-and-lists"]{双 and 􏿴}
 Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scrbl")] and extends to @secref["ming-list"].
 
-@section[#:tag "nameing-rules-of-pair-list"]{Naming Rules}
+@section[#:tag "naming-rules-of-pair-list"]{Naming Rules}
 @; Extended from @secref["naming-rules"], specifically there are：
 @tabular[@;#:sep @hspace[0]
          #:style 'boxed
@@ -131,7 +131,7 @@ Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scr
 Resembles @italic{human's hand that is holding an object}.
 @ideoexamples[@rackets[双 􏿫]]
 }
-@defideogr[又LB (又 LB) "links pairs, linked pairs" #f #f]{
+@defideogr[又LB (又 LB) "link pairs, linked pairs" #f #f]{
 Is reaching from Left through Bottom to right, we write it in this way to stand multiple @racket[双] linked together.
 @ideoexamples[@rackets[􏿴 􏿫]]
 }
@@ -150,6 +150,8 @@ Two human hand here stand for a data type with spaces of holding two data.
 }
 
 @defideogr[􏿴 (又LB 㐅) "list, introduce a list data type" #f #f]{
+linked pairs ending in null.
+
 The reaching from Left through Bottom to right @zi[又] stands for @italic{multiple @racket[双] linked head to tail}; @litchar{㐅} means ending with empty(@zi[㐅]).
 }
 
@@ -279,11 +281,15 @@ For example, @code{(阴+-- lst)} is short for @code{(阴 (阴 (阳 (阴 lst))))}
 Resembles @italic{a rope wraped on stick, thus this rope can be used to count how many circles it is wrapping on stick}. Especially means @italic{the index} of an object in Ming.
 }
 @defideogr[􏹂 (弓 入) #f #f #f]
-@defideogr[(弔 𢎨) "refers a value from an specific index or position" "第" "refer, rank"]{
-Simplifies from @litchar{第}.
+@defideogr[弔 "refers a value from an specific index or position" "第" "refer, rank"]{
+Indexed element, is simplified from @litchar{第}.
+}
+@defideogr[𢎨 (弔 丿) "refers a value from an specific index or position" "第" "refer, rank"]{
+Human-oriented indexed element, is human-oriented interpretation of @zi[弔].
 
 @zi[𢎨] is different from @zi[弔] at where the indexes or positions starting from 1 for human instead of 0 for computers.
 }
+
 @eleph-note{@rackets[𢎨 伄 􏾘 􏾝]}
 @examples[#:eval (the-eval)
 (弔 '(a b c d e c f) 2)
