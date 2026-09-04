@@ -19,6 +19,7 @@ Ming is a programming language inspired by the semantic and compositional nature
 @(table-of-contents)
 
 @include-section["rationale.scrbl"]
+@include-section["concepts.scrbl"]
 @include-section["startup.scrbl"]
 @; @include-section["naming-rules.scrbl"]
 @include-section["general-ideographs.scrbl"]

@@ -17,6 +17,7 @@
          zi zis zi-ref zi-tool
          ziexamples rackets
          short-for-code short-for-racket
+         mtem
          )
 (require scribble/manual racket/string scribble/core
          scribble/html-properties
@@ -24,6 +25,8 @@
                      scribble/core
                      "private/zitable.rkt"))
 
+(define (mtem term . explanation)
+  (item (bold (deftech term)) ": "  explanation))
 
 (define-syntax-rule (defhzify cnid rsn enid)
   (defthing #:kind "transformer" cnid (unsyntax (racketidfont rsn)) #:value enid)
