@@ -1,0 +1,34 @@
+/* .wq-ext-font { */
+/*     font-family: 'WenQuanYiMicroHeiExtend'; */
+/* } */
+
+/* body { */
+/* font-family: WenQuanYiMicroHeiExtend !important; */
+/* } */
+
+.maincolumn, .refpara, .refelem, .tocset, .stt, .hspace, .refparaleft, .refelemleft {
+    font-family: 'Fira-Mono', monospace, cangjie !important;
+}
+
+.RktIn, .RktRdr, .RktPn, .RktMeta,
+.RktMod, .RktKw, .RktVar, .RktSym,
+.RktRes, .RktOut, .RktCmt, .RktVal,
+.RktBlk, .RktErr {
+    font-family: 'Fira-Mono', monospace, cangjie !important;
+}
+
+.main, .refcontent, .tocview, .tocsub, .sroman, i {
+    font-family: 'Charter-Racket', serif, cangjie !important;
+}
+
+h1, h2, h3, h4, h5, h6, h7, h8 {
+    font-family: 'Fira', sans-serif, cangjie !important;
+}
+
+.tocset td {
+    font-family: 'Fira', sans-serif, cangjie !important;
+}
+
+.tocsubtitle {
+        font-family: 'Fira', sans-serif, cangjie !important;
+}
