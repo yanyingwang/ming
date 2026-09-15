@@ -25,6 +25,6 @@ Ming is a programming language inspired by the semantic and compositional nature
 @include-section["general-ideographs.scrbl"]
 @include-section["ming-lib.scrbl"]
 @include-section["racket-lib.scrbl"]
-@include-section["appendix.scrbl"]
+@; @include-section["appendix.scrbl"]
 
 @index-section[]

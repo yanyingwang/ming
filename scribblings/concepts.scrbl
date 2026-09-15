@@ -68,7 +68,7 @@ This principle underlies the terminology and naming rules described throughout t
 
 @section{Terminology}
 
-@subsection{ideograph}
+@subsection{Ideograph}
 @deftech{Ideograph} is a character used in Ming as an semantic or structural unit of programming-language notation.
 @verbatim{
 Ideograph
@@ -120,8 +120,8 @@ Ideograph
 }
 
 
-@subsection{semantic ideograph}
-@deftech{Semantic} is an ideograph that represents a programming concept or semantic operation.
+@subsection{Semantic Ideograph}
+@deftech{Semantic Ideograph} is an ideograph that represents a programming concept or semantic operation.
 @tabular[#:style 'boxed
 #:column-properties '(left left)
 #:row-properties '(bottom-border ())
@@ -139,8 +139,8 @@ Ideograph
 (list @zi[句] "string")
 )]
 
-@subsection{naming rule}
-@deftech{Naming Rule} is a rule represented by an ideograph that @emph{explicitly constrains} or determines the input, output, or structural relationship of a procedure according to its position or composition within a procedure name, e.g. @zis[亻 阝].
+@subsection{Naming Rule}
+@deftech{Naming Rule} is a rule represented by an ideograph that @bold{explicitly constrains} or determines the input, output, or structural relationship of a procedure according to its position or composition within a procedure name, e.g. @zis[亻 阝].
 @verbatim{
 @zi[亻]
 Role:
@@ -159,17 +159,17 @@ For example, @zi[伄] = @zi[亻] + @zi[弔]. Among them:
 弔 → semantic concept
 }
 
-@subsection{type prefix}
+@subsection{Type Prefix}
 @deftech{Type Prefix} is an ideograph placed before a procedure name as a word-level prefix to determine or override the data type referred to by a naming rule.
 
 e.g. where @zi[􏿴](list) is put first in @racket[􏿴伄], and @zi[􏿲](vector) in @racket[􏿲伄], are both type prefix.(Since @zi[伄] specifies @tt{T → T}, @zi[􏿴] and @zi[􏿲] as the type prefixes here have made the @tt{T} be @tt{list} and @tt{vector}.)
 
-@subsection{default type context}
+@subsection{Default Type Context}
 @deftech{Default Type Context} is ahe implicit data type supplied when a naming rule is used without an explicit type prefix.
 
 e.g. since @zi[亻]'s default type is @zi[􏿴](list), @litchar{伄} can be seen as the abbreviated form of @litchar{􏿴伄}.
-@subsection{semantic Rule implication}
-@deftech{Semantic} is a type, structural, or behavioral property that can be inferred from the semantic meaning of an ideograph, rather than being explicitly declared as a naming rule.
+@subsection{Semantic Implication}
+@deftech{Semantic Implication} is a type, structural, or behavioral property that can be inferred from the semantic meaning of an ideograph, rather than being explicitly declared as a naming rule.
 
 e.g. @zi[弔] only means @emph{indexed reference}, but when it is used as procedure @racket[弔], we have:
 @verbatim{
@@ -185,10 +185,10 @@ those input and output types are derived from its semantic concept. The way how 
 弔 → semantic implication
 }
 
-@subsection{component}
+@subsection{Component}
 @deftech{Component} is an ideograph or morphological unit used to construct another ideograph. e.g. Since @tt{伄 = 亻 + 弔}, both @zi[亻] and @zi[弔] are components of @zi[伄].
 
-@subsection{composition ideograph}
+@subsection{Composition Ideograph}
 @deftech{Composition Ideograph} is an ideograph whose semantic or structural meaning is derived by composing two or more ideographic components. e.g. @zis[伄 􏿴 􏿝 􏳋 􏳥]
 @verbatim{
 @tech{component}₁ + @tech{component}₂ + ... + @tech{component}ₙ
@@ -202,8 +202,8 @@ Composition Ideograph
 􏴺 + 並 → 􏳥
 }
 
-@subsection{structural modifier}
-@deftech{Structural Modifier} is ahe way where and how an idegraph as a component exits in another @tech{Composition Ideograph}. e.g. @zis[L R B T LB PFX SFX IFX RTT1 RTT2]
+@subsection{Structural Modifier}
+@deftech{Structural Modifier} is the way where and how an idegraph as a component exits in another @tech{Composition Ideograph}. e.g. @zis[L R B T LB PFX SFX IFX RTT1 RTT2]
 @verbatim{
 又
 │
@@ -219,7 +219,7 @@ structural
 㐅         又
 }
 
-@subsection{semantic modifier}
+@subsection{Semantic Modifier}
 @deftech{Semantic Modifier} is an ideographic component that modifies the semantic scope, extent, cardinality, or operational interpretation of another ideograph while preserving a significant part of its original semantic identity. e.g. @zis[丶 丿].
 @tt{@zi[阝] → @zi[􏴗]}, where @zi[丶] acts as a semantic modifier of @zi[阝].
 @verbatim{
@@ -248,8 +248,8 @@ human Rule-oriented indexed reference
 }
 
 @tt{@zi[𰁦] → @zi[攸]}, where @zi[丨] acts as a semantic modifier(more specificity called @tech{cardinality restriction}) of @zi[𰁦].
-@subsection{semantic Rule derivation}
-@deftech{Semantic} is ahe derivation of an ideograph from another ideograph by applying one or more semantic modifiers, resulting in a new ideograph whose meaning remains systematically related to the source ideograph. e.g.
+@subsection{Semantic Derivation}
+@deftech{Semantic Derivation} is the derivation of an ideograph from another ideograph by applying one or more semantic modifiers, resulting in a new ideograph whose meaning remains systematically related to the source ideograph. e.g.
 @verbatim{
 阝 ──丶──→ 􏴗
 弔 ──丿──→ 𢎨
@@ -275,30 +275,30 @@ semantic derivation
 𢎨
 }
 
-@subsection{position operator}
+@subsection{Position Operator}
 @deftech{Position Operator}: e.g. @zis[L R B T]
 
-@subsection{extent operator}
+@subsection{Extent Operator}
 @deftech{Extent Operator}: e.g. @zis[LB BR BL]
 
-@subsection{word-position operator}
+@subsection{Word-position Operator}
 @deftech{Word-position Operator}: e.g. @zis[PFX SFX IFX]
 
-@subsection{rotation operator}
+@subsection{Rotation Operator}
 @deftech{Rotation Operator}: e.g. @zis[  RTT1 RTT2 RTT3]
 
-@subsection{general type}
+@subsection{General Type}
 @deftech{General Type} is all the traditional types of what we call in Racket. e.g. @zis[􏿴 句 􏿰 勺]
 
-@subsection{minor type}
+@subsection{Minor Type}
 @deftech{Minor Type} is a refined data-structure type distinguished by structural properties, element types, termination forms, nesting, cardinality, or other semantic invariants beyond a general data type. e.g. @zis[􏿫 􏿳 􏴳 􏴷] are all @tech{minor type}s of general type of @zi[􏿴].
 
-@subsection{minor-type ideograph}
+@subsection{Minor-type Ideograph}
 @deftech{Minor-type Ideograph} is a refined data-structure type distinguished by structural properties, element types, termination forms, nesting, cardinality, or other semantic invariants beyond a general data type.
 
 e.g. @zis[􏿴 􏿫 􏿳 􏴳 􏴷].
 
-@subsection{cardinality}
+@subsection{Cardinality}
 @deftech{Cardinality} is the number or multiplicity of data units represented or produced by an ideograph. e.g.
 @verbatim{
 二 → exactly 2
@@ -314,10 +314,10 @@ cardinality:
 2
 }
 
-@subsection{cardinality restriction}
+@subsection{Cardinality Restriction}
 @deftech{Cardinality Restriction} is one kind of @tech{Semantic Modifier} and specifically changes the base ideograph to constrains itts semantic parameterization. e.g. @zi[丨] in @zi[攸].
 
-@subsection{output representation}
+@subsection{Output Representation}
 @deftech{Output Representation} is the form in which multiple output data are represented or returned. e.g.
 @verbatim{
 @zi[􏳥L]:
