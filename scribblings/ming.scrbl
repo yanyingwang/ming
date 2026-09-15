@@ -9,7 +9,7 @@
 @author[(author+email (hyperlink "https://yanying.wang" "Yanying Wang") "yanyingwang1@gmail.com")]
 
 @defmodule[ming #:lang]
-Ming — a programming language where ideographic composition becomes semantic composition.
+Ming —- a programming language where ideographic composition becomes semantic composition.
 @hspace[1]
 @smaller{@hyperlink["https://www.yanying.wang/ming-doc-zh-cn/" "(中文版)"]}
 

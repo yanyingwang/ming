@@ -53,7 +53,7 @@ For example, 亻 + 弔 → 伄 does not merely assign a new Chinese character to
 
 Likewise, 又LB + 㐅 → 􏿴 expresses a structural construction of a list, while 􏿴 + 句 → 􏴷 can further specify the element type as strings. The resulting concepts form a derivational network rather than a flat collection of names.
 
-@section{Ming as an Ideographic Morphological System}
+@section{Ideographic Morphological System}
 This perspective explains an important characteristic of Ming: its ideographs are not a collection of isolated glyphs created one by one. They belong to a recursive and extensible morphological system.
 
 Once a semantic unit, modifier, structural relation, or naming rule has been established, it can participate in further formations. Consequently, the vocabulary of Ming can grow by deriving new concepts from existing ones while preserving explicit semantic relationships between them.
@@ -67,8 +67,9 @@ The purpose is not simply to make programming syntax look Chinese. It is to make
 This principle underlies the terminology and naming rules described throughout the Ming language.
 
 @section{Terminology}
-@itemlist[
-@mtem["ideograph"]{A character used in Ming as an semantic or structural unit of programming-language notation.
+
+@subsection{ideograph}
+@deftech{Ideograph} is a character used in Ming as an semantic or structural unit of programming-language notation.
 @verbatim{
 Ideograph
 │
@@ -110,19 +111,20 @@ Ideograph
 
 
 Ideograph
-   │
-   ├── structurally-modified-by → Structural Modifier
-   │
-   ├── semantically-modified-by → Semantic Modifier
-   │
-   └── composed-with → Ideograph
+│
+├── structurally-modified-by → Structural Modifier
+│
+├── semantically-modified-by → Semantic Modifier
+│
+└── composed-with → Ideograph
 }
-}
-@mtem["semantic ideograph"]{
-An ideograph that represents a programming concept or semantic operation.
+
+
+@subsection{semantic ideograph}
+@deftech{Semantic} is an ideograph that represents a programming concept or semantic operation.
 @tabular[#:style 'boxed
-         #:column-properties '(left left)
-         #:row-properties '(bottom-border ())
+#:column-properties '(left left)
+#:row-properties '(bottom-border ())
 (list
 (list @bold{Semantic Ideograph in Ming} @bold{Corresponding English concept in Racket})
 (list @zi[弓] "index")
@@ -136,44 +138,42 @@ An ideograph that represents a programming concept or semantic operation.
 (list @zi[㐅] "null")
 (list @zi[句] "string")
 )]
-}
-@mtem["naming rule"]{
-A rule represented by an ideograph that @emph{explicitly constrains} or determines the input, output, or structural relationship of a procedure according to its position or composition within a procedure name, e.g. @zis[亻 阝].
+
+@subsection{naming rule}
+@deftech{Naming Rule} is a rule represented by an ideograph that @emph{explicitly constrains} or determines the input, output, or structural relationship of a procedure according to its position or composition within a procedure name, e.g. @zis[亻 阝].
 @verbatim{
 @zi[亻]
 Role:
-  naming-rule
+naming-rule
 Rule:
-  output data has the same type as input data;
-  output elements are derived from / belong to the input data.
+output data has the same type as input data;
+output elements are derived from / belong to the input data.
 Default type:
-  list
+list
 Type override:
-  determined by a type-prefix ideograph
+determined by a type-prefix ideograph
 }
 For example, @zi[伄] = @zi[亻] + @zi[弔]. Among them:
 @verbatim{
 亻 → explicit constraint
 弔 → semantic concept
 }
-}
-@mtem["type prefix"]{
-An ideograph placed before a procedure name as a word-level prefix to determine or override the data type referred to by a naming rule.
+
+@subsection{type prefix}
+@deftech{Type Prefix} is an ideograph placed before a procedure name as a word-level prefix to determine or override the data type referred to by a naming rule.
 
 e.g. where @zi[􏿴](list) is put first in @racket[􏿴伄], and @zi[􏿲](vector) in @racket[􏿲伄], are both type prefix.(Since @zi[伄] specifies @tt{T → T}, @zi[􏿴] and @zi[􏿲] as the type prefixes here have made the @tt{T} be @tt{list} and @tt{vector}.)
-}
 
-@mtem["default type context"]{
-The implicit data type supplied when a naming rule is used without an explicit type prefix.
+@subsection{default type context}
+@deftech{Default Type Context} is ahe implicit data type supplied when a naming rule is used without an explicit type prefix.
 
 e.g. since @zi[亻]'s default type is @zi[􏿴](list), @litchar{伄} can be seen as the abbreviated form of @litchar{􏿴伄}.
-}
-@mtem["semantic implication"]{
-A type, structural, or behavioral property that can be inferred from the semantic meaning of an ideograph, rather than being explicitly declared as a naming rule.
+@subsection{semantic Rule implication}
+@deftech{Semantic} is a type, structural, or behavioral property that can be inferred from the semantic meaning of an ideograph, rather than being explicitly declared as a naming rule.
 
 e.g. @zi[弔] only means @emph{indexed reference}, but when it is used as procedure @racket[弔], we have:
 @verbatim{
-input 1 = list
+input Rule Rule 1 = list
 input 2 = number
 output = element
 }
@@ -184,17 +184,17 @@ those input and output types are derived from its semantic concept. The way how 
 亻→ explicit rule
 弔 → semantic implication
 }
-}
-@mtem["component"]{
-An ideograph or morphological unit used to construct another ideograph. e.g. Since @tt{伄 = 亻 + 弔}, both @zi[亻] and @zi[弔] are components of @zi[伄].
-}
-@mtem["composition ideograph"]{
-An ideograph whose semantic or structural meaning is derived by composing two or more ideographic components. e.g. @zis[伄 􏿴 􏿝 􏳋 􏳥]
+
+@subsection{component}
+@deftech{Component} is an ideograph or morphological unit used to construct another ideograph. e.g. Since @tt{伄 = 亻 + 弔}, both @zi[亻] and @zi[弔] are components of @zi[伄].
+
+@subsection{composition ideograph}
+@deftech{Composition Ideograph} is an ideograph whose semantic or structural meaning is derived by composing two or more ideographic components. e.g. @zis[伄 􏿴 􏿝 􏳋 􏳥]
 @verbatim{
 @tech{component}₁ + @tech{component}₂ + ... + @tech{component}ₙ
-                     │
-                     ↓
-             Composition Ideograph
+│
+↓
+Composition Ideograph
 
 亻 + 弔 → 伄
 毌 + 􏿴BR → 􏿝
@@ -202,27 +202,25 @@ An ideograph whose semantic or structural meaning is derived by composing two or
 􏴺 + 並 → 􏳥
 }
 
-
-}
-
-@mtem["structural modifier"]{The way where and how an idegraph as a component exits in another @tech{Composition Ideograph}. e.g. @zis[L R B T LB PFX SFX IFX RTT1 RTT2]
-
+@subsection{structural modifier}
+@deftech{Structural Modifier} is ahe way where and how an idegraph as a component exits in another @tech{Composition Ideograph}. e.g. @zis[L R B T LB PFX SFX IFX RTT1 RTT2]
 @verbatim{
-   又
-   │
+又
+│
 structural
-   │
-  又LB
-   │
-   ├─────────┐
-   │         │
-   ↓         ↓
-  􏿴        􏿫
-   ↑         ↑
-  㐅         又
+│
+又LB
+│
+├─────────┐
+│         │
+↓         ↓
+􏿴        􏿫
+↑         ↑
+㐅         又
 }
-}
-@mtem["semantic modifier"]{An ideographic component that modifies the semantic scope, extent, cardinality, or operational interpretation of another ideograph while preserving a significant part of its original semantic identity. e.g. @zis[丶 丿].
+
+@subsection{semantic modifier}
+@deftech{Semantic Modifier} is an ideographic component that modifies the semantic scope, extent, cardinality, or operational interpretation of another ideograph while preserving a significant part of its original semantic identity. e.g. @zis[丶 丿].
 @tt{@zi[阝] → @zi[􏴗]}, where @zi[丶] acts as a semantic modifier of @zi[阝].
 @verbatim{
 阝
@@ -233,7 +231,7 @@ serial subset
 ↓
 􏴗
 ↓
-serial subset with a modified range
+serial Rule subset with a modified range
 }
 
 @tt{@zi[弔] → @zi[𢎨]}, where @zi[丿] acts as a semantic modifier of @zi[弔].
@@ -246,48 +244,62 @@ indexed reference
 ↓
 𢎨
 ↓
-human-oriented indexed reference
+human Rule-oriented indexed reference
 }
 
 @tt{@zi[𰁦] → @zi[攸]}, where @zi[丨] acts as a semantic modifier(more specificity called @tech{cardinality restriction}) of @zi[𰁦].
-}
-@mtem["semantic derivation"]{
-The derivation of an ideograph from another ideograph by applying one or more semantic modifiers, resulting in a new ideograph whose meaning remains systematically related to the source ideograph. e.g.
+@subsection{semantic Rule derivation}
+@deftech{Semantic} is ahe derivation of an ideograph from another ideograph by applying one or more semantic modifiers, resulting in a new ideograph whose meaning remains systematically related to the source ideograph. e.g.
 @verbatim{
 阝 ──丶──→ 􏴗
 弔 ──丿──→ 𢎨
 弓 ──丨──→ 弔
 𰁦 ──丨──→ 攸
 
-
 Base Ideograph
-      +
++
 Semantic Modifier
-      ↓
+↓
 Derived Ideograph
 
 弓
- │
+│
 semantic derivation
- │
- └── 丨
-      ↓
-     弔
-      │
-      └── 丿
-           ↓
-          𢎨
+│
+└── 丨
+↓
+弔
+│
+└── 丿
+↓
+𢎨
 }
-}
-@mtem["position operators"]{e.g. @zis[L R B T]}
-@mtem["extent operators"]{e.g. @zis[LB BR BL]}
-@mtem["word-position operators"]{@zis[PFX SFX IFX]}
-@mtem["rotation operators"]{@zis[  RTT1 RTT2 RTT3]}
-@mtem["general type"]{All the traditional types of what we call in Racket. e.g. @zis[􏿴 句 􏿰 勺]}
-@mtem["minor type"]{A refined data-structure type distinguished by structural properties, element types, termination forms, nesting, cardinality, or other semantic invariants beyond a general data type. e.g. @zis[􏿫 􏿳 􏴳 􏴷] are all @tech{minor type}s of general type of @zi[􏿴].}
-@mtem["minor-type ideograph"]{An ideograph whose primary semantic role is to identify a minor type of data. e.g. @zis[􏿴 􏿫 􏿳 􏴳 􏴷].}
-@mtem["cardinality"]{
-The number or multiplicity of data units represented or produced by an ideograph. e.g.
+
+@subsection{position operator}
+@deftech{Position Operator}: e.g. @zis[L R B T]
+
+@subsection{extent operator}
+@deftech{Extent Operator}: e.g. @zis[LB BR BL]
+
+@subsection{word-position operator}
+@deftech{Word-position Operator}: e.g. @zis[PFX SFX IFX]
+
+@subsection{rotation operator}
+@deftech{Rotation Operator}: e.g. @zis[  RTT1 RTT2 RTT3]
+
+@subsection{general type}
+@deftech{General Type} is all the traditional types of what we call in Racket. e.g. @zis[􏿴 句 􏿰 勺]
+
+@subsection{minor type}
+@deftech{Minor Type} is a refined data-structure type distinguished by structural properties, element types, termination forms, nesting, cardinality, or other semantic invariants beyond a general data type. e.g. @zis[􏿫 􏿳 􏴳 􏴷] are all @tech{minor type}s of general type of @zi[􏿴].
+
+@subsection{minor-type ideograph}
+@deftech{Minor-type Ideograph} is a refined data-structure type distinguished by structural properties, element types, termination forms, nesting, cardinality, or other semantic invariants beyond a general data type.
+
+e.g. @zis[􏿴 􏿫 􏿳 􏴳 􏴷].
+
+@subsection{cardinality}
+@deftech{Cardinality} is the number or multiplicity of data units represented or produced by an ideograph. e.g.
 @verbatim{
 二 → exactly 2
 三 → 3 / multiple in designated contexts
@@ -297,15 +309,16 @@ The number or multiplicity of data units represented or produced by an ideograph
 @verbatim{
 @zi[􏴫]
 semantic:
-  sectionalization
+sectionalization
 cardinality:
-  2
+2
 }
-}
-@mtem["cardinality restriction"]{Is one kind of @tech{Semantic Modifier} and specifically changes the base ideograph to constrains itts semantic parameterization. e.g. @zi[丨] in @zi[攸].
-}
-@mtem["output representation"]{
-The form in which multiple output data are represented or returned. e.g.
+
+@subsection{cardinality restriction}
+@deftech{Cardinality Restriction} is one kind of @tech{Semantic Modifier} and specifically changes the base ideograph to constrains itts semantic parameterization. e.g. @zi[丨] in @zi[攸].
+
+@subsection{output representation}
+@deftech{Output Representation} is the form in which multiple output data are represented or returned. e.g.
 @verbatim{
 @zi[􏳥L]:
 sectionalization
@@ -318,18 +331,13 @@ sectionalization
 +
 output-representation = list(@tech{default type context})
 }
-}
-]
 
 
 @section{Prose Verbs}
 @itemlist[
-@item{Because of @tech{Compostion Ideograph}, we draw the verb @emph{composes}, e.g.@tt{􏿝 is composed of 毌 and 􏿴BR}, @tt{􏳋 is composed of 亻 and 􏴫}.}
-@item{Because of @tech{Compostion Ideograph}, we draw the verb @emph{composes}, e.g.@tt{􏿝 is composed of 毌 and 􏿴BR}, @tt{􏳋 is composed of 亻 and 􏴫}.}
-
+@item{Because of @tech{Composition Ideograph}, we draw the verb @emph{composes}, e.g.@tt{􏿝 is composed of 毌 and 􏿴BR}, @tt{􏳋 is composed of 亻 and 􏴫}.}
+@item{Because of @tech{Composition Ideograph}, we draw the verb @emph{composes}, e.g.@tt{􏿝 is composed of 毌 and 􏿴BR}, @tt{􏳋 is composed of 亻 and 􏴫}.}
 ]
-
-
 
 
 @section{core ideographs}
@@ -338,25 +346,25 @@ output-representation = list(@tech{default type context})
          #:row-properties '(bottom-border ())
 (list
 (list @bold{Idepgraph} @bold{Role} @bold{Concept/Rule} @bold{Derived from})
-(list "亻" "naming rule" "same input/output type; output elements derived from input" "semantic borrowing")
-(list "阝" "naming rule" "serial subset; output same type, successive subset" "borrowed")
-(list "􏴗" "naming rule / modifier" "suffix-to-end subset" "阝-related")
-(list "􏴫" "semantic + naming rule" "sectionalization, exactly 2" "段")
-(list "􏴺" "semantic + naming rule" "sectionalization, multiple" "􏴫 + 一")
-(list "並" "semantic" "multiple values" "semantic extension of 并列")
-(list "弓" "semantic" "index" "glyph borrowing")
-(list "弔" "semantic" "indexed reference" "simplified/derived from 第")
-(list "𢎨" "semantic" "human-oriented indexed reference" "弔 + 丿")
-(list "彐" "semantic" "find" "simplified from 寻")
-(list "毌" "semantic" "append" "historical semantic inheritance")
-(list "双" "semantic / type" "pair" "又 + 又")
-(list "㐅" "semantic / type" "null" "derived borrowing")
-(list "􏿴" "minor type" "proper list" "又LB + 㐅")
-(list "􏿫" "minor type" "improper/list* structure" "又LB + 又")
-(list "􏿳" "minor type" "association list" "双RB + 㐅")
-(list "􏴳" "minor type" "list of lists" "又LB + 􏿴")
-(list "􏴷" "minor type" "list of strings" "􏿴LB + 句")
-(list "􏳋" "naming rule" "same-type sectional output" "亻 + 􏴫")
-(list "􏳥" "naming rule / representation" "sectional values" "􏴺 + 並")
-(list "􏿰" "type/data structure" "hash" "广 + 双")
+(list @zi[亻] "naming rule" "same input/output type; output elements derived from input" "semantic borrowing")
+(list @zi[阝] "naming rule" "serial subset; output same type, successive subset" "borrowed")
+(list @zi[􏴗] "naming rule / modifier" "suffix-to-end subset" "阝-related")
+(list @zi[􏴫] "semantic + naming rule" "sectionalization, exactly 2" "段")
+(list @zi[􏴺] "semantic + naming rule" "sectionalization, multiple" "􏴫 + 一")
+(list @zi[並] "semantic" "multiple values" "semantic extension of 并列")
+(list @zi[弓] "semantic" "index" "glyph borrowing")
+(list @zi[弔] "semantic" "indexed reference" "simplified/derived from 第")
+(list @zi[𢎨] "semantic" "human-oriented indexed reference" "弔 + 丿")
+(list @zi[彐] "semantic" "find" "simplified from 寻")
+(list @zi[毌] "semantic" "append" "historical semantic inheritance")
+(list @zi[双] "semantic / type" "pair" "又 + 又")
+(list @zi[㐅] "semantic / type" "null" "derived borrowing")
+(list @zi[􏿴] "minor type" "proper list" "又LB + 㐅")
+(list @zi[􏿫] "minor type" "improper/list* structure" "又LB + 又")
+(list @zi[􏿳] "minor type" "association list" "双RB + 㐅")
+(list @zi[􏴳] "minor type" "list of lists" "又LB + 􏿴")
+(list @zi[􏴷] "minor type" "list of strings" "􏿴LB + 句")
+(list @zi[􏳋] "naming rule" "same-type sectional output" "亻 + 􏴫")
+(list @zi[􏳥] "naming rule / representation" "sectional values" "􏴺 + 並")
+(list @zi[􏿰] "type/data structure" "hash" "广 + 双")
 )]
