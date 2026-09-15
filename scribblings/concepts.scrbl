@@ -15,46 +15,56 @@
 
 
 @title[#:tag "concepts"]{Concepts}
-Ming's ideograph system is not merely a system of naming keywords with Chinese characters. It establishes a programming semantic system analogous to morphology in natural language: ideographs function as semantic roots, modifiers derive related meanings, structural components determine how those meanings are formed, and their composition produces increasingly specific programming concepts.
+Ming's @tech{Ideograph} System is not merely a system of naming keywords with Chinese characters. It establishes a programming semantic system analogous to morphology in natural language: ideographs function as semantic roots, modifiers derive related meanings, structural components determine how those meanings are formed, and their composition produces increasingly specific programming concepts.
 
-This distinction is fundamental to understanding the terminology used throughout Ming.
+This distinction is fundamental to understanding the @secref["Terminology"] used throughout Ming.
+
+
 
 @section{Morphology}
 In linguistics, morphology concerns the internal structure of words and the ways in which meaningful units combine to form new words or related forms. A word may consist of a root together with prefixes, suffixes, infixes, or other morphological elements, where each element contributes systematically to the meaning or grammatical behavior of the resulting word.
 
-Ming applies a similar principle to programming concepts.
+Ming applies a similar principle to programming concepts, which especially is called @tech{Morphological Structure}.
 
-An ideograph in Ming is therefore not necessarily an indivisible name. It may participate in a system of semantic derivation, structural modification, and composition, in which the resulting ideograph retains a systematic relationship with the concepts from which it is formed.
+An @tech{ideograph} in Ming is therefore not necessarily an indivisible name. It may participate in a system of semantic derivation, structural modification, and composition, in which the resulting ideograph retains a systematic relationship with the concepts from which it is formed.
 
-For example, a semantic ideograph may serve as a root concept, while a semantic modifier changes some dimension of that concept:
+For example, a @tech{semantic ideograph} may serve as a root concept, while a semantic modifier changes some dimension of that concept:
 
-弓 represents index.
-弔, derived from 弓 with 丨, represents indexed reference.
-𢎨, derived from 弔 with 丿, represents a related form of indexed reference using human-oriented, one-based indexing.
-阝 represents a serial subset relation.
-􏴗, derived from 阝 with 丶, preserves that relation while modifying its range semantics.
+@zi[弓] represents index.
+@zi[弔], derived from 弓 with 丨, represents indexed reference.
+@zi[𢎨], derived from 弔 with 丿, represents a related form of indexed reference using human-oriented, one-based indexing.
+@zi[阝] represents a serial subset relation.
+@zi[􏴗], derived from 阝 with 丶, preserves that relation while modifying its range semantics.
 
 The resulting ideographs are therefore not arbitrary names. Their forms encode relationships between programming concepts.
 
 This morphological principle also operates at a larger scale. Different kinds of ideographic units may participate in different kinds of formation:
 
-Semantic Ideograph provides an independent programming concept and may function as a semantic root.
-Semantic Modifier modifies the semantic scope, extent, cardinality, indexing convention, representation, perspective, or another semantic dimension of an ideograph.
-Structural Modifier determines or modifies the structural formation or positional relationship of ideographic components.
-Composition combines distinct semantic contributions into a new concept.
-Naming Rule expresses constraints on the interface or behavior of a procedure through the ideographic components occurring in its name.
-Minor Type represents the finer-grained data-structural distinctions that emerge from these semantic and naming constraints.
+@itemlist[
+@item{@tech{Semantic Ideograph} provides an independent programming concept and may function as a semantic root.}
+@item{@tech{Semantic Modifier} modifies the semantic scope, extent, cardinality, indexing convention, representation, perspective, or another semantic dimension of an ideograph.}
+@item{@tech{Structural Modifier} determines or modifies the structural formation or positional relationship of ideographic components.}
+@item{@tech{Composition} combines distinct semantic contributions into a new concept.}
+@item{@tech{Naming Rule} expresses constraints on the interface or behavior of a procedure through the ideographic components occurring in its name.}
+@item{@tech{Minor Type} represents the finer-grained data-structural distinctions that emerge from these semantic and naming constraints.}
+]
 
-These categories are not isolated naming conventions. They describe different roles played by components within the same morphological system.
+These categories are not isolated naming conventions. They describe different roles played by @tech{components} within the same morphological system.
 
 For this reason, many Ming ideographs should be understood as derived forms rather than independently invented symbols. Once a semantic relationship has been established, new concepts can be constructed by systematically applying existing semantic or structural elements.
 
-For example, 亻 + 弔 → 伄 does not merely assign a new Chinese character to another procedure. 亻 contributes an explicit naming rule concerning the relationship between input and output, while 弔 contributes the semantic concept of indexed reference. Their composition therefore produces a new operation whose meaning and interface constraints arise from both components.
+For example,
 
-Likewise, 又LB + 㐅 → 􏿴 expresses a structural construction of a list, while 􏿴 + 句 → 􏴷 can further specify the element type as strings. The resulting concepts form a derivational network rather than a flat collection of names.
+亻 + 弔 → @zi[伄] does not merely assign a new Chinese character to another procedure.
+@zi[亻] contributes an explicit naming rule concerning the relationship between input and output,
+while @zi[弔] contributes the semantic concept of indexed reference.
+Their composition therefore produces a new operation whose meaning and interface constraints arise from both components.
+
+Likewise, 又LB + 㐅 → @zi[􏿴] expresses a structural construction of a list, while 􏿴 + 句 → @zi[􏴷] can further specify the element type as strings. The resulting concepts form a derivational network rather than a flat collection of names.
+
 
 @section{Ideographic Morphological System}
-This perspective explains an important characteristic of Ming: its ideographs are not a collection of isolated glyphs created one by one. They belong to a recursive and extensible morphological system.
+This perspective explains an important characteristic of Ming: its ideographs are not a collection of isolated glyphs created one by one. They belong to a recursive and extensible @tech[#:key "Ideographic Morphology"]{morphological} system.
 
 Once a semantic unit, modifier, structural relation, or naming rule has been established, it can participate in further formations. Consequently, the vocabulary of Ming can grow by deriving new concepts from existing ones while preserving explicit semantic relationships between them.
 
@@ -66,7 +76,36 @@ The purpose is not simply to make programming syntax look Chinese. It is to make
 
 This principle underlies the terminology and naming rules described throughout the Ming language.
 
+
+
 @section{Terminology}
+Ming's ideograph system is not merely a system for naming programming keywords with Chinese characters. It establishes an @bold{ideographic morphological system for programming semantics}.
+
+The ideographs of Ming therefore should not be understood as a collection of independently invented symbols. They form a compositional and derivational system in which individual semantic units, modifiers, structural elements, and naming rules can be combined to construct increasingly specific programming concepts and procedural interfaces.
+
+This morphological system distinguishes different kinds of meaning and different roles played by ideographic components.
+
+At the most fundamental level, Ming distinguishes between @tech{conceptual meaning} and @tech{programmatic meaning}.
+
+@tech{Conceptual meaning} represents what a programming concept means in itself. It is primarily expressed by @tech{Semantic Ideographs}, which may exist independently of any particular procedure and may be used to describe concepts, data structures, @tech{Minor Types}, or other semantic entities.
+
+@tech{Programmatic meaning}, in contrast, expresses properties and relationships that concern a program or procedure itself, such as input and output types, parameter kinds, @tech{cardinality}, or @tech{structural relationships}. It is primarily encoded through @tech{Naming Rules}, whose purpose is to impose such constraints through the morphology of a procedure name.
+
+This distinction is not a distinction between meaningful and meaningless ideographs. Both @tech{Semantic Ideographs} and @tech{Naming Rules} carry meaning; they differ in the @bold{kind of meaning} they primarily express.
+
+A @tech{Semantic Ideograph} primarily answers:
+
+@nested[#:style 'inset]{@bold{What concept does this represent?}}
+
+A @tech{Naming Rule} primarily answers:
+
+@nested[#:style 'inset]{@bold{What must a procedure represented by this name be like?}}
+
+Other ideographic components operate between and around these two roles. @tech{Semantic Modifiers} derive related meanings from existing concepts, @tech{Structural Modifiers} describe or alter the morphological structure of an ideograph, and @tech[#:key "Composition"]{Composition Ideograph} combines distinct semantic or structural contributions into a new form.
+
+The resulting system can therefore be viewed as a morphological grammar for programming concepts: existing concepts and rules become building blocks from which new, systematically related concepts can be derived.
+
+
 
 @subsection{Ideograph}
 @deftech{Ideograph} is a character used in Ming as an semantic or structural unit of programming-language notation.
@@ -99,29 +138,34 @@ Ideograph
 │
 ├── Lexical Ideograph
 │   │
-│   ├── Semantic Ideograph
+│   ├── @tech{Semantic Ideograph}
 │   │
-│   ├── Type / Minor-Type Ideograph
+│   ├── @tech[#:key "general type"]{General-Type Ideograph} / @tech[#:key "minor type Ideograph"]{Minor-Type Ideograph}
 │   │
-│   └── Naming-Rule Ideograph
+│   └── @tech[#:key "naming rule"]{Naming-Rule Ideograph}
 │
-├── Semantic Modifier
+├── @tech{Semantic Modifier}
 │
-└── Structural Modifier
+└── @tech{Structural Modifier}
 
 
 Ideograph
 │
-├── structurally-modified-by → Structural Modifier
+├── structurally-modified-by → @tech{Structural Modifier}
 │
-├── semantically-modified-by → Semantic Modifier
+├── semantically-modified-by → @tech{Semantic Modifier}
 │
-└── composed-with → Ideograph
+└── composed-with → @tech{Composition} Ideograph
 }
 
 
+
 @subsection{Semantic Ideograph}
-@deftech{Semantic Ideograph} is an ideograph that represents a programming concept or semantic operation.
+A @deftech{Semantic Ideograph} is an ideograph whose primary function is to represent an independently meaningful programming concept.
+
+A Semantic Ideograph is not inherently tied to a particular procedure name. It may be used to express a concept in a variety of contexts, including the description of data structures, Minor Types, or other semantic entities.
+
+For example:
 @tabular[#:style 'boxed
 #:column-properties '(left left)
 #:row-properties '(bottom-border ())
@@ -137,10 +181,71 @@ Ideograph
 (list @zi[􏿰] "hash")
 (list @zi[㐅] "null")
 (list @zi[句] "string")
+(list @zi[?] "predicate")
+(list @zi[!] "modification of the original value")
 )]
 
+When a Semantic Ideograph participates in a procedure name, its semantic meaning may naturally imply properties of the procedure. These are @tech{Semantic Implications}, rather than necessarily being @tech{Naming Rules}.
+
+For example, the meaning of @zi[?] as a predicate conventionally implies a Boolean result, while the meaning of @zi[!] as an operation that modifies the original value conventionally implies a void result.
+
+
+
+@subsection{Semantic Implication}
+@deftech{Semantic Implication} is a type, structural, or behavioral property that can be inferred from the semantic meaning of an ideograph, rather than being explicitly declared as a @tech{naming rule}.
+
+A Semantic Implication is a property of a procedure, operation, or data relationship that follows naturally from the meaning of a @tech{Semantic Ideograph}.
+
+A Semantic Implication is not necessarily stated as an explicit @tech{naming rule}. Rather, it arises from the semantic interpretation of the concept represented by the ideograph.
+
+For example, the concept represented by ? is predicate. In the context of a procedure, this naturally implies that its result is Boolean.
+
+Likewise, @zi[!] represents modification of the original value. The conventional consequence is that the procedure produces a void result.
+
+Semantic Implications may therefore provide interface information without being the primary purpose of the ideograph.
+
+e.g. @zi[弔] only means @emph{indexed reference}, but when it is used as procedure @racket[弔], we have:
+@verbatim{
+input Rule Rule 1 = list
+input 2 = number
+output = element
+}
+those input and output types are derived from its semantic concept. The way how we derive those types are called @tech{semantic implication}.
+
+@verbatim{
+@zi[伄]:
+亻→ explicit rule
+弔 → semantic implication
+}
+
+
 @subsection{Naming Rule}
-@deftech{Naming Rule} is a rule represented by an ideograph that @bold{explicitly constrains} or determines the input, output, or structural relationship of a procedure according to its position or composition within a procedure name, e.g. @zis[亻 阝].
+A @deftech{Naming Rule} is an ideographic rule whose primary function is to explicitly constrain or determine the interface or operational structure of a procedure through its name.
+
+A Naming Rule may specify properties such as:
+
+@itemlist[
+@item{the type or structure of an input;}
+@item{the type or structure of an output;}
+@item{relationships between inputs and outputs;}
+@item{parameter kinds;}
+@item{cardinality;}
+@item{or other structural relationships of an operation.}
+]
+
+Unlike a @tech{Semantic Ideograph}, a Naming Rule does not primarily exist to represent an independently referential programming concept. Its meaning is primarily @bold{morphological and programmatic}: it specifies how a procedure bearing the corresponding name is to be understood or constrained.
+
+For example:
+
+@itemlist[
+@item{@zi[^] specifies that the input is a list.}
+@item{@zi[亻] specifies a derived-set relationship between input and output.}
+@item{@zi[阝] specifies a serial-subset relationship.}
+@item{@zi[入] specifies that an input parameter is a function.}
+]
+
+A Naming Rule may nevertheless carry meaningful information. Its distinction from a @tech{Semantic Ideograph} is not that it is meaningless, but that its meaning primarily concerns the @bold{formation and interpretation of a procedure} rather than an independently existing concept.
+
 @verbatim{
 @zi[亻]
 Role:
@@ -159,68 +264,86 @@ For example, @zi[伄] = @zi[亻] + @zi[弔]. Among them:
 弔 → semantic concept
 }
 
+
+@subsection{Programmatic Meaning}
+@deftech{Programmatic Meaning} is meaning concerning the properties, relationships, and behavior of a program or procedure, including its data, types, inputs, outputs, parameters, cardinality, and structural relationships.
+
+@tech{Naming Rules} primarily express Programmatic Meaning.
+
+This should be distinguished from the @tech{Conceptual Meaning} expressed by @tech{Semantic Ideographs}.
+
+Thus:
+
+@nested[#:style 'inset]{
+@tech{Semantic Ideograph} → @tech{Conceptual Meaning}
+@tech{Naming Rule} → @tech{Programmatic Meaning}
+}
+
+The distinction concerns the primary role of the meaning rather than whether an ideograph possesses meaning at all.
+
+
+
+@subsection{Conceptual Meaning}
+
+@deftech{Conceptual Meaning} is the meaning of an independently recognizable concept represented by an ideograph.
+
+Conceptual Meaning may exist independently of any particular procedure or naming context. It can therefore be used to describe programming concepts, data structures, @tech{Minor Types}, or other semantic entities.
+
+For example, @zi[弓] can express the concept of index independently of any particular procedure.
+
+
+
 @subsection{Type Prefix}
 @deftech{Type Prefix} is an ideograph placed before a procedure name as a word-level prefix to determine or override the data type referred to by a naming rule.
 
 e.g. where @zi[􏿴](list) is put first in @racket[􏿴伄], and @zi[􏿲](vector) in @racket[􏿲伄], are both type prefix.(Since @zi[伄] specifies @tt{T → T}, @zi[􏿴] and @zi[􏿲] as the type prefixes here have made the @tt{T} be @tt{list} and @tt{vector}.)
 
 @subsection{Default Type Context}
-@deftech{Default Type Context} is ahe implicit data type supplied when a naming rule is used without an explicit type prefix.
+@deftech{Default Type Context} is ahe implicit data type supplied when a @tech{naming rule} is used without an explicit type prefix.
 
 e.g. since @zi[亻]'s default type is @zi[􏿴](list), @litchar{伄} can be seen as the abbreviated form of @litchar{􏿴伄}.
-@subsection{Semantic Implication}
-@deftech{Semantic Implication} is a type, structural, or behavioral property that can be inferred from the semantic meaning of an ideograph, rather than being explicitly declared as a naming rule.
 
-e.g. @zi[弔] only means @emph{indexed reference}, but when it is used as procedure @racket[弔], we have:
-@verbatim{
-input Rule Rule 1 = list
-input 2 = number
-output = element
-}
-those input and output types are derived from its semantic concept. The way how we derive those types are called @tech{semantic implication}.
-
-@verbatim{
-@zi[伄]:
-亻→ explicit rule
-弔 → semantic implication
-}
 
 @subsection{Component}
 @deftech{Component} is an ideograph or morphological unit used to construct another ideograph. e.g. Since @tt{伄 = 亻 + 弔}, both @zi[亻] and @zi[弔] are components of @zi[伄].
 
-@subsection{Composition Ideograph}
-@deftech{Composition Ideograph} is an ideograph whose semantic or structural meaning is derived by composing two or more ideographic components. e.g. @zis[伄 􏿴 􏿝 􏳋 􏳥]
+
+@subsection{Composition}
+@deftech{Composition} is the formation of an ideograph or programming concept by combining two or more @tech{ideographic components} whose semantic or structural contributions are jointly interpreted.
+
+Composition differs from @tech{Semantic Derivation} in that the constituent components may contribute distinct concepts or rules rather than one component simply modifying another.
+
+Examples include:
+
 @verbatim{
 @tech{component}₁ + @tech{component}₂ + ... + @tech{component}ₙ
 │
 ↓
-Composition Ideograph
+Composition
 
-亻 + 弔 → 伄
-毌 + 􏿴BR → 􏿝
-亻 + 􏴫 → 􏳋
-􏴺 + 並 → 􏳥
+亻 + 弔 → @zi[伄]
+亻 + 􏴫 → @zi[􏳋]
+􏴺 + 並 → @zi[􏳥]
+毌 + 􏿴BR → @zi[􏿝]
+又LB + 㐅 → @zi[􏿴]
 }
 
-@subsection{Structural Modifier}
-@deftech{Structural Modifier} is the way where and how an idegraph as a component exits in another @tech{Composition Ideograph}. e.g. @zis[L R B T LB PFX SFX IFX RTT1 RTT2]
-@verbatim{
-又
-│
-structural
-│
-又LB
-│
-├─────────┐
-│         │
-↓         ↓
-􏿴        􏿫
-↑         ↑
-㐅         又
-}
+The resulting form derives its interpretation from the systematic interaction of its components.
+
 
 @subsection{Semantic Modifier}
-@deftech{Semantic Modifier} is an ideographic component that modifies the semantic scope, extent, cardinality, or operational interpretation of another ideograph while preserving a significant part of its original semantic identity. e.g. @zis[丶 丿].
+A @deftech{Semantic Modifier} is an @tech{ideographic component} that modifies an existing semantic concept while preserving a systematic relationship with that concept.
+
+A Semantic Modifier may modify dimensions such as semantic scope, extent, @tech{cardinality}, range, indexing convention, representation, or perspective.
+
+For example:
+
+@zi[*] expresses strengthening.
+@zi[~] expresses weakening.
+@zi[丨], @zi[丿], and @zi[丶] act as small semantic modifiers that derive closely related meanings from existing ideographs.
+
+When a Semantic Modifier is applied to an ideograph, the resulting form constitutes a @tech{Semantic Derivation}.
+
 @tt{@zi[阝] → @zi[􏴗]}, where @zi[丶] acts as a semantic modifier of @zi[阝].
 @verbatim{
 阝
@@ -248,13 +371,18 @@ human Rule-oriented indexed reference
 }
 
 @tt{@zi[𰁦] → @zi[攸]}, where @zi[丨] acts as a semantic modifier(more specificity called @tech{cardinality restriction}) of @zi[𰁦].
+
+
 @subsection{Semantic Derivation}
-@deftech{Semantic Derivation} is the derivation of an ideograph from another ideograph by applying one or more semantic modifiers, resulting in a new ideograph whose meaning remains systematically related to the source ideograph. e.g.
+@deftech{Semantic Derivation} is the derivation of an ideograph from another ideograph by applying one or more @tech{semantic modifiers}, resulting in a new ideograph whose meaning remains systematically related to the source ideograph.
+
+Examples include:
+
 @verbatim{
-阝 ──丶──→ 􏴗
-弔 ──丿──→ 𢎨
-弓 ──丨──→ 弔
-𰁦 ──丨──→ 攸
+弔 + 丿 → @zi[𢎨]
+弔 + 一 → @zi[􏴧]
+阝 + 丶 → @zi[􏴗]
+𰁦 + 丨 → @zi[攸]
 
 Base Ideograph
 +
@@ -262,17 +390,47 @@ Semantic Modifier
 ↓
 Derived Ideograph
 
-弓
+@zi[弓]
 │
 semantic derivation
 │
 └── 丨
 ↓
-弔
+@zi[弔]
 │
 └── 丿
 ↓
-𢎨
+@zi[𢎨]
+}
+
+
+@subsection{Structural Modifier}
+A @deftech{Structural Modifier} is an @tech[#:key "Component"]{ideographic component} whose primary function is to specify or modify the structural or positional organization of @tech[#:key "Component"]{ideographic components} rather than their @tech{conceptual meaning}.
+
+Structural Modifiers describe how an ideograph is formed, where a component occurs, or how components relate spatially or morphologically.
+
+Examples include:
+
+@zis[L R T B]
+@zis[LB BR BL]
+@zis[PFX SFX IFX]
+@zis[RTT1 RTT2 RTT3]
+
+These elements belong to the morphology of an ideograph rather than directly expressing an independent programming concept.
+
+@verbatim{
+又
+│
+structural
+│
+又LB
+│
+├─────────┐
+│         │
+↓         ↓
+􏿴        􏿫
+↑         ↑
+㐅         又
 }
 
 @subsection{Position Operator}
@@ -291,12 +449,33 @@ semantic derivation
 @deftech{General Type} is all the traditional types of what we call in Racket. e.g. @zis[􏿴 句 􏿰 勺]
 
 @subsection{Minor Type}
-@deftech{Minor Type} is a refined data-structure type distinguished by structural properties, element types, termination forms, nesting, cardinality, or other semantic invariants beyond a general data type. e.g. @zis[􏿫 􏿳 􏴳 􏴷] are all @tech{minor type}s of general type of @zi[􏿴].
+A @deftech{Minor Type} is a fine-grained classification of a data structure or value based on structural or semantic properties that are more specific than conventional broad programming-language types.
+
+Ming uses its @tech{ideographic morphology} to expose distinctions that would often remain implicit within conventional types.
+
+For example, the distinction among:
+
+@itemlist[
+@item{pair;}
+@item{list;}
+@item{non-empty list;}
+@item{association list;}
+@item{list of lists;}
+@item{list of strings;}
+]
+
+can be represented through systematically related ideographs rather than being treated merely as unrelated names. @zis[􏿫 􏿳 􏴳 􏴷] are all @tech{minor type}s of @tech{general type} of @zi[􏿴].
+
+Minor Types therefore represent one of the consequences of Ming's semantic and morphological system: the naming system can express distinctions in data structure that conventional type categories often leave implicit.
+
+
 
 @subsection{Minor-type Ideograph}
 @deftech{Minor-type Ideograph} is a refined data-structure type distinguished by structural properties, element types, termination forms, nesting, cardinality, or other semantic invariants beyond a general data type.
 
 e.g. @zis[􏿴 􏿫 􏿳 􏴳 􏴷].
+
+
 
 @subsection{Cardinality}
 @deftech{Cardinality} is the number or multiplicity of data units represented or produced by an ideograph. e.g.
@@ -333,10 +512,49 @@ output-representation = list(@tech{default type context})
 }
 
 
+
+@subsection{Morphological Structure}
+The @deftech{Morphological Structure} of an ideograph is the organization of its constituent semantic, modifying, structural, and naming-rule components.
+
+Morphological Structure determines how the components of an ideograph are interpreted in relation to one another.
+
+This makes an ideograph more analogous to a morphologically constructed word than to an arbitrary identifier.
+
+For example:
+
+@verbatim{
+@zi[伄] = 亻 + 弔
+}
+
+contains both a @tech{Naming Rule} and a @tech{Semantic Ideograph}. Its meaning is therefore obtained not simply by looking up @zi[伄] as an atomic symbol, but by interpreting the relationship between its components.
+
+
+
+@subsection{Ideographic Morphology}
+
+@deftech{Ideographic Morphology} is the overall system by which Ming constructs programming meanings through the composition, derivation, modification, and structural organization of ideographs.
+
+It includes:
+
+@itemlist[
+@item{@tech{Semantic Ideographs};}
+@item{@tech{Semantic Modifiers};}
+@item{@tech{Structural Modifiers};}
+@item{@tech{Naming Rules};}
+@item{@tech{Semantic Derivation};}
+@item{@tech{Composition};}
+@item{and the @tech[#:key "conceptual meaning"]{semantic} and @tech[#:key "programmatic meaning"]{programmatic} relationships resulting from them.}
+
+]
+
+Ming's ideographic morphology is therefore not merely a visual notation system. It is a mechanism for systematically constructing and exposing relationships among programming concepts.
+
+
 @section{Prose Verbs}
 @itemlist[
-@item{Because of @tech{Composition Ideograph}, we draw the verb @emph{composes}, e.g.@tt{􏿝 is composed of 毌 and 􏿴BR}, @tt{􏳋 is composed of 亻 and 􏴫}.}
-@item{Because of @tech{Composition Ideograph}, we draw the verb @emph{composes}, e.g.@tt{􏿝 is composed of 毌 and 􏿴BR}, @tt{􏳋 is composed of 亻 and 􏴫}.}
+@item{Because of @tech{Composition}, we draw the verb @emph{compose}, e.g. @tt{􏿝 is composed of 毌 and 􏿴BR}, @tt{􏳋 is @emph{composed} of 亻 and 􏴫}.}
+@item{Because of @tech{Naming Rule}, we draw the verb @emph{specify}, e.g. @tt{@zi[亻] @emph{specifies} the output has the same type as input.}}
+@item{Because of @tech{Semantic Ideograph} and @tech{Semantic Implication}, we draw the verb @emph{imply}, e.g. @tt{@zi[弓] @emph{implies} the output is a number.}}
 ]
 
 
