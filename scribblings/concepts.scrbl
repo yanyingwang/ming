@@ -14,66 +14,92 @@
 @script/rainbow-delimiters*
 
 
+
 @title[#:tag "concepts"]{Concepts}
+
 Ming's @tech[#:key "ideograph"]{ideograph system} is not merely a system for naming programming keywords with Chineseoid characters. It establishes an @tech{ideographic morphology} in which programming concepts, semantic relationships, and structural constraints are expressed through the composition, derivation, and modification of ideographs.
 
-This distinction is fundamental to understanding the @secref["Terminology"] used throughout Ming.
-
+This morphological perspective is fundamental to understanding how Ming's vocabulary is constructed and how relationships among programming concepts are represented. The terminology used to describe these mechanisms is formally introduced in @secref["Terminology"].
 
 @section{Morphology}
+
 In linguistics, morphology concerns the internal structure of words and the ways in which meaningful units combine to form new words or related forms. A word may consist of a root together with prefixes, suffixes, infixes, or other morphological elements, where each element contributes systematically to the meaning or grammatical behavior of the resulting word.
 
-Ming applies a similar principle to programming concepts, which especially is called @tech{Morphological Structure}.
+Ming applies a similar principle to programming concepts. An ideograph is therefore not necessarily an indivisible name. It may participate in semantic derivation, structural modification, and composition, so that a resulting ideograph retains a systematic relationship with the concepts from which it is formed.
 
-An @tech{ideograph} in Ming is therefore not necessarily an indivisible name. It may participate in a system of semantic derivation, structural modification, and composition, in which the resulting ideograph retains a systematic relationship with the concepts from which it is formed.
+This internal organization of an ideograph is referred to as its @tech{Morphological Structure}.
 
-For example, a @tech{semantic ideograph} may serve as a root concept, while a semantic modifier changes some dimension of that concept:
-
-@zi[弓] represents index.
-@zi[弔], derived from 弓 with 丨, represents indexed reference.
-@zi[𢎨], derived from 弔 with 丿, represents a related form of indexed reference using human-oriented, one-based indexing.
-@zi[阝] represents a serial subset relation.
-@zi[􏴗], derived from 阝 with 丶, preserves that relation while modifying its range semantics.
-
-The resulting ideographs are therefore not arbitrary names. Their forms encode relationships between programming concepts.
-
-This morphological principle also operates at a larger scale. Different kinds of ideographic units may participate in different kinds of formation:
+For example, @zi[弓] represents the concept of @emph{index}. From this concept, further ideographs can be constructed:
 
 @itemlist[
-@item{@tech{Semantic Ideograph} provides an independent programming concept and may function as a semantic root.}
-@item{@tech{Semantic Modifier} modifies the semantic scope, extent, cardinality, indexing convention, representation, perspective, or another semantic dimension of an ideograph.}
-@item{@tech{Structural Modifier} determines or modifies the structural formation or positional relationship of ideographic components.}
-@item{@tech{Composition} combines distinct semantic contributions into a new concept.}
-@item{@tech{Naming Rule} expresses constraints on the interface or behavior of a procedure through the ideographic components occurring in its name.}
-@item{@tech{Minor Type} represents the finer-grained data-structural distinctions that emerge from these semantic and naming constraints.}
+@item{@zi[弔], derived from @zi[弓] with @zi[丨], represents indexed reference.}
+@item{@zi[𢎨], derived from @zi[弔] with @zi[丿], represents a related form of indexed reference using human-oriented, one-based indexing.}
+@item{@zi[阝] represents a serial-subset relationship.}
+@item{@zi[􏴗], derived from @zi[阝] with @zi[丶], preserves that relationship while modifying its range semantics.}
 ]
 
-These categories are not isolated naming conventions. They describe different roles played by @tech{components} within the same morphological system.
+The resulting ideographs are therefore not arbitrary names. Their forms make relationships between programming concepts visible.
 
-For this reason, many Ming ideographs should be understood as derived forms rather than independently invented symbols. Once a semantic relationship has been established, new concepts can be constructed by systematically applying existing semantic or structural elements.
+The same morphological principle also operates when different kinds of ideographic elements participate in the formation of a procedure name. Some elements primarily contribute an independently meaningful programming concept, while others primarily modify an existing concept, specify structural information, or impose constraints on the procedure represented by the resulting name.
+
+These different roles include:
+
+@itemlist[
+@item{@tech{Semantic Ideograph}, which provides an independently meaningful programming concept and may serve as a semantic root.}
+@item{@tech{Semantic Modifier}, which derives a related meaning by modifying some semantic dimension of an existing ideograph.}
+@item{@tech{Structural Modifier}, which contributes information about the structural formation or positional organization of an ideograph.}
+@item{@tech{Composition}, through which distinct contributions are combined into a new ideograph or concept.}
+@item{@tech{Naming Rule}, through which an ideographic component explicitly constrains properties of a procedure through its occurrence or composition within a procedure name.}
+@item{@tech{Minor Type}, through which more fine-grained distinctions among data structures and values can be represented.}
+]
+
+These terms describe different roles that components may play within the same morphological system. Their precise definitions and relationships are given in @secref["Terminology"].
+
+For this reason, many Ming ideographs should be understood as derived forms rather than as independently invented symbols. Once a semantic relationship has been established, new concepts can be constructed by systematically applying existing semantic or structural elements.
 
 For example,
 
-亻 + 弔 → @zi[伄] does not merely assign a new Chinese character to another procedure.
-@zi[亻] contributes an explicit naming rule concerning the relationship between input and output,
-while @zi[弔] contributes the semantic concept of indexed reference.
-Their composition therefore produces a new operation whose meaning and interface constraints arise from both components.
+@centered{
+@zi[亻] + @zi[弔] → @zi[伄]
+}
 
-Likewise, 又LB + 㐅 → @zi[􏿴] expresses a structural construction of a list, while 􏿴 + 句 → @zi[􏴷] can further specify the element type as strings. The resulting concepts form a derivational network rather than a flat collection of names.
+does not merely assign a new Chineseoid character to another procedure. @zi[亻] contributes an explicit Naming Rule concerning the relationship between input and output, while @zi[弔] contributes the semantic concept of indexed reference. Their composition therefore produces an operation whose meaning and interface constraints arise from both components.
 
+Likewise,
+
+@centered{
+@zi[又LB] + @zi[㐅] → @zi[􏿴]
+}
+
+expresses the morphological construction of a list, while
+
+@centered{
+@zi[􏿴] + @zi[句] → @zi[􏴷]
+}
+
+further specifies a list whose elements are strings.
+
+The resulting concepts therefore form a derivational network rather than a flat collection of names.
 
 @section{Ideographic Morphological System}
-This perspective explains an important characteristic of Ming: its ideographs are not a collection of isolated glyphs created one by one. They belong to a recursive and extensible Ideographic Morphological System, which especially is called @tech{Ideographic Morphology} in Ming.
 
-Once a semantic unit, modifier, structural relation, or naming rule has been established, it can participate in further formations. Consequently, the vocabulary of Ming can grow by deriving new concepts from existing ones while preserving explicit semantic relationships between them.
+This perspective leads to an important characteristic of Ming: its ideographs are not a collection of isolated glyphs created one by one. They belong to a recursive and extensible system in which established semantic concepts, modifiers, structural elements, and Naming Rules can participate in further formations.
+
+We call this overall system @tech{Ideographic Morphology}.
+
+Once an ideographic unit or relationship has been established, it can participate in further formations. Consequently, Ming's vocabulary can grow by deriving new concepts from existing ones while preserving explicit relationships between them.
+
+This makes the morphology of Ming fundamentally extensible. A newly constructed ideograph does not merely introduce another name into the vocabulary; it may also introduce a new node and new relationships into the network of programming concepts.
 
 In this sense, Ming's ideograph system is closer to a morphological grammar for programming concepts than to a conventional naming scheme.
 
-The purpose is not simply to make programming syntax look Chinese. It is to make the internal relationships among programming concepts visible in their names and forms.
+The purpose is not simply to make programming syntax look Chinese. It is to make the internal relationships among programming concepts visible in their names and forms, while allowing those relationships to participate in further semantic and structural composition.
 
-@nested[#:style 'inset]{@bold{Ming's ideograph system is not “using Chinese characters to name keywords”; it is establishing an ideographic morphological system for programming semantics.}}
+@nested[#:style 'inset]{
+@bold{Ming's ideograph system is not “using Chinese characters to name keywords”; it is establishing an ideographic morphology.}
+}
 
-This principle underlies the terminology and naming rules described throughout the Ming language.
+This principle underlies the terminology, morphology, and naming rules described throughout the Ming language.
 
 
 
@@ -162,6 +188,8 @@ The resulting system can therefore be viewed as a morphological grammar for prog
 
 @subsection{Ideograph}
 @deftech{Ideograph} is a character used in Ming as an semantic or structural unit of programming-language notation.
+
+
 @verbatim{
 Ideograph
 │
