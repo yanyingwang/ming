@@ -268,8 +268,7 @@ Ideograph           Ideograph         Morphology
 
 Ideograph
 │
-├── Lexical Ideograph
-│   │
+├───┐
 │   ├── @tech{Semantic Ideograph}
 │   │
 │   ├── @tech[#:key "general type"]{General-Type Ideograph} / @tech[#:key "minor type Ideograph"]{Minor-Type Ideograph}
@@ -408,8 +407,10 @@ This should be distinguished from the @tech{Conceptual Meaning} expressed by @te
 Thus:
 
 @nested[#:style 'inset]{
-@tech{Semantic Ideograph} → @tech{Conceptual Meaning}
+@verbatim{
+@tech{Semantic Ideograph} → @tech{Conceptual Meaning} 
 @tech{Naming Rule} → @tech{Programmatic Meaning}
+}
 }
 
 The distinction concerns the primary role of the meaning rather than whether an ideograph possesses meaning at all.
