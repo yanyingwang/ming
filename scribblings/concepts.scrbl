@@ -672,7 +672,7 @@ In this sense, Ming's ideograph system is an ideographic morphological system fo
 
 
 
-@section{Prose Verbs}
+@section{Document Verbs}
 
 Ming uses a small set of verbs with specific meanings when describing the relationships among ideographs, their components, and the properties they express. These verbs should be used consistently throughout the documentation.
 
