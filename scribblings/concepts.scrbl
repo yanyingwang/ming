@@ -671,12 +671,109 @@ The central principle is that Ming does not merely assign Chinese characters to 
 In this sense, Ming's ideograph system is an ideographic morphological system for programming semantics.
 
 
+
 @section{Prose Verbs}
+
+Ming uses a small set of verbs with specific meanings when describing the relationships among ideographs, their components, and the properties they express. These verbs should be used consistently throughout the documentation.
+
 @itemlist[
-@item{Because of @tech{Composition}, we draw the verb @emph{compose}, e.g. @tt{􏿝 is composed of 毌 and 􏿴BR}, @tt{􏳋 is @emph{composed} of 亻 and 􏴫}.}
-@item{Because of @tech{Naming Rule}, we draw the verb @emph{specify}, e.g. @tt{@zi[亻] @emph{specifies} the output has the same type as input.}}
-@item{Because of @tech{Semantic Ideograph} and @tech{Semantic Implication}, we draw the verb @emph{imply}, e.g. @tt{@zi[弓] @emph{implies} the output is a number.}}
+@item{
+Because of @tech{Composition}, we use the verb @emph{compose} to describe the formation of an ideograph from its components.
+For example, @tt{@zi[􏿝] is composed of @zi[毌] and @zi[􏿴BR]}, and @tt{@zi[􏳋] is composed of @zi[亻] and @zi[􏴫]}.
+}
+
+@item{
+Because of @tech{Composition}, we use @emph{contribute} to describe the role played by a component in the meaning or constraints of the resulting ideograph.
+For example, @tt{@zi[亻] contributes a Naming Rule concerning the relationship between input and output in @zi[伄]}, while @tt{@zi[弔] contributes the semantic concept of indexed reference}.
+}
+
+@item{
+Because of @tech{Naming Rule}, we use the verb @emph{specify} to describe an explicit constraint imposed by an ideographic component.
+For example, @tt{@zi[亻] @emph{specifies} that the output has the same type as the input}.
+}
+
+@item{
+Because of @tech{Semantic Ideograph} and @tech{Semantic Implication}, we use the verb @emph{imply} to describe a property that follows from the semantic meaning of an ideograph rather than being explicitly specified as a Naming Rule.
+For example, @tt{@zi[弓] @emph{implies} that the corresponding index is a number}.
+}
+
+@item{
+Because of @tech{Semantic Ideograph}, we use the verb @emph{represent} when an ideograph directly stands for a programming concept.
+For example, @tt{@zi[弓] @emph{represents} index}, @tt{@zi[彐] @emph{represents} find}, and @tt{@zi[毌] @emph{represents} append}.
+}
+
+@item{
+Because of @tech{Semantic Ideograph}, we use the verb @emph{express} when emphasizing that an ideograph gives explicit semantic expression to a concept or relationship.
+For example, @tt{@zi[并] @emph{expresses} the concept of multiple values}.
+}
+
+@item{
+Because of @tech{Semantic Derivation}, we use the verb @emph{derive} to describe the relationship between an existing ideograph and an ideograph constructed from it by modification.
+For example, @tt{@zi[𢎨] is @emph{derived} from @zi[弔] by adding @zi[丿]}, and @tt{@zi[􏴗] is @emph{derived} from @zi[阝] by adding @zi[丶]}.
+}
+
+@item{
+Because of @tech{Semantic Modifier}, we use the verb @emph{modify} when an ideographic component changes some semantic dimension of an existing concept.
+For example, @tt{@zi[丿] @emph{modifies} the indexing convention of @zi[弔]}.
+}
+
+@item{
+Because of @tech{Structural Modifier}, we use the verb @emph{position} when describing the role of a component determined by its structural location, such as @tt{L}, @tt{R}, or @tt{T}.
+For example, @tt{@zi[􏳥] uses @zi[􏳥L] to @emph{position} the corresponding Naming Rule on the right side of the composition}.
+}
+
+@item{
+When an ideograph is interpreted according to the combination of its components, we use the verb @emph{combine} when the emphasis is on the resulting interpretation rather than on the physical formation of the glyph.
+For example, @tt{@zi[亻] and @zi[弔] @emph{combine} to express an operation that performs indexed reference while satisfying the Naming Rule contributed by @zi[亻]}.
+}
+
+@item{
+When an ideograph preserves a semantic relationship from one of its components while adding a further distinction, we use @emph{preserve} to describe the inherited relationship.
+For example, @tt{@zi[􏴗] @emph{preserves} the serial-subset relation of @zi[阝] while modifying its range}.
+}
+
+@item{
+When a Semantic Modifier or other component makes an existing concept more specific, we use @emph{refine} to describe the resulting specialization.
+For example, @tt{@zi[􏴷] @emph{refines} the list concept represented by @zi[􏿴] by specifying that its elements are strings}.
+}
+
+@item{
+When a component extends an existing concept without replacing its original meaning, we use @emph{extend} to describe the relationship.
+For example, @tt{@zi[𢎨] @emph{extends} @zi[弔] with a human-oriented indexing convention}.
+}
+
+@item{
+When a procedure name contains an ideograph whose Naming Rule determines a property of the procedure, we use @emph{constrain} when discussing the resulting procedure interface.
+For example, @tt{the @zi[亻] component @emph{constrains} the input and output types of @zi[伄] to be the same}.
+}
+
+@item{
+When a Semantic Ideograph or its composition gives rise to an unstated property of an operation, we use @emph{imply} rather than @emph{specify}.
+For example, @tt{@zi[弔] @emph{implies} that an index is required as an input and that the referenced value belongs to the indexed input structure}.
+}
+
+@item{
+When an ideograph is used as a component of a procedure name, we use @emph{occur in} or @emph{appear in} to describe its syntactic presence without making a claim about its semantic role.
+For example, @tt{@zi[亻] @emph{occurs in} the name @zi[伄]}.
+}
 ]
+
+The distinction among these verbs is intentional:
+
+@itemlist[
+@item{@emph{compose} describes how an ideograph is formed from components.}
+@item{@emph{represent} and @emph{express} describe conceptual meaning.}
+@item{@emph{specify} describes an explicit Naming Rule.}
+@item{@emph{imply} describes a property that follows from semantic meaning.}
+@item{@emph{derive} describes the relationship between a source ideograph and a derived ideograph.}
+@item{@emph{modify} describes a change introduced by a modifier.}
+@item{@emph{preserve} describes a relationship inherited from an existing ideograph.}
+@item{@emph{refine} describes increased semantic or structural specificity.}
+@item{@emph{extend} describes the addition of a related semantic dimension.}
+@item{@emph{constrain} describes the effect of a Naming Rule on a procedure interface.}
+@item{@emph{contribute} describes the role of a component in the resulting composition.}
+]
+
 
 
 @section{core ideographs}
