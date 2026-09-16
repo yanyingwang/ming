@@ -15,10 +15,9 @@
 
 
 @title[#:tag "concepts"]{Concepts}
-Ming's @tech{Ideograph} System is not merely a system of naming keywords with Chinese characters. It establishes a programming semantic system analogous to morphology in natural language: ideographs function as semantic roots, modifiers derive related meanings, structural components determine how those meanings are formed, and their composition produces increasingly specific programming concepts.
+Ming's @tech[#:key "ideograph"]{ideograph system} is not merely a system for naming programming keywords with Chineseoid characters. It establishes an @tech{ideographic morphology} in which programming concepts, semantic relationships, and structural constraints are expressed through the composition, derivation, and modification of ideographs.
 
 This distinction is fundamental to understanding the @secref["Terminology"] used throughout Ming.
-
 
 
 @section{Morphology}
@@ -64,7 +63,7 @@ Likewise, 又LB + 㐅 → @zi[􏿴] expresses a structural construction of a lis
 
 
 @section{Ideographic Morphological System}
-This perspective explains an important characteristic of Ming: its ideographs are not a collection of isolated glyphs created one by one. They belong to a recursive and extensible @tech[#:key "Ideographic Morphology"]{morphological} system.
+This perspective explains an important characteristic of Ming: its ideographs are not a collection of isolated glyphs created one by one. They belong to a recursive and extensible Ideographic Morphological System, which especially is called @tech{Ideographic Morphology} in Ming.
 
 Once a semantic unit, modifier, structural relation, or naming rule has been established, it can participate in further formations. Consequently, the vocabulary of Ming can grow by deriving new concepts from existing ones while preserving explicit semantic relationships between them.
 
@@ -85,6 +84,31 @@ The ideographs of Ming therefore should not be understood as a collection of ind
 
 This morphological system distinguishes different kinds of meaning and different roles played by ideographic components.
 
+
+@verbatim{
+                    Ming
+                     │
+                     ▼
+       ideographic composition
+              ↓ semantic composition
+                     │
+                     ▼
+          conceptual explanation
+                     │
+                     ▼
+          Ideographic Morphology
+                     │
+        ┌────────────┼─────────────┐
+        ▼            ▼             ▼
+ Semantic        Naming        Composition
+ Ideograph        Rule          / Derivation
+        │            │
+        ▼            ▼
+ Conceptual     Programmatic
+ Meaning          Meaning
+}
+
+
 At the most fundamental level, Ming distinguishes between @tech{conceptual meaning} and @tech{programmatic meaning}.
 
 @tech{Conceptual meaning} represents what a programming concept means in itself. It is primarily expressed by @tech{Semantic Ideographs}, which may exist independently of any particular procedure and may be used to describe concepts, data structures, @tech{Minor Types}, or other semantic entities.
@@ -100,6 +124,35 @@ A @tech{Semantic Ideograph} primarily answers:
 A @tech{Naming Rule} primarily answers:
 
 @nested[#:style 'inset]{@bold{What must a procedure represented by this name be like?}}
+
+@verbatim{
+Ming's
+@tech{Ideographic Morphology}
+│
+├── @tech{Semantic Ideograph}
+│      │
+│      ├── @tech{Conceptual Meaning}
+│      │
+│      └── @tech{Semantic Implication}
+│
+├── @tech{Semantic Modifier}
+│      │
+│      └── @tech{Semantic Derivation}
+│
+├── @tech{Structural Modifier}
+│
+├── @tech{Composition}
+│
+└── @tech{Naming Rule}
+       │
+       └── @tech{Programmatic Meaning}
+              │
+              ├── Input constraints
+              ├── Output constraints
+              ├── Type constraints
+              ├── @tech{Cardinality}
+              └── Structural relationships
+}
 
 Other ideographic components operate between and around these two roles. @tech{Semantic Modifiers} derive related meanings from existing concepts, @tech{Structural Modifiers} describe or alter the morphological structure of an ideograph, and @tech[#:key "Composition"]{Composition Ideograph} combines distinct semantic or structural contributions into a new form.
 
@@ -548,6 +601,31 @@ It includes:
 ]
 
 Ming's ideographic morphology is therefore not merely a visual notation system. It is a mechanism for systematically constructing and exposing relationships among programming concepts.
+
+@subsection{Summary}
+The terminology can be summarized as follows:
+
+@verbatim{
+Ideographic Morphology
+│
+├── Semantic Ideograph
+│     └── Conceptual Meaning
+│           └── Semantic Implication
+│
+├── Semantic Modifier
+│     └── Semantic Derivation
+│
+├── Structural Modifier
+│
+├── Composition
+│
+└── Naming Rule
+      └── Programmatic Meaning
+            └── procedure/interface constraints
+}
+The central principle is that Ming does not merely assign Chinese characters to pre-existing programming-language concepts. It uses the morphological properties of ideographs to construct, relate, and constrain programming meanings.
+
+In this sense, Ming's ideograph system is an ideographic morphological system for programming semantics.
 
 
 @section{Prose Verbs}

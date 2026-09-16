@@ -9,12 +9,11 @@
 @author[(author+email (hyperlink "https://yanying.wang" "Yanying Wang") "yanyingwang1@gmail.com")]
 
 @defmodule[ming #:lang]
-Ming —- a programming language where ideographic composition becomes semantic composition.
+Ming — a programming language where ideographic composition becomes semantic composition.
 @hspace[1]
 @smaller{@hyperlink["https://www.yanying.wang/ming-doc-zh-cn/" "(中文版)"]}
 
-
-Ming is a programming language inspired by the semantic and compositional nature of Chinese ideographs, in which the structure of an ideograph serves not merely as a name, but as a compact representation of the constraints and relationships inherent in an operation.
+Ming is a programming language inspired by the semantic and morphological properties of Chineseoid ideographs, in which the structure of an ideograph serves not merely as a name, but as a compact representation of the concepts, constraints, and relationships inherent in an operation.
 
 @(table-of-contents)
 
