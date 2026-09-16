@@ -186,9 +186,60 @@ The resulting system can therefore be viewed as a morphological grammar for prog
 
 
 
-@subsection{Ideograph}
-@deftech{Ideograph} is a character used in Ming as an semantic or structural unit of programming-language notation.
+@subsection{Morphological Structure}
+The @deftech{Morphological Structure} of an ideograph is the organization of its constituent semantic, modifying, structural, and naming-rule components.
 
+Morphological Structure determines how the components of an ideograph are interpreted in relation to one another.
+
+This makes an ideograph more analogous to a morphologically constructed word than to an arbitrary identifier.
+
+For example:
+
+@verbatim{
+@zi[伄] = 亻 + 弔
+}
+
+contains both a @tech{Naming Rule} and a @tech{Semantic Ideograph}. Its meaning is therefore obtained not simply by looking up @zi[伄] as an atomic symbol, but by interpreting the relationship between its components.
+
+
+
+@subsection{Ideographic Morphology}
+
+@deftech{Ideographic Morphology} is the overall system by which Ming constructs programming meanings through the composition, derivation, modification, and structural organization of ideographs.
+
+It includes:
+
+@itemlist[
+@item{@tech{Semantic Ideographs};}
+@item{@tech{Semantic Modifiers};}
+@item{@tech{Structural Modifiers};}
+@item{@tech{Naming Rules};}
+@item{@tech{Semantic Derivation};}
+@item{@tech{Composition};}
+@item{and the @tech[#:key "conceptual meaning"]{semantic} and @tech[#:key "programmatic meaning"]{programmatic} relationships resulting from them.}
+
+]
+
+Ming's ideographic morphology is therefore not merely a visual notation system. It is a mechanism for systematically constructing and exposing relationships among programming concepts.
+
+
+
+@subsection{Ideograph}
+
+@deftech{Ideograph} is a character or ideographic unit used in Ming to represent a semantic, programmatic, or morphological element.
+
+An ideograph may represent an independently meaningful programming concept, explicitly constrain the interpretation of a procedure name, modify an existing concept, or specify the structural organization of an ideographic composition.
+
+According to their primary role, Ming ideographs include:
+
+@itemlist[
+@item{@tech{Semantic Ideographs}, which primarily represent conceptual meanings;}
+@item{@tech[#:key "naming rule"]{Naming-Rule Ideographs}, which primarily impose explicit constraints on procedure interfaces or behavior;}
+@item{@tech{Semantic Modifiers}, which modify or derive semantic concepts;}
+@item{@tech{Structural Modifiers}, which specify or modify the morphological organization of ideographs.}
+]
+
+These roles are functional rather than mutually exclusive in every possible context: an ideographic component may participate in different morphological relationships depending on how it is used.
 
 @verbatim{
 Ideograph
@@ -238,6 +289,7 @@ Ideograph
 │
 └── composed-with → @tech{Composition} Ideograph
 }
+
 
 
 
@@ -301,7 +353,7 @@ those input and output types are derived from its semantic concept. The way how 
 
 
 @subsection{Naming Rule}
-A @deftech{Naming Rule} is an ideographic rule whose primary function is to explicitly constrain or determine the interface or operational structure of a procedure through its name.
+A @deftech{Naming Rule} is a rule encoded by an ideographic component that explicitly constrains or determines the interface or operational structure of a procedure through its position or composition within a procedure name.
 
 A Naming Rule may specify properties such as:
 
@@ -592,43 +644,6 @@ sectionalization
 output-representation = list(@tech{default type context})
 }
 
-
-
-@subsection{Morphological Structure}
-The @deftech{Morphological Structure} of an ideograph is the organization of its constituent semantic, modifying, structural, and naming-rule components.
-
-Morphological Structure determines how the components of an ideograph are interpreted in relation to one another.
-
-This makes an ideograph more analogous to a morphologically constructed word than to an arbitrary identifier.
-
-For example:
-
-@verbatim{
-@zi[伄] = 亻 + 弔
-}
-
-contains both a @tech{Naming Rule} and a @tech{Semantic Ideograph}. Its meaning is therefore obtained not simply by looking up @zi[伄] as an atomic symbol, but by interpreting the relationship between its components.
-
-
-
-@subsection{Ideographic Morphology}
-
-@deftech{Ideographic Morphology} is the overall system by which Ming constructs programming meanings through the composition, derivation, modification, and structural organization of ideographs.
-
-It includes:
-
-@itemlist[
-@item{@tech{Semantic Ideographs};}
-@item{@tech{Semantic Modifiers};}
-@item{@tech{Structural Modifiers};}
-@item{@tech{Naming Rules};}
-@item{@tech{Semantic Derivation};}
-@item{@tech{Composition};}
-@item{and the @tech[#:key "conceptual meaning"]{semantic} and @tech[#:key "programmatic meaning"]{programmatic} relationships resulting from them.}
-
-]
-
-Ming's ideographic morphology is therefore not merely a visual notation system. It is a mechanism for systematically constructing and exposing relationships among programming concepts.
 
 @subsection{Summary}
 The terminology can be summarized as follows:
