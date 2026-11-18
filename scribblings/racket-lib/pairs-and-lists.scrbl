@@ -472,24 +472,42 @@ Do not confuse with @zi[攵].
 (􏷑􏺘 阳 '((3 pears) (1 banana) (2 apples)))
 ]
 
-@section{侕、􏳓，􏳖，􏳊}
-@defideogr[(侕 􏳓) (亻 (而 􏳗)) #f #f #f]{
-Since having @zi[亻] and @zis[而 􏳗], as a whole they specify the input is list and output is a list of lists.
+@section{􏳀、􏳁，􏲿，􏳊}
+@defideogr[(􏳀 􏳁 􏲿) (亻 􏳬 (􏲾 􏲽)) #f #f #f]{
+In which @zi[􏲹] especially means the ouput elements of a list are interchanged from input elements of a list.
 }
 
-@defideogr[(􏳖) (亻 􏳬 X 􏳗) #f #f #f]{
-@litchar{X} stands for the methemathic sign of cartesian product(X).
-@zi[􏳬] specifies the input to be more than one same type values.
+@defideogr[丆 #f #f #f]{
+@litchar{一} means the input argument is only one, which is especially changed to means many when combining with @zi[􏳬]. @linebreak{}
+@litchar{丿} implies @italic{process to} some form of output.
+
+@ideoexamples{@zis[而 􏲾 􏲽]}
 }
 
-@margin-note{Although @zi[而] is same as cn char @zi-tool{而}, but it does not has the same meaning at all.}
-@defideogr[(而 􏳗) (丆 (𦉫 一)) "list to sectional lists of list" #f #f]{
-@zi[􏳗] differs itself with @zi[而] in the place that the output is more ordered or formal, while @zi[而] specifies the output to be more casual.
+@defideogr[冂 #f #f #f]{
+Means @emph{output container}.
+@ideoexamples{@zis[而 􏲾 􏲽]}
 }
 
-@defideogr[丆 (一 丿) #f #f #f]{
-When it is wrote together with @zi[而] or @zi[􏳗], as a whole they specify one list as input and lists of a new list(@zi[􏴳]) as output.
+@defideogr[而 (丆 𦉫) "one list to sectional lists of list" #f #f]{
+One list as input and return a sectional list.
 }
+
+@defideogr[􏲹 "Crossing" #f #f]{
+Is same in the shape as methemathic sign of cartesian product. However, in Ming it especially means @emph{a conceptual relation in which elements intersect or combine across different elements or sets}.
+@ideoexamples{@rackets[􏳁 􏲿 􏳀]}
+}
+
+@defideogr[􏲺 (􏲹 丨) "Free Crossing" #f #f #f]{
+An unrestricted form of crossing in which elements can be freely combined. Particularly, @litchar{丨} is a @tech{Structual Modifier}, which does not have specific meaning.
+@ideoexamples{@rackets[􏳀]}
+}
+
+@defideogr[(􏲾 􏲽) (而 (􏲹 􏲺)) #f #f #f]{
+Two @litchar{丨} in @litchar{而} are obmited if they are components composing other characters with @litchar{􏲹} or @litchar{􏲺}.
+}
+
+@defideogr[(冈 􏲻) (冂 (􏲹 􏲺)) #f #f #f]
 
 @defideogr[􏳊 (􏳋 􏹌) #f #f #f]
 

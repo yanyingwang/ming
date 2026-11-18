@@ -21,6 +21,7 @@
 
 
 @defideogr[(亻) "general derived set" "亻" "person, people, human"]{
+@racket[(f : (-> (Listof T) T* (Listof T)))]
 As component of ideographs, it specifies The type of output data is same as the input. And the elements of output data are part of the input.
 
 In particular, @zi[化] is exceptionally different, which has a more diverse usages scenarios, @zi[化IFX], @zi[化SFX].

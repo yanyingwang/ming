@@ -69,10 +69,10 @@
 >>> range 􏼏  ;􏿴/数段 𥸬􏿴
 >>> inclusive-range 􏼏* ;𥸬􏿴
 
->>> combinations 侕
->>> permutations 􏳓
->>> in-combinations in侕
->>> in-permutations in􏳓
+>>> combinations 􏳀
+>>> permutations 􏳁
+>>> in-combinations in􏳀
+>>> in-permutations in􏳁
 
 >>> argmax 􏷑􏺗 ; @elem{@racket[佫]之@racket[􏺗]}
 >>> argmin 􏷑􏺘 ; @elem{@racket[佫]之@racket[􏺘]}
