@@ -20,7 +20,7 @@
 
 
 
-@defideogr[(亻) "general derived set" "亻" "person, people, human"]{
+@defideogr[亻 "general derived set" "亻" "person, people, human"]{
 @racket[(f : (-> (Listof T) T* (Listof T)))]
 As component of ideographs, it specifies The type of output data is same as the input. And the elements of output data are part of the input.
 
@@ -28,6 +28,10 @@ In particular, @zi[化] is exceptionally different, which has a more diverse usa
 
 Note that, if the procedure name has another ideograph prefixed as a word, the input and output type is determinated by the prefixed ideographs, e.g., @rackets[􏻿𢪛 􏿰攸 􏻿弔 􏿰弔 􏻿巨 􏿰巨].
 @ideoexamples[@zis[伄 攸 𰂋 偏 􏾜 􏾛 偅 𠆯 􏹈]]
+}
+
+@defideogr[彳 "multiple lists as input and  general derived set" #f #f]{
+@racket[(f : (-> (Listof T) (Listof T)+ (Listof T)))]
 }
 
 @defideogr[阝 "serial subset" "阝" "hill"]{
@@ -52,9 +56,13 @@ Split, break or transfer the input to many sections. @zi[􏴫] is @zi[􏴺] with
 Is @zi[􏳬] @zi[RTT2]ed, which specifies the output to be any saome type values.
 }
 
-@defideogr[􏳋 (亻 􏴫) "general derived 􏴳 as output" #f #f]{
+@defideogr[􏳋 (亻 􏴫) "general derived 􏴳 as output" #f]{
 Since @zi[亻] specifies the input and output to be same type and @zi[􏴫] specifies the output to be sectional, as a whole they specify the input to be list, and output to be a list of lists(@zi[􏴳]).
 @ideoexamples[@rackets[􏳊]]
+}
+
+@defideogr[􏲮 (彳 􏴫) "multiple list as input and general derived 􏴳 as output" #f]{
+@racket[(f : (-> (Listof T) (Listof T)+ (Listof (Listof T))))]
 }
 
 @defideogr[(􏳥 􏳤) ((􏴺 􏴗) 並) "output is 並" #f #f]{

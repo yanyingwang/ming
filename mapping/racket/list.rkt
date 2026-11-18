@@ -69,16 +69,16 @@
 >>> range 􏼏  ;􏿴/数段 𥸬􏿴
 >>> inclusive-range 􏼏* ;𥸬􏿴
 
->>> combinations 􏳀
->>> permutations 􏳁
->>> in-combinations in􏳀
->>> in-permutations in􏳁
+>>> combinations 􏲶
+>>> permutations 􏲵
+>>> in-combinations in􏲶 (in 􏲶)
+>>> in-permutations in􏲵 (in 􏲵)
 
 >>> argmax 􏷑􏺗 ; @elem{@racket[佫]之@racket[􏺗]}
 >>> argmin 􏷑􏺘 ; @elem{@racket[佫]之@racket[􏺘]}
 
 >>> group-by 􏳊
->>> cartesian-product 􏳖
+>>> cartesian-product 􏲭
 
  >>> remf 􏹇~ ;; 删/入 (elem "以例程做对比来消除某一符合条件元素" ) ;消 迭
 ;; >>> remf* 删*/入 (elem "以例程做对比来消除所有符合条件元素" ) ; 消* 迭， 见：fitler-not

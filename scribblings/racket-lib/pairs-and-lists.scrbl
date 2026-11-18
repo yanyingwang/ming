@@ -472,50 +472,25 @@ Do not confuse with @zi[攵].
 (􏷑􏺘 阳 '((3 pears) (1 banana) (2 apples)))
 ]
 
-@section{􏳀、􏳁，􏲿，􏳊}
-@defideogr[(􏳀 􏳁 􏲿) (亻 􏳬 (􏲾 􏲽)) #f #f #f]{
-In which @zi[􏲹] especially means the ouput elements of a list are interchanged from input elements of a list.
-}
+@section{􏲶，􏲵，􏲭，􏳊}
+@defideogr[(􏲶 􏲵 􏳊) (􏳋 (􏲷 􏲸 􏹌)) #f #f #f]
+@defideogr[􏲭 (􏲮 􏲼) #f #f #f]
 
-@defideogr[丆 #f #f #f]{
-@litchar{一} means the input argument is only one, which is especially changed to means many when combining with @zi[􏳬]. @linebreak{}
-@litchar{丿} implies @italic{process to} some form of output.
+@defideogr[􏲷 (冂 􏲬) "combination" #f #f]
+@defideogr[􏲸 (冂 卄) "permutation" #f #f]
+@defideogr[􏲼 "cartesian product" #f #f]
+@defideogr[􏲹 "sigin of cartesian product" #f #f]
+@defideogr[􏲬 "union, combine or merge elements as one" #f #f]
+@defideogr[卄 "elements in a line or order" #f #f]
+@defideogr[冂 "container" #f #f]
 
-@ideoexamples{@zis[而 􏲾 􏲽]}
-}
 
-@defideogr[冂 #f #f #f]{
-Means @emph{output container}.
-@ideoexamples{@zis[而 􏲾 􏲽]}
-}
-
-@defideogr[而 (丆 𦉫) "one list to sectional lists of list" #f #f]{
-One list as input and return a sectional list.
-}
-
-@defideogr[􏲹 "Crossing" #f #f]{
-Is same in the shape as methemathic sign of cartesian product. However, in Ming it especially means @emph{a conceptual relation in which elements intersect or combine across different elements or sets}.
-@ideoexamples{@rackets[􏳁 􏲿 􏳀]}
-}
-
-@defideogr[􏲺 (􏲹 丨) "Free Crossing" #f #f #f]{
-An unrestricted form of crossing in which elements can be freely combined. Particularly, @litchar{丨} is a @tech{Structual Modifier}, which does not have specific meaning.
-@ideoexamples{@rackets[􏳀]}
-}
-
-@defideogr[(􏲾 􏲽) (而 (􏲹 􏲺)) #f #f #f]{
-Two @litchar{丨} in @litchar{而} are obmited if they are components composing other characters with @litchar{􏲹} or @litchar{􏲺}.
-}
-
-@defideogr[(冈 􏲻) (冂 (􏲹 􏲺)) #f #f #f]
-
-@defideogr[􏳊 (􏳋 􏹌) #f #f #f]
 
 @examples[#:eval (the-eval)
-(侕 '(a b c))
-(侕 '(a b c) 2)
-(􏳓 '(a b c))
-(􏳖 '(1 2 3) '(a b c) '(x y z))
+(􏲶 '(a b c))
+(􏲶 '(a b c) 2)
+(􏲵 '(a b c))
+(􏲭 '(1 2 3) '(a b c) '(x y z))
 (􏳊 米? '(1 a 2 b 3 c))
 ]
 
