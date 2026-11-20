@@ -18,11 +18,16 @@
 @; @section[#:tag "as-parts"]{As parts of another character}
 @; @tech[#:doc "naming-rules"]
 
+@defideogr[亻 "Derived Collection " "亻" "person, people, human"]{
+@tt{(Opt : (—> (Collectionof T) T@superscript{*} (Collectionof T)))} @linebreak{}
 
+A collection derived from an original collection through various operations, including selecting, modifying, reorganizing, or introducing elements.
 
-@defideogr[亻 "general derived set" "亻" "person, people, human"]{
-@racket[(f : (-> (Listof T) T* (Listof T)))]
-As component of ideographs, it specifies The type of output data is same as the input. And the elements of output data are part of the input.
+Default type: List
+
+Type substitution: An explicit collection-type prefix may replace the default type.
+
+As component of ideographs, it specifies The type of output data is same as the first input. And the elements of output data is somehow similar to input which is processed by algorithm named with this component.
 
 In particular, @zi[化] is exceptionally different, which has a more diverse usages scenarios, @zi[化IFX], @zi[化SFX].
 
@@ -30,22 +35,44 @@ Note that, if the procedure name has another ideograph prefixed as a word, the i
 @ideoexamples[@zis[伄 攸 𰂋 偏 􏾜 􏾛 偅 𠆯 􏹈]]
 }
 
-@defideogr[彳 "multiple lists as input and  general derived set" #f #f]{
-@racket[(f : (-> (Listof T) (Listof T)+ (Listof T)))]
+@defideogr[彳 "Multi-Col-Derived Nested Collection" #f #f]{
+@tt{(Opt : (—> (Collectionof T) (Collectionof T)@superscript{+} (Collectionof T)))}
 }
 
-@defideogr[阝 "serial subset" "阝" "hill"]{
-As component of ideographs, it specifies The type of output data is same as the input. And the elements of ouput data is a serial of successive elements of the input.
+@defideogr[􏳋 (亻 􏴫) "Derived Nested Collection" #f #f]{
+@tt{(Opt : (—> (Collectionof T) T@superscript{*} (Collectionof (Collectionof T))))}
+
+Since @zi[亻] specifies the input and output to be same type and @zi[􏴫] specifies the output to be sectional, as a whole they specify the input to be list, and output to be a list of lists(@zi[􏴳]).
+@ideoexamples[@rackets[􏳊]]
+}
+
+@defideogr[􏲮 (彳 􏴫) "Multi-Col-Derived Nested Collection" #f #f]{
+@tt{(Opt : (—> (Collectionof T)@superscript{>=2} T@superscript{*} (Collectionof (Collectionof T))))}
+
+Derived Nested Collection from Multiple Lists.
+}
+
+@defideogr[阝 "Collection Segment" "阝" "hill"]{
+As component of ideographs, it specifies The type of output data is same as the input. And the elements of ouput data is a serial of consecutive elements of the input.
+
+A collection segment consisting of consecutive elements from an original collection.
+
 @ideoexamples[@rackets[􏴛 􏾺 􏴌]]
 }
 
-@defideogr[􏴗 (阝 丶) "the rest part of the serial subset" #f]{
+@defideogr[􏴗 (阝 丶) "Collection Rest-Segment" #f]{
+A Rest-Segment is a segment consisting of contiguous elements of a collection that lie outside a specified segment.
+
 What differs @zi[􏴗] from @zi[阝] is that @zi[􏴗] returns parts from the element where the procedure specified to the end, while @zi[阝] returns parts from the beginning.
 @ideoexamples[@rackets[􏾝 􏺊 􏹋]]
 }
 
-@defideogr[(􏴫 􏴺 􏴻) "sectional" "段" "sections, segments"]{
-Split, break or transfer the input to many sections. @zi[􏴫] is @zi[􏴺] without @zi[一], which means the output is only two, while @zi[􏴺] means any.
+@defideogr[(􏴫 􏴺 􏴻) "Segment Collection" "段" "sections, segments"]{
+@tt{(Opt : (—> T (Collectionof T)))}
+
+A collection of segments produced by splitting an input. The type of each segment is the same as the input type, and the collection defaults to a list. @zi[􏴫] is @zi[􏴺] without @zi[一], which means the output is only two, while @zi[􏴺] means any.
+
+
 @ideoexamples[@zis[􏴸 􏳷 􏳶 􏳳 􏳲]]
 }
 @defideogr[􏳬 "same type values as input" #f #f]{
@@ -54,15 +81,6 @@ Split, break or transfer the input to many sections. @zi[􏴫] is @zi[􏴺] with
 
 @defideogr[𦉫 "sectional output" #f #f]{
 Is @zi[􏳬] @zi[RTT2]ed, which specifies the output to be any saome type values.
-}
-
-@defideogr[􏳋 (亻 􏴫) "general derived 􏴳 as output" #f]{
-Since @zi[亻] specifies the input and output to be same type and @zi[􏴫] specifies the output to be sectional, as a whole they specify the input to be list, and output to be a list of lists(@zi[􏴳]).
-@ideoexamples[@rackets[􏳊]]
-}
-
-@defideogr[􏲮 (彳 􏴫) "multiple list as input and general derived 􏴳 as output" #f]{
-@racket[(f : (-> (Listof T) (Listof T)+ (Listof (Listof T))))]
 }
 
 @defideogr[(􏳥 􏳤) ((􏴺 􏴗) 並) "output is 並" #f #f]{
