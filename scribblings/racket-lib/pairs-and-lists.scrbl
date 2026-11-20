@@ -472,32 +472,25 @@ Do not confuse with @zi[攵].
 (􏷑􏺘 阳 '((3 pears) (1 banana) (2 apples)))
 ]
 
-@section{侕、􏳓，􏳖，􏳊}
-@defideogr[(侕 􏳓) (亻 (而 􏳗)) #f #f #f]{
-Since having @zi[亻] and @zis[而 􏳗], as a whole they specify the input is list and output is a list of lists.
-}
+@section{􏲶，􏲵，􏲭，􏳊}
+@defideogr[(􏲶 􏲵 􏳊) (􏳋 (􏲷 􏲸 􏹌)) #f #f #f]
+@defideogr[􏲭 (􏲮 􏲼) #f #f #f]
 
-@defideogr[(􏳖) (亻 􏳬 X 􏳗) #f #f #f]{
-@litchar{X} stands for the methemathic sign of cartesian product(X).
-@zi[􏳬] specifies the input to be more than one same type values.
-}
+@defideogr[􏲷 (冂 􏲬) "combination" #f #f]
+@defideogr[􏲸 (冂 卄) "permutation" #f #f]
+@defideogr[􏲼 "cartesian product" #f #f]
+@defideogr[􏲹 "sigin of cartesian product" #f #f]
+@defideogr[􏲬 "union, combine or merge elements as one" #f #f]
+@defideogr[卄 "elements in a line or order" #f #f]
+@defideogr[冂 "container" #f #f]
 
-@margin-note{Although @zi[而] is same as cn char @zi-tool{而}, but it does not has the same meaning at all.}
-@defideogr[(而 􏳗) (丆 (𦉫 一)) "list to sectional lists of list" #f #f]{
-@zi[􏳗] differs itself with @zi[而] in the place that the output is more ordered or formal, while @zi[而] specifies the output to be more casual.
-}
 
-@defideogr[丆 (一 丿) #f #f #f]{
-When it is wrote together with @zi[而] or @zi[􏳗], as a whole they specify one list as input and lists of a new list(@zi[􏴳]) as output.
-}
-
-@defideogr[􏳊 (􏳋 􏹌) #f #f #f]
 
 @examples[#:eval (the-eval)
-(侕 '(a b c))
-(侕 '(a b c) 2)
-(􏳓 '(a b c))
-(􏳖 '(1 2 3) '(a b c) '(x y z))
+(􏲶 '(a b c))
+(􏲶 '(a b c) 2)
+(􏲵 '(a b c))
+(􏲭 '(1 2 3) '(a b c) '(x y z))
 (􏳊 米? '(1 a 2 b 3 c))
 ]
 
