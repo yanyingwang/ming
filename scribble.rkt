@@ -10,9 +10,7 @@
          simplf-from
          modernly-means mingly-resembles
          ori-esp-means
-         ;; defradical defcomponent defcharacter defhybrid
-         defradical defcomponent defsuffix defprefix definsert defhas
-         defzi defzis defzi/puauni defzi/sub defcompost
+         defzi defzis defzi/puauni defzi/sub
          defideogr ideoexamples
          zi zis zi-ref zi-tool
          ziexamples rackets
@@ -25,61 +23,13 @@
                      scribble/core
                      "private/zitable.rkt"))
 
+
 (define (mtem term . explanation)
   (item (bold (deftech term)) ": "  explanation))
 
 (define-syntax-rule (defhzify cnid rsn enid)
   (defthing #:kind "transformer" cnid (unsyntax (racketidfont rsn)) #:value enid)
   )
-
-(define-syntax (defradical stx)
-  (syntax-case stx ()
-    [(_ zi)
-     (with-syntax ([str-zi (symbol->string (syntax-e #'zi))])
-       #'(elem (elemtag str-zi (bold (litchar str-zi))) (hspace 1) "as radical"))
-     ])
-  )
-
-(define-syntax (defcomponent stx)
-  (syntax-case stx ()
-    [(_ zi)
-     (with-syntax ([str-zi (symbol->string (syntax-e #'zi))])
-       #'(elem (elemtag str-zi (bold (litchar str-zi))) (hspace 1) "as component" ))
-     ])
-  )
-(define-syntax (defsuffix stx)
-  (syntax-case stx ()
-    [(_ zi)
-     (with-syntax ([str-zi (if (number? (syntax-e #'zi))
-                               (number->string (syntax-e #'zi))
-                               (symbol->string (syntax-e #'zi)))])
-       #'(elem "suffixed with" (hspace 1) (elemtag str-zi (bold (litchar str-zi)))))
-     ])
-  )
-(define-syntax (defprefix stx)
-  (syntax-case stx ()
-    [(_ zi)
-     (with-syntax ([str-zi (if (number? (syntax-e #'zi))
-                               (number->string (syntax-e #'zi))
-                               (symbol->string (syntax-e #'zi)))])
-       #'(elem "prefixed with" (hspace 1) (elemtag str-zi (bold (litchar str-zi)))))
-     ])
-  )
-(define-syntax (definsert stx)
-  (syntax-case stx ()
-    [(_ zi)
-     (with-syntax ([str-zi (symbol->string (syntax-e #'zi))])
-       #'(elem "inserted with" (hspace 1) (elemtag str-zi (bold (litchar str-zi)))))
-     ])
-  )
-(define-syntax (defhas stx)
-  (syntax-case stx ()
-    [(_ zi)
-     (with-syntax ([str-zi (symbol->string (syntax-e #'zi))])
-       #'(elem "has" (hspace 1) (elemtag str-zi (bold (litchar str-zi)))))
-     ])
-  )
-
 
 (define-syntax (section+elemref stx)
   (syntax-case stx ()
@@ -311,15 +261,6 @@
                                       (elem #:style (style #f (list (alt-tag "div") (attributes '([class . "RBackgroundLabel SIEHidden"]))))
                                             #,(r-background-label "ideograph"))
                                       ))))
-     ])
-  )
-
-(define-syntax (defcompost stx) ;; define compostion
-  (define (gen-parts ps)
-    (datum->syntax stx (cons 'elem (add-between (map (lambda (p) `(zi ,p)) ps) " + "))))
-  (syntax-case stx ()
-    [(_ zi (parts ...) content ...)
-     #`(defzi zi #,(gen-parts (syntax->datum #'(parts ...))) "." (hspace 1) content ...)
      ])
   )
 

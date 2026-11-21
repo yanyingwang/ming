@@ -17,7 +17,6 @@
 Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scrbl")] and extends to @secref["ming-list"].
 
 @section[#:tag "naming-rules-of-pair-list"]{Naming Rules}
-@; Extended from @secref["naming-rules"], specifically there are：
 @tabular[@;#:sep @hspace[0]
          #:style 'boxed
          #:column-properties '(center)
@@ -29,12 +28,6 @@ Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scr
                @elem{Returns a new list with elements produced from the original input list. (Implies the input data and output data are the same type.)}
                @elem{@rackets[伄 攸 𰂋 偏 􏾜 􏾛 偅 𠆯 􏹈 􏷍?]}
                )
-               @; (list
-               @; @elem{@defcomponent[彳]}
-               @; "resembler"
-               @; @elem{Returns a resemblant list of the input.}
-               @; @elem{@racket[𢓜]}
-               @; )
                (list
                @elem{@zi[阝] as component}
                "serial subset"
@@ -47,47 +40,23 @@ Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scr
                @elem{Returns a new list with elements serially produced from the input list.(Implies the input data and output data are the same type.)}
                @elem{@racket[􏾝] @racket[􏹋] @racket[􏳹] @racket[􏳸] @racket[􏺊]}
                )
-               @; (list
-               @; @elem{@defcomponent[􏸋]}
-               @; "serial subset of lists"
-               @; @elem{Returns a new list with elements serially produced from the input lists.(Implies the multiple input data and output data are the same type.)}
-               @; @elem{@racket[左􏸑]}
-               @; )
                (list
                @elem{@zi[刂] as component}
                "broken subset"
                @elem{Returns a new list with removing some elements from the input list.}
                @elem{ @racket[􏾘] @racket[𠝤] @racket[􏹊] @racket[􏹇]}
                )
-               @; (list
-               @; @elem{@defcomponent[􏸌]}
-               @; "broken subset of lists"
-               @; @elem{Returns a new list with removing some elements from the input lists.(Implies the multiple input data and output data are the same type.)}
-               @; @elem{@racket[左􏸒]}
-               @; )
                (list
                @elem{@zi[􏴺] as component}
                "sectional sets"
                @elem{split the input list to sections or rearrange it to many related sets}
                @elem{@rackets[􏳷 􏳶 􏳳 􏳰]})
-               @; (list
-               @; @elem{@defcomponent[􏸍]}
-               @; "split input lists to values"
-               @; @elem{Implies input data is lists and the type of output data is values(@racket[並]).}
-               @; @elem{@racket[􏸄] @racket[􏸃]}
-               @; )
                (list
                @elem{@zi[入] as component or @zi[入] as suffix}
                "function as input"
                @elem{Implies the type of input data is function.}
                @elem{@rackets[􏹃 􏹅 􏹌 􏹂 􏳭 􏴁 􏳾]}
                )
-               @; (list
-               @; @elem{@defsuffix[0]}
-               @; "original function"
-               @; @elem{Implies there is another function named with omitting @litchar{0}.}
-               @; @elem{@racket[􏼓0]}
-               @; )
                (list
                @elem{@zi[*SFX]}
                "strengthen"
@@ -101,24 +70,12 @@ Originates from @secref["pairs" #:doc '(lib "scribblings/reference/reference.scr
                "Soften the process, thus the output data shorter."
                @elem{@racket[􏹊~] @racket[􏹇~]}
                )
-               @; (list
-               @; @elem{以@bold{@litchar{v}}结尾}
-               @; @elem{加强力度（且改变出参成@racket[􏿴]）}
-               @; @elem{出参内容更加丰富且被封装成@racket[􏿴]数据结构}
-               @; @elem{@racket[引v]}
-               @; )
                (list
                @elem{@zi[^SFX]}
                @elem{list as input}
                @elem{Implies the type of input data is list.}
                @elem{@racket[􏹊^] @racket[伄^] @racket[􏾘^]}
                )
-               @; (list
-               @; @elem{以@litchar{􏿴}结尾}
-               @; @elem{构造生成@racket[􏿴]数据}
-               @; @elem{出参数据结构是@racket[􏿴]}
-               @; @elem{@racket[序􏿴]、@racket[复􏿴]、@racket[𥸬􏿴]}
-               @; )
                (list
                @elem{@zi[?SFX]}
                @elem{boolean as output}
@@ -218,7 +175,7 @@ For example, @code{(阴+-- lst)} is short for @code{(阴 (阴 (阳 (阴 lst))))}
 
 @section{􏿝, 􏿜}
 @defideogr[􏿝 (毌 􏿴BR) #f #f #f]
-@defideogr[􏿜 (毌 􏿫BR) #f #f #f]
+              @defideogr[􏿜 (毌 􏿫BR) #f #f #f]
 @examples[#:eval (the-eval)
 (􏿴 1 2 3 4)
 (􏿝 '(1) '(2) '(3) '(4))
