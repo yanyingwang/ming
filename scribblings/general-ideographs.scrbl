@@ -18,9 +18,9 @@
 @; @section[#:tag "as-parts"]{As parts of another character}
 @; @tech[#:doc "naming-rules"]
 
-@defideogr[亻 "Resembling Collection " "亻" "person, people, human"]{
+@defideogr[亻 "Derived Collection " "亻" "person, people, human"]{
 @tt{(Opt : (—> (Collectionof T) T@superscript{*} (Collectionof T)))} @linebreak{}
-Obtained from an input collection through operations such as selecting, modifying, or reorganizing its elements, while retaining a recognizable resemblance to the input collection.
+Derived from an input collection through operations such as selecting, modifying, or reorganizing its elements, thus having a same type and a recognizable resemblance data as the input collection.
 
 Default type: List
 
@@ -34,21 +34,21 @@ Note that, if the procedure name has another ideograph prefixed as a word, the i
 @ideoexamples[@zis[伄 攸 𰂋 偏 􏾜 􏾛 偅 𠆯 􏹈]]
 }
 
-@defideogr[􏳋 (亻 􏴫) "Resembling Nested Collection" #f #f]{
+@defideogr[􏳋 (亻 􏴫) "Derived Nested Collection" #f #f]{
 @tt{(Opt : (—> (Collectionof T) T@superscript{*} (Collectionof (Collectionof T))))}
 
 Since @zi[亻] specifies the input and output to be same type and @zi[􏴫] specifies the output to be sectional, as a whole they specify the input to be list, and output to be a list of lists(@zi[􏴳]).
 @ideoexamples[@rackets[􏳊]]
 }
 
-@defideogr[彳 "Collection Resembling Multiple Collections" #f #f]{
+@defideogr[彳 "Multi-Collection-Derived Collection" #f #f]{
 @tt{(Opt : (—> (Collectionof T) (Collectionof T)@superscript{+} (Collectionof T)))}
 }
 
-@defideogr[􏲮 (彳 􏴫) "Nested Collection Resembling Multiple Collections" #f #f]{
+@defideogr[􏲮 (彳 􏴫) "Multi-Collection-Derived Collection" #f #f]{
 @tt{(Opt : (—> (Collectionof T)@superscript{>=2} T@superscript{*} (Collectionof (Collectionof T))))}
 
-Derived Nested Collection from Multiple Lists.
+Derived Nested Collection from Multiple Collections.
 }
 
 @defideogr[(􏴫 􏴺 􏴻) "Segment Collection" "段" "sections, segments"]{
@@ -73,7 +73,7 @@ A collection of segments produced by splitting an input. The type of each segmen
 @; }
 
 @defideogr[阝 "Partial Collection" "阝" "hill"]{
-Is a collection consisting of a contiguous sequence of elements from another collection.
+Is part of an input collection, consisting of a contiguous sequence of elements from that collection.
 
 As component of ideographs, it specifies The type of output data is same as the input. And the elements of ouput data is a serial of consecutive elements of the input.
 
@@ -81,14 +81,14 @@ As component of ideographs, it specifies The type of output data is same as the 
 }
 
 @defideogr[􏴗 (阝 丶) "Rest-Partial Collection" #f]{
-Is a Partial Collection consisting of a contiguous sequence of elements of another collection that lie outside a specified Partial Collection.
+Is a rest part of an input Collection's partial collection.
 
 What differs @zi[􏴗] from @zi[阝] is that @zi[􏴗] returns parts from the element where the procedure specified to the end, while @zi[阝] returns parts from the beginning.
 @ideoexamples[@rackets[􏾝 􏺊 􏹋]]
 }
 
 @defideogr[(刂) "Elements-Removed Collection" "刂" "knife"]{
-Returns a new collection as output with removing some elements from the input collection.
+Is a new collection as output with removing some elements from the input collection.
 
 An Elements-Removed Collection is a collection obtained from an input collection by removing one or more of its elements.
 
