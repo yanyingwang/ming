@@ -507,6 +507,10 @@ human Rule-oriented indexed reference
 @tt{@zi[𰁦] → @zi[攸]}, where @zi[丨] acts as a semantic modifier(more specificity called @tech{cardinality restriction}) of @zi[𰁦].
 
 
+@subsection{Semantic Atom}
+An Ideograph whose meaning is not further decomposed into constituent meanings within Ming, regardless of its appearance composition. For example, @zi[弔] is composed by @zi[弓] as @tech{semantic atom} and @zi[丨] as @tech{semantic modifier}.
+
+
 @subsection{Semantic Derivation}
 @deftech{Semantic Derivation} is the derivation of an ideograph from another ideograph by applying one or more @tech{semantic modifiers}, resulting in a new ideograph whose meaning remains systematically related to the source ideograph.
 
@@ -602,6 +606,8 @@ can be represented through systematically related ideographs rather than being t
 
 Minor Types therefore represent one of the consequences of Ming's semantic and morphological system: the naming system can express distinctions in data structure that conventional type categories often leave implicit.
 
+@subsection{Resemblance Type}
+A Type that distinguishes data from a General Type according to the characteristics of its contents.
 
 
 @subsection{Minor-type Ideograph}
