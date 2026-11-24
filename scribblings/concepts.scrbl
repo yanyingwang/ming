@@ -586,8 +586,8 @@ structural
 @subsection{General Type}
 @deftech{General Type} is all the traditional types of what we call in Racket. e.g. @zis[􏿴 句 􏿰 勺]
 
-@subsection{Minor Type}
-A @deftech{Minor Type} is a fine-grained classification of a data structure or value based on structural or semantic properties that are more specific than conventional broad programming-language types.
+@subsection{@deftech{Minor Type}}
+A data-structure type distinguished by structural properties, element types, termination forms, nesting, cardinality, or other semantic characteristics beyond a general data-structure type.
 
 Ming uses its @tech{ideographic morphology} to expose distinctions that would often remain implicit within conventional types.
 
@@ -606,14 +606,15 @@ can be represented through systematically related ideographs rather than being t
 
 Minor Types therefore represent one of the consequences of Ming's semantic and morphological system: the naming system can express distinctions in data structure that conventional type categories often leave implicit.
 
-@subsection{Resemblance Type}
-A Type that distinguishes data from a General Type according to the characteristics of its contents.
-
 
 @subsection{Minor-type Ideograph}
 @deftech{Minor-type Ideograph} is a refined data-structure type distinguished by structural properties, element types, termination forms, nesting, cardinality, or other semantic invariants beyond a general data type.
 
 e.g. @zis[􏿴 􏿫 􏿳 􏴳 􏴷].
+
+
+@subsection{Refined Type}
+A Type that retains its General Type while imposing additional constraints or properties on its data.
 
 
 
