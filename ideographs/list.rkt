@@ -3,6 +3,7 @@
 ;; ideograph should be valid for all naming rule had by composed component unless explicitly mark as non-derived-naming-rule.
 ;; ideograph without meaning should derive a meaning from its composition.
 ;; ideograph without naming rule but has composition that having a naming rule should derive a naming rule.
+;; role of ideograph musct have a meaning in case meaning can not be derived for composed ideograph that use this ideograph as component.
 
 
 (又 (meaning "element")
@@ -21,7 +22,7 @@
     (naming-rule (-> T T (Pair T1 T2)))) ; (naming-rule (type (-> T T (pairof T))) (data (to-be-filled)))
 (􏿫 (meaning "long pair") ; A Pair whose final element is not null. Is not same as list* because list* can return non-pair if has sigular input arguent.
     (composition (又LB 又))
-    (roles (refined-type (general-type 双)))
+    (roles (data-characteristic (general-type 双)))
     (naming-rule (-> T* (Pair T1 T2))))
 (􏿴 (meaning "list")
     (composition (又LB 㐅))
@@ -33,16 +34,16 @@
 
 (􏼓 (meaning "repeated-element list")
     (composition (三 􏿴BR))
-    (roles (refined-type (general-type 􏿴))))
+    (roles (data-characteristic (general-type 􏿴))))
 (􏼏 (meaning "numeric-element list")
     (composition (米 􏿴BR))
-    (roles (refined-type (general-type 􏿴))))
+    (roles (data-characteristic (general-type 􏿴))))
 (􏼎 (meaning "index-as-element list")
     (composition (弓 􏿴BR))
-    (roles (refined-type (general-type 􏿴))))
+    (roles (data-characteristic (general-type 􏿴))))
 (􏿝 (meaning "list-appended list")
     (composition (毌 􏿴BR))
-    (roles (refined-type (general-type 􏿴))))
+    (roles (data-characteristic (general-type 􏿴))))
 (􏿜  (meaning "list-appended long pair")
      (composition (毌 􏿫BR)))
 
@@ -190,7 +191,7 @@
 (夂 (meaning "every") (roles (semantic-atom)))
 (􏷒 (meaning "each loop") (composition (夂 入)))
 (并 (meaning "and") (roles (semantic-atom)))
-(and (meaning "or") (roles (semantic-atom)))
+(戈 (meaning "or") (roles (semantic-atom)))
 (􏷑 (composition (亻􏷒)))
 (􏷉 (composition (扌􏷒)))
 (􏷐 (composition (并 􏷒)))
