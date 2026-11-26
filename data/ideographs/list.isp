@@ -1,5 +1,3 @@
-#lang racket/base
-
 ;; ideograph should be valid for all naming rule had by composed component unless explicitly mark as non-derived-naming-rule.
 ;; ideograph without meaning should derive a meaning from its composition.
 ;; ideograph without naming rule but has composition that having a naming rule should derive a naming rule.
@@ -12,9 +10,8 @@
 (又LB (meaning "Pair Chain")
       (composition (又 LB)))
 
-(㐅
- (meaning "null")
- (roles (semantic-atom)))
+(㐅 (meaning "null")
+    (roles (semantic-atom)))
 
 (双 (meaning "pair")
     (composition (又 又))
@@ -53,7 +50,7 @@
     (roles (semantic-atom)))
 
 (阳 (meaning "first")
- (composition (阝 日)))
+    (composition (阝 日)))
 (阴 (meaning "rest")
     (composition (阝 月)))
 
@@ -95,7 +92,7 @@
     )
 
 (􏹂 (meaning "function-based found index")
-   (composition (弓 (parameter-specifier 入))))
+    (composition (弓 (parameter-specifier 入))))
 
 (弔 (meaning "index-based reference") ; use index as input to reference an element out to output.
     (roles (semantic-atom

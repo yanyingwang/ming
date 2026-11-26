@@ -652,6 +652,10 @@ output-representation = list(@tech{default type context})
 }
 
 
+@subsection{.isp}
+@deftech{isp} is short for @emph{Ideograph S-expression}. It is a data format consisting of a sequence of S-expressions used to describe ideographs and their associated structures.
+
+
 @subsection{Summary}
 The terminology can be summarized as follows:
 

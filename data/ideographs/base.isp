@@ -1,5 +1,3 @@
-#lang racket/base
-
 ;; spatial composition
 (L (meaning "left")
    (roles ("placement-specifier")))
@@ -63,12 +61,15 @@
 (丿 (roles (semantic-modifier)))
 
 
+
+
 (亻 (meaning "derived collection")
     (roles (semantic-atom))
     (naming-rule (-> (collectionof T) T* (collectionof T))))
+
 (􏳋 (meaning "Derived Nested Collection")
-   (composition (亻 􏴫))
-   (naming-rule (-> (collecitonof T) T* (collectionof (collectionof T)))))
+    (composition (亻 􏴫))
+    (naming-rule (-> (collecitonof T) T* (collectionof (collectionof T)))))
 (彳 (meaning "Collection Derived from Multiple Collections")
     (composition (亻 􏴫))
     (naming-rule (-> (Collectionof T) (Collectionof T)+ (Collectionof T))))
@@ -77,8 +78,8 @@
     (naming-rule (-> (Collectionof T)>=2 T* (Collectionof (Collectionof T)))))
 
 (􏴫 (meaning "Segment Collection")
-   (roles (semantic-atom))
-   (naming-rule (-> T (Collectionof T))))
+    (roles (semantic-atom))
+    (naming-rule (-> T (Collectionof T))))
 (扌 (meaning "modify in place")
     (roles (semantic-atom))
     (naming-rule (-> (collecitonof T) T* void)))
@@ -87,6 +88,6 @@
     (roles (semantic-atom))
     (naming-rule (-> (collecitonof T) T* (collecitonof T))))
 (􏴗 (meaning "Complementary Partial Collection")
-   (roles (semantic-atom))
-   (composition (阝 (semantic-modifier 丶)))
-   (naming-rule (-> (collecitonof T) T* (collecitonof T))))
+    (roles (semantic-atom))
+    (composition (阝 (semantic-modifier 丶)))
+    (naming-rule (-> (collecitonof T) T* (collecitonof T))))
